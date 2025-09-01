@@ -1,6 +1,7 @@
 {
   "projects": {
-    "cpalectures": "cpalectures-c1d1e"
+    "cpalectures": "cpalectures-c1d1e",
+    "default": "cpalectures-c1d1e"
   },
   "targets": {},
   "etags": {}
