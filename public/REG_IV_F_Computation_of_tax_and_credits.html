@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — REG IV.F Computation of Tax and Credits</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa; --ok:#b5ffb1;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+/* reveal */
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:var(--ok)}
+/* step list */
+.steps{counter-reset: s}
+.steps li{counter-increment:s;margin:8px 0}
+.steps li::marker{content: counter(s) ". "}
+.box{padding:10px 14px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.06);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Computation of Tax and Credits</h1>
+  <p class="mini muted"><strong>Acronyms:</strong> <strong>AGI</strong> = adjusted gross income; <strong>TI</strong> = taxable income; <strong>NIIT</strong> = net investment income tax (3.8%); <strong>NII</strong> = net investment income; <strong>MAGI</strong> = modified AGI; <strong>MFJ</strong> = married filing jointly.</p>
+
+  <section class="card">
+    <h2>Learning Objectives</h2>
+    <ul class="small">
+      <li><strong>Recall & define</strong> refundable vs. nonrefundable credits with common examples.</li>
+      <li><strong>Recall & define</strong> the individual estimated‑tax <em>safe harbors</em> to avoid underpayment penalties.</li>
+      <li><strong>Calculate</strong> total tax for an individual given <strong>TI</strong>, applicable credits, and <strong>NIIT</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Ordering — How the return “stacks”</h2>
+    <ol class="steps small">
+      <li>Compute regular income tax on <strong>TI</strong>.</li>
+      <li>Reduce by <strong>nonrefundable credits</strong> (cannot go below $0).</li>
+      <li>Add <strong>other taxes</strong> (e.g., self‑employment tax, <strong>NIIT</strong>).</li>
+      <li>Subtract payments and <strong>refundable credits</strong> (can create a refund).</li>
+    </ol>
+    <div class="callout mini"><strong>Exam tip:</strong> If the credit can produce a refund by itself, it’s <em>refundable</em> (e.g., Earned Income Credit). If it can only reduce tax to $0, it’s <em>nonrefundable</em> (e.g., most education credits).</div>
+  </section>
+
+  <section class="card">
+    <h2>Credits at a Glance</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Nonrefundable (examples)</h3>
+        <ul class="small">
+          <li>Child and dependent care credit.</li>
+          <li>Education credits (nonrefundable portion of American Opportunity, Lifetime Learning).</li>
+          <li>Foreign tax credit (generally nonrefundable).</li>
+          <li>Retirement savings contributions credit.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Refundable (examples)</h3>
+        <ul class="small">
+          <li>Earned Income Credit (EIC).</li>
+          <li>Additional Child Tax Credit (refundable portion when applicable).</li>
+          <li>Excess Social Security tax withheld.</li>
+          <li>Portion of American Opportunity Credit (refundable part when applicable).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Safe Harbors — Estimated Tax (Individuals)</h2>
+    <table class="tbl small">
+      <tr><th>Rule</th><th>Meaning</th></tr>
+      <tr>
+        <td><strong>90% of current‑year tax</strong></td>
+        <td>If total withholding/estimates ≥ 90% of the current‑year tax, no underpayment penalty.</td>
+      </tr>
+      <tr>
+        <td><strong>100% of prior‑year tax</strong></td>
+        <td>No penalty if paid in − at least − 100% of last year’s tax liability (110% if prior‑year <strong>AGI</strong> &gt; <strong>$150,000</strong>; <strong>$75,000</strong> if MFS).</td>
+      </tr>
+    </table>
+    <div class="callout mini"><strong>Quartering:</strong> Estimates are typically due in four installments; annualized‑income methods may apply for uneven income.</div>
+  </section>
+
+  <section class="card">
+    <h2>NIIT — What is taxed?</h2>
+    <table class="tbl small">
+      <tr><th>Tax</th><th>Base</th><th>Thresholds</th></tr>
+      <tr>
+        <td><strong>NIIT (3.8%)</strong></td>
+        <td>3.8% of the <em>lesser of</em> (i) <strong>NII</strong> or (ii) excess of <strong>MAGI</strong> over threshold.</td>
+        <td>Single/HOH <strong>$200,000</strong>, <strong>MFJ</strong> <strong>$250,000</strong>, MFS <strong>$125,000</strong>.</td>
+      </tr>
+    </table>
+    <p class="mini muted">NII includes interest, dividends, capital gains, passive income, and rents/royalties from passive activities (not wages or non‑passive business income).</p>
+  </section>
+
+  <section class="card">
+    <h2>Representative Tasks → Worked Examples</h2>
+
+    <h3>1) Nonrefundable vs refundable credit</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Regular income tax on <strong>TI</strong> is <strong>$2,400</strong>. Nonrefundable education credit <strong>$1,000</strong>. Refundable EIC <strong>$800</strong>. Withholding <strong>$1,100</strong>.</td>
+        <td>
+          Reduce tax by nonrefundable credit to <strong>$1,400</strong> (<strong>$2,400</strong> − <strong>$1,000</strong>).<br>
+          Subtract payments: withholding <strong>$1,100</strong> and refundable EIC <strong>$800</strong> ⇒ total payments/credits <strong>$1,900</strong>.<br>
+          Refund = <strong>$1,900</strong> − <strong>$1,400</strong> = <strong>$500</strong>.
+        </td>
+      </tr>
+    </table>
+
+    <h3>2) Safe harbor test</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Result</th></tr>
+      <tr>
+        <td>Last year’s total tax was <strong>$12,000</strong> with <strong>AGI</strong> <strong>$120,000</strong>. This year the tax will be <strong>$14,500</strong>. Taxpayer paid in <strong>$11,000</strong>.</td>
+        <td>Prior‑year test requires <strong>$12,000</strong> (100%) — taxpayer paid <strong>$11,000</strong> ⇒ <em>fails</em>. Current‑year test requires 90% × <strong>$14,500</strong> = <strong>$13,050</strong> — also fails. Underpayment penalty likely applies to the shortfall.</td>
+      </tr>
+    </table>
+
+    <h3>3) NIIT computation</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Single taxpayer: <strong>MAGI</strong> <strong>$230,000</strong> including <strong>$60,000</strong> of <strong>NII</strong>.</td>
+        <td>Excess over threshold = <strong>$230,000</strong> − <strong>$200,000</strong> = <strong>$30,000</strong>.<br>
+            Lesser of <strong>NII</strong> (<strong>$60,000</strong>) or excess (<strong>$30,000</strong>) = <strong>$30,000</strong>.<br>
+            <strong>NIIT</strong> = 3.8% × <strong>$30,000</strong> = <strong>$1,140</strong>.</td>
+      </tr>
+    </table>
+
+    <h3>4) Putting it together — total tax</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Regular income tax <strong>$9,600</strong>; nonrefundable child & dependent care credit <strong>$800</strong>; <strong>NIIT</strong> from above <strong>$1,140</strong>; withholding <strong>$8,500</strong>.</td>
+        <td>
+          Regular tax after nonrefundable credit = <strong>$9,600</strong> − <strong>$800</strong> = <strong>$8,800</strong>.<br>
+          Add other taxes: + <strong>$1,140</strong> ⇒ total tax <strong>$9,940</strong>.<br>
+          Subtract payments: <strong>$8,500</strong> ⇒ balance due <strong>$1,440</strong>.
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Diagnostics — What to Check</h2>
+    <ul class="small">
+      <li><span class="tag">Ordering</span> Nonrefundable credits cannot reduce regular tax below <strong>$0</strong>.</li>
+      <li><span class="tag">Safe harbor</span> 100% prior‑year (110% if high‑AGI) or 90% current‑year.</li>
+      <li><span class="tag">NIIT base</span> Lesser of <strong>NII</strong> or excess <strong>MAGI</strong> over threshold; not wages or non‑passive income.</li>
+      <li><span class="tag">Refundables</span> Can create a refund even if no tax remains.</li>
+    </ul>
+  </section>
+
+  <!-- Practice Questions MUST be the last section -->
+  <section class="card">
+    <h2>Practice Questions</h2>
+    <ol class="small">
+      <li><strong>Credit ordering:</strong> Regular tax <strong>$3,200</strong>; nonrefundable credit <strong>$2,000</strong>; refundable credit <strong>$1,500</strong>; withholding <strong>$700</strong>. Refund or balance due?<br>
+        <details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Tax after nonrefundable = <strong>$1,200</strong>. Payments = <strong>$2,200</strong> ⇒ refund <strong>$1,000</strong>.
+        </div></details>
+      </li>
+      <div class="hr"></div>
+      <li><strong>Safe harbor:</strong> Prior‑year tax <strong>$20,000</strong> with <strong>AGI</strong> <strong>$160,000</strong>. Current‑year tax <strong>$22,000</strong>. What minimum total paid‑in avoids penalty?<br>
+        <details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          High‑AGI threshold ⇒ need 110% of prior‑year = <strong>$22,000</strong>, or 90% of current‑year = <strong>$19,800</strong>. The lesser safe harbors do not apply; to be safe using prior‑year rule, pay at least <strong>$22,000</strong>.
+        </div></details>
+      </li>
+      <div class="hr"></div>
+      <li><strong>NIIT base:</strong> MFJ with <strong>MAGI</strong> <strong>$310,000</strong> including <strong>$40,000</strong> of <strong>NII</strong>. Compute <strong>NIIT</strong>.<br>
+        <details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Excess MAGI = <strong>$310,000</strong> − <strong>$250,000</strong> = <strong>$60,000</strong>. Lesser of <strong>NII</strong> (<strong>$40,000</strong>) or excess (<strong>$60,000</strong>) = <strong>$40,000</strong>. NIIT = 3.8% × <strong>$40,000</strong> = <strong>$1,520</strong>.
+        </div></details>
+      </li>
+      <div class="hr"></div>
+      <li><strong>Refundable vs nonrefundable:</strong> After all nonrefundable credits, tax is <strong>$0</strong>. Taxpayer has refundable credit <strong>$600</strong> and withholding <strong>$400</strong>. Outcome?<br>
+        <details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Refund <strong>$1,000</strong> (<strong>$600</strong> + <strong>$400</strong>), because refundable credits can be paid out.
+        </div></details>
+      </li>
+    </ol>
+  </section>
+
+</div>
+</body>
+</html>

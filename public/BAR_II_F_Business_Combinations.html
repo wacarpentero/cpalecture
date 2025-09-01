@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.F — Business Combinations (ASC 805)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Business Combinations (ASC 805)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall concepts for business combinations vs <strong>asset acquisitions</strong>, contingent consideration, and <strong>measurement period adjustments</strong>.</li>
+          <li>Prepare <strong>journal entries</strong> to record identifiable net assets recognized at fair value and the resulting <strong>goodwill</strong> or <strong>bargain purchase gain</strong>.</li>
+          <li>Prepare entries when a <strong>noncontrolling interest (NCI)</strong> is present.</li>
+          <li>Calculate the <strong>consideration transferred</strong> in a business combination.</li>
+        </ul>
+      </section>
+
+      <section id="overview" class="section">
+        <h2>Overview & Key Rules</h2>
+        <div class="kv">
+          <div>
+            <h3>Is it a business?</h3>
+            <ul class="tight">
+              <li>Business = inputs + processes capable of producing outputs.</li>
+              <li>Optional screen: If substantially all FV is concentrated in a <strong>single identifiable asset</strong> (or group), treat as <strong>asset acquisition</strong> (no goodwill).</li>
+            </ul>
+            <h3>Consideration transferred</h3>
+            <ul class="tight">
+              <li>Cash & other assets at FV; equity at FV on issuance date.</li>
+              <li><strong>Contingent consideration</strong> at FV at acquisition; classify as <strong>liability</strong> (remeasure through earnings) or <strong>equity</strong> (no remeasurement).</li>
+              <li>Acquisition‑related costs → <strong>expense</strong> (except issuance costs of debt/equity).</li>
+              <li>Pre‑existing relationships settle at FV through earnings.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Goodwill/Bargain Purchase</h3>
+            <ul class="tight">
+              <li>Goodwill = FV(consideration) + FV(NCI) + FV(previously held interest) − FV(identifiable net assets).</li>
+              <li>US GAAP measures NCI at <strong>fair value</strong> (full goodwill).</li>
+              <li>Bargain purchase → recognize <strong>gain</strong> in earnings after reassessing measurements.</li>
+              <li>Step acquisitions: remeasure previously held interest to FV and recognize <strong>gain/loss</strong>.</li>
+            </ul>
+            <h3>Measurement period</h3>
+            <ul class="tight">
+              <li>Up to one year to finalize provisional amounts; adjust <strong>retrospectively</strong> (as if known at acquisition) with offset to goodwill.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="entries" class="section">
+        <h2>Consolidation Entry (at acquisition)</h2>
+        <p>Conceptual consolidation JE:</p>
+        <div class="illustration-card">
+          <table class="table-min">
+            <tr><th>Debit</th><td>Identifiable assets at FV</td></tr>
+            <tr><th>Debit</th><td>Goodwill (if any)</td></tr>
+            <tr><th>Credit</th><td>Liabilities assumed at FV</td></tr>
+            <tr><th>Credit</th><td>Consideration transferred (Cash/Equity/Contingent consideration)</td></tr>
+            <tr><th>Credit</th><td>Noncontrolling interest (FV)</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations</h2>
+
+        <details><summary>1) Goodwill with NCI</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Ownership acquired</th><td><strong>80%</strong></td></tr>
+          <tr><th>Consideration (cash)</th><td><strong>$1,200,000</strong></td></tr>
+          <tr><th>FV of NCI (20%)</th><td><strong>$300,000</strong></td></tr>
+          <tr><th>FV of identifiable net assets</th><td><strong>$1,300,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & JE</h4>
+        <table class="table-min">
+          <tr><th>Goodwill</th><td>$1,200,000 + $300,000 − $1,300,000 = <strong>$200,000</strong></td></tr>
+        </table>
+        <div class="result">Dr Identifiable assets $1,300,000; Dr Goodwill $200,000; Cr Liabilities (if any); Cr Cash $1,200,000; Cr NCI $300,000.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) Bargain purchase gain</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Ownership acquired</th><td><strong>100%</strong></td></tr>
+          <tr><th>Consideration</th><td><strong>$900,000</strong></td></tr>
+          <tr><th>FV of identifiable net assets</th><td><strong>$1,020,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & JE</h4>
+        <table class="table-min">
+          <tr><th>Gain</th><td>$1,020,000 − $900,000 = <strong>$120,000</strong> (after reassessment)</td></tr>
+        </table>
+        <div class="result">Dr Identifiable assets $1,020,000; Cr Cash $900,000; Cr Bargain purchase gain $120,000.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>3) Contingent consideration — initial & subsequent</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Cash at closing</th><td><strong>$200,000</strong></td></tr>
+          <tr><th>Earn‑out FV at acquisition (liability)</th><td><strong>$120,000</strong></td></tr>
+          <tr><th>Earn‑out FV at end of Year 1</th><td><strong>$150,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Entries</h4>
+        <table class="table-min">
+          <tr><th>At acquisition</th><td>Include <strong>$320,000</strong> in consideration; recognize liability <strong>$120,000</strong>.</td></tr>
+          <tr><th>End of Y1</th><td>Increase liability by <strong>$30,000</strong>; record loss <strong>$30,000</strong>.</td></tr>
+        </table>
+        <div class="result">Dr Loss $30,000; Cr Contingent consideration liability $30,000.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>4) Step acquisition (previously held interest)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Previously held interest (30%) — carrying amount</th><td><strong>$270,000</strong></td></tr>
+          <tr><th>FV of 30% at acquisition date</th><td><strong>$330,000</strong></td></tr>
+          <tr><th>Cash to acquire remaining 70%</th><td><strong>$770,000</strong></td></tr>
+          <tr><th>FV of identifiable net assets</th><td><strong>$1,200,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Remeasurement gain</th><td>$330,000 − $270,000 = <strong>$60,000</strong> (I/S)</td></tr>
+          <tr><th>Goodwill</th><td>($770,000 + $330,000) − $1,200,000 = <strong>$-100,000</strong> ⇒ bargain purchase <strong>$100,000 gain</strong> (after reassessment). For illustration only; often goodwill arises.</td></tr>
+        </table>
+        <div class="result">Recognize remeasurement gain and compute goodwill using FV of all interests.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>5) Measurement period adjustment</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup (provisional to final within one year)</h4>
+        <table class="table-min">
+          <tr><th>Provisional identifiable assets</th><td><strong>$1,000,000</strong> (includes customer list <strong>$150,000</strong>)</td></tr>
+          <tr><th>Final value of customer list</th><td><strong>$200,000</strong> (increase <strong>$50,000</strong>)</td></tr>
+          <tr><th>Goodwill initially recognized</th><td><strong>$250,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Adjustment</h4>
+        <table class="table-min">
+          <tr><th>Increase assets</th><td><strong>$50,000</strong></td></tr>
+          <tr><th>Decrease goodwill</th><td><strong>$50,000</strong></td></tr>
+        </table>
+        <div class="result">Record retrospectively as if known at acquisition date; adjust comparative periods.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Business vs asset acquisition</summary>
+          <p>A company acquires a group of assets where <strong>90%</strong> of FV is attributable to a single identifiable building. There are no substantive processes acquired. How should the transaction be accounted for?</p>
+          <ol type="A">
+            <li>Business combination</li>
+            <li>Asset acquisition</li>
+            <li>Either, at the acquirer’s election</li>
+            <li>Business combination if consideration includes equity</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Concentration test met → asset acquisition (no goodwill; capitalize transaction costs).</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Consideration transferred</summary>
+          <p>Which item is <em>not</em> included in consideration transferred?</p>
+          <ol type="A">
+            <li>Cash paid to sellers</li>
+            <li>FV of shares issued</li>
+            <li>Acquisition‑related legal and due diligence fees</li>
+            <li>FV of contingent consideration</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Those fees are expensed as incurred.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Goodwill with NCI</summary>
+          <p>Acquirer pays <strong>$2,400,000</strong> for <strong>75%</strong> of Target. FV of NCI is <strong>$720,000</strong>. FV of identifiable net assets is <strong>$2,800,000</strong>. Compute goodwill.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <table class="table-min">
+                <tr><th>Goodwill</th><td>$2,400,000 + $720,000 − $2,800,000 = <strong>$320,000</strong></td></tr>
+              </table>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Contingent consideration (liability)</summary>
+          <p>An earn‑out recognized at <strong>$100,000</strong> increases to <strong>$140,000</strong> at year‑end. What is the entry?</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <p><strong>Dr Loss $40,000; Cr Contingent consideration liability $40,000.</strong></p>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Measurement period</summary>
+          <p>Within the measurement period, an identifiable asset’s FV increases by <strong>$30,000</strong> from provisional amounts. What is the effect?</p>
+          <ol type="A">
+            <li>Increase asset and recognize gain</li>
+            <li>Increase asset and decrease goodwill</li>
+            <li>No entry until the period ends</li>
+            <li>Increase goodwill</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Adjust retrospectively with offset to goodwill.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>6.</strong> Problem — Compute goodwill (step acquisition)</summary>
+          <p>Acquirer held <strong>40%</strong> of Target (carrying amount <strong>$360,000</strong>; FV now <strong>$500,000</strong>) and buys the remaining <strong>60%</strong> for <strong>$780,000</strong>. FV of identifiable net assets is <strong>$1,180,000</strong>. Compute (a) remeasurement gain and (b) goodwill.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <table class="table-min">
+                <tr><th>Remeasurement gain</th><td>$500,000 − $360,000 = <strong>$140,000</strong></td></tr>
+                <tr><th>Goodwill</th><td>($780,000 + $500,000) − $1,180,000 = <strong>$100,000</strong></td></tr>
+              </table>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>7.</strong> Problem — Bargain purchase check</summary>
+          <p>Consideration <strong>$1,450,000</strong>; NCI at FV <strong>$250,000</strong>; previously held interest <strong>$0</strong>. FV of identifiable assets <strong>$1,900,000</strong>; liabilities <strong>$100,000</strong>. Determine goodwill or gain.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <table class="table-min">
+                <tr><th>Identifiable net assets</th><td>$1,900,000 − $100,000 = <strong>$1,800,000</strong></td></tr>
+                <tr><th>Sum of interests</th><td>$1,450,000 + $250,000 = <strong>$1,700,000</strong></td></tr>
+                <tr><th>Result</th><td>Net assets exceed interests by <strong>$100,000</strong> ⇒ <strong>Bargain purchase gain $100,000</strong> (after reassessment).</td></tr>
+              </table>
+            </div>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

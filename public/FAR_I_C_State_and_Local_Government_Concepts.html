@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR I.C: State and Local Government Concepts</title>
+<meta name="description" content="CPA reviewer chapter for FAR I.C — State and Local Government Concepts (GASB), aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right;overflow-wrap:normal;word-break:keep-all}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>State and Local Government Concepts</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify the <strong>Governmental Accounting Standards Board (GASB)</strong> reporting model: <strong>fund financial statements</strong> and <strong>government‑wide financial statements</strong>, plus <strong>Management’s Discussion and Analysis (MD&amp;A)</strong>, notes, and required supplementary information (RSI).</li>
+          <li>Distinguish <strong>fund categories</strong> (governmental, proprietary, fiduciary) and the related <strong>measurement focus</strong> and <strong>basis of accounting</strong>.</li>
+          <li>Apply <strong>nonexchange revenue</strong> recognition, <strong>budgetary accounting</strong> (including encumbrances), <strong>interfund activity</strong>, and <strong>fund balance/net position</strong> classifications.</li>
+          <li>Determine <strong>major funds</strong> using the 10% and 5% tests and understand <strong>reconciliation</strong> from governmental funds to the government‑wide statements.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Area</th><th>Key points</th></tr>
+          <tr><td>Reporting levels</td><td><strong>Government‑wide</strong> (economic resources, accrual; columns: governmental activities &amp; business‑type activities) vs <strong>Fund statements</strong> (by fund type).</td></tr>
+          <tr><td>Fund types</td><td><strong>Governmental:</strong> General, Special Revenue, Capital Projects, Debt Service, Permanent. <strong>Proprietary:</strong> Enterprise, Internal Service. <strong>Fiduciary:</strong> Custodial, Investment Trust, Private‑Purpose Trust, Pension &amp; Other Postemployment Benefits (OPEB) Trust.</td></tr>
+          <tr><td>Measurement focus / basis</td><td><strong>Governmental funds:</strong> current financial resources / modified accrual (revenue when measurable &amp; available; expenditures when incurred with current resources). <strong>Proprietary &amp; Fiduciary:</strong> economic resources / accrual.</td></tr>
+          <tr><td>Fund balance &amp; net position</td><td>Fund balance: Nonspendable, Restricted, Committed, Assigned, Unassigned. Net position: Net investment in capital assets, Restricted, Unrestricted.</td></tr>
+          <tr><td>Nonexchange revenues</td><td>Derived tax (sales/income), Imposed (property taxes, fines), Government‑mandated, Voluntary — recognize when <strong>eligibility requirements</strong> met; otherwise defer.</td></tr>
+          <tr><td>Major fund</td><td>10% test within fund type and 5% test of total governmental + enterprise funds based on assets + deferred outflows, liabilities + deferred inflows, revenues, or expenditures/expenses.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Reporting Model & Statements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Government‑wide statements:</strong> Statement of Net Position and Statement of Activities (separate columns for governmental activities and business‑type activities; fiduciary activities are excluded).</li>
+        <li><strong>Fund statements:</strong> Present each fund category with its measurement focus and basis of accounting.</li>
+        <li><strong>Annual Comprehensive Financial Report (ACFR):</strong> MD&amp;A precedes the statements; required supplementary information includes budgetary comparisons for the General Fund and major special revenue funds.</li>
+      </ul>
+    </div>
+
+    <h2>2) Funds & Measurement Focus / Basis of Accounting</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Governmental Funds (modified accrual)</h3>
+        <ul>
+          <li><strong>General</strong> — default operating fund.</li>
+          <li><strong>Special Revenue</strong> — specific revenue sources legally restricted or committed to specific purposes.</li>
+          <li><strong>Capital Projects</strong> — acquisition or construction of major capital facilities.</li>
+          <li><strong>Debt Service</strong> — accumulation and payment of principal and interest on general long‑term debt.</li>
+          <li><strong>Permanent</strong> — resources legally restricted so only earnings, not principal, may be used for the reporting government’s programs.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Proprietary &amp; Fiduciary (accrual)</h3>
+        <ul>
+          <li><strong>Enterprise</strong> — activities primarily financed with user fees (e.g., utilities, airports).</li>
+          <li><strong>Internal Service</strong> — goods/services provided internally to other funds.</li>
+          <li><strong>Fiduciary funds</strong> — resources held for others (Custodial, Investment Trust, Private‑Purpose Trust, Pension &amp; Other Postemployment Benefits (OPEB) Trust); excluded from government‑wide statements.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>3) Interfund Activity (classify correctly)</h2>
+    <div class="card">
+      <table class="tbl">
+        <tr><th>Type</th><th>Definition</th><th>Fund statements</th><th>Government‑wide</th></tr>
+        <tr><td>Interfund services</td><td>Sales and purchases between funds at external pricing</td><td>Record <em>revenues/expenses</em></td><td>Reported as internal activity; eliminate between functions</td></tr>
+        <tr><td>Reimbursements</td><td>One fund repays another for costs initially paid</td><td>Reclassify expenditures/expenses</td><td>Not displayed as transfers</td></tr>
+        <tr><td>Transfers</td><td>Nonreciprocal flows</td><td>Other financing sources/uses</td><td>Report as transfers; eliminate internal transfers in total column</td></tr>
+        <tr><td>Loans/advances</td><td>Amounts expected to be repaid</td><td>Due to/from (current) or advances (noncurrent)</td><td>Eliminate internal balances</td></tr>
+      </table>
+    </div>
+
+    <h2>4) Nonexchange Revenues (modified accrual)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Derived tax revenues:</strong> Recognize when the underlying exchange transaction occurs (e.g., sales taxes from retail sales).</li>
+        <li><strong>Imposed nonexchange revenues:</strong> Property taxes, fines. Recognize when <strong>imposed</strong>, net of estimated uncollectibles; amounts not available in the current period are <strong>deferred inflows</strong>.</li>
+        <li><strong>Government‑mandated and voluntary nonexchange transactions:</strong> Recognize when all <strong>eligibility requirements</strong> are met (e.g., time or purpose). Cash received before eligibility is a <strong>deferred inflow of resources</strong> (or liability in accrual funds).</li>
+      </ul>
+      <div class="callout tip"><strong>Availability:</strong> Revenue is “available” when collectible within the current period or soon enough thereafter to pay current obligations (often within 60 days, per policy).</div>
+    </div>
+
+    <h2>5) Budgetary Accounting & Encumbrances (governmental funds)</h2>
+    <div class="card">
+      <ul>
+        <li>Adopt budgets in the General Fund and major Special Revenue funds; present <strong>budget‑to‑actual</strong> as required supplementary information (RSI).</li>
+        <li><strong>Encumbrances</strong> record purchase commitments. Outstanding encumbrances at year‑end are typically reported as <strong>Committed</strong> or <strong>Assigned</strong> fund balance.</li>
+      </ul>
+      <details><summary>Common journal entry sequence</summary>
+        <ul>
+          <li><em>Adopt budget (summarized):</em> Dr Estimated revenues / Cr Appropriations / plug to Budgetary fund balance.</li>
+          <li><em>Place order (encumbrance):</em> Dr Encumbrances / Cr Budgetary fund balance—reserve for encumbrances.</li>
+          <li><em>Receive goods (record expenditure):</em> Reverse encumbrance; Dr Expenditures / Cr Vouchers payable for actual amount.</li>
+          <li><em>Close budget:</em> Close nominal budgetary accounts at year‑end.</li>
+        </ul>
+      </details>
+    </div>
+
+    <h2>6) Major Funds & Reconciliations</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Major fund tests</h3>
+        <ul>
+          <li><strong>10% test:</strong> Fund’s element (assets + deferred outflows, liabilities + deferred inflows, revenues, or expenditures/expenses) &ge; 10% of the corresponding total for all funds in the same category (governmental or enterprise).</li>
+          <li><strong>5% test:</strong> Same element &ge; 5% of the <em>combined total</em> of governmental + enterprise funds.</li>
+          <li>Any fund may be presented as major at the government’s discretion.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Government‑wide reconciliation (concepts)</h3>
+        <ul>
+          <li>Add: Capital assets (net), deferred outflows; subtract: long‑term liabilities, deferred inflows; adjust for internal service funds and accruals.</li>
+          <li>Statement of Activities: Start with change in fund balance and adjust for capital outlay vs. depreciation, debt activity, and accruals.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>7) Fund Balance & Net Position</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Fund balance (governmental funds):</strong> Nonspendable, Restricted, Committed (highest authority), Assigned (intended), Unassigned (General Fund residual).</li>
+        <li><strong>Net position (government‑wide/proprietary):</strong> Net investment in capital assets; Restricted; Unrestricted.</li>
+        <li><strong>Deferred outflows/inflows of resources</strong> appear separately from assets/liabilities (e.g., certain grants received in advance or property taxes not available).</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Property Tax Revenue Availability</h3>
+        <table class="tbl">
+          <colgroup>
+            <col style="width:40%"><col style="width:20%"><col style="width:20%"><col style="width:20%">
+          </colgroup>
+          <tr><th>Facts</th><th class="center">Amount</th><th class="center">Collected within 60 days?</th><th>Recognize in current year?</th></tr>
+          <tr><td>Total levy for Year 1</td><td class="num">$1,000,000</td><td class="center">—</td><td>Assess gross, then reduce for estimated uncollectible</td></tr>
+          <tr><td>Estimated uncollectible</td><td class="num">$20,000</td><td class="center">—</td><td>Contra to revenue</td></tr>
+          <tr><td>Collected in Year 1</td><td class="num">$930,000</td><td class="center">Yes</td><td>Revenue</td></tr>
+          <tr><td>Collected in first 60 days of Year 2</td><td class="num">$40,000</td><td class="center">Yes</td><td>Revenue (available)</td></tr>
+          <tr><td>Collected after 60 days</td><td class="num">$10,000</td><td class="center">No</td><td><strong>Deferred inflow</strong> (recognize next year)</td></tr>
+          <tr><th>Total current‑year property tax revenue</th><th class="num">$950,000</th><th></th><th></th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Encumbrances & Expenditures</h3>
+        <table class="tbl">
+          <colgroup>
+            <col style="width:40%"><col style="width:20%"><col style="width:40%">
+          </colgroup>
+          <tr><th>Event</th><th class="center">Amount</th><th>Entry (General Fund)</th></tr>
+          <tr><td>Place purchase order (estimated)</td><td class="num">$120,000</td><td>Dr Encumbrances $120,000; Cr Budgetary fund balance—reserve for encumbrances $120,000</td></tr>
+          <tr><td>Receive goods; invoice $118,000</td><td class="num">$118,000</td><td>Dr Budgetary fund balance—reserve $120,000; Cr Encumbrances $120,000;<br>Dr Expenditures $118,000; Cr Vouchers payable $118,000</td></tr>
+          <tr><td>Pay vendor</td><td class="num">$118,000</td><td>Dr Vouchers payable $118,000; Cr Cash $118,000</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — Major Fund Determination</h3>
+        <table class="tbl">
+          <colgroup>
+            <col style="width:32%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:17%">
+          </colgroup>
+          <tr><th>Fund</th><th class="center">Assets + Deferred outflows</th><th class="center">Liabilities + Deferred inflows</th><th class="center">Revenues</th><th class="center">Expenditures/Expenses</th></tr>
+          <tr><td>General (governmental)</td><td class="num">$3,200,000</td><td class="num">$1,000,000</td><td class="num">$2,500,000</td><td class="num">$2,450,000</td></tr>
+          <tr><td>Capital Projects (governmental)</td><td class="num">$900,000</td><td class="num">$200,000</td><td class="num">$150,000</td><td class="num">$850,000</td></tr>
+          <tr><td>Water Enterprise (enterprise)</td><td class="num">$4,000,000</td><td class="num">$1,900,000</td><td class="num">$2,100,000</td><td class="num">$2,000,000</td></tr>
+          <tr><td>Totals by category</td><td class="num">$4,100,000 (govt)<br>$4,000,000 (ent)</td><td class="num">$1,200,000 (govt)<br>$1,900,000 (ent)</td><td class="num">$2,650,000 (govt)<br>$2,100,000 (ent)</td><td class="num">$3,300,000 (govt)<br>$2,000,000 (ent)</td></tr>
+          <tr><td colspan="5"><strong>Analysis:</strong> Capital Projects assets of $900,000 are &gt;= 10% of governmental assets ($4,100,000) and &gt;= 5% of combined governmental + enterprise assets ($8,100,000) ⇒ <strong>Major fund</strong>. Water Enterprise will also be major within the proprietary category.</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Interfund Activity Classification</h3>
+        <table class="tbl">
+          <tr><th>Scenario</th><th>Correct treatment</th></tr>
+          <tr><td>Internal Service Fund bills General Fund for vehicle maintenance</td><td>Record revenue in Internal Service Fund and expenditure in General Fund (interfund services)</td></tr>
+          <tr><td>General Fund transfers $300,000 to Debt Service Fund for bond payments</td><td>Other financing use in General Fund; other financing source in Debt Service Fund (transfer)</td></tr>
+          <tr><td>Capital Projects Fund initially paid an expenditure that properly belongs to General Fund</td><td>Reimbursement — reclassify to General Fund; do not report as transfer</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Mini Reconciliation to Government‑wide</h3>
+        <table class="tbl">
+          <colgroup><col style="width:70%"><col style="width:30%"></colgroup>
+          <tr><th>Adjustment from Governmental Funds to Government‑wide</th><th class="center">Amount</th></tr>
+          <tr><td>Add capital assets purchased (recorded as expenditures) net of depreciation</td><td class="num">$1,200,000</td></tr>
+          <tr><td>Subtract issuance of long‑term debt (not a fund liability)</td><td class="num">$(2,000,000)</td></tr>
+          <tr><td>Add principal payments on long‑term debt (expenditure in funds)</td><td class="num">$300,000</td></tr>
+          <tr><td>Record accrued interest expense not due yet</td><td class="num">$(25,000)</td></tr>
+          <tr><th>Net adjustment to change in net position</th><th class="num">$(525,000)</th></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Measurement focus/basis for governmental funds? <strong>Current financial resources / modified accrual.</strong></li>
+        <li>Are fiduciary funds included in the government‑wide statements? <strong>No.</strong></li>
+        <li>Fund balance order? <strong>Nonspendable, Restricted, Committed, Assigned, Unassigned.</strong></li>
+        <li>When do you recognize a voluntary grant received in advance of the time requirement? <strong>Deferred inflow</strong> until eligible.</li>
+        <li>Two‑step major fund test? <strong>10% within category</strong> and <strong>5% of combined governmental + enterprise totals.</strong></li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

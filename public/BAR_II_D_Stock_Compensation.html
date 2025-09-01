@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.D — Stock Compensation (ASC 718)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Stock Compensation (ASC 718)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall core concepts: grant date, vesting conditions (service, performance, market), settlement, classification (<strong>equity</strong> vs <strong>liability</strong>), and valuation inputs (e.g., volatility, expected term, risk‑free rate).</li>
+          <li>Prepare journal entries for awards measured at <strong>grant‑date fair value</strong> (equity‑classified) and <strong>re‑measured each period</strong> (liability‑classified).</li>
+        </ul>
+      </section>
+
+      <section id="concepts" class="section">
+        <h2>Key Concepts & Rules</h2>
+        <div class="kv">
+          <div>
+            <h3>Classification</h3>
+            <ul class="tight">
+              <li><strong>Equity‑classified</strong> (most options/RSUs): settled in shares with no obligation to settle in cash.</li>
+              <li><strong>Liability‑classified</strong>: cash‑settled awards (e.g., cash SARs) or conditions that create a cash obligation.</li>
+            </ul>
+            <h3>Measurement</h3>
+            <ul class="tight">
+              <li>Equity awards: measure FV at <strong>grant date</strong> and recognize compensation cost over the <strong>requisite service period</strong> (cliff or graded).</li>
+              <li>Liability awards: re‑measure FV at each reporting date until settlement; true‑up expense.</li>
+            </ul>
+            <h3>Forfeitures</h3>
+            <ul class="tight">
+              <li>Policy election: (a) estimate forfeitures, or (b) account for forfeitures as they occur. Many choose option (b).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Attribution</h3>
+            <ul class="tight">
+              <li>Cliff vesting: straight‑line over service period.</li>
+              <li>Graded vesting (e.g., 25% per year for 4 years): either treat each tranche as separate awards (accelerated) <em>or</em> straight‑line if only service conditions and overall FV is recognized at least at tranche minimums.</li>
+            </ul>
+            <h3>Modifications</h3>
+            <ul class="tight">
+              <li>Recognize original grant cost + <strong>incremental FV</strong> (new FV − old FV at modification date). If FV decreases, do not reverse cost.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="equity" class="section">
+        <h2>Equity‑Classified Awards</h2>
+        <div class="kv">
+          <div>
+            <h3>Restricted Stock Units (RSUs)</h3>
+            <ul class="tight">
+              <li>FV typically equals grant‑date share price (no dividend rights until vest).</li>
+              <li>Expense = FV × shares ÷ service period; adjust for forfeitures per policy.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Stock Options</h3>
+            <ul class="tight">
+              <li>FV via option‑pricing model (e.g., Black‑Scholes); inputs: stock price, exercise price, expected term, volatility, risk‑free rate, expected dividends.</li>
+              <li>Recognize expense over service period; no subsequent re‑measurement (unless liability‑classified).</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — RSU with cliff vesting</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Shares</th><td><strong>10,000</strong> RSUs</td></tr>
+          <tr><th>Grant‑date FV/share</th><td><strong>$12.00</strong></td></tr>
+          <tr><th>Vesting</th><td>Cliff after <strong>3 years</strong> of service</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & JE</h4>
+        <table class="table-min">
+          <tr><th>Total compensation</th><td>10,000 × $12 = <strong>$120,000</strong></td></tr>
+          <tr><th>Annual expense</th><td>$120,000 ÷ 3 = <strong>$40,000</strong></td></tr>
+          <tr><th>Entry (each year)</th><td>Dr Compensation expense $40,000; Cr APIC — RSUs $40,000</td></tr>
+        </table>
+        <div class="result">Reverse unrecognized cost if award is forfeited per policy.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>Illustration — Stock options with graded vesting (accelerated attribution)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Options</th><td><strong>6,000</strong></td></tr>
+          <tr><th>Grant‑date FV/option</th><td><strong>$4.00</strong> (given)</td></tr>
+          <tr><th>Vesting</th><td>25% each year over <strong>4 years</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute (treat tranches separately)</h4>
+        <table class="table-min">
+          <tr><th>Y1 (25% of 6,000)</th><td>1,500 × $4 ÷ 1 = <strong>$6,000</strong></td></tr>
+          <tr><th>Y2</th><td>1,500 × $4 ÷ 2 = <strong>$3,000</strong></td></tr>
+          <tr><th>Y3</th><td>1,500 × $4 ÷ 3 = <strong>$2,000</strong></td></tr>
+          <tr><th>Y4</th><td>1,500 × $4 ÷ 4 = <strong>$1,500</strong></td></tr>
+          <tr><th><strong>Total</strong></th><td><strong>$12,500</strong> each year cumulatively reaches $24,000</td></tr>
+        </table>
+        <div class="result">Expense pattern is front‑loaded (accelerated).</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="liability" class="section">
+        <h2>Liability‑Classified Awards</h2>
+        <div class="kv">
+          <div>
+            <h3>Cash‑settled SARs (example)</h3>
+            <ul class="tight">
+              <li>Measure FV at each reporting date using an option model or intrinsic value proxy and recognize expense over service period.</li>
+              <li>At settlement: settle liability for cash; stop recognizing expense.</li>
+            </ul>
+          </div>
+          <div>
+            <details><summary>Illustration — Cash SARs (re‑measurement)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Awards</th><td><strong>5,000</strong> SARs</td></tr>
+          <tr><th>Service period</th><td><strong>2 years</strong> (cliff)</td></tr>
+          <tr><th>FV/SAR</th><td>Grant: <strong>$2.40</strong>; End Y1: <strong>$3.10</strong>; End Y2: <strong>$3.60</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & JEs</h4>
+        <table class="table-min">
+          <tr><th>Y1 liability</th><td>5,000 × $3.10 × 1/2 = <strong>$7,750</strong></td></tr>
+          <tr><th>Y1 expense</th><td><strong>$7,750</strong> (Dr Comp exp; Cr Liability)</td></tr>
+          <tr><th>Y2 liability (final)</th><td>5,000 × $3.60 × 2/2 = <strong>$18,000</strong></td></tr>
+          <tr><th>Y2 expense</th><td>$18,000 − $7,750 = <strong>$10,250</strong></td></tr>
+          <tr><th>Settlement</th><td>Dr Liability $18,000; Cr Cash $18,000</td></tr>
+        </table>
+        <div class="result">Expense reflects re‑measurement each period.</div>
+      </div>
+    </div>
+  </div>
+</details>
+          </div>
+        </div>
+      </section>
+
+      <section id="modifications" class="section">
+        <h2>Modifications & Tax Effects</h2>
+        <div class="kv">
+          <div>
+            <h3>Modification — extend vesting</h3>
+            <ul class="tight">
+              <li>Incremental FV = FV(new terms) − FV(old terms) at modification date.</li>
+              <li>Recognize incremental amount over remaining service; if vested portion is affected, recognize immediately for that portion.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Tax (overview)</h3>
+            <ul class="tight">
+              <li>Deferred tax asset generally for future tax deduction; at settlement/exercise, windfalls/shortfalls go to <strong>APIC</strong> (not I/S) under ASU 2016‑09 framework commonly tested at a high level.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Incremental fair value</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Unvested options</th><td><strong>4,000</strong>; 1 year of service remaining</td></tr>
+          <tr><th>FV/option</th><td>Old: <strong>$3.50</strong>; New after modification: <strong>$4.10</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Incremental FV</th><td>4,000 × ($4.10 − $3.50) = <strong>$2,400</strong></td></tr>
+          <tr><th>Recognition</th><td>Recognize <strong>$2,400</strong> over remaining service; continue recognizing unrecognized original grant cost.</td></tr>
+        </table>
+        <div class="result">No reversal for decreases in FV due to modification.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick Reference</h2>
+        <table class="table">
+          <thead>
+            <tr><th>Award</th><th>Class.</th><th>Measurement</th><th>Expense pattern</th><th>Settlement</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RSU</td>
+              <td>Equity</td>
+              <td>Grant‑date FV</td>
+              <td>Straight‑line over service</td>
+              <td>Issue shares; reclass APIC</td>
+            </tr>
+            <tr>
+              <td>Options</td>
+              <td>Equity</td>
+              <td>Grant‑date FV (option model)</td>
+              <td>Cliff or graded (see policy)</td>
+              <td>Exercise: Dr Cash; Dr APIC — options; Cr Common/APIC</td>
+            </tr>
+            <tr>
+              <td>Cash SARs</td>
+              <td>Liability</td>
+              <td>Re‑measure each period</td>
+              <td>Recognize to FV × service fraction</td>
+              <td>Settle liability in cash</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Classification</summary>
+          <p>An award requires cash settlement equal to the intrinsic value at vesting. Classification?</p>
+          <ol type="A">
+            <li>Equity</li>
+            <li>Liability</li>
+            <li>Equity with cash flow hedge</li>
+            <li>Equity if employee can choose shares</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Cash obligation → liability‑classified under ASC 718.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Graded vesting expense</summary>
+          <p>4‑year graded vesting RSU with equal tranches and grant‑date FV of $8 per share. Treat tranches separately. Which statement is true?</p>
+          <ol type="A">
+            <li>Annual expense is equal each year.</li>
+            <li>Expense is front‑loaded (highest in Y1).</li>
+            <li>Expense recognized only at vest date.</li>
+            <li>Expense is recognized only if the market price increases.</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Accelerated attribution recognizes earlier tranches sooner.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Modification</summary>
+          <p>Incremental FV from modifying unvested options is recognized:</p>
+          <ol type="A">
+            <li>Immediately in full</li>
+            <li>Over the remaining requisite service period</li>
+            <li>Only if FV increases and options are vested</li>
+            <li>Not at all if FV decreases</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> For unvested portion, recognize over remaining service; decreases are not reversed.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Liability re‑measurement</summary>
+          <p>A cash‑settled SAR increases in FV during the period. The effect is to:</p>
+          <ol type="A">
+            <li>Decrease compensation expense</li>
+            <li>Increase compensation expense and the liability</li>
+            <li>No effect until settlement</li>
+            <li>Record to OCI</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Re‑measure to current FV each reporting date.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Problem — RSU with forfeitures as they occur</summary>
+          <p>Grant of <strong>8,000</strong> RSUs at <strong>$10</strong> FV per share; cliff vest in <strong>2 years</strong>. Policy is to recognize forfeitures as they occur. In Year 1, <strong>400</strong> RSUs are forfeited. Compute Year‑1 expense.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <div class="row">
+                <div>
+                  <h4>Compute</h4>
+                  <table class="table-min">
+                    <tr><th>Outstanding after forfeiture</th><td>8,000 − 400 = <strong>7,600</strong></td></tr>
+                    <tr><th>Total comp</th><td>7,600 × $10 = <strong>$76,000</strong></td></tr>
+                    <tr><th>Y1 expense</th><td>$76,000 ÷ 2 = <strong>$38,000</strong></td></tr>
+                  </table>
+                </div>
+                <div>
+                  <h4>JE</h4>
+                  <p>Dr Compensation expense <strong>$38,000</strong>; Cr APIC — RSUs <strong>$38,000</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>6.</strong> Problem — Liability SARs re‑measure</summary>
+          <p>3,000 SARs, service period 3 years (cliff). FV/SAR: grant <strong>$1.20</strong>, end Y1 <strong>$1.50</strong>, end Y2 <strong>$1.10</strong>. Compute Y1 and Y2 expense.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <div class="row">
+                <div>
+                  <h4>Y1</h4>
+                  <table class="table-min">
+                    <tr><th>Liability</th><td>3,000 × $1.50 × 1/3 = <strong>$1,500</strong></td></tr>
+                    <tr><th>Expense</th><td><strong>$1,500</strong></td></tr>
+                  </table>
+                </div>
+                <div>
+                  <h4>Y2</h4>
+                  <table class="table-min">
+                    <tr><th>Liability</th><td>3,000 × $1.10 × 2/3 = <strong>$2,200</strong></td></tr>
+                    <tr><th>Expense</th><td>$2,200 − $1,500 = <strong>$700</strong></td></tr>
+                  </table>
+                  <div class="result">Expense can decrease if FV decreases vs prior measurement (downward true‑up).</div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

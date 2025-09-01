@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.E — Research & Development Costs (ASC 730)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Research & Development Costs (ASC 730)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Identify R&amp;D activities and classify related costs as <strong>expense</strong>, <strong>capitalize</strong>, or <strong>other</strong> for financial reporting.</li>
+          <li>Compute total R&amp;D expense for the period and prepare basic journal entries.</li>
+        </ul>
+      </section>
+
+      <section id="rules" class="section">
+        <h2>Core Rules (U.S. GAAP — ASC 730)</h2>
+        <div class="kv">
+          <div>
+            <h3>R&amp;D <em>expensed as incurred</em></h3>
+            <ul class="tight">
+              <li>Materials, supplies, prototypes consumed in R&amp;D</li>
+              <li>R&amp;D payroll and payroll‑related costs</li>
+              <li>Fees to outside entities for R&amp;D services</li>
+              <li>Facility/overhead clearly related to R&amp;D</li>
+            </ul>
+            <h3>Not R&amp;D (expense elsewhere or capitalize)</h3>
+            <ul class="tight">
+              <li>Routine design changes, troubleshooting, quality control</li>
+              <li>Market research, advertising</li>
+              <li>Legal fees for patents/trademarks → <strong>capitalize</strong> as intangible</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Capitalization exceptions / special cases</h3>
+            <ul class="tight">
+              <li><strong>PP&amp;E</strong> acquired for R&amp;D with alternative future use: <strong>capitalize</strong> as PP&amp;E; related depreciation → R&amp;D expense while used in R&amp;D.</li>
+              <li><strong>Materials</strong> with alternative future use: carry as inventory/asset; expense when consumed.</li>
+              <li><strong>Acquired IPR&amp;D</strong> (business combination): capitalize as <em>indefinite‑lived intangible</em> until project completion/abandonment (then amortize or impair).</li>
+              <li><strong>Software</strong>: follow ASC 350‑40 (internal‑use) or ASC 985‑20 (to be sold); see separate reviewer.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustration1" class="section">
+        <h2>Illustration — Compute R&amp;D Expense</h2>
+        <details><summary>Scenario &amp; solution</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup (Year 1)</h4>
+        <table class="table-min">
+          <tr><th>Materials consumed in prototypes</th><td><strong>$36,000</strong></td></tr>
+          <tr><th>R&amp;D salaries & benefits</th><td><strong>$220,000</strong></td></tr>
+          <tr><th>Consulting for lab testing</th><td><strong>$48,000</strong></td></tr>
+          <tr><th>Equipment for R&amp;D (alternative future use)</th><td><strong>$150,000</strong>; life 5 yrs, straight‑line</td></tr>
+          <tr><th>Patent legal filing</th><td><strong>$12,000</strong></td></tr>
+          <tr><th>Quality control of current production</th><td><strong>$18,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Expense: materials</th><td><strong>$36,000</strong></td></tr>
+          <tr><th>Expense: salaries</th><td><strong>$220,000</strong></td></tr>
+          <tr><th>Expense: external testing</th><td><strong>$48,000</strong></td></tr>
+          <tr><th>Depreciation (R&amp;D)</th><td>$150,000 ÷ 5 = <strong>$30,000</strong></td></tr>
+          <tr><th><strong>Total R&amp;D expense</strong></th><td><strong>$334,000</strong></td></tr>
+          <tr><th>Capitalize</th><td>Patent legal costs <strong>$12,000</strong> → intangible asset</td></tr>
+          <tr><th>Not R&amp;D</th><td>Quality control <strong>$18,000</strong> → SG&amp;A/COGS, not R&amp;D</td></tr>
+        </table>
+        <div class="result">JE: Dr R&amp;D exp $334,000; Dr Patent (intangible) $12,000; Dr PPE $150,000; Cr Cash/AP $496,000.</div>
+      </div>
+    </div>
+  </div>
+</details>
+      </section>
+
+      <section id="illustration2" class="section">
+        <h2>Illustration — Acquired IPR&amp;D (business combination)</h2>
+        <details><summary>Scenario &amp; solution</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>IPR&amp;D FV at acquisition</th><td><strong>$2,400,000</strong></td></tr>
+          <tr><th>Status</th><td>Project not yet commercially viable</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Subsequent accounting</h4>
+        <ul class="tight">
+          <li>Recognize at FV as <strong>indefinite‑lived intangible</strong> (not amortized).</li>
+          <li>Test annually for impairment. If completed successfully in Y3, reclassify to finite‑lived intangible and amortize over expected life (e.g., 8 years).</li>
+          <li>If abandoned, recognize an impairment loss for the remaining carrying amount.</li>
+        </ul>
+        <div class="result">JE at acquisition (part of purchase accounting): Dr IPR&amp;D $2,400,000; Cr Consideration/Goodwill alloc.</div>
+      </div>
+    </div>
+  </div>
+</details>
+      </section>
+
+      <section id="decision" class="section">
+        <h2>Quick Decision Aid</h2>
+        <table class="table">
+          <thead>
+            <tr><th>Item</th><th>Treatment</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Prototype materials consumed</td><td>Expense (R&amp;D)</td><td>Include scrap directly related to R&amp;D.</td></tr>
+            <tr><td>Equipment with future use</td><td>Capitalize PP&amp;E</td><td>Depreciate; charge depreciation to R&amp;D while used in R&amp;D.</td></tr>
+            <tr><td>Patent legal fees</td><td>Capitalize intangible</td><td>Amortize over legal/economic life.</td></tr>
+            <tr><td>Routine QC/bug fixes for current products</td><td>Not R&amp;D</td><td>Expense to operations.</td></tr>
+            <tr><td>Payments to CRO/university for research</td><td>Expense (R&amp;D)</td><td>Unless asset with future use is obtained.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Classification</summary>
+          <p>Which is <em>capitalized</em> rather than expensed as R&amp;D?</p>
+          <ol type="A">
+            <li>Prototype materials consumed</li>
+            <li>Legal fees to file a patent</li>
+            <li>Payments to a lab for toxicity testing</li>
+            <li>Payroll for engineers designing a new product</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Patent legal fees are capitalized as an intangible.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Compute R&amp;D expense</summary>
+          <p>Given: materials used in prototypes <strong>$14,000</strong>; salaries <strong>$90,000</strong>; equipment purchased for R&amp;D with alternative future use <strong>$60,000</strong> (5‑yr life, SL); advertising for the new product launch <strong>$8,000</strong>. What is R&amp;D expense?</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <div class="row">
+                <div>
+                  <h4>Computation</h4>
+                  <table class="table-min">
+                    <tr><th>Materials</th><td><strong>$14,000</strong></td></tr>
+                    <tr><th>Salaries</th><td><strong>$90,000</strong></td></tr>
+                    <tr><th>Depreciation</th><td>$60,000 ÷ 5 = <strong>$12,000</strong></td></tr>
+                    <tr><th>Advertising</th><td>Not R&amp;D</td></tr>
+                    <tr><th><strong>Total R&amp;D expense</strong></th><td><strong>$116,000</strong></td></tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> IPR&amp;D</summary>
+          <p>IPR&amp;D acquired in a business combination is initially accounted for as:</p>
+          <ol type="A">
+            <li>R&amp;D expense</li>
+            <li>Indefinite‑lived intangible asset</li>
+            <li>Goodwill</li>
+            <li>Deferred asset amortized over 5 years</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Capitalize as indefinite‑lived intangible until completion or abandonment.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

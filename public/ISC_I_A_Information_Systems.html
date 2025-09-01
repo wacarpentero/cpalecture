@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Information Systems (CPA Reviewer)</title>
+<style>
+:root{--bg:#0b1020;--card:#111a33;--ink:#eaf0ff;--muted:#a7b4cf;--accent:#7aa2ff;--accent2:#4dd4b0;--danger:#ff6b6b;--ok:#6edc82;--font:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px dashed rgba(255,255,255,.12);padding:8px;text-align:left;font-size:14px}
+.table th{font-weight:600}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.tip{border-left:4px solid var(--accent2);background:rgba(77,212,176,.1);padding:10px;border-radius:8px}
+.warn{border-left:4px solid var(--danger);background:rgba(255,107,107,.08);padding:10px;border-radius:8px}
+details>summary{cursor:pointer;padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+.answer>summary{cursor:pointer;padding:6px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;margin-top:6px}
+.answer>summary::-webkit-details-marker{display:none}
+code,kbd{background:rgba(255,255,255,.08);padding:0 6px;border-radius:6px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Information Systems </div>
+
+    <section class="section">
+      <h2>Learning Objectives </h2>
+      <div class="grid">
+        <div>
+          <ul>
+            <li>Explain core IT infrastructure: operating systems, servers, network components, endpoints.</li>
+            <li>Differentiate cloud models (IaaS, PaaS, SaaS) and deployment (public, private, hybrid).</li>
+            <li>Summarize cloud service provider roles & the shared‑responsibility model.</li>
+            <li>Explain how the <strong>COSO</strong> framework addresses cloud governance.</li>
+            <li>Summarize ERP/accounting information systems and how modules interact.</li>
+            <li>Apply COSO to <strong>blockchain</strong> risks and controls.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Determine changes to business processes (e.g., RPA, outsourcing) to improve performance.</li>
+            <li>Reconcile actual process steps and data/tech used to the documented process (flowchart/BPMN).</li>
+            <li>Recall business continuity/disaster recovery concepts; compute <strong>availability</strong>.</li>
+            <li>Determine appropriate <strong>backup types</strong> and evaluate <strong>RPO/RTO</strong>.</li>
+            <li>Explain change management purpose, environments (dev/test/stage/prod), testing, and conversion methods.</li>
+            <li>Perform walkthroughs and identify SOC 2® Trust Services Criteria (processing integrity/availability) control gaps.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tip"><strong>Exam Tip:</strong> Don’t mix up <strong>RPO</strong> (max acceptable data loss) with <strong>RTO</strong> (max acceptable downtime). Availability % is about <em>uptime</em>, not throughput.</div>
+    </section>
+
+    <section class="section">
+      <h2>1) IT Infrastructure & Cloud</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Cloud Models (quick table)</h3>
+          <table class="table">
+            <tr><th>Model</th><th>Provider</th><th>Customer</th></tr>
+            <tr><td>IaaS</td><td>Compute, storage, networking</td><td>OS, middleware, apps, data</td></tr>
+            <tr><td>PaaS</td><td>Runtime, DBMS, tools</td><td>Apps & data</td></tr>
+            <tr><td>SaaS</td><td>App & platform</td><td>Data, config, identity & access</td></tr>
+          </table>
+          <div class="tip"><strong>Tricky:</strong> Even with SaaS, the entity owns <em>data classification, access controls, and retention</em>.</div>
+        </div>
+        <div class="card">
+          <h3>COSO & Cloud Governance</h3>
+          <ul>
+            <li><strong>Control Environment:</strong> define cloud risk appetite; assign data owners.</li>
+            <li><strong>Risk Assessment:</strong> identify vendor lock‑in, multi‑tenant risks, shared controls.</li>
+            <li><strong>Control Activities:</strong> IAM, key management, change approvals, backup policies.</li>
+            <li><strong>Info & Comm:</strong> dashboards, SLA reporting, incident notifications.</li>
+            <li><strong>Monitoring:</strong> logs, audits, SOC reports, penetration tests.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2) Enterprise & Accounting Information Systems (AIS)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Revenue Cycle — JE flow</h3>
+          
+    <div class="card">
+      <h3>Sales on account</h3>
+      <table class="table">
+        <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        <tr><td>Accounts Receivable</td><td><strong>$12,000.00</strong></td><td></td></tr><tr><td>Sales Revenue</td><td></td><td><strong>$12,000.00</strong></td></tr>
+      </table>
+    </div>
+    
+          
+    <div class="card">
+      <h3>Cash receipt with discount</h3>
+      <table class="table">
+        <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        <tr><td>Cash</td><td><strong>$9,800.00</strong></td><td></td></tr><tr><td>Sales Discounts</td><td><strong>$200.00</strong></td><td></td></tr><tr><td>Accounts Receivable</td><td></td><td><strong>$10,000.00</strong></td></tr>
+      </table>
+    </div>
+    
+          <div class="tip">Match documents: <em>Sales order → Pick ticket → Shipping doc → Invoice</em>. Three‑way match is for purchases.</div>
+        </div>
+        <div class="card">
+          <h3>Expenditure & Payroll Cycles — JE flow</h3>
+          
+    <div class="card">
+      <h3>Purchase inventory on account</h3>
+      <table class="table">
+        <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        <tr><td>Inventory</td><td><strong>$7,500.00</strong></td><td></td></tr><tr><td>Accounts Payable</td><td></td><td><strong>$7,500.00</strong></td></tr>
+      </table>
+    </div>
+    
+          
+    <div class="card">
+      <h3>Pay A/P with discount (perpetual)</h3>
+      <table class="table">
+        <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        <tr><td>Accounts Payable</td><td><strong>$5,000.00</strong></td><td></td></tr><tr><td>Cash</td><td></td><td><strong>$4,900.00</strong></td></tr><tr><td>Inventory</td><td></td><td><strong>$100.00</strong></td></tr>
+      </table>
+    </div>
+    
+          
+    <div class="card">
+      <h3>Payroll: gross wages & withholdings</h3>
+      <table class="table">
+        <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        <tr><td>Wages Expense</td><td><strong>$12,000.00</strong></td><td></td></tr><tr><td>FICA Payable</td><td></td><td><strong>$744.00</strong></td></tr><tr><td>Medicare Payable</td><td></td><td><strong>$174.00</strong></td></tr><tr><td>Federal Income Tax Payable</td><td></td><td><strong>$2,400.00</strong></td></tr><tr><td>Cash</td><td></td><td><strong>$8,682.00</strong></td></tr>
+      </table>
+    </div>
+    
+          
+    <div class="card">
+      <h3>Employer payroll taxes</h3>
+      <table class="table">
+        <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        <tr><td>Payroll Tax Expense</td><td><strong>$918.00</strong></td><td></td></tr><tr><td>FICA Payable (ER)</td><td></td><td><strong>$744.00</strong></td></tr><tr><td>Medicare Payable (ER)</td><td></td><td><strong>$174.00</strong></td></tr>
+      </table>
+    </div>
+    
+          <div class="warn"><strong>Audit Watch:</strong> Review user access around vendor master & payroll master. Segregate <em>create/modify</em> from <em>disburse</em>.</div>
+        </div>
+      </div>
+      <details><summary><strong>Illustration — Process Reconciliation</strong></summary>
+        <div class="card">
+          Compare <em>documented</em> PO→Receiving→AP match to <em>system logs</em>: look for skipped approval steps, manual journal entries bypassing workflow, and users with conflicting roles.
+        </div>
+      </details>
+    </section>
+
+    <section class="section">
+      <h2>3) Availability, DR & Backups</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Availability calculation</h3>
+          <p>30‑day month has <strong>43,200</strong> minutes. If downtime = <strong>95</strong> minutes, availability =</p>
+          <p><code>(Total − Downtime) ÷ Total = 99.7801%</code></p>
+          <div class="tip"><strong>Exam Tip:</strong> “Five nines” (99.999%) allows ~5.26 minutes of downtime per year.</div>
+        </div>
+        <div class="card">
+          <h3>RPO / RTO scenario</h3>
+          <ul>
+            <li>Backups every <strong>120</strong> minutes → <strong>RPO = 120 minutes</strong>.</li>
+            <li>Last backup was <strong>150</strong> minutes ago → <strong>NOT within RPO</strong>.</li>
+            <li>Recovery steps time = <strong>205</strong> minutes; RTO target = <strong>240</strong> minutes → <strong>Meets RTO</strong>.</li>
+          </ul>
+          <div class="tip"><strong>Tricky:</strong> Incremental vs. differential backups change restore time; differentials speed recovery but grow each day.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) Change Management</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Core concepts</h3>
+          <ul>
+            <li>Purpose: ensure only <em>authorized, tested, approved, and documented</em> changes reach production.</li>
+            <li>Environments: dev → test/QA → stage → prod (segregated access).</li>
+            <li>Testing: unit, integration, system, <em>user acceptance</em>, regression; evidence retained.</li>
+            <li>Conversion: direct, parallel, phased, pilot — pick based on risk tolerance.</li>
+            <li>Patch management: inventory, risk rank (CVSS), test, approve, deploy, verify.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Walkthrough (what to inspect)</h3>
+          <ol>
+            <li>Change ticket → business approval → technical review.</li>
+            <li>Evidence of testing and segregation (no developers promoting to prod).</li>
+            <li>Back‑out plan and monitoring post‑release.</li>
+            <li>SOC 2®: processing integrity and availability criteria mapping.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practice Questions</h2>
+
+      <details>
+        <summary><strong>1.</strong> SLA compliance — availability (calculation)</summary>
+        <p>A SaaS vendor’s SLA requires <strong>99.95%</strong> monthly availability. In a 31‑day month the system was down <strong>120</strong> minutes. Is the SLA met?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">
+            Total minutes = 31×24×60 = <strong>44,640</strong>. Availability = (44,640 − 120) ÷ 44,640 = <strong>99.731%</strong> ⇒ <strong>Not met</strong> (shortfall ≈ 0.219%). Penalty/credit may apply per contract.
+          </div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>2.</strong> Backups & RPO (calculation)</summary>
+        <p>Backups occur every <strong>3 hours</strong>. A failure happens at 5:36 PM; last successful backup finished at 3:00 PM. What is the <strong>actual data loss</strong> and does it meet an RPO of <strong>3 hours</strong>?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">
+            Time since backup = 2 hours 36 minutes = <strong>156 minutes</strong> &lt; 180 minutes (RPO). <strong>Meets RPO</strong>; expected data loss ≤ last 156 minutes of transactions.
+          </div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>3.</strong> Shared responsibility</summary>
+        <p>In a PaaS arrangement, who is primarily responsible for <em>database patching</em> and who owns <em>application user access</em>?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">
+            Provider patches platform components (DB engine). The <strong>customer</strong> owns <strong>application user access</strong> and data controls.
+          </div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>4.</strong> AIS journal entry control (calculation)</summary>
+        <p>An ERP posts the following cash disbursement entry: Dr A/P <strong>$5,000</strong>, Cr Cash <strong>$4,900</strong>, Cr Inventory <strong>$100</strong>. Is the entry balanced?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">
+            Debits = <strong>$5,000</strong>; Credits = <strong>$5,000</strong> → <strong>Balanced</strong>. (Perpetual system reduces Inventory for the purchase discount.)
+          </div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>5.</strong> Change management — environment segregation</summary>
+        <p>Which control failure is most severe?</p>
+        <ol type="A">
+          <li>Developers lack access to production logs.</li>
+          <li>Developers can deploy to production using a break‑glass account without approval.</li>
+          <li>Users test only in dev, not QA.</li>
+          <li>Tickets omit business owner sign‑off.</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">
+            <strong>B</strong>. Direct developer access to deploy to production without approval violates segregation of duties and change approval; it presents the highest risk of unauthorized changes.
+          </div>
+        </details>
+      </details>
+
+    </section>
+
+  </div>
+</body>
+</html>

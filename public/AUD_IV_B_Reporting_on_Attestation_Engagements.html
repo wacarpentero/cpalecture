@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Reporting on Attestation Engagements (Area IV.B, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area IV.B — Reporting on attestation engagements, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Reporting on Attestation Engagements</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Differentiate <strong>attestation engagement types</strong> under the Statements on Standards for Attestation Engagements (<strong>SSAE</strong>): <strong>examination</strong>, <strong>review</strong>, and <strong>agreed‑upon procedures (AUP)</strong>.</li>
+          <li>Identify <strong>subject matters</strong> (e.g., controls at a service organization, compliance, prospective or pro forma financial information, sustainability/greenhouse gas (GHG) information) and the need for <strong>suitable criteria</strong>.</li>
+          <li>Apply <strong>acceptance</strong>, <strong>evidence</strong>, and <strong>reporting</strong> requirements for each engagement type, including independence and restricted‑use considerations.</li>
+          <li>Explain differences between <strong>assertion‑based</strong> and <strong>direct</strong> reporting, and between <strong>Type 1</strong> and <strong>Type 2</strong> reports where applicable (for example, SOC reports).</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Engagement</th><th>Assurance</th><th>Evidence emphasis</th><th>Report form</th><th>Independence</th><th>Use</th></tr>
+          <tr><td><strong>Examination</strong></td><td>Reasonable (positive assurance)</td><td>Obtain sufficient appropriate evidence to support an <em>opinion</em></td><td>Opinion: “In our opinion, … is fairly stated based on [criteria]”</td><td>Required</td><td>General‑use unless restricted by subject matter</td></tr>
+          <tr><td><strong>Review</strong></td><td>Limited (negative assurance)</td><td>Primarily inquiry and analytical procedures</td><td>Conclusion: “We are not aware of any material modifications …”</td><td>Required</td><td>Generally general‑use unless circumstances require restriction</td></tr>
+          <tr><td><strong>Agreed‑upon procedures (AUP)</strong></td><td>No assurance</td><td>Perform specified procedures; report <em>findings</em> only</td><td>Findings: procedures and results listed; no opinion/conclusion</td><td>Required</td><td><strong>Restricted‑use</strong> to specified parties</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) What Is an Attestation Engagement?</h2>
+    <div class="card">
+      <ul>
+        <li>Practitioner reports on a <strong>subject matter</strong> (or an assertion about it) measured against <strong>suitable criteria</strong> (relevance, completeness, reliability, neutrality, understandability).</li>
+        <li>Parties: <strong>responsible party</strong> (prepares/measures), <strong>practitioner</strong> (independent CPA), and <strong>intended users</strong>.</li>
+        <li>Reporting can be <strong>assertion‑based</strong> (responsible party makes an assertion) or <strong>direct</strong> (practitioner measures/evaluates the subject matter).</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> If criteria are not publicly available, ensure they are <em>available to intended users</em> or restrict use.</div>
+    </div>
+
+    <h2>2) Acceptance & Preconditions</h2>
+    <div class="card">
+      <ul>
+        <li>Independence in mind and appearance; acceptance only if <strong>preconditions</strong> are met: suitable criteria, responsible party takes responsibility, subject matter is appropriate, and evidence is expected to be available.</li>
+        <li>Agree on terms in an <strong>engagement letter</strong> (objective, criteria, responsibilities, type of report, intended use, restrictions).</li>
+        <li>Materiality: defined for examinations and reviews; for AUP, materiality is not used—the <strong>specified parties</strong> evaluate sufficiency of procedures.</li>
+      </ul>
+    </div>
+
+    <h2>3) Evidence Overview by Engagement Type</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Examination</h3>
+        <ul>
+          <li>Design and perform procedures to obtain <strong>reasonable assurance</strong> (e.g., tests of controls, substantive procedures, confirmations, observation).</li>
+          <li>Evaluate misstatements/deviations against materiality; consider fraud, noncompliance, and bias.</li>
+          <li>Written representations from the responsible party are required.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Review</h3>
+        <ul>
+          <li>Perform <strong>inquiries and analytical procedures</strong>; obtain limited assurance that no material modifications are needed.</li>
+          <li>If results indicate possible material misstatement, perform additional procedures or modify the conclusion.</li>
+          <li>Written representations required; independence required.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Agreed‑upon Procedures (AUP)</h3>
+        <ul>
+          <li>Procedures are <strong>agreed by specified parties</strong>; practitioner does not determine sufficiency.</li>
+          <li>Report lists <strong>procedures performed and findings</strong>—no opinion or conclusion; may include <em>exceptions</em> identified.</li>
+          <li>Distribution is <strong>restricted</strong> to specified parties; obtain written acknowledgment of suitability of procedures.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>4) Reporting Elements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Examination (opinion‑based):</strong> Title (includes “Independent”), addressees, identification of subject matter and criteria, opinion, basis for opinion, management’s and practitioner’s responsibilities, inherent limitations, and report date/signature.</li>
+        <li><strong>Review (conclusion‑based):</strong> Similar structure, but the conclusion uses <strong>negative assurance</strong> wording.</li>
+        <li><strong>AUP (findings‑based):</strong> Identify specified parties, state that sufficiency of procedures is their responsibility, list procedures and findings in detail, disclaim opinion/conclusion, include restricted‑use paragraph.</li>
+      </ul>
+      <details><summary>Example phrases</summary>
+        <ul>
+          <li><em>Examination:</em> “In our opinion, management’s assertion that the XYZ controls were effective throughout the period based on the [criteria] is fairly stated…”</li>
+          <li><em>Review:</em> “Based on our review, we are not aware of any material modifications that should be made…”</li>
+          <li><em>AUP:</em> “We performed the procedures enumerated below, which were agreed to by [specified parties]. The sufficiency of these procedures is solely the responsibility of those parties…”</li>
+        </ul>
+      </details>
+    </div>
+
+    <h2>5) SOC Reports (Controls at Service Organizations)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>System and Organization Controls (SOC)</strong> reports address controls at service organizations.</li>
+        <li><strong>SOC 1®:</strong> Controls relevant to internal control over financial reporting at user entities; typically <strong>restricted‑use</strong>.</li>
+        <li><strong>SOC 2®:</strong> Controls relevant to security, availability, processing integrity, confidentiality, and privacy (Trust Services Criteria); <strong>restricted‑use</strong>.</li>
+        <li><strong>SOC 3®:</strong> General‑use report on Trust Services Criteria—short‑form suitable for public distribution.</li>
+        <li><strong>Type 1</strong> vs <strong>Type 2</strong>: Type 1 — design of controls at a point in time; Type 2 — design and operating effectiveness over a period.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> If relying on a SOC 1® report, evaluate the <strong>period of coverage</strong>, <strong>subservice organizations</strong>, and <strong>complementary user‑entity controls</strong>.</div>
+    </div>
+
+    <h2>6) Other Common Attestation Subjects</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Compliance Attestations</h3>
+        <ul>
+          <li>Examination or AUP on an entity’s <strong>compliance</strong> with specified requirements (laws, regulations, contracts) or on <strong>controls over compliance</strong>.</li>
+          <li>Often restricted‑use; consider governmental requirements for distribution.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Prospective/Pro Forma & Sustainability</h3>
+        <ul>
+          <li><strong>Prospective financial information:</strong> examination of forecasts/projections or AUP on assumptions and computations.</li>
+          <li><strong>Pro forma financial information:</strong> examination or review of the proper application of pro forma adjustments.</li>
+          <li><strong>Sustainability / GHG information:</strong> examinations or reviews over metrics and disclosures against suitable criteria.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>7) Restricted‑Use, Emphasis, and Other‑Matter</h2>
+    <div class="card">
+      <ul>
+        <li>Include a <strong>restricted‑use paragraph</strong> when appropriate (AUP, SOC 1®, SOC 2®, certain compliance attestations).</li>
+        <li>Use <strong>emphasis‑of‑matter</strong> to highlight matters properly presented/disclosed that are fundamental; use <strong>other‑matter</strong> for relevant points not presented in the subject matter information.</li>
+        <li>Subsequent events and subsequently discovered facts: consider whether to <strong>dual‑date</strong> or reissue, similar to audit reporting concepts.</li>
+      </ul>
+    </div>
+
+    <h2>8) Modifications & Withdrawals</h2>
+    <div class="card">
+      <ul>
+        <li>If unable to obtain sufficient appropriate evidence for an <strong>examination</strong>, consider a <strong>qualified or adverse opinion</strong> for misstatement, or a <strong>disclaimer/withdrawal</strong> for scope limitations.</li>
+        <li>For a <strong>review</strong>, modify the <strong>conclusion</strong> or withdraw if pervasive scope limitations exist.</li>
+        <li>In <strong>AUP</strong>, describe findings, including exceptions; if the procedures cannot be performed as agreed, disclose and consider withdrawing.</li>
+      </ul>
+    </div>
+
+    <h2>9) Documentation & Written Representations</h2>
+    <div class="card">
+      <ul>
+        <li>Document risk assessment, procedures, evidence, and how criteria were applied; retain copies of the subject matter information.</li>
+        <li>Obtain and retain <strong>written representations</strong> from the responsible party tailored to the engagement and subject matter.</li>
+        <li>Cross‑reference report wording, restricted‑use language, and any emphasis/other‑matter paragraphs to supporting evidence.</li>
+      </ul>
+    </div>
+
+    <h2>10) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Level of assurance for a review? <strong>Limited (negative assurance).</strong></li>
+        <li>Does an AUP provide assurance? <strong>No—only findings are reported; sufficiency of procedures is the specified parties’ responsibility.</strong></li>
+        <li>Type 1 vs Type 2 SOC? <strong>Type 1: design at a point in time; Type 2: design and operating effectiveness over a period.</strong></li>
+        <li>When is restricted use required? <strong>AUP and typically SOC 1®/SOC 2® reports.</strong></li>
+        <li>What makes criteria “suitable”? <strong>Relevant, complete, reliable, neutral, and understandable.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

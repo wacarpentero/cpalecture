@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR I.B — Prospective Analysis (with Data)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.code{font-family:inherit;background:rgba(255,255,255,.06);padding:10px;border-radius:8px;overflow:auto}
+.warn{border-left:4px solid var(--warn);padding:10px;background:rgba(255,209,102,.08);border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:12px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Prospective Analysis (including the use of data)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li><strong>Budgeting/Forecasting/Projection:</strong> data prep/transform; prepare budgets with supportable assumptions; use forecasting methods for revenue, cost, and profitability; apply planning tools (cost‑benefit, sensitivity, what‑if, breakeven, predictive analytics); analyze forecast results via ratios and drivers.</li>
+          <li><strong>Capital Structure:</strong> calculate cost of capital; evaluate how structure changes impact WACC, liquidity, leverage, covenants; compare financing strategies; interpret FS & KPI effects.</li>
+          <li><strong>Investment Alternatives:</strong> use valuation approaches (cost, income, market); model and compare alternatives with metrics (payback, NPV, IRR, EVA, DCF); test sensitivity to assumptions.</li>
+          <li><strong>Risk Management:</strong> recall COSO ERM purpose; apply ERM to identify risks/opportunities; mitigate market/interest/FX/liquidity risks; manage working capital; quantify KPI impacts of transactions.</li>
+          <li><strong>Economic & Market Influences:</strong> use SWOT; supply/demand and elasticity; quantify risk with ratios; inflation/real vs nominal effects; compute opportunity cost; assess acquisitions/divestitures based on criteria.</li>
+        </ul>
+      </section>
+
+      <section id="budgeting" class="section">
+        <h2>1) Budgeting, Forecasting & Projection</h2>
+        <div class="kv">
+          <div>
+            <h3>Data transformation</h3>
+            <ul class="tight">
+              <li>Clean join keys; align time buckets (month/quarter); standardize units and currency.</li>
+              <li>Create <strong>driver tables</strong> (volume, price, conversion, churn) and link to revenue/COGS/Opex lines.</li>
+            </ul>
+            </div>
+          <div>
+            <h3>Forecasting toolkit</h3>
+            <ul class="tight">
+              <li>Simple growth rates, moving averages, seasonality indexing.</li>
+              <li>Driver‑based model (units × price), regression, ARIMA/ETS where appropriate.</li>
+              <li>Scenario library: Base / Upside / Downside.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Driver‑based revenue forecast</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Prior year</th><td>1,000 units @ $20 → <strong>$20,000</strong></td></tr>
+          <tr><th>Assumptions</th><td>Units +8%; price −2%</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Units</th><td>1,000 × 1.08 = <strong>1,080</strong></td></tr>
+          <tr><th>Price</th><td>$20 × 0.98 = <strong>$19.60</strong></td></tr>
+          <tr><th>Revenue</th><td>1,080 × $19.60 = <strong>$21,168</strong></td></tr>
+        </table>
+        <div class="result">Δ vs prior = +$1,168</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>Illustration — Breakeven & sensitivity</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Fixed costs</th><td><strong>$120,000</strong></td></tr>
+          <tr><th>Price / unit</th><td><strong>$40</strong></td></tr>
+          <tr><th>Variable cost / unit</th><td><strong>$28</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>CM / unit</th><td>$40 − $28 = <strong>$12</strong></td></tr>
+          <tr><th>Breakeven units</th><td>$120,000 ÷ $12 = <strong>10,000</strong></td></tr>
+          <tr><th>Sensitivity</th><td>VC +$2 → CM = $10 → BE = <strong>12,000 units</strong></td></tr>
+        </table>
+        <div class="result">Every +$1 VC ↑ BE by ~833 units</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="capital" class="section">
+        <h2>2) Capital Structure</h2>
+        <div class="kv">
+          <div>
+            <h3>Cost of capital (WACC)</h3>
+            <ul class="tight">
+              <li>WACC = w<sub>E</sub>·k<sub>E</sub> + w<sub>D</sub>·k<sub>D</sub>·(1 − T).</li>
+              <li>k<sub>E</sub> via CAPM (R<sub>f</sub> + β·ERP) or build‑up; k<sub>D</sub> = current after‑tax borrowing cost.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Structure changes</h3>
+            <ul class="tight">
+              <li>Debt ↑ → tax shield ↓WACC until distress risk offsets.</li>
+              <li>Share repurchase → EPS ↑ mechanically; leverage ↑; check covenants & liquidity.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — WACC & leverage change</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Capital</th><td>$6,000,000 equity; $4,000,000 debt</td></tr>
+          <tr><th>Rates</th><td>k<sub>E</sub> 10%; k<sub>D</sub> 6%; tax 25%</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Weights</th><td>w<sub>E</sub>=0.60; w<sub>D</sub>=0.40</td></tr>
+          <tr><th>WACC</th><td>0.60×10% + 0.40×6%×(1−0.25) = <strong>7.8%</strong></td></tr>
+          <tr><th>After +$2M debt, −$2M equity</th><td>w<sub>E</sub>=0.40; w<sub>D</sub>=0.60 → WACC ≈ <strong>7.2%</strong> (tax shield wins—watch covenants)</td></tr>
+        </table>
+        <div class="result">Lower WACC may raise NPV; ensure liquidity & coverage remain safe.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="valuation" class="section">
+        <h2>3) Investment Alternatives & Valuation Models</h2>
+        <div class="kv">
+          <div>
+            <h3>Approaches</h3>
+            <ul class="tight">
+              <li><strong>Income</strong> (DCF/NPV, IRR), <strong>Market</strong> (multiples/comps), <strong>Cost</strong> (replacement).</li>
+              <li>Use consistent <strong>nominal vs real</strong> rates and cash flows.</li>
+              <li>Stress‑test key assumptions (growth, margin, terminal value, discount).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Screening metrics</h3>
+            <ul class="tight">
+              <li>Payback & discounted payback</li>
+              <li>NPV, IRR, Profitability Index</li>
+              <li>Economic Value Added (EVA)</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — NPV vs IRR</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Outlay (t0)</th><td><strong>-$500,000</strong></td></tr>
+          <tr><th>Cash inflows</th><td>$160,000 each year for 4 years</td></tr>
+          <tr><th>Discount rate</th><td><strong>9%</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>NPV</th><td>PV annuity (4,@9%) = $160,000 × 3.2397 = $518,352 → NPV = <strong>$18,352</strong></td></tr>
+          <tr><th>IRR</th><td>solve r where NPV=0 → r ≈ <strong>10.3%</strong></td></tr>
+        </table>
+        <div class="result">Accept (NPV &gt; 0, IRR &gt; 9%).</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>Illustration — Lease vs Buy (after‑tax)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Buy</th><td>$300,000 price; 5‑yr loan @ 6%; MACRS; tax 25%</td></tr>
+          <tr><th>Lease</th><td>$68,000/yr for 5 yrs; fully deductible</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute (sketch)</h4>
+        <ul class="tight">
+          <li>Buy: PV(interest tax shield + depreciation tax shield − loan payments).</li>
+          <li>Lease: PV(lease payments × (1 − tax rate)).</li>
+        </ul>
+        <div class="result">Choose the lower PV cost. (Provide full schedule if tested.)</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="risk" class="section">
+        <h2>4) Risk Management (incl. Working Capital)</h2>
+        <div class="kv">
+          <div>
+            <h3>COSO ERM — quick recall</h3>
+            <ul class="tight">
+              <li>Governance & culture, strategy & objective‑setting, performance, review, information & communication & reporting.</li>
+              <li>Identify risks/opportunities; set risk appetite; select responses.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Financial risk levers</h3>
+            <ul class="tight">
+              <li>FX forwards, interest rate swaps/caps, commodity hedges.</li>
+              <li>Liquidity: CCC improvement (DSO↓, DPO↑, DIO↓); credit lines; cash buffers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Working capital cash unlock</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Revenue</th><td><strong>$36,500,000</strong> (=$100,000/day)</td></tr>
+          <tr><th>DSO</th><td>60 → 50 days</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Cash freed</th><td>10 days × $100,000/day = <strong>$1,000,000</strong></td></tr>
+          <tr><th>Interest benefit @ 5%</th><td>$1,000,000 × 5% = <strong>$50,000/yr</strong></td></tr>
+        </table>
+        <div class="result">DSO improvement adds $1.0M liquidity and ~$50k/yr earnings capacity.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>Illustration — FX hedge (forward)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Receivable</th><td>€400,000 in 90 days; spot $1.10/€; forward $1.08/€</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Lock value</th><td>€400,000 × $1.08 = <strong>$432,000</strong></td></tr>
+          <tr><th>Risk</th><td>Eliminates downside if USD strengthens; forgoes upside.</td></tr>
+        </table>
+        <div class="result">Hedge aligns cash flow with planning certainty.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="econ" class="section">
+        <h2>5) Economic & Market Influences</h2>
+        <div class="kv">
+          <div>
+            <h3>Toolkit</h3>
+            <ul class="tight">
+              <li>SWOT; PESTLE scan; industry structure (5 forces).</li>
+              <li>Elasticity; supply/demand shifts; inflation vs real pricing.</li>
+              <li>Risk ratios: interest coverage, leverage, FX exposure share, price‑cost spread.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Opportunity cost & M&amp;A screens</h3>
+            <ul class="tight">
+              <li>Compare projects by NPV per scarce resource (e.g., per $ of capital).</li>
+              <li>Divest if ROIC &lt; WACC with weak strategic fit; acquire if NPV + strategic options value &gt; 0.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Real vs nominal valuation</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Nominal CF</th><td>$120,000 growing with 3% inflation</td></tr>
+          <tr><th>Nominal r</th><td>8%</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute (Year 1)</h4>
+        <table class="table-min">
+          <tr><th>Real rate</th><td>≈ (1+0.08)/(1+0.03) − 1 = <strong>4.85%</strong></td></tr>
+          <tr><th>Either</th><td>Discount nominal CF @ 8% <em>or</em> convert to real CF and discount @ 4.85% — be consistent.</td></tr>
+        </table>
+        <div class="result">Mixing real flows with nominal rates misstates value.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Forecast method</summary>
+          <p>Best first pass when seasonality exists but trend is stable?</p>
+          <ol type="A">
+            <li>Driver‑based only</li>
+            <li>12‑month moving average</li>
+            <li>Seasonal index × trend</li>
+            <li>Random walk</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Combine seasonal indices with a simple trend.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> WACC impact</summary>
+          <p>All else equal, adding moderate fixed‑rate debt in a low‑tax environment most likely:</p>
+          <ol type="A">
+            <li>Raises WACC</li>
+            <li>Lowers WACC due to tax shield</li>
+            <li>Has no effect</li>
+            <li>Always increases firm value regardless of risk</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Debt tax shield lowers WACC until distress risk dominates.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> IRR vs NPV</summary>
+          <p>A project’s IRR is 12% with a discount rate of 10%. Cash flows are conventional. Decision?</p>
+          <ol type="A">
+            <li>Reject</li>
+            <li>Accept</li>
+            <li>Indifferent</li>
+            <li>Need payback to decide</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> For conventional cash flows, IRR &gt; discount → NPV &gt; 0 → accept.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Working capital</summary>
+          <p>Reducing DSO typically has which immediate effect?</p>
+          <ol type="A">
+            <li>Decreases cash</li>
+            <li>Increases cash and reduces AR</li>
+            <li>Increases inventory</li>
+            <li>Increases accounts payable</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Faster collections convert AR to cash.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Inflation consistency</summary>
+          <p>Which pairing is correct?</p>
+          <ol type="A">
+            <li>Real cash flows discounted at nominal rate</li>
+            <li>Nominal cash flows discounted at real rate</li>
+            <li>Real cash flows discounted at real rate</li>
+            <li>Either A or B</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Match real with real; nominal with nominal.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>6.</strong> Payback</summary>
+          <p>Initial outlay is $300,000 with uniform inflows of $75,000. Simple payback is:</p>
+          <ol type="A">
+            <li>3 years</li>
+            <li>4 years</li>
+            <li>5 years</li>
+            <li>6 years</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> $300,000 ÷ $75,000 = 4 years. (Correct choice: <strong>B</strong>.)</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>7.</strong> FX hedge</summary>
+          <p>Locking a forward rate for a certain receivable primarily manages:</p>
+          <ol type="A">
+            <li>Translation risk</li>
+            <li>Transaction risk</li>
+            <li>Economic risk</li>
+            <li>Liquidity risk</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> The exposure is the future cash transaction in foreign currency.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>8.</strong> Elasticity</summary>
+          <p>If demand is price‑elastic (&gt;1 in absolute value), a price increase will most likely:</p>
+          <ol type="A">
+            <li>Increase total revenue</li>
+            <li>Decrease total revenue</li>
+            <li>Not change total revenue</li>
+            <li>Increase contribution margin ratio</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Quantity falls proportionally more than price rises.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>9.</strong> Opportunity cost</summary>
+          <p>Choosing Project A (NPV $50,000) over Project B (NPV $35,000) uses scarce capital. Opportunity cost of A is:</p>
+          <ol type="A">
+            <li>$0</li>
+            <li>$35,000</li>
+            <li>$15,000</li>
+            <li>$85,000</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> The foregone best alternative.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>10.</strong> Capital structure & covenants</summary>
+          <p>Issuing new debt to repurchase shares will most directly:</p>
+          <ol type="A">
+            <li>Lower leverage ratios</li>
+            <li>Increase interest coverage</li>
+            <li>Increase leverage and may tighten covenants</li>
+            <li>Have no impact on liquidity</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> More debt raises leverage and could pressure coverage/liquidity tests.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

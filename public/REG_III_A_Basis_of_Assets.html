@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG III.A Basis of Assets</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  /* Hidden answers control */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+  .mini{font-size:.9rem}
+  .katex{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Basis of Assets</h1>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Calculate</strong> the tax basis of an asset purchased for use in a trade or business.</li>
+<li><strong>Calculate</strong> the basis of an asset converted from personal to business use (dual‑basis &amp; depreciation basis).</li>
+<li><strong>Calculate</strong> the basis of property received as a <strong>gift</strong> or from an <strong>inheritance</strong> (including holding period rules).</li>
+<li><strong>Calculate</strong> the basis of stock acquired in a <strong>wash sale</strong>.</li>
+<li><strong>Calculate</strong> the basis of <strong>intangible assets</strong>, including organization costs, start‑up costs, and loan costs.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Core Framework</h2>
+<div class="grid-2 small">
+<div>
+<h4>General rule</h4>
+<p><strong>Cost basis</strong> = cash paid + liability assumed + FMV of property/services given + <em>capitalized</em> costs (taxes, shipping, installation) − credits/rebates.</p>
+<p><strong>Adjusted basis</strong> = initial basis + capital improvements − depreciation/§179/bonus amortization/allowable deductions.</p>
+<div class="callout mini"><strong>Exam tip:</strong> Ask “is it betterment or repair?” Betterments capitalize into basis; repairs are deducted and do <em>not</em> increase basis.</div>
+</div>
+<div>
+<h4>Special rules at a glance</h4>
+<table class="tbl mini">
+<tr><th>Situation</th><th>Basis rule</th></tr>
+<tr><td>Personal → business conversion</td><td><strong>Dual basis:</strong> For <em>gain</em> use adjusted cost; for <em>loss &amp; depreciation</em> use FMV at conversion.</td></tr>
+<tr><td>Gift (donor basis ≤ FMV)</td><td>Carryover basis (+ gift‑tax portion) &amp; tacked holding period.</td></tr>
+<tr><td>Gift (FMV &lt; donor basis)</td><td><strong>Dual basis:</strong> For <em>loss</em> use FMV; for <em>gain</em> use donor basis; between → no G/L. Depreciation uses the <em>loss</em> basis (FMV).</td></tr>
+<tr><td>Inheritance</td><td>FMV at DOD/alternate date; holding period always long‑term.</td></tr>
+<tr><td>Wash sale</td><td>New basis = purchase price <strong>+ disallowed loss</strong>; HP tacks.</td></tr>
+<tr><td>Org &amp; start‑up</td><td>Immediate $5,000 each (phase‑out &gt; $50,000), remainder amortize over 180 months.</td></tr>
+<tr><td>Loan costs</td><td>Amortize over life of loan; unamortized costs deductible when loan refinanced/extinguished (allocate as needed).</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>Representative Tasks → Worked Examples</h2>
+<h3>1) Purchased business asset</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Machine price: <strong>$90,000</strong>; sales tax <strong>$6,300</strong>; shipping <strong>$1,200</strong>; installation <strong>$1,500</strong>; vendor rebate <strong>($1,000)</strong>.</td>
+<td><strong>Basis</strong> = 90,000 + 6,300 + 1,200 + 1,500 − 1,000 = <strong>$98,000</strong>.</td>
+</tr>
+</table>
+<h3>2) Personal to business conversion (dual basis)</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Computer bought personally for <strong>$3,000</strong>; FMV at conversion <strong>$1,900</strong>; later sold for <strong>$2,400</strong>.</td>
+<td>
+<ul>
+<li><em>Depreciation &amp; loss basis</em> = FMV at conversion = <strong>$1,900</strong>.</li>
+<li><em>Gain basis</em> = adjusted cost = <strong>$3,000</strong>.</li>
+<li>Sale at $2,400 lies between → <strong>no gain/no loss</strong>.</li>
+</ul>
+</td>
+</tr>
+</table>
+<h3>3) Gifted property</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Donor basis <strong>$30,000</strong>; FMV at gift <strong>$40,000</strong>; gift tax paid <strong>$4,000</strong>.</td>
+<td>Appreciation = $40,000 − $30,000 = $10,000 → portion of gift tax that increases basis = $4,000 × ($10,000 ÷ $40,000) = $1,000.
+        Donee basis = $30,000 + $1,000 = $31,000 (HP tacks).</td>
+</tr>
+<tr>
+<td>Donor basis <strong>$30,000</strong>; FMV at gift <strong>$24,000</strong>.</td>
+<td>Dual basis: for gain use <strong>$30,000</strong>; for loss &amp; depreciation use <strong>$24,000</strong>. If sold between 24k and 30k → <strong>no G/L</strong>.</td>
+</tr>
+</table>
+<h3>4) Inherited property</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>FMV at DOD <strong>$520,000</strong>; alternate valuation date (AVD) FMV <strong>$505,000</strong>.</td>
+<td>Basis is <strong>$520,000</strong> unless the estate elects AVD (overall estate value decreased and tax reduced) → then basis is <strong>$505,000</strong>. HP is always <strong>long‑term</strong>.</td>
+</tr>
+</table>
+<h3>5) Wash sale</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Sell 100 shares for <strong>$4,000</strong> with basis <strong>$5,500</strong> (loss <strong>$1,500</strong>). Buy substantially identical stock within 30 days for <strong>$4,300</strong>.</td>
+<td>Loss <strong>$1,500</strong> disallowed. New basis = <strong>$4,300 + 1,500 = $5,800</strong>. HP tacks from the original shares.</td>
+</tr>
+</table>
+<h3>6) Intangibles — organization, start‑up, and loan costs</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Organization costs <strong>$53,000</strong>; start‑up costs <strong>$47,000</strong>.</td>
+<td>
+<ul>
+<li>Org immediate deduction = <strong>$5,000 − $3,000 phase‑out</strong> = <strong>$2,000</strong> (excess over $50k reduces the $5k).</li>
+<li>Org amortizable = 53,000 − 2,000 = <strong>$51,000</strong> over <strong>180</strong> months → <strong>$283.33</strong>/mo.</li>
+<li>Start‑up immediate deduction = <strong>$5,000</strong> (no phase‑out, since ≤ $50k).</li>
+<li>Start‑up amortizable = 47,000 − 5,000 = <strong>$42,000</strong> over 180 months → <strong>$233.33</strong>/mo.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Loan origination fees/points <strong>$18,000</strong> for a 6‑year business loan.</td>
+<td>Amortize straight‑line: $18,000 ÷ 72 months = $250/mo. If refinanced/retired, deduct remaining unamortized balance (subject to allocation if new debt replaces old).</td>
+</tr>
+</table>
+</section>
+<section class="card">
+<h2>Disclosure &amp; Holding Period cues</h2>
+<table class="tbl small">
+<tr><th>Item</th><th>Holding period</th><th>Notes</th></tr>
+<tr><td>Gift (carryover basis)</td><td>Donee <strong>tacks</strong> donor’s HP.</td><td>If FMV basis used for loss, HP starts on gift date for the <em>loss</em> computation.</td></tr>
+<tr><td>Inheritance</td><td><strong>Always long‑term</strong>.</td><td>Even if sold the next day.</td></tr>
+<tr><td>Wash sale replacement shares</td><td><strong>Tacks</strong> HP of original shares.</td><td>Substantially identical security within ±30 days of sale triggers the rule.</td></tr>
+</table>
+</section>
+<section class="card">
+<h2>Common Pitfalls (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">Dual‑basis traps</span> Conversion &amp; gifts with decline in value: use <em>FMV</em> for depreciation and loss; <em>carryover</em> for gains.</li>
+<li><span class="tag">Gift‑tax add‑on</span> Only the portion of gift tax attributable to appreciation increases basis.</li>
+<li><span class="tag">AVD election</span> Inheritance step‑up/step‑down: only if it <em>reduces</em> both gross estate value and estate tax.</li>
+<li><span class="tag">Wash sale</span> Disallowed loss is <em>not lost</em>—it increases the basis of the replacement shares and HP tacks.</li>
+<li><span class="tag">§197 vs. start‑up</span> Purchased intangibles (goodwill, customer lists) are §197 and amortize over <strong>15 years</strong> — separate from start‑up/organization rules.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>If you see…</th><th>Remember…</th></tr>
+<tr><td>Personal → business</td><td>FMV for depreciation &amp; loss; carryover for gain. If sale between, no G/L.</td></tr>
+<tr><td>Gift with gift tax</td><td>Add only the gift‑tax portion attributable to appreciation.</td></tr>
+<tr><td>Wash sale</td><td>Disallowed loss increases new basis; HP tacks.</td></tr>
+<tr><td>Inherited asset</td><td>FMV at DOD/AVD; always LT HP.</td></tr>
+<tr><td>Org and start‑up</td><td>$5k immediate each (phase‑out if &gt; $50k); remainder over 180 months.</td></tr>
+</table>
+</section>
+<section class="card">
+<h2>Quick Practice — 6 MCQs</h2>
+<ol class="small">
+<li><strong>Gift with decline in value:</strong> Donor basis $50,000; FMV at gift $42,000. What is the donee’s depreciation basis?<br/>
+          A. $50,000   B. $42,000   C. $46,000   D. Carryover plus gift tax<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — When FMV &lt; donor basis, the <em>loss/depreciation basis</em> is FMV ($42,000).</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Wash sale:</strong> Stock sold for $7,200; basis $8,000; repurchased within 30 days for $7,500. New basis?<br/>
+          A. $7,200   B. $7,500   C. $8,300   D. $8,000<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">C — Disallowed loss $800 is added to purchase price: $7,500 + $800 = $8,300.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Personal → business conversion:</strong> Cost $10,000; FMV at conversion $7,000. Which basis is used for depreciation?<br/>
+          A. $10,000   B. $7,000   C. Greater of the two   D. Lesser of two only for gain<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Depreciation uses FMV at conversion when FMV &lt; cost.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Inheritance HP:</strong> An heir sells inherited stock 10 days after death. HP is…<br/>
+          A. Short‑term   B. Long‑term   C. Depends on decedent’s HP   D. Mid‑term<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Always long‑term.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Organization costs:</strong> Org costs $52,400. Immediate deduction?<br/>
+          A. $5,000   B. $3,600   C. $2,600   D. $0<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">C — $5,000 reduced by excess over $50k: 5,000 − 2,400 = $2,600.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Gift tax add‑on:</strong> Donor basis $20,000, FMV $30,000, gift tax $6,000. Donee’s basis?<br/>
+          A. $26,000   B. $20,000   C. $24,000   D. $22,000<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">D — Appreciation is $10k; portion of gift tax added: 6,000×(10,000/30,000) = 2,000. Basis = 20,000 + 2,000 = $22,000.</div></details>
+</li>
+</ol>
+</section></div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — Debtor–Creditor Relationships (REG II.C)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  .answer{color:#b5ffb1}
+  .hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+  /* Hidden answers control */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Debtor–Creditor Relationships</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Explain</strong> rights, duties, and liabilities of <strong>debtors, creditors, and guarantors/sureties</strong>.</li>
+<li><strong>Explain</strong> debtor &amp; creditor rights and <strong>property distribution</strong> in bankruptcy (automatic stay, priorities, discharge).</li>
+<li><strong>Differentiate</strong> <strong>secured vs. unsecured</strong> credit and the steps to <strong>attach</strong> and <strong>perfect</strong> a security interest; apply priority rules.</li>
+<li><strong>Identify</strong> the proper remedy or party liability given a scenario.</li>
+</ul>
+</section>
+<!-- Overview -->
+<section class="card">
+<h2>At a Glance</h2>
+<div class="grid-2 small">
+<div>
+<h4>Security interests (UCC Article 9)</h4>
+<table class="tbl small"><colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Stage</th><th>Key points</th></tr>
+<tr><td>Attachment</td><td>Requires (1) value, (2) debtor rights in collateral, and (3) security agreement <em>authenticated</em> describing collateral (or possession/control by creditor). Creates creditor’s enforceable interest.</td></tr>
+<tr><td>Perfection</td><td>Protects against third parties. Methods: <strong>filing</strong> (UCC‑1), <strong>possession</strong> (e.g., instruments), <strong>control</strong> (deposit accounts), or <strong>automatic</strong> for PMSI in consumer goods.</td></tr>
+<tr><td>Priority</td><td>General rule: <strong>first to file or perfect</strong>. Special: <strong>PMSI</strong> in inventory (perfect + authenticated notice before delivery) and in equipment (perfect within 20 days of delivery) → superpriority. Buyers in ordinary course beat prior security interests (except certain farm products).</td></tr>
+<tr><td>Default</td><td>Creditor may <strong>repossess</strong> without breach of peace; sell or keep collateral (strict foreclosure) if rules met; disposition must be <em>commercially reasonable</em> with required notice; debtor liable for deficiency; surplus to debtor.</td></tr>
+</table>
+</div>
+<div>
+<h4>Surety vs. Guarantor</h4>
+<table class="tbl small"><colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Role</th><th>Key points</th></tr>
+<tr><td>Surety</td><td>Primarily liable with debtor. Creditor can proceed directly against surety on default.</td></tr>
+<tr><td>Guarantor</td><td>Secondarily liable (only if debtor fails after demand/suit per contract).</td></tr>
+<tr><td>Rights after payment</td><td><strong>Reimbursement/indemnity</strong> from debtor; <strong>subrogation</strong> to creditor’s rights; <strong>contribution</strong> among co‑sureties.</td></tr>
+<tr><td>Defenses</td><td>Performance, release/extension without consent that materially increases risk, misrepresentation, fraud; impairment of collateral; statute of limitations. Surety may use any debtor defense except debtor’s personal bankruptcy discharge.</td></tr>
+</table>
+</div>
+</div>
+<div class="callout small"><strong>Exam tip:</strong> Analyze secured‑transaction problems in order: <em>attachment → perfection → priority → default remedies.</em></div>
+</section>
+<!-- Bankruptcy essentials -->
+<section class="card">
+<h2>Bankruptcy — essentials</h2>
+<div class="grid-2 small">
+<div>
+<h4>Process &amp; parties</h4>
+<table class="tbl small"><colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Item</th><th>Key points</th></tr>
+<tr><td>Commencement</td><td>Voluntary or involuntary petition. Filing creates the <strong>estate</strong> and triggers the <strong>automatic stay</strong>.</td></tr>
+<tr><td>Chapters</td><td><strong>7</strong> liquidation (trustee; business may be dissolved), <strong>11</strong> reorganization (debtor in possession or trustee), <strong>13</strong> wage earner repayment plan, <strong>12</strong> family farmer/fisher.</td></tr>
+<tr><td>Trustee powers</td><td>Strong‑arm powers to avoid preferences (within 90 days; 1 year for insiders) and fraudulent transfers; assume/reject executory contracts.</td></tr>
+<tr><td>Claims</td><td>Secured to collateral value; unsecured (priority vs. nonpriority). Proof of claim generally required for distribution.</td></tr>
+</table>
+</div>
+<div>
+<h4>Priority waterfall (unsecured)</h4>
+<svg aria-label="Bankruptcy priority waterfall" height="210" role="img" viewbox="0 0 520 230" width="100%">
+<defs>
+<style>
+              .lvl{fill:rgba(134,183,255,.28);stroke:rgba(255,255,255,.35)}
+              .txt{fill:#fff;font-size:12px;font-weight:700}
+            </style>
+</defs>
+<rect class="lvl" height="24" rx="6" width="480" x="20" y="10"></rect>
+<text class="txt" text-anchor="middle" x="260" y="26">Domestic support obligations</text>
+<rect class="lvl" height="24" rx="6" width="440" x="40" y="42"></rect>
+<text class="txt" text-anchor="middle" x="260" y="58">Administrative expenses (trustee, professionals)</text>
+<rect class="lvl" height="24" rx="6" width="400" x="60" y="74"></rect>
+<text class="txt" text-anchor="middle" x="260" y="90">Gap claims (involuntary)</text>
+<rect class="lvl" height="24" rx="6" width="360" x="80" y="106"></rect>
+<text class="txt" text-anchor="middle" x="260" y="122">Wages (up to limit)</text>
+<rect class="lvl" height="24" rx="6" width="320" x="100" y="138"></rect>
+<text class="txt" text-anchor="middle" x="260" y="154">Employee benefit contributions (limits)</text>
+<rect class="lvl" height="24" rx="6" width="280" x="120" y="170"></rect>
+<text class="txt" text-anchor="middle" x="260" y="186">Consumer deposits (limits)</text>
+<rect class="lvl" height="24" rx="6" width="240" x="140" y="202"></rect>
+<text class="txt" text-anchor="middle" x="260" y="218">Taxes &amp; certain penalties</text>
+</svg>
+<p class="muted small">After priority unsecureds are paid, remaining funds go to <strong>nonpriority unsecureds</strong> pro rata.</p>
+</div>
+</div>
+<div class="callout small"><strong>Discharge (individuals)</strong>: Most debts discharged except recent taxes, domestic support, student loans (absent undue hardship), fraud/willful &amp; malicious injury, fines/penalties, DUI liabilities, and debts not listed.</div>
+</section>
+<!-- Examples -->
+<section class="card">
+<h2>Examples — Apply to scenarios</h2>
+<table class="tbl small">
+<tr><th>Scenario</th><th>Answer</th></tr>
+<tr>
+<td>Creditor files a UCC‑1 financing statement for inventory on March 1; value given March 5; debtor received goods March 10.</td>
+<td>Attachment occurs March 10 (value + rights + security agreement). Filing before attachment is allowed; <strong>priority</strong> date is March 1 (first to file or perfect).</td>
+</tr>
+<tr>
+<td>Bank perfected a security interest in equipment 15 days after delivery under a PMSI.</td>
+<td>PMSI in equipment has a <strong>20‑day</strong> grace period to perfect and obtain superpriority → timely, superpriority applies.</td>
+</tr>
+<tr>
+<td>Supplier failed to send authenticated notice to prior filers before delivering inventory under a PMSI.</td>
+<td>No PMSI superpriority in inventory; priority determined by first to file/perfect.</td>
+</tr>
+<tr>
+<td>After bankruptcy filing, a lawsuit to collect an old debt continues against debtor.</td>
+<td><strong>Automatic stay</strong> stops most collection actions; suit must pause unless relief from stay is granted.</td>
+</tr>
+<tr>
+<td>A surety pays the creditor in full after debtor’s default.</td>
+<td>Surety may seek <strong>reimbursement</strong> from debtor and is <strong>subrogated</strong> to creditor’s rights; may pursue <strong>contribution</strong> from co‑sureties.</td>
+</tr>
+</table>
+</section>
+<!-- Tricky Areas -->
+<section class="card">
+<h2>Tricky Areas (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">Attachment vs. perfection</span> Attachment makes the interest enforceable against the debtor; perfection protects against third parties.</li>
+<li><span class="tag">Name on UCC‑1</span> Use debtor’s legal name; incorrect name can make filing seriously misleading → unperfected.</li>
+<li><span class="tag">Proceeds</span> Perfected interest extends to identifiable proceeds; temporary perfection usually <strong>20 days</strong> for proceeds unless conditions met.</li>
+<li><span class="tag">Preferences</span> Trustee may avoid payments to creditors on antecedent debts within 90 days (1 year insiders) while debtor insolvent, that allow the creditor to receive more than in liquidation.</li>
+<li><span class="tag">Exempt property</span> Individual debtors keep exempt assets; not part of distribution to unsecured creditors.</li>
+</ul>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>Topic</th><th>Key point</th></tr>
+<tr><td>Secured credit</td><td>Attachment (value + rights + security agreement) then perfection (filing/possession/control/automatic). Priority: first to file or perfect, with PMSI superpriority rules.</td></tr>
+<tr><td>Bankruptcy</td><td>Automatic stay; trustee avoidance powers; priority waterfall; discharge exceptions.</td></tr>
+<tr><td>Suretyship</td><td>Surety primary; guarantor secondary. Rights: reimbursement, subrogation, contribution. Watch defenses and collateral impairment.</td></tr>
+</table>
+</section>
+<!-- Quick Practice -->
+<section class="card">
+<h2>Quick Practice — 4 Multiple‑Choice Questions (MCQs)</h2>
+<ol class="small">
+<li><strong>Which step is required for attachment of a security interest?</strong><br/>
+          A. Filing a financing statement   B. Debtor has rights in the collateral   C. Creditor gives authenticated notice to other creditors   D. Court approval<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Attachment needs value, debtor rights in the collateral, and an authenticated security agreement (or possession/control). Filing is a perfection step.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>A perfected PMSI in inventory will have priority over earlier filings if the secured party:</strong><br/>
+          A. Files within 20 days after delivery   B. Sends authenticated notice to prior filers before delivery and is perfected when debtor receives the inventory   C. Possesses the inventory   D. Files within 10 days after delivery<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — PMSI in inventory requires prior notice and perfection at the time the debtor receives the goods.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Which unsecured claim is highest in priority?</strong><br/>
+          A. Employee wages above the statutory limit   B. Domestic support obligations   C. Consumer deposits   D. General trade payables<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Domestic support obligations lead the priority unsecured list.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>After paying the creditor, a surety’s best route to step into the creditor’s shoes is:</strong><br/>
+          A. Reimbursement   B. Subrogation   C. Contribution   D. Exoneration<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Subrogation allows the surety to assert the creditor’s rights against the debtor and collateral.</div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

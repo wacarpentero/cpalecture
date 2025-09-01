@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — FAR III.E: Fair Value Measurements</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;margin:8px 0 18px;font-weight:800}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));
+        border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);
+        padding:18px;border-radius:var(--radius);margin-bottom:18px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .num{text-align:right}
+  .small{font-size:.95rem}
+  .muted{color:var(--muted)}
+  .je{list-style:none;margin:6px 0;padding:0}
+  .je li{display:grid;grid-template-columns:32px 1fr 1fr;gap:6px;margin:2px 0}
+  .je .label{opacity:.95}
+  .je .amt{text-align:center}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+  .figure{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+          border-radius:14px;padding:14px;margin:8px 0 4px}
+  .figure h4{margin:0 0 8px 0}
+  .caption{color:var(--muted);font-size:.9rem;margin-top:6px}
+  .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media (max-width:980px){.grid-3{grid-template-columns:1fr}}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Fair Value Measurements</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li>Identify the <strong>valuation techniques</strong> (market, income, cost) used to measure fair value.</li>
+<li>Recall the <strong>assumptions</strong> (highest &amp; best use, market participant assumptions, unit of account) and approaches used in fair value measurement.</li>
+<li>Apply the <strong>fair value hierarchy</strong> (Level 1, Level 2, Level 3 inputs) to classify measurements.</li>
+</ul>
+</section><section class="card"><h2>Illustration — Fair Value Hierarchy (Pyramid)</h2><div class="figure"><h4>Level 1 at the top (most observable) → Level 3 at the base (least observable)</h4>
+<svg aria-label="Fair value hierarchy pyramid" height="220" role="img" viewbox="0 0 520 260" width="100%">
+<defs>
+<lineargradient id="g1" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8ec5ff" stop-opacity=".95"></stop>
+<stop offset="100%" stop-color="#4d7ed6" stop-opacity=".95"></stop>
+</lineargradient>
+<lineargradient id="g2" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#86b7ff" stop-opacity=".70"></stop>
+<stop offset="100%" stop-color="#3c6dc7" stop-opacity=".70"></stop>
+</lineargradient>
+<lineargradient id="g3" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#6ea6ff" stop-opacity=".45"></stop>
+<stop offset="100%" stop-color="#2f5dad" stop-opacity=".45"></stop>
+</lineargradient>
+</defs>
+<!-- Level 3 base -->
+<polygon fill="url(#g3)" points="40,210 480,210 260,140" stroke="rgba(255,255,255,.25)"></polygon>
+<!-- Level 2 middle -->
+<polygon fill="url(#g2)" points="90,175 430,175 260,120" stroke="rgba(255,255,255,.25)"></polygon>
+<!-- Level 1 top -->
+<polygon fill="url(#g1)" points="150,145 370,145 260,100" stroke="rgba(255,255,255,.25)"></polygon>
+<!-- Labels -->
+<text fill="white" font-size="14" font-weight="700" text-anchor="middle" x="260" y="118">Level 1 — Quoted prices for identical items</text>
+<text fill="white" font-size="14" font-weight="700" text-anchor="middle" x="260" y="170">Level 2 — Observable inputs for similar items</text>
+<text fill="white" font-size="14" font-weight="700" text-anchor="middle" x="260" y="208">Level 3 — Unobservable inputs (models/assumptions)</text>
+</svg>
+<div class="caption">Exam tip: Classification is based on the LOWEST level of any significant input used in the measurement.</div></div></section><section class="card"><h2>Illustration — Choosing a Valuation Technique</h2><div class="figure"><h4>Start with market data, fall back to income, then cost if necessary.</h4>
+<svg aria-label="Flowchart for choosing valuation technique" height="220" role="img" viewbox="0 0 760 260" width="100%">
+<defs>
+<marker id="arrow" markerheight="8" markerunits="strokeWidth" markerwidth="10" orient="auto" refx="9" refy="4">
+<path d="M0,0 L10,4 L0,8 z" fill="rgba(255,255,255,.6)"></path>
+</marker>
+<style>
+      .node{fill:rgba(96,165,250,.25);stroke:rgba(255,255,255,.35)}
+      .box{fill:rgba(134,183,255,.35);stroke:rgba(255,255,255,.35)}
+      .text{fill:#fff;font-size:14px;font-weight:700}
+      .wire{stroke:rgba(255,255,255,.45);stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .lbl{fill:#fff;font-size:12px}
+    </style>
+</defs>
+<!-- Decision 1 -->
+<rect class="node" height="50" rx="12" ry="12" width="240" x="60" y="40"></rect>
+<text class="text" text-anchor="middle" x="180" y="70">Is there an active market?</text>
+<!-- Market approach -->
+<rect class="box" height="40" rx="8" ry="8" width="200" x="420" y="45"></rect>
+<text class="text" text-anchor="middle" x="520" y="70">Market approach</text>
+<line class="wire" x1="300" x2="420" y1="65" y2="65"></line>
+<text class="lbl" x="360" y="55">Yes</text>
+<!-- Down path to Decision 2 (No) -->
+<line class="wire" x1="180" x2="180" y1="90" y2="120"></line>
+<text class="lbl" x="190" y="110">No</text>
+<!-- Decision 2 -->
+<rect class="node" height="50" rx="12" ry="12" width="240" x="60" y="120"></rect>
+<text class="text" text-anchor="middle" x="180" y="150">Reliable cash flow estimates?</text>
+<!-- Income approach (Yes from Decision 2) -->
+<rect class="box" height="40" rx="8" ry="8" width="200" x="420" y="125"></rect>
+<text class="text" text-anchor="middle" x="520" y="150">Income approach</text>
+<line class="wire" x1="300" x2="420" y1="145" y2="145"></line>
+<text class="lbl" x="360" y="135">Yes</text>
+<!-- Cost approach (No from Decision 2) -->
+<rect class="box" height="40" rx="8" ry="8" width="200" x="420" y="205"></rect>
+<text class="text" text-anchor="middle" x="520" y="230">Cost approach</text>
+<!-- Routed wire: down then right to cost box -->
+<polyline class="wire" points="180,170 180,225 420,225"></polyline>
+<text class="lbl" x="190" y="205">No</text>
+</svg>
+
+
+<div class="caption">Pick the method that maximizes observable inputs and is most representative of how market participants would price the asset.</div></div></section><section class="card"><h2>Level 3 Measurement — Rollforward &amp; Disclosures (Exam Focus)</h2><div class="grid-3">
+<div class="figure">
+<h4>Mini Rollforward (example)</h4>
+<table class="tbl small">
+<tr><th>Item</th><th class="num">Amount</th></tr>
+<tr><td>Beginning balance</td><td class="num">$120,000</td></tr>
+<tr><td>Gains/(losses) in P&amp;L</td><td class="num">8,000</td></tr>
+<tr><td>Purchases / issues</td><td class="num">15,000</td></tr>
+<tr><td>Settlements</td><td class="num">(10,000)</td></tr>
+<tr><td>Transfers in/(out)</td><td class="num">—</td></tr>
+<tr><td><strong>Ending balance</strong></td><td class="num"><strong>$133,000</strong></td></tr>
+</table>
+<div class="caption">Know what must be disclosed: rollforward, valuation techniques, significant unobservable inputs, and sensitivity.</div>
+</div>
+<div class="figure">
+<h4>Disclosure Checklist</h4>
+<ul class="small">
+<li><span class="tag">Hierarchy</span> Levels used for each class of assets/liabilities.</li>
+<li><span class="tag">Techniques</span> Valuation techniques and significant inputs.</li>
+<li><span class="tag">Sensitivity</span> For Level 3, narrative/quantitative sensitivity to changes in inputs.</li>
+<li><span class="tag">Transfers</span> Policies for timing and reasons for transfers between levels.</li>
+</ul>
+</div>
+<div class="figure">
+<h4>Common Exam Pitfalls</h4>
+<ul class="small">
+<li>Classifying by the <em>highest</em> input level instead of the <strong>lowest significant</strong> input.</li>
+<li>Ignoring <strong>unit of account</strong> when combining or disaggregating assets.</li>
+<li>Using entity‑specific assumptions rather than <strong>market participant</strong> assumptions.</li>
+<li>For nonfinancial assets, forgetting <strong>highest and best use</strong> premise.</li>
+</ul>
+</div>
+</div></section>
+<!-- Example 1 -->
+<section class="card">
+<h2>1) Valuation Techniques — Market Approach</h2>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Company holds 1,000 shares of a stock traded at <strong>$50/share</strong>.</td>
+<td>Fair value = 1,000 × $50 = <strong>$50,000</strong>.</td>
+</tr>
+</table>
+<h4>Entry</h4>
+<ul class="je">
+<li><span class="label">Dr</span><span class="acct">Investment in equity securities</span><span class="amt">$50,000</span></li>
+<li><span class="label">Cr</span><span class="acct">Unrealized gain (OCI / P&amp;L)</span><span class="amt">($50,000)</span></li>
+</ul>
+</section>
+<!-- Example 2 -->
+<section class="card">
+<h2>2) Assumptions and Approaches — Income Approach</h2>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Specialized equipment, no active market. Cost = $120,000, comparable sales suggest $110,000, PV of future cash flows = $100,000.</td>
+<td>Select income approach → PV = <strong>$100,000</strong> (best reflects expected benefits).</td>
+</tr>
+</table>
+</section>
+<!-- Example 3 -->
+<section class="card">
+<h2>3) Fair Value Hierarchy — Level 2 Inputs</h2>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Bond has no quoted price. Similar bonds trade at <strong>$980</strong>; internal model = $950.</td>
+<td>Use Level 2 observable input → Fair value = $980 × qty held.</td>
+</tr>
+</table>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>Concept</th><th>Key point</th></tr>
+<tr><td>Valuation techniques</td><td>Market (quoted prices), income (discounted CFs), cost (replacement).</td></tr>
+<tr><td>Assumptions</td><td>Highest &amp; best use; market participant view; unit of account matters.</td></tr>
+<tr><td>Hierarchy</td><td>Level 1 = observable quoted; Level 2 = similar/indirect; Level 3 = unobservable.</td></tr>
+</table>
+</section>
+</div>
+</body>
+</html>

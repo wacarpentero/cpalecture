@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.C — Revenue Recognition (ASC 606)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Revenue Recognition (ASC 606)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Interpret contracts and supporting documentation to determine <strong>amount</strong> and <strong>timing</strong> of revenue using the <strong>five‑step model</strong>.</li>
+          <li>Use data analytic outputs (reports/visualizations) to detect and resolve potential discrepancies (cutoff, outliers, unexpected elements, side agreements).</li>
+        </ul>
+      </section>
+
+      <section id="model" class="section">
+        <h2>Five‑Step Model (ASC 606)</h2>
+        <div class="kv">
+          <div>
+            <ol>
+              <li><strong>Identify the contract</strong> with a customer (collectability probable).</li>
+              <li><strong>Identify performance obligations (POs)</strong> — distinct goods/services.</li>
+              <li><strong>Determine the transaction price (TP)</strong> — include variable consideration to the extent it's probable that a significant reversal will not occur; adjust for a significant financing component; non‑cash at FV; consideration payable to a customer reduces TP.</li>
+              <li><strong>Allocate TP</strong> to POs based on relative standalone selling prices (SSP) unless observable discount relates to specific POs.</li>
+              <li><strong>Recognize revenue</strong> when (or as) each PO is satisfied — over time (input/output methods) or at a point in time (control transfers).</li>
+            </ol>
+          </div>
+          <div>
+            <h3>Other key topics</h3>
+            <ul class="tight">
+              <li><strong>Contract modifications:</strong> separate contract if scope/price add distinct goods at SSP; otherwise treat as termination/replacement (prospective) or cumulative catch‑up.</li>
+              <li><strong>Licenses:</strong> right to <em>use</em> (point in time) vs right to <em>access</em> IP (over time).</li>
+              <li><strong>Principal vs Agent:</strong> gross vs net based on control before transfer.</li>
+              <li><strong>Bill‑and‑hold / consignment / returns</strong>: special indicators and presentation (refund liability & right‑of‑return asset).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations</h2>
+
+        <details><summary>1) Allocate TP to POs (proportional discount)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>PO A SSP</th><td><strong>$120,000</strong></td></tr>
+          <tr><th>PO B SSP</th><td><strong>$80,000</strong></td></tr>
+          <tr><th>Total SSP</th><td><strong>$200,000</strong></td></tr>
+          <tr><th>TP (contract price)</th><td><strong>$180,000</strong> (overall discount $20,000)</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Allocation to A</th><td>$180,000 × (120,000 ÷ 200,000) = <strong>$108,000</strong></td></tr>
+          <tr><th>Allocation to B</th><td>$180,000 × (80,000 ÷ 200,000) = <strong>$72,000</strong></td></tr>
+        </table>
+        <div class="result">Recognize revenue for each PO when satisfied at its allocated amount.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) Over‑time recognition (cost‑to‑cost)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>TP</th><td><strong>$500,000</strong></td></tr>
+          <tr><th>Costs to date</th><td><strong>$120,000</strong></td></tr>
+          <tr><th>Total expected cost</th><td><strong>$480,000</strong></td></tr>
+          <tr><th>Criteria</th><td>No alternative use + enforceable right to payment ⇒ over time</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>% complete</th><td>$120,000 ÷ $480,000 = <strong>25%</strong></td></tr>
+          <tr><th>Revenue to date</th><td>25% × $500,000 = <strong>$125,000</strong></td></tr>
+          <tr><th>Gross profit to date</th><td>$125,000 − $120,000 = <strong>$5,000</strong></td></tr>
+        </table>
+        <div class="result">Update estimates each period; adjust revenue via catch‑up.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>3) Significant financing component</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Cash selling price</th><td><strong>$100,000</strong></td></tr>
+          <tr><th>Payment</th><td><strong>$105,000</strong> due in 24 months after delivery</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Implied annual rate</th><td>(1+r)^2 = 105,000 ÷ 100,000 ⇒ r ≈ <strong>2.47%</strong></td></tr>
+          <tr><th>At delivery</th><td>Recognize revenue <strong>$100,000</strong>; record receivable <strong>$100,000</strong></td></tr>
+          <tr><th>Over 24 months</th><td>Recognize interest income totaling <strong>$5,000</strong></td></tr>
+        </table>
+        <div class="result">Separate revenue from financing.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>4) Contract modification</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Original</th><td>500 licenses @ $50 each (SSP) — TP <strong>$25,000</strong></td></tr>
+          <tr><th>Modification</th><td>Add 100 licenses at <strong>$50</strong> each, distinct</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Assessment</h4>
+        <ul class="tight">
+          <li>Adds distinct goods at SSP ⇒ <strong>separate contract</strong>.</li>
+          <li>Revenue for added licenses = <strong>$5,000</strong> when transferred.</li>
+        </ul>
+        <div class="result">No reallocation to the original contract.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>5) Principal vs Agent</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Transaction</th><td>Marketplace sells third‑party goods for <strong>$200</strong>; keeps 10% commission</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Conclusion</h4>
+        <ul class="tight">
+          <li>Marketplace does <em>not</em> control the goods before transfer ⇒ <strong>Agent</strong>.</li>
+          <li>Recognize revenue = commission only: <strong>$20</strong>; not gross $200.</li>
+        </ul>
+        <div class="result">Use indicators: inventory risk, pricing discretion, primary responsibility.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="analytics" class="section">
+        <h2>Revenue — Analytics & Red Flags</h2>
+        <div class="kv">
+          <div>
+            <h3>Cutoff & completeness</h3>
+            <ul class="tight">
+              <li>Ship/Invoice/Revenue dates alignment; late‑period spikes; bill‑and‑hold indicators.</li>
+              <li>Unearned revenue balances vs deliveries; negative AR or unusual credits.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Pricing & terms anomalies</h3>
+            <ul class="tight">
+              <li>Unusual discounts, extended payment terms (financing component), side letters.</li>
+              <li>Returns reserve adequacy vs historical rates; consignment indicators.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Variable consideration</summary>
+          <p>Include variable consideration in TP only to the extent that it is:</p>
+          <ol type="A">
+            <li>Likely to be received</li>
+            <li>Probable that a significant reversal will not occur</li>
+            <li>Greater than 50% likely</li>
+            <li>Guaranteed by the customer</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> ASC 606 constraint.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Over‑time criterion</summary>
+          <p>Which supports recognizing revenue over time?</p>
+          <ol type="A">
+            <li>Customer controls asset as created</li>
+            <li>No alternative use and an enforceable right to payment</li>
+            <li>Both A and B</li>
+            <li>Neither</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Either criterion suffices (there are three; these are two of them).</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Principal vs Agent</summary>
+          <p>Which most strongly indicates principal (gross) presentation?</p>
+          <ol type="A">
+            <li>Pricing discretion</li>
+            <li>No inventory risk</li>
+            <li>Commission‑based compensation</li>
+            <li>Customer pays third party directly</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Combined with control before transfer.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Contract modification</summary>
+          <p>Adding distinct goods at SSP generally results in:</p>
+          <ol type="A">
+            <li>Cumulative catch‑up</li>
+            <li>Prospective treatment within same contract</li>
+            <li>A separate contract</li>
+            <li>No revenue until completion</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Separate contract when scope & price reflect SSP and added goods are distinct.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Financing component</summary>
+          <p>A price of $105,000 due in two years vs a cash price of $100,000 indicates:</p>
+          <ol type="A">
+            <li>No special accounting</li>
+            <li>A significant financing component</li>
+            <li>Variable consideration</li>
+            <li>Noncash consideration</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Separate revenue from interest.</p>
+          </details>
+        </details>
+
+      
+        <details>
+          <summary><strong>6.</strong> Problem — Volume rebate (variable consideration & constraint)</summary>
+          <p>Contract to deliver <strong>1,000</strong> units at a list price of <strong>$50</strong> each. Customer earns a <strong>5%</strong> rebate on all purchases if annual volume exceeds <strong>900</strong> units. At inception, it is <em>probable</em> the threshold will be met (expected purchases 950 units). First shipment is <strong>100</strong> units. Determine (a) the transaction price per unit at inception and (b) revenue and refund liability to record for the first shipment.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <div class="row">
+                <div>
+                  <h4>Assess variable consideration</h4>
+                  <ul class="tight">
+                    <li>Expected to exceed 900 units ⇒ include rebate because it is <strong>probable no significant reversal</strong> will occur.</li>
+                    <li>Effective price = $50 × (1 − 5%) = <strong>$47.50</strong> per unit.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>First shipment (100 units)</h4>
+                  <table class="table-min">
+                    <tr><th>Revenue</th><td>100 × $47.50 = <strong>$4,750</strong></td></tr>
+                    <tr><th>Refund liability (rebate accrual)</th><td>100 × ($50 − $47.50) = <strong>$250</strong></td></tr>
+                  </table>
+                  <div class="result">Record: Dr AR/Cash $5,000; Cr Revenue $4,750; Cr Refund liability $250.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>7.</strong> Problem — Cost‑to‑cost over time with change in estimate</summary>
+          <p>Total transaction price <strong>$2,400,000</strong>. At end of Year 1, costs to date are <strong>$600,000</strong> and total expected cost is <strong>$1,800,000</strong>. Early in Year 2, before additional revenue is recognized, expected total cost is revised to <strong>$2,100,000</strong> and cumulative costs to date are <strong>$900,000</strong>. Compute (a) Year‑1 revenue and gross profit; and (b) the <em>catch‑up</em> revenue adjustment required at the date of the change.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <div class="row">
+                <div>
+                  <h4>Year 1</h4>
+                  <table class="table-min">
+                    <tr><th>% complete</th><td>$600,000 ÷ $1,800,000 = <strong>33.33%</strong></td></tr>
+                    <tr><th>Revenue</th><td>33.33% × $2,400,000 = <strong>$800,000</strong></td></tr>
+                    <tr><th>Gross profit</th><td>$800,000 − $600,000 = <strong>$200,000</strong></td></tr>
+                  </table>
+                </div>
+                <div>
+                  <h4>Change in estimate (start of Y2)</h4>
+                  <table class="table-min">
+                    <tr><th>New % complete</th><td>$900,000 ÷ $2,100,000 = <strong>42.857%</strong></td></tr>
+                    <tr><th>Cumulative revenue</th><td>42.857% × $2,400,000 = <strong>$1,028,571</strong></td></tr>
+                    <tr><th>Catch‑up revenue</th><td>$1,028,571 − $800,000 = <strong>$228,571</strong></td></tr>
+                  </table>
+                  <div class="result">Record a cumulative catch‑up revenue of <strong>$228,571</strong> in Y2 at the date of the change.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

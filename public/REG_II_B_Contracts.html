@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — Contracts (REG II.B)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  .answer{color:#b5ffb1}
+  .hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+  /* Hidden answers control */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Contracts</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Summarize</strong> the elements of contract <strong>formation</strong> and identify whether a valid contract exists in a given scenario.</li>
+<li><strong>Identify</strong> types of contracts (written, verbal, unilateral/bilateral, express/implied) and when a <strong>writing</strong> is required.</li>
+<li><strong>Explain</strong> performance standards and ways contracts may be <strong>discharged</strong> (performance, agreement, operation of law).</li>
+<li><strong>Determine</strong> breach (material vs. minor; anticipatory repudiation) and apply appropriate <strong>remedies</strong> under common law and the Uniform Commercial Code (UCC).</li>
+</ul>
+</section>
+<!-- At a Glance -->
+<section class="card">
+<h2>At a Glance</h2>
+<div class="grid-2 small">
+<div>
+<h4>Formation essentials</h4>
+<table class="tbl small"><colgroup><col style="width: 40%"/><col style="width: 60%"/></colgroup>
+<tr><th>Element</th><th>Key points</th></tr>
+<tr><td>Offer</td><td>Commitment + definite terms + communication. Advertisements usually invitations to deal unless quantity/commitment shown.</td></tr>
+<tr><td>Acceptance</td><td><strong>Common law</strong>: mirror‑image; counteroffer = rejection. <strong>UCC §2‑207</strong>: additional terms between merchants may become part unless limited/ materially alter/ objected.</td></tr>
+<tr><td>Consideration</td><td>Bargained‑for legal value. Past consideration is not consideration. <strong>UCC</strong>: modification needs good faith, not new consideration.</td></tr>
+<tr><td>Defenses</td><td>Capacity, illegality, fraud/misrepresentation, duress, undue influence, mistake.</td></tr>
+<tr><td>Statute of Frauds</td><td>Writing signed by party to be charged for: <strong>M‑Y‑L‑E‑G‑S</strong> (Marriage; Year &gt; 1; Land; Executor; Goods ≥ $500; Surety). UCC exceptions: specially manufactured goods, merchant’s confirmatory memo (10‑day rule), admission, part performance.</td></tr>
+</table>
+</div>
+<div>
+<h4>Performance &amp; discharge</h4>
+<table class="tbl small"><colgroup><col style="width: 40%"/><col style="width: 60%"/></colgroup>
+<tr><th>Topic</th><th>Key points</th></tr>
+<tr><td>Conditions</td><td>Precedent/subsequent/concurrent; failure of condition may excuse performance.</td></tr>
+<tr><td>Standard</td><td><strong>Common law</strong>: substantial performance for non‑material terms. <strong>UCC</strong>: perfect tender; seller may <strong>cure</strong> before time or with reasonable grounds.</td></tr>
+<tr><td>Modification</td><td>Common law requires consideration (unless unforeseen and fair); UCC needs good faith only.</td></tr>
+<tr><td>Discharge by agreement</td><td>Rescission, novation (new party), accord &amp; satisfaction (new agreement + performance).</td></tr>
+<tr><td>Operation of law</td><td>Impossibility/impracticability, frustration, bankruptcy, statute of limitations.</td></tr>
+<tr><td>Repudiation</td><td>Anticipatory breach allows immediate suit; UCC right to demand <strong>adequate assurance</strong>.</td></tr>
+</table>
+</div>
+</div>
+<div class="callout small"><strong>Exam tip:</strong> When issues mix, answer in this order: <em>formation → defenses/SoF → performance standard → breach type → remedy.</em></div>
+</section>
+<!-- Illustration: Do we need a writing? (Statute of Frauds) -->
+<section class="card">
+<h2>Illustration — Do we need a writing?</h2>
+<svg aria-label="Statute of Frauds flow" height="200" role="img" viewbox="0 0 1020 210" width="100%">
+<defs>
+<marker id="arrow" markerheight="8" markerunits="strokeWidth" markerwidth="10" orient="auto" refx="9" refy="4">
+<path d="M0,0 L10,4 L0,8 z" fill="rgba(255,255,255,.7)"></path>
+</marker>
+<style>
+          .node{fill:rgba(96,165,250,.22);stroke:rgba(255,255,255,.38)}
+          .box{fill:rgba(134,183,255,.28);stroke:rgba(255,255,255,.35)}
+          .text{fill:#fff;font-size:14px;font-weight:700}
+          .wire{stroke:rgba(255,255,255,.6);stroke-width:2;fill:none;marker-end:url(#arrow)}
+          .lbl{fill:#fff;font-size:12px}
+        </style>
+</defs>
+<rect class="node" height="52" rx="12" ry="12" width="320" x="20" y="20"></rect>
+<text class="text" text-anchor="middle" x="180" y="52">Does the contract fall under MYLEGS?</text>
+<line class="wire" x1="340" x2="460" y1="46" y2="46"></line>
+<text class="lbl" x="360" y="34">Yes</text>
+<rect class="box" height="52" rx="12" ry="12" width="280" x="460" y="20"></rect>
+<text class="text" text-anchor="middle" x="600" y="50">Writing + signature required</text>
+<line class="wire" x1="600" x2="600" y1="72" y2="112"></line>
+<rect class="box" height="52" rx="12" ry="12" width="280" x="460" y="112"></rect>
+<text class="text" text-anchor="middle" x="600" y="142">UCC exceptions may satisfy</text>
+<line class="wire" x1="180" x2="180" y1="72" y2="112"></line>
+<text class="lbl" x="192" y="92">No</text>
+<rect class="box" height="52" rx="12" ry="12" width="240" x="60" y="112"></rect>
+<text class="text" text-anchor="middle" x="180" y="142">No writing required</text>
+</svg>
+<p class="muted small">MYLEGS = Marriage, Year (&gt;1), Land, Executor, Goods ≥ $500 (UCC), Surety.</p>
+</section>
+<!-- Examples -->
+<section class="card">
+<h2>Examples — Apply to scenarios</h2>
+<table class="tbl small">
+<tr><th>Scenario</th><th>Answer</th></tr>
+<tr>
+<td>Retailer accepts a merchant’s signed confirmation letter for a phone order ($3,000 of goods) and does not object within 10 days.</td>
+<td>Between merchants, confirmatory memo satisfies the UCC Statute of Frauds unless objected to within 10 days.</td>
+</tr>
+<tr>
+<td>Builder substantially completes a house but uses comparable, not specified, fixtures; owner can use the home.</td>
+<td>Common‑law substantial performance; minor breach → damages for difference, not total forfeiture.</td>
+</tr>
+<tr>
+<td>Seller tenders goods one day early and nonconforming; time remains to perform.</td>
+<td>UCC perfect‑tender with <strong>right to cure</strong> within the contract time.</td>
+</tr>
+<tr>
+<td>Buyer learns seller will not perform next month under an installment contract.</td>
+<td>Anticipatory repudiation. Buyer may demand <strong>adequate assurance</strong>, suspend performance, or treat as breach.</td>
+</tr>
+<tr>
+<td>Contract to sell unique art is breached by seller.</td>
+<td>Money damages may be inadequate; buyer can seek <strong>specific performance</strong>.</td>
+</tr>
+</table>
+</section>
+<!-- Remedies -->
+<section class="card">
+<h2>Remedies overview</h2>
+<div class="grid-2 small">
+<div>
+<h4>Damages</h4>
+<ul>
+<li><span class="badge">Expectation</span> Benefit of the bargain (market vs. contract difference).</li>
+<li><span class="badge">Consequential</span> Foreseeable losses (Hadley v. Baxendale limits).</li>
+<li><span class="badge">Reliance</span> Reimburse costs incurred.</li>
+<li><span class="badge">Incidental</span> Costs of cover/resale, etc.</li>
+<li><span class="badge">Liquidated</span> Enforceable if damages were difficult to estimate and amount is a reasonable forecast (not a penalty).</li>
+</ul>
+</div>
+<div>
+<h4>UCC quick hits</h4>
+<ul>
+<li><span class="tag">Buyer</span> Cover and recover difference + incidental/consequential; or market‑price minus contract at breach.</li>
+<li><span class="tag">Seller</span> Resell and recover difference; market damages; lost‑volume seller damages; action for the price in limited cases.</li>
+<li><span class="tag">Mitigation</span> Nonbreaching party must mitigate where reasonable.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Tricky Areas -->
+<section class="card">
+<h2>Tricky Areas (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">Battle of the forms</span> Additional terms in a merchant‑to‑merchant deal become part unless offer limited, materially alter, or timely objection.</li>
+<li><span class="tag">Mailbox rule</span> Acceptance effective on dispatch unless option contract or offer states otherwise.</li>
+<li><span class="tag">Accord vs. Novation</span> Accord changes duty; novation substitutes a new party with consent of all.</li>
+<li><span class="tag">Material vs. minor breach</span> Material breach excuses the other party’s performance; minor breach does not.</li>
+<li><span class="tag">Unique goods</span> Specific performance/ replevin may be available; otherwise money damages.</li>
+</ul>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>Topic</th><th>Key point</th></tr>
+<tr><td>Formation</td><td>Offer + acceptance + consideration; check defenses and Statute of Frauds.</td></tr>
+<tr><td>Performance</td><td>Common law substantial performance vs. UCC perfect tender (with seller’s right to cure).</td></tr>
+<tr><td>Discharge</td><td>Agreement (rescission, novation, accord &amp; satisfaction) or operation of law (impossibility, frustration, SOL).</td></tr>
+<tr><td>Remedies</td><td>Expectation is default; consequential only if foreseeable; liquidated must be reasonable.</td></tr>
+</table>
+</section>
+<!-- Quick Practice -->
+<section class="card">
+<h2>Quick Practice — 4 Multiple‑Choice Questions (MCQs)</h2>
+<ol class="small">
+<li><strong>Under the UCC, additional terms in an acceptance between merchants become part of the contract unless:</strong><br/>
+          A. The price changes   B. They materially alter the contract   C. The offer was oral   D. The goods are specially manufactured<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — UCC §2‑207: additional terms are included unless the offer limits acceptance, they materially alter, or there is a timely objection.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Which contract must be in writing to be enforceable?</strong><br/>
+          A. A one‑year cleaning contract terminable at will   B. A $600 sale of goods   C. A $400 sale of goods   D. A six‑month service contract<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Goods ≥ $500 trigger the UCC Statute of Frauds. Terminable‑at‑will contracts may be performed within one year.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Builder’s minor deviations do not prevent use of the structure. What result?</strong><br/>
+          A. Material breach   B. Substantial performance with damages   C. Discharge by impossibility   D. No contract<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Common‑law substantial performance; owner owes the contract price minus damages for defects.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>A buyer learns the seller will not deliver next month. What can the buyer do under the UCC?</strong><br/>
+          A. Nothing until the due date passes   B. Demand adequate assurance or treat as anticipatory repudiation   C. Sue only after full payment   D. Force specific performance in all cases<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — The UCC allows demand for adequate assurance and permits treating repudiation as breach.</div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

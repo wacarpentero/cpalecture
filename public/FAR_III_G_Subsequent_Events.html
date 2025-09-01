@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — FAR III.G: Subsequent Events</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  .muted{color:var(--muted)}
+  /* Journal entries */
+  .je{list-style:none;margin:6px 0 4px;padding:0}
+  .je li{display:grid;grid-template-columns:32px 1fr 1fr;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.95}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:center;white-space:nowrap;justify-self:center}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:840px){.grid-2{grid-template-columns:1fr}}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .check{color:var(--muted);font-size:.9rem;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Subsequent Events</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Identify</strong> subsequent events and recall the appropriate accounting treatment (recognized vs. nonrecognized).</li>
+<li><strong>Calculate</strong> required adjustments to financial statements and/or the <strong>note disclosures</strong> based on identified subsequent events.</li>
+<li><strong>Derive</strong> the impact to financial statements and required note disclosures, including the period for evaluation and reissuance considerations.</li>
+</ul>
+</section>
+<!-- At a Glance -->
+<section class="card">
+<h2>At a Glance</h2>
+<table class="tbl small">
+<colgroup><col style="width:28%"/><col style="width:42%"/><col style="width:30%"/></colgroup>
+<tr><th>Type</th><th>Definition</th><th>Action</th></tr>
+<tr>
+<td>Recognized (Type I)</td>
+<td>Provides additional evidence about <strong>conditions that existed</strong> at the balance sheet date.</td>
+<td><strong>Adjust</strong> the financial statements (amounts/estimates).</td>
+</tr>
+<tr>
+<td>Nonrecognized (Type II)</td>
+<td>Relates to conditions that <strong>arose after</strong> the balance sheet date.</td>
+<td><strong>Disclose</strong> nature and estimate of financial effect (or state it cannot be estimated).</td>
+</tr>
+<tr>
+<td>Evaluation period</td>
+<td>From balance sheet date to the date the FS are <em>available to be issued</em> (or <em>issued</em> for SEC filers).</td>
+<td>Disclose the date through which subsequent events were evaluated.</td>
+</tr>
+<tr>
+<td>Reissuance</td>
+<td>When reissuing FS, evaluate subsequent events through the <em>reissuance date</em> for recognition/disclosure in the reissued FS.</td>
+<td>Do not recognize events that occurred between original issuance and reissuance if not appropriate; disclose if necessary.</td>
+</tr>
+</table>
+</section>
+<!-- Example 1: Litigation settlement (Type I) -->
+<section class="card">
+<h2>1) Recognized Event — Litigation Settlement (Type I)</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Conclusion &amp; Computation</th></tr>
+<tr>
+<td>A lawsuit existed as of 12/31/X1. At 12/31, the company accrued <strong>$60,000</strong> for loss. On 2/10/X2 (before FS issued), the case settles for <strong>$85,000</strong>.</td>
+<td>Settlement gives more evidence about the liability existing at 12/31/X1 → <strong>Type I</strong> (recognized). Increase the accrual by <strong>$25,000</strong>.</td>
+</tr>
+</table>
+<h4>Entry (to adjust X1 FS)</h4>
+<ul class="je">
+<li><span class="label">Dr</span><span class="acct">Litigation loss (expense)</span><span class="amt">$25,000</span></li>
+<li><span class="label">Cr</span><span class="acct">Accrued litigation liability</span><span class="amt">($25,000)</span></li>
+</ul>
+
+</section>
+<!-- Example 2: Customer bankruptcy (Type I) -->
+<section class="card">
+<h2>2) Recognized Event — Customer Bankruptcy (Type I)</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Conclusion &amp; Computation</th></tr>
+<tr>
+<td>Accounts receivable from a major customer totals <strong>$500,000</strong> at 12/31/X1 with an existing allowance of <strong>$10,000</strong>. On 1/20/X2, customer files for bankruptcy; expected recovery is 20%.</td>
+<td>The bankruptcy confirms pre‑existing financial difficulty → <strong>Type I</strong>. Required ending allowance = 80% × 500,000 = <strong>$400,000</strong> → additional bad debt expense required = <strong>$390,000</strong>.</td>
+</tr>
+</table>
+<h4>Entry (to adjust X1 FS)</h4>
+<ul class="je">
+<li><span class="label">Dr</span><span class="acct">Bad debt expense</span><span class="amt">$390,000</span></li>
+<li><span class="label">Cr</span><span class="acct">Allowance for doubtful accounts</span><span class="amt">($390,000)</span></li>
+</ul>
+
+</section>
+<!-- Example 3: Plant fire (Type II) -->
+<section class="card">
+<h2>3) Nonrecognized Event — Plant Fire After Year‑End (Type II)</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Conclusion &amp; Disclosure</th></tr>
+<tr>
+<td>On 2/05/X2, a fire destroys a manufacturing facility. The facility was fully operational at 12/31/X1.</td>
+<td>Event arose after the balance sheet date → <strong>Type II</strong>. No adjustment to X1 amounts. Disclose the nature of the event and an estimate of the financial effect (or state it cannot be estimated).</td>
+</tr>
+</table>
+<div class="callout small"><span class="tag">Disclosure</span> Example language: “On February 5, 20X2, a fire damaged the Company’s Springfield plant. The Company is assessing insurance recoveries; the estimated net loss ranges from $0 to $2.0 million.”</div>
+</section>
+<!-- Example 4: Equity issuance after year-end (Type II) -->
+<section class="card">
+<h2>4) Nonrecognized Event — Equity Issuance (Type II)</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Conclusion</th></tr>
+<tr>
+<td>On 1/15/X2, the Company issues common stock for cash. No equity issuance plans existed at 12/31/X1.</td>
+<td>New condition after year‑end → <strong>Type II</strong>. <strong>Disclose</strong> nature and proceeds; no adjustment to 12/31/X1 equity.</td>
+</tr>
+</table>
+</section>
+<!-- Example 5: Going concern update via subsequent events -->
+<section class="card">
+<h2>5) Going Concern Considerations — Subsequent Events</h2>
+<table class="tbl small">
+<colgroup><col style="width:42%"/><col style="width:58%"/></colgroup>
+<tr><th>Scenario</th><th>Effect</th></tr>
+<tr>
+<td>Negative events occur after year‑end that alleviate substantial doubt raised at 12/31.</td>
+<td>Still evaluate going concern as of 12/31 using information available through issuance; if doubt is alleviated by subsequent events, disclose basis and impact.</td>
+</tr>
+<tr>
+<td>Adverse post‑year‑end events create substantial doubt not present at 12/31.</td>
+<td>Generally a <strong>Type II</strong> disclosure (no adjustment) unless the condition existed at year‑end.</td>
+</tr>
+</table>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<colgroup><col style="width:34%"/><col style="width:66%"/></colgroup>
+<tr><th>Topic</th><th>Core points</th></tr>
+<tr>
+<td>Recognized vs. Nonrecognized</td>
+<td>Type I (pre‑existing conditions) → adjust; Type II (new conditions) → disclose.</td>
+</tr>
+<tr>
+<td>Evaluation window</td>
+<td>From balance sheet date through the date FS are available to be issued; disclose this date.</td>
+</tr>
+</table>
+</section>
+</div>
+</body>
+</html>

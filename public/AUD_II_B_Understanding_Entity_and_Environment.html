@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Understanding an Entity and Its Environment (2025 AICPA Blueprints)</title>
+<meta name="description" content="Chapter‑style CPA reviewer for AUD Area II.B (Understanding an entity and its environment), aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Understanding an Entity and Its Environment</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Obtain an understanding of the <strong>industry, regulatory, and external factors</strong> that affect the entity.</li>
+          <li>Understand the entity’s <strong>objectives, strategies, and business model</strong> and how they may lead to business risks that could cause material misstatement.</li>
+          <li>Evaluate the <strong>applicable financial reporting framework (FRF)</strong> and areas requiring significant judgment/disclosure.</li>
+          <li>Identify and document key <strong>performance measures</strong>, incentives, and pressures relevant to fraud risk factors.</li>
+          <li>Link your understanding to <strong>risk identification</strong> (II.E) and decisions about using the work of others (II.F).</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Area</th><th>What to capture</th></tr>
+          <tr><td>Industry & external factors</td><td>Regulatory climate, economic trends, competition, supply chain, technology, legal environment.</td></tr>
+          <tr><td>Business model</td><td>Revenue streams, cost structure, significant classes of transactions, significant estimates.</td></tr>
+          <tr><td>Objectives & strategies</td><td>Growth plans, financing, acquisitions, restructurings, and the <em>related business risks</em>.</td></tr>
+          <tr><td>Performance measures</td><td>KPIs used by management/TCWG; compensation metrics; covenant ratios; analyst expectations.</td></tr>
+          <tr><td>FRF</td><td>Appropriateness (GAAP/IFRS/special purpose); complex judgments; disclosure landscape.</td></tr>
+          <tr><td>Preliminary analytics</td><td>Trend/ratio analysis to flag unusual relationships or volatility for deeper risk assessment.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Purpose & Required Outputs</h2>
+    <div class="card">
+      <ul>
+        <li>Develop a foundation for identifying <strong>risks of material misstatement</strong> and tailoring the audit plan.</li>
+        <li>Produce <strong>documentation</strong> that an experienced auditor can follow: what you understood, sources used, and how it affects risks/procedures.</li>
+        <li>Coordinate with team discussions and specialists to embed <strong>professional skepticism</strong> early.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Write a concise “entity snapshot” in your file (business, markets, KPIs, key risks). Revisit it at completion to confirm it stayed accurate.</div>
+    </div>
+
+    <h2>2) Industry, Regulatory & Other External Factors</h2>
+    <section class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <article class="card">
+        <h3>What to Learn</h3>
+        <ul>
+          <li>Industry economics, concentration, cyclicality, and margin norms.</li>
+          <li>Regulatory bodies, reporting/filing requirements, and compliance risks.</li>
+          <li>Supply chain/geopolitical exposures and technology disruption.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>How to Learn It</h3>
+        <ul>
+          <li>Read public filings, industry reports, and regulator guidance.</li>
+          <li>Perform planning analytics vs peers and prior periods.</li>
+          <li>Discuss with management and, where relevant, legal/compliance.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>3) Objectives, Strategies & Business Model</h2>
+    <div class="card">
+      <ul>
+        <li>Identify strategic goals (e.g., rapid growth, cost‑cutting, product pivots) and how they translate into <strong>business risks</strong>.</li>
+        <li>Understand revenue channels, pricing, major customers/suppliers, significant estimates (e.g., credit losses, fair value, warranties).</li>
+        <li>Map significant classes of transactions at a high level (details of controls belong in II.C).</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>A subscription SaaS targets aggressive ARR growth with sales incentives. Risks: revenue recognition (variable consideration, cut‑off), capitalization of software costs, and reliance on usage reports.</p></details>
+    </div>
+
+    <h2>4) Performance Measurement & Incentives</h2>
+    <div class="card">
+      <ul>
+        <li>List the KPIs management tracks (e.g., gross margin, same‑store sales, ARR, churn) and how they tie to compensation.</li>
+        <li>Identify covenant ratios and market expectations that may create pressure to misstate.</li>
+        <li>Consider non‑GAAP measures and whether they align with audited results.</li>
+      </ul>
+      <div class="callout danger"><strong>Red flags:</strong> aggressive targets, rapidly changing metrics, or metrics that are difficult to measure reliably.</div>
+    </div>
+
+    <h2>5) Financial Reporting Framework (FRF)</h2>
+    <div class="card">
+      <ul>
+        <li>Confirm the FRF is appropriate for the entity and identify areas of judgment (revenue, leases, financial instruments, impairment, income taxes).</li>
+        <li>Understand required disclosures and presentation risks (e.g., liquidity, related parties, going concern).</li>
+        <li>If the FRF is special purpose, document criteria and user needs.</li>
+      </ul>
+    </div>
+
+    <h2>6) Procedures to Obtain the Understanding</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Inquiries</strong> of management, governance, internal audit, and operational staff.</li>
+        <li><strong>Analytical procedures</strong> at planning to develop expectations and spot anomalies.</li>
+        <li><strong>Observation/inspection</strong> of facilities, contracts, policies, and board minutes.</li>
+        <li><strong>Walkthrough anchors:</strong> Identify significant transaction flows to explore in II.C for control understanding.</li>
+      </ul>
+      <div class="callout check"><strong>Coordinate:</strong> Share insights with the team brainstorm and document how understanding drove risk identification in II.E.</div>
+    </div>
+
+    <h2>7) Documentation Essentials</h2>
+    <div class="card">
+      <ul>
+        <li>Industry and external environment summary with sources used.</li>
+        <li>Business model narrative, objectives/strategies, and key processes at a high level.</li>
+        <li>FRF appropriateness and areas of significant judgment/disclosure.</li>
+        <li>KPIs, incentives/pressures, and preliminary fraud considerations.</li>
+        <li>Impact on planned procedures, staffing, and need for specialists/component auditors.</li>
+      </ul>
+    </div>
+
+    <h2>8) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Why understand the entity & environment? <strong>To identify business risks that translate into RMM and tailor the plan.</strong></li>
+        <li>Where do detailed control evaluations belong? <strong>II.C — control environment & business processes (incl. IT).</strong></li>
+        <li>Which procedures are required at planning to aid understanding? <strong>Analytical procedures.</strong></li>
+        <li>What indicates pressure to misstate? <strong>Compensation tied to volatile metrics or tight covenant headroom.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

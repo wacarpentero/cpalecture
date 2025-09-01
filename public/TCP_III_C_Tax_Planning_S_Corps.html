@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tax Planning for S Corporations — TCP III.C (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0a1f44; --card:#0f2a5c; --text:#e6efff; --muted:#bcd1ff; --accent:#7fb3ff;
+         --ok:#66e0a3; --border:rgba(255,255,255,.12); --shadow:0 10px 25px rgba(0,0,0,.25); --radius:18px; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%), radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%), var(--bg);
+       color:var(--text);line-height:1.55;}
+  .header-inner{max-width:1050px;margin:0 auto;padding:28px 18px 4px}
+  .title{font-weight:800;letter-spacing:.3px;font-size:clamp(26px,3.1vw,40px);margin:0}
+  .container{max-width:1050px;margin:0 auto;padding:8px 18px 60px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:16px 0;box-shadow:var(--shadow)}
+  h2{margin:0 0 10px;font-size:clamp(20px,2.1vw,28px)}
+  h3{margin:18px 0 8px;font-size:clamp(17px,1.7vw,22px)}
+  p{margin:8px 0 10px}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));padding:14px 16px;border-radius:12px;border:1px dashed var(--border);}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  .answer{color:var(--ok);font-weight:400}
+  .tgrid { width:100%; border-collapse:collapse; margin-top:4px; }
+  .tgrid th, .tgrid td { border:1px solid var(--border); padding:10px 12px; vertical-align:top; }
+  .tgrid th { text-align:left; background:rgba(255,255,255,.04); }
+  .tgrid tr:nth-child(even) td { background:rgba(255,255,255,.02); }
+  .mini { margin:0; padding:0 0 0 18px; }
+  .mini li { margin:4px 0; }
+  .eq { white-space:pre-wrap; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Tax Planning for S Corporations</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Plan and compute shareholder <strong>stock and debt basis</strong> rollforwards; apply <strong>loss limitations</strong> (basis → at‑risk → passive) and the <strong>pro‑rata rule</strong> when basis is insufficient.</li>
+        <li>Apply <strong>distribution ordering</strong> with and without C‑corp E&amp;P: <strong>AAA</strong> → <strong>AEP dividend</strong> → basis reduction → gain.</li>
+        <li>Evaluate exposure to <strong>built‑in gains (BIG) tax</strong> and <strong>passive investment income (PII) tax</strong> when AEP exists.</li>
+        <li>Compare <strong>reasonable compensation</strong> vs distributions; coordinate with <strong>§199A QBI</strong> (QBI after GP not applicable to S‑corps—use W‑2 limits).</li>
+        <li>Understand loan basis mechanics and potential <strong>gain on loan repayment</strong> when prior losses used debt basis.</li>
+      </ul>
+    </section>
+
+    
+    <section class="card">
+      <h2>Fast map</h2>
+      <style>
+        .grid {display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top:8px}
+        @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+        .rule {border:1px solid var(--border); border-radius:14px; padding:14px; background:rgba(255,255,255,.02)}
+        .rule h4{margin:0 0 6px; font-size:16px}
+        .rule ul{margin:6px 0 0 18px}
+        .rule li{margin:4px 0}
+        .badge{display:inline-block; border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; margin:4px 6px 0 0}
+        .iftable{width:100%; border-collapse:collapse; margin-top:14px}
+        .iftable th,.iftable td{border:1px solid var(--border); padding:10px 12px; vertical-align:top}
+        .iftable th{background:rgba(255,255,255,.04); text-align:left}
+        .em{font-weight:600; color:var(--text)}
+      </style>
+
+      <div class="grid">
+        <div class="rule">
+          <h4>📈 Basis & loss limits</h4>
+          <ul>
+            <li>Stock basis ↑ with income (incl. tax‑exempt), ↓ with distributions/nondeductibles, then losses.</li>
+            <li>Loss limits: <span class="em">Basis → At‑risk → Passive</span>.</li>
+            <li>When basis insufficient across items → <span class="em">pro‑rata</span>.</li>
+          </ul>
+          <span class="badge">Debt basis needs direct loan</span>
+        </div>
+
+        <div class="rule">
+          <h4>💸 Distributions & AAA/AEP</h4>
+          <ul>
+            <li>Order: <span class="em">AAA</span> (basis reduction) → <span class="em">AEP dividend</span> → basis/gain.</li>
+            <li>Basis cannot go below zero.</li>
+          </ul>
+          <span class="badge">Watch AEP</span>
+        </div>
+
+        <div class="rule">
+          <h4>🏛️ BIG & PII taxes</h4>
+          <ul>
+            <li><span class="em">BIG</span>: 21% on recognized built‑in gains (limited to remaining BIG).</li>
+            <li><span class="em">PII</span>: if PII &gt;25% of gross receipts and AEP exists → 21% on min(net PII, excess).</li>
+          </ul>
+          <span class="badge">Recognition period</span>
+        </div>
+
+        <div class="rule">
+          <h4>👷 Reasonable compensation</h4>
+          <ul>
+            <li>Pay enough W‑2 wages to owner‑employees; distributions aren’t wages.</li>
+            <li>Coordinate with §199A wage limits at shareholder level.</li>
+          </ul>
+          <span class="badge">W‑2 scrutiny</span>
+        </div>
+
+        <div class="rule">
+          <h4>🏦 Loan basis mechanics</h4>
+          <ul>
+            <li>Direct shareholder loans create debt basis.</li>
+            <li>Repayment before restoring basis → potential capital gain.</li>
+          </ul>
+          <span class="badge">Back‑to‑back if needed</span>
+        </div>
+
+        <div class="rule">
+          <h4>🧮 Separately stated items</h4>
+          <ul>
+            <li>Charitable, §179, capital items flow through; basis affects deductibility.</li>
+          </ul>
+          <span class="badge">Pro‑rata when limited</span>
+        </div>
+      </div>
+
+      <table class="iftable">
+        <thead><tr><th>If you see…</th><th>Then remember…</th></tr></thead>
+        <tbody>
+          <tr><td>Multiple losses but insufficient basis</td><td>Allocate allowed amounts <span class="em">pro‑rata</span> across all items.</td></tr>
+          <tr><td>Distribution with AEP present</td><td>AAA first (tax‑free up to basis), then <span class="em">AEP dividend</span>.</td></tr>
+          <tr><td>S corp with C‑era BIG</td><td>21% BIG tax on recognized amounts during recognition period.</td></tr>
+          <tr><td>Debt guaranteed, not advanced</td><td>No debt basis (absent documented back‑to‑back loan).</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:10px">
+        <span class="badge">AAA → AEP → Basis</span>
+        <span class="badge">Pro‑rata loss allocation</span>
+        <span class="badge">Debt‑basis repayment gain</span>
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>Debt basis requires direct loans</strong> by the shareholder (not mere guarantees unless back‑to‑back documented).</li>
+        <li><strong>Ordering matters:</strong> Increase basis for income before distributions, then reduce for distributions/nondeductibles, then losses.</li>
+        <li><strong>Pro‑rata rule:</strong> When basis is insufficient for multiple loss items, allocate allowed amounts proportionally across all losses/deductions for the year.</li>
+        <li><strong>AAA can be negative</strong>; stock basis cannot. Excess distributions over basis create capital gain.</li>
+        <li><strong>BIG vs PII:</strong> BIG applies during the recognition period; PII tax needs AEP and PII &gt;25% of receipts.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+      <table class="tgrid">
+        <thead>
+          <tr>
+            <th style="width:22%">Topic</th>
+            <th style="width:38%">Inputs</th>
+            <th style="width:20%">Key computation</th>
+            <th style="width:20%">Result(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1) Basis rollforward</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Begin basis: $30,000</li>
+                <li>Ord. income: $25,000</li>
+                <li>Tax‑exempt: $2,000</li>
+                <li>Distribution: $20,000</li>
+                <li>Nondeductible: $3,000</li>
+              </ul>
+            </td>
+            <td class="eq">End basis = $30,000 + $25,000 + $2,000 − $20,000 − $3,000</td>
+            <td><strong>$34,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>2) Loss limit w/ debt basis</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Stock basis: $20,000</li>
+                <li>Debt basis: $10,000</li>
+                <li>Loss: $40,000</li>
+              </ul>
+            </td>
+            <td class="eq">Allowed ≤ stock+debt basis = $30,000; suspend remainder</td>
+            <td>Allowed: <strong>$30,000</strong><br/>Suspended: <strong>$10,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>3) Pro‑rata limit across items</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Basis available: $20,000</li>
+                <li>Ord loss: $18,000</li>
+                <li>Charitable: $12,000</li>
+                <li>§179: $10,000</li>
+              </ul>
+            </td>
+            <td class="eq">Allowed = $20,000/$40,000 = 50% of each item (rounded)</td>
+            <td>Allowed ≈ Ord $9,000, Char $6,000, §179 $5,000; Suspended total $20,000</td>
+          </tr>
+          <tr>
+            <td><strong>4) AAA/AEP ordering</strong></td>
+            <td>
+              <ul class="mini">
+                <li>AAA: $35,000</li>
+                <li>AEP: $12,000</li>
+                <li>Basis: $60,000</li>
+                <li>Distribution: $40,000</li>
+              </ul>
+            </td>
+            <td class="eq">From AAA: $35,000 (basis ↓); Excess $5,000 → AEP dividend</td>
+            <td>Dividend: <strong>$5,000</strong><br/>End basis: <strong>$25,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5) Built‑in gains tax</strong></td>
+            <td>
+              <ul class="mini">
+                <li>BIG at conversion: $300,000</li>
+                <li>Recognized BIG: $220,000</li>
+                <li>Rate: 21%</li>
+              </ul>
+            </td>
+            <td class="eq">Tax = min(Recognized, BIG at conv) × 21%</td>
+            <td><strong>$46,200</strong></td>
+          </tr>
+          <tr>
+            <td><strong>6) PII tax</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Gross receipts: $800,000</li>
+                <li>PII: $260,000</li>
+                <li>Net PII: $200,000</li>
+              </ul>
+            </td>
+            <td class="eq">Base = min(net PII, excess over 25% of receipts)</td>
+            <td>Tax base: <strong>$60,000</strong><br/>Tax: <strong>$12,600</strong></td>
+          </tr>
+          <tr>
+            <td><strong>7) Loan repayment gain</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Prior losses from debt basis: $15,000</li>
+                <li>Loan repaid before basis restored</li>
+              </ul>
+            </td>
+            <td class="eq">Gain recognized upon repayment</td>
+            <td><strong>$15,000</strong> capital gain</td>
+          </tr>
+          <tr>
+            <td><strong>8) QBI after GP</strong></td>
+            <td>
+              <ul class="mini">
+                <li>OBI before GP: $200,000</li>
+                <li>GP to shareholder: $30,000</li>
+                <li>Ownership: 50%</li>
+              </ul>
+            </td>
+            <td class="eq">QBI uses OBI after GP; excludes GP</td>
+            <td>QBI: <strong>$85,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Stock basis rollforward: Begin $45,000; ordinary income $30,000; tax‑exempt $4,000; distribution $25,000; nondeductible $2,000. Ending basis?</p>
+        <ol type="A">
+          <li>$52,000</li>
+          <li>$48,000</li>
+          <li>$58,000</li>
+          <li>$40,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">End basis = begin + income + tax‑exempt − distribution − nondeductibles = $52,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> Loss limitation: Stock basis $15,000, debt basis $5,000, loss $28,000. Allowed and suspended?</p>
+        <ol type="A">
+          <li>Allowed $20,000; Suspended $8,000</li>
+          <li>Allowed $28,000; Suspended $0</li>
+          <li>Allowed $15,000; Suspended $13,000</li>
+          <li>Allowed $10,000; Suspended $18,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Allowed up to stock+debt basis = $20,000; remainder $8,000 suspends then applies to at‑risk/passive.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Pro‑rata allocation when basis is insufficient: Basis available $18,000; ordinary loss $12,000; charitable $9,000; §179 $9,000. Allowed totals?</p>
+        <ol type="A">
+          <li>Ord $7,200; Char $5,400; §179 $5,400</li>
+          <li>Ord $18,000; Char $0; §179 $0</li>
+          <li>Ord $0; Char $0; §179 $18,000</li>
+          <li>Ord $12,000; Char $6,000; §179 $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">When basis is limited, losses/deductions are allowed <em>pro‑rata</em> across all items: ratio = 18000/30000 = 60%. Rounded allowed amounts shown.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Distribution with AEP: AAA $50,000; AEP $10,000; basis $60,000; distribution $55,000. Dividend and ending basis?</p>
+        <ol type="A">
+          <li>Dividend $5,000; End basis $10,000</li>
+          <li>Dividend $0</li>
+          <li>Dividend $10,000</li>
+          <li>Dividend $55,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">AAA first reduces basis ($50,000), then remaining distribution is dividend from AEP ($5,000). Basis cannot go below zero; here end basis = $10,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Built‑in gains tax: BIG at conversion $250,000; recognized BIG $180,000. Tax at 21%?</p>
+        <ol type="A">
+          <li>$37,800</li>
+          <li>$52,500</li>
+          <li>$0</li>
+          <li>$52,500</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Tax = min(Recognized, Remaining BIG) × 21% = $37,800.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> PII tax: Gross receipts $900,000; PII $300,000; net PII $160,000; AEP exists. Tax?</p>
+        <ol type="A">
+          <li>$15,750</li>
+          <li>$0</li>
+          <li>$63,000</li>
+          <li>$15,750</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Base = min(net PII, excess over 25% of receipts) = min($160,000, $75,000) = $75,000; tax = 21% = $15,750.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Shareholder loan repayment when debt basis had been used for prior losses of $10,000 (no restoration before repayment). Tax effect?</p>
+        <ol type="A">
+          <li>Capital gain $10,000</li>
+          <li>No tax effect</li>
+          <li>Ordinary income $10,000</li>
+          <li>Dividend $10,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Loan repayment before restoring debt basis triggers gain to the shareholder for the amount of prior losses taken using debt basis.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> QBI: OBI before GP $180,000; GP to shareholder $20,000; ownership 60%. QBI?</p>
+        <ol type="A">
+          <li>$96,000</li>
+          <li>$108,000</li>
+          <li>$20,000</li>
+          <li>$116,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">QBI uses ordinary business income <em>after</em> GP and excludes the GP received: (OBI $180,000 − GP $20,000) × 60% = $96,000.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

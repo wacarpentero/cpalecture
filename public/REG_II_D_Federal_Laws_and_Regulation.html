@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — Federal Laws &amp; Regulations (REG II.D)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  .answer{color:#b5ffb1}
+  .hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+  /* Hidden answers control */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Federal Laws &amp; Regulations</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Summarize</strong> key rules for <strong>employment taxes</strong> from both the employer and employee perspective (withholding, FICA, FUTA, self‑employment, information returns).</li>
+<li><strong>Explain</strong> the framework for <strong>qualified health plans</strong> under the Affordable Care Act (ACA): employer mandate, affordability/minimum value, premium tax credit interaction, and reporting.</li>
+<li><strong>Recall</strong> factors used to determine <strong>worker classification</strong> (employee vs. independent contractor) and the consequences of misclassification.</li>
+<li><strong>Recall</strong> bankruptcy <strong>chapters</strong> and discharge basics.</li>
+<li><strong>Summarize</strong> the <strong>Foreign Corrupt Practices Act</strong> (FCPA) anti‑bribery and books‑and‑records/internal controls provisions.</li>
+<li><strong>Identify</strong> compliance issues and the correct remedy given a scenario.</li>
+</ul>
+</section>
+<!-- At a Glance -->
+<section class="card">
+<h2>At a Glance</h2>
+<div class="grid-2 small">
+<div>
+<h4>Employment taxes — quick map</h4>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Topic</th><th>Key points</th></tr>
+<tr><td>FICA (Social Security &amp; Medicare)</td><td>Shared by employer and employee; employer <strong>withholds</strong> employee share and remits both shares. Additional Medicare tax may apply to high wages (employee only).</td></tr>
+<tr><td>FUTA</td><td>Employer‑paid unemployment tax; credit coordination with state unemployment taxes.</td></tr>
+<tr><td>Withholding &amp; deposits</td><td>Form W‑4 drives withholding; deposit schedules (monthly/semimonthly) depend on prior liability; quarterly reconciliation on Form 941 (or annual 944 for small employers).</td></tr>
+<tr><td>Information returns</td><td>Form W‑2 for employees; Form 1099‑NEC for nonemployee compensation; backup withholding may apply if payee fails to furnish a correct TIN on Form W‑9.</td></tr>
+<tr><td>Self‑employment tax</td><td>Applies to net earnings from self‑employment; computed on individual return; taxpayer may deduct an employer‑equivalent portion in arriving at AGI.</td></tr>
+</table>
+</div>
+<div>
+<h4>ACA — employer mandate snapshot</h4>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Item</th><th>Key points</th></tr>
+<tr><td>Applicable Large Employer (ALE)</td><td>Generally ≥ 50 full‑time equivalents. Aggregation rules may apply to related employers.</td></tr>
+<tr><td>Offer of coverage</td><td>ALE must offer minimum essential coverage to substantially all full‑time employees and dependents or risk a potential employer shared responsibility payment (ESRP).</td></tr>
+<tr><td>Affordability &amp; minimum value</td><td>Coverage must meet an IRS <em>indexed affordability threshold</em> and provide minimum value. If not, an employee may qualify for a <strong>premium tax credit</strong>, potentially triggering an ESRP.</td></tr>
+<tr><td>Reporting</td><td>Information reporting to the IRS/employees (Forms 1094/1095) documents offer and coverage.</td></tr>
+</table>
+</div>
+</div>
+<div class="callout small"><strong>Exam tip:</strong> When a payroll/ACA problem appears, line up the steps: <em>Who’s the worker?</em> → <em>What forms?</em> → <em>Who withholds/pays?</em> → <em>Is the employer an ALE and was affordable MV coverage offered?</em></div>
+</section>
+<!-- Worker classification -->
+<section class="card">
+<h2>Worker classification</h2>
+<div class="grid-2 small">
+<div>
+<h4>Common‑law factors (IRS framework)</h4>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Category</th><th>Examples</th></tr>
+<tr><td>Behavioral control</td><td>Who directs how/when work is done, training, evaluation systems.</td></tr>
+<tr><td>Financial control</td><td>Significant investment, unreimbursed expenses, opportunity for profit/loss, method of payment.</td></tr>
+<tr><td>Relationship of the parties</td><td>Written contracts; benefits; permanency; services key to the business.</td></tr>
+<tr><td>Forms</td><td><strong>Employee:</strong> W‑4, W‑2. <strong>Independent contractor:</strong> W‑9, 1099‑NEC. Backup withholding if no TIN.</td></tr>
+<tr><td>Relief</td><td>Section 530 safe harbor may apply if long‑standing practice, reasonable basis, and consistent treatment.</td></tr>
+</table>
+</div>
+<div>
+<h4>Illustration — Employee or contractor?</h4>
+<svg aria-label="Worker classification decision flow (1-inch top gap)" height="520" role="img" style="margin-top:0;margin-top:-160px;" viewbox="0 0 1600 700" width="100%">
+<defs>
+<marker id="arrow" markerheight="14" markerunits="strokeWidth" markerwidth="18" orient="auto" refx="16" refy="7">
+<path d="M0,0 L18,7 L0,14 z" fill="rgba(255,255,255,.9)"></path>
+</marker>
+<filter height="140%" id="soft" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="2" flood-color="rgba(0,0,0,0.35)" stddeviation="2"></fedropshadow>
+</filter>
+<style>
+      .node{fill:rgba(96,165,250,.22);stroke:rgba(255,255,255,.40)}
+      .box{fill:rgba(134,183,255,.30);stroke:rgba(255,255,255,.40)}
+      .text{fill:#fff;font-size:30px;font-weight:800}
+      .wire{stroke:rgba(255,255,255,.85);stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .lbl{fill:#fff;font-size:22px;font-weight:700}
+    </style>
+</defs>
+<!-- Row 1 set at y = 96px for ~1-inch gap from title -->
+<rect class="node" filter="url(#soft)" height="140" rx="20" ry="20" width="900" x="60" y="96"></rect>
+<text class="text" text-anchor="middle" x="510" y="146">
+<tspan dy="0" x="510">Does the business control</tspan>
+<tspan dy="38" x="510">how the work is done?</tspan>
+</text>
+<line class="wire" x1="960" x2="1220" y1="164" y2="164"></line>
+<text class="lbl" x="1025" y="142">Yes</text>
+<rect class="box" filter="url(#soft)" height="92" rx="20" ry="20" width="360" x="1220" y="126"></rect>
+<text class="text" text-anchor="middle" x="1400" y="184">Employee likely</text>
+<!-- No to Row 2  -->
+<line class="wire" x1="510" x2="510" y1="236" y2="366"></line>
+<text class="lbl" x="601.0" y="301">No</text>
+<!-- Row 2 -->
+<rect class="node" filter="url(#soft)" height="132" rx="20" ry="20" width="520" x="240" y="366"></rect>
+<text class="text" text-anchor="middle" x="500" y="416">
+<tspan dy="0" x="500">Significant financial</tspan>
+<tspan dy="38" x="500">risk?</tspan>
+</text>
+<line class="wire" x1="760" x2="1220" y1="432" y2="432"></line>
+<text class="lbl" x="840" y="408">Yes</text>
+<rect class="box" filter="url(#soft)" height="100" rx="20" ry="20" width="420" x="1220" y="386"></rect>
+<text class="text" text-anchor="middle" x="1430" y="448">Contractor more likely</text>
+<!-- No to Row 3 with spacing -->
+<line class="wire" x1="500" x2="500" y1="498" y2="596"></line>
+<text class="lbl" x="591.0" y="552">No</text>
+<!-- Row 3 -->
+<rect class="box" filter="url(#soft)" height="96" rx="20" ry="20" width="460" x="270" y="596"></rect>
+<text class="text" text-anchor="middle" x="500" y="656">Weigh relationship factors</text>
+</svg>
+<p class="muted small" style="margin-top:36px;margin-bottom:0;">No single factor is determinative—consider the totality of circumstances.</p>
+</div>
+</div>
+</section>
+<!-- Bankruptcy quick table (tie-in) -->
+<section class="card">
+<h2>Bankruptcy — quick tie‑in</h2>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Chapter</th><th>Key points</th></tr>
+<tr><td>7 — Liquidation</td><td>Trustee; non‑exempt assets liquidated; businesses typically cease; individuals seek discharge (subject to exceptions).</td></tr>
+<tr><td>11 — Reorganization</td><td>Debtor‑in‑possession usually remains in control; plan must be confirmed; cramdown possible.</td></tr>
+<tr><td>13 — Wage earner plan</td><td>Individuals with regular income repay over time, keep assets.</td></tr>
+<tr><td>12 — Family farmer/fisher</td><td>Special rules akin to Chapter 13.</td></tr>
+<tr><td>Discharge basics</td><td>Most unsecured debts discharge except specific exceptions (e.g., recent taxes, domestic support, fraud, student loans absent hardship).</td></tr>
+</table>
+</section>
+<!-- Anti-bribery -->
+<section class="card">
+<h2>Anti‑bribery — FCPA essentials</h2>
+<div class="grid-2 small">
+<div>
+<h4>Provisions</h4>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Area</th><th>Key points</th></tr>
+<tr><td>Anti‑bribery</td><td>Prohibits giving anything of value to foreign officials to obtain/retain business. “Foreign official” broadly defined; includes state‑owned enterprises. Narrow exception for bona fide, reasonable promotional expenses; <em>facilitating payments</em> are limited and risky.</td></tr>
+<tr><td>Books &amp; records</td><td>Issuers must keep accurate records and reasonably designed internal controls. Liability can arise without bribery (books/controls violations).</td></tr>
+<tr><td>Who’s covered?</td><td>Issuers, domestic concerns (US persons/companies), and anyone acting within US territory. Third‑party intermediary payments are covered.</td></tr>
+<tr><td>Penalties</td><td>Severe criminal and civil penalties for entities and individuals; debarment risks; disgorgement.</td></tr>
+</table>
+</div>
+<div>
+<h4>Red flags</h4>
+<ul>
+<li><span class="badge">Intermediaries</span> High‑risk agents/consultants; vague services; requests for cash/off‑books payments.</li>
+<li><span class="badge">Government touchpoints</span> Licenses, customs, procurement, state‑owned customers.</li>
+<li><span class="badge">Controls gaps</span> No due diligence, missing approvals, weak travel/expense policies.</li>
+</ul>
+<div class="callout small"><strong>Exam tip:</strong> Focus on intent and <em>anything of value</em> to a foreign official for business advantage. Books‑and‑records are separate bases for liability.</div>
+</div>
+</div>
+</section>
+<!-- Examples -->
+<section class="card">
+<h2>Examples — Apply to scenarios</h2>
+<table class="tbl small">
+<tr><th>Scenario</th><th>Answer</th></tr>
+<tr>
+<td>A 60‑FTE company offers no coverage. Several full‑time employees receive marketplace premium tax credits.</td>
+<td>Likely an <strong>ALE</strong>; potential employer shared responsibility payment may apply for failure to offer minimum essential coverage.</td>
+</tr>
+<tr>
+<td>Company pays a “consultant” who funnels money to a foreign customs official to speed shipments.</td>
+<td>FCPA anti‑bribery risk: third‑party payments with business intent. Books/records liability if misclassified.</td>
+</tr>
+<tr>
+<td>Software firm controls daily work, requires reports, and provides benefits to a developer labeled as “contractor.”</td>
+<td>Likely employee under common‑law factors → W‑2, employer FICA/FUTA; misclassification exposure.</td>
+</tr>
+<tr>
+<td>Independent designer paid without a TIN on file.</td>
+<td>Backup withholding may apply; issue Form 1099‑NEC; obtain Form W‑9.</td>
+</tr>
+</table>
+</section>
+<!-- Tricky Areas -->
+<section class="card">
+<h2>Tricky Areas (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">Employee vs contractor</span> If the business directs the <em>manner and means</em>, it’s usually an employee.</li>
+<li><span class="tag">ACA penalties</span> Two flavors are tested: failure to <em>offer</em> coverage to substantially all FT employees, and failure to offer <em>affordable MV</em> coverage to a particular FT employee who gets a credit.</li>
+<li><span class="tag">Forms</span> Employee=W‑2; contractor=1099‑NEC; withholding=Form 941; W‑4 for employees; W‑9 for contractors.</li>
+<li><span class="tag">FCPA</span> Intent + something of value + foreign official + business purpose. Books‑and‑records can stand alone.</li>
+<li><span class="tag">Bankruptcy</span> Know chapter purposes and major discharge exceptions only.</li>
+</ul>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Topic</th><th>Key point</th></tr>
+<tr><td>Employment taxes</td><td>Employer withholds and pays over FICA and income tax for employees; FUTA is employer‑paid; self‑employment tax on net SE income; use correct forms and deposit cadence.</td></tr>
+<tr><td>ACA employer mandate</td><td>ALE? Offer minimum essential coverage that is affordable and provides MV; information reporting documents compliance.</td></tr>
+<tr><td>Worker classification</td><td>Behavioral, financial, and relationship factors; apply totality of circumstances.</td></tr>
+<tr><td>FCPA</td><td>Anti‑bribery + books/records/internal controls; watch third‑party intermediaries.</td></tr>
+<tr><td>Bankruptcy</td><td>Recall chapter purposes and discharge exceptions.</td></tr>
+</table>
+</section>
+<!-- Quick Practice -->
+<section class="card">
+<h2>Quick Practice — 5 Multiple‑Choice Questions (MCQs)</h2>
+<ol class="small">
+<li><strong>Which employer is potentially subject to an ACA employer shared responsibility payment?</strong><br/>
+          A. An employer with 25 FTEs that does not offer coverage   B. An employer with ~60 FTEs that does not offer coverage and has full‑time employees who receive premium tax credits   C. Any employer that fails to provide dental insurance   D. A self‑employed individual<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Applicable Large Employers (generally ≥ 50 FTEs) must offer coverage or potentially owe an ESRP when FT employees receive premium tax credits.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Which form is typically used to report nonemployee compensation?</strong><br/>
+          A. Form W‑2   B. Form 1099‑NEC   C. Form 941   D. Form 1095‑C<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — 1099‑NEC reports nonemployee compensation; W‑2 is for employees; 941 is quarterly payroll tax return; 1095‑C reports offers of coverage by ALEs.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Which factor best supports contractor status?</strong><br/>
+          A. Employer controls work hours and methods   B. Worker supplies own tools and can realize profit/loss   C. Worker gets benefits   D. Work is integral to the business<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Significant investment and risk of loss point toward independent contractor status.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>A U.S. issuer records a bribe as a “consulting fee” in its books. Which law is implicated even if bribery is not proven?</strong><br/>
+          A. Only anti‑bribery   B. Books‑and‑records/internal controls provisions of the FCPA   C. GLBA   D. The UK Bribery Act<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Inaccurate books or inadequate internal controls can independently violate the FCPA.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>FUTA is generally:</strong><br/>
+          A. Paid by employees   B. Paid by employers   C. Split equally   D. Paid only by self‑employed individuals<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — FUTA is an employer‑paid tax (subject to credits for state unemployment taxes).</div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

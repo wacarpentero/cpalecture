@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>CPA Reviewer — C Corporations</title>
+ <style>:root{--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
+ --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+ --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa; --ok:#b5ffb1;
+ --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{font-family: var(--font);}*,*::before,*::after{font-family: var(--font)!important;}color:var(--ink);
+ background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+ linear-gradient(180deg,var(--bg1), #040b18 70%);}.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 84px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}.card{
+ background:linear-gradient(180deg,var(--card),var(--card2));
+ border:1px solid rgba(255,255,255,.08);
+ box-shadow:var(--shadow);
+ padding:18px;border-radius:var(--radius);
+ overflow:hidden;margin-bottom:18px
+}.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}.tbl th{background:rgba(255,255,255,.03)}.small{font-size:.96rem}.mini{font-size:.9rem}.muted{color:var(--muted)}.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+ padding:12px 14px;border-radius:10px;margin-top:8px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+ border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}.reveal{margin-top:6px}.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+ border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}.reveal>summary::-webkit-details-marker{display:none}.reveal>summary::marker{content:""}.reveal[open]>summary{opacity:.85}.answer-block{margin-top:8px;color:var(--ok)}.tbl.wfirst th:first-child,.tbl.wfirst td:first-child{width: 276px;min-width: 276px}.kpill{display:inline-block;padding:2px 8px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);}
+
+/* widen Type and M‑1 direction columns */.tbl.m1 th:nth-child(2),.tbl.m1 td:nth-child(2){ width: 270px; min-width: 270px; }.tbl.m1 th:nth-child(3),.tbl.m1 td:nth-child(3){ width: 270px; min-width: 270px; }
+
+/* Fit 'M-1 direction' col in reconciliation table */.tbl.small th:nth-child(2),.tbl.small td:nth-child(2){
+ min-width: 160px;
+ white-space: nowrap;
+}:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family: var(--font);background:var(--bg);color:var(--ink);line-height:1.5}.container{max-width:1200px;margin:0 auto;padding:24px}.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}.subtitle{color:var(--muted);max-width:900px}.grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:16px}.nav{position:sticky;top:16px;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;height:max-content}.nav h3{margin:0 0 8px 0;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}.nav a{display:block;color:var(--ink);text-decoration:none;padding:8px;border-radius:8px}.nav a:hover{background:rgba(255,255,255,.06)}.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}.section h2{margin-top:0}.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}.code{font-family: inherit;background:rgba(255,255,255,.06);padding:10px;border-radius:8px;overflow:auto}.tip{border-left:4px solid var(--accent);padding:10px;background:rgba(106,166,255,.1);border-radius:8px}.warn{border-left:4px solid var(--warn);padding:10px;background:rgba(255,209,102,.08);border-radius:8px}.table{width:100%;border-collapse:collapse}.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);font-size:12px;color:var(--muted)}
+details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:12px;border-radius:12px}
+summary{cursor:pointer;font-weight:600}
+footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
+ </style>
+</head>
+<body>
+ <div class="container">
+ <div class="header">
+ <div>
+ <div class="title">C Corporations </div>
+ </div>
+ </div>
+
+ <div class="grid">
+ <main>
+
+
+<section id="objectives" class="section">
+ <h2>Learning Objectives</h2>
+ <ul>
+ <li>Calculate taxable income for a C corporation.</li>
+ <li>Calculate the current-year <strong>net operating loss (NOL)</strong> or <strong>capital loss</strong> of a C corporation and the <strong>limitations</strong> on use in the current year.</li>
+ <li>Calculate <strong>allowable credits</strong> that reduce a C corporation’s tax liability.</li>
+ <li>Define the general concept and rationale of <strong>nexus</strong> for state and local taxation.</li>
+ <li>Define the general concept and rationale of <strong>apportionment and allocation</strong> for multistate businesses.</li>
+ <li>Calculate <strong>state taxable income</strong> using applicable apportionment factors for a given scenario.</li>
+ </ul>
+ </section>
+
+
+ <section id="formation" class="section">
+ <h2>Formation (Sec. 351)</h2>
+ <p><strong>Rule:</strong> No gain/loss to transferors or the corporation if property is transferred to a corporation by one or more persons solely for stock and the transferors are in <strong>control</strong> (≥80% of voting power and non‑voting shares) immediately after the exchange. Services <em>don’t</em> count toward control and are taxable as compensation.</p>
+ <div class="kv">
+ <div>
+ <h3>Transferor consequences</h3>
+ <ul>
+ <li>Recognize <strong>gain</strong> to extent of <strong>boot</strong> received (cash, FMV property, liabilities assumed for <em>tax‑avoidance/no‑business‑purpose</em> can be boot).</li>
+ <li><strong>Liabilities</strong> assumed by the corporation generally are <em>not</em> boot, except: liabilities > basis (gain limited to excess) or tax‑avoidance/no‑business‑purpose liabilities.</li>
+ <li><strong>Stock basis</strong> = adjusted basis of property transferred + gain recognized − boot received.</li>
+ <li><strong>Holding period</strong> tacks on for capital/1231 assets; starts new for ordinary assets.</li>
+ </ul>
+ </div>
+ <div>
+ <h3>Corporate consequences</h3>
+ <ul>
+ <li>No gain/loss to the corporation on issuance of its stock.</li>
+ <li><strong>Corporate basis</strong> in property = transferor’s basis + gain recognized by transferor.</li>
+ <li><strong>E&amp;P</strong> is not affected by Sec. 351 nonrecognition; but boot paid can reduce E&amp;P.</li>
+ </ul>
+ </div>
+ </div>
+ <details>
+ <summary>Illustration — Boot and Liabilities</summary>
+ <div class="code">
+ A transfers property (AB $40, FMV $70) and liability $15 to NewCo for stock. No cash boot.<br>
+ Control ≥80% achieved with other property contributors.<br><br>
+ Transferor gain: liabilities are not boot unless > AB. Here, liability $15 ≤ AB $40 → no gain from liability.<br>
+ Stock basis = $40 (AB) + $0 gain − $0 boot = $40.<br>
+ Corporate basis = $40 + $0 recognized gain = $40.
+ </div>
+ </details>
+ <p class="warn"><strong>Watch‑out:</strong> If liabilities assumed exceed the aggregate basis of property transferred by a shareholder, the <em>excess</em> is taxable gain to that shareholder.</p>
+ </section>
+
+ <section id="operations" class="section">
+ <h2>Operations: Income, Deductions, Special Limits</h2>
+ <ul>
+ <li><strong>Rate:</strong> Flat 21% federal tax on taxable income.</li>
+ <li><strong>Start‑up</strong> and <strong>organizational</strong> costs: deduct up to $5,000 each (phase‑out begins at $50,000); remainder amortized over 180 months.</li>
+ <li><strong>Business interest</strong> (Sec. 163(j)): deduction limited to the sum of business interest income + 30% of adjusted taxable income (ATI) + floor plan financing interest. Disallowed interest carries forward indefinitely.</li>
+ <li><strong>Charitable contributions</strong> limit (see next section for order of operations).</li>
+ <li><strong>Capital gains</strong> taxed at ordinary corporate rate; <strong>capital losses</strong> deductible only against capital gains (carryback 3 years, carryforward 5 years, short‑term character).</li>
+ </ul>
+ <p class="tip"><strong>Exam Tip:</strong> For ATI in 163(j), post‑2021 rules use an EBIT‑like base (no add‑back for depreciation/amortization). Don’t mistakenly compute on EBITDA unless the fact pattern says otherwise.</p>
+ </section>
+
+ <section id="drd" class="section">
+ <h2>Dividends‑Received Deduction (DRD)</h2>
+ <table class="table">
+ <thead><tr><th>Ownership in distributing domestic corporation</th><th>DRD %</th></tr></thead>
+ <tbody>
+ <tr><td>&lt; 20%</td><td>50%</td></tr>
+ <tr><td>≥ 20% and &lt; 80%</td><td>65%</td></tr>
+ <tr><td>≥ 80% (affiliated)</td><td>100%</td></tr>
+ </tbody>
+ </table>
+ <ul>
+ <li><strong>Taxable income limit:</strong> DRD is limited to the applicable % of <em>taxable income</em> computed <em>before</em> DRD, NOLs, capital loss carrybacks, and (generally) before the §199A deduction (individuals only). If taking the full DRD creates or increases an NOL, the <strong>limit doesn’t apply</strong>.</li>
+ <li><strong>Only domestic</strong> dividends qualify; certain dividends (e.g., from REITs) are excluded.</li>
+ </ul>
+ <details>
+ <summary>Illustration — DRD with TI limitation</summary>
+ <div class="code">
+ Facts: TI before DRD and charitable contributions = $400. Dividend from 25%‑owned domestic corp = $100.<br>
+ Tentative DRD = 65% × $100 = $65.<br>
+ TI limit = 65% × $400 = $260 → not limiting. DRD = $65.
+ </div>
+ </details>
+ <p class="warn"><strong>Watch‑out:</strong> Apply the <em>charitable contributions</em> limit using TI <em>before</em> DRD. Then compute DRD using TI <em>after</em> the charitable deduction is set, per the tested sequence below.</p>
+ </section>
+
+ <section id="charity" class="section">
+ <h2>Charitable Contributions (C Corps)</h2>
+ <ul>
+ <li>General limit: <strong>10%</strong> of taxable income computed <em>before</em> the charitable deduction, DRD, NOL carrybacks, and capital loss carrybacks.</li>
+ <li>Excess contributions carry forward <strong>5 years</strong>.</li>
+ <li>Property gifts generally limited to the lesser of basis or FMV; certain appreciated inventory and scientific equipment have special rules (beyond scope unless provided).</li>
+ </ul>
+ <details>
+ <summary>Illustration — Order of operations (common REG workflow)</summary>
+ <div class="code">
+ 1) Compute TI before: charity, DRD, NOL/cap‑loss CBs, and special deductions.<br>
+ 2) Apply 10% limit → deduct allowed charity; carry forward excess.<br>
+ 3) Compute DRD using TI after step 2 (unless NOL exception).<br>
+ 4) Apply 163(j) interest limit and other items per facts.<br>
+ 5) Compute tax at 21%.
+ </div>
+ </details>
+ </section>
+
+ <section id="nols" class="section">
+ <h2>Capital Gains/Losses & NOLs</h2>
+ <ul>
+ <li><strong>Capital losses</strong> only offset capital gains; carryback 3, carryforward 5 (short‑term).</li>
+ <li><strong>NOLs:</strong> Post‑2017 NOLs carry forward indefinitely but are limited to <strong>80%</strong> of taxable income (computed without the NOL deduction) in the carryforward year. Pre‑2018 rules differed (2‑year back/20‑year forward; no 80% cap).</li>
+ </ul>
+ <p class="tip"><strong>Exam Tip:</strong> Identify the <em>year</em> the NOL originated. If post‑2017 (and not covered by temporary law changes), expect the 80% limitation and no carryback.</p>
+ </section>
+
+ <section id="distributions" class="section">
+ <h2>E&amp;P & Shareholder Distributions</h2>
+ <ul>
+ <li><strong>Ordering:</strong> Distributions are dividends to the extent of <strong>current E&amp;P</strong> (pro‑rated during the year) and then <strong>accumulated E&amp;P</strong>. Any excess reduces shareholder <strong>stock basis</strong>; amounts beyond basis are <strong>capital gain</strong>.</li>
+ <li><strong>Property distributions:</strong> Corporation recognizes gain (FMV − AB) as if sold; no loss recognized. Liabilities assumed by shareholder reduce the amount distributed but not below zero.</li>
+ <li><strong>E&amp;P effects:</strong> E&amp;P increases by recognized gains and decreases by FMV of property distributed (reduced by liabilities assumed).</li>
+ </ul>
+ <details>
+ <summary>Illustration — Classifying a distribution</summary>
+ <div class="code">
+ Current E&amp;P: 60; Accumulated E&amp;P: 20 (positive). Distribution to A: $100 cash.<br>
+ Dividend portion = up to total E&amp;P (60 + 20) = 80 → $80 dividend.<br>
+ Remaining $20 reduces stock basis; any amount beyond basis is capital gain.
+ </div>
+ </details>
+ </section>
+
+ <section id="redemptions" class="section">
+ <h2>Stock Redemptions</h2>
+ <p>A redemption is a corporation acquiring its stock from a shareholder in exchange for property. Default treatment is a <strong>dividend</strong> under Sec. 301 unless one of the <strong>sale/exchange</strong> tests under Sec. 302 is met.</p>
+ <ul>
+ <li><strong>Sale/exchange</strong> treatment if any of the following:</li>
+ <ul>
+ <li><strong>Substantially disproportionate:</strong> After redemption, voting power &lt; 50% and the shareholder’s percentage ownership of voting/common stock is sufficiently reduced (both the 80% of prior interest and &lt;50% tests).</li>
+ <li><strong>Complete termination</strong> of shareholder’s interest (including waiver of family attribution, if conditions met).</li>
+ <li><strong>Not essentially equivalent to a dividend</strong> (facts &amp; circumstances; usually meaningful reduction).</li>
+ <li>Certain <strong>partial liquidations</strong> (for non‑corporate shareholders).</li>
+ </ul>
+ <li><strong>Attribution</strong> rules (Sec. 318) can cause constructive ownership from family, partnerships, estates, trusts, and corporations.</li>
+ </ul>
+ <details>
+ <summary>Illustration — Substantially disproportionate</summary>
+ <div class="code">
+ Before: A owns 60 of 100 voting shares (60%). After redemption: A owns 30 of 70 (≈42.9%).<br>
+ Tests: After &lt; 50%? Yes (42.9%). Is % after &lt; 80% of before? 42.9% &lt; 48% → Yes.<br>
+ ⇒ Sale/exchange treatment: A recognizes capital gain/loss; basis in redeemed shares is recovered.
+ </div>
+ </details>
+ </section>
+
+ <section id="liquidations" class="section">
+ <h2>Corporate Liquidations</h2>
+ <ul>
+ <li><strong>General rule (Sec. 331/336):</strong> Shareholders treat liquidating distributions as sale/exchange → capital gain/loss; corporation recognizes gain/loss as if assets sold at FMV (losses limited for related‑party/step‑transaction scenarios).</li>
+ <li><strong>Parent‑subsidiary exception (Sec. 332/337):</strong> If parent owns ≥80% of vote and value of subsidiary, neither recognizes gain/loss on liquidating distribution; parent takes subsidiary’s basis in assets (carryover basis) and assumes tax attributes.</li>
+ </ul>
+ <details>
+ <summary>Illustration — 332 liquidation</summary>
+ <div class="code">
+ ParentCo owns 100% of SubCo. SubCo liquidates, distributing assets (AB $500, FMV $650).<br>
+ No gain/loss to ParentCo or SubCo under Secs. 332/337. ParentCo takes carryover basis in assets.
+ </div>
+ </details>
+ </section>
+
+ <section id="wrap" class="section">
+ <h2>Quick Reference (common limits & sequences)</h2>
+ <div class="kv">
+ <div>
+ <h3>Limits & key numbers</h3>
+ <ul>
+ <li>Corporate rate: <strong>21%</strong></li>
+ <li>Charitable contributions: <strong>10%</strong> of TI (5‑year CF)</li>
+ <li>DRD: <strong>50% / 65% / 100%</strong> at &lt;20% / 20–&lt;80% / ≥80%</li>
+ <li>163(j): Generally <strong>30% of ATI</strong>; excess CF indefinitely</li>
+ <li>Start‑up & organizational: up to <strong>$5,000</strong> each (phase‑out at $50k); rest amortize 180 mos</li>
+ <li>Capital loss: offset capital gains only; <strong>CB 3 / CF 5</strong> (short‑term)</li>
+ <li>NOLs (post‑2017): <strong>no CB</strong>, CF indefinitely; <strong>80%</strong> TI cap</li>
+ </ul>
+ </div>
+ <div>
+ <h3>Workflow order (typical exam)</h3>
+ <ol>
+ <li>Compute TI before charity, DRD, NOL/CL CBs, special deductions.</li>
+ <li>Apply <strong>charitable</strong> 10% cap → determine deduction and CF.</li>
+ <li>Compute <strong>DRD</strong> (apply TI limit unless NOL created/increased).</li>
+ <li>Apply <strong>163(j)</strong> and other limitations.</li>
+ <li>Tax at <strong>21%</strong>.</li>
+ </ol>
+ </div>
+ </div>
+ <p class="tip"><strong>Tricky areas to memorize:</strong> DRD percentages and TI limit, attribution rules in redemptions, “liabilities &gt; basis” in Sec. 351, and ordering of deductions.</p>
+ </section>
+
+ <section id="practice" class="section">
+ <h2>Practice Questions</h2>
+
+ <details>
+ <summary><strong>1.</strong> Sec. 351 formation — services and control</summary>
+ <p>Three individuals form Hawk Corp. A contributes equipment (AB $50, FMV $80). B contributes cash $20. C performs services worth $10 for stock. Immediately after, ownership: A 72%, B 18%, C 10%. What is A’s recognized gain?</p>
+ <ol type="A">
+ <li>$0</li>
+ <li>$10</li>
+ <li>$30</li>
+ <li>$20</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: A.</strong> Control test (≥80%) must be met by <em>property</em> transferors. C provided services, which do not count toward control. A (72%) + B (18%) = 90% ⇒ control achieved. No boot → A recognizes <strong>$0</strong>.</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>2.</strong> Liabilities exceed basis</summary>
+ <p>J transfers property (AB $30, FMV $60) and a liability of $40 to NewCo for stock in a qualifying Sec. 351 exchange. What gain does J recognize?</p>
+ <ol type="A">
+ <li>$0</li>
+ <li>$10</li>
+ <li>$30</li>
+ <li>$40</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: B.</strong> Gain is recognized to the extent liabilities assumed exceed the aggregate basis of property transferred: $40 − $30 = <strong>$10</strong>.</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>3.</strong> DRD percentage</summary>
+ <p>Omega (C corp) owns 15% of Zeta (domestic C corp) and receives a $100 dividend. Which DRD applies (ignoring limits)?</p>
+ <ol type="A">
+ <li>50%</li>
+ <li>65%</li>
+ <li>70%</li>
+ <li>100%</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: A.</strong> &lt;20% ownership → <strong>50%</strong> DRD.</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>4.</strong> Charitable contribution limit</summary>
+ <p>TI before charity and DRD is $300. Charitable gifts total $50. Dividend from 25%‑owned domestic corp is $40. What is the allowable charitable deduction for the year?</p>
+ <ol type="A">
+ <li>$30</li>
+ <li>$40</li>
+ <li>$50</li>
+ <li>$35</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: A.</strong> Charity limit is 10% of TI <em>before</em> DRD ⇒ 10% × $300 = <strong>$30</strong>. Excess $20 CF 5 years.</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>5.</strong> DRD with TI limit</summary>
+ <p>Using the facts in Q4, after deducting allowed charity, what is the DRD?</p>
+ <ol type="A">
+ <li>$20</li>
+ <li>$26</li>
+ <li>$39</li>
+ <li>$13</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: B.</strong> TI after charity = $300 − $30 = $270. DRD % for 25% ownership is 65%. Tentative DRD = 65% × $40 = $26. TI limit = 65% × $270 = $175.5 → not limiting. DRD = <strong>$26</strong>.</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>6.</strong> Capital losses</summary>
+ <p>In Year 1, Corp has $20 capital loss and $0 capital gains. How much reduces ordinary income?</p>
+ <ol type="A">
+ <li>$0</li>
+ <li>$20</li>
+ <li>$10</li>
+ <li>$5</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: A.</strong> Corporate capital losses offset only capital gains; no offset to ordinary income. Unused: CB 3, CF 5 (short‑term).</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>7.</strong> Distribution classification</summary>
+ <p>Current E&amp;P $30; Accumulated E&amp;P $10; distribution $50 to a shareholder with $12 basis. Dividend amount?</p>
+ <ol type="A">
+ <li>$30</li>
+ <li>$40</li>
+ <li>$42</li>
+ <li>$50</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: B.</strong> Dividend to extent of total E&amp;P (30 + 10 = <strong>40</strong>). Excess $10 reduces basis (to $2); any further excess would be capital gain.</p>
+ </details>
+ </details>
+
+ <details>
+ <summary><strong>8.</strong> Redemption result</summary>
+ <p>Before redemption, T owns 55 of 100 voting shares (55%). After redemption of 15 of T’s shares, there are 85 shares outstanding; T owns 40/85 (≈47.1%). How is T’s redemption treated?</p>
+ <ol type="A">
+ <li>Dividend</li>
+ <li>Sale/exchange (substantially disproportionate)</li>
+ <li>Sale/exchange (complete termination)</li>
+ <li>Return of capital</li>
+ </ol>
+ <details><summary>Answer &amp; Rationale</summary>
+ <p><strong>Answer: B.</strong> After &lt;50% and post‑redemption % (47.1%) &lt; 80% of pre‑redemption % (44% threshold) ⇒ substantially disproportionate → <strong>sale/exchange</strong>.</p>
+ </details>
+ </details>
+ </section>
+
+ </main>
+ </div>
+ </div>
+</body>
+</html>

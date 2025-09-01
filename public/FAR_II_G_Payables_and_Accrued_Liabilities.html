@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.G: Payables & Accrued Liabilities</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --gold:#f5c542;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .spacer{height:16px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  /* Journal entries */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 280px 120px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Payables & Accrued Liabilities</h1>
+
+  <section class="card">
+    <h3>Learning Objectives</h3>
+    <ul>
+      <li>Recall the recognition and measurement requirements for <strong>asset retirement obligations</strong> (ARO).</li>
+      <li>Calculate the <strong>carrying amount</strong> of payables (e.g., accounts payable, dividends payable) and <strong>accrued liabilities</strong> (e.g., accrued wages, accrued vacation, accrued bonuses, self‑insurance liabilities) and prepare journal entries.</li>
+      <li>Identify and calculate liabilities arising from <strong>exit or disposal activities</strong> (e.g., one‑time termination benefits, severance arrangements) and determine the <strong>timing of recognition</strong> in the financial statements.</li>
+      <li>Reconcile and investigate differences between the <strong>subledger</strong> and <strong>general ledger</strong> for accounts payable and accrued liabilities to determine whether an adjustment is necessary.</li>
+    </ul>
+  </section>
+
+  <div class="spacer"></div>
+
+  <section class="card">
+    <h3>At a Glance</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:26%"><col style="width:48%"><col style="width:26%"></colgroup>
+      <tr><th>Topic</th><th>Core points</th><th>Exam flags</th></tr>
+      <tr><td>Accounts payable</td><td>Record at invoiced or agreed price; include freight‑in if inventory is recorded net of freight.</td><td>Presentation by due date; confirm large vendors.</td></tr>
+      <tr><td>Cash discounts</td><td>Gross method: record at full amount; discount taken reduces purchases. Net method: record net of discount; missed discount is <em>purchase discounts lost</em> (expense).</td><td>Watch the entry at payment date.</td></tr>
+      <tr><td>Accrued liabilities</td><td>Recognize when incurred but unpaid (matching). Typical: wages, interest, utilities, taxes, bonuses.</td><td>Verify cutoff at period end.</td></tr>
+      <tr><td>Unearned revenue</td><td>Cash received before earning → liability; recognize revenue when earned.</td><td>Classify current vs. noncurrent.</td></tr>
+    </table>
+  </section>
+
+  <div class="spacer"></div>
+
+  <section class="card">
+    <h3>Key Definitions</h3>
+    <ul class="small">
+      <li><strong>Accounts payable:</strong> Obligations to suppliers for goods or services received; usually non‑interest‑bearing and due within a short period.</li>
+      <li><strong>Accrued liability:</strong> Expense recognized before payment (e.g., wages payable, interest payable, taxes payable).</li>
+      <li><strong>Asset retirement obligation (ARO):</strong> A legal obligation to retire a long‑lived tangible asset; initially measured at the <em>present value</em> of expected retirement cash flows using a credit‑adjusted risk‑free rate.</li>
+      <li><strong>Exit or disposal activity liability:</strong> A present obligation for costs to terminate employees or exit activities when criteria are met (detailed plan and communication that creates a valid expectation).</li>
+      <li><strong>Purchase discounts lost:</strong> For the net method, the amount of discount missed; reported as an expense.</li>
+      <li><strong>Unearned revenue:</strong> A liability created by receiving consideration before earning it.</li>
+    </ul>
+  </section>
+
+  <h2>1) Accounts Payable with Cash Discounts</h2>
+  <section class="card">
+    <h3>Example 1 — Terms 2/10, n/30 (Inventory purchaser’s entries)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:20%"><col style="width:20%"></colgroup>
+      <tr><th>Event</th><th>Gross method entry</th><th>Net method entry</th></tr>
+      <tr>
+        <td>Purchase inventory on credit, invoice price $10,000</td>
+        <td>
+          <ul class="je">
+            <li><span class="label">Dr</span><span class="acct">Inventory</span><span class="amt">$10,000</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Accounts payable</span><span class="amt">($10,000)</span></li>
+          </ul>
+        </td>
+        <td>
+          <ul class="je">
+            <li><span class="label">Dr</span><span class="acct">Inventory</span><span class="amt">$9,800</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Accounts payable</span><span class="amt">($9,800)</span></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Pay within discount period</td>
+        <td>
+          <ul class="je">
+            <li><span class="label">Dr</span><span class="acct">Accounts payable</span><span class="amt">$10,000</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($9,800)</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Purchase discounts</span><span class="amt">($200)</span></li>
+          </ul>
+        </td>
+        <td>
+          <ul class="je">
+            <li><span class="label">Dr</span><span class="acct">Accounts payable</span><span class="amt">$9,800</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($9,800)</span></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Pay after discount period</td>
+        <td>
+          <ul class="je">
+            <li><span class="label">Dr</span><span class="acct">Accounts payable</span><span class="amt">$10,000</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($10,000)</span></li>
+          </ul>
+        </td>
+        <td>
+          <ul class="je">
+            <li><span class="label">Dr</span><span class="acct">Accounts payable</span><span class="amt">$9,800</span></li>
+            <li><span class="label">Dr</span><span class="acct">Purchase discounts lost (expense)</span><span class="amt">$200</span></li>
+            <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($10,000)</span></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <h2>2) Accrued Interest Payable</h2>
+  <section class="card">
+    <h3>Example 2 — Year‑end accrual</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:52%"><col style="width:18%"><col style="width:30%"></colgroup>
+      <tr><th>Facts</th><th class="num">Amount</th><th>Computation</th></tr>
+      <tr>
+        <td>Note payable, face</td><td class="num">$100,000</td>
+        <td rowspan="2">Interest for 3 months (Oct–Dec) = $100,000 × 6% × 3/12 = <strong>$1,500</strong>.</td>
+      </tr>
+      <tr><td>Stated rate</td><td class="num">6% annually</td></tr>
+    </table>
+    <h4>Entry at 12/31</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Interest expense</span><span class="amt">$1,500</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Interest payable</span><span class="amt">($1,500)</span></li>
+    </ul>
+  </section>
+
+  <h2>3) Payroll Accrual & Withholdings</h2>
+  <section class="card">
+    <h3>Example 3 — One payroll cycle</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:45%"><col style="width:20%"><col style="width:35%"></colgroup>
+      <tr><th>Item</th><th class="num">Amount</th><th>Notes</th></tr>
+      <tr><td>Gross salaries</td><td class="num">$50,000</td><td></td></tr>
+      <tr><td>Employee income tax withheld</td><td class="num">$9,000</td><td>Liability to government</td></tr>
+      <tr><td>Employee FICA (7.65%)</td><td class="num">$3,825</td><td>Also a liability</td></tr>
+      <tr><td>Employer payroll taxes (match FICA)</td><td class="num">$3,825</td><td>Expense of the employer</td></tr>
+    </table>
+    <h4>At payday</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Salaries expense</span><span class="amt">$50,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Federal &amp; state income tax payable</span><span class="amt">($9,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">FICA taxes payable (employee)</span><span class="amt">($3,825)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($37,175)</span></li>
+    </ul>
+    <h4>Record employer payroll tax</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Payroll tax expense</span><span class="amt">$3,825</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">FICA taxes payable (employer)</span><span class="amt">($3,825)</span></li>
+    </ul>
+  </section>
+
+  <h2>4) Sales Tax Payable</h2>
+  <section class="card">
+    <h3>Example 4 — 5% sales tax, sales price $20,000</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:55%"><col style="width:45%"></colgroup>
+      <tr><th>Computation</th><th>Result</th></tr>
+      <tr><td>Sales tax = $20,000 × 5%</td><td class="num">$1,000</td></tr>
+      <tr><td>Total cash collected</td><td class="num">$21,000</td></tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$21,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Sales revenue</span><span class="amt">($20,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Sales tax payable</span><span class="amt">($1,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>5) Customer Advances / Unearned Revenue</h2>
+  <section class="card">
+    <h3>Example 5 — Deposit and earn later</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:65%"><col style="width:35%"></colgroup>
+      <tr><th>Event</th><th class="num">Amount</th></tr>
+      <tr><td>Receive customer deposit</td><td class="num">$12,000</td></tr>
+      <tr><td>Revenue recognized when goods delivered</td><td class="num">$12,000</td></tr>
+    </table>
+    <h4>Entries</h4>
+    <div class="small"><em>On receipt of customer deposit</em></div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$12,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Unearned revenue</span><span class="amt">($12,000)</span></li>
+    </ul>
+    <div class="small"><em>When performance obligation is satisfied (goods delivered / services performed)</em></div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Unearned revenue</span><span class="amt">$12,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Revenue</span><span class="amt">($12,000)</span></li>
+    </ul>
+    </section>
+
+  <h2>6) Bonus Accrual</h2>
+  <section class="card">
+    <h3>Example 6 — 10% of income <em>after</em> bonus but before tax</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:58%"><col style="width:42%"></colgroup>
+      <tr><th>Given</th><th>Computation</th></tr>
+      <tr>
+        <td>Pre‑bonus income before tax: $500,000</td>
+        <td>Bonus B = 10% × ( $500,000 − B ) ⇒ 1.10B = $50,000 ⇒ B = <strong>$45,455</strong>.</td>
+      </tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Bonus expense</span><span class="amt">$45,455</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Bonus payable</span><span class="amt">($45,455)</span></li>
+    </ul>
+  </section>
+
+  <h2>7) Compensated Absences (Vacation)</h2>
+  <section class="card">
+    <h3>Example 7 — Accrue vested vacation</h3>
+    <p class="small">If vacation benefits are attributable to services already rendered and are probable and reasonably estimable, accrue the obligation.</p>
+    <table class="tbl small">
+      <colgroup><col style="width:58%"><col style="width:42%"></colgroup>
+      <tr><th>Given</th><th class="num">Amount</th></tr>
+      <tr><td>Unpaid vacation hours at year‑end (vested)</td><td class="num">800</td></tr>
+      <tr><td>Average hourly wage (including payroll taxes)</td><td class="num">$30</td></tr>
+      <tr><td><strong>Accrual required</strong> = 800 × $30</td><td class="num"><strong>$24,000</strong></td></tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Salaries expense</span><span class="amt">$24,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Accrued vacation payable</span><span class="amt">($24,000)</span></li>
+    </ul>
+  </section>
+
+  
+  <h2>8) Asset Retirement Obligations (ARO)</h2>
+  <section class="card">
+    <h3>Example 8 — Present value at recognition and accretion</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:55%"><col style="width:45%"></colgroup>
+      <tr><th>Given</th><th>Computation</th></tr>
+      <tr>
+        <td>Expected cash outflow in 5 years to retire asset</td>
+        <td class="num">$120,000</td>
+      </tr>
+      <tr>
+        <td>Credit‑adjusted risk‑free rate (annual)</td>
+        <td class="num">6%</td>
+      </tr>
+      <tr>
+        <td>Present value factor for $1 in 5 years at 6%</td>
+        <td class="num">0.74726</td>
+      </tr>
+      <tr>
+        <td><strong>Initial ARO and ARO asset</strong> = $120,000 × 0.74726</td>
+        <td class="num"><strong>$89,671</strong></td>
+      </tr>
+    </table>
+    <h4>Recognition on initial measurement</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Asset — site restoration cost</span><span class="amt">$89,671</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Asset retirement obligation</span><span class="amt">($89,671)</span></li>
+    </ul>
+    <h4>Year 1 accretion (unwinding of discount)</h4>
+    <table class="tbl small">
+      <tr><td>Accretion expense = $89,671 × 6%</td><td class="num">$5,380</td></tr>
+      <tr><td>ARO carrying amount at end of Year 1</td><td class="num">$95,051</td></tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Accretion expense</span><span class="amt">$5,380</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Asset retirement obligation</span><span class="amt">($5,380)</span></li>
+    </ul>
+    <div class="small">Depreciate the related asset over its useful life; at settlement, record any difference between the actual cash paid and the ARO carrying amount as a gain or loss.</div>
+  </section>
+
+  <h2>9) Exit or Disposal Activities</h2>
+  <section class="card">
+    <h3>Example 9 — One‑time termination benefits (recognition timing)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Amount / Timing</th></tr>
+      <tr>
+        <td>Entity commits to a detailed plan on 12/15 and communicates benefits to 10 employees the same day. Each will receive $8,000, paid next year.</td>
+        <td class="num">Recognize liability on 12/15: $80,000</td>
+      </tr>
+    </table>
+    <h4>Entry at communication date (criteria met)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Restructuring expense — termination benefits</span><span class="amt">$80,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Liability for termination benefits</span><span class="amt">($80,000)</span></li>
+    </ul>
+    <div class="small">If a plan is not yet communicated or can be withdrawn, do not recognize a liability.</div>
+  </section>
+
+  <h2>10) Subledger vs. General Ledger Reconciliation</h2>
+  <section class="card">
+    <h3>Example 10 — Accounts payable control vs. vendor subledger</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:58%"><col style="width:42%"></colgroup>
+      <tr><th>Situation</th><th>Amounts</th></tr>
+      <tr><td>Vendor subledger total at 12/31</td><td class="num">$502,700</td></tr>
+      <tr><td>General ledger control account at 12/31</td><td class="num">$498,700</td></tr>
+      <tr><td>Difference identified</td><td class="num">$4,000</td></tr>
+    </table>
+    <p class="small">Investigation reveals a vendor invoice for $4,000 was posted to the subledger but not recorded in the general ledger before close.</p>
+    <h4>Adjusting entry</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Purchases (or appropriate expense / inventory)</span><span class="amt">$4,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Accounts payable — control</span><span class="amt">($4,000)</span></li>
+    </ul>
+    <div class="small">Reconcile totals each period: start with the general ledger control, add/subtract known timing items (goods received not invoiced, manual accruals, duplicate postings), and agree to the vendor subledger aging.</div>
+  </section>
+<h2>Quick Recap</h2>
+  <section class="card small">
+    <table class="tbl small">
+      <colgroup><col style="width:40%"><col style="width:60%"></colgroup>
+      <tr><th>Rule</th><th>How to use it fast</th></tr>
+      <tr>
+        <td>Gross vs. net (payables)</td>
+        <td>Gross: book full AP; discount reduces purchases at payment. Net: book AP net of discount; missed discount → purchase discounts lost (expense).</td>
+      </tr>
+      <tr>
+        <td>Accrued interest</td>
+        <td>Face × annual rate × time fraction (e.g., months/12); credit Interest payable.</td>
+      </tr>
+      <tr>
+        <td>Sales tax</td>
+        <td>Cash received = sales + tax. Credit Sales tax payable for the tax portion.</td>
+      </tr>
+      <tr>
+        <td>Unearned revenue</td>
+        <td>Cash first ➜ liability; recognize revenue when the performance obligation is satisfied.</td>
+      </tr>
+      <tr>
+        <td>Bonus after‑bonus formula</td>
+        <td>If bonus % applies to income after bonus: B = rate × (pre‑bonus income − B) ⇒ B = (rate × pre‑bonus) / (1 + rate).</td>
+      </tr>
+      <tr>
+        <td>Vacation accrual</td>
+        <td>Accrue vested/accumulated hours × pay rate (plus employer taxes if applicable).</td>
+      </tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Reporting on Audit Engagements (Area IV.A, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area IV.A — Reporting on audit engagements, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Reporting on Audit Engagements</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Describe the <strong>structure and content</strong> of the independent auditor’s report for an <strong>unmodified opinion</strong>.</li>
+          <li>Determine when to issue a <strong>modified opinion</strong> (qualified, adverse, or disclaimer) and how to structure the report.</li>
+          <li>Apply <strong>emphasis‑of‑matter</strong> and <strong>other‑matter</strong> paragraphs appropriately.</li>
+          <li>Address special reporting areas: <strong>going concern</strong>, <strong>key audit matters (KAMs)</strong> when applicable, <strong>group audits</strong>, <strong>comparatives</strong>, and <strong>other information</strong>.</li>
+          <li>Understand reporting on <strong>supplementary information (SI)</strong> and <strong>required supplementary information (RSI)</strong>.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Sitch</th><th>Opinion</th><th>Required extra sections</th><th>Notes</th></tr>
+          <tr><td>FS free of material misstatement</td><td><strong>Unmodified</strong></td><td>None (may include emphasis‑of‑matter)</td><td>Standard report format</td></tr>
+          <tr><td>Material misstatement — not pervasive</td><td><strong>Qualified</strong> (“except for”)</td><td>Basis for Qualified Opinion</td><td>Describe and quantify effects if practicable</td></tr>
+          <tr><td>Material misstatement — pervasive</td><td><strong>Adverse</strong></td><td>Basis for Adverse Opinion</td><td>Explain pervasive departures</td></tr>
+          <tr><td>Scope limitation — material but not pervasive</td><td><strong>Qualified</strong></td><td>Basis for Qualified Opinion</td><td>Describe limitation; consider alternative procedures</td></tr>
+          <tr><td>Scope limitation — pervasive</td><td><strong>Disclaimer</strong></td><td>Basis for Disclaimer; modified Responsibilities and Opinion sections</td><td>Remove “audit was conducted” assurance wording</td></tr>
+          <tr><td>Substantial doubt (adequately disclosed)</td><td><strong>Unmodified</strong></td><td>Emphasis‑of‑matter (Going Concern)</td><td>Refer to the relevant note</td></tr>
+          <tr><td>Substantial doubt (inadequate disclosure)</td><td><strong>Qualified or Adverse</strong></td><td>Basis for Modified Opinion</td><td>Depends on pervasiveness</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Anatomy of the Unmodified Report</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Title:</strong> “Independent Auditor’s Report”.</li>
+        <li><strong>Addressee:</strong> Usually those charged with governance (board/audit committee).</li>
+        <li><strong>Opinion section (first):</strong> Identify the statements and periods; state the opinion.</li>
+        <li><strong>Basis for Opinion:</strong> Refer to auditing standards followed, independence, and ethics; describe responsibilities (reasonable assurance, risk‑based approach).</li>
+        <li><strong>Key Audit Matters (KAMs):</strong> Include only if engaged or required by law/regulation; describe matters and how they were addressed.</li>
+        <li><strong>Responsibilities of Management</strong> for the financial statements, including internal control.</li>
+        <li><strong>Auditor’s Responsibilities</strong> (overview of procedures, materiality, professional judgment and skepticism).</li>
+        <li><strong>Other Information</strong> (if applicable): describe reading other information and responding to material inconsistencies.</li>
+        <li><strong>Report on Supplementary Information</strong> or <strong>Required Supplementary Information (RSI)</strong> if engaged/required (see sections 5 & 6).</li>
+        <li><strong>Signature, city/state, and report date.</strong></li>
+      </ul>
+      <details><summary>Skeleton opening for an unmodified opinion</summary>
+        <p><em>Opinion</em> — “We have audited the accompanying financial statements of XYZ Company… In our opinion, the financial statements present fairly, in all material respects…”</p>
+        <p><em>Basis for Opinion</em> — “We conducted our audit in accordance with auditing standards generally accepted in the United States of America (GAAS). We are independent… We believe that the audit evidence we have obtained is sufficient and appropriate…”</p>
+      </details>
+    </div>
+
+    <h2>2) Modified Opinions — Decision Path</h2>
+    <div class="card">
+      <ol>
+        <li>Identify cause: <strong>material misstatement</strong> vs <strong>inability to obtain sufficient appropriate evidence</strong> (scope limitation).</li>
+        <li>Assess <strong>pervasiveness</strong> (widespread, fundamental to users’ understanding).</li>
+        <li>Choose opinion:
+          <ul>
+            <li><strong>Qualified</strong> for material but not pervasive issues.</li>
+            <li><strong>Adverse</strong> for material and pervasive misstatements.</li>
+            <li><strong>Disclaimer</strong> for material and pervasive scope limitations; also when the auditor is not independent.</li>
+          </ul>
+        </li>
+        <li>Insert a <strong>Basis for [Modified] Opinion</strong> paragraph before the Opinion section; clearly describe the matter and effects (if determinable).</li>
+      </ol>
+      <div class="callout danger"><strong>Watch out:</strong> In a disclaimer, the opening section is titled <em>Disclaimer of Opinion</em> and language must avoid positive assurance.</div>
+    </div>
+
+    <h2>3) Emphasis‑of‑Matter & Other‑Matter Paragraphs</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Emphasis‑of‑Matter</h3>
+        <ul>
+          <li>Draws attention to a matter appropriately presented or disclosed that is fundamental to users’ understanding (e.g., going concern, significant subsequent event, major catastrophe, change in accounting principle with material effect).</li>
+          <li>Placed immediately after the Basis for Opinion (or after the Opinion in some formats) and references the relevant note.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Other‑Matter</h3>
+        <ul>
+          <li>Refers to matters <em>not</em> presented or disclosed in the financial statements but relevant to users’ understanding of the audit, the auditor’s responsibilities, or the report (e.g., restriction on use, prior‑period audit reports, comparative information).</li>
+          <li>Location varies; commonly after the Emphasis‑of‑Matter or other core sections.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>4) Special Reporting Areas</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Going Concern</h3>
+        <ul>
+          <li>If substantial doubt is <strong>adequately disclosed</strong> → unmodified opinion with an Emphasis‑of‑Matter (Going Concern).</li>
+          <li>If disclosure is <strong>inadequate</strong> → qualified or adverse opinion depending on pervasiveness.</li>
+          <li>Describe that conditions indicate substantial doubt and refer to the note; avoid wording that guarantees future outcomes.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Key Audit Matters (KAMs)</h3>
+        <ul>
+          <li>Communicating KAMs is required only when engaged or by law/regulation; otherwise optional for nonissuers.</li>
+          <li>For each KAM, describe the matter, why it was of most significance, and how it was addressed (procedures, outcomes at a high level).</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Group Audits</h3>
+        <ul>
+          <li>Decide whether to <strong>assume responsibility</strong> for component auditors or to <strong>make reference</strong> to them (when allowed by the reporting framework/law).</li>
+          <li>If making reference, modify the auditor’s responsibility section and opinion to indicate the component auditor’s report.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Comparatives</h3>
+        <ul>
+          <li><strong>Corresponding figures:</strong> prior period presented for comparison but not re‑issued; evaluate consistency, and update your opinion if prior opinion changes.</li>
+          <li><strong>Comparative financial statements:</strong> express an opinion on each period; reissue or update prior‑period opinion as needed.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Other Information</h3>
+        <ul>
+          <li>Read other information in the annual report; if a material inconsistency is identified, discuss with management and request correction.</li>
+          <li>If uncorrected and affects the auditor’s report, consider describing the matter in an Other‑Matter paragraph.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>5) Supplementary Information (SI) & Required Supplementary Information (RSI)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Supplementary Information (SI):</strong> When engaged to report, perform procedures to evaluate presentation and reconcile to the audited financial statements; include a separate <em>Report on Supplementary Information</em> section.</li>
+        <li><strong>Required Supplementary Information (RSI):</strong> Limited procedures only (inquire and compare for consistency); include an <em>Other‑Matter</em> paragraph if RSI is omitted, materially misstated, or the auditor is unable to complete required procedures.</li>
+      </ul>
+    </div>
+
+    <h2>6) Report Dating & Distribution</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Report date:</strong> No earlier than the date sufficient appropriate evidence has been obtained, including completion of subsequent‑events procedures and receipt of written representations.</li>
+        <li><strong>Dual‑dating</strong> is used to limit responsibility to a subsequent event addressed in a specific note; otherwise change the report date.</li>
+        <li><strong>Restriction on use:</strong> When required, include an Other‑Matter paragraph specifying intended users.</li>
+      </ul>
+    </div>
+
+    <h2>7) Documentation & Exam‑style Reminders</h2>
+    <div class="card">
+      <ul>
+        <li>Rationale for opinion type, pervasiveness assessment, and exact wording of Basis/Emphasis/Other‑Matter paragraphs.</li>
+        <li>Evidence supporting going‑concern conclusions and any KAM selections.</li>
+        <li>How SI/RSI ties to audited balances and the limited procedures performed on RSI.</li>
+      </ul>
+      <div class="callout check"><strong>Memory hook:</strong> <em>Cause → Pervasiveness → Opinion → Placement</em> (C‑P‑O‑P) for modification decisions.</div>
+    </div>
+
+    <h2>8) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Material misstatement, not pervasive — opinion? <strong>Qualified (“except for”).</strong></li>
+        <li>Scope limitation, pervasive — opinion? <strong>Disclaimer of opinion.</strong></li>
+        <li>Substantial doubt, disclosed — change in opinion? <strong>No; add an Emphasis‑of‑Matter (Going Concern).</strong></li>
+        <li>When can you reference a component auditor? <strong>When permitted by the framework/law and the reference is clearly described.</strong></li>
+        <li>RSI problem (omitted/misleading) — where reported? <strong>Other‑Matter paragraph.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

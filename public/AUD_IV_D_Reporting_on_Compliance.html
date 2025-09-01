@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Reporting on Compliance (Area IV.D, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area IV.D — Reporting on compliance, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Reporting on Compliance</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify the main <strong>frameworks</strong> for compliance reporting: <strong>Government Auditing Standards</strong> (GAGAS, often called the “Yellow Book”), <strong>Uniform Guidance</strong> for federal awards (2&nbsp;CFR&nbsp;200, “Single Audit”), and <strong>compliance audits</strong> under AICPA auditing standards (AU‑C 935).</li>
+          <li>Describe the required <strong>reports</strong> and <strong>opinions</strong> for each framework and when to use <strong>restricted‑use</strong> language.</li>
+          <li>Apply <strong>modification</strong> decisions (qualified, adverse, disclaimer) for compliance opinions and <strong>communication</strong> requirements for internal control over compliance.</li>
+          <li>Document compliance findings, questioned costs, and follow‑up, and understand how they affect the auditor’s report.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Context</th><th>Primary report(s)</th><th>Assurance</th><th>Internal control reporting</th><th>Use</th></tr>
+          <tr><td><strong>Government Auditing Standards (GAGAS)</strong> with a financial statement audit</td><td>Report on internal control over financial reporting and on compliance and other matters</td><td>No separate opinion on compliance (describe findings)</td><td>Describe significant deficiencies/material weaknesses and noncompliance</td><td>Generally general‑use unless restricted by law/regulation</td></tr>
+          <tr><td><strong>Uniform Guidance</strong> (Single Audit)</td><td>Report on compliance for each <em>major program</em>; Report on internal control over compliance; Report on Schedule of Expenditures of Federal Awards (SEFA)</td><td>Opinion on compliance for each major program</td><td>Describe significant deficiencies/material weaknesses and report material noncompliance; include questioned costs</td><td>Generally public; follow distribution rules of federal agencies</td></tr>
+          <tr><td><strong>AU‑C 935 Compliance Audit</strong> (non‑federal)</td><td>Opinion on compliance; Report on internal control over compliance</td><td>Opinion on compliance with specified requirements</td><td>Describe significant deficiencies/material weaknesses; no opinion on internal control</td><td>May be restricted to specified parties depending on requirements</td></tr>
+          <tr><td><strong>Agreed‑upon procedures</strong> on compliance</td><td>Findings report (no opinion)</td><td>No assurance</td><td>N/A</td><td><strong>Restricted‑use</strong> to specified parties</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Frameworks & When They Apply</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Government Auditing Standards (GAGAS):</strong> Required for many governmental audits and certain grant audits; adds reporting on internal control over financial reporting and on compliance and other matters to the financial statement audit.</li>
+        <li><strong>Uniform Guidance (2&nbsp;CFR&nbsp;200) — Single Audit:</strong> Required for entities that expend federal awards at or above the threshold; auditor opines on compliance for <em>major programs</em> and reports on internal control over compliance.</li>
+        <li><strong>AU‑C 935 — Compliance Audits:</strong> Applies when auditing an entity’s compliance with laws, regulations, rules, contracts, or grants; often used for state programs or bond covenants.</li>
+        <li><strong>Engagements under attestation standards:</strong> When only specific procedures are requested, use agreed‑upon procedures with restricted use.</li>
+      </ul>
+    </div>
+
+    <h2>2) GAGAS Reporting with a Financial Statement Audit</h2>
+    <div class="card">
+      <ul>
+        <li>Issue a <strong>separate report</strong> that describes the scope of testing of internal control over financial reporting and compliance and other matters, and any <strong>findings</strong>.</li>
+        <li>Do <strong>not</strong> express an opinion on internal control or on compliance.</li>
+        <li>Include inherent limitations wording and the purpose of the report; indicate that the report is an integral part of the audit conducted in accordance with GAGAS.</li>
+        <li>Communicate significant deficiencies/material weaknesses and instances of noncompliance to those charged with governance.</li>
+      </ul>
+    </div>
+
+    <h2>3) Uniform Guidance (Single Audit) — Required Reports</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Compliance Report for Each Major Program</h3>
+        <ul>
+          <li>Express an <strong>opinion</strong> on whether the entity complied, in all material respects, with the types of compliance requirements applicable to each <strong>major program</strong>.</li>
+          <li>Identify the <strong>criteria</strong> (Uniform Guidance and program‑specific requirements).</li>
+          <li>Include a <strong>Basis for Opinion</strong> and describe the audit was conducted in accordance with auditing standards generally accepted in the United States of America and Government Auditing Standards.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Report on Internal Control over Compliance</h3>
+        <ul>
+          <li>Describe the <strong>scope</strong> of testing and any <strong>significant deficiencies</strong> or <strong>material weaknesses</strong> in internal control over compliance.</li>
+          <li>No opinion on internal control is expressed.</li>
+          <li>Include instances of <strong>material noncompliance</strong> and <strong>questioned costs</strong> (known and likely).</li>
+        </ul>
+      </article>
+    </section>
+    <div class="card" style="margin-top:18px;">
+      <ul>
+        <li><strong>SEFA report:</strong> Report on the <strong>Schedule of Expenditures of Federal Awards (SEFA)</strong> in relation to the financial statements (if engaged); identify any significant issues with preparation or completeness.</li>
+        <li><strong>Schedule of findings and questioned costs:</strong> Present findings with criteria, condition, cause, effect, and recommendation; follow the Uniform Guidance format and include a <strong>summary of auditor results</strong>.</li>
+        <li><strong>Auditee sections:</strong> Management’s corrective action plan and summary of prior audit findings must be prepared by the auditee.</li>
+      </ul>
+    </div>
+
+    <h2>4) AU‑C 935 Compliance Audits (Non‑Federal)</h2>
+    <div class="card">
+      <ul>
+        <li>Express an <strong>opinion on compliance</strong> with specified requirements; identify the requirements and the applicable criteria.</li>
+        <li>Issue a separate <strong>Report on Internal Control over Compliance</strong> describing the scope and any significant deficiencies/material weaknesses; do not express an opinion on internal control.</li>
+        <li>Use <strong>restricted‑use</strong> language when required by the circumstances (for example, reports intended only for specified parties).</li>
+      </ul>
+    </div>
+
+    <h2>5) Opinions, Modifications, and Restricted Use</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Unmodified opinion:</strong> Compliance, in all material respects, with applicable requirements.</li>
+        <li><strong>Qualified opinion:</strong> Material noncompliance that is <em>not pervasive</em> to the program or subject matter.</li>
+        <li><strong>Adverse opinion:</strong> Material and <em>pervasive</em> noncompliance.</li>
+        <li><strong>Disclaimer of opinion:</strong> Scope limitation (for example, inability to obtain sufficient appropriate evidence).</li>
+        <li><strong>Restricted use:</strong> Include when the report is intended only for specified parties (for example, AUP or certain contract compliance audits). Single Audit reports are generally not restricted unless required by law/regulation.</li>
+      </ul>
+    </div>
+
+    <h2>6) Findings, Questioned Costs, and Follow‑up</h2>
+    <div class="card">
+      <ul>
+        <li>Each finding should include <strong>criteria</strong>, <strong>condition</strong>, <strong>cause</strong>, and <strong>effect</strong>, plus a <strong>recommendation</strong>.</li>
+        <li><strong>Questioned costs:</strong> Known questioned costs and a best estimate of likely questioned costs must be identified; relate them to the requirement.</li>
+        <li>Communicate findings to management and those charged with governance; obtain and include management’s <strong>corrective action plan</strong> when applicable.</li>
+        <li>Follow up on prior findings; report status (resolved, repeated, or partially corrected).</li>
+      </ul>
+    </div>
+
+    <h2>7) Documentation Essentials</h2>
+    <div class="card">
+      <ul>
+        <li>Program identification, criteria, risk assessment, sampling, and procedures performed for each requirement.</li>
+        <li>Evidence supporting compliance testing results, internal control over compliance evaluations, and the basis for opinion(s) issued.</li>
+        <li>Schedules supporting <strong>questioned costs</strong> and communications with management and those charged with governance.</li>
+        <li>Copies of the issued reports and distribution lists; evidence of submission to oversight portals when required.</li>
+      </ul>
+    </div>
+
+    <h2>8) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Does a Single Audit require an opinion on internal control over compliance? <strong>No</strong>—the auditor reports deficiencies but does not opine on internal control.</li>
+        <li>When is restricted‑use language required? <strong>Agreed‑upon procedures and certain non‑federal compliance audits intended for specified parties.</strong></li>
+        <li>Material noncompliance limited to one requirement of a major program—opinion? <strong>Qualified</strong> for that major program.</li>
+        <li>Are GAGAS compliance reports generally restricted? <strong>No</strong>—unless law or regulation requires restriction.</li>
+        <li>What belongs in a finding? <strong>Criteria, condition, cause, effect, and recommendation</strong> (plus questioned costs when applicable).</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Procedures to Obtain Sufficient Appropriate Evidence (Area III.D, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area III.D — Procedures to obtain sufficient appropriate evidence, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Procedures to Obtain Sufficient Appropriate Evidence</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Design <strong>further audit procedures</strong> that are responsive to assessed risks at the assertion level.</li>
+          <li>Select and execute the right mix of <strong>tests of controls</strong>, <strong>substantive analytical procedures</strong>, and <strong>tests of details</strong>.</li>
+          <li>Apply technique‑specific requirements for <strong>confirmations</strong>, <strong>inspection/observation</strong>, <strong>recalculation/reperformance</strong>, and <strong>inquiry</strong>.</li>
+          <li>Address <strong>information reliability</strong> (IPE/key reports), <strong>timing</strong>, and <strong>extent</strong> to achieve persuasive evidence.</li>
+          <li>Document how evidence obtained is <strong>sufficient &amp; appropriate</strong> to support conclusions.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Procedure family</th><th>Best for assertions</th><th>Reliability keys</th><th>Notes</th></tr>
+          <tr><td>Tests of controls</td><td>All (indirectly via CR)</td><td>Design + operating effectiveness; sample size per deviation risk</td><td>Use when relying on controls or when substantive alone is insufficient (high automation).</td></tr>
+          <tr><td>Substantive analytics</td><td>Accuracy/valuation; sometimes completeness</td><td>Predictability & data reliability; precise expectation + threshold</td><td>Investigate differences beyond threshold with corroboration.</td></tr>
+          <tr><td>Tests of details</td><td>Existence/occurrence, completeness, rights/obligations, presentation</td><td>External evidence, auditor‑direct procedures</td><td>Includes confirmations, vouch/trace, inspection, observation, recalculation, reperformance.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Designing Further Procedures (Nature, Timing, and Extent — <strong>N/T/E</strong>)</h2>
+    <div class="card">
+      <ul>
+        <li>Start with a simple table: <em>Risk → Assertion → Procedure(s) (Nature, Timing, and Extent)</em>.</li>
+        <li><strong>Nature:</strong> choose controls, analytics, details—or a combination. For significant risks, include <strong>targeted substantive</strong> work.</li>
+        <li><strong>Timing:</strong> interim vs year‑end; closer to period‑end increases reliability for cutoff and completeness.</li>
+        <li><strong>Extent:</strong> sample size/coverage based on risk of material misstatement (RMM), materiality, and evidence quality (see III.B; sampling in III.C).</li>
+        <li><strong>Unpredictability:</strong> add elements (e.g., unannounced procedures, different locations/items) especially for fraud risks.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Tie each test step to a <em>what could go wrong (WCGW)</em> so reviewers can see why it exists.</div>
+    </div>
+
+    <h2>2) Tests of Controls (overview)</h2>
+    <div class="card">
+      <ul>
+        <li>Confirm <strong>design &amp; implementation</strong> first (walkthroughs). Then test <strong>operating effectiveness</strong>.</li>
+        <li>Methods: inquiry + observation + inspection + <strong>reperformance</strong>; period coverage must match reliance period.</li>
+        <li>Sampling: attribute sampling; evaluate <em>upper deviation rate</em> versus tolerable deviation (see III.C).</li>
+        <li>If exceptions exceed tolerable rate → increase control risk (CR), expand substantive procedures, and reconsider reliance.</li>
+      </ul>
+    </div>
+
+    <h2>3) Substantive Analytical Procedures (SAPs)</h2>
+    <div class="card">
+      <ul>
+        <li>Develop an <strong>independent expectation</strong>; set a <strong>precision threshold</strong> based on predictability, data reliability, and disaggregation.</li>
+        <li>Accept/reject based on difference vs threshold; obtain <strong>corroborating evidence</strong> for significant variances.</li>
+        <li>Examples: reasonableness tests (payroll, depreciation), predictive modeling (utility usage), ratio/trend analysis.</li>
+        <ul>
+      </ul>
+    </div>
+
+    <h2>4) Tests of Details — Transactions</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Occurrence &amp; Accuracy (vouch)</h3>
+        <ul>
+          <li>From ledger/journal to source docs (PO/receiving/invoice/shipping, cash proof).</li>
+          <li>Useful for sales/expenses; combine with <strong>cutoff</strong> testing around period‑end.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Completeness (trace)</h3>
+        <ul>
+          <li>From source docs to ledger; search for unrecorded liabilities; reconciling sequences.</li>
+          <li>Scan unmatched receiving reports and subsequent disbursements for accounts payable (AP) completeness.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>5) Tests of Details — Balances &amp; Disclosures</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Existence:</strong> confirmations (AR, cash, investments), inventory observation, inspection of assets.</li>
+        <li><strong>Valuation:</strong> price tests, aging analyses, subsequent receipts/sales, independent estimates.</li>
+        <li><strong>Rights/obligations:</strong> titles, contracts, consignment agreements; legal inquiry.</li>
+        <li><strong>Presentation &amp; disclosure:</strong> checklist testing and tie‑out to TB/notes.</li>
+      </ul>
+    </div>
+
+    <h2>6) External Confirmations</h2>
+    <div class="card">
+      <ul>
+        <li>Maintain <strong>auditor control</strong> over selection, addressing, sending, and receipt.</li>
+        <li>Use <strong>positive</strong> confirms for higher risk; resolve nonresponses with <strong>alternative procedures</strong>.</li>
+        <li>Evaluate exceptions (timing vs real differences). For AP, consider vendor <em>statement</em> confirmations.</li>
+        <li>Legal letters: inquire of external counsel for litigation/claims; follow up on no‑response.</li>
+      </ul>
+    </div>
+
+    <h2>7) Observation &amp; Inspection</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Inventory:</strong> attend counts; test tags; roll‑forward/back to year‑end; evaluate count controls.</li>
+        <li><strong>Fixed assets:</strong> inspect major additions/disposals; verify existence and condition.</li>
+        <li>Observe key controls as part of TOC (e.g., review meetings, reconciliations).</li>
+      </ul>
+    </div>
+
+    <h2>8) Recalculation &amp; Reperformance</h2>
+    <div class="card">
+      <ul>
+        <li>Recalculate depreciation, amortization, interest, payroll, tax provisions as applicable.</li>
+        <li>Reperform controls or system processes (e.g., three‑way match) where feasible to obtain high‑quality evidence.</li>
+      </ul>
+    </div>
+
+    <h2>9) Journal Entry Testing &amp; Management Override</h2>
+    <div class="card">
+      <ul>
+        <li>Use targeted criteria (odd times/users, manual entries to revenue/estimates, round‑dollar, unusual combos).</li>
+        <li>Corroborate with supporting docs and approvals; review estimates for bias and unusual transactions.</li>
+      </ul>
+      <div class="callout danger"><strong>Fraud cue:</strong> End‑of‑period manual entries that create earnings targets or reverse next period.</div>
+    </div>
+
+    <h2>10) Subsequent Events &amp; Going Concern Procedures</h2>
+    <div class="card">
+      <ul>
+        <li>Read minutes through report date; scan post‑year‑end general ledger (GL); examine subsequent receipts/disbursements.</li>
+        <li>Evaluate going concern indicators and management’s plans; ensure adequate disclosure or modify report if needed.</li>
+      </ul>
+    </div>
+
+    <h2>11) Using Information Produced by the Entity (IPE) / Key Reports</h2>
+    <div class="card">
+      <ul>
+        <li>Identify the report/spreadsheet; test <strong>completeness &amp; accuracy</strong> (parameters, logic) or rely on tested application controls with effective information technology general controls (ITGCs).</li>
+        <li>Retain evidence of validation (screenshots/queries) and tie totals to source systems.</li>
+      </ul>
+    </div>
+
+    <h2>12) Documentation &amp; Evaluating Sufficiency</h2>
+    <div class="card">
+      <ul>
+        <li>Procedures performed, N/T/E, sampling parameters, IPE validation, and results at the <strong>assertion level</strong>.</li>
+        <li>Whether evidence is <strong>sufficient &amp; appropriate</strong>; if not, expand tests or obtain different evidence.</li>
+        <li>Aggregate misstatements (factual, projected, judgmental) and compare to materiality; communicate with management/those charged with governance (TCWG).</li>
+      </ul>
+    </div>
+
+    <h2>13) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Can tests of controls alone address a significant risk? <strong>No—targeted substantive procedures are required.</strong></li>
+        <li>Which direction tests completeness of expenses/AP? <strong>Trace from receiving reports/subsequent disbursements to the ledger.</strong></li>
+        <li>How do you increase reliability of SAPs? <strong>Use more predictive relationships and higher‑quality, well‑validated data.</strong></li>
+        <li>What is auditor control in confirmations? <strong>Auditor selects, sends, and receives responses directly.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

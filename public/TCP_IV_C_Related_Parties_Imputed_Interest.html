@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Related Party Transactions & Imputed Interest — TCP IV.C (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0a1f44; --card:#0f2a5c; --text:#e6efff; --muted:#bcd1ff; --accent:#7fb3ff;
+         --ok:#66e0a3; --border:rgba(255,255,255,.12); --shadow:0 10px 25px rgba(0,0,0,.25); --radius:18px; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%), radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%), var(--bg);
+       color:var(--text);line-height:1.55;}
+  .header-inner{max-width:1100px;margin:0 auto;padding:28px 18px 4px}
+  .title{font-weight:800;letter-spacing:.3px;font-size:clamp(26px,3.1vw,40px);margin:0;text-align:left}
+  .container{max-width:1100px;margin:0 auto;padding:8px 18px 60px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:16px 0;box-shadow:var(--shadow)}
+  h2{margin:0 0 10px;font-size:clamp(20px,2.1vw,28px)}
+  h3{margin:18px 0 8px;font-size:clamp(17px,1.7vw,22px)}
+  p{margin:8px 0 10px}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));padding:14px 16px;border-radius:12px;border:1px dashed var(--border);}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  .answer{color:var(--ok);font-weight:400}
+  .tgrid { width:100%; border-collapse:collapse; margin-top:4px; }
+  .tgrid th, .tgrid td { border:1px solid var(--border); padding:10px 12px; vertical-align:top; }
+  .tgrid th { text-align:left; background:rgba(255,255,255,.04); }
+  .tgrid tr:nth-child(even) td { background:rgba(255,255,255,.02); }
+  .mini { margin:0; padding:0 0 0 18px; }
+  .mini li { margin:4px 0; }
+  .eq { white-space:pre-wrap; }
+  .grid {display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top:8px}
+  @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+  .rule {border:1px solid var(--border); border-radius:14px; padding:14px; background:rgba(255,255,255,.02)}
+  .rule h4{margin:0 0 6px; font-size:16px}
+  .rule ul{margin:6px 0 0 18px}
+  .rule li{margin:4px 0}
+  .iftable{width:100%; border-collapse:collapse; margin-top:14px}
+  .iftable th,.iftable td{border:1px solid var(--border); padding:10px 12px; vertical-align:top}
+  .iftable th{background:rgba(255,255,255,.04); text-align:left}
+  .em{font-weight:600; color:var(--text)}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Related Party Transactions &amp; Imputed Interest</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Identify <strong>related parties</strong> and <strong>constructive ownership</strong> rules; apply <strong>§267</strong> loss disallowance and <strong>matching rule</strong> for unpaid expenses.</li>
+        <li>Determine consequences of sales between related parties including <strong>§1239</strong> (ordinary income on depreciable property), <strong>§707(b)</strong> partner/partnership rules, and <strong>§453(e)</strong> acceleration.</li>
+        <li>Compute <strong>imputed interest</strong> on below‑market loans under <strong>§7872</strong> (gift, compensation, corp‑shareholder loans) and understand character (gift/dividend/compensation).</li>
+        <li>Recognize imputed/unstated interest concepts under <strong>§1274/§483</strong> for deferred payment sales; allocate payments between principal and interest.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Fast map</h2>
+      <div class="grid">
+        <div class="rule">
+          <h4>👥 Who is related?</h4>
+          <ul>
+            <li>Family (spouse, ancestors, lineal descendants, brothers/sisters), >50% ownership (direct/indirect), controlled entities.</li>
+            <li>Constructive ownership (attribution) applies.</li>
+          </ul>
+          <span class="pill">Attribution tests</span>
+        </div>
+        <div class="rule">
+          <h4>🔻 §267 sale losses</h4>
+          <ul>
+            <li>Losses disallowed on sales to related parties.</li>
+            <li>Buyer’s later gain reduced by prior disallowed loss (not below zero).</li>
+          </ul>
+          <span class="pill">No double tax benefit</span>
+        </div>
+        <div class="rule">
+          <h4>🏭 §1239 ordinary income</h4>
+          <ul>
+            <li>Seller’s gain on sale of <span class="em">depreciable property</span> to related party = ordinary income.</li>
+          </ul>
+          <span class="pill">Overrides capital</span>
+        </div>
+        <div class="rule">
+          <h4>🤝 §707(b) partnerships</h4>
+          <ul>
+            <li>Losses disallowed between partnership and >50% partner.</li>
+            <li>Gain may be ordinary if property is not a capital asset to transferee.</li>
+          </ul>
+          <span class="pill">>50% test</span>
+        </div>
+        <div class="rule">
+          <h4>⏩ §453(e) acceleration</h4>
+          <ul>
+            <li>Related buyer resells within 2 years → original seller recognizes deferred gain up to buyer’s resale gain.</li>
+          </ul>
+          <span class="pill">Watch 2‑year window</span>
+        </div>
+        <div class="rule">
+          <h4>💸 §7872 below‑market loans</h4>
+          <ul>
+            <li>Impute interest at AFR; deem transfers: gift/dividend/compensation.</li>
+            <li>Exceptions: ≤$10k; ≤$100k with net investment income cap.</li>
+          </ul>
+          <span class="pill">AFR driven</span>
+        </div>
+        <div class="rule">
+          <h4>📑 §1274/§483</h4>
+          <ul>
+            <li>Unstated/inadequate interest on deferred payments → interest/OID imputed.</li>
+            <li>Allocate each payment between interest and principal.</li>
+          </ul>
+          <span class="pill">Level‑payment schedules</span>
+        </div>
+        <div class="rule">
+          <h4>🧾 Matching rule (§267(a)(2))</h4>
+          <ul>
+            <li>Accrual payor to cash recipient: deduction deferred until recipient includes in income.</li>
+          </ul>
+          <span class="pill">Timing alignment</span>
+        </div>
+      </div>
+
+      <table class="iftable" style="margin-top:12px">
+        <thead><tr><th>If you see…</th><th>Then remember…</th></tr></thead>
+        <tbody>
+          <tr><td>Loss on sale to spouse/child/parent or >50%-owned entity</td><td>Disallow under §267; track for buyer’s future gain reduction.</td></tr>
+          <tr><td>Sale of building/machinery to related entity</td><td>§1239 → seller’s gain is ordinary to extent of entire gain.</td></tr>
+          <tr><td>Partner owns 60% and sells asset to partnership at loss</td><td>§707(b) disallows loss.</td></tr>
+          <tr><td>Related-party resale within 2 years</td><td>§453(e) accelerates original seller’s deferred gain up to buyer’s gain.</td></tr>
+          <tr><td>0% loan to child/shareholder/employee</td><td>§7872 imputes AFR interest with deemed transfer (gift/dividend/comp).</td></tr>
+          <tr><td>Installment contract with no interest stated</td><td>Impute interest under §1274/§483; build an interest/principal schedule.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>Track both parties:</strong> §267 denial today may shelter the buyer’s later gain—but never creates a new loss.</li>
+        <li><strong>§1239 scope:</strong> Applies when the property is depreciable to the buyer—even if the seller previously held it as an investment.</li>
+        <li><strong>§453(e):</strong> The 2‑year clock is critical; exceptions exist (e.g., death, involuntary conversions).</li>
+        <li><strong>§7872 exceptions:</strong> Small loans and the ≤$100k “net investment income ≤ $1,000” cap can reduce deemed interest.</li>
+        <li><strong>§1274 vs §483:</strong> §1274 generally governs notes with inadequate stated interest; §483 often applies where no note/unstated interest.</li>
+        <li><strong>Matching rule:</strong> Accrual method cannot deduct until the cash‑method recipient picks it up.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+      <table class="tgrid">
+        <thead>
+          <tr>
+            <th style="width:22%">Topic</th>
+            <th style="width:38%">Inputs</th>
+            <th style="width:20%">Key computation</th>
+            <th style="width:20%">Result(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1) §267 sale loss & later sale</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Basis: $70,000; Sold to related: $55,000</li>
+                <li>Buyer later sells: $68,000</li>
+              </ul>
+            </td>
+            <td class="eq">Disallowed loss = $70,000 − $55,000 = <strong>$15,000</strong>
+Buyer’s later gain = $68,000 − $55,000 = $13,000
+Recognized now = later gain − disallowed = <strong>$0</strong></td>
+            <td>Buyer’s current taxable gain: <strong>$0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>2) §1239 ordinary income</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Seller basis: $200,000; Price: $260,000</li>
+              </ul>
+            </td>
+            <td class="eq">Gain (all ordinary) = <strong>$60,000</strong></td>
+            <td>Character: <strong>Ordinary income</strong> $60,000</td>
+          </tr>
+          <tr>
+            <td><strong>3) §707(b) loss disallowance</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Partner &gt;50%: Basis $90,000; Sold $80,000</li>
+              </ul>
+            </td>
+            <td class="eq">Loss disallowed = <strong>$10,000</strong></td>
+            <td>Recognized loss now: <strong>$0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>4) §453(e) acceleration</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Seller GP% = 120000/300000 = 40%</li>
+                <li>Y1 principal $100,000 ⇒ Y1 gain $40,000</li>
+                <li>Buyer resells, gain $30,000</li>
+              </ul>
+            </td>
+            <td class="eq">Remaining GP = $80,000; Accelerate in Y2 up to buyer’s gain = <strong>$30,000</strong></td>
+            <td>Y2 recognized by original seller: <strong>$30,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5) §7872 gift loan</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Loan $300,000 at 0%; AFR 4%</li>
+              </ul>
+            </td>
+            <td class="eq">Imputed interest = principal × AFR = <strong>$12,000</strong></td>
+            <td>Lender: interest income $12,000 &amp; deemed gift $12,000; Borrower: deemed interest expense $12,000</td>
+          </tr>
+          <tr>
+            <td><strong>6) §7872 corp–shareholder loan</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Loan $500,000 at 0%; AFR 3.5%</li>
+              </ul>
+            </td>
+            <td class="eq">Imputed interest = <strong>$17,500</strong></td>
+            <td>Deemed dividend to shareholder $17,500; Corp interest income $17,500</td>
+          </tr>
+          <tr>
+            <td><strong>7) §1274/§483 imputed interest (level payments)</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Price $300,000; 3 equal payments; AFR 5%</li>
+              </ul>
+            </td>
+            <td class="eq">Year 1 interest ≈ <strong>$15,000</strong>; Principal ≈ $85,000
+Year 2 interest ≈ <strong>$10,750</strong>; Year 3 interest ≈ <strong>$6,288</strong></td>
+            <td>Each payment split into interest then principal (constant-yield style).</td>
+          </tr>
+          <tr>
+            <td><strong>8) §267(a)(2) matching</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Accrued bonus $40,000 to cash-method owner</li>
+              </ul>
+            </td>
+            <td class="eq">Deductible when <strong>paid</strong>, not when accrued</td>
+            <td>Deduction year: <strong>Year 2</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> §267: Basis $60,000, sold to related for $45,000; later third‑party sale $58,000. Buyer’s recognized gain now?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$13,000</li>
+          <li>$0</li>
+          <li>$15,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Prior disallowed loss $15,000 offsets later gain $13,000 → current recognized $0 (cannot create a loss).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> §1239: Sold depreciable property to >50%-owned subsidiary for $210,000; basis $150,000. Character and amount of seller’s gain?</p>
+        <ol type="A">
+          <li>Ordinary $60,000</li>
+          <li>Capital $60,000</li>
+          <li>§1231 $60,000</li>
+          <li>Ordinary $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">§1239 makes <em>all</em> gain ordinary when property is depreciable to the buyer.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> §707(b): >50% partner sells asset (basis $110,000) to partnership for $95,000. Recognized loss now?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$15,000</li>
+          <li>$-15,000</li>
+          <li>$1</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Loss is disallowed under §707(b) for sales between partnership and controlling partner.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> §453(e): Basis $250,000; price $350,000; GP% ≈ 29%. Y1 principal $70,000 (gain $20,000). Related buyer resells in Y2 with gain $40,000. How much must original seller recognize in Y2 due to acceleration?</p>
+        <ol type="A">
+          <li>$40,000</li>
+          <li>$0</li>
+          <li>$100,000</li>
+          <li>$20,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Accelerate remaining GP up to buyer’s resale gain: min(remaining GP, buyer gain) = $40,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> §7872 gift loan: $200,000 at 0% with AFR 4.5%. Annual imputed interest?</p>
+        <ol type="A">
+          <li>$9,000</li>
+          <li>$0</li>
+          <li>$4,500</li>
+          <li>$1,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Imputed = principal × AFR = $9,000 (subject to small‑loan exceptions).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> §7872 corp–shareholder demand loan: $400,000 at 0% with AFR 4%. Tax results?</p>
+        <ol type="A">
+          <li>Deemed dividend &amp; interest income $16,000</li>
+          <li>Deemed gift &amp; interest income $16,000</li>
+          <li>Compensation &amp; interest income $16,000</li>
+          <li>No effect</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Corp–shareholder loans generally create <em>dividend</em> characterization to the shareholder and interest income to the corporation.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> §1274: Price $240,000; 3 equal payments; AFR 6%. Approximate Year 1 imputed interest?</p>
+        <ol type="A">
+          <li>$14,400</li>
+          <li>$0</li>
+          <li>$80,000</li>
+          <li>$7,200</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Impute interest on beginning principal using AFR; the remainder of each payment is principal.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> §267(a)(2) matching rule: Accrual corp owes $40,000 bonus to cash‑method 80% owner. When is the deduction allowed?</p>
+        <ol type="A">
+          <li>When paid to cash-method recipient</li>
+          <li>When accrued</li>
+          <li>Never</li>
+          <li>Spread over 3 years</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Deduct when the recipient includes it (cash‑method) — effectively when paid.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> Constructive ownership: Sibling attribution + spouse ownership cause >50% control. Are the parties related for §267?</p>
+        <ol type="A">
+          <li>Yes — related parties under constructive ownership rules</li>
+          <li>No — siblings don’t count at all</li>
+          <li>Only if same household</li>
+          <li>Only for §1239</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Attribution rules can aggregate family holdings to exceed 50% and create a related‑party relationship.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Mixed: Basis $90,000 sold to related for $70,000; later third‑party sale $98,000. Buyer’s recognized gain?</p>
+        <ol type="A">
+          <li>$8,000</li>
+          <li>$28,000</li>
+          <li>$0</li>
+          <li>$20,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Later gain $28,000 reduced by prior disallowed $20,000 ⇒ $8,000.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Subsequent Events and Subsequently Discovered Facts (Area III.H, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area III.H — Subsequent events and subsequently discovered facts, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Subsequent Events and Subsequently Discovered Facts</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Distinguish <strong>subsequent events</strong> (between the financial statement date and the auditor’s report date) from <strong>subsequently discovered facts</strong> (after the auditor’s report date).</li>
+          <li>Identify <strong>Type I (adjusting)</strong> vs <strong>Type II (non‑adjusting)</strong> events and their reporting implications.</li>
+          <li>Perform required <strong>procedures through the report date</strong> and determine when to <strong>dual‑date</strong> or <strong>change the report date</strong>.</li>
+          <li>Respond appropriately when facts are discovered <strong>after report release</strong>, including communication with management and <strong>those charged with governance (TCWG)</strong>.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Period</th><th>What it covers</th><th>Auditor actions</th><th>Reporting options</th></tr>
+          <tr><td>Balance‑sheet date → Auditor’s report date</td><td><strong>Subsequent events</strong> (Type I/II)</td><td>Read minutes; inquire; scan the post‑year‑end general ledger (GL); obtain updated written representations</td><td>Adjust or disclose; may add an emphasis‑of‑matter (EOM) paragraph</td></tr>
+          <tr><td>After report date → Before report release</td><td>Facts become known before release</td><td>Discuss with management/TCWG; perform procedures</td><td><strong>Dual‑date</strong> or <strong>change the report date</strong></td></tr>
+          <tr><td>After report release</td><td><strong>Subsequently discovered facts</strong></td><td>Discuss with management/TCWG; if financial statements require revision, take steps to prevent future reliance</td><td>Reissue revised financial statements and report; notify users if needed</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Definitions & Date Framework</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Subsequent events:</strong> events occurring <em>after</em> the financial statement date but <em>on or before</em> the auditor’s report date.</li>
+        <li><strong>Subsequently discovered facts:</strong> facts discovered <em>after</em> the auditor’s report date that may have affected the report if known earlier.</li>
+        <li><strong>Report release date:</strong> the date the auditor permits the report to be used (often distribution/public filing).</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Lock these dates in your planning memo and update as they change to keep procedures aligned.</div>
+    </div>
+
+    <h2>2) Type I vs Type II Subsequent Events</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Type I — Adjusting</h3>
+        <ul>
+          <li>Provide additional evidence about <strong>conditions that existed</strong> at the balance‑sheet date.</li>
+          <li><strong>Action:</strong> Adjust the financial statements.</li>
+          <li><em>Examples:</em> settlement of litigation confirming the amount owed; subsequent receipts confirming accounts receivable collectibility; bankruptcy of a major customer due to pre‑existing financial difficulties.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Type II — Non‑adjusting</h3>
+        <ul>
+          <li>Relate to <strong>conditions arising after</strong> the balance‑sheet date.</li>
+          <li><strong>Action:</strong> Disclose the nature and estimated financial effect (or a statement that such estimate cannot be made).</li>
+          <li><em>Examples:</em> major business combination or disposal; casualty losses; issuance of debt or equity; significant restructuring announced after year‑end.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>3) Required Procedures Through the Report Date</h2>
+    <div class="card">
+      <ul>
+        <li>Read board and committee minutes through the report date and inquire about matters discussed at meetings for which minutes are not yet available.</li>
+        <li>Inquire management and, where appropriate, those charged with governance (TCWG) about subsequent events and subsequent transactions.</li>
+        <li>Scan the post‑year‑end general ledger (GL) for significant or unusual transactions.</li>
+        <li>Obtain updated <strong>written representations</strong> dated as of the report date addressing subsequent events and disclosures.</li>
+        <li>Perform targeted procedures where risks are identified (for example, subsequent cash receipts for valuation, loan covenant compliance after year‑end).</li>
+      </ul>
+    </div>
+
+    <h2>4) Facts Arising After Report Date but Before Release</h2>
+    <div class="card">
+      <ul>
+        <li>Discuss the matter with management and TCWG and determine whether the financial statements need <strong>adjustment or disclosure</strong>.</li>
+        <li>Perform necessary procedures related to the new information.</li>
+        <li><strong>Dating choices:</strong>
+          <ul>
+            <li><strong>Dual‑date</strong> the report: keep the original report date and add wording such as <em>“Report dated March 15, 20X2, except for Note X, as to which the date is April 2, 20X2.”</em> Only the specific matter is covered by the later date.</li>
+            <li><strong>Change the report date</strong> to the later date: extends responsibility for subsequent events through that later date.</li>
+          </ul>
+        </li>
+        <li>Obtain updated written representations for the additional procedures and the later date covered.</li>
+      </ul>
+    </div>
+
+    <h2>5) Subsequently Discovered Facts After Report Release</h2>
+    <div class="card">
+      <ul>
+        <li>Discuss with management and TCWG whether the financial statements require <strong>revision</strong> and whether users are still relying on them.</li>
+        <li>If revision is necessary and the client cooperates: advise management to <strong>make appropriate disclosures</strong>, revise the financial statements, and <strong>reissue</strong> the auditor’s report. Consider adding an <strong>emphasis‑of‑matter (EOM)</strong> or explanatory paragraph describing the revision.</li>
+        <li>If the client <strong>refuses</strong> to act: take steps to <strong>prevent future reliance</strong> on the auditor’s report—seek legal advice, notify those charged with governance (TCWG), and consider notifying known users or regulators as permitted or required by law or regulation.</li>
+        <li>For comparative periods, assess whether prior‑period opinions need updating or reissuance.</li>
+      </ul>
+      <div class="callout danger"><strong>Red flag:</strong> Discovery of fraud or noncompliance affecting prior financial statements that were previously believed to be fairly presented.</div>
+    </div>
+
+    <h2>6) Documentation & Communication</h2>
+    <div class="card">
+      <ul>
+        <li>Dates considered (financial statement date, auditor’s report date, report release date) and the procedures performed through those dates.</li>
+        <li>Nature of each event/fact, evaluation (Type I vs Type II), and the basis for adjustments or disclosures.</li>
+        <li>Copies of updated written representations, revised financial statements, and reissued reports; communications with management and TCWG.</li>
+        <li>Legal counsel consultations and any actions taken to prevent reliance.</li>
+      </ul>
+    </div>
+
+    <h2>7) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Which events are adjusted? <strong>Type I — conditions existing at the balance‑sheet date.</strong></li>
+        <li>What are your options if a fact arises before release? <strong>Dual‑date or change the report date.</strong></li>
+        <li>What if facts arise after release and management won’t revise? <strong>Take steps to prevent future reliance and consider legal obligations.</strong></li>
+        <li>Do you need new written representations when you dual‑date? <strong>Yes—covering the additional procedures and later date for that matter.</strong></li>
+      </ol>
+    </div>
+
+    <details>
+      <summary>Example dual‑dating language</summary>
+      <p>“Our report is dated March 15, 20X2, except for the matter described in Note X, as to which the date is April 2, 20X2.”</p>
+    </details>
+  </div>
+</body>
+</html>

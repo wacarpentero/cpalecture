@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.B: Trade Receivables</title>
+<meta name="description" content="CPA reviewer chapter for FAR II.B — Trade Receivables (recognition, measurement, CECL, discounts, returns, factoring, disclosures), aligned to 2025 AICPA Blueprints (U.S. GAAP).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+  .small{font-size:0.95rem}
+
+  /* Journal entry styling */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{flex:1}
+  .je .amt{min-width:110px;text-align:right;white-space:nowrap}
+  .je .cr{padding-left:0} /* no indent for credits */
+        </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Trade Receivables</h1>
+
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Recognize and measure accounts receivable at <strong>transaction price</strong> less <strong>allowance for credit losses</strong> under the <strong>Current Expected Credit Losses (CECL)</strong> model.</li>
+          <li>Account for <strong>trade and cash discounts</strong>, <strong>sales returns and allowances</strong>, and <strong>credit card sales</strong>.</li>
+          <li>Prepare aging schedules, compute <strong>allowance</strong> and <strong>bad debt expense</strong>, and record write‑offs and recoveries.</li>
+          <li>Distinguish <strong>pledging/assigning</strong> receivables from <strong>factoring</strong> and <strong>securitization</strong>; apply sale vs. secured borrowing criteria.</li>
+          <li>Present and disclose receivables, including <strong>nontrade receivables</strong> and <strong>related‑party</strong> balances.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:22%"><col style="width:43%"><col style="width:35%"></colgroup>
+          <tr><th>Topic</th><th>Essentials</th><th>Exam flags</th></tr>
+          <tr><td>Initial measurement</td><td>Transaction price net of <em>trade discounts</em> and variable consideration estimates (returns, rebates). Record gross for <em>cash discounts</em> with policy (gross or net method).</td><td>Estimate returns with a <strong>refund liability</strong> and corresponding <strong>asset for right to recover</strong>.</td></tr>
+          <tr><td>CECL allowance</td><td>Estimate lifetime expected credit losses using reasonable and supportable information (history, current conditions, forecasts). Apply to trade receivables on a <em>collective</em> basis.</td><td>Methods: aging loss rates, roll‑rate, vintage, probability‑of‑default, or simplified practical expedients for collateralized assets.</td></tr>
+          <tr><td>Write‑offs &amp; recoveries</td><td>Write‑offs reduce both receivables and the allowance; recoveries credit bad debt expense or the allowance.</td><td>No income statement effect on write‑off date (if allowance was adequate).</td></tr>
+          <tr><td>Pledging/assigning</td><td>Receivables used as collateral — disclose; continue to report receivables and record <em>secured borrowing</em>.</td><td>Finance charge and interest expense recognized.</td></tr>
+          <tr><td>Factoring</td><td>Without recourse usually qualifies as a <em>sale</em>; with recourse may be sale or borrowing depending on <strong>ASC 860</strong> criteria.</td><td>Sale criteria: isolation, transferee’s right to pledge/exchange, and no effective control retained.</td></tr>
+          <tr><td>Presentation</td><td>Receivables reported <strong>net realizable value</strong> (gross less allowance and returns). Disclose credit risk, aging, and collateralization when significant.</td><td>Ratios: A/R turnover, Days sales outstanding.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Discounts, Returns &amp; Variable Consideration</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Trade discounts</strong> reduce the listed price; record receivable net of trade discount.</li>
+        <li><strong>Cash (sales) discounts</strong> such as 2/10, n/30 — use either the <em>gross method</em> (record at invoice amount; discounts taken reduce sales) or the <em>net method</em> (record at discounted amount; missed discounts increase sales).</li>
+        <li><strong>Sales returns and allowances:</strong> record <strong>refund liability</strong> and <strong>asset for right to recover inventory</strong> (measured at cost minus expected recovery costs); adjust estimates each period.</li>
+        <li><strong>Credit card sales:</strong> record receivable from the card network net of the processing fee (selling expense).</li>
+      </ul>
+    </div>
+
+    <h2>2) CECL — Allowance for Credit Losses</h2>
+    <div class="card">
+      <ul>
+        <li>Estimate <strong>lifetime</strong> expected losses using historical loss experience adjusted for <strong>current conditions</strong> and <strong>reasonable and supportable forecasts</strong>; revert to historical information when forecasts are no longer supportable.</li>
+        <li>Pool receivables with similar risk characteristics; use aging loss rates or other methods consistently and document assumptions.</li>
+        <li>Journal basics: <em>Dr Bad debt expense / Cr Allowance for credit losses</em>; write‑off <em>Dr Allowance / Cr Accounts receivable</em>.</li>
+      </ul>
+    </div>
+
+    <h2>3) Transfers of Receivables</h2>
+    <div class="card">
+      <table class="tbl">
+        <colgroup><col style="width:28%"><col style="width:36%"><col style="width:36%"></colgroup>
+        <tr><th>Form</th><th>Accounting</th><th>Notes</th></tr>
+        <tr><td>Pledge / general assignment</td><td>Secured borrowing; disclose; record liability for borrowed amount</td><td>Receivables remain on books; interest/finance charges expensed</td></tr>
+        <tr><td>Factoring — without recourse</td><td>Usually a <strong>sale</strong> (derecognize receivables, recognize loss for fee)</td><td>Transferee assumes risk; seller has no obligation for credit losses</td></tr>
+        <tr><td>Factoring — with recourse</td><td>Sale only if the <strong>ASC 860 sale criteria</strong> are met; otherwise secured borrowing</td><td>Recognize <em>recourse obligation</em> at fair value on sale</td></tr>
+        <tr><td>Securitization</td><td>Often treated as a sale when criteria are met</td><td>Consider retained interests (servicing assets, residuals)</td></tr>
+      </table>
+      <div class="callout tip"><strong>ASC 860 sale criteria:</strong> (1) isolation from the transferor, (2) transferee has the right to pledge or exchange assets, and (3) transferor does not maintain effective control.</div>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Aging Schedule and CECL Allowance</h3>
+        <table class="tbl">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <tr><th>Age bucket</th><th class="center">Balance</th><th class="center">Expected loss rate</th><th class="center">Expected loss</th></tr>
+          <tr><td>Current</td><td class="num">$380,000</td><td class="center">0.6%</td><td class="num">$2,280</td></tr>
+          <tr><td>1–30 days past due</td><td class="num">$140,000</td><td class="center">1.4%</td><td class="num">$1,960</td></tr>
+          <tr><td>31–60 days past due</td><td class="num">$60,000</td><td class="center">4.0%</td><td class="num">$2,400</td></tr>
+          <tr><td>61–90 days past due</td><td class="num">$30,000</td><td class="center">9.0%</td><td class="num">$2,700</td></tr>
+          <tr><td>Over 90 days</td><td class="num">$12,000</td><td class="center">25.0%</td><td class="num">$3,000</td></tr>
+          <tr><th>Total</th><th class="num">$622,000</th><th></th><th class="num">$12,340</th></tr>
+        </table>
+        <ul>
+          <li>If the beginning allowance for credit losses was <strong>$9,800</strong>, record <em>Bad debt expense</em> of <strong>$2,540</strong> to reach the required ending allowance of <strong>$12,340</strong>.</li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Cash Discounts: Gross vs. Net Method</h3>
+        <table class="tbl">
+          <colgroup><col style="width:30%"><col style="width:35%"><col style="width:35%"></colgroup>
+          <tr><th>Event</th><th class="center">Gross method entry</th><th class="center">Net method entry</th></tr>
+          <tr><td>Sale $10,000, terms 2/10, n/30</td><td><ul class="je"><li class=""><span class="label">Dr</span><span class="acct">Accounts receivable</span><span class="amt">$10,000</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Sales revenue</span><span class="amt">($10,000)</span></li></ul></td><td><ul class="je"><li class=""><span class="label">Dr</span><span class="acct">Accounts receivable</span><span class="amt">$9,800</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Sales revenue</span><span class="amt">($9,800)</span></li></ul></td></tr>
+          <tr><td>Customer pays within discount period</td><td><ul class="je"><li class=""><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$9,800</span></li><li class=""><span class="label">Dr</span><span class="acct">Sales discounts</span><span class="amt">$200</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($10,000)</span></li></ul></td><td><ul class="je"><li class=""><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$9,800</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($9,800)</span></li></ul></td></tr>
+          <tr><td>Customer pays after discount period</td><td><ul class="je"><li class=""><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$10,000</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($10,000)</span></li></ul></td><td><ul class="je"><li class=""><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$10,000</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($9,800)</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Sales discounts forfeited</span><span class="amt">($200)</span></li></ul></td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — Sales Returns Estimate</h3>
+        <table class="tbl">
+          <tr><th>Data</th><th>Computation</th></tr>
+          <tr><td>Year‑end gross sales subject to returns: $500,000; expected return rate 6%; cost ratio 65%</td><td>Refund liability = 6% × $500,000 = <strong>$30,000</strong> (reduce revenue).<br>Asset for right to recover inventory = 65% × $30,000 = <strong>$19,500</strong> (contra cost of goods sold).</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Factoring With vs. Without Recourse</h3>
+        <table class="tbl">
+  <colgroup><col style="width:36%"><col style="width:32%"><col style="width:32%"></colgroup>
+  <tr><th>Terms</th><th>Without recourse (sale)</th><th>With recourse (borrowing or sale)</th></tr>
+  <tr>
+    <td>Sell $100,000 of receivables; finance charge 3%; holdback (retained interest) $2,000; recourse obligation fair value $1,200 (if with recourse)</td>
+    <td>
+      <ul class="je">
+        <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$95,000</span></li>
+        <li><span class="label">Dr</span><span class="acct">Due from factor</span><span class="amt">$2,000</span></li>
+        <li><span class="label">Dr</span><span class="acct">Loss on sale</span><span class="amt">$3,000</span></li>
+        <li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($100,000)</span></li>
+      </ul>
+    </td>
+    <td>
+      If sale criteria met:
+      <ul class="je">
+        <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$95,000</span></li>
+        <li><span class="label">Dr</span><span class="acct">Due from factor</span><span class="amt">$2,000</span></li>
+        <li><span class="label">Dr</span><span class="acct">Loss on sale</span><span class="amt">$4,200</span></li>
+        <li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($100,000)</span></li>
+        <li class="cr"><span class="label">Cr</span><span class="acct">Recourse obligation</span><span class="amt">($1,200)</span></li>
+      </ul>
+      <br>
+      If criteria <em>not</em> met (secured borrowing):
+      <ul class="je">
+        <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$95,000</span></li>
+        <li><span class="label">Dr</span><span class="acct">Finance charge expense</span><span class="amt">$3,000</span></li>
+        <li><span class="label">Dr</span><span class="acct">Due from factor</span><span class="amt">$2,000</span></li>
+        <li class="cr"><span class="label">Cr</span><span class="acct">Liability—secured borrowing</span><span class="amt">($100,000)</span></li>
+      </ul>
+      <em>Receivables remain on the books (no derecognition)</em>
+    </td>
+  </tr>
+</table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Write‑off and Recovery</h3>
+        <table class="tbl">
+          <tr><th>Scenario</th><th>Entry</th></tr>
+          <tr><td>Write off an uncollectible account of $4,600</td><td><ul class="je"><li><span class="label">Dr</span><span class="acct">Allowance for credit losses</span><span class="amt">$4,600</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($4,600)</span></li></ul></td></tr>
+          <tr><td>Customer later pays $900 on account previously written off</td><td>If sale criteria met:<ul class="je"><li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$95,000</span></li><li><span class="label">Dr</span><span class="acct">Due from factor</span><span class="amt">$2,000</span></li><li><span class="label">Dr</span><span class="acct">Loss on sale</span><span class="amt">$4,200</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Accounts receivable</span><span class="amt">($100,000)</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Recourse obligation</span><span class="amt">($1,200)</span></li></ul><br>If criteria <em>not</em> met (secured borrowing):<ul class="je"><li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$95,000</span></li><li><span class="label">Dr</span><span class="acct">Finance charge expense</span><span class="amt">$3,000</span></li><li><span class="label">Dr</span><span class="acct">Due from factor</span><span class="amt">$2,000</span></li><li class="cr"><span class="label">Cr</span><span class="acct">Liability—secured borrowing</span><span class="amt">($100,000)</span></li></ul><em>Receivables remain on the books (no derecognition)</em></td></tr>
+        </table>
+      </article>
+
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Does CECL use lifetime or incurred losses? <strong>Lifetime expected losses.</strong></li>
+        <li>Refund liability vs. asset for right to recover — where do they hit? <strong>Refund liability reduces revenue</strong>; the <strong>asset</strong> reduces cost of goods sold.</li>
+        <li>Sale accounting for transfers requires what? <strong>Isolation</strong>, <strong>transferee’s right to pledge/exchange</strong>, and <strong>no effective control</strong> by the transferor.</li>
+        <li>Write‑off effect on income? <strong>None</strong> if allowance was adequate; expense recognized when the allowance was recorded.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

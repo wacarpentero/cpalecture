@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — Federal Tax Procedures</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+  .answer{color:#b5ffb1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Federal Tax Procedures</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Explain</strong> the audit and appeals process for tax matters and the <strong>levels of the judicial process</strong> (U.S. Tax Court, U.S. District Court, U.S. Court of Federal Claims; appellate review).</li>
+<li><strong>Summarize</strong> when <strong>disclosure</strong> is required for a tax position and what forms are used; recall foreign account <strong>reporting</strong> requirements.</li>
+<li><strong>Identify</strong> common <strong>taxpayer penalties</strong> and apply them to scenarios.</li>
+<li><strong>Recall</strong> the <strong>authoritative hierarchy</strong> for federal tax purposes.</li>
+</ul>
+</section>
+<!-- At a Glance -->
+<section class="card">
+<h2>At a Glance</h2>
+<div class="grid-2 small">
+<div>
+<h4>Audit → Appeals → Court (high level)</h4>
+<table class="tbl small"><colgroup><col style="width: 36%"/><col style="width: 64%"/></colgroup>
+<tr><th>Stage</th><th>Key points</th></tr>
+<tr><td>Examination</td><td>Correspondence, office, or field. <strong>Information Document Requests</strong> (IDRs). At conclusion, IRS issues report/30‑day letter (proposed changes).</td></tr>
+<tr><td>Appeals</td><td>File within 30 days. <strong>Independent Office of Appeals</strong> seeks settlements based on hazards of litigation.</td></tr>
+<tr><td>Notice of Deficiency</td><td>If no agreement → <strong>90‑day letter</strong>. File in U.S. Tax Court within 90 days to stop assessment (no prepayment).</td></tr>
+<tr><td>Other forums</td><td>Pay then sue in U.S. District Court (jury available) or U.S. Court of Federal Claims (no jury).</td></tr>
+</table>
+<div class="callout small"><strong>Exam tip:</strong> <em>Tax Court</em> is a <strong>prepayment forum</strong>. District Court/Court of Federal Claims require <strong>full payment</strong> first.</div>
+</div>
+<div>
+<h4>Substantiation &amp; Disclosure</h4>
+<ul>
+<li><span class="tag">Adequate records</span> Keep receipts, logs, or other evidence. For meals/travel, contemporaneous logs are expected.</li>
+<li><span class="tag">Disclosure forms</span> <strong>Form 8275</strong> (insufficient authority) and <strong>Form 8275‑R</strong> (contrary to regulation).</li>
+<li><span class="tag">Foreign accounts</span> <strong>FBAR</strong> (FinCEN Form 114) if aggregate foreign financial accounts exceed <strong>$10,000</strong> at any time in the year. <strong>FATCA</strong> (Form 8938) thresholds vary by status/residency — check current instructions.</li>
+</ul>
+<div class="callout small"><strong>Exam tip:</strong> Disclosure can help avoid certain <em>preparer</em> penalties but does <em>not</em> fix willful taxpayer fraud.</div>
+</div>
+</div>
+</section>
+<!-- Statute of limitations -->
+<section class="card">
+<h2>Statute of Limitations (SOL)</h2>
+<table class="tbl small">
+<tr><th>Situation</th><th>Assessment SOL</th><th>Notes</th></tr>
+<tr><td>General rule</td><td>3 years</td><td>From the later of due date or filing date.</td></tr>
+<tr><td>Substantial omission of income</td><td>6 years</td><td>Generally &gt;25% omission of gross income (special rules apply for foreign assets).</td></tr>
+<tr><td>Fraud or no return</td><td>Unlimited</td><td>No statute bars assessment.</td></tr>
+<tr><td>Refund claims</td><td>Later of 3 years from filing or 2 years from payment</td><td>File Form 1040‑X/1120‑X within the period.</td></tr>
+</table>
+<div class="callout small"><strong>Exam tip:</strong> If a 90‑day letter is issued, the SOL is tolled while the petition is pending in Tax Court.</div>
+</section>
+<!-- Penalties -->
+<section class="card">
+<h2>Taxpayer Penalties (common ones)</h2>
+<table class="tbl small">
+<tr><th>Penalty</th><th>Trigger</th><th>Notes/Relief</th></tr>
+<tr><td>Accuracy‑related (§6662)</td><td>Negligence, substantial understatement, valuation misstatements</td><td>Generally 20% of underpayment. <strong>Reasonable cause</strong> &amp; <strong>good faith</strong> may abate.</td></tr>
+<tr><td>Fraud (§6663)</td><td>Fraudulent underpayment</td><td>75% of underpayment attributable to fraud.</td></tr>
+<tr><td>Failure‑to‑file (§6651(a)(1))</td><td>Late return</td><td>5% per month up to 25% (reduced when failure‑to‑pay also applies).</td></tr>
+<tr><td>Failure‑to‑pay (§6651(a)(2))</td><td>Late payment</td><td>0.5% per month up to 25% (rates/coordination rules apply).</td></tr>
+<tr><td>Estimated tax underpayment (§6654/§6655)</td><td>Insufficient quarterly payments</td><td>Computed using IRS interest rates.</td></tr>
+<tr><td>Information return penalties</td><td>Missing/late/incorrect Forms W‑2/1099, etc.</td><td>Penalties per form, vary by lateness and business size.</td></tr>
+<tr><td>FBAR civil penalties</td><td>Non‑willful or willful failure to file FinCEN 114</td><td>Know difference: non‑willful capped per year; willful can be much higher; criminal penalties possible.</td></tr>
+</table>
+<div class="callout small"><strong>Exam tip:</strong> First‑time abatement may remove a single year of failure‑to‑file/pay penalties when the taxpayer has a clean 3‑year history and is now compliant.</div>
+</section>
+<!-- Courts & hierarchy -->
+<section class="card">
+<h2>Judicial Forums &amp; Authoritative Hierarchy</h2>
+<div class="grid-2 small">
+<div>
+<h4>Forum selection</h4>
+<table class="tbl small">
+<tr><th>Forum</th><th>Pay first?</th><th>Other features</th></tr>
+<tr><td>U.S. Tax Court</td><td>No</td><td>Nationwide; judge (no jury). Specialized in tax. Good for cash‑constrained clients.</td></tr>
+<tr><td>U.S. District Court</td><td>Yes</td><td>Local venue; <strong>jury</strong> available; must fully pay and file refund claim first.</td></tr>
+<tr><td>U.S. Court of Federal Claims</td><td>Yes</td><td>Nationwide; no jury; often used for large claims against the U.S.</td></tr>
+</table>
+</div>
+<div>
+<h4>Authoritative hierarchy (weight)</h4>
+<table class="tbl small">
+<tr><th>Higher</th><th>Lower</th></tr>
+<tr><td>Internal Revenue Code; Treasury Regulations (final/temp)</td><td>Proposed regulations</td></tr>
+<tr><td>U.S. Supreme Court</td><td>District/Ct. of Federal Claims decisions (non‑binding across circuits)</td></tr>
+<tr><td>Appellate (circuit) decisions</td><td>IRS publications/FAQs (helpful but non‑authoritative)</td></tr>
+<tr><td>Revenue Rulings/Procedures; Notices</td><td>Private Letter Rulings (binding only to taxpayer)</td></tr>
+</table>
+</div>
+</div>
+</section>
+<!-- Examples -->
+<section class="card">
+<h2>Examples — Apply to scenarios</h2>
+<table class="tbl small">
+<tr><th>Scenario</th><th>Answer</th></tr>
+<tr>
+<td>Taxpayer cannot afford to pay a deficiency but wants to challenge the IRS determination.</td>
+<td>File a petition in <strong>U.S. Tax Court</strong> within 90 days of the notice of deficiency (no prepayment required).</td>
+</tr>
+<tr>
+<td>Client has three foreign bank accounts: $4,000, $3,500, and $3,000 peak balances.</td>
+<td>Aggregate is $10,500 &gt; $10,000 → <strong>FBAR required</strong> (FinCEN 114). Consider FATCA <strong>Form 8938</strong> if applicable to overall assets.</td>
+</tr>
+<tr>
+<td>Return filed timely. Two years later, IRS asserts a deficiency due to 30% omitted income the IRS discovered.</td>
+<td><strong>Six‑year SOL</strong> applies for substantial omission of gross income. Assessment is generally still timely.</td>
+</tr>
+<tr>
+<td>Taxpayer paid a disputed amount last year and now wants to litigate with a jury.</td>
+<td>File a refund claim, then sue in <strong>U.S. District Court</strong> after denial or 6 months of IRS inaction.</td>
+</tr>
+</table>
+</section>
+<!-- Tricky Areas -->
+<section class="card">
+<h2>Tricky Areas (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">30‑ vs 90‑day letters</span> 30‑day lets you go to Appeals; 90‑day is the statutory notice for Tax Court.</li>
+<li><span class="tag">Burden of proof</span> Usually on the taxpayer; can shift if IRS introduces new matter or with credible evidence plus substantiation.</li>
+<li><span class="tag">Disclosure vs. authority</span> Disclosure cures some <em>preparer</em> penalties (reasonable basis), but not taxpayer fraud penalties.</li>
+<li><span class="tag">Refund claim clock</span> The “later of 3 years from filing or 2 years from payment” rule is a classic distractor.</li>
+</ul>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>Topic</th><th>Key point</th></tr>
+<tr><td>Audit to Court</td><td>Examination → Appeals (30‑day) → Notice of deficiency (90‑day) → Tax Court (no pay) or pay‑and‑sue in District/CFC.</td></tr>
+<tr><td>Disclosure</td><td>Use Forms 8275/8275‑R when authority is weak; foreign accounts may trigger FBAR (FinCEN 114) and FATCA (Form 8938).</td></tr>
+<tr><td>Penalties</td><td>Know §6662, §6663, §6651; reasonable cause/good faith can abate some penalties.</td></tr>
+<tr><td>Hierarchy</td><td>Code/Regs and higher‑court decisions outweigh lower guidance; IRS pubs are non‑authoritative.</td></tr>
+</table>
+</section>
+<!-- Quick Practice -->
+<section class="card">
+<h2>Quick Practice — 3 Multiple‑Choice Questions (MCQs)</h2>
+<ol class="small">
+<li><strong>Which forum allows a taxpayer to contest a deficiency without first paying it?</strong><br/>
+          A. U.S. District Court   B. U.S. Court of Federal Claims   C. U.S. Tax Court   D. State Court<br/>
+<span class="answer">Answer: C — U.S. Tax Court is a prepayment forum.</span>
+</li>
+<div class="hr"></div>
+<li><strong>Which statement about the statute of limitations is correct?</strong><br/>
+          A. It is 3 years in all cases   B. It is 6 years for substantial omission of gross income   C. It is 1 year if no return is filed   D. It always starts on the filing date<br/>
+<span class="answer">Answer: B — 6 years for substantial omission; unlimited for fraud/no return; runs from later of due date or filing.</span>
+</li>
+<div class="hr"></div>
+<li><strong>When is an FBAR required?</strong><br/>
+          A. Any foreign account   B. When any single account exceeds $10,000   C. When the aggregate value of foreign accounts exceeds $10,000 at any time in the year   D. Only when Form 8938 is filed<br/>
+<span class="answer">Answer: C — The threshold is an aggregate $10,000 at any time during the year.</span>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

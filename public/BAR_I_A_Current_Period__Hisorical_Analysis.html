@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR I.A — Current Period/Historical Analysis (with Data)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.code{font-family:inherit;background:rgba(255,255,255,.06);padding:10px;border-radius:8px;overflow:auto}
+.tip{border-left:4px solid var(--accent);padding:10px;background:rgba(106,166,255,.1);border-radius:8px}
+.warn{border-left:4px solid var(--warn);padding:10px;background:rgba(255,209,102,.08);border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:12px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Current Period / Historical Analysis (with Data)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Determine attribute structures, format, and <strong>data sources</strong> needed for financial statement analysis.</li>
+          <li>Compare current‑period accounts to <strong>prior periods</strong> and <strong>budget</strong>; explain significant <strong>variances</strong>.</li>
+          <li>Interpret fluctuations and <strong>ratios</strong> (profitability, liquidity, solvency, performance).</li>
+          <li>Use <strong>data analytics outputs</strong> (reports/visualizations) to spot patterns, trends, and correlations.</li>
+          <li>Derive the <strong>impact of transactions</strong> on the financial statements and notes.</li>
+          <li>Identify relevant <strong>non‑financial</strong> and <strong>non‑GAAP</strong> measures; apply <strong>benchmarking</strong> and the <strong>balanced scorecard</strong>.</li>
+          <li>Apply managerial & cost methods: cost behavior, costing systems, <strong>variance analysis</strong>, and <strong>price‑volume‑mix</strong> analysis.</li>
+        </ul>
+      </section>
+
+      <section id="planning" class="section">
+        <h2>Planning the Analysis: Data & Attributes</h2>
+        <div class="kv">
+          <div>
+            <h3>Attribute structure</h3>
+            <ul class="tight">
+              <li>Define <strong>entity</strong> (company, segment), <strong>time</strong> (month/quarter/YTD), <strong>account</strong> (GL/line item), and <strong>scenario</strong> (actual, prior, budget).</li>
+              <li>Common dimensions: product, customer, channel, location, project.</li>
+              <li>Set data <strong>grain</strong>: monthly vs daily; ensure consistency across sources.</li>
+            </ul>
+            <p class="tip"><strong>Tip:</strong> Build a simple data dictionary: field name, definition, unit, source, refresh cadence, and owner.</p>
+          </div>
+          <div>
+            <h3>Sources & quality</h3>
+            <ul class="tight">
+              <li>ERP/GL, subledgers (AP/AR/Inventory), budgeting tool, data warehouse, CRM, web analytics.</li>
+              <li>Quality checks: completeness, duplication, timing cutoffs, mapping to the chart of accounts.</li>
+              <li>Reconcile <em>Trial Balance → FS</em> before analyzing variances.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="fs-analysis" class="section">
+        <h2>Financial Statement Analysis</h2>
+        <div class="kv">
+          <div>
+            <h3>Horizontal & Vertical</h3>
+            <ul>
+              <li><strong>Horizontal</strong> (trend): year‑over‑year or vs budget; compute Δ and %Δ.</li>
+              <li><strong>Vertical</strong> (common‑size): IS items as % of revenue; BS items as % of total assets.</li>
+            </ul>
+            <h3>Key ratios</h3>
+            <ul class="tight">
+              <li><strong>Liquidity:</strong> Current = Current Assets / Current Liabilities; Quick = (CA − Inventory)/CL.</li>
+              <li><strong>Solvency:</strong> Debt‑to‑Equity = Total Debt / Total Equity; Times Interest Earned = EBIT / Interest.</li>
+              <li><strong>Profitability:</strong> Gross Margin = Gross Profit / Revenue; Net Margin = NI / Revenue; ROA = NI / Avg Assets; ROE = NI / Avg Equity.</li>
+              <li><strong>Efficiency:</strong> Inventory Turnover = COGS / Avg Inventory; DSO = Avg AR / (Revenue/365).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Variance analysis</h3>
+            <ul class="tight">
+              <li>Actual vs Budget (A/B) and Actual vs Prior (A/P).</li>
+              <li>Break into <strong>rate/price</strong>, <strong>volume</strong>, and <strong>mix</strong> components when relevant.</li>
+              <li>Use <strong>waterfalls</strong> and <strong>bridge</strong> charts to communicate impacts.</li>
+            </ul>
+            
+<details><summary>Illustration — A/B bridge</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Budget</th><td>1,200 units × $10 = <strong>$12,000</strong></td></tr>
+          <tr><th>Actual</th><td>1,260 units × $9.80 = <strong>$12,348</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Volume</th><td>+60 units × $10 = <strong>+$600</strong></td></tr>
+          <tr><th>Price</th><td>($9.80 − $10) × 1,260 = <strong>−$252</strong></td></tr>
+        </table>
+        <div class="result">Net variance = <strong>+$348 (F)</strong></div>
+      </div>
+    </div>
+  </div>
+</details>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section id="tx-impacts" class="section">
+        <h2>Transaction Impacts on FS & Notes</h2>
+        <div class="kv">
+          <div>
+            <h3>Common scenarios</h3>
+            <ul class="tight">
+              <li><strong>Lease classification</strong>: Finance lease ↑ assets & debt; ↑ interest & amortization; EBITDA ↑ vs operating lease; affects leverage & TIE.</li>
+              <li><strong>Revenue timing</strong>: Prepayments → <em>contract liability</em> (deferred revenue); recognition ↓ liability and ↑ revenue; disclose performance obligations.</li>
+              <li><strong>Inventory write‑down</strong>: ↑ COGS now; ↓ inventory; margins & turnover impacted; disclose method & lower of cost/NRV.</li>
+              <li><strong>FX translation</strong>: OCI/AOCI for translation adjustments; ratios using equity may shift; notes disclose functional currency.</li>
+              <li><strong>Share repurchases</strong>: ↓ shares outstanding; ↑ EPS mechanically; equity ↓ (treasury stock); consider cash/financing effects.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>How to analyze</h3>
+            <ol class="tight">
+              <li>Identify <em>which statements & line items</em> move (IS, BS, CF; operating vs financing).</li>
+              <li>Trace <strong>ratio effects</strong> (liquidity, leverage, profitability).</li>
+              <li>Read <strong>notes</strong> for policy choices, estimates, and pending obligations.</li>
+              <li>Bridge period‑over‑period to separate <em>policy changes</em> from <em>volume/price</em> effects.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="data-analytics" class="section">
+        <h2>Using Data Analytics Outputs</h2>
+        <ul>
+          <li><strong>Descriptive</strong> dashboards summarize KPIs; <strong>diagnostic</strong> looks for drivers (drill‑downs, correlations).</li>
+          <li><strong>Predictive</strong> models forecast (e.g., AR collections, churn); <strong>prescriptive</strong> suggests actions (pricing, inventory).</li>
+          <li>Common visuals: line trends, heatmaps, cohort tables, scatter + trend line.</li>
+          <li>Guardrails: correlation ≠ causation; confirm with controlled comparisons or domain knowledge.</li>
+        </ul>
+        
+<details><summary>Illustration — Correlation</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <p>Scatter of weekly ad spend vs sales.</p>
+        <span class="badge">R² = 0.62</span>
+      </div>
+      <div>
+        <h4>Interpretation</h4>
+        <ul class="tight">
+          <li>Ad spend explains some (not all) variation.</li>
+          <li>Check confounders: seasonality, promotions, price changes.</li>
+          <li>Run a controlled A/B test or multivariate model before concluding causality.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="nonfinancial" class="section">
+        <h2>Non‑Financial & Non‑GAAP Measures</h2>
+        <div class="kv">
+          <div>
+            <h3>Examples</h3>
+            <ul class="tight">
+              <li>Customer: active users, retention/churn, NPS, ARPU.</li>
+              <li>Operations: cycle/queue time, tickets closed on time, defect rate, utilization, throughput.</li>
+              <li>People: turnover, time‑to‑hire, engagement.</li>
+            </ul>
+            <h3>Balanced scorecard</h3>
+            <ul class="tight">
+              <li>Perspectives: Financial, Customer, Internal Process, Learning & Growth.</li>
+              <li>Link drivers to outcomes via strategy maps and targets.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Common non‑GAAP</h3>
+            <ul class="tight">
+              <li><strong>EBITDA</strong> = Operating income + D&amp;A (or NI + interest + taxes + D&amp;A).</li>
+              <li><strong>Free Cash Flow</strong> = CFO − Capex.</li>
+              <li><strong>Core/Adjusted earnings</strong>: exclude specified unusual/non‑recurring items; disclose methodology consistently.</li>
+            </ul>
+            <p class="warn"><strong>Caution:</strong> Non‑GAAP must be reconciled to GAAP in public reporting; for analysis, document definitions and ensure comparability across periods/peers.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="benchmarking" class="section">
+        <h2>Benchmarking Techniques</h2>
+        <div class="kv">
+          <div>
+            <h3>Internal</h3>
+            <ul class="tight">
+              <li>Compare to <strong>prior periods</strong>, budgets, and <strong>peer units</strong> (plants/stores/regions).</li>
+              <li>Normalize for scale, seasonality, and mix; use per‑unit or per‑customer metrics.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>External</h3>
+            <ul class="tight">
+              <li>Peer set (public comps or industry data): margins, growth, productivity, capital intensity.</li>
+              <li>Watch for <strong>definition drift</strong> in non‑GAAP metrics; reconcile to GAAP when possible.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="cost" class="section">
+        <h2>Managerial & Cost Topics</h2>
+        <div class="kv">
+          <div>
+            <h3>Cost behavior & CVP</h3>
+            <ul class="tight">
+              <li>Fixed, variable, mixed; use <strong>high‑low</strong> or <strong>regression</strong> to split mixed costs.</li>
+              <li><strong>Contribution margin</strong> = Sales − Variable costs; <strong>CM ratio</strong> = CM / Sales.</li>
+              <li><strong>Breakeven units</strong> = Fixed costs / CM per unit.</li>
+            </ul>
+            
+<details><summary>Illustration — High‑low</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Highest month</th><td>9,000 machine hours; cost <strong>$41,000</strong></td></tr>
+          <tr><th>Lowest month</th><td>5,000 hours; cost <strong>$29,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Variable rate</th><td>(41,000 − 29,000) ÷ (9,000 − 5,000) = <strong>$3 per hr</strong></td></tr>
+          <tr><th>Fixed cost</th><td>41,000 − 9,000 ×$3 = <strong>$14,000</strong></td></tr>
+        </table>
+        <div class="result">Cost = $14,000 + $3 × (hours)</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+          </div>
+          <div>
+            <h3>Costing systems & variances</h3>
+            <h3>Costing methods — quick guide</h3>
+            <ul class="tight">
+              <li><strong>Job order</strong>: costs accumulated by <em>job</em>; job cost sheet; overhead via predetermined rate × actual driver.</li>
+              <li><strong>Process</strong>: mass production; use <strong>equivalent units</strong> (WA or FIFO) to spread costs across units.</li>
+              <li><strong>Absorption vs variable</strong>: absorption capitalizes FOH in inventory; variable treats FOH as period cost.</li>
+              <li><strong>ABC</strong>: pools by activity; assign via cost drivers to improve product/customer profitability analysis.</li>
+            </ul>
+            
+<details><summary>Illustration — Equivalent units (WA)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Beg WIP</th><td>1,000 units @ 60%</td></tr>
+          <tr><th>Started</th><td>4,000 units</td></tr>
+          <tr><th>End WIP</th><td>800 units @ 25%</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute (Conversion)</h4>
+        <table class="table-min">
+          <tr><th>Units completed</th><td>(1,000 + 4,000 − 800) = 4,200</td></tr>
+          <tr><th>EU of End WIP</th><td>800 × 25% = 200</td></tr>
+          <tr><th><strong>Equivalent units</strong></th><td><strong>4,200 + 200 = 4,400</strong></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+
+            <ul class="tight">
+              <li><strong>Absorption</strong> vs <strong>variable</strong> costing; <strong>ABC</strong> for overhead drivers.</li>
+              <li>Standard cost variances:
+                <ul>
+                  <li>DM price = (AP − SP) × AQ; DM quantity = (AQ − SQ) × SP</li>
+                  <li>DL rate = (AR − SR) × AH; DL efficiency = (AH − SH) × SR</li>
+                  <li>VOH spending/efficiency; FOH budget/volume</li>
+                </ul>
+              </li>
+              <li><strong>Sales price‑volume‑mix</strong> analysis to explain revenue variance.</li>
+            </ul>
+            
+<details><summary>Illustration — Price/Volume/Mix</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Budget</th><td>A: 800 @ $15; B: 200 @ $25 → <strong>$17,000</strong></td></tr>
+          <tr><th>Actual</th><td>A: 700 @ $16; B: 350 @ $24 → <strong>$19,600</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Price</th><td>($16−$15)×700 + ($24−$25)×350 = <strong>+$350</strong></td></tr>
+          <tr><th>Volume (at budget mix)</th><td>Total units: 1,050 vs 1,000 → +50 at budget mix (80/20): 40 A, 10 B → 40×$15 + 10×$25 = <strong>+$850</strong></td></tr>
+          <tr><th>Mix</th><td>Remainder = 19,600 − (17,000 + 350 + 850) = <strong>+$1,400</strong></td></tr>
+        </table>
+        <div class="result">ΔRevenue = +$2,600 (Price +$350, Volume +$850, Mix +$1,400)</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick Reference</h2>
+        <div class="kv">
+          <div>
+            <h3>Ratio set</h3>
+            <ul class="tight">
+              <li>Current, Quick, D/E, TIE, Gross/Net margin, ROA, ROE, Inv Turnover, DSO.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Workflow</h3>
+            <ol class="tight">
+              <li>Verify data mapping & period cutoffs.</li>
+              <li>Run horizontal, vertical, and ratio scans to find hotspots.</li>
+              <li>Bridge significant variances into price/rate vs volume vs mix.</li>
+              <li>Layer in non‑financial drivers & benchmarks; conclude with risks/opportunities.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Common‑size</summary>
+          <p>Common‑size income statements most often express each line as a percentage of:</p>
+          <ol type="A">
+            <li>Total assets</li>
+            <li>Revenue</li>
+            <li>Gross profit</li>
+            <li>Net income</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> On the IS, common‑size uses revenue (100%).</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Quick ratio</summary>
+          <p>Which item is excluded from the numerator of the quick ratio?</p>
+          <ol type="A">
+            <li>Cash equivalents</li>
+            <li>Accounts receivable</li>
+            <li>Inventory</li>
+            <li>Marketable securities</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Inventory is excluded from quick assets.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Price vs volume</summary>
+          <p>Sales budget assumed 10,000 units at $12. Actual was 9,500 units at $13. Which is true?</p>
+          <ol type="A">
+            <li>Price variance unfavorable; volume favorable</li>
+            <li>Price favorable; volume unfavorable</li>
+            <li>Both unfavorable</li>
+            <li>Both favorable</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Higher price is favorable; lower volume is unfavorable.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> EBITDA</summary>
+          <p>EBITDA most directly removes the effects of:</p>
+          <ol type="A">
+            <li>Working capital changes</li>
+            <li>Debt financing and non‑cash depreciation</li>
+            <li>Capital expenditures</li>
+            <li>Taxes only</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> EBITDA excludes interest, taxes, and non‑cash D&amp;A.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> High‑low</summary>
+          <p>Using the high‑low method, variable cost per unit equals:</p>
+          <ol type="A">
+            <li>(High cost − Low cost) ÷ (High activity − Low activity)</li>
+            <li>(High activity − Low activity) ÷ (High cost − Low cost)</li>
+            <li>Total cost ÷ Total activity</li>
+            <li>(Budget cost − Actual cost) ÷ Budget activity</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Classic high‑low formula.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>6.</strong> Balanced scorecard</summary>
+          <p>Which perspective focuses on training, skills, and culture?</p>
+          <ol type="A">
+            <li>Customer</li>
+            <li>Internal process</li>
+            <li>Learning & growth</li>
+            <li>Financial</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Learning & growth covers capability building.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>7.</strong> Times interest earned</summary>
+          <p>A company has EBIT of $600 and interest expense of $150. TIE equals:</p>
+          <ol type="A">
+            <li>2.0</li>
+            <li>3.0</li>
+            <li>4.0</li>
+            <li>0.25</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> $600 ÷ $150 = 4.0.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>8.</strong> Uplift analysis</summary>
+          <p>A regression model shows an R² of 0.15 for ad spend vs sales. Best next step?</p>
+          <ol type="A">
+            <li>Scale ad spend dramatically</li>
+            <li>Treat result as causal</li>
+            <li>Test additional drivers and control for seasonality</li>
+            <li>Discard the model and stop analysis</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Low explanatory power—add variables and controls before conclusions.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>9.</strong> DM variance</summary>
+          <p>Which formula identifies the <em>materials price variance</em>?</p>
+          <ol type="A">
+            <li>(AQ − SQ) × SP</li>
+            <li>(AP − SP) × AQ</li>
+            <li>(AR − SR) × AH</li>
+            <li>(AH − SH) × SR</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Price variance uses actual quantity at actual vs standard price.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>10.</strong> Common pitfall</summary>
+          <p>When a correlation appears strong on a dashboard, the appropriate conclusion is:</p>
+          <ol type="A">
+            <li>There is a causal relationship</li>
+            <li>Correlation implies causation if R² &gt; 0.60</li>
+            <li>Use it as a clue; verify with additional analysis or controlled comparisons</li>
+            <li>Ignore correlations entirely</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Treat correlations as diagnostic leads, not proof of causality.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

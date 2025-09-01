@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Sampling Techniques (Area III.C, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area III.C — Sampling techniques, aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sampling Techniques</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Distinguish <strong>attribute sampling</strong> (tests of controls) from <strong>variables sampling</strong> (substantive testing).</li>
+          <li>Explain <strong>MUS/PPS</strong> vs <strong>classical variables sampling</strong> (mean‑per‑unit, ratio, difference) and when to use each.</li>
+          <li>Determine <strong>sample size</strong> given tolerable and expected deviation/misstatement, population size/variability, and risk levels.</li>
+          <li>Project results to the population, compute <strong>allowance for sampling risk</strong>, and evaluate against <strong>tolerable misstatement/deviation</strong>.</li>
+          <li>Apply proper selection methods (random/systematic), stratification, and <strong>dual‑purpose testing</strong> where appropriate.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Sampling family</th><th>Used for</th><th>When it shines</th><th>Notes</th></tr>
+          <tr><td><strong>Attribute</strong></td><td>Tests of controls (deviation rate)</td><td>Binary pass/fail conditions</td><td>Inputs: tolerable deviation rate (TDR), expected deviation rate (EDR), population size, risk of assessing CR too low.</td></tr>
+          <tr><td><strong>MUS / PPS</strong></td><td>Substantive tests of details</td><td>Overstatement risks; few expected misstatements; many zero/low balances</td><td>Probability proportional to size; evaluates <em>overstatements</em> well; handle negative/understatements via special procedures or classical methods.</td></tr>
+          <tr><td><strong>Classical variables</strong></td><td>Substantive tests of details</td><td>Balanced over/under misstatements; normal distribution assumptions</td><td>Methods: mean‑per‑unit (MPU), ratio, difference; inputs include sigma/variability and tolerable misstatement.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Attribute Sampling (Controls)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Objective:</strong> Estimate deviation rate of a control to support control reliance.</li>
+        <li><strong>Key risks:</strong> Risk of assessing control risk <em>too low</em> (beta) and <em>too high</em> (alpha).</li>
+        <li><strong>Sample size ↑ when:</strong> higher confidence needed (lower beta risk), higher EDR, lower TDR, or larger population.</li>
+        <li><strong>Evaluate:</strong> Compute sample deviation rate and <em>upper deviation rate</em>; if upper &le; TDR → rely on control; else increase CR and perform more substantive work.</li>
+        <li><strong>Dual‑purpose tests:</strong> One sample tests both control deviations and monetary misstatements in the same items.</li>
+      </ul>
+      <details><summary>Example</summary><p>TDR 5%, EDR 1%, beta risk 5% → sample size ≈ few dozens to 90+ depending on tables. If 2 deviations in 60 items ⇒ SDR 3.3%; upper deviation may exceed 5% → likely cannot rely.</p></details>
+    </div>
+
+    <h2>2) Monetary Unit Sampling (MUS / PPS)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Concept:</strong> Each dollar is a sampling unit; larger items have higher chance of selection (systematic with a random start).</li>
+        <li><strong>When to use:</strong> Existence/overstatement risk (A/R, revenue); few expected misstatements; many small items.</li>
+        <li><strong>Inputs:</strong> Tolerable misstatement (TM), expected misstatement (EM), risk of incorrect acceptance (RIA), population book value.</li>
+        <li><strong>Evaluate:</strong> Project misstatements (tainting × sampling interval) + <em>allowance for sampling risk</em> ⇒ <strong>upper misstatement limit (UML)</strong>; if UML &le; TM ⇒ accept.</li>
+        <li><strong>Pros/cons:</strong> Efficient for overstatements; struggles with <em>understatements/zero/negative</em> balances without tweaks.</li>
+      </ul>
+      <details><summary>Mini‑glossary</summary>
+        <ul>
+          <li><em>Sampling interval</em> = population book value ÷ sample size.</li>
+          <li><em>Tainting</em> = (misstatement ÷ book value of item), capped at 100%.</li>
+        </ul>
+      </details>
+    </div>
+
+    <h2>3) Classical Variables Sampling</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Mean‑per‑Unit (MPU)</h3>
+        <ul>
+          <li>Estimate population audited value = sample audited mean × population size.</li>
+          <li>Precision/allowance based on sample standard deviation and confidence factor.</li>
+          <li>Best when population variability is known/estimable and misstatements are two‑sided.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Ratio & Difference Estimation</h3>
+        <ul>
+          <li><strong>Ratio:</strong> Apply audited/book ratio from sample to population book value.</li>
+          <li><strong>Difference:</strong> Apply average misstatement per item × population size.</li>
+          <li>Work well when audited and book amounts are strongly correlated (ratio) or when misstatements are fairly constant per item (difference).</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>4) Sample Selection & Stratification</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Selection:</strong> random (preferred), systematic (ok if no hidden pattern); avoid <em>haphazard</em> bias.</li>
+        <li><strong>Stratification:</strong> split population into bands (e.g., items &gt; TM individually tested; remaining bands by size); reduces variability and sample size.</li>
+        <li><strong>Block/cluster sampling</strong> generally discouraged for audit objectives due to bias risk.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Always test individually significant items (e.g., &gt; sampling interval or near TM) outside the sample.</div>
+    </div>
+
+    <h2>5) Relationships You Must Know (Exam‑style)</h2>
+    <div class="card">
+      <table class="tbl">
+        <tr><th>If this ↑</th><th>Then sample size…</th><th>Why</th></tr>
+        <tr><td>RMM / RIA (confidence needed)</td><td>↑</td><td>More evidence required.</td></tr>
+        <tr><td>Tolerable deviation/misstatement</td><td>↓</td><td>Tighter threshold demands larger sample.</td></tr>
+        <tr><td>Expected deviation/misstatement</td><td>↑</td><td>Need bigger sample to detect.</td></tr>
+        <tr><td>Population variability</td><td>↑</td><td>Less predictability → larger sample.</td></tr>
+        <tr><td>Population size</td><td>↑ (controls) / slight (substantive)</td><td>Controls sampling depends on N; variables less sensitive once N is large.</td></tr>
+      </table>
+    </div>
+
+    <h2>6) Evaluating Results & Projecting Misstatements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Controls:</strong> compute <em>upper deviation rate</em> and compare to TDR.</li>
+        <li><strong>MUS:</strong> compute <em>upper misstatement limit</em> (projection + allowance) and compare to TM.</li>
+        <li><strong>Classical:</strong> compute point estimate ± precision; see if <em>likely misstatement</em> exceeds TM.</li>
+        <li>Classify misstatements: <em>factual</em>, <em>projected</em>, <em>judgmental</em>; aggregate across populations and compare with materiality.</li>
+      </ul>
+      <div class="callout danger"><strong>Common pitfalls:</strong> ignoring <em>understatements</em> in MUS; failing to individually test large items; not adjusting for <em>population changes</em> after extraction.</div>
+    </div>
+
+    <h2>7) Documentation</h2>
+    <div class="card">
+      <ul>
+        <li>Objective, population, sampling method, parameters (TM/TDR, EM/EDR, risk levels), selection method, and rationale.</li>
+        <li>Items selected, work performed, misstatements/deviations found, and how results were projected.</li>
+        <li>Allowance/precision, overall conclusion vs tolerable thresholds, and effect on further procedures.</li>
+      </ul>
+    </div>
+
+    <h2>8) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Best method when many zero balances and overstatement risk? <strong>MUS/PPS.</strong></li>
+        <li>Risk names for controls vs substantive? <strong>Controls: assessing CR too low/high; Substantive: incorrect acceptance/rejection.</strong></li>
+        <li>What always gets tested outside the sample? <strong>Individually significant items.</strong></li>
+        <li>Effect of higher expected misstatement on sample size? <strong>Increases.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

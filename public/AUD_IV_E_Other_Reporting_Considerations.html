@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Other Reporting Considerations (Area IV.E, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area IV.E — Other reporting considerations, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Other Reporting Considerations</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Apply reporting requirements to <strong>comparative information</strong>, <strong>other information (OI)</strong>, <strong>supplementary information (SI)</strong>, and <strong>required supplementary information (RSI)</strong>.</li>
+          <li>Report appropriately on <strong>special purpose frameworks (SPF)</strong>, <strong>single financial statements or specific elements</strong>, and <strong>summary financial statements</strong>.</li>
+          <li>Handle <strong>predecessor auditor</strong> involvement, <strong>reissuance</strong>, and <strong>updated reports</strong>.</li>
+          <li>Decide when to include <strong>restriction on use</strong>, <strong>emphasis‑of‑matter</strong>, or <strong>other‑matter</strong> paragraphs.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Situation</th><th>Framework/Guidance</th><th>What you report</th><th>Extra sections / notes</th><th>Use</th></tr>
+          <tr><td>Comparative information</td><td>Auditing standards for comparatives</td><td>Opinion on each period (comparative FS) or on current period with reference to prior (corresponding figures)</td><td>Update prior opinion if different; explain reasons in Other‑Matter</td><td>General‑use</td></tr>
+          <tr><td>Other information (OI) in annual report</td><td>OI responsibilities</td><td>Read for material inconsistencies; describe responsibilities</td><td>Other‑Matter if uncorrected material inconsistency remains</td><td>General‑use</td></tr>
+          <tr><td>Supplementary information (SI)</td><td>In relation to audited FS</td><td>Report on whether SI is fairly stated <em>in relation to</em> the FS</td><td>Separate “Report on SI” section</td><td>General‑use</td></tr>
+          <tr><td>Required supplementary information (RSI)</td><td>Limited procedures</td><td>Describe limited procedures (inquiry/consistency) — no opinion</td><td>Other‑Matter if omitted, not consistent, or unable to complete procedures</td><td>General‑use</td></tr>
+          <tr><td>Special purpose frameworks (SPF)</td><td>SPF reporting</td><td>Unmodified/modified opinion on SPF FS</td><td>Describe basis of accounting; may include restriction when required</td><td>Depends</td></tr>
+          <tr><td>Single FS or specific element</td><td>AU‑C for single statements/elements</td><td>Opinion on the single statement/element</td><td>Consider consistency with full FS; do not express piecemeal unmodified if full FS is adverse/disclaimer (with exceptions)</td><td>Usually restricted if contract‑driven</td></tr>
+          <tr><td>Summary financial statements</td><td>Reporting on summary FS</td><td>Opinion whether summary is consistent with audited FS</td><td>Refer to audited FS and report; include date and auditor</td><td>General‑use</td></tr>
+          <tr><td>Predecessor auditor involvement</td><td>Reissuance/other references</td><td>Decide whether to reissue prior report or for successor to reference</td><td>Read current period FS; obtain rep letter from successor; dual‑date if appropriate</td><td>General‑use</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Comparative Information</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Comparative financial statements:</strong> Auditor expresses an opinion on <strong>each period</strong> presented.</li>
+        <li><strong>Corresponding figures:</strong> Prior period amounts are presented as part of the current period FS; opinion is on the <strong>current period only</strong> (unless otherwise required).</li>
+        <li>If the <strong>prior opinion changes</strong>, disclose the reasons in an <strong>Other‑Matter</strong> paragraph and state the new opinion.</li>
+        <li>When prior period was audited by a <strong>predecessor auditor</strong>, the successor may (a) present the predecessor’s report, (b) reissue it, or (c) reference the prior period as “audited by other auditors.”</li>
+      </ul>
+    </div>
+
+    <h2>2) Other Information (OI)</h2>
+    <div class="card">
+      <ul>
+        <li>Read OI (e.g., annual report narrative sections) for <strong>material inconsistencies</strong> with the audited financial statements or the auditor’s knowledge obtained during the audit.</li>
+        <li>If a material inconsistency is identified, discuss with management and request <strong>correction</strong>; if not corrected, consider <strong>Other‑Matter</strong> paragraph describing the issue.</li>
+        <li>OI is <strong>not covered</strong> by the opinion on the financial statements; the report describes the auditor’s responsibilities regarding OI.</li>
+      </ul>
+    </div>
+
+    <h2>3) Supplementary Information (SI)</h2>
+    <div class="card">
+      <ul>
+        <li>When engaged, report whether SI is <strong>fairly stated in all material respects in relation to</strong> the financial statements as a whole.</li>
+        <li>Perform procedures: evaluate presentation, reconcile SI to the underlying records or to the financial statements, and apply appropriate analytical or test procedures.</li>
+        <li>Include a separate <strong>“Report on Supplementary Information”</strong> section in the auditor’s report or issue a separate report.</li>
+      </ul>
+    </div>
+
+    <h2>4) Required Supplementary Information (RSI)</h2>
+    <div class="card">
+      <ul>
+        <li>Perform only <strong>limited procedures</strong> (inquire of management and compare for consistency with the financial statements and auditor’s knowledge).</li>
+        <li>Do <strong>not</strong> express an opinion or provide assurance; include an <strong>Other‑Matter</strong> paragraph if RSI is omitted, materially misstated, or the auditor is unable to complete the required procedures.</li>
+        <li>RSI is usually required by a designated accounting standard setter (for example, certain governmental Management’s Discussion and Analysis).</li>
+      </ul>
+    </div>
+
+    <h2>5) Special Purpose Frameworks (SPF)</h2>
+    <div class="card">
+      <ul>
+        <li>Examples: <strong>cash basis, tax basis, regulatory basis, contractual basis</strong>.</li>
+        <li>Identify the framework in the report and <strong>describe the basis of accounting</strong> in an <strong>Emphasis‑of‑Matter</strong> paragraph.</li>
+        <li>Consider <strong>restriction on use</strong> when the framework is for limited users (e.g., contractual basis) or when law/regulation requires it.</li>
+        <li>Titles of statements should reflect the basis (e.g., “Statement of Assets and Liabilities — Income Tax Basis”).</li>
+      </ul>
+    </div>
+
+    <h2>6) Single Financial Statement or Specific Element</h2>
+    <div class="card">
+      <ul>
+        <li>Express an opinion on the <strong>single statement</strong> (e.g., Statement of Cash Flows) or <strong>specific element</strong> (e.g., accounts receivable balance or net income).</li>
+        <li>Evaluate the relationship to the audited financial statements when both are presented; avoid <strong>piecemeal opinions</strong> (cannot issue an unmodified opinion on an element if the financial statements as a whole have an adverse or disclaimer opinion, with limited exceptions such as an element not affected by the adverse matter).</li>
+        <li>Consider whether <strong>restricted use</strong> is appropriate (often required for elements related to contracts or regulatory requirements).</li>
+      </ul>
+    </div>
+
+    <h2>7) Summary Financial Statements</h2>
+    <div class="card">
+      <ul>
+        <li>Report whether the summary financial statements are <strong>consistent, in all material respects</strong>, with the audited financial statements.</li>
+        <li>Identify the audited financial statements (entity, periods) and the auditor (including date of report).</li>
+        <li>If the audited financial statements received a <strong>modified opinion</strong>, evaluate the effect on the summary report.</li>
+      </ul>
+    </div>
+
+    <h2>8) Predecessor Auditor, Reissuance & Updates</h2>
+    <div class="card">
+      <ul>
+        <li>When <strong>reissuing</strong> a predecessor report, read the current period financial statements, obtain a representation letter from the <strong>successor auditor</strong>, and consider whether the original report requires <strong>revision</strong>.</li>
+        <li>If the predecessor is <strong>not reissuing</strong>, the successor may reference the predecessor’s report in an <strong>Other‑Matter</strong> paragraph, describing the type of opinion, the date, and any emphasis/other‑matter paragraphs.</li>
+        <li>When prior opinion changes, include an <strong>Other‑Matter</strong> explaining the reasons and the updated opinion.</li>
+      </ul>
+    </div>
+
+    <h2>9) Documentation</h2>
+    <div class="card">
+      <ul>
+        <li>Basis for conclusions about OI, SI, and RSI, including procedures applied and correspondence with management about corrections.</li>
+        <li>Assessment of framework identification and wording for SPF reporting.</li>
+        <li>Rationale for any restriction on use and the exact wording of Emphasis‑of‑Matter/Other‑Matter paragraphs.</li>
+        <li>Support for comparative information decisions and any predecessor auditor correspondence.</li>
+      </ul>
+    </div>
+
+    <h2>10) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Do you opine on RSI? <strong>No</strong>—limited procedures only; use an Other‑Matter for problems.</li>
+        <li>SI opinion wording? <strong>“Fairly stated, in all material respects, in relation to the financial statements as a whole.”</strong></li>
+        <li>When must you avoid piecemeal opinions? <strong>When the financial statements as a whole have an adverse or disclaimer opinion.</strong></li>
+        <li>How to present a tax‑basis set of statements? <strong>Identify the basis and include an Emphasis‑of‑Matter describing it.</strong></li>
+        <li>Prior opinion changed — where explained? <strong>Other‑Matter paragraph.</strong></li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

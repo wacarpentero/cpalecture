@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trusts — TCP II.D (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:400}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Trusts</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Differentiate <strong>simple</strong> vs <strong>complex</strong> trusts; identify filing and year‑end rules (Form 1041; calendar year; exemptions).</li>
+        <li>Compute <strong>DNI</strong> and the <strong>distribution deduction</strong>; determine amounts taxable to beneficiaries vs the trust.</li>
+        <li>Apply rules for <strong>tax‑exempt interest allocation</strong> within DNI and to beneficiaries (exclusion ratio).</li>
+        <li>Identify <strong>capital gains</strong> treatment (generally corpus, excluded from DNI unless allocated/required to distribute).</li>
+        <li>Explain <strong>grantor vs nongrantor</strong> trusts and when the grantor is taxed on trust income.</li>
+        <li>Apply <strong>§663(b) 65‑day election</strong>, <strong>separate share rule</strong>, <strong>specific bequests</strong> exclusion.</li>
+        <li>Describe <strong>QSST vs ESBT</strong> treatment for S‑corporation stock held in trust.</li>
+        <li>Recognize <strong>charitable deduction</strong> under §642(c) and key differences from individual §170.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>One‑page map</h2>
+      <div class="diagram">Simple trust → must distribute all fiduciary accounting income (FAI); no corpus distributions; no charitable deduction; exemption $300.
+Complex trust → anything not simple; exemption $100. Estates → $600.
+DNI ≈ taxable income before distribution deduction and exemption, excluding capital gains allocated to corpus, + tax‑exempt income net of allocable expenses.
+Distribution deduction = min(actual distributions (excl. specific bequests), DNI).
+Beneficiaries taxed up to DNI received (by character proportionally); Trust taxed on retained DNI and capital gains (unless included in DNI).
+65‑day election → treat distributions made within first 65 days as prior‑year distributions.
+Grantor trust → items taxed to grantor (Subpart E). QSST passes S‑corp income to beneficiary; ESBT pays its own tax on S‑income.
+Charitable deduction (§642(c)) → for amounts of <em>gross income</em> paid for charitable purposes pursuant to the instrument; no % limits like §170.</div>
+      <span class="pill">DNI drives who pays</span> <span class="pill">Capital gains ≈ corpus</span> <span class="pill">65‑day election</span>
+    </section>
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>DNI vs FAI:</strong> FAI is a state‑law/accounting concept; DNI is a tax concept that caps how much income beneficiaries must include.</li>
+        <li><strong>Tax‑exempt interest</strong> travels to beneficiaries <em>net of allocable expenses</em> via the exclusion ratio.</li>
+        <li><strong>Capital gains</strong> usually stick to the trust; watch exceptions (allocated to income by instrument/local law, or required to distribute).</li>
+        <li><strong>Specific bequests</strong> of a sum of money or specific property are excluded from DNI if paid in not more than 3 installments.</li>
+        <li><strong>QSST vs ESBT:</strong> QSST—one income beneficiary; S‑income taxed to that beneficiary. ESBT—S‑income taxed at trust level under special rules.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+
+      <h3>1) Simple trust — DNI & distribution</h3>
+      <div class="diagram">Interest $20,000, qualified dividends $10,000, tax‑exempt interest $5,000, trustee fees $3,000 (pro rata).
+DNI = taxable items net of allocable expense + tax‑exempt net = <strong>$32,000</strong>.
+FAI (approx) = <strong>$32,000</strong>. A simple trust distributes FAI; beneficiary includes up to DNI, and the trust claims a distribution deduction up to DNI.</div>
+
+      <h3>2) Complex trust — capital gain excluded from DNI</h3>
+      <div class="diagram">Interest $25,000, dividends $15,000, LT capital gain $12,000 allocated to corpus; fees $4,000; distribution $30,000.
+DNI (no tax‑exempt items, CG excluded) = <strong>$36,000</strong>. Distribution deduction = min(DNI, distributions) = <strong>$30,000</strong>; trust retains <strong>$6,000</strong> of DNI.
+Character to the beneficiary: interest ≈ $18,750, dividends ≈ $11,250.</div>
+
+      <h3>3) 65‑day election</h3>
+      <div class="diagram">Prior‑year DNI $40,000; distributions made in that year $25,000. On Feb 10 next year, trustees pay $10,000.
+Without election → deduction $25,000. With §663(b) election → deduction $35,000 (limited by DNI).</div>
+
+      <h3>4) Exclusion ratio — tax‑exempt interest share to beneficiary</h3>
+      <div class="diagram">DNI total $36,000 with $6,000 tax‑exempt. Beneficiary receives $18,000.
+Exempt ratio = 6000/36000; Beneficiary’s tax‑exempt portion ≈ <strong>$3,000</strong>; taxable portion ≈ <strong>$15,000</strong>.</div>
+    </section>
+
+    <section class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Which describes a <em>simple trust</em>?</p>
+        <ol type="A">
+          <li>Must distribute all income currently and makes no charitable contributions</li>
+          <li>Can accumulate income and make charitable contributions</li>
+          <li>Has no beneficiaries</li>
+          <li>May distribute corpus but not income</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Simple trusts must distribute all income currently, may not make charitable contributions, and generally do not distribute corpus.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> Compute <em>DNI</em>: Interest $30,000, qualified dividends $12,000, tax‑exempt interest $8,000, trustee fees $5,000 (allocate pro rata to all income items). What is DNI?</p>
+        <ol type="A">
+          <li>$45,000</li>
+          <li>$41,000</li>
+          <li>$48,000</li>
+          <li>$35,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — DNI = (taxable income $42,000 − allocable expense $4,200) + (tax‑exempt $8,000 − allocable expense $800) = $45,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Distribution deduction & trust tax: Distributions $35,000 and DNI $45,000. What is the <em>distribution deduction</em> and how much DNI remains taxable to the trust?</p>
+        <ol type="A">
+          <li>Deduction $35,000; Trust retains $10,000</li>
+          <li>Deduction $20,000; Trust retains $25,000</li>
+          <li>Deduction $45,000; Trust retains $0</li>
+          <li>Deduction $0; Trust retains $45,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Distribution deduction = min(distributions, DNI) = $35,000; trust is taxed on the retained portion $10,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Beneficiary taxability when DNI contains tax‑exempt interest: From Q2, tax‑exempt portion of DNI is allocated by ratio. A beneficiary receives $20,000. What amount is <em>taxable</em> to the beneficiary?</p>
+        <ol type="A">
+          <li>$16,800</li>
+          <li>$20,000</li>
+          <li>$15,000</li>
+          <li>$10,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Taxable share = distribution × (1 − exempt ratio). Exempt ratio = 7200.00 / 45000 of DNI; taxable ≈ $16,800, exempt ≈ $3,200 reported on Schedule K‑1 as tax‑exempt interest.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> 65‑day election: Prior‑year DNI $40,000; distributions paid in that year $25,000. The fiduciary pays $10,000 on Feb 10 of the following year and makes the §663(b) election. Prior‑year distribution deduction becomes:</p>
+        <ol type="A">
+          <li>$35,000</li>
+          <li>$25,000</li>
+          <li>$25,000</li>
+          <li>$30,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Election lets the trust treat distributions within the first 65 days as prior‑year payments; deduction rises to $35,000 (still limited by DNI).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> Personal exemptions for Subchapter J: Which is correct?</p>
+        <ol type="A">
+          <li>Simple trust $300; Complex trust $100; Estate $600</li>
+          <li>Simple trust $100; Complex trust $300; Estate $600</li>
+          <li>All trusts $600</li>
+          <li>Trusts have no personal exemptions</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Simple $300, complex $100, estate $600.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Which statement about <em>grantor trusts</em> is most accurate?</p>
+        <ol type="A">
+          <li>Trust income is always taxed to the trust</li>
+          <li>Trust items are taxed to the grantor if the grantor retains certain powers or benefits</li>
+          <li>Beneficiaries always pay tax on undistributed income</li>
+          <li>Grantor trusts cannot hold S‑corp stock</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Under §§671–679, specified powers/benefits cause the grantor to be treated as owner and taxed on trust income.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> QSST vs ESBT: Which is correct?</p>
+        <ol type="A">
+          <li>QSST must have a single income beneficiary; S‑income taxed to that beneficiary</li>
+          <li>ESBT S‑income is taxed to the beneficiary</li>
+          <li>QSST can have multiple income beneficiaries</li>
+          <li>Neither trust can hold S‑corp stock</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — QSST requires one income beneficiary and passes S‑income to that beneficiary. ESBT pays its own tax on S‑income under special rules.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> Charitable deduction under §642(c) is allowed when the trust:</p>
+        <ol type="A">
+          <li>Pays or sets aside amounts out of <em>gross income</em> for charitable purposes pursuant to the instrument</li>
+          <li>Makes any contribution of corpus regardless of instrument terms</li>
+          <li>Uses the individual §170 percentage limits</li>
+          <li>Claims only if a simple trust</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — §642(c) applies to amounts of <em>gross income</em> paid or set aside for charity as authorized by the governing instrument; different from §170.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Capital gains treatment: A trust realizes LT capital gain of $20,000 allocated to corpus; it distributes income of $15,000 to the beneficiary. Which is most accurate?</p>
+        <ol type="A">
+          <li>The $20,000 capital gain is typically taxed to the trust and excluded from DNI</li>
+          <li>The capital gain is always part of DNI</li>
+          <li>The beneficiary must include the capital gain because there was a distribution</li>
+          <li>The gain is deductible to the trust</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Capital gains are usually allocated to corpus and excluded from DNI unless the instrument/local law allocates them to income or requires distribution.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S Corporations — REG V.C Reviewer</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.code{font-family:inherit;background:rgba(255,255,255,.06);padding:10px;border-radius:8px;overflow:auto}
+.warn{border-left:4px solid var(--warn);padding:10px;background:rgba(255,209,102,.08);border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">S Corporations</div>
+      
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall who can be an eligible <strong>shareholder</strong>, the <strong>single‑class‑of‑stock</strong> rule, the <strong>100‑shareholder</strong> limit, and when S status begins/ends.</li>
+          <li>Identify situations in which S status would be <strong>revoked or terminated</strong> and how to fix them.</li>
+          <li>Calculate <strong>ordinary business income (loss)</strong> and <strong>separately stated items</strong> and understand per‑share, per‑day allocation.</li>
+          <li>Compute and track the <strong>AAA</strong> and determine the <strong>tax treatment of distributions</strong> with and without accumulated E&amp;P.</li>
+          <li>Compute a shareholder’s <strong>stock basis</strong> and <strong>debt basis</strong>, apply the <strong>basis → at‑risk → passive</strong> loss limits, and carryovers.</li>
+          <li>Recognize corporate‑level taxes that can apply: <strong>built‑in gains (BIG) tax</strong>, <strong>passive investment income (PII) tax</strong>, and <strong>LIFO recapture</strong> on election.</li>
+        </ul>
+      </section>
+
+      <section id="eligibility" class="section">
+        <h2>Eligibility & Election</h2>
+        <div class="kv">
+          <div>
+            <h3>Eligibility (Sec. 1361)</h3>
+            <ul>
+              <li>Domestic corporation; <strong>≤100 shareholders</strong>.</li>
+              <li><strong>Eligible shareholders</strong>: individuals (U.S. citizens/residents), estates, certain trusts (QSST/ESBT), and certain tax‑exempt orgs. <em>Not eligible:</em> partnerships, corporations, nonresident aliens.</li>
+              <li><strong>Single class of stock</strong>: identical rights to distribution & liquidation proceeds (voting differences allowed).</li>
+              <li>QSub: 100%‑owned subsidiary may elect to be disregarded.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Election (Sec. 1362)</h3>
+            <ul>
+              <li>File <strong>Form 2553</strong> by the 15th day of the 3rd month of the tax year (generally March 15 for calendar‑year corps) or within relief period.</li>
+              <li>Effective date: beginning of the year if timely; otherwise start of next year (unless late‑election relief).</li>
+              <li><strong>Termination</strong>: (1) Revocation by >50% of shares; (2) Eligibility failure (e.g., NRA becomes a shareholder); (3) Excess PII with accumulated C E&amp;P for <em>three consecutive years</em> (see PII tax below).</li>
+            </ul>
+    </div>
+
+        <p class="warn"><strong>Watch‑out:</strong> Disproportionate distribution/waterfall preferences can create a <em>second class of stock</em>. Written agreements matter.</p>
+      </section>
+
+      <section id="operations" class="section">
+        <h2>Operations & Separately Stated Items</h2>
+        <ul>
+          <li>S corps are pass‑throughs: no entity‑level regular tax. Items flow to shareholders on <strong>Schedule K‑1</strong>.</li>
+          <li><strong>Separately stated</strong>: capital gains/losses, 1231, charitable contributions, §179, interest income, dividends, credits, foreign taxes, etc.</li>
+          <li><strong>Non‑separately stated</strong>: ordinary business income (loss) after trade/business revenues and deductible expenses.</li>
+          <li>Allocation is <strong>per‑share, per‑day</strong> unless a permitted <em>interim closing of books</em> applies (ownership change).</li>
+          <li><strong>Reasonable compensation</strong>: Shareholder‑employees must be paid reasonable W‑2 wages for services; wages are subject to payroll taxes. Distributions aren’t subject to SE tax.</li>
+          <li><strong>Fringe benefits</strong>: >2% shareholders generally include employer‑paid health and certain fringes in wages (with possible above‑the‑line deduction for health insurance).</li>
+        </ul>
+        <details><summary>Illustration — Per‑share, per‑day</summary>
+          <div class="code">
+A owns 100% from Jan 1–Jun 30; sells 50% to B on Jul 1. Full‑year ordinary income = $120.
+Per‑share, per‑day allocation (no book close):
+• A: 6 months × 100% × $120/12 = $60 plus 6 months × 50% × $120/12 = $30 → $90
+• B: 6 months × 50% × $120/12 = $30
+          </div>
+        </details>
+      </section>
+
+      <section id="basis" class="section">
+        <h2>Stock & Debt Basis</h2>
+        <div class="kv">
+          <div>
+            <h3>Stock basis annual adjustments (order)</h3>
+            <ol>
+              <li><strong>Increase</strong> by: income items (taxable & tax‑exempt), separately stated income, and excess depletion.</li>
+              <li><strong>Decrease</strong> by: distributions (not below zero).</li>
+              <li><strong>Decrease</strong> by: nondeductible expenses (incl. 50% meals) and oil & gas depletion.</li>
+              <li><strong>Decrease</strong> by: deductible losses and deductions.</li>
+            </ol>
+            <p>Distributions in excess of stock basis → <strong>capital gain</strong>.</p>
+          </div>
+          <div>
+            <h3>Debt basis (shareholder loans)</h3>
+            <ul>
+              <li>Direct loans from shareholder create <strong>debt basis</strong>. Guarantees do not until paid.</li>
+              <li>Losses reduce <em>stock basis first</em>, then <strong>debt basis</strong>.</li>
+              <li>Later income <strong>restores debt basis first</strong> (to the extent previously reduced), then increases stock basis.</li>
+            </ul>
+    </div>
+
+        <details><summary>Illustration — Basis & debt restoration</summary>
+          <div class="code">
+Year 1: Basis $20; makes $10 loan (debt basis $10). K‑1 loss $40.
+→ Stock basis ↓ to $0 (−$20), debt basis ↓ to $0 (−$20 of debt). $0 carryforward? The remaining $0—none.
+Year 2: Ordinary income $30, no distributions.
+→ Restore debt basis first to $10, then stock basis ↑ by remaining $20.
+          </div>
+        </details>
+      </section>
+
+      <section id="losslimits" class="section">
+        <h2>Loss Limitations (Shareholder Level)</h2>
+        <ul>
+          <li><strong>Basis</strong> limitation: deductible only to the extent of stock + debt basis; excess carries forward.</li>
+          <li><strong>At‑risk</strong> (Sec. 465): generally excludes nonrecourse debt; carries forward until at‑risk increases.</li>
+          <li><strong>Passive activity</strong> (Sec. 469): passive losses offset only passive income unless exception (e.g., real estate professional); suspended until disposition or sufficient passive income.</li>
+          <li>Ordering: apply <strong>basis → at‑risk → passive</strong> tests in that order.</li>
+        </ul>
+      </section>
+
+      <section id="aaa" class="section">
+        <h2>AAA & Distributions</h2>
+        <ul>
+          <li><strong>AAA</strong> tracks accumulated undistributed S‑corp income (post‑S election). Start with 0 at election.</li>
+          <li>With <strong>no accumulated C E&amp;P</strong>: Distributions reduce stock basis (tax‑free) to extent of basis; any excess is capital gain.</li>
+          <li>With <strong>accumulated C E&amp;P</strong>: Ordering is (1) <strong>AAA</strong> (basis reduction, tax‑free), then (2) <strong>dividend</strong> from Accumulated E&amp;P, then (3) return of capital to extent of basis, then (4) capital gain.</li>
+          <li>AAA is adjusted annually (increase for income items; decrease for losses, <em>then</em> for distributions, but not below zero by distributions).</li>
+        </ul>
+        <details><summary>Illustration — Distribution with C E&amp;P</summary>
+          <div class="code">
+AAA 60; Accumulated E&P 25; Stock basis at start 40; Distribution 80.
+Ordering:
+  1) AAA portion 60 → tax‑free; basis ↓ to (40 − 60) = 0 but not below zero.
+  2) Dividend from E&P up to 25 → shareholder dividend income 20 (limited to 25; see basis already at 0).
+  3) Remainder (if any) → capital gain.
+          </div>
+        </details>
+      </section>
+
+      <section id="entitytaxes" class="section">
+        <h2>BIG, PII, LIFO Recapture</h2>
+        <ul>
+          <li><strong>Built‑in gains (BIG) tax</strong>: Applies when a former C corp elects S; corporate‑level tax at corporate rate on <em>net recognized built‑in gain</em> during the <strong>5‑year recognition period</strong>.</li>
+          <li><strong>Passive investment income (PII) tax</strong>: If S corp has accumulated C E&amp;P and PII > 25% of gross receipts, a tax may apply; if this occurs for <strong>3 consecutive years</strong>, S status may terminate beginning the next year.</li>
+          <li><strong>LIFO recapture</strong>: C corp electing S must include LIFO reserve in income (spread over 4 years); pay additional tax like a C corp on the inclusion year.</li>
+        </ul>
+      </section>
+
+      <section id="examples" class="section">
+        <h2>Worked Examples</h2>
+        <table class="table">
+          <thead><tr><th>Topic</th><th>Setup</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Eligibility failure</td>
+              <td>S stock transferred to a nonresident alien on 6/1.</td>
+              <td>S status terminates as of 6/1 (ineligible shareholder). Return splits into S short year (1/1–5/31) and C short year (6/1–12/31).</td>
+            </tr>
+            <tr>
+              <td>Reasonable comp</td>
+              <td>Shareholder draws only distributions while providing full‑time services.</td>
+              <td>IRS may reclassify part as wages (subject to payroll taxes). Always set reasonable salary first.</td>
+            </tr>
+            <tr>
+              <td>Debt basis vs guarantee</td>
+              <td>Shareholder guarantees bank loan but makes no direct loan.</td>
+              <td>No debt basis until the shareholder <em>actually pays</em> the guaranteed debt.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Eligibility — single class of stock</summary>
+          <p>Which of the following <em>would</em> create a prohibited second class of stock?</p>
+          <ol type="A">
+            <li>Voting and non‑voting common with identical liquidation rights.</li>
+            <li>Different dividend rates based on shareholder group agreements.</li>
+            <li>Restricted stock subject to forfeiture.</li>
+            <li>Options/warrants outstanding.</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Different dividend preferences can violate the single‑class rule. Voting differences and reasonable buy‑sell restrictions typically don’t.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Per‑share, per‑day allocation</summary>
+          <p>S corp earns $365 ordinary income in a non‑leap year. On July 1, X sells half of her shares to Y. No interim book close is made. What amount is allocated to X?</p>
+          <ol type="A">
+            <li>$273</li>
+            <li>$183</li>
+            <li>$365</li>
+            <li>$182.50</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> X held 100% for 181 days and 50% for 184 days: 181/365 × 365 + 0.5 × 184/365 × 365 = 181 + 92 = <strong>273</strong>.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Basis vs distributions</summary>
+          <p>At Jan 1, T’s stock basis is $10. During the year, ordinary income is $5 and a distribution of $20 is made. No debt basis. Tax result?</p>
+          <ol type="A">
+            <li>$5 dividend; $5 capital gain</li>
+            <li>$0 dividend; $5 capital gain</li>
+            <li>$0 dividend; $10 capital gain</li>
+            <li>$5 dividend; $10 capital gain</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Increase basis by income to $15, then reduce by distribution: basis goes to $0 and excess $5 is <strong>capital gain</strong>. S corp distributions generally aren’t dividends unless there is accumulated C E&amp;P.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Loss limitations ordering</summary>
+          <p>Shareholder has $3,000 stock basis, $0 debt basis, is at‑risk for $2,000, and activity is passive. K‑1 loss is $4,000. How much is currently deductible?</p>
+          <ol type="A">
+            <li>$2,000</li>
+            <li>$3,000</li>
+            <li>$4,000</li>
+            <li>$0</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Basis test allows up to $3,000, but the at‑risk test limits to <strong>$2,000</strong>. Passive rules may further suspend the $2,000 unless passive income exists.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> BIG tax</summary>
+          <p>A former C corp with built‑in gain at election sells appreciated assets in year 3 of S status. Which statement is correct?</p>
+          <ol type="A">
+            <li>No corporate‑level tax applies to built‑in gains after the first year.</li>
+            <li>Corporate‑level tax may apply to net recognized BIG during the 5‑year recognition period.</li>
+            <li>BIG tax applies only if the corporation also has passive investment income &gt;25% of gross receipts.</li>
+            <li>BIG tax rate equals the shareholder’s top marginal rate.</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> A corporate‑level BIG tax can apply during the 5‑year recognition period, using the corporate tax rate.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

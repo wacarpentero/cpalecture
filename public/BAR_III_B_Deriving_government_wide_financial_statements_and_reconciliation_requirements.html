@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deriving Government-wide Financial Statements and Reconciliation Requirements</title>
+<style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+ul.tight>li{margin:2px 0}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:2px 10px;margin:2px 6px 8px 0;color:var(--ink)}
+details>summary{cursor:pointer;padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+
+.answer>summary{cursor:pointer;padding:6px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;list-style:none;margin:6px 0}
+.answer>summary::-webkit-details-marker{display:none}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Deriving Government-wide Financial Statements and Reconciliation Requirements</div>
+
+    <section class="section">
+      <h2>Learning Objectives</h2>
+      <div class="grid">
+        <div>
+          Prepare worksheets to convert <strong>governmental fund</strong> statements to <strong>governmental activities</strong> in the government‑wide financial statements.
+        </div>
+        <div>
+          Prepare the schedules that reconcile <strong>total fund balances</strong> and <strong>change in fund balances</strong> with <strong>net position</strong> and <strong>change in net position</strong> reported in the government‑wide statements.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Typical Items & How They Convert</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>From governmental funds (modified accrual)</h3>
+          <ul class="tight">
+            <li><strong>Capital outlay</strong> recorded as expenditures.</li>
+            <li><strong>Debt service</strong> principal & interest recorded as expenditures.</li>
+            <li><strong>Unavailable revenue</strong> (e.g., long‑overdue property taxes) deferred as <em>deferred inflows</em>.</li>
+            <li><strong>Budgetary</strong> & encumbrances not reported in gov‑wide.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Government‑wide (economic resources, accrual)</h3>
+          <ul class="tight">
+            <li>Capitalize capital outlay and record <strong>depreciation</strong>.</li>
+            <li>Report <strong>long‑term debt</strong> as liabilities; <em>do not</em> expense principal repayments.</li>
+            <li>Recognize <strong>revenue accruals</strong> not available under modified accrual.</li>
+            <li>Include <strong>deferred outflows/inflows</strong> (pensions/OPEB, leases) and Internal Service Funds within governmental activities when appropriate.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Worksheet — Fund ▶ Gov‑wide Adjusting Entries (Examples)</h2>
+      <table class="table-min">
+        <tr><th>1. Capital outlay recorded in funds</th><td>Dr Capital assets <strong>$600,000</strong> / Cr Expenses‑depreciation (or Accumulated depreciation) <strong>—</strong>; then record current‑year depreciation separately.</td></tr>
+        <tr><th>2. Current‑year depreciation</th><td>Dr Expenses‑depreciation <strong>$350,000</strong> / Cr Accumulated depreciation <strong>$350,000</strong>.</td></tr>
+        <tr><th>3. Debt issued</th><td>Dr Other financing sources‑proceeds <strong>$1,000,000</strong> / Cr Bonds payable <strong>$1,000,000</strong>.</td></tr>
+        <tr><th>4. Principal repayment</th><td>Dr Bonds payable <strong>$280,000</strong> / Cr Expenditures‑debt service <strong>$280,000</strong>.</td></tr>
+        <tr><th>5. Property tax accrual</th><td>Dr Deferred inflows of resources <strong>$15,000</strong> / Cr Revenues‑property taxes <strong>$15,000</strong>.</td></tr>
+        <tr><th>6. Pension/OPEB</th><td>Record difference between contributions and expense → additional expense <strong>$35,000</strong> (Dr Pension expense / Cr Deferred outflows or Net pension liability).</td></tr>
+        <tr><th>7. Internal Service Fund</th><td>Roll ISF activity/net position into governmental activities; current‑year increase <strong>$25,000</strong>.</td></tr>
+        <tr><th>8. Asset disposal</th><td>Recognize loss on disposal <strong>$10,000</strong> if applicable.</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Reconciliation Schedules (Illustrative)</h2>
+
+      <details open>
+        <summary><strong>A) Total Governmental Fund Balances → Net Position (Gov’t Activities)</strong></summary>
+        <table class="table-min">
+          <tr><th>Total governmental fund balances</th><td><strong>$1,250,000</strong></td></tr>
+          <tr><th>+ Capital assets (net of accumulated depreciation) used in governmental activities</th><td><strong>$4,200,000</strong></td></tr>
+          <tr><th>− Long‑term liabilities (bonds, leases, pensions, etc.)</th><td><strong>($3,350,000)</strong></td></tr>
+          <tr><th>+ Deferred outflows of resources</th><td><strong>$180,000</strong></td></tr>
+          <tr><th>− Deferred inflows of resources</th><td><strong>($120,000)</strong></td></tr>
+          <tr><th>+ Internal Service Fund net position included in governmental activities</th><td><strong>$90,000</strong></td></tr>
+          <tr><th><strong>Net position of governmental activities</strong></th><td><strong>$2,250,000</strong></td></tr>
+        </table>
+      </details>
+
+      <details open>
+        <summary><strong>B) Change in Fund Balances → Change in Net Position (Gov’t Activities)</strong></summary>
+        <table class="table-min">
+          <tr><th>Net change in fund balances — total governmental funds</th><td><strong>$260,000</strong></td></tr>
+          <tr><th>+ Capital outlays (capitalized)</th><td><strong>$600,000</strong></td></tr>
+          <tr><th>− Depreciation expense</th><td><strong>($350,000)</strong></td></tr>
+          <tr><th>− Debt proceeds reported as other financing sources</th><td><strong>($1,000,000)</strong></td></tr>
+          <tr><th>+ Principal repayments of long‑term debt</th><td><strong>$280,000</strong></td></tr>
+          <tr><th>+ Revenue accruals not available to funds</th><td><strong>$15,000</strong></td></tr>
+          <tr><th>− Net pension/OPEB expense in excess of contributions</th><td><strong>($35,000)</strong></td></tr>
+          <tr><th>+ Internal Service Fund change in net position</th><td><strong>$25,000</strong></td></tr>
+          <tr><th>− Loss on asset disposal</th><td><strong>($10,000)</strong></td></tr>
+          <tr><th><strong>Change in net position of governmental activities</strong></th><td><strong>$-215,000</strong></td></tr>
+        </table>
+      </details>
+    </section>
+
+    <section class="section">
+      <h2>Common Governmental Transactions — Measurement & Presentation</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Revenues (nonexchange categories)</h3>
+          <ul class="tight">
+            <li><strong>Derived tax revenues</strong>: recognize when the underlying transaction occurs (sales tax, income tax).</li>
+            <li><strong>Imposed nonexchange</strong> (property tax, fines): recognize in period for which levied; unavailable amounts → deferred inflows in funds.</li>
+            <li><strong>Government‑mandated</strong> & <strong>voluntary nonexchange</strong> (grants): recognize when eligibility requirements are met (time, purpose, reimbursement).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Capital assets & infrastructure</h3>
+          <ul class="tight">
+            <li>Capitalize and depreciate; infrastructure may use <em>modified approach</em> with condition assessments (no depreciation).</li>
+            <li>Impairment losses recognized when decline is unexpected and significant.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Leases & SBITAs</h3>
+          <ul class="tight">
+            <li>GASB 87 (leases) & GASB 96 (subscription-based IT arrangements): recognize <strong>lease/SBITA liability</strong> and <strong>right‑to‑use asset</strong>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pensions & OPEB</h3>
+          <ul class="tight">
+            <li>Record <strong>net pension/OPEB liability (asset)</strong> with related <strong>deferred outflows/inflows</strong> and pension expense using GASB standards.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Other items</h3>
+          <ul class="tight">
+            <li>Encumbrances & budgetary accounts: fund level only.</li>
+            <li>Inventory/prepaids: consumption vs. purchases method (fund level).</li>
+            <li>Interfund activities: eliminate internal balances within activities for gov‑wide.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practice Questions</h2>
+      <details>
+        <summary><strong>1.</strong> Which adjustment increases gov‑wide net position when converting from funds?</summary>
+        <ol type="A">
+          <li>Recording current‑year depreciation</li>
+          <li>Recognizing property tax revenue previously reported as deferred inflow</li>
+          <li>Recording bond proceeds as other financing sources</li>
+          <li>Recognizing debt issuance costs as expense</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary><div class="card"><p><strong>Answer: B.</strong> Recognizing property tax revenue that was deferred in the funds (<em>unavailable</em>) increases revenue at the government‑wide level with no offsetting liability, so it <strong>raises net position</strong>.</p><ul><li><strong>A</strong> Depreciation is an expense that <em>reduces</em> net position.</li><li><strong>C</strong> Bond proceeds are not revenue in government‑wide statements; they create a <em>liability</em> (bonds payable), so they do not increase net position.</li><li><strong>D</strong> Debt issuance costs are expensed and therefore <em>decrease</em> net position.</li></ul></div></details>
+      </details>
+
+      <details>
+        <summary><strong>2.</strong> In the reconciliation of change in fund balances to change in net position, which is <em>added</em>?</summary>
+        <ol type="A">
+          <li>Debt proceeds</li>
+          <li>Capital outlay amounts</li>
+          <li>Depreciation expense</li>
+          <li>Loss on disposal</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary><div class="card"><p><strong>Answer: B.</strong> <strong>Capital outlay</strong> reported as an expenditure in the funds is capitalized as a <strong>capital asset</strong> in government‑wide statements; thus it is <em>added back</em>. Depreciation (C) and losses (D) are deductions, and debt proceeds (A) are removed because they are financing sources in funds but become a <em>liability</em> government‑wide.</p></div></details>
+      </details>
+    </section>
+
+  </div>
+</body>
+</html>

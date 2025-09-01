@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG II.E Business Structure</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  /* Hidden answers control */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Business Structure</h1>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Summarize</strong> the processes for <strong>formation</strong> and <strong>termination</strong> of various business entities.</li>
+<li><strong>Summarize</strong> the <strong>legal characteristics</strong> of sole proprietorships, partnerships (GP/LP/LLP), LLCs, C corporations, and S corporations.</li>
+<li><strong>Explain</strong> the <strong>rights, duties, legal obligations, and authority</strong> of owners and management across entity types.</li>
+<li><strong>Identify</strong> the appropriate structure or consequence given a <strong>specific scenario</strong> (liability, tax, continuity, transferability).</li>
+</ul>
+</section>
+<!-- Illustration -->
+<section class="card">
+<h2>Illustration — Choosing an Entity (high level)</h2>
+<svg aria-label="Choosing a business entity flow (de-overlapped v2)" height="380" role="img" viewbox="0 0 1200 520" width="100%">
+<defs>
+<marker id="arrow" markerheight="10" markerunits="strokeWidth" markerwidth="12" orient="auto" refx="11" refy="5">
+<path d="M0,0 L12,5 L0,10 z" fill="rgba(255,255,255,.7)"></path>
+</marker>
+<style>
+      .node{fill:rgba(96,165,250,.22);stroke:rgba(255,255,255,.38)}
+      .box{fill:rgba(134,183,255,.28);stroke:rgba(255,255,255,.35)}
+      .text{fill:#fff;font-size:18px;font-weight:800}
+      .wire{stroke:rgba(255,255,255,.68);stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .lbl{fill:#fff;font-size:14px;font-weight:700}
+    
+      .stem{stroke:rgba(255,255,255,.68);stroke-width:3;fill:none;marker-end:none}
+    </style>
+</defs>
+<!-- Row 1 -->
+<rect class="node" height="60" rx="12" ry="12" width="380" x="40" y="40"></rect>
+<text class="text" text-anchor="middle" x="230" y="78">Is limited liability for owners a must?</text>
+<line class="wire" x1="420" x2="600" y1="70" y2="70"></line>
+<text class="lbl" x="430" y="58">Yes</text>
+<rect class="box" height="60" rx="12" ry="12" width="220" x="600" y="40"></rect>
+<text class="text" text-anchor="middle" x="710" y="78">LLC or Corporation</text>
+<line class="wire" x1="230" x2="230" y1="100" y2="150"></line>
+<text class="lbl" x="240" y="120">No</text>
+<rect class="box" height="72" rx="12" ry="12" width="340" x="60" y="150"></rect>
+<text class="text" text-anchor="middle" x="230" y="176"><tspan dy="0" x="230">Sole prop or</tspan><tspan dy="24" x="230">General partnership</tspan></text>
+<!-- Row 2A: Corp path question -->
+<line class="wire" x1="710" x2="710" y1="100" y2="150"></line>
+<rect class="node" height="60" rx="12" ry="12" width="380" x="520" y="150"></rect>
+<text class="text" text-anchor="middle" x="710" y="188">Desire pass-through taxation?</text>
+<line class="wire" x1="900" x2="1070" y1="180" y2="180"></line>
+<text class="lbl" x="908" y="168">No</text>
+<rect class="box" height="60" rx="12" ry="12" width="80" x="1070" y="150"></rect>
+<text class="text" text-anchor="middle" x="1110" y="188">C corp</text>
+<!-- Row 2B: Yes to pass-through -> move far right and slightly higher -->
+<line class="stem" x1="710" x2="710" y1="210" y2="272"></line>
+<text class="lbl" x="722" y="226">Yes</text>
+<line class="wire" x1="710" x2="740" y1="272" y2="272"></line>
+<rect class="box" height="72" rx="12" ry="12" width="420" x="740" y="236"></rect>
+<text class="text" text-anchor="middle" x="950" y="266"><tspan dy="0" x="950">S corp (if eligible)</tspan><tspan dy="24" x="950">or LLC taxed as partnership</tspan></text>
+<!-- Row 3: Non-LL branch (push lower) -->
+<line class="wire" x1="230" x2="230" y1="210" y2="310"></line>
+<rect class="node" height="60" rx="12" ry="12" width="340" x="60" y="310"></rect>
+<text class="text" text-anchor="middle" x="230" y="348">Multiple owners?</text>
+<line class="wire" x1="400" x2="580" y1="340" y2="400"></line>
+<text class="lbl" x="410" y="328">Yes</text>
+<rect class="box" height="60" rx="12" ry="12" width="320" x="580" y="370"></rect>
+<text class="text" text-anchor="middle" x="740" y="408">General partnership (consider LLP)</text>
+<line class="wire" x1="230" x2="230" y1="370" y2="440"></line>
+<text class="lbl" x="242" y="392">No</text>
+<rect class="box" height="60" rx="12" ry="12" width="300" x="80" y="440"></rect>
+<text class="text" text-anchor="middle" x="230" y="478">Sole proprietorship</text>
+</svg>
+<p class="muted small">Pick the structure that aligns with owner liability needs, desired tax treatment, investor demands, and continuity goals.</p>
+</section>
+<!-- At a Glance: Entity comparison -->
+<section class="card">
+<h2>At a Glance — Entity Comparison</h2>
+<table class="tbl small">
+<colgroup><col style="width:22%"/><col style="width:18%"/><col style="width:22%"/><col style="width:38%"/></colgroup>
+<tr><th>Entity</th><th>Owners &amp; liability</th><th>Tax default</th><th>Notes</th></tr>
+<tr><td>Sole proprietorship</td><td>One owner; <strong>unlimited</strong> personal liability.</td><td>Schedule C (individual).</td><td>No separate legal entity; easy start/close; no continuity beyond owner; convertable to LLC/corp.</td></tr>
+<tr><td>General partnership (GP)</td><td>≥2 partners; all <strong>jointly &amp; severally liable</strong>.</td><td>Pass‑through (partnership).</td><td>Each partner is agent; default equal rights to manage/share profits; requires partnership agreement for clarity.</td></tr>
+<tr><td>Limited partnership (LP)</td><td>≥1 general partner (unlimited) + limited partners (limited liability).</td><td>Pass‑through.</td><td>Limited partners lack management authority or risk losing limited liability.</td></tr>
+<tr><td>LLP (limited liability partnership)</td><td>Partners protected from other partners’ malpractice debts.</td><td>Pass‑through.</td><td>Often used by professional firms; registration/insurance requirements vary by state.</td></tr>
+<tr><td>LLC</td><td>Members with limited liability.</td><td>Single‑member: disregarded; Multi‑member: partnership; <em>may elect</em> C or S corp.</td><td>Flexible management (member‑ or manager‑managed); default pass‑through; strong charging‑order protection in many states.</td></tr>
+<tr><td>C corporation</td><td>Shareholders with limited liability.</td><td>Entity‑level tax (double taxation).</td><td>Freely transferable shares; perpetual life; preferred by institutional investors.</td></tr>
+<tr><td>S corporation</td><td>Shareholders with limited liability.</td><td>Pass‑through.</td><td>Eligibility limits (≤100 shareholders; individuals/estates/trusts; one class of stock). Basis &amp; AAA rules; wages vs. distributions for owners.</td></tr>
+</table>
+<div class="callout small"><strong>Exam tip:</strong> When a fact pattern screams “limited liability + pass‑through,” think <em>LLC taxed as partnership</em> or <em>S corp</em> (check eligibility).</div>
+</section>
+<!-- Formation & Termination -->
+<section class="card">
+<h2>Formation &amp; Termination Essentials</h2>
+<div class="grid-2 small">
+<div>
+<h4>Formation (state law acts + filings)</h4>
+<table class="tbl small">
+<colgroup><col style="width:38%"/><col style="width:62%"/></colgroup>
+<tr><th>Entity</th><th>Key steps</th></tr>
+<tr><td>GP</td><td>May arise by agreement/ conduct. Recommend written partnership agreement.</td></tr>
+<tr><td>LP</td><td>File <em>certificate of limited partnership</em>; have partnership agreement; designate registered agent.</td></tr>
+<tr><td>LLP</td><td>Register as LLP with state; maintain required insurance/financial responsibility.</td></tr>
+<tr><td>LLC</td><td>File <em>articles of organization</em>; operating agreement; decide member‑ vs. manager‑managed.</td></tr>
+<tr><td>Corporation</td><td>File <em>articles of incorporation</em>; adopt bylaws; appoint directors; issue shares.</td></tr>
+</table>
+</div>
+<div>
+<h4>Termination / dissolution</h4>
+<table class="tbl small">
+<colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Step</th><th>Key points</th></tr>
+<tr><td>Vote/triggering event</td><td>As set in agreement/statute; board/shareholder actions for corporations.</td></tr>
+<tr><td>Winding up</td><td>Collect assets, pay creditors (observe <em>priority</em>), distribute remainder to owners per agreement/ownership.</td></tr>
+<tr><td>Filings</td><td>Articles of dissolution; cancel registrations; finalize tax returns (final forms &amp; information returns).</td></tr>
+</table>
+</div>
+</div>
+</section>
+<!-- Owners & Management -->
+<section class="card">
+<h2>Owners &amp; Management — Rights, Duties, Authority</h2>
+<table class="tbl small">
+<colgroup><col style="width:22%"/><col style="width:32%"/><col style="width:46%"/></colgroup>
+<tr><th>Entity</th><th>Who manages?</th><th>Core rights &amp; duties</th></tr>
+<tr><td>GP</td><td>All partners unless agreed otherwise.</td><td>Apparent authority binds partnership; fiduciary duties (loyalty, care); partners owe contributions; profit/loss sharing as agreed (else equal).</td></tr>
+<tr><td>LP</td><td>General partner(s).</td><td>Limited partners usually no management; liability limited if they refrain from control; distributions per agreement.</td></tr>
+<tr><td>LLC</td><td>Members or managers per operating agreement.</td><td>Operating agreement controls voting, distributions, fiduciary duties; agency authority specified by agreement/statute.</td></tr>
+<tr><td>Corporation</td><td>Board of directors oversees; officers manage day‑to‑day.</td><td>Shareholders elect directors; limited rights (vote on major actions, dividends when declared). Directors/officers owe duties of care and loyalty; <em>business judgment rule</em> protects good‑faith decisions.</td></tr>
+<tr><td>S corporation</td><td>Same as corporation.</td><td>Same governance as C corp; add tax eligibility limits.</td></tr>
+</table>
+<div class="callout small"><strong>Veil piercing:</strong> Even limited‑liability entities can expose owners if there’s undercapitalization, commingling, fraud, or failure to follow formalities.</div>
+</section>
+<!-- Examples -->
+<section class="card">
+<h2>Examples — Apply to scenarios</h2>
+<table class="tbl small">
+<tr><th>Scenario</th><th>Answer</th></tr>
+<tr>
+<td>Two engineers want pass‑through tax, limited liability, and flexibility on unequal profit splits.</td>
+<td><strong>LLC taxed as partnership</strong> suits: limited liability + operating agreement can set profit/loss allocations.</td>
+</tr>
+<tr>
+<td>Founders plan to raise venture capital; investors require preferred stock and vesting.</td>
+<td><strong>C corporation</strong> preferred for institutional investors; flexible equity classes and perpetual life.</td>
+</tr>
+<tr>
+<td>Existing sole proprietor wants another co‑owner without personal liability for each other’s torts.</td>
+<td>Consider <strong>LLP</strong> or <strong>LLC</strong> to limit liability between owners.</td>
+</tr>
+<tr>
+<td>Family business wants one class of stock, pass‑through, and wages to owner‑employees.</td>
+<td><strong>S corporation</strong> if eligibility met; watch reasonable compensation rules.</td>
+</tr>
+</table>
+</section>
+<!-- Tricky Areas -->
+<section class="card">
+<h2>Tricky Areas (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">Agency</span> In a GP, <em>any</em> partner’s apparent authority can bind the firm; in corporations, the <em>officers</em> act as agents under board authority.</li>
+<li><span class="tag">S corp limits</span> One class of stock and eligible shareholders only; exceeding limits terminates S status (watch QSST/ESBT trusts).</li>
+<li><span class="tag">LLC tax</span> Check the default classification regs: single‑member = disregarded; multi‑member = partnership; elections to C/S available.</li>
+<li><span class="tag">Veil piercing</span> Undercapitalization + commingling + misuse of the entity are classic indicators.</li>
+<li><span class="tag">Distributions</span> Partnerships: per agreement; Corporations: only when declared; unlawful dividends may create director liability.</li>
+</ul>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<colgroup><col style="width:34%"/><col style="width:66%"/></colgroup>
+<tr><th>If the prompt wants…</th><th>Think about…</th></tr>
+<tr><td>Limited liability + pass‑through</td><td>LLC (partnership tax) or S corp (if eligible).</td></tr>
+<tr><td>Institutional investors / multiple stock classes</td><td>C corporation.</td></tr>
+<tr><td>Max simplicity</td><td>Sole proprietorship (accept liability tradeoff).</td></tr>
+<tr><td>Professionals sharing profits but limiting malpractice spillover</td><td>LLP.</td></tr>
+<tr><td>Centralized management with perpetual life</td><td>Corporation.</td></tr>
+</table>
+</section>
+<!-- Quick Practice -->
+<section class="card">
+<h2>Quick Practice — 6 MCQs</h2>
+<ol class="small">
+<li><strong>Which structure provides limited liability and default pass‑through taxation for multiple owners?</strong><br/>
+          A. C corporation   B. LLC (multi‑member)   C. Sole proprietorship   D. GP<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Multi‑member LLC is taxed as a partnership by default and offers limited liability.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Who manages a corporation’s day‑to‑day operations?</strong><br/>
+          A. Shareholders   B. Partners   C. Officers   D. Directors<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">C — Officers manage daily operations under the board’s authority.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Which fact pattern most risks veil piercing?</strong><br/>
+          A. Accurate minutes and adequate capital   B. Commingled funds and severe undercapitalization   C. Profitable operations   D. Public company listing<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — Commingling and undercapitalization are classic veil‑piercing factors.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Which statement about S corporations is TRUE?</strong><br/>
+          A. They can have multiple classes of stock   B. They are limited to eligible shareholders and generally ≤100 owners   C. They pay an entity‑level tax like C corps   D. They cannot pay wages to owner‑employees<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">B — S corps have eligibility limits including shareholder type and count; one class of stock only; reasonable wages to owner‑employees are required for services.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>A GP partner signs a supply contract within the ordinary course. Is the partnership bound?</strong><br/>
+          A. Yes, due to apparent authority   B. No, only if unanimous consent   C. No, partners aren’t agents   D. Only if limited partners approve<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">A — Partners are agents of the partnership; acts in the ordinary course bind the firm unless the third party knows of a restriction.</div></details>
+</li>
+<div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+<li><strong>Which filing forms the entity?</strong><br/>
+          A. Articles of organization form an LLC; articles of incorporation form a corporation.   B. Partnership agreement is always filed with the state.   C. Bylaws form a corporation.   D. Operating agreement forms an LLC.<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">A — State filings: <em>articles of organization</em> (LLC) and <em>articles of incorporation</em> (corp). Bylaws/operating agreements govern but do not form the entity.</div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISC II.D — Incident Response (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;         /* deep blue background */
+    --bg2:#0f2a5c;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  header{ text-align:left; 
+    padding: clamp(24px, 3vw, 40px) 18px 12px;
+    text-align:left;
+  }
+  .title{
+    font-weight:800;
+    letter-spacing:.3px;
+    font-size: clamp(26px, 3.2vw, 42px);
+    margin:4px 0 8px;
+   hyphens:none; }
+  .subtitle{
+    font-weight:400;
+    color:var(--muted);
+    margin:0;
+    font-size:clamp(14px,1.4vw,16px);
+  }
+  .container{
+    max-width:1050px;
+    margin:0 auto;
+    padding: 8px 18px 60px;
+  }
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{
+    margin:0 0 10px;
+    font-size: clamp(20px,2.2vw,28px);
+    letter-spacing:.2px;
+   hyphens:none; }
+  h3{
+    margin:20px 0 8px;
+    font-size: clamp(17px,1.7vw,22px);
+  }
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  code, pre{background: var(--code); border:1px solid var(--border); border-radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  code{padding:3px 6px}
+  pre{padding:14px 16px; overflow:auto}
+  .kicker{
+    display:inline-block;
+    padding:4px 10px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:.3px;
+    text-transform:uppercase;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap:16px;
+  }
+  .pill{color:var(--text); border:1px solid var(--border); padding:8px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;
+    border-radius:12px;
+    border:1px dashed var(--border);
+    white-space:pre-wrap;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  details{
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    background:rgba(255,255,255,.02);
+    margin:10px 0;
+  }
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{
+    cursor:pointer;
+    font-weight:600;
+    color:var(--text);
+  }
+  .je{
+    background:var(--code);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    margin:10px 0;
+    overflow:auto;
+  }
+  .toc{
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;
+  }
+  .toc a{border:1px solid var(--border); border-radius:999px; padding:8px 12px; display:inline-block}
+  .header-inner{max-width:1050px;margin:0 auto;padding:0 18px;} 
+  footer{
+    text-align:center; color:var(--muted); padding:28px 12px 60px;
+  }
+  .badge{
+    font-size:12px; color:var(--muted);
+  }
+  .answer{color:var(--ok); font-weight:700}
+  .hr{height:1px; background:var(--border); margin:16px 0}
+</style>
+</head>
+<body>
+<header><div class="header-inner"><h1 class="title">Incident Response</h1>
+  </div></header>
+
+<main class="container">
+  <section id="overview" class="card">
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li><strong>Differentiate</strong> security <em>events</em> vs. <em>incidents</em>.</li>
+      <li><strong>Explain</strong> cyber insurance as a mitigation strategy (coverage, accounting, disclosures).</li>
+      <li><strong>Summarize</strong> contents of an Incident Response Plan (IRP): roles, responsibilities, steps, timelines.</li>
+      <li><strong>Test</strong> whether an entity followed its IRP (walkthroughs, evidence, metrics).</li>
+    </ul>
+    <div class="hr"></div>
+    <p class="badge">Exam planning: Expect MCQs &amp; TBS centered on classification, IRP completeness, procedures, and insurance accounting.</p>
+  </section>
+
+  <section id="concepts" class="card">
+    <h2>Core concepts, made simple</h2>
+    <h3>A. Event vs. Incident — quick cut</h3>
+    <ul>
+      <li><strong>Security event:</strong> observable occurrence (e.g., IDS alert, failed login). Monitor/triage.</li>
+      <li><strong>Security incident:</strong> event (or series) that <strong>impacts confidentiality, integrity, or availability</strong> or violates policy → requires response.</li>
+    </ul>
+    <div class="diagram">All activity → Event → (Has impact/violation?) → Yes → Incident → IR actions
+                                         └── No ───────→ Keep monitoring/logging</div>
+
+    <h3>B. NIST incident response life cycle</h3>
+    <ol>
+      <li><strong>Preparation</strong></li>
+      <li><strong>Detection &amp; Analysis</strong></li>
+      <li><strong>Containment, Eradication, Recovery</strong></li>
+      <li><strong>Post‑Incident Activity</strong></li>
+    </ol>
+
+    <h3>C. What belongs in an IR Plan (IRP)</h3>
+    <ul>
+      <li><strong>Roles &amp; responsibilities</strong>: IR lead, forensics, IT ops, legal, comms, exec sponsor.</li>
+      <li><strong>Methods/steps</strong>: declare, triage, contain, eradicate, recover, close.</li>
+      <li><strong>Timelines &amp; severity</strong>: SLAs for detection, containment, notification; severity schema.</li>
+      <li><strong>Communications</strong>: internal, customers, regulators, insurers.</li>
+      <li><strong>Evidence handling</strong>: chain of custody, logging, ticketing.</li>
+      <li><strong>Testing cadence</strong>: tabletop, simulations, metrics (MTTD/MTTR).</li>
+    </ul>
+  </section>
+
+  <section id="insurance" class="card">
+    <h2>Cyber insurance — what CPAs must know</h2>
+    <p><strong>Why it matters:</strong> Transfers part of financial risk; often bundles IR vendors (forensics, breach counsel). Coverage is conditional (triggers, exclusions, retentions).</p>
+
+    <h3>Recognition &amp; measurement (GAAP themes)</h3>
+    <ul>
+      <li>Recognize a <strong>loss/expense</strong> for breach costs when incurred or probable/estimable.</li>
+      <li>Recognize <strong>insurance receivable only when recovery is probable</strong> and not above the related recognized loss.</li>
+      <li>Classify recovery in the <strong>same line as the related loss</strong>; don’t pre‑recognize excess as a gain.</li>
+    </ul>
+
+    <h3>Disclosures</h3>
+    <ul>
+      <li>Nature of incident, timing, business impact.</li>
+      <li>Costs incurred and expected insurance recovery (as facts evolve).</li>
+    </ul>
+    <span class="pill">Probable ≠ certain</span> <span class="pill">Match classification</span> <span class="pill">Update disclosures</span>
+  </section>
+
+  <section id="testing" class="card">
+    <h2>IR Testing Map</h2>
+    <div class="diagram">Plan Exists? → YES → Was it followed?
+  ├─ Evidence of declaration → ticket created, timestamp
+  ├─ Triage/severity → scoring sheet, analyst notes
+  ├─ Containment → firewall rules, EDR quarantine logs
+  ├─ Eradication/Recovery → reimage records, patch KBs, restore checks
+  ├─ Notifications → customer/legal/insurer emails, press Q&A
+  └─ Postmortem → RCA doc, lessons learned, IRP & KPIs updated</div>
+  </section>
+
+  <section id="tips" class="card">
+    <h2>Tricky‑area tips (exam‑focused)</h2>
+    <ul>
+      <li><strong>Event ≠ Incident.</strong> Impact/policy violation is the pivot—don’t escalate everything.</li>
+      <li><strong>Receivable only when probable.</strong> Limit to recognized loss; present in same line as loss.</li>
+      <li><strong>IRP completeness.</strong> Look for severity matrix, comms plan, SLAs, evidence handling.</li>
+      <li><strong>Testing verbs matter.</strong> Inquire, Inspect, Observe, Reperform—tie to expected evidence.</li>
+      <li><strong>Disclosures evolve.</strong> Update as facts and insurance estimates change.</li>
+    </ul>
+  </section>
+
+  <section id="irp" class="card">
+    <h2>IRP Skeleton</h2>
+    <p><strong>Skeleton:</strong> Header (scope) → Roles → Severity matrix (P×I) → Declaration criteria → Playbooks (phishing/ransomware/DDoS) → SLAs per phase → Communications (internal, customers, regulators, insurer) → Evidence checklist → Testing cadence &amp; metrics.</p>
+  </section>
+
+  <section id="practice" class="card">
+    <h2>Practice Questions</h2>
+
+    <div class="qa">
+      <p><strong>1)</strong> Which statement best distinguishes a <em>security event</em> from a <em>security incident</em>?</p>
+      <ol type="A">
+        <li>Events and incidents both always require immediate containment.</li>
+        <li>An incident is an event that impacts CIA or violates policy, triggering response; many events do not.</li>
+        <li>Events are network‑only; incidents are application‑only.</li>
+        <li>Events are internal; incidents are external.</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Incident = event with policy/CIA impact; many events are benign and monitored only.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>2)</strong> A company incurs $500,000 of breach costs in Q2. Management believes a $600,000 insurance recovery is <em>probable</em>. Which entry is appropriate in Q2?</p>
+      <ol type="A">
+        <li>Dr Insurance receivable 600,000; Cr Gain on insurance 600,000</li>
+        <li>Dr Insurance receivable 500,000; Cr Breach expense 500,000</li>
+        <li>No entry until cash is received</li>
+        <li>Dr Insurance receivable 600,000; Cr Breach expense 600,000</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — You can’t recognize a receivable above the recognized loss; classify the recovery with the loss.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>3)</strong> Which element is <em>least</em> essential in an IR Plan?</p>
+      <ol type="A">
+        <li>Roles &amp; responsibilities</li>
+        <li>Severity and timelines/SLAs</li>
+        <li>Evidence handling and chain of custody</li>
+        <li>Equity method investment policy</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">D — An equity method policy is unrelated to incident response; other options are core IRP elements.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>4)</strong> During a walkthrough of a closed incident, which evidence best supports containment occurred on time?</p>
+      <ol type="A">
+        <li>SOC analyst résumé</li>
+        <li>Firewall change record with timestamp within SLA</li>
+        <li>Budget approval memo for new EDR tool</li>
+        <li>Security policy from prior year</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — A time-stamped change record demonstrates containment occurred and met the plan’s SLA.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>5)</strong> An entity recorded $900,000 incident response expense and recognized a <em>probable</em> insurance receivable of $700,000. The insurer later pays <strong>$760,000</strong>. What is the settlement entry for the excess?</p>
+      <ol type="A">
+        <li>Dr Cash 760,000; Cr Insurance receivable 700,000; Cr Gain 60,000</li>
+        <li>Dr Cash 760,000; Cr Insurance receivable 760,000</li>
+        <li>Dr Cash 760,000; Cr Insurance receivable 700,000; Cr Deferred revenue 60,000</li>
+        <li>Dr Cash 760,000; Cr Insurance receivable 700,000; Cr Breach expense 60,000</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Cash received exceeded the receivable; record the excess as a gain when realized, not as a reduction of expense.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>6)</strong> Which step is <em>not</em> part of the NIST IR life cycle?</p>
+      <ol type="A">
+        <li>Preparation</li>
+        <li>Detection &amp; Analysis</li>
+        <li>Containment/Eradication/Recovery</li>
+        <li>Capitalization &amp; Amortization</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">D — Capitalization & amortization is an accounting concept, not a NIST IR phase.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>7)</strong> A surge of failed logins is detected; no data access occurred and controls worked as designed. This is best classified as:</p>
+      <ol type="A">
+        <li>Incident</li>
+        <li>Event</li>
+        <li>Data breach</li>
+        <li>Reportable to regulators immediately</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Without impact or policy violation, the surge is just an event that should be monitored.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>8)</strong> Which procedure most directly tests whether the entity followed its IRP?</p>
+      <ol type="A">
+        <li>Compare IR budget to peers</li>
+        <li>Inspect ticket timestamps vs. plan SLAs for a sample of incidents</li>
+        <li>Confirm with a vendor that they offer incident response services</li>
+        <li>Review SOC 2 reports for a cloud provider</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Testing compliance with the plan focuses on evidence (tickets/timestamps) against defined SLAs.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>9)</strong> For public companies, disclosures emphasize:</p>
+      <ol type="A">
+        <li>Only the technical malware family</li>
+        <li>Nature/timing of incident, impacts, and material costs/recoveries as known</li>
+        <li>Names of individual attackers</li>
+        <li>Internal IP ranges affected</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — SEC-style disclosures emphasize timely, decision-useful info: nature, timing, impact, and costs/recoveries.</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>10)</strong> Which IRP gap most increases the risk of delayed containment?</p>
+      <ol type="A">
+        <li>No severity matrix or clear declaration criteria</li>
+        <li>Too many tabletop exercises</li>
+        <li>Separate communications plans for external stakeholders</li>
+        <li>Detailed evidence checklists</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Without clear severity/criteria, teams hesitate to declare incidents—delaying containment actions.</p></details>
+    </div>
+
+    <details><summary>Answer</summary><p class="answer">Shown above — balanced (debits = credits).</p></details>
+    </div>
+
+    <div class="qa">
+      <p><strong>11)</strong> Which statement about insurance classification is most accurate?</p>
+      <ol type="A">
+        <li>Recognize recovery as “Other income” to highlight it.</li>
+        <li>Present recovery in the same line item as the related loss.</li>
+        <li>Always net against revenue.</li>
+        <li>Recognize recovery only in OCI.</li>
+      </ol>
+      <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Debit the loss for total costs and credit cash/AP; totals must balance (500,000 = 300,000 + 200,000).</p></details>
+    </div>
+  </section>
+</main></body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG IV.A Gross Income (Inclusions &amp; Exclusions)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+/* hidden answers */
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:#b5ffb1}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+.badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+       border:1px solid rgba(255,255,255,.12);margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Gross Income — Inclusions &amp; Exclusions</h1>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Compute</strong> amounts includible in gross income on Form 1040: wages, interest, dividends, guaranteed payments, fringe benefits, retirement income, punitive damages.</li>
+<li><strong>Compute</strong> capital gains/losses from sales of investments (including <em>virtual currency</em>) and from property received by gift or inheritance; determine <strong>short‑term vs. long‑term</strong>.</li>
+<li><strong>Identify</strong> <em>exclusions</em> from gross income: tax‑exempt interest, qualified gifts, life‑insurance proceeds, and other common items.</li>
+<li><strong>Determine</strong> income reported for a <strong>decedent’s final return</strong> (Form 1040) vs. income in respect of a decedent (income in respect of a decedent (IRD)).</li>
+<li><strong>Review</strong> information for reasonableness and resolve common 1040 diagnostics (e.g., missing 1099‑INT/1099‑DIV, basis mismatches, unreported crypto sales).</li>
+</ul>
+</section>
+<section class="card">
+<h2>Quick Reference — What’s In vs. Out</h2>
+<div class="grid-2 small">
+<div>
+<h4>Common <span class="badge">Inclusions</span></h4>
+<table class="tbl mini">
+<tr><th>Item</th><th>Key point</th></tr>
+<tr><td>Wages, tips, bonuses</td><td>Form W‑2; taxable when received/constructive receipt.</td></tr>
+<tr><td>Interest</td><td>Taxable except municipal bond interest (and qualified U.S. savings bond exclusions with education rules).</td></tr>
+<tr><td>Dividends</td><td>Ordinary vs. qualified (preferential rates); capital gain distributions are capital gains.</td></tr>
+<tr><td>Guaranteed payments (partnership)</td><td>Always ordinary income to partner; deductible by partnership.</td></tr>
+<tr><td>Retirement distributions</td><td>Taxable portion of pensions/IRAs; Roth qualified distributions are tax‑free.</td></tr>
+<tr><td>Punitive damages</td><td>Taxable (except for wrongful death under certain state laws).</td></tr>
+<tr><td>Virtual currency sales</td><td>Treated as <em>property</em> — recognize gain/loss on disposition.</td></tr>
+</table>
+</div>
+<div>
+<h4>Common <span class="badge">Exclusions</span></h4>
+<table class="tbl mini">
+<tr><th>Item</th><th>Key point</th></tr>
+<tr><td>Municipal bond interest</td><td>Exclude; still report for AMT/credit interactions if required.</td></tr>
+<tr><td>Gift received</td><td>Exclude from income; basis rules apply when sold.</td></tr>
+<tr><td>Inheritance</td><td>Exclude; step‑up/step‑down basis to FMV at date of death (DOD)/AVD.</td></tr>
+<tr><td>Life‑insurance proceeds</td><td>Exclude if paid by reason of death; interest component is taxable if paid over time.</td></tr>
+<tr><td>Qualified employer fringe benefits</td><td>e.g., health insurance, de minimis fringes, certain transportation up to limits.</td></tr>
+<tr><td>Scholarships (qualified)</td><td>Exclude to extent used for tuition/fees (not room/board).</td></tr>
+</table>
+</div>
+</div>
+<div class="callout mini"><strong>Exam tip:</strong> Inclusions are broad; exclusions are specific. If you’re unsure and no specific exclusion applies, it’s probably taxable.</div>
+</section>
+<section class="card">
+<h2>Representative Tasks → Worked Examples</h2>
+<h3>1) Interest &amp; dividends</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Taxpayer earns bank interest of <strong>$380</strong>, corporate bond interest of <strong>$620</strong>, and municipal bond interest of <strong>$450</strong>. Receives qualified dividends of <strong>$900</strong>.</td>
+<td>Gross income includes <strong>$380 + $620 + $900 = $1,900</strong>. The <strong>$450</strong> municipal interest is excluded (but may appear on Form 1099‑INT box 8).</td>
+</tr>
+</table>
+<h3>2) Virtual currency sale</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Taxpayer bought crypto on 2/1/Y1 for <strong>$6,200</strong>; sells all on 3/15/Y2 for <strong>$8,900</strong>.</td>
+<td>Crypto is property → gain = 8,900 − 6,200 = <strong>$2,700</strong>. Holding period &gt; 1 year → <strong>long‑term capital gain</strong>.</td>
+</tr>
+</table>
+<h3>3) Gift vs. inheritance — sale of property</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td><em>Gifted stock</em>: Donor basis <strong>$12,000</strong>; FMV at gift <strong>$9,000</strong>; later sold for <strong>$10,000</strong>.</td>
+<td>Dual‑basis: gain basis = 12,000; loss basis = 9,000. Sales price sits between → <strong>no gain/no loss</strong>. HP: for a gain, donor’s HP would tack.</td>
+</tr>
+<tr>
+<td><em>Inherited stock</em>: FMV at DOD <strong>$54,000</strong>; sold 2 months later for <strong>$52,500</strong>.</td>
+<td>Basis = FMV at DOD = <strong>$54,000</strong>. Loss = 52,500 − 54,000 = <strong>($1,500)</strong>. HP is always <strong>long‑term</strong>.</td>
+</tr>
+</table>
+<h3>4) Fringe benefits</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Employer pays employee’s group health insurance premiums of <strong>$5,400</strong> and provides free parking worth <strong>$3,600</strong> (within monthly exclusion limits). Also reimburses <strong>$700</strong> of non‑accountable meal money.</td>
+<td>Exclude health insurance and qualified parking (within limits). The <strong>$700</strong> meal reimbursement under a non‑accountable plan is taxable wages.</td>
+</tr>
+</table>
+<h3>5) Life‑insurance proceeds &amp; interest</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Beneficiary receives a lump‑sum death benefit of <strong>$200,000</strong>. Alternatively, elects 10 annual installments totaling <strong>$220,000</strong>.</td>
+<td>Lump‑sum: <strong>exclude $200,000</strong>. Installments: principal portion excluded; the <strong>$20,000</strong> excess is taxable interest over the payout period.</td>
+</tr>
+</table>
+<h3>6) Decedent’s final return vs. IRD</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Taxpayer dies on 8/30/Y2. Earned wages of <strong>$48,000</strong> through date of death, plus unpaid August salary of <strong>$4,000</strong> paid to estate on 9/15.</td>
+<td>Final 1040 includes wages <strong>$48,000</strong>. The <strong>$4,000</strong> paid after death is <strong>income in respect of a decedent</strong> (IRD) — reported by the estate/beneficiary, not on the decedent’s final 1040.</td>
+</tr>
+</table>
+</section>
+<section class="card">
+<h2>Diagnostics — What to Check</h2>
+<ul class="small">
+<li><span class="tag">1099 matching</span> Check for missing 1099‑INT/1099‑DIV/1099‑B/Crypto statements and state information returns.</li>
+<li><span class="tag">Basis</span> Verify covered vs. non‑covered basis on 1099‑B; correct gift/inheritance basis rules.</li>
+<li><span class="tag">Wash sales</span> Ensure disallowed loss amounts on 1099‑B were added to replacement basis.</li>
+<li><span class="tag">Retirement</span> Use Form 1099‑R box codes to determine taxable amount and early‑distribution penalties.</li>
+<li><span class="tag">Year of death</span> Split final 1040 wages/interest vs. IRD. Watch for RMDs and beneficiary reporting.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>If you see…</th><th>Remember…</th></tr>
+<tr><td>Crypto sale</td><td>Treat as property: proceeds − basis; ST if ≤1 year, otherwise LT.</td></tr>
+<tr><td>Gift or inheritance</td><td>Gift uses carryover/dual basis; inheritance uses FMV at date of death (DOD)/alternate valuation date (AVD) and is always LT.</td></tr>
+<tr><td>Life‑insurance payments</td><td>Death benefit excluded; any interest component is taxable.</td></tr>
+<tr><td>Partnership guaranteed payments</td><td>Always ordinary income to the recipient partner.</td></tr>
+</table>
+</section>
+<section class="card">
+<h2>Practice Questions</h2>
+<ol class="small">
+<li><strong>Municipal bonds:</strong> Taxpayer receives $350 muni interest and $420 corporate bond interest. GI inclusion?<br/>
+        A. $350   B. $420   C. $770   D. $0
+        <details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>$420</strong> — Muni interest is excluded.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Qualified dividends:</strong> Which statement is true?<br/>
+        A. Always tax‑free   B. Taxed as ordinary income   C. Eligible for preferential rates if holding‑period met   D. Always capital gains<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">C — Qualified dividends can receive preferential capital‑gains rates.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Crypto sale:</strong> Basis $5,000; proceeds $4,300 after 8 months. Result?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>Short‑term capital loss $700</strong>.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Gifted property sold at price between donor basis and FMV at gift:</strong><br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">No gain/no loss — use dual‑basis rule.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Life‑insurance payouts:</strong> Beneficiary elects installments totaling $110,000 on a $100,000 policy. Taxable portion?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>$10,000</strong> taxable as interest.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Final return vs. IRD:</strong> Unpaid wages of $3,200 received by estate after death go where?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">IRD — reported by the estate/beneficiary, not on the decedent’s final 1040.</div></details>
+</li>
+</ol>
+</section></div>
+</body>
+</html>

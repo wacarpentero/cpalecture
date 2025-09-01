@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Specific Matters that Require Special Consideration (Area III.E, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area III.E — Specific matters that require special consideration, aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Specific Matters that Require Special Consideration</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify matters that typically demand <strong>heightened procedures</strong> beyond routine testing.</li>
+          <li>Design procedures responsive to <strong>related parties</strong>, <strong>accounting estimates and fair value</strong>, <strong>going concern</strong>, <strong>litigation/claims</strong>, <strong>subsequent events</strong>, and <strong>noncompliance with laws and regulations</strong>.</li>
+          <li>Appropriately use the work of <strong>specialists</strong> and <strong>internal auditors</strong>, and consider <strong>service organizations</strong> and <strong>group audits</strong>.</li>
+          <li>Recognize <strong>reporting impacts</strong> such as emphasis‑of‑matter (EOM) paragraphs, other‑matter paragraphs, or modified opinions.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Matter</th><th>Why it’s special</th><th>Key procedures</th><th>Possible reporting effects</th></tr>
+          <tr><td>Related parties</td><td>Non‑arm’s‑length terms; concealment risk</td><td>Broad search; verify terms; evaluate disclosures</td><td>Modified opinion if inadequate disclosure</td></tr>
+          <tr><td>Estimates & fair value</td><td>Subjectivity; model risk; bias</td><td>Independent expectation; specialist; sensitivity</td><td>Material misstatement or EOM if uncertainty disclosed</td></tr>
+          <tr><td>Going concern</td><td>Viability beyond one year; financing risks</td><td>Cash‑flow analysis; management plans; subsequent events</td><td>EOM for substantial doubt; modified opinion if disclosure inadequate</td></tr>
+          <tr><td>Litigation, claims & assessments</td><td>Contingency measurement & disclosure</td><td>Legal inquiry; correspondence; minutes; subsequent events</td><td>Modified opinion if scope limits or inadequate disclosure</td></tr>
+          <tr><td>Subsequent events</td><td>Adjusting vs non‑adjusting events</td><td>Minutes through report date; GL scans; rep letter updates</td><td>Adjustments/disclosure; date dual‑dating if needed</td></tr>
+          <tr><td>Noncompliance (NOCLAR)</td><td>Regulatory penalties; reporting obligations</td><td>Understand, evaluate effect; communicate to those charged with governance (TCWG)</td><td>Modify opinion if pervasive; consider withdrawal</td></tr>
+          <tr><td>Service organizations</td><td>Controls outside the entity</td><td>System and Organization Controls (SOC) 1® report; user‑entity controls testing</td><td>Disclosure considerations; scope limitations if evidence unavailable</td></tr>
+          <tr><td>Use of specialists</td><td>Highly technical areas</td><td>Evaluate competence/objectivity; understand work; test assumptions/data</td><td>Do not refer to specialist in report unless required</td></tr>
+          <tr><td>Internal auditors’ work</td><td>Potential use to modify nature/timing/extent</td><td>Evaluate objectivity/competence; reperform samples</td><td>Auditor remains responsible</td></tr>
+          <tr><td>Group audits/components</td><td>Multiple locations/teams</td><td>Component materiality; instructions; evaluate component auditor work</td><td>Reference component auditor only when allowed/required</td></tr>
+          <tr><td>Opening balances</td><td>Initial engagements</td><td>Read predecessor communications; roll‑forward/back evidence</td><td>Modified opinion if unable to obtain evidence</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Related Parties & Significant Unusual Transactions</h2>
+    <div class="card">
+      <ul>
+        <li>Search broadly: organizational charts, ownership records, minutes, major contracts, confirmations, inquiries beyond finance.</li>
+        <li>Assess arm’s‑length terms; inspect supporting documents; scrutinize <strong>significant unusual transactions</strong>.</li>
+        <li>Ensure <strong>complete and accurate disclosure</strong> of relationships and transactions.</li>
+      </ul>
+      <div class="callout danger"><strong>Red flag:</strong> Last‑minute side agreements or round‑trip transactions.</div>
+    </div>
+
+    <h2>2) Accounting Estimates & Fair Value</h2>
+    <div class="card">
+      <ul>
+        <li>Identify estimates with high uncertainty (impairments, credit losses, contingent liabilities, share‑based compensation, level 3 fair values).</li>
+        <li>Evaluate methods, data, and assumptions; consider <strong>management bias</strong>.</li>
+        <li>Procedures: develop independent expectations, test subsequent events, involve specialists, sensitivity analysis, model testing.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Corroborate significant assumptions with external data when available.</div>
+    </div>
+
+    <h2>3) Going Concern</h2>
+    <div class="card">
+      <ul>
+        <li>Identify indicators: recurring losses, negative cash flows, past‑due payables, covenant breaches.</li>
+        <li>Evaluate management’s plans (financing, cost reductions, asset sales) and their feasibility; review subsequent events.</li>
+        <li>Conclude on need for an emphasis‑of‑matter (EOM) paragraph and adequacy of disclosures; if inadequate, consider a modified opinion.</li>
+      </ul>
+    </div>
+
+    <h2>4) Litigation, Claims, and Assessments</h2>
+    <div class="card">
+      <ul>
+        <li>Read minutes, obtain legal letters, and inspect correspondence with regulators and insurers.</li>
+        <li>Evaluate likelihood and estimability; reconcile to legal letter responses and financial statement disclosures.</li>
+        <li>If no response from counsel, perform alternative procedures; evaluate for a possible scope limitation.</li>
+      </ul>
+    </div>
+
+    <h2>5) Subsequent Events & Dual‑Dating</h2>
+    <div class="card">
+      <ul>
+        <li>Read minutes through the report date; inquire management; scan the general ledger after year‑end for significant transactions.</li>
+        <li>Determine whether events require <strong>adjustment</strong> or <strong>disclosure</strong>.</li>
+        <li>If an event occurs after the original report date but before release, consider <strong>dual‑dating</strong> or updating the report date.</li>
+      </ul>
+    </div>
+
+    <h2>6) Noncompliance with Laws and Regulations (NOCLAR)</h2>
+    <div class="card">
+      <ul>
+        <li>Understand the nature and circumstances; discuss with management and, where appropriate, those charged with governance (TCWG).</li>
+        <li>Evaluate the effect on the financial statements and the auditor’s report; obtain legal advice when necessary.</li>
+        <li>Consider whether withdrawal is necessary in extreme cases, consistent with law and regulation.</li>
+      </ul>
+      <div class="callout danger"><strong>Do not overlook:</strong> Indirect effects (e.g., violations leading to penalties that affect accruals or disclosures).</div>
+    </div>
+
+    <h2>7) Service Organizations — System and Organization Controls (SOC) 1®</h2>
+    <div class="card">
+      <ul>
+        <li>Identify processes outsourced (payroll, revenue platforms); obtain the SOC 1® Type 2 report covering the period.</li>
+        <li>Evaluate <strong>complementary user‑entity controls</strong> and test that the client performed them.</li>
+        <li>Consider a bridge letter for gaps; evaluate deviations reported by the service auditor.</li>
+      </ul>
+    </div>
+
+    <h2>8) Using the Work of Specialists</h2>
+    <div class="card">
+      <ul>
+        <li>Evaluate the specialist’s competence, capabilities, and objectivity; agree on the nature, scope, and objectives of the work.</li>
+        <li>Understand methods and assumptions; test the data provided to the specialist and the reasonableness of conclusions.</li>
+        <li>Do not refer to the specialist in the auditor’s report unless required by law or regulation.</li>
+      </ul>
+    </div>
+
+    <h2>9) Using Internal Auditors’ Work</h2>
+    <div class="card">
+      <ul>
+        <li>Evaluate objectivity, competence, and systematic and disciplined approach of internal audit.</li>
+        <li>Determine whether to use their work to modify nature, timing, or extent; reperform a sample to validate quality.</li>
+        <li>The external auditor retains responsibility for the opinion.</li>
+      </ul>
+    </div>
+
+    <h2>10) Group Audits & Component Auditors</h2>
+    <div class="card">
+      <ul>
+        <li>Determine component materiality and performance materiality; issue clear instructions to component auditors.</li>
+        <li>Evaluate sufficiency and appropriateness of component auditors’ work; resolve significant matters.</li>
+        <li>Reference to a component auditor in the report only when allowed or required; otherwise, the group auditor assumes responsibility.</li>
+      </ul>
+    </div>
+
+    <h2>11) Opening Balances & Initial Engagements</h2>
+    <div class="card">
+      <ul>
+        <li>Obtain evidence that opening balances are free of material misstatement affecting the current period.</li>
+        <li>Evaluate consistency of accounting policies; read predecessor auditor communications when available.</li>
+        <li>Consider a modified opinion if unable to obtain sufficient appropriate evidence.</li>
+      </ul>
+    </div>
+
+    <h2>12) Documentation & Communication</h2>
+    <div class="card">
+      <ul>
+        <li>For each special matter: risks identified, procedures performed, results, and conclusions, including any reporting implications.</li>
+        <li>Communicate significant findings to those charged with governance (TCWG) and document the content, timing, and recipients.</li>
+        <li>Update management representation letter to cover specific matters addressed (e.g., related parties, subsequent events, litigation).</li>
+      </ul>
+    </div>
+
+    <h2>13) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>When is an emphasis‑of‑matter (EOM) paragraph used? <strong>To draw attention to a matter appropriately presented or disclosed that is fundamental to users’ understanding.</strong></li>
+        <li>Best evidence source for litigation? <strong>Direct communication with external legal counsel.</strong></li>
+        <li>What must you do with complementary user‑entity controls in a SOC 1® report? <strong>Test that the entity performed them.</strong></li>
+        <li>When might you consider withdrawal for noncompliance? <strong>In rare, severe cases where law/regulation and ethical requirements indicate.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

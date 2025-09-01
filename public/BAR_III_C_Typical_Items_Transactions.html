@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BAR III.C — Typical Items & Specific Transactions (GASB)</title>
+<style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+ul.tight>li{margin:2px 0}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:2px 10px;margin:2px 6px 8px 0;color:var(--ink)}
+details>summary{cursor:pointer;padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.answer>summary{cursor:pointer;padding:6px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;list-style:none;margin:6px 0}
+.answer>summary::-webkit-details-marker{display:none}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Typical Items & Specific Transactions and Events — Measurement, Valuation, Calculation & Presentation (GASB)</div>
+
+    <section class="section">
+      <h2>Learning Objectives </h2>
+      <div class="grid">
+        <div><ul class="tight"><li>Calculate balances for <strong>net investment in capital assets</strong>, <strong>restricted</strong>, and <strong>unrestricted</strong>; prepare journal entries.</li><li>Determine governmental fund balance classifications (nonspendable, restricted, committed, assigned, unassigned) & related entries.</li><li>Identify and measure capital assets; record initial recognition and subsequent depreciation/amortization.</li><li>Identify/measure GTL (bonds, leases), pensions/OPEB; prepare entries including premiums/discounts & interest.</li></ul></div>
+        <div><ul class="tight"><li>Record/eliminate interfund loans, services, and transfers.</li><li>Compute amounts under modified accrual vs. accrual and prepare entries.</li><li>Modified accrual (funds) vs. accrual (gov‑wide/proprietary).</li><li>Record original/final budgets and encumbrances.</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>1) Net Position — Quick Illustration</h2>
+      <table class="table-min">
+        <tr><th>Total assets</th><td><strong>$6,100,000</strong></td></tr>
+        <tr><th>+ Deferred outflows</th><td><strong>$220,000</strong></td></tr>
+        <tr><th>− Liabilities</th><td><strong>($3,950,000)</strong></td></tr>
+        <tr><th>− Deferred inflows</th><td><strong>($140,000)</strong></td></tr>
+        <tr><th><strong>Total net position</strong></th><td><strong>$2,230,000</strong></td></tr>
+      </table>
+      <div class="grid">
+        <div class="card">
+          <h3>Components</h3>
+          <table class="table-min">
+            <tr><th>Net investment in capital assets</th><td><strong>$1,400,000</strong></td></tr>
+            <tr><th>Restricted</th><td><strong>$900,000</strong></td></tr>
+            <tr><th>Unrestricted</th><td><strong>$-70,000</strong></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Example JE (restricting resources)</h3>
+          <ul class="tight">
+            <li>To record resources externally restricted for road construction: <br/>
+              Dr Cash <strong>$300,000</strong> / Cr <em>Restricted for capital projects</em> (net position) <strong>$300,000</strong> (proprietary/statement‑level presentation).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2) Fund Balance Classifications (Governmental Funds)</h2>
+      <table class="table-min">
+        <tr><th>Nonspendable</th><td><strong>$80,000</strong></td></tr>
+        <tr><th>Restricted</th><td><strong>$450,000</strong></td></tr>
+        <tr><th>Committed</th><td><strong>$120,000</strong></td></tr>
+        <tr><th>Assigned</th><td><strong>$160,000</strong></td></tr>
+        <tr><th>Unassigned</th><td><strong>$210,000</strong></td></tr>
+        <tr><th><strong>Total fund balance</strong></th><td><strong>$1,020,000</strong></td></tr>
+      </table>
+      <div class="grid">
+        <div class="card">
+          <h3>JE — Commit fund balance</h3>
+          <ul class="tight">
+            <li>To commit resources by governing body resolution (no entry; classification occurs at period‑end in equity).</li>
+            <li>To assign by finance officer (no entry; disclose policy).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>JE — Inventory (nonspendable)</h3>
+          <ul class="tight">
+            <li>Purchases method (at purchase): Dr Expenditures <strong>$50,000</strong> / Cr Cash <strong>$50,000</strong>.</li>
+            <li>Year‑end reclass to nonspendable: Dr Inventory <strong>$20,000</strong> / Cr Fund balance—nonspendable <strong>$20,000</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3) Capital Assets & Infrastructure</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Initial recognition</h3>
+          <ul class="tight">
+            <li>Governmental fund (capital projects): Dr Expenditures—capital outlay <strong>$720,000</strong> / Cr Cash <strong>$720,000</strong>.</li>
+            <li>Gov‑wide: Dr Capital assets <strong>$720,000</strong> / Cr Cash <strong>$720,000</strong>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Subsequent depreciation (SL, 8 yrs)</h3>
+          <ul class="tight">
+            <li>Gov‑wide: Dr Depreciation expense <strong>$90,000</strong> / Cr Accumulated depreciation <strong>$90,000</strong>.</li>
+            <li>Infrastructure using modified approach: maintain condition level; report preservation costs as expense (no depreciation).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) Long‑Term Liabilities (Bonds & Pensions/OPEB)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Bond at premium</h3>
+          <ul class="tight">
+            <li>Issue: Dr Cash <strong>$1,030,000</strong> / Cr Bonds payable <strong>$1,000,000</strong> / Cr Premium <strong>$30,000</strong>.</li>
+            <li>Interest (effective): Dr Interest expense <strong>$41,200</strong> / Dr Premium amortization <strong>$3,800</strong> / Cr Cash <strong>$45,000</strong>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pension/OPEB (overview)</h3>
+          <ul class="tight">
+            <li>Record <strong>Net pension (asset)/liability</strong> at gov‑wide with related deferred outflows/inflows.</li>
+            <li>Funds report contributions as expenditures; reconciling items convert to expense gov‑wide.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5) Interfund Activity</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Within the gov’t (fund level)</h3>
+          <ul class="tight">
+            <li><strong>Interfund loan</strong>: Dr Due from other fund <strong>$70,000</strong> / Cr Cash <strong>$70,000</strong> (lender); borrower records Due to.</li>
+            <li><strong>Interfund transfer</strong>: Dr Other financing uses—transfers out <strong>$40,000</strong> / Cr Cash <strong>$40,000</strong>; recipient records transfer in.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Gov‑wide eliminations</h3>
+          <ul class="tight">
+            <li>Eliminate <em>internal</em> balances & activity; present transfers between governmental & business‑type as transfers on Statement of Activities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>6) Nonexchange Revenues — Modified Accrual vs. Accrual</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Property tax levy example</h3>
+          <table class="table-min">
+            <tr><th>Levy</th><td><strong>$900,000</strong></td></tr>
+            <tr><th>Collected this year</th><td><strong>$820,000</strong></td></tr>
+            <tr><th>Also available (≤60 days)</th><td><strong>$30,000</strong></td></tr>
+            <tr><th><strong>Revenue — modified accrual</strong></th><td><strong>$850,000</strong></td></tr>
+            <tr><th><strong>Revenue — accrual</strong></th><td><strong>$900,000</strong></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Key JE</h3>
+          <ul class="tight">
+            <li>Funds (when levied): Dr Taxes receivable <strong>$900,000</strong> / Cr Revenues <strong>$850,000</strong> / Cr Deferred inflows <strong>$50,000</strong>.</li>
+            <li>Gov‑wide year‑end: Dr Deferred inflows <strong>$50,000</strong> / Cr Revenues <strong>$50,000</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>7) Expenditures vs. Expenses</h2>
+      <table class="table-min">
+        <tr><th>Funds — Expenditures (modified accrual)</th><td>Recognize when paid from available financial resources. Example: salaries paid <strong>$500,000</strong>.</td></tr>
+        <tr><th>Gov‑wide/Proprietary — Expenses (accrual)</th><td>Recognize when incurred. Example: add vacation accrual <strong>$25,000</strong> → total expense <strong>$525,000</strong> (vs. fund expenditure <strong>$500,000</strong>).</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>8) Budgetary Accounting & Encumbrances (Governmental Funds)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Record the budget (general fund)</h3>
+          <ul class="tight">
+            <li>At adoption: Dr Estimated revenues <strong>$2,400,000</strong> / Cr Appropriations <strong>$2,350,000</strong> / Cr Fund balance—budgetary <strong>$50,000</strong>.</li>
+            <li>At year‑end: close budgetary accounts to fund balance—budgetary.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Encumbrances</h3>
+          <ul class="tight">
+            <li>Issue PO: Dr Encumbrances <strong>$90,000</strong> / Cr Encumbrances outstanding <strong>$90,000</strong>.</li>
+            <li>When goods received at <strong>$88,000</strong>: reverse encumbrance for <strong>$90,000</strong>, then record expenditure for actual cost <strong>$88,000</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practice Questions</h2>
+
+      <details>
+        <summary><strong>1.</strong> Which item is part of <em>net investment in capital assets</em>?</summary>
+        <ol type="A">
+          <li>Restricted cash for debt service</li>
+          <li>Capital assets minus related outstanding debt</li>
+          <li>Unspent bond proceeds</li>
+          <li>Grants receivable</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Answer: B.</strong> Net investment in capital assets equals capital assets (net) minus related debt. Unspent bond proceeds and restricted cash do not reduce the related debt balance.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>2.</strong> Under modified accrual, property tax revenue equals:</summary>
+        <ol type="A">
+          <li>Entire levy for the year</li>
+          <li>Cash collected during the year only</li>
+          <li>Cash collected during the year plus amounts available soon after year‑end</li>
+          <li>Amounts earned regardless of availability</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Answer: C.</strong> Modified accrual recognizes revenues when <em>measurable and available</em>, typically within 60 days after year‑end.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>3.</strong> Recording a purchase order in a governmental fund is:</summary>
+        <ol type="A">
+          <li>An expenditure</li>
+          <li>An encumbrance</li>
+          <li>A budgetary appropriation</li>
+          <li>A deferred outflow</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Answer: B.</strong> A PO establishes an <em>encumbrance</em> to reserve a portion of the budget; the expenditure is recorded when goods/services are received.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>4.</strong> In gov‑wide statements, how are interfund loans reported?</summary>
+        <ol type="A">
+          <li>Transfers</li>
+          <li>Eliminated internal balances</li>
+          <li>Liability only</li>
+          <li>Revenue to the lender</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Answer: B.</strong> Interfund loans are internal balances that are eliminated in the government‑wide column (unless between governmental and business‑type, where internal balances remain but offset).</div>
+        </details>
+      </details>
+
+    </section>
+
+  </div>
+</body>
+</html>

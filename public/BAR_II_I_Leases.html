@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR II.I — Leases (ASC 842)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Leases (ASC 842) — Lessee & Lessor</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Identify <strong>lessee</strong> and <strong>lessor</strong> classification criteria.</li>
+          <li>Calculate carrying amounts and prepare <strong>lessor</strong> journal entries.</li>
+          <li>Compute <strong>lease income</strong> recognition for lessors.</li>
+          <li>Prepare entries for <strong>sale‑leaseback</strong> transactions.</li>
+          <li>Interpret lease contracts and prepare the <strong>lessee</strong> journal entries.</li>
+        </ul>
+      </section>
+
+      <section id="classification" class="section">
+        <h2>Classification (Snapshot)</h2>
+        <div class="kv">
+          <div>
+            <h3>Lessee — Finance vs Operating</h3>
+            <ul class="tight">
+              <li>Finance lease if any test is met: transfer of title; <strong>bargain purchase option</strong>; major part of economic life (≈ 75%); PV of payments ≈ substantially all of FV (≈ 90%); specialized asset.</li>
+              <li>Else = Operating.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Lessor — Sales‑type, Direct financing, Operating</h3>
+            <ul class="tight">
+              <li><strong>Sales‑type</strong>: same tests as above; plus any selling profit recognized at commencement. Record a <em>net investment in lease</em> (NIL); derecognize the asset.</li>
+              <li><strong>Direct financing</strong>: no selling profit (or deferred) and both the tests met; NIL recognized; profit deferred and recognized as interest income.</li>
+              <li><strong>Operating</strong>: none of the tests met; lessor keeps asset and recognizes straight‑line lease income.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="lessee" class="section">
+        <h2>Lessee — Measurement</h2>
+        <ul class="tight">
+          <li>Lease liability = PV of fixed payments (and in‑substance fixed, expected residual guarantees by lessee, reasonably certain options) discounted at <strong>rate implicit</strong> if known, else <strong>incremental borrowing rate</strong>.</li>
+          <li>ROU asset = liability + initial direct costs + prepaid lease − incentives received.</li>
+          <li>Finance lease expense = interest (effective interest) + amortization of ROU asset. Operating lease expense = single straight‑line lease expense with liability reduced via effective interest.</li>
+        </ul>
+      </section>
+
+      <section id="lessor" class="section">
+        <h2>Lessor — Measurement</h2>
+        <ul class="tight">
+          <li>NIL = PV of lease payments receivable + PV of residual value (guaranteed or unguaranteed) − deferred selling profit/costs.</li>
+          <li>Sales‑type: recognize selling profit (FV of underlying − carrying amount) at commencement if collectibility probable.</li>
+          <li>Operating: keep asset; depreciation continues; lease income on a straight‑line basis.</li>
+        </ul>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations</h2>
+
+        <details><summary>1) Lessee — Finance lease PV & Year‑1 entries</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Payments</th><td>Annual <strong>$50,000</strong> at year‑end for <strong>5</strong> years</td></tr>
+          <tr><th>Implicit rate</th><td><strong>6%</strong></td></tr>
+          <tr><th>Initial direct costs</th><td><strong>$2,000</strong></td></tr>
+          <tr><th>Incentive received</th><td><strong>$3,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & JE</h4>
+        <table class="table-min">
+          <tr><th>PV of payments (ordinary annuity)</th><td>$50,000 × PVAF(6%,5)  = $50,000 × 4.21236 ≈ <strong>$210,618</strong></td></tr>
+          <tr><th>Lease liability (start)</th><td><strong>$210,618</strong></td></tr>
+          <tr><th>ROU asset (start)</th><td>$210,618 + $2,000 − $3,000 = <strong>$209,618</strong></td></tr>
+          <tr><th>Y1 interest</th><td>$210,618 × 6% = <strong>$12,637</strong></td></tr>
+          <tr><th>Y1 payment</th><td><strong>$50,000</strong></td></tr>
+          <tr><th>Liability after Y1</th><td>$210,618 + $12,637 − $50,000 = <strong>$173,255</strong></td></tr>
+          <tr><th>Amortization (finance)</th><td>$209,618 ÷ 5 = <strong>$41,924</strong> (straight‑line)</td></tr>
+        </table>
+        <div class="result">Entries: Dr ROU asset $209,618; Cr Lease liability $210,618; Dr Cash $1,000 (net of incentive).<br>Y1: Dr Interest $12,637; Dr Lease liability $37,363; Cr Cash $50,000; Dr Amortization expense $41,924; Cr Accum amort — ROU $41,924.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) Lessor — Sales‑type lease with selling profit</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>FV of equipment</th><td><strong>$300,000</strong></td></tr>
+          <tr><th>Carrying amount</th><td><strong>$240,000</strong></td></tr>
+          <tr><th>Payments</th><td><strong>$70,000</strong> annually at year‑end for <strong>5</strong> years</td></tr>
+          <tr><th>Residual (unguaranteed)</th><td><strong>$20,000</strong></td></tr>
+          <tr><th>Implicit rate</th><td><strong>7%</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & JE</h4>
+        <table class="table-min">
+          <tr><th>PV lease pmts</th><td>$70,000 × PVAF(7%,5) = $70,000 × 4.1002 = <strong>$287,014</strong></td></tr>
+          <tr><th>PV residual</th><td>$20,000 × PVF(7%,5) = 20,000 × 0.71299 = <strong>$14,260</strong></td></tr>
+          <tr><th>Net investment in lease</th><td><strong>$301,274</strong></td></tr>
+          <tr><th>Selling profit</th><td>FV $300,000 − CA $240,000 = <strong>$60,000</strong> (recognized at commencement)</td></tr>
+        </table>
+        <div class="result">Commencement entry: Dr Net investment in lease $301,274; Cr Equipment $240,000; Cr Selling profit $60,000; Cr Unearned income (plug if needed).</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>3) Lessor — Operating lease straight‑line income</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Lease term</th><td><strong>3</strong> years</td></tr>
+          <tr><th>Payments</th><td>Y1 <strong>$40,000</strong>; Y2 <strong>$45,000</strong>; Y3 <strong>$50,000</strong></td></tr>
+          <tr><th>Underlying asset CA</th><td><strong>$150,000</strong>; life 10 years</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Income pattern</h4>
+        <table class="table-min">
+          <tr><th>Total rent</th><td>$135,000 ÷ 3 = <strong>$45,000</strong> per year to income</td></tr>
+          <tr><th>Y1</th><td>Recognize lease income <strong>$45,000</strong>; Accrued rent <strong>$5,000</strong></td></tr>
+          <tr><th>Depreciation</th><td>$150,000 ÷ 10 = <strong>$15,000</strong> each year</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>4) Sale‑leaseback — Gain recognition</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Carrying amount of building</th><td><strong>$800,000</strong></td></tr>
+          <tr><th>Sale price (at FV)</th><td><strong>$1,000,000</strong></td></tr>
+          <tr><th>Immediately leases back for 10 years</th><td>Payments PV <strong>$600,000</strong>; no options reasonably certain</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Analysis & JE</h4>
+        <ul class="tight">
+          <li>Sale criteria met (control transfers; leaseback is not finance lease).</li>
+        </ul>
+        <table class="table-min">
+          <tr><th>Gain</th><td>$1,000,000 − $800,000 = <strong>$200,000</strong> (recognize immediately)</td></tr>
+          <tr><th>Lessee entries</th><td>Record ROU asset & lease liability based on leaseback PV <strong>$600,000</strong>; recognize gain <strong>$200,000</strong>.</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Classification (lessee)</summary>
+          <p>A 6‑year lease for equipment with a 7‑year economic life; PV of payments equals <strong>88%</strong> of FV; no transfer of title or BPO and the asset is not specialized. Classification?</p>
+          <ol type="A">
+            <li>Finance lease</li>
+            <li>Operating lease</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> PV is not substantially all and term not a major part (≈ 86% would be close, but 6/7 ≈ 86% is near—assume “major part” threshold not met if examiner says not). With facts given, operating.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Lessor classification</summary>
+          <p>If the same lease transfers substantially all of the asset’s benefits/risks and the fair value exceeds carrying amount, lessor classification is:</p>
+          <ol type="A">
+            <li>Sales‑type</li>
+            <li>Direct financing</li>
+            <li>Operating</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Sales‑type when selling profit exists.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Lessee initial measurement</summary>
+          <p>Which item reduces the initial ROU asset but not the lease liability?</p>
+          <ol type="A">
+            <li>Initial direct costs</li>
+            <li>Lease incentives received</li>
+            <li>Prepaid lease payments</li>
+            <li>Restoration obligation</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Incentives reduce the ROU asset carrying amount.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Straight‑line income (lessor operating)</summary>
+          <p>Total payments over a 4‑year lease are <strong>$320,000</strong> with rents by year: <strong>$60,000</strong>, <strong>$70,000</strong>, <strong>$90,000</strong>, <strong>$100,000</strong>. How much lease income in Year 1?</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <table class="table-min">
+                <tr><th>Average per year</th><td>$320,000 ÷ 4 = <strong>$80,000</strong></td></tr>
+                <tr><th>Deferred rent (Y1)</th><td>$80,000 − $60,000 = <strong>$20,000</strong> accrued</td></tr>
+              </table>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Sale‑leaseback check</summary>
+          <p>Which would <em>prevent</em> sale accounting in a sale‑leaseback?</p>
+          <ol type="A">
+            <li>Leaseback classified as operating</li>
+            <li>Option for seller‑lessee to repurchase at FV at end of term</li>
+            <li>Option for seller‑lessee to repurchase at a fixed price and it is reasonably certain to be exercised</li>
+            <li>No variable consideration</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> A repurchase option likely to be exercised restricts transfer of control → no sale.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

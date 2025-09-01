@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR II.H — Derivatives & Hedge Accounting (ASC 815)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Derivatives & Hedge Accounting (ASC 815)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Identify characteristics of freestanding and embedded derivatives that require recognition at <strong>fair value</strong>.</li>
+          <li>Identify criteria to <strong>qualify for hedge accounting</strong> and when to apply <strong>fair value</strong> vs <strong>cash flow</strong> hedge models.</li>
+          <li>Recall presentation of gains/losses for swaps, options, and forwards.</li>
+          <li>Use given inputs (rates, notionals, FV changes) to prepare JEs for an <strong>interest rate swap</strong> that qualifies as a FV or CF hedge.</li>
+        </ul>
+      </section>
+
+      <section id="basics" class="section">
+        <h2>Derivative Basics</h2>
+        <div class="kv">
+          <div>
+            <h3>What is a derivative?</h3>
+            <ul class="tight">
+              <li>Underlying (e.g., interest rate, price), notional or payment provision.</li>
+              <li>Requires little/no initial net investment.</li>
+              <li>Net settlement or readily convertible to cash.</li>
+            </ul>
+            <h3>Recognition/measurement</h3>
+            <ul class="tight">
+              <li>All derivatives on B/S at <strong>fair value</strong>.</li>
+              <li>Gains/losses → earnings <em>unless</em> hedge accounting is applied.</li>
+            </ul>
+            <h3>Embedded derivatives</h3>
+            <ul class="tight">
+              <li>Bifurcate from host and account as derivative if: (1) not clearly and closely related to host; (2) instrument not measured at FV through earnings; and (3) a freestanding instrument with the same terms would be a derivative.</li>
+              <li>Examples often tested: equity‑linked features in debt, FX clauses not in the functional currency of either party’s primary economic environment.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Hedge accounting — documentation & effectiveness</h3>
+            <ul class="tight">
+              <li>Formal designation/documentation at inception: risk being hedged, hedging instrument, hedged item/transaction, method to assess effectiveness.</li>
+              <li>Highly effective expectation (qualitative or quantitative). Ongoing monitoring is required.</li>
+              <li>Types: <strong>Fair value (FV) hedge</strong>, <strong>Cash flow (CF) hedge</strong>, and <strong>Net investment</strong> hedge (not covered in detail here).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="models" class="section">
+        <h2>Hedge Models & Presentation</h2>
+        <div class="kv">
+          <div>
+            <h3>Fair value hedge</h3>
+            <ul class="tight">
+              <li>Hedges exposure to changes in the <strong>fair value</strong> of a recognized asset/liability (e.g., fixed‑rate debt).</li>
+              <li>Derivative FV changes → <strong>earnings</strong>.</li>
+              <li>Adjust carrying amount of hedged item for the hedged risk → <strong>earnings</strong> (basis adjustment).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cash flow hedge</h3>
+            <ul class="tight">
+              <li>Hedges exposure to variability in <strong>cash flows</strong> (e.g., forecasted interest payments on variable‑rate debt).</li>
+              <li>Effective portion of derivative FV change → <strong>OCI (AOCI)</strong>; reclassified to earnings when hedged cash flows affect earnings.</li>
+              <li>Ineffective portion → <strong>earnings</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations (Interest Rate Swaps)</h2>
+
+        <details><summary>1) Fair value hedge — fixed‑rate debt</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup (Year‑end)</h4>
+        <table class="table-min">
+          <tr><th>Debt</th><td><strong>$1,000,000</strong> fixed‑rate notes (6%)</td></tr>
+          <tr><th>Swap</th><td>Pay variable / receive fixed to hedge debt’s fair value</td></tr>
+          <tr><th>Derivative FV change</th><td><strong>$18,000 gain</strong> (asset)</td></tr>
+          <tr><th>Hedged item FV change</th><td><strong>$17,000 loss</strong> for risk hedged</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Journal entries</h4>
+        <table class="table-min">
+          <tr><th>Recognize derivative</th><td>Dr Derivative asset <strong>$18,000</strong>; Cr Gain on FV hedge <strong>$18,000</strong></td></tr>
+          <tr><th>Adjust debt (basis)</th><td>Dr Loss on FV hedge <strong>$17,000</strong>; Cr Debt (FV adjustment) <strong>$17,000</strong></td></tr>
+        </table>
+        <div class="result">Net earnings impact = <strong>$1,000 gain</strong> (ineffectiveness). Carrying amount of debt increases by <strong>$17,000</strong>.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) Cash flow hedge — variable‑rate debt</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup (Quarter‑end)</h4>
+        <table class="table-min">
+          <tr><th>Debt</th><td><strong>$1,000,000</strong> variable‑rate</td></tr>
+          <tr><th>Swap</th><td>Pay fixed / receive variable</td></tr>
+          <tr><th>Derivative FV change</th><td><strong>$12,500 gain</strong>; effective portion <strong>$12,000</strong>, ineffective <strong>$500</strong></td></tr>
+          <tr><th>Net swap settlement received</th><td><strong>$3,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Journal entries</h4>
+        <table class="table-min">
+          <tr><th>FV change</th><td>Dr Derivative asset <strong>$12,500</strong>; Cr OCI — CF hedge <strong>$12,000</strong>; Cr Gain on hedge ineffectiveness <strong>$500</strong></td></tr>
+          <tr><th>Settlement</th><td>Dr Cash <strong>$3,000</strong>; Cr Interest expense <strong>$3,000</strong></td></tr>
+          <tr><th>Reclass from AOCI</th><td>Dr OCI — CF hedge <strong>$12,000</strong>; Cr Interest expense <strong>$12,000</strong></td></tr>
+        </table>
+        <div class="result">Interest expense is reduced by both the settlement and the AOCI reclass for the period’s hedged cash flows.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="presentation" class="section">
+        <h2>Presentation Cheat Sheet</h2>
+        <table class="table">
+          <thead><tr><th>Instrument</th><th>Balance sheet</th><th>G/L location</th></tr></thead>
+          <tbody>
+            <tr><td>Standalone derivative (no hedge)</td><td>Asset/Liability at FV</td><td>Earnings</td></tr>
+            <tr><td>FV hedge</td><td>Derivative at FV; hedged item carrying amount adjusted</td><td>Derivative ΔFV → earnings; Hedged item basis adj → earnings</td></tr>
+            <tr><td>CF hedge (effective)</td><td>Derivative at FV</td><td>ΔFV (effective) → OCI (AOCI); reclass to earnings with hedged cash flows</td></tr>
+            <tr><td>CF hedge (ineffective)</td><td>—</td><td>Earnings</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Qualifying for hedge accounting</summary>
+          <p>Which is <em>required</em> at hedge inception?</p>
+          <ol type="A">
+            <li>Prospective and retrospective quantitative testing only</li>
+            <li>Formal designation and documentation of the hedging relationship</li>
+            <li>Derivative must be an exchange‑traded instrument</li>
+            <li>No ineffectiveness permitted</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Documentation at inception is mandatory; effectiveness can be assessed qualitatively or quantitatively.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Embedded derivative</summary>
+          <p>A host debt contract includes a clause requiring payments indexed to a commodity price unrelated to the debtor’s operations. The debt is not measured at FV through earnings. What is the likely treatment?</p>
+          <ol type="A">
+            <li>No separation; account entirely as debt</li>
+            <li>Bifurcate the embedded feature and account as a derivative at FV</li>
+            <li>Elect OCI presentation</li>
+            <li>Capitalize as an intangible asset</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Not clearly & closely related; meets bifurcation criteria.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Presentation check</summary>
+          <p>For a highly effective cash flow hedge, the period‑end change in derivative FV is recorded to:</p>
+          <ol type="A">
+            <li>Earnings</li>
+            <li>OCI (AOCI)</li>
+            <li>Deferred revenue</li>
+            <li>APIC</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Effective portion goes to OCI, reclassified to earnings with the hedged cash flows.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Problem — FV hedge numbers</summary>
+          <p>Fixed‑rate debt of <strong>$2,000,000</strong>. At year‑end, derivative shows a <strong>$30,000 loss</strong>; hedged item’s fair value change for the hedged risk is a <strong>$28,000 gain</strong>. Prepare the earnings impact and carrying amount adjustment.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <table class="table-min">
+                <tr><th>Derivative</th><td>Loss <strong>$30,000</strong> → earnings</td></tr>
+                <tr><th>Hedged item basis adj</th><td>Gain <strong>$28,000</strong> → earnings; Cr Debt (FV adjustment) <strong>$28,000</strong></td></tr>
+                <tr><th>Net ineffectiveness</th><td><strong>$2,000 loss</strong> in earnings</td></tr>
+              </table>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Problem — CF hedge numbers</summary>
+          <p>Variable‑rate debt <strong>$5,000,000</strong>. The swap FV increases by <strong>$80,000</strong> (effective portion <strong>$76,000</strong>); net settlement received is <strong>$10,000</strong> for the quarter. Record entries for the quarter including reclassification.</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <table class="table-min">
+                <tr><th>FV change</th><td>Dr Derivative asset <strong>$80,000</strong>; Cr OCI — CF hedge <strong>$76,000</strong>; Cr Gain (ineffective) <strong>$4,000</strong></td></tr>
+                <tr><th>Settlement</th><td>Dr Cash <strong>$10,000</strong>; Cr Interest expense <strong>$10,000</strong></td></tr>
+                <tr><th>Reclass from AOCI</th><td>Dr OCI — CF hedge <strong>$76,000</strong>; Cr Interest expense <strong>$76,000</strong></td></tr>
+              </table>
+              <div class="result">Interest expense reduced by <strong>$86,000</strong> this quarter.</div>
+            </div>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

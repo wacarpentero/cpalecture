@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Use of Data and Information (2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area II.A — Use of Data and Information (planning & risk assessment context), aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Use of Data and Information</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify <strong>sources of data and information</strong> (internal & external) relevant to planning and risk assessment.</li>
+          <li>Evaluate <strong>reliability</strong> of information, including dependency on <strong>ITGCs</strong>, <strong>application controls</strong>, and <strong>key reports</strong>.</li>
+          <li>Apply <strong>automated tools and techniques (ATTs)</strong> and data analytics appropriately in planning and RA.</li>
+          <li>Address <strong>data quality</strong>, lineage, completeness, and population integrity when using data for testing or analytics.</li>
+          <li>Document the use of data/information and its effect on <strong>identified risks</strong> and planned responses.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Area</th><th>Key points</th></tr>
+          <tr><td>Sources</td><td>Internal: GL, subledgers, key reports, workflows, logs; External: confirmations, SOC 1®, regulators, pricing services, public data.</td></tr>
+          <tr><td>Reliability</td><td>Depends on control environment, ITGCs, app controls, and whether you validated <em>key reports</em>/EUCs used as evidence.</td></tr>
+          <tr><td>ATTs/Analytics</td><td>Useful for planning analytics, anomaly detection, stratification, full‑population scans; still require auditor judgment.</td></tr>
+          <tr><td>Population integrity</td><td>Prove <em>completeness & accuracy</em> of the dataset before relying on analytics or sampling.</td></tr>
+          <tr><td>Privacy/Security</td><td>Respect confidentiality; protect PII; follow firm and legal requirements for data handling.</td></tr>
+          <tr><td>Documentation</td><td>Data sources, extraction methods, validation performed, parameters of analytics, and conclusions.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Sources of Data & Information</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Internal:</strong> GL, AR/AP/Inventory subledgers, fixed asset systems, revenue platforms, <em>key reports</em> (aging, exception, journal entry logs), EUC spreadsheets.</li>
+        <li><strong>External:</strong> Bank/broker <strong>confirmations</strong>, legal letters, SOC 1® reports from service orgs, market/pricing data, regulator filings, independent actuarial/valuation reports.</li>
+        <li><strong>Operational/IT:</strong> System logs, access/change records, job processing outputs that corroborate process performance.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> During planning, build a simple <em>Data Map</em>: source → owner → extraction method → intended use → reliability checks.</div>
+    </div>
+
+    <h2>2) Reliability of Information</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Key Reports & EUCs</h3>
+        <ul>
+          <li>Identify reports used as audit evidence; validate logic (parameters, filters, completeness) or rely on tested app controls that generate them.</li>
+          <li>EUCs (spreadsheets): test data integrity (links, formulas, version control) and access controls.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>ITGC & App Controls</h3>
+        <ul>
+          <li>Strong ITGCs (access, change, operations) increase confidence in automated reports.</li>
+          <li>Where ITGC weaknesses exist, increase substantive work or independently validate the data transformation logic.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>3) Using Automated Tools & Techniques (ATTs)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Planning analytics:</strong> trend/ratio analyses, peer benchmarking, outlier detection to steer risk assessment.</li>
+        <li><strong>Population analysis:</strong> stratify, filter, or full‑population scans (e.g., journal entry testing rules, duplicate payment checks).</li>
+        <li><strong>Link to risk:</strong> Analytics inform <em>where</em> to test more; they don’t replace appropriate audit procedures.</li>
+        <li><strong>Parameters & reproducibility:</strong> record criteria, date ranges, joins/filters, and thresholds so work can be re‑performed.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>Journal‑entry analytics flag unusual combinations (user at odd hours + weekend + manual JE to revenue). Response: expand JE testing and understand access controls.</p></details>
+    </div>
+
+    <h2>4) Population Integrity & Data Quality</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Completeness:</strong> reconcile extracted data totals to control accounts; use sequence checks (invoice numbers, JE IDs), and cut‑off windows.</li>
+        <li><strong>Accuracy:</strong> spot‑check fields back to source docs; validate mappings and currency conversions.</li>
+        <li><strong>Lineage:</strong> understand transformations (ETL steps); where possible, obtain <em>read‑only</em> extracts directly from the system of record.</li>
+        <li>Handle <strong>exceptions/false positives</strong> systematically; refine rules without biasing results.</li>
+      </ul>
+      <div class="callout danger"><strong>Common pitfall:</strong> Using analytics outputs without first proving the dataset is complete and accurate for the stated objective.</div>
+    </div>
+
+    <h2>5) External Information Sources (EIS) & SOC 1®</h2>
+    <div class="card">
+      <ul>
+        <li>When relying on information from service organizations (payroll, revenue platforms), obtain the <strong>SOC 1® Type 2</strong> report covering the period.</li>
+        <li>Evaluate <strong>complementary user‑entity controls</strong> and test that the client performed them.</li>
+        <li>For market/pricing data, consider provider credibility, methodology transparency, and corroborate with alternate sources where feasible.</li>
+      </ul>
+    </div>
+
+    <h2>6) Privacy, Security & Ethics</h2>
+    <div class="card">
+      <ul>
+        <li>Protect PII and sensitive data; use secure transfer & storage; limit access by need‑to‑know.</li>
+        <li>Avoid creating unnecessary copies; prefer ephemeral analysis environments with audit trails.</li>
+        <li>Follow laws/regulations and firm policies on data retention and destruction.</li>
+      </ul>
+    </div>
+
+    <h2>7) Documentation</h2>
+    <div class="card">
+      <ul>
+        <li>Purpose of each dataset/analytic and how it supports planning or risk assessment.</li>
+        <li>Source, extraction date, method, parameters; tests of completeness/accuracy; reliance on ITGCs/app controls or independent validation.</li>
+        <li>Findings, anomalies, and how they changed planned procedures or risk assessments.</li>
+      </ul>
+    </div>
+
+    <h2>8) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>What must you do before relying on an analytic? <strong>Validate the completeness & accuracy of the underlying dataset.</strong></li>
+        <li>How do you validate a <em>key report</em>? <strong>Test report logic/parameters or rely on effective app controls producing it.</strong></li>
+        <li>Do ATTs replace auditing standards? <strong>No—judgment and appropriate procedures are still required.</strong></li>
+        <li>What to do with SOC 1® user controls? <strong>Test that the client performed them; don’t assume.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

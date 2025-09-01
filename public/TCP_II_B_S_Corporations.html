@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S Corporations — TCP II.B (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:700}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">S Corporations</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Identify <strong>eligibility & election</strong> rules (shareholders, stock, domestic entity, timing) and termination triggers.</li>
+        <li>Compute shareholder <strong>basis</strong> rollforwards (stock & direct debt) and apply <strong>loss limitations</strong> (basis → at‑risk → passive).</li>
+        <li>Determine tax effects of <strong>distributions</strong> using <strong>AAA</strong>, <strong>AEP</strong> and <strong>OAA</strong> ordering.</li>
+        <li>Explain <strong>reasonable compensation</strong> and 2% shareholder fringe benefit rules.</li>
+        <li>Compute exposure for <strong>built‑in gains (BIG) tax</strong> and <strong>passive investment income (PII) tax</strong> when applicable.</li>
+        <li>Differentiate <strong>separately stated items</strong> vs non‑separately stated ordinary income and their basis effects.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>One‑page map</h2>
+      <div class="diagram">Eligibility → ≤100 shareholders, only individuals/estates/certain trusts, no NRAs, one class of stock, domestic corporation → File Form 2553
+Basis rollforward → Beg basis + income (incl. tax‑exempt) − distributions − nondeductible − separately stated losses/deductions
+Loss order → Basis → At‑Risk → Passive
+Distribution order (with AEP) → from AAA (tax‑free to basis → capital gain if exceeds) → from AEP (dividend) → return of capital → capital gain
+Corporate‑level taxes (rare) → Built‑in gains (recognition window) and Passive investment income tax (AEP & PII > 25% of gross receipts)
+Compensation → Pay <strong>reasonable salary</strong> to shareholder‑employees; distributions are not subject to SE tax</div>
+      <span class="pill">AAA before AEP</span> <span class="pill">Debt basis = direct loans only</span> <span class="pill">Reasonable comp!</span>
+    </section>
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>Debt basis</strong>: personal guarantees do <em>not</em> create basis; only <em>direct loans</em> from shareholder to S corp do.</li>
+        <li>When basis is limited, multiple loss/deduction items are <strong>allowed pro‑rata</strong>.</li>
+        <li>Distributions from AAA <em>do not</em> reduce AAA below zero; excess distributions over basis produce a <strong>capital gain</strong>.</li>
+        <li><strong>BIG tax</strong> applies only up to the built‑in gain at conversion and within the recognition period.</li>
+        <li><strong>PII tax</strong> requires both AEP and PII &gt; 25% of gross receipts; sustained for 3 years can terminate S status at the start of year 4.</li>
+        <li>2% shareholders: certain fringe benefits are taxable W‑2 wages to them but deductible by the S corp.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+
+      <h3>1) Stock basis rollforward (includes tax‑exempt income and separately stated deductions)</h3>
+      <div class="diagram">Begin $50,000
++ Ordinary income $40,000
++ Tax‑exempt interest $2,000
+− Distribution $30,000
+− Nondeductible fines $3,000
+− Charitable contribution $5,000
+= Ending stock basis <strong>$54,000</strong>.</div>
+
+      <h3>2) Loss limitation with debt basis</h3>
+      <div class="diagram">Stock basis $20,000; direct debt basis $10,000; loss $50,000.
+Allowed loss = $30,000; suspended $20,000 (basis is reduced to zero; debt basis reduced to zero).</div>
+
+      <h3>3) AAA / AEP distribution ordering</h3>
+      <div class="diagram">AAA $40,000; AEP $25,000; shareholder basis $35,000; distribution $70,000.
+From AAA: $40,000 tax‑free to basis until basis $0 → capital gain $5,000.
+From AEP: $25,000 dividend.
+Remainder $5,000 = capital gain.</div>
+
+      <h3>4) Built‑in gains (BIG) tax computation</h3>
+      <div class="diagram">Built‑in gain at conversion $300,000; asset sold during recognition period; recognized gain $250,000; corporate rate 21%.
+BIG tax base = min($250,000, $300,000) = $250,000 → tax <strong>$52,500</strong>.</div>
+
+      <h3>5) Passive investment income (PII) tax</h3>
+      <div class="diagram">Gross receipts $800,000; passive investment income $260,000; net passive income $200,000; AEP exists.
+Excess over 25% = $60,000; tax base = lesser of $200,000 and $60,000 = $60,000 → 21% = <strong>$12,600</strong>.</div>
+
+      <h3>6) Debt‑basis repayment gain</h3>
+      <div class="diagram">Shareholder used $10,000 of debt basis for prior losses. Next year loan is repaid before basis restoration.
+Repayment triggers <strong>$10,000 capital gain</strong> to shareholder.</div>
+
+      <h3>7) Reasonable compensation reminder</h3>
+      <div class="diagram">If an S‑corp has $150,000 profits and pays its owner‑employee only $10,000 wages with $140,000 distributions, the IRS may reclassify part of the distributions as <strong>W‑2 wages</strong> to reach a reasonable salary.</div>
+    </section>
+
+    <section class="card"><h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Which of the following <em>disqualifies</em> an S‑corporation election?</p>
+        <ol type="A">
+          <li>95 shareholders</li>
+          <li>A grantor trust as a shareholder</li>
+          <li>A nonresident alien individual shareholder</li>
+          <li>Only one class of common stock outstanding</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — NRAs cannot be S‑corp shareholders. </p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> Basis rollforward: Begin basis $50,000; ordinary income $40,000; tax‑exempt interest $2,000; distribution $30,000; nondeductible fines $3,000; charitable contribution $5,000. Ending stock basis?</p>
+        <ol type="A">
+          <li>$59,000</li>
+          <li>$54,000</li>
+          <li>$52,000</li>
+          <li>$56,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Increase for income (incl. tax‑exempt), decrease for distributions, nondeductibles, and separately stated deductions → ending basis = $54,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Loss limitation: Stock basis $20,000, debt basis $10,000, current‑year loss $50,000. Allowed loss and carryforward?</p>
+        <ol type="A">
+          <li>Allowed $30,000; carry $20,000</li>
+          <li>Allowed $30,000; carry $20,000</li>
+          <li>Allowed $20,000; carry $30,000</li>
+          <li>Allowed $50,000; carry $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Basis limits losses to stock + direct debt basis = $30,000; excess $20,000 carries forward.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Which creates <em>debt basis</em>?</p>
+        <ol type="A">
+          <li>Shareholder guarantees a bank loan to the S corp</li>
+          <li>Shareholder advances cash directly to the S corp under a note</li>
+          <li>Vendor extends credit to the S corp; shareholder co‑signs</li>
+          <li>Shareholder pledges personal assets as collateral only</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Only a bona fide <em>direct</em> loan from shareholder to S corp creates debt basis.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Distribution with AAA & AEP: AAA $40,000; AEP $25,000; stock basis $35,000; distribution $70,000. Results?</p>
+        <ol type="A">
+          <li>Tax‑free $35,000, Dividend $25,000, Capital gain $10,000</li>
+          <li>Tax‑free $40,000, Dividend $0, Capital gain $30,000</li>
+          <li>Dividend $25,000 first, then tax‑free $35,000, Capital gain $10,000</li>
+          <li>All dividend $70,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Distribute from AAA first (tax‑free to basis; any excess capital gain), then from AEP as dividend, then any remainder is capital gain.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> BIG tax: Built‑in gain at conversion $300,000. Asset sold in recognition period recognizes gain $250,000. Corporate‑level tax (21%)?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$52,500</li>
+          <li>$21,000</li>
+          <li>$63,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — BIG tax applies to the lesser of recognized gain and remaining built‑in gain; 21% × $250,000 = $52,500.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> PII tax (simplified): Gross receipts $800,000; passive investment income $260,000; net passive income $200,000; AEP exists. 21% tax = ?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$12,600</li>
+          <li>$42,000</li>
+          <li>$21,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — PII exceeds 25% of gross receipts. Tax base is the <em>lesser</em> of net passive income ($200,000) or excess over 25% ($60,000). Here base $60,000 × 21% = $12,600. (Exact exam formula may specify additional limits.)</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> Which statement about termination is correct?</p>
+        <ol type="A">
+          <li>PII &gt; 25% alone terminates S status immediately</li>
+          <li>PII &gt; 25% for <em>three consecutive years</em> while AEP exists terminates S status at the <em>start of year 4</em></li>
+          <li>Distributions exceeding AAA terminate S status</li>
+          <li>Having two classes of stock is permitted if voting rights differ</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — The “three‑year” rule plus AEP triggers termination in the fourth year.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> LIFO recapture on S election is:</p>
+        <ol type="A">
+          <li>Included in the first S year</li>
+          <li>Included as income in the <em>final C year</em> with tax payable in installments</li>
+          <li>Ignored if inventory later decreases</li>
+          <li>Deducted from AAA</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — LIFO recapture is recognized in the last C‑corp year; the resulting tax is generally paid in installments.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Reasonable compensation: Which is most accurate?</p>
+        <ol type="A">
+          <li>Distributions can replace all wages if profits are low</li>
+          <li>Shareholder‑employees must be paid <em>reasonable</em> wages for services; distributions are not subject to SE tax</li>
+          <li>Wages are optional if distributions are taken</li>
+          <li>All S‑corp distributions are subject to payroll tax</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Reasonable salary is required; distributions are not subject to SE tax.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>11)</strong> Basis‑limited losses with multiple items: Basis $30,000; ordinary loss $15,000; charitable contribution $20,000. How much of each passes through?</p>
+        <ol type="A">
+          <li>Ordinary $12,857; Charity $17,143</li>
+          <li>Ordinary $15,000; Charity $15,000</li>
+          <li>Ordinary $10,000; Charity $20,000</li>
+          <li>Ordinary $0; Charity $30,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Apply basis pro‑rata: total losses $35,000 limited to basis $30,000 ⇒ ordinary $12,857 and charity $17,143; carries: ordinary $2,143, charity $2,857.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>12)</strong> Debt‑basis repayment: A shareholder used $10,000 of <em>debt basis</em> to deduct losses. Next year the S corp repays the $10,000 loan before income restores basis. Tax result?</p>
+        <ol type="A">
+          <li>No income; basis is negative</li>
+          <li>Capital gain to the shareholder of $10,000</li>
+          <li>Ordinary income of $10,000</li>
+          <li>Dividend of $10,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — With no basis restoration, repayment triggers gain to the extent of prior debt‑basis reductions used for losses.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

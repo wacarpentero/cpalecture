@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.D: Property, Plant, and Equipment</title>
+<meta name="description" content="CPA reviewer chapter for FAR II.D — Property, Plant, and Equipment (capitalization, interest, depreciation, subsequent costs, impairment, ARO, exchanges, disposals).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+  .small{font-size:0.95rem}
+
+  /* Journal entry styling (tight grid so amounts sit close to accounts) */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 260px 96px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{overflow:visible;white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+  .je .cr .amt{}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Property, Plant, and Equipment</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify <strong>capitalizable costs</strong> at acquisition and for self‑constructed assets, including <strong>interest capitalization</strong>.</li>
+          <li>Compute depreciation using <strong>straight‑line</strong>, <strong>double‑declining balance</strong>, <strong>sum‑of‑the‑years’‑digits</strong>, and <strong>units‑of‑production</strong>, and account for <strong>changes in estimates</strong>.</li>
+          <li>Account for <strong>subsequent expenditures</strong> (repairs vs. betterments), <strong>component replacements</strong>, and <strong>asset retirement obligations</strong> (AROs).</li>
+          <li>Test long‑lived assets for <strong>impairment</strong>, measure losses, and present <strong>disposals</strong> and <strong>held‑for‑sale</strong> classification.</li>
+          <li>Apply nonmonetary <strong>exchanges</strong> and derecognition with and without <strong>commercial substance</strong>.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:26%"><col style="width:48%"><col style="width:26%"></colgroup>
+          <tr><th>Topic</th><th>Core points</th><th>Exam flags</th></tr>
+          <tr><td>Capitalization</td><td>Purchase price, taxes, freight, installation/testing, site prep; for self‑construction include materials, labor, overhead; capitalize <strong>avoidable interest</strong> during construction.</td><td>Start/stop interest: when activities begin and cease upon ready for use.</td></tr>
+          <tr><td>Subsequent costs</td><td>Repairs/maintenance → expense; betterments/major replacements → capitalize (remove old component if carrying amount known).</td><td>IF carrying amount unknown, capitalize new cost and adjust depreciation prospectively.</td></tr>
+          <tr><td>Depreciation</td><td>Cost − residual value over useful life; method reflects pattern of benefit.</td><td>Change in life or residual is prospective.</td></tr>
+          <tr><td>Impairment</td><td>Held‑for‑use: test recoverability (undiscounted cash flows) then measure loss to fair value; Held‑for‑sale: lower of carrying amount or fair value minus selling costs.</td><td>No reversal for held‑for‑use under U.S. GAAP.</td></tr>
+          <tr><td>ARO</td><td>Recognize at present value with a <em>asset retirement cost</em> added to the asset and a liability; accrete interest each period.</td><td>Use credit‑adjusted risk‑free rate at inception.</td></tr>
+          <tr><td>Exchanges</td><td>Commercial substance → recognize gains/losses; otherwise limit gain recognition.</td><td>Measure at fair values if determinable.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Capitalization & Interest</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Self‑constructed assets:</strong> capitalize materials, direct labor, applicable overhead (may use normal capacity rates).</li>
+        <li><strong>Interest capitalization (ASC 835‑20):</strong> capitalize the <em>avoidable interest</em> on <em>weighted‑average accumulated expenditures</em> during the capitalization period. Use specific borrowing rate first, then weighted average for general debt.</li>
+        <li>Stop capitalizing when the asset is <strong>ready for intended use</strong> (even if not yet placed in service).</li>
+      </ul>
+    </div>
+
+    <h2>2) Depreciation & Changes in Estimate</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Straight‑line:</strong> (Cost − residual) ÷ life.</li>
+        <li><strong>Double‑declining:</strong> 2 × straight‑line rate × beginning book value; do not depreciate below residual value.</li>
+        <li><strong>Sum‑of‑the‑years’‑digits:</strong> (Cost − residual) × remaining years / sum of digits.</li>
+        <li><strong>Units‑of‑production:</strong> rate per unit × units produced.</li>
+        <li><strong>Changes in life/residual:</strong> apply prospectively from the change date.</li>
+      </ul>
+    </div>
+
+    <h2>3) Subsequent Expenditures & Disposals</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Repairs</strong> (maintain condition) → expense. <strong>Betterments</strong> (increase capacity/efficiency or extend life) → capitalize.</li>
+        <li><strong>Component replacement:</strong> remove old component’s carrying amount if known; otherwise capitalize new part and adjust depreciation going forward.</li>
+        <li><strong>Disposals:</strong> recognize gain/loss = proceeds − carrying amount; stop depreciation at disposal date.</li>
+      </ul>
+    </div>
+
+    <h2>4) Impairment of Long‑Lived Assets</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Held for use:</strong> Step 1 recoverability test (undiscounted cash flows). If not recoverable, loss = carrying amount − fair value.</li>
+        <li><strong>Held for sale:</strong> lower of carrying amount or fair value minus cost to sell; cease depreciation.</li>
+      </ul>
+    </div>
+
+    <h2>5) Asset Retirement Obligations (ARO)</h2>
+    <div class="card">
+      <ul>
+        <li>Initially recognize the present value of expected retirement cash flows as a <strong>liability</strong> with an equal <strong>asset retirement cost</strong> added to the asset.</li>
+        <li>Subsequently, depreciate the asset retirement cost and recognize <strong>accretion expense</strong> to unwind the discount on the liability.</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Capitalize or Expense?</h3>
+        <table class="tbl">
+          <colgroup><col style="width:44%"><col style="width:18%"><col style="width:38%"></colgroup>
+          <tr><th>Cost</th><th class="center">Capitalize?</th><th>Notes</th></tr>
+          <tr><td>Freight and installation for a new press</td><td class="center">Yes</td><td>Necessary to get asset ready for use</td></tr>
+          <tr><td>Routine maintenance agreement (annual)</td><td class="center">No</td><td>Period expense</td></tr>
+          <tr><td>Major overhaul that extends life by three years</td><td class="center">Yes</td><td>Betterment — capitalize</td></tr>
+          <tr><td>Employee training on new machine</td><td class="center">No</td><td>Expense (post‑acquisition)</td></tr>
+          <tr><td>Demolition of old building for site preparation (net of salvage)</td><td class="center">Yes</td><td>Include in land (if to build new)</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Interest Capitalization (Specific + General Debt)</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:48%"><col style="width:26%"><col style="width:26%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Notes</th></tr>
+          <tr><td>Construction expenditures on a building (evenly throughout year)</td><td class="num">$4,000,000</td><td>Capitalize on weighted‑average basis</td></tr>
+          <tr><td>Specific construction loan at 6% (outstanding all year)</td><td class="num">$1,500,000</td><td>Use first against WAAE</td></tr>
+          <tr><td>Other general debt at 8% (weighted‑average rate)</td><td class="num">$5,000,000</td><td>Apply to remaining WAAE</td></tr>
+        </table>
+        <table class="tbl small">
+          <tr><th>Compute weighted‑average accumulated expenditures (WAAE)</th><th class="num">$2,000,000</th></tr>
+          <tr><td>Avoidable interest = min(WAAE, specific debt) × 6% + (excess WAAE) × 8%</td><td class="num">$120,000 + $40,000 = <strong>$160,000</strong></td></tr>
+          <tr><td>Actual interest incurred during year</td><td class="num">$520,000</td></tr>
+          <tr><th>Interest to capitalize (lesser of avoidable or actual)</th><th class="num">$160,000</th></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Building (capitalized interest)</span><span class="amt">$160,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Interest expense</span><span class="amt">($160,000)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — Depreciation Methods (Partial‑Year)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:42%"><col style="width:20%"><col style="width:38%"></colgroup>
+          <tr><th>Asset</th><th class="center">Data</th><th>Year 1 depreciation</th></tr>
+          <tr>
+            <td>Machine — Cost $500,000; residual $20,000; life 8 years; placed in service on July 1</td>
+            <td class="center">Half‑year in Year 1</td>
+            <td>
+              Straight‑line: (($500,000 − $20,000) ÷ 8) × 1/2 = <strong>$30,000</strong><br>
+              Double‑declining: 2 ÷ 8 × $500,000 × 1/2 = <strong>$62,500</strong><br>
+              Sum‑of‑digits: (8/36) × ($500,000 − $20,000) × 1/2 = <strong>$53,333</strong>
+            </td>
+          </tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Change in Estimate (Life & Residual)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:48%"><col style="width:24%"><col style="width:28%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Computation</th></tr>
+          <tr><td>Equipment cost</td><td class="num">$300,000</td><td rowspan="4">Accumulated depreciation after 3 years SL (life 10, residual $20,000): (($300,000 − $20,000) ÷ 10) × 3 = $84,000</td></tr>
+          <tr><td>Original life / residual</td><td class="num">10 yrs / $20,000</td></tr>
+          <tr><td>After 3 years, revise: remaining life 5 years, residual $12,000</td><td class="num">—</td></tr>
+          <tr><td>Carrying amount at change date</td><td class="num">$216,000</td></tr>
+          <tr><th>New annual SL depreciation</th><th class="num">$ (216,000 − 12,000) ÷ 5 = <strong>$40,800</strong></th><th></th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Impairment (Held for Use)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:44%"><col style="width:18%"><col style="width:38%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Computation & JE</th></tr>
+          <tr>
+            <td>Carrying amount of equipment</td><td class="num">$450,000</td>
+            <td rowspan="3">
+              Step 1 test: undiscounted expected cash flows = $400,000 → <strong>not recoverable</strong>.<br>
+              Step 2 measure loss: fair value = $360,000 → loss = $450,000 − $360,000 = <strong>$90,000</strong>.
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Impairment loss</span><span class="amt">$90,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated impairment</span><span class="amt">($90,000)</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td>Undiscounted cash flows (expected)</td><td class="num">$400,000</td></tr>
+          <tr><td>Fair value</td><td class="num">$360,000</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 6 — Asset Retirement Obligation (Initial & Accretion)</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:46%"><col style="width:27%"><col style="width:27%"></colgroup>
+          <tr><th>Input</th><th class="center">Amount</th><th>Computation</th></tr>
+          <tr><td>Expected cash outflow in 5 years to dismantle equipment</td><td class="num">$120,000</td><td></td></tr>
+          <tr><td>Credit‑adjusted risk‑free rate</td><td class="num">6%</td><td>Present value factor (5 yrs @ 6%) ≈ 0.7473</td></tr>
+          <tr><td>Initial ARO liability (PV)</td><td class="num">$89,676</td><td>120,000 × 0.7473</td></tr>
+          <tr><th>Year 1 accretion expense</th><th class="num">$5,381</th><th>89,676 × 6%</th></tr>
+        </table>
+        <h4>Entries</h4>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Equipment (asset retirement cost)</span><span class="amt">$89,676</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Asset retirement obligation</span><span class="amt">($89,676)</span></li>
+        </ul>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Accretion expense</span><span class="amt">$5,381</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Asset retirement obligation</span><span class="amt">($5,381)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 7 — Nonmonetary Exchange</h3>
+        <table class="tbl">
+          <colgroup><col style="width:48%"><col style="width:24%"><col style="width:28%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Result</th></tr>
+          <tr><td>Old equipment (cost $200,000; accumulated depreciation $120,000)</td><td class="num">$80,000 BV</td><td rowspan="4">If the exchange has <strong>commercial substance</strong> and fair values are determinable, recognize full gain/loss.</td></tr>
+          <tr><td>Fair value of old equipment</td><td class="num">$95,000</td></tr>
+          <tr><td>Cash paid</td><td class="num">$10,000</td></tr>
+          <tr><td>Fair value of new asset received</td><td class="num">$105,000</td></tr>
+          <tr><th>Gain recognized</th><th class="num">$95,000 − $80,000 = <strong>$15,000</strong></th><th></th></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">New equipment</span><span class="amt">$105,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Old equipment (cost)</span><span class="amt">($200,000)</span></li>
+          <li><span class="label">Dr</span><span class="acct">Accumulated depreciation</span><span class="amt">$120,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($10,000)</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Gain on exchange</span><span class="amt">($15,000)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 8 — Disposal: Gain/Loss</h3>
+        <table class="tbl">
+          <colgroup><col style="width:42%"><col style="width:20%"><col style="width:38%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Computation & Entry</th></tr>
+          <tr>
+            <td>Equipment cost $150,000; accumulated depreciation $110,000; cash proceeds $50,000</td>
+            <td class="num">$—</td>
+            <td>
+              Carrying amount = $40,000 → Gain = $50,000 − $40,000 = <strong>$10,000</strong>.
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$50,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Equipment (cost)</span><span class="amt">($150,000)</span></li>
+                <li><span class="label">Dr</span><span class="acct">Accumulated depreciation</span><span class="amt">$110,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Gain on disposal</span><span class="amt">($10,000)</span></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </article>
+
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Capitalize which interest? <strong>Avoidable interest</strong> during the capitalization period; not beyond ready‑for‑use.</li>
+        <li>Impairment model (held for use)? <strong>Undiscounted recoverability test</strong> then write down to fair value.</li>
+        <li>ARO after initial recognition? Depreciate the asset retirement cost and record <strong>accretion expense</strong> on the liability.</li>
+        <li>Change in useful life is accounted for how? <strong>Prospectively</strong>.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

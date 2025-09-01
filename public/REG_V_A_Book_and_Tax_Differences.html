@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG V.A Book vs. Tax Differences (M‑1/M‑3)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa; --ok:#b5ffb1;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 84px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:var(--ok)}
+.tbl.wfirst th:first-child,.tbl.wfirst td:first-child{width: 276px;min-width: 276px}
+.kpill{display:inline-block;padding:2px 8px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);}
+
+/* widen Type and M‑1 direction columns */
+.tbl.m1 th:nth-child(2), .tbl.m1 td:nth-child(2){ width: 270px; min-width: 270px; }
+.tbl.m1 th:nth-child(3), .tbl.m1 td:nth-child(3){ width: 270px; min-width: 270px; }
+
+/* Fit 'M-1 direction' col in reconciliation table */
+.tbl.small th:nth-child(2), .tbl.small td:nth-child(2){
+  min-width: 160px;
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Book vs. Tax Differences (Schedule M‑1 / M‑3)</h1>
+<p class="mini muted"><strong>Acronyms:</strong> <strong>M‑1</strong> / <strong>M‑3</strong> = corporate book‑to‑tax reconciliations; <strong>P/T</strong> = pretax; <strong>DRD</strong> = dividends‑received deduction; <strong>DTL</strong>/<strong>DTA</strong> = deferred tax liability/asset; <strong>ASC 740</strong> governs deferred taxes (covered elsewhere).</p>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Identify</strong> permanent vs. temporary differences and the proper <strong>M‑1/M‑3</strong> direction (add to book income or subtract).</li>
+<li><strong>Calculate</strong> total book‑tax differences to reconcile book <strong>P/T</strong> income to taxable income on Form 1120.</li>
+<li><strong>Review</strong> an adjusted trial balance to spot differences that must be pushed to <strong>M‑1/M‑3</strong>.</li>
+</ul>
+<div class="callout mini"><strong>Exam tip:</strong> Start from <em>book pretax income</em>. <span class="kpill">ADD</span> nondeductible book expenses &amp; taxable income not in books. <span class="kpill">SUBTRACT</span> tax‑exempt income &amp; book income not yet taxable.</div>
+</section>
+<section class="card">
+<h2>At‑a‑Glance — Common Differences</h2>
+<table class="tbl small wfirst m1">
+<tr><th>Item</th><th>Type</th><th>M‑1 direction (from book P/T income)</th><th>Notes</th></tr>
+<tr>
+<td>Federal income tax expense</td><td>Permanent</td><td><strong>ADD</strong></td><td>Nondeductible for tax.</td>
+</tr>
+<tr>
+<td>Meals (50%) / Entertainment</td><td>Permanent</td><td><strong>ADD</strong> disallowed portion</td><td>Entertainment is nondeductible; business meals generally 50% deductible (exam will specify any temporary exceptions).</td>
+</tr>
+<tr>
+<td>Fines &amp; penalties, lobbying</td><td>Permanent</td><td><strong>ADD</strong></td><td>Nondeductible for tax.</td>
+</tr>
+<tr>
+<td>Tax‑exempt municipal interest</td><td>Permanent</td><td><strong>SUBTRACT</strong></td><td>Included in book income but not taxable.</td>
+</tr>
+<tr>
+<td>Life‑insurance proceeds on key executive</td><td>Permanent</td><td><strong>SUBTRACT</strong></td><td>Proceeds are tax‑exempt (premiums may be nondeductible).</td>
+</tr>
+<tr>
+<td>Book depreciation vs. MACRS</td><td>Temporary</td><td><strong>ADD</strong> if book &gt; tax; <strong>SUBTRACT</strong> if tax &gt; book</td><td>Reverses in later years.</td>
+</tr>
+<tr>
+<td>Goodwill impairment (book) vs. tax amortization</td><td>Temporary/Permanent</td><td>Depends</td><td>Post‑2008 goodwill generally not amortized for tax; book impairment has no tax effect (permanent).</td>
+</tr>
+<tr>
+<td>Allowance for doubtful accounts</td><td>Temporary</td><td><strong>ADD</strong> allowance expense; <strong>SUBTRACT</strong> actual write‑offs</td><td>Tax uses direct write‑off.</td>
+</tr>
+<tr>
+<td>Warranty &amp; vacation accruals</td><td>Temporary</td><td><strong>ADD</strong> accruals; <strong>SUBTRACT</strong> when paid</td><td>Deductible when incurred/paid under tax timing rules.</td>
+</tr>
+<tr>
+<td>Prepaid income (advance rent)</td><td>Temporary</td><td><strong>ADD</strong> book deferral</td><td>Often taxable when received.</td>
+</tr>
+<tr>
+<td>Charitable contributions (C corp limit)</td><td>Temporary/Permanent</td><td><strong>ADD</strong> any excess over limit</td><td>Limit based on taxable income (exam will provide %); excess carries forward.</td>
+</tr>
+<tr>
+<td>DRD</td><td>Permanent</td><td><strong>SUBTRACT</strong> the allowed DRD</td><td>Reduces taxable income; subject to limitations.</td>
+</tr>
+<tr>
+<td>Stock‑based comp (ASC 718 vs tax at exercise)</td><td>Temporary</td><td>Usually <strong>ADD</strong> book expense; <strong>SUBTRACT</strong> tax deduction at exercise</td><td>Excess tax benefit is permanent to equity for book, but reduces taxable income when realized.</td>
+</tr>
+</table>
+</section>
+<section class="card">
+<h2>Illustration — M‑1 Reconciliation</h2>
+<p class="small"><strong>Facts:</strong> Book pretax income <strong>$600,000</strong> includes: federal income tax expense <strong>$30,000</strong>; municipal interest <strong>$10,000</strong>; meals <strong>$12,000</strong> (50% allowable); depreciation (book) <strong>$70,000</strong> vs tax <strong>$90,000</strong>; bad‑debt allowance expense <strong>$8,000</strong> with actual write‑offs <strong>$5,000</strong>; charitable contributions paid <strong>$80,000</strong>, limited to <strong>$60,000</strong> this year (carryover <strong>$20,000</strong>); DRD allowed <strong>$15,000</strong>.</p>
+<table class="tbl small">
+<tr><th>Adjustment</th><th>M‑1 direction</th><th>Amount</th><th>Why</th></tr>
+<tr><td>Federal income tax expense</td><td>ADD</td><td><strong>$30,000</strong></td><td>Nondeductible (permanent).</td></tr>
+<tr><td>Meals disallowance (50% of $12,000)</td><td>ADD</td><td><strong>$6,000</strong></td><td>Nondeductible portion.</td></tr>
+<tr><td>Municipal interest</td><td>SUBTRACT</td><td><strong>$10,000</strong></td><td>Tax‑exempt income.</td></tr>
+<tr><td>Depreciation difference (tax $90,000 &gt; book $70,000)</td><td>SUBTRACT</td><td><strong>$20,000</strong></td><td>Tax accelerated (temporary).</td></tr>
+<tr><td>Bad‑debt allowance vs write‑off</td><td>ADD</td><td><strong>$3,000</strong></td><td>$8,000 book expense − $5,000 tax write‑offs.</td></tr>
+<tr><td>Charitable contribution limitation</td><td>ADD</td><td><strong>$20,000</strong></td><td>Excess over limit carries forward (temporary).</td></tr>
+<tr><td>DRD</td><td>SUBTRACT</td><td><strong>$15,000</strong></td><td>Permanent reduction.</td></tr>
+<tr><th colspan="2">Total net M‑1 adjustments (to book P/T income)</th><th><strong>$74,000</strong> ADD − <strong>$45,000</strong> SUB = <strong>$29,000</strong> ADD</th><td></td></tr>
+<tr><th colspan="2">Taxable income before special deductions</th><th><strong>$629,000</strong></th><td>$600,000 + $29,000.</td></tr>
+</table>
+<div class="callout mini"><strong>Check:</strong> Temporary items (depreciation, bad‑debts, charitable carryover) lead to <strong>DTA/DTL</strong> under ASC 740; permanent items (federal taxes, muni interest, DRD, disallowed meals) do not.</div>
+</section>
+<section class="card">
+<h2>From Trial Balance → M‑1 Spotting Guide</h2>
+<div class="grid-2 small">
+<div>
+<h3>Scan these expense accounts</h3>
+<ul>
+<li>Income tax expense, penalties, lobbying.</li>
+<li>Meals/entertainment (apply the allowed %).</li>
+<li>Depreciation (compare to tax schedule).</li>
+<li>Bad‑debt expense, warranty, vacation accruals.</li>
+<li>Charitable contributions (apply limit/carryforward).</li>
+<li>Stock‑based compensation expense.</li>
+</ul>
+</div>
+<div>
+<h3>Scan these revenue/other accounts</h3>
+<ul>
+<li>Tax‑exempt interest, life‑insurance proceeds.</li>
+<li>Advance payments (rent/royalty/service deferrals).</li>
+<li>Dividends eligible for <strong>DRD</strong>.</li>
+<li>Large book/tax basis differences in fixed assets or intangibles.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>Diagnostics — What to Check</h2>
+<ul class="small">
+<li><span class="tag">Start point</span> Use <em>book pretax</em> income, not after‑tax income.</li>
+<li><span class="tag">Direction</span> Remember: to reach <em>taxable</em> income, ADD nondeductible expenses/untaxed book deductions; SUBTRACT tax‑exempt income and tax deductions in excess of book.</li>
+<li><span class="tag">Limits</span> Apply contribution limits and compute carryovers.</li>
+<li><span class="tag">Permanent vs temporary</span> Only temporary differences create <strong>DTA/DTL</strong>; permanent do not.</li>
+<li><span class="tag">M‑1 vs M‑3</span> <strong>M‑3</strong> provides more detail for larger corporations; mechanics are the same conceptually.</li>
+</ul>
+</section>
+<!-- Practice Questions at the end -->
+<section class="card">
+<h2>Practice Questions</h2>
+<ol class="small">
+<li><strong>M‑1 direction:</strong> Which way does each item go from book P/T income? (ADD or SUBTRACT)
+        <ul>
+<li>Tax‑exempt interest <strong>$8,000</strong></li>
+<li>Federal income tax expense <strong>$22,000</strong></li>
+<li>Tax depreciation exceeds book by <strong>$18,000</strong></li>
+</ul>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          SUBTRACT <strong>$8,000</strong>; ADD <strong>$22,000</strong>; SUBTRACT <strong>$18,000</strong>.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Compute taxable income:</strong> Book P/T income <strong>$420,000</strong>. Differences: fines <strong>$6,000</strong>, meals <strong>$10,000</strong> (50% disallowed), tax depreciation &gt; book by <strong>$12,000</strong>, muni interest <strong>$5,000</strong>. DRD allowed <strong>$8,000</strong>. Find taxable income before special deductions.
+        <details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          ADD: fines <strong>$6,000</strong> + meals disallowance <strong>$5,000</strong> = <strong>$11,000</strong>. SUBTRACT: depreciation difference <strong>$12,000</strong> + muni interest <strong>$5,000</strong> + DRD <strong>$8,000</strong> = <strong>$25,000</strong>. Net SUBTRACT <strong>$14,000</strong>. Taxable income = <strong>$406,000</strong>.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Temporary vs permanent:</strong> Classify and indicate deferred tax impact.
+        <ul>
+<li>Charitable contribution limited this year by <strong>$12,000</strong>.</li>
+<li>Life‑insurance proceeds <strong>$50,000</strong> on key executive.</li>
+</ul>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Charitable limit = <strong>Temporary</strong> (carryforward) → deferred tax. Life‑insurance proceeds = <strong>Permanent</strong> → no deferred tax.
+        </div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

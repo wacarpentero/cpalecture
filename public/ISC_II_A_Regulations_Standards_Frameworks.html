@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Regulations, Standards & Frameworks</title>
+<style>
+:root{--bg:#0b1020;--card:#111a33;--ink:#eaf0ff;--muted:#a7b4cf;--accent:#7aa2ff;--accent2:#4dd4b0;--danger:#ff6b6b;--font:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.title{font-size:28px;font-weight:800;margin:6px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px dashed rgba(255,255,255,.12);padding:8px;text-align:left;font-size:14px;vertical-align:top}
+.table th{font-weight:600}
+ul.tight>li{margin:2px 0}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.tip{border-left:4px solid var(--accent2);background:rgba(77,212,176,.08);padding:10px;border-radius:8px}
+.warn{border-left:4px solid var(--danger);background:rgba(255,107,107,.08);padding:10px;border-radius:8px}
+code,kbd{background:rgba(255,255,255,.08);padding:0 6px;border-radius:6px}
+details>summary{cursor:pointer;padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+.answer>summary{cursor:pointer;padding:6px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;margin-top:6px}
+.answer>summary::-webkit-details-marker{display:none}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:2px 10px;margin:2px 6px 8px 0}
+small,h3{margin:2px 0}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Regulations, Standards & Frameworks</div>
+
+    <section class="section">
+      <h2>Learning Objectives</h2>
+      <div class="grid">
+        <ul class="tight">
+          <li>Recall covered entities and permitted uses/disclosures under <strong>HIPAA</strong>.</li>
+          <li>Recall the scope of <strong>GDPR</strong> and its six principles of processing.</li>
+          <li>Recall core <strong>PCI DSS</strong> requirements for cardholder data protection.</li>
+          <li>Recall the parts of <strong>NIST CSF</strong>: Core, Tiers, and Profiles.</li>
+        </ul>
+        <ul class="tight">
+          <li>Recall the parts of the <strong>NIST Privacy Framework</strong>: Core, Profiles, and Implementation Tiers.</li>
+          <li>Recall the purpose, applicability, and audience of <strong>NIST SP 800‑53</strong>.</li>
+          <li>Recall the overview of the <strong>CIS Controls</strong>.</li>
+          <li>Recall the governance system principles and components in <strong>COBIT 2019</strong>.</li>
+        </ul>
+      </div>
+      <div class="tip"><strong>Exam tip:</strong> Know each framework’s <em>scope</em> (privacy vs security vs card data vs governance) and a hallmark artifact (e.g., CSF “Core/Tiers/Profiles”, GDPR “six principles”, PCI “cardholder data environment”).</div>
+    </section>
+
+    <section class="section">
+      <h2>Quick Reference — What each one is for</h2>
+      <table class="table">
+        <tr><th>Item</th><th>Scope & who it applies to</th><th>Key components</th><th>One thing to memorize</th></tr>
+        <tr>
+          <td><strong>HIPAA</strong></td>
+          <td>U.S. healthcare: covered entities (providers, plans, clearinghouses) and business associates.</td>
+          <td>Privacy Rule, Security Rule (administrative/physical/technical safeguards), Breach Notification.</td>
+          <td>PHI/“minimum necessary” + BAAs; 60‑day patient notification if breach of unsecured PHI.</td>
+        </tr>
+        <tr>
+          <td><strong>GDPR</strong></td>
+          <td>Processing of personal data of individuals in the EEA by controllers/processors (even non‑EU when offering goods/services or monitoring).</td>
+          <td>Six principles; lawful bases; rights of data subjects; DPO; 72‑hour breach notice to SA when required.</td>
+          <td>Six principles (Art. 5(1)): lawfulness‑fairness‑transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity/confidentiality. <em>Accountability</em> (Art. 5(2)) applies to the controller.</td>
+        </tr>
+        <tr>
+          <td><strong>PCI DSS</strong></td>
+          <td>Any entity that stores, processes, or transmits cardholder data; defines the CDE.</td>
+          <td>12 requirements across 6 goals (build/maintain secure network, protect data, maintain program, etc.).</td>
+          <td>Scope reduction via segmentation; primary account number (PAN) drives scope.</td>
+        </tr>
+        <tr>
+          <td><strong>NIST CSF</strong></td>
+          <td>Voluntary cyber risk framework for any org.</td>
+          <td><em>Core</em> (Identify, Protect, Detect, Respond, Recover), <em>Tiers</em> (1–4), <em>Profiles</em>.</td>
+          <td>“Core functions” map nicely to exam scenario steps.</td>
+        </tr>
+        <tr>
+          <td><strong>NIST Privacy Framework</strong></td>
+          <td>Risk‑based privacy engineering companion to CSF.</td>
+          <td>Core, Profiles, Implementation Tiers (privacy‑specific categories/subcategories).</td>
+          <td>Use for privacy <em>risks</em> and data processing context decisions.</td>
+        </tr>
+        <tr>
+          <td><strong>SP 800‑53</strong></td>
+          <td>Control catalog for U.S. federal systems (FISMA) and widely adopted elsewhere.</td>
+          <td>Families (AC, AU, CM, IA, IR, etc.), moderate/low/high baselines; overlays.</td>
+          <td>Ties to the RMF steps (categorize → select → implement → assess → authorize → monitor).</td>
+        </tr>
+        <tr>
+          <td><strong>CIS Controls</strong></td>
+          <td>Prioritized, prescriptive safeguards (v8 groups: Basic, Foundational, Organizational).</td>
+          <td>18 controls, 3 implementation groups (IG1–IG3).</td>
+          <td>Great for small/medium org “first steps” questions.</td>
+        </tr>
+        <tr>
+          <td><strong>COBIT 2019</strong></td>
+          <td>Enterprise IT governance & management.</td>
+          <td>Governance system, design factors, 40 governance & management objectives (EDM/APO/BAI/DSS/MEA).</td>
+          <td>Focus is <em>governance</em> & alignment to stakeholder needs—not just security.</td>
+        </tr>
+      </table>
+    
+</section>
+
+<section class="section">
+  <h2>Blueprint specifics</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>COBIT 2019 principles (explicit)</h3>
+      <small><strong>Governance system principles (6):</strong></small>
+      <ul class="tight">
+        <li>Provide stakeholder value</li>
+        <li>Holistic approach</li>
+        <li>Dynamic governance system</li>
+        <li>Governance distinct from management</li>
+        <li>Tailored to enterprise needs</li>
+        <li>End‑to‑end governance system</li>
+      </ul>
+      <small><strong>Governance framework principles (3):</strong></small>
+      <ul class="tight">
+        <li>Based on a conceptual model</li>
+        <li>Open and flexible</li>
+        <li>Aligned with major standards</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>NIST SP 800‑53 responsibilities & RMF linkage</h3>
+      <ul class="tight">
+        <li><strong>Authorizing Official (AO):</strong> risk acceptance/authorization.</li>
+        <li><strong>Senior Information Security Officer (CISO/SISO):</strong> enterprise policy & strategy.</li>
+        <li><strong>System Owner:</strong> selects/implements controls for the system.</li>
+        <li><strong>Control Owner / Assessor:</strong> implements and independently assesses controls.</li>
+        <li><strong>ISSO:</strong> day‑to‑day security operations and monitoring.</li>
+      </ul>
+      <div class="tip">Tie roles to the <em>RMF</em> steps: categorize → select → implement → assess → authorize → monitor.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+      <h2>Scenarios & mini‑illustrations</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>HIPAA — minimum necessary</h3>
+          <p>A billing vendor requests full medical histories. Appropriate response?</p>
+          <ul class="tight">
+            <li>Share only what’s necessary to perform billing; ensure a signed BAA exists.</li>
+            <li>Audit trail + role‑based access to PHI.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>GDPR — breach timing</h3>
+          <p>Controller discovers a personal‑data breach at 09:00 Monday. Supervisory Authority notification must be made <em>without undue delay</em> and, where feasible, within <strong>72 hours</strong>.</p>
+          <div class="warn">If over 72 hours, document reasons for delay; affected data subjects are notified when high risk to rights/freedoms.</div>
+        </div>
+        <div class="card">
+          <h3>PCI DSS — segment the CDE</h3>
+          <p>Public web server proxies to internal payment gateway. To reduce PCI scope:</p>
+          <ul class="tight">
+            <li>Network segmentation to isolate the CDE.</li>
+            <li>Tokenization so PAN never touches web tier.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>NIST CSF — mapping a response</h3>
+          <p>Phishing incident handling maps to: <strong>Detect</strong> (anomalies & events) → <strong>Respond</strong> (analysis, mitigation, comms) → <strong>Recover</strong> (improvements).</p>
+        </div>
+      </div>
+      <div class="tip"><strong>Quick cross‑walk idea:</strong> “Who/What/When” — GDPR (data subjects & processing), HIPAA (PHI in healthcare), PCI (card data/PAN), CSF/800‑53/CIS (security controls), COBIT (governance alignment).</div>
+    </section>
+
+    
+    <section class="section">
+      <h2>COBIT 2019 — Principles callout</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Governance system principles (6)</h3>
+          <ul class="tight">
+            <li>Provide stakeholder value</li>
+            <li>Holistic approach</li>
+            <li>Dynamic governance system</li>
+            <li>Governance distinct from management</li>
+            <li>Tailored to enterprise needs</li>
+            <li>End‑to‑end governance system</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Governance framework principles (3)</h3>
+          <ul class="tight">
+            <li>Based on a conceptual model</li>
+            <li>Open and flexible</li>
+            <li>Aligned with major standards</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practice Questions</h2>
+
+      <details>
+        <summary><strong>1.</strong> GDPR scope</summary>
+        <p>A Canadian e‑commerce site targets EU residents with pricing in EUR and ships to EU. It tracks behavior with cookies and stores customer emails. Does GDPR apply?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Yes.</strong> Offering goods/services to individuals in the EEA triggers GDPR extra‑territorial scope even if processing occurs outside the EU.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>2.</strong> PCI scoping</summary>
+        <p>Which data element alone causes systems to be in PCI scope?</p>
+        <ol type="A">
+          <li>Cardholder name</li>
+          <li>Expiration date</li>
+          <li>Primary account number (PAN)</li>
+          <li>Billing address</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>C. PAN.</strong> Any system that stores, processes, or transmits the PAN is in scope; other elements are sensitive but not sufficient by themselves.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>3.</strong> HIPAA breach notification</summary>
+        <p>A lost unencrypted USB drive contained PHI. What’s the general patient notification deadline?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Without unreasonable delay</strong> and no later than <strong>60 days</strong> after discovery for breaches of <em>unsecured</em> PHI.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>4.</strong> CSF element ID</summary>
+        <p>“We compare our current cyber posture to our desired state and prioritize improvements.” Which CSF concept is this?</p>
+        <ol type="A">
+          <li>Core</li>
+          <li>Profile</li>
+          <li>Tier</li>
+          <li>Category</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B. Profile.</strong> Profiles describe current vs target outcomes and support prioritization.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>5.</strong> 800‑53 vs CIS</summary>
+        <p>A small, fast‑growing startup wants a <em>prioritized</em> set of essential technical controls to reduce cyber risk quickly. Choose the best fit.</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>CIS Controls.</strong> They provide prescriptive, prioritized safeguards and IG tiers suitable for smaller orgs.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>6.</strong> COBIT focus</summary>
+        <p>Which statement best describes COBIT 2019?</p>
+        <ol type="A">
+          <li>Security control catalog for federal agencies</li>
+          <li>Privacy rights and lawful bases in the EU</li>
+          <li>Payment card processing standard</li>
+          <li>Enterprise IT governance framework tying IT to stakeholder value</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>D.</strong> COBIT 2019 focuses on governance & management objectives to deliver stakeholder value.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>7.</strong> GDPR lawful basis</summary>
+        <p>A company emails past customers about unrelated products with no opt‑in. Which lawful basis is most defensible?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Likely none</strong> unless a narrow “legitimate interests” case exists and rights override is assessed; best practice is prior consent for direct marketing in many EU jurisdictions.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>8.</strong> Mapping exercise</summary>
+        <p>Match the need to the best framework: <em>federal information system ATO</em>; <em>prioritized basic safeguards</em>; <em>govern privacy risk</em>.</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">ATO → <strong>800‑53 + RMF</strong>; basic safeguards → <strong>CIS Controls</strong>; privacy risk → <strong>NIST Privacy Framework</strong>.</div>
+        </details>
+      </details>
+
+    </section>
+
+    </div>
+</body>
+</html>

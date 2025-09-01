@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR I.F: Financial Statement Ratios & Performance Metrics</title>
+<meta name="description" content="CPA reviewer chapter for FAR I.F — Financial Statement Ratios and Performance Metrics, aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+  .small{font-size:0.95rem}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Financial Statement Ratios &amp; Performance Metrics</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Compute and interpret <strong>liquidity</strong>, <strong>activity (efficiency)</strong>, <strong>profitability</strong>, <strong>leverage/coverage</strong>, and <strong>cash‑flow</strong> metrics.</li>
+          <li>Apply the <strong>cash conversion cycle</strong> and <strong>DuPont analysis</strong> to connect operating drivers to return on equity.</li>
+          <li>Use <strong>trend</strong> and <strong>common‑size</strong> analysis to evaluate performance over time and versus peers.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:22%"><col style="width:46%"><col style="width:32%"></colgroup>
+          <tr><th>Category</th><th>Formula</th><th>Interpretation</th></tr>
+          <tr><td>Current ratio</td><td>Current assets ÷ Current liabilities</td><td>Short‑term solvency (≥1.0 is generally safer)</td></tr>
+          <tr><td>Quick ratio</td><td>(Cash + Marketable securities + Receivables) ÷ Current liabilities</td><td>Excludes less liquid inventory/prepaids</td></tr>
+          <tr><td>Receivables turnover</td><td>Net credit sales ÷ Average receivables</td><td>Higher = faster collections</td></tr>
+          <tr><td>Inventory turnover</td><td>Cost of goods sold ÷ Average inventory</td><td>Higher = leaner inventory; watch stockouts</td></tr>
+          <tr><td>Days sales outstanding (DSO)</td><td>365 ÷ Receivables turnover</td><td>Collection days</td></tr>
+          <tr><td>Days inventory on hand (DIO)</td><td>365 ÷ Inventory turnover</td><td>Holding days</td></tr>
+          <tr><td>Days payable outstanding (DPO)</td><td>365 ÷ Payables turnover</td><td>Payment days</td></tr>
+          <tr><td>Cash conversion cycle (CCC)</td><td>DSO + DIO − DPO</td><td>Days cash tied up in operating cycle</td></tr>
+          <tr><td>Gross margin</td><td>(Sales − Cost of goods sold) ÷ Sales</td><td>Pricing + product cost discipline</td></tr>
+          <tr><td>Operating margin</td><td>Operating income ÷ Sales</td><td>Cost structure efficiency</td></tr>
+          <tr><td>Return on assets (ROA)</td><td>Net income ÷ Average total assets</td><td>Profitability of asset base</td></tr>
+          <tr><td>Return on equity (ROE)</td><td>Net income ÷ Average equity</td><td>Owners’ return; affected by leverage</td></tr>
+          <tr><td>Interest coverage</td><td>Earnings before interest and taxes (EBIT) ÷ Interest expense</td><td>Ability to service interest</td></tr>
+          <tr><td>Debt‑to‑equity</td><td>Total debt ÷ Total equity</td><td>Financial leverage</td></tr>
+          <tr><td>Operating cash flow to debt</td><td>Net cash from operating activities ÷ Total debt</td><td>Cash‑based leverage view</td></tr>
+          <tr><td>DuPont ROE</td><td>(Net margin) × (Asset turnover) × (Equity multiplier)</td><td>ROE drivers: profitability, efficiency, leverage</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Liquidity</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Current ratio</strong> and <strong>quick ratio</strong> gauge short‑term solvency; trends and peer comparison matter more than a single threshold.</li>
+        <li>Quality of current assets is key: large receivables or slow‑moving inventory can inflate the current ratio but not cash.</li>
+      </ul>
+    </div>
+
+    <h2>2) Activity (Efficiency)</h2>
+    <div class="card">
+      <ul>
+        <li>Turnovers convert into <strong>days</strong> to make operating timing intuitive (for example, Days sales outstanding).</li>
+        <li>The <strong>cash conversion cycle</strong> = Days sales outstanding + Days inventory on hand − Days payable outstanding.</li>
+      </ul>
+    </div>
+
+    <h2>3) Profitability</h2>
+    <div class="card">
+      <ul>
+        <li>Margins (gross, operating, net) show profitability at different stages of the income statement.</li>
+        <li><strong>Return on assets</strong> and <strong>return on equity</strong> relate profit to invested capital; <strong>DuPont</strong> links margin, turnover, and leverage.</li>
+      </ul>
+    </div>
+
+    <h2>4) Leverage & Coverage</h2>
+    <div class="card">
+      <ul>
+        <li>Debt measures (debt‑to‑equity, debt‑to‑assets) show financial risk; coverage ratios (interest coverage) show capacity to service obligations.</li>
+        <li>Cash‑based metrics (operating cash flow to debt) complement accrual measures.</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Liquidity Snapshot</h3>
+        <table class="tbl">
+          <colgroup><col style="width:46%"><col style="width:27%"><col style="width:27%"></colgroup>
+          <tr><th>Item</th><th class="center">Amount</th><th>Notes</th></tr>
+          <tr><td>Cash and marketable securities</td><td class="num">$120,000</td><td></td></tr>
+          <tr><td>Accounts receivable (net)</td><td class="num">$280,000</td><td>Quality affects quick ratio</td></tr>
+          <tr><td>Inventory</td><td class="num">$160,000</td><td></td></tr>
+          <tr><td>Current liabilities</td><td class="num">$420,000</td><td></td></tr>
+          <tr><th>Current ratio</th><th class="num">($120,000 + $280,000 + $160,000) ÷ $420,000 = <strong>1.38</strong></th><th></th></tr>
+          <tr><th>Quick ratio</th><th class="num">($120,000 + $280,000) ÷ $420,000 = <strong>0.95</strong></th><th>Below 1.0 — watch collections</th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Cash Conversion Cycle</h3>
+        <table class="tbl">
+          <colgroup><col style="width:40%"><col style="width:20%"><col style="width:40%"></colgroup>
+          <tr><th>Metric</th><th class="center">Value</th><th>Computation</th></tr>
+          <tr><td>Receivables turnover</td><td class="num">10.4×</td><td>Net credit sales ÷ Average receivables</td></tr>
+          <tr><td>Days sales outstanding (DSO)</td><td class="num">35.1 days</td><td>365 ÷ 10.4</td></tr>
+          <tr><td>Inventory turnover</td><td class="num">6.0×</td><td>Cost of goods sold ÷ Average inventory</td></tr>
+          <tr><td>Days inventory on hand (DIO)</td><td class="num">60.8 days</td><td>365 ÷ 6.0</td></tr>
+          <tr><td>Payables turnover</td><td class="num">8.1×</td><td>Cost of goods sold ÷ Average payables</td></tr>
+          <tr><td>Days payable outstanding (DPO)</td><td class="num">45.1 days</td><td>365 ÷ 8.1</td></tr>
+          <tr><th>Cash conversion cycle (CCC)</th><th class="num">35.1 + 60.8 − 45.1 = <strong>50.8 days</strong></th><th>Lower is better</th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — DuPont ROE</h3>
+        <table class="tbl">
+          <colgroup><col style="width:40%"><col style="width:20%"><col style="width:40%"></colgroup>
+          <tr><th>Driver</th><th class="center">Value</th><th>Computation</th></tr>
+          <tr><td>Net margin</td><td class="num">8.0%</td><td>Net income ÷ Sales</td></tr>
+          <tr><td>Asset turnover</td><td class="num">1.5×</td><td>Sales ÷ Average total assets</td></tr>
+          <tr><td>Equity multiplier</td><td class="num">2.0×</td><td>Average total assets ÷ Average equity</td></tr>
+          <tr><th>Return on equity (ROE)</th><th class="num">8.0% × 1.5 × 2.0 = <strong>24.0%</strong></th><th></th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Coverage & Leverage</h3>
+        <table class="tbl">
+          <colgroup><col style="width:40%"><col style="width:20%"><col style="width:40%"></colgroup>
+          <tr><th>Item</th><th class="center">Amount</th><th>Notes</th></tr>
+          <tr><td>Earnings before interest and taxes (EBIT)</td><td class="num">$210,000</td><td></td></tr>
+          <tr><td>Interest expense</td><td class="num">$60,000</td><td></td></tr>
+          <tr><td>Total debt</td><td class="num">$750,000</td><td>Short‑term + long‑term</td></tr>
+          <tr><td>Net cash from operating activities</td><td class="num">$300,000</td><td></td></tr>
+          <tr><th>Interest coverage</th><th class="num">$210,000 ÷ $60,000 = <strong>3.5×</strong></th><th>≥ 3× often viewed as decent</th></tr>
+          <tr><th>Operating cash flow to debt</th><th class="num">$300,000 ÷ $750,000 = <strong>0.40</strong></th><th>40% of debt covered by one year of operating cash</th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Common‑Size Income Statement (percent of sales)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+          <tr><th>Line item</th><th class="center">Percent of sales</th></tr>
+          <tr><td>Sales</td><td class="num">100.0%</td></tr>
+          <tr><td>Cost of goods sold</td><td class="num">62.0%</td></tr>
+          <tr><td>Gross margin</td><td class="num">38.0%</td></tr>
+          <tr><td>Selling, general, and administrative</td><td class="num">24.0%</td></tr>
+          <tr><td>Operating margin</td><td class="num">14.0%</td></tr>
+          <tr><td>Net margin</td><td class="num">8.0%</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>What makes the quick ratio “quick”? <strong>Inventory and prepaid items are excluded.</strong></li>
+        <li>Does a higher cash conversion cycle mean better liquidity? <strong>No</strong> — lower is better (cash is tied up fewer days).</li>
+        <li>Three DuPont drivers? <strong>Net margin, Asset turnover, Equity multiplier.</strong></li>
+        <li>Why pair accrual coverage with a cash‑based metric? <strong>Cash confirms capacity to pay.</strong></li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

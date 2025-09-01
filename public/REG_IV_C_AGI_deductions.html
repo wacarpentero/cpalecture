@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG IV.C Adjustments &amp; Deductions to Arrive at AGI and Taxable Income</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+/* hidden answers */
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:#b5ffb1}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+.badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+       border:1px solid rgba(255,255,255,.12);margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Adjustments &amp; Deductions → Arriving at AGI and Taxable Income</h1>
+<p class="mini muted"><strong>Acronyms:</strong> Adjusted Gross Income <strong>(AGI)</strong>; Health Savings Account <strong>(HSA)</strong>; Individual Retirement Arrangement <strong>(IRA)</strong>; Self‑Employment <strong>(SE)</strong>; Qualified Business Income <strong>(QBI)</strong> — IRC §199A; Alternative Minimum Tax <strong>(AMT)</strong>.</p>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Identify</strong> and compute <em>above‑the‑line</em> adjustments (to arrive at AGI) and <em>below‑the‑line</em> deductions (standard vs. itemized).</li>
+<li><strong>Classify</strong> itemized deductions (medical, taxes, interest, charity, casualty/theft) and apply thresholds/limitations when given a scenario.</li>
+<li><strong>Compute</strong> the <strong>QBI</strong> deduction under IRC §199A at a high level and integrate it into taxable income.</li>
+<li><strong>Review</strong> $1040 data for reasonableness and resolve diagnostics that affect AGI and taxable income.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Quick Reference — Map to AGI and Taxable Income</h2>
+<div class="grid-2 small">
+<div>
+<h4>Adjustments (Above‑the‑line)</h4>
+<table class="tbl mini">
+<tr><th>Common adjustment</th><th>Notes</th></tr>
+<tr><td>SE tax deduction</td><td>One‑half of SE tax deductible in arriving at AGI.</td></tr>
+<tr><td>Traditional IRA deduction</td><td>Subject to phase‑outs; impacts AGI.</td></tr>
+<tr><td>HSA contribution</td><td>Eligible HDHP participants may deduct contributions.</td></tr>
+<tr><td>Student loan interest</td><td>Deductible above‑the‑line (subject to limits/phase‑outs).</td></tr>
+<tr><td>Educator expenses</td><td>Limited above‑the‑line deduction for eligible educators.</td></tr>
+<tr><td>Alimony paid</td><td>Deductible for pre‑$2019 instruments not modified to repeal.</td></tr>
+<tr><td>Self‑employed health insurance</td><td>Premiums deductible by SE individuals (limitations apply).</td></tr>
+</table>
+</div>
+<div>
+<h4>Itemized Deductions (Below‑the‑line)</h4>
+<table class="tbl mini">
+<tr><th>Category</th><th>Key threshold/limit</th></tr>
+<tr><td>Medical</td><td>Deduct unreimbursed medical expenses over <strong>7.5%</strong> of AGI.</td></tr>
+<tr><td>Taxes</td><td>State/local income or sales, real property, personal property — subject to overall SALT limits by law.</td></tr>
+<tr><td>Interest</td><td>Qualified residence mortgage interest (subject to debt caps); investment interest limited to net investment income.</td></tr>
+<tr><td>Charitable contributions</td><td>Percentage‑of‑AGI caps by property/type; carryforward available.</td></tr>
+<tr><td>Casualty/theft</td><td>Federally declared disaster rules apply; per‑event and AGI thresholds may apply.</td></tr>
+</table>
+<div class="callout mini"><strong>Standard vs. Itemized:</strong> Taxpayer claims the larger of standard deduction or total itemized deductions. Certain credits and AMT may interact — read the prompt.</div>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>Representative Tasks → Worked Examples</h2>
+<h3>$1) Arriving at AGI</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Wages <strong>$82,000</strong>; SE net profit <strong>$18,000</strong>; HSA contribution <strong>$3,000</strong>; deductible traditional IRA contribution <strong>$4,000</strong>.</td>
+<td>SE tax (approx.) = $18,000 × 92.35% × 15.3% = <strong>$2,540</strong> ⇒ <em>SE tax deduction</em> = half ≈ <strong>$1,270</strong>.<br/>
+            AGI = $82,000 + $18,000 − $3,000 − $4,000 − $1,270 = <strong>$91,730</strong>.</td>
+</tr>
+</table>
+<h3>$2) Itemized vs. standard</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>AGI <strong>$100,000</strong>. Medical unreimbursed <strong>$10,500</strong>; SALT paid <strong>$8,000</strong>; mortgage interest <strong>$7,400</strong>; cash gifts to public charities <strong>$3,000</strong>.</td>
+<td>Medical deductible = $10,500 − ($100,000 × 7.5%) = $10,500 − $7,500 = <strong>$3,000</strong>.<br/>
+            Itemized = $3,000 + $8,000 + $7,400 + $3,000 = <strong>$21,400</strong>. Compare to standard deduction per filing status and choose larger.</td>
+</tr>
+</table>
+<h3>$3) Investment interest limitation</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Investment interest expense <strong>$4,800</strong>; net investment income <strong>$3,500</strong>.</td>
+<td>Deduction allowed = lesser of expense or net investment income ⇒ <strong>$3,500</strong>. Disallow <strong>$1,300</strong> and carry forward.</td>
+</tr>
+</table>
+<h3>$4) Charitable contributions</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>AGI <strong>$120,000</strong>; cash gifts to public charities <strong>$50,000</strong>.</td>
+<td>Apply percentage‑of‑AGI caps by law (assume <strong>60%</strong> cash‑to‑public‑charity cap in this scenario): allowable current‑year deduction = $120,000 × 60% = <strong>$72,000</strong> ⇒ all <strong>$50,000</strong> allowed.</td>
+</tr>
+</table>
+<h3>$5) QBI (IRC §199A) snapshot</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Sole proprietor has QBI of <strong>$80,000</strong>; no W‑$2 wage/UBIA limitations apply (assume below thresholds).</td>
+<td>QBI deduction = 20% × $80,000 = <strong>$16,000</strong>. This deduction is <em>below‑the‑line</em> (after AGI) but <em>before</em> calculating taxable income and does not reduce SE tax.</td>
+</tr>
+</table>
+<h3>$6) Medical expense threshold</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>AGI <strong>$64,000</strong>; unreimbursed medical costs <strong>$7,100</strong>.</td>
+<td>Deductible amount = $7,100 − ($64,000 × 7.5%) = $7,100 − $4,800 = <strong>$2,300</strong> itemized.</td>
+</tr>
+</table>
+</section>
+<section class="card">
+<h2>Diagnostics — What to Check</h2>
+<ul class="small">
+<li><span class="tag">AGI thresholds</span> Verify medical 7.5% threshold, investment‑interest limit, and charity AGI percentage caps.</li>
+<li><span class="tag">Standard vs. itemized</span> Ensure the file claims the larger amount; watch for SALT limits and mortgage‑interest debt caps.</li>
+<li><span class="tag">QBI</span> Confirm QBI is based on business net after entity‑level depreciation/§179 and that the 20% deduction is taken after AGI.</li>
+<li><span class="tag">SE interactions</span> SE health insurance and one‑half SE tax reduce AGI; QBI does not reduce SE tax base.</li>
+<li><span class="tag">HSA/IRA eligibility</span> Check HDHP/coverage rules and phase‑outs where applicable.</li>
+</ul>
+</section>
+<!-- Practice Questions MUST be the last section -->
+<section class="card">
+<h2>Practice Questions</h2>
+<ol class="small">
+<li><strong>AGI build:</strong> Wages <strong>$70,000</strong>; SE income <strong>$10,000</strong>; HSA contribution <strong>$2,000</strong>; IRA deduction <strong>$3,000</strong>. Approximate AGI?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          SE tax ≈ $10,000 × 92.35% × 15.3% = <strong>$1,413</strong> ⇒ half is <strong>$707</strong> deduction. AGI = $70,000 + $10,000 − $2,000 − $3,000 − $707 = <strong>$74,293</strong>.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Medical threshold:</strong> AGI <strong>$80,000</strong>; unreimbursed medical <strong>$9,400</strong>. Deductible medical?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">$9,400 − ($80,000 × 7.5%) = $9,400 − $6,000 = <strong>$3,400</strong>.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Investment interest:</strong> Expense <strong>$2,900</strong>; net investment income <strong>$1,800</strong>. Deduction allowed?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>$1,800</strong>; the remaining <strong>$1,100</strong> carries forward.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>QBI:</strong> QBI <strong>$50,000</strong> below thresholds, no wage/UBIA limits. QBI deduction?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>$10,000</strong> (20% of QBI).</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Standard vs. itemized:</strong> Itemized total <strong>$17,900</strong>; standard deduction (assume) <strong>$14,000</strong>. Which is used and impact on taxable income?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Use itemized of <strong>$17,900</strong> since it’s larger; taxable income is reduced by <strong>$17,900</strong> (before QBI and credits).</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>SE health insurance:</strong> SE health insurance premiums <strong>$6,500</strong>. Where does it flow?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Above‑the‑line adjustment to arrive at AGI (subject to limits).</div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

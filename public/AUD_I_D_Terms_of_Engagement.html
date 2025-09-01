@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Terms of Engagement (2025 AICPA Blueprints)</title>
+<meta name="description" content="Chapter‑style CPA reviewer for AUD Area I.D (Terms of Engagement), aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b;    /* deep blue background */
+    --bg2:#0b1e3a;
+    --card:#0e2247;
+    --card2:#123064;
+    --ink:#eaf2ff;
+    --muted:#b9c7e6;
+    --accent:#3b82f6;
+    --accent2:#60a5fa;
+    --gold:#f5c542;
+    --ok:#10b981;
+    --warn:#f59e0b;
+    --bad:#ef4444;
+    --radius:16px;
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%) , linear-gradient(180deg,var(--bg1), #040b18 70%);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:7px;padding:2px 6px}
+  ul{padding-left:18px}
+  li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Terms of Engagement</h1>
+
+    <!-- Stacked sections with spacing -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>State the <strong>preconditions for an audit</strong> and when an engagement should be <em>declined</em> or <em>withdrawn</em>.</li>
+          <li>Identify required and common elements of an <strong>engagement letter</strong> and how terms differ for <em>recurring</em> vs <em>initial</em> audits.</li>
+          <li>Explain <strong>management’s responsibilities</strong> vs the <strong>auditor’s responsibilities</strong> and the financial reporting framework.</li>
+          <li>Recognize acceptance/continuance considerations, including <strong>independence</strong>, <strong>ethical</strong> and <strong>resource</strong> requirements.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Topic</th><th>Key points to remember</th></tr>
+          <tr><td>Preconditions for audit</td><td>Acceptable FRF; management acknowledges responsibility for FS, ICFR (as appropriate), and access to information/personnel.</td></tr>
+          <tr><td>When to decline</td><td>Management imposes scope limitation; FRF unacceptable; lack of integrity; independence impaired; unable to perform quality work.</td></tr>
+          <tr><td>Engagement letter</td><td>Objective and scope; auditor and management responsibilities; applicable framework; form and expected report; <em>other terms</em> (timing, fees, specialists, predecessor, etc.).</td></tr>
+          <tr><td>Recurring vs initial</td><td>May not need to send a new letter every period unless terms change; initial engagements require predecessor auditor inquiries and opening balances considerations.</td></tr>
+          <tr><td>Change in engagement</td><td>From audit → review/compilation only if reasonable justification and no intent to mislead; document reasons and procedures performed.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Preconditions for an Audit</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Acceptable financial reporting framework (FRF).</strong></li>
+        <li><strong>Management responsibilities acknowledged:</strong> preparation/presentation of FS; design, implementation, and maintenance of relevant controls; providing access to information and persons within the entity.</li>
+        <li><strong>Ethics/independence:</strong> firm concludes independence will be maintained; consider nonattest services and safeguards.</li>
+      </ul>
+      <div class="callout danger"><strong>Decline or withdraw if:</strong> pervasive scope limitation; unacceptable FRF; management lacks integrity; independence impaired; or the firm lacks competence/resources.</div>
+    </div>
+
+    <h2>2) Agreeing on Terms — Engagement Letter</h2>
+    <div class="card">
+      <p><strong>Purpose:</strong> record the agreed terms to reduce misunderstanding and support quality execution.</p>
+      <ul>
+        <li><strong>Objective & scope</strong> of the audit (including reference to the framework).</li>
+        <li><strong>Responsibilities of the auditor</strong> (obtain reasonable assurance, comply with GAAS/PCAOB, maintain independence, communicate with TCWG).</li>
+        <li><strong>Responsibilities of management</strong> (FS, internal control, access to information, written representations).</li>
+        <li><strong>Form and content of reports</strong> expected (FS opinion and any other reports).</li>
+        <li><strong>Other terms</strong> as applicable: timing, specialists, component auditors, reliance on internal auditors, use of service organizations, fees and billing, electronic communication, embargo of report, etc.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>Client requests the auditor to omit inventory observation due to safety rules. The auditor documents the request and explains that a scope limitation would likely preclude an unmodified opinion; if alternative procedures aren’t feasible, the engagement may be declined.</p></details>
+    </div>
+
+    <h2>3) Initial vs Recurring Audits</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Recurring:</strong> reconsider need to remind or revise the letter if circumstances change (e.g., new FRF, change in reporting, miscommunication in prior period).</li>
+        <li><strong>Initial:</strong> perform client acceptance procedures; communicate with predecessor auditor (with client permission); consider opening balances and comparatives; evaluate independence threats from assisting in FS preparation.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> A new letter is recommended when there’s a <em>significant change</em> in scope, reporting, or entity circumstances.</div>
+    </div>
+
+    <h2>4) Acceptance & Continuance</h2>
+    <div class="card">
+      <ul>
+        <li>Evaluate <strong>integrity of management</strong> and those charged with governance.</li>
+        <li>Confirm ability to comply with <strong>ethical requirements</strong>, including independence.</li>
+        <li>Assess firm <strong>competence and resources</strong>, including specialists where needed.</li>
+        <li>Consider <strong>engagement risk</strong> including significant related parties, complex estimates, or going concern indicators.</li>
+      </ul>
+      <div class="callout check"><strong>Quality control link:</strong> Document key acceptance/continuance conclusions and approvals per firm policies.</div>
+    </div>
+
+    <h2>5) Changes in Engagement (Audit → Review/Compilation)</h2>
+    <div class="card">
+      <p><strong>Allowable only if:</strong> justified by a <em>change in circumstances</em>, a <em>misunderstanding of services</em>, or <em>restriction beyond the auditor’s control</em>—and not to mislead users.</p>
+      <ul>
+        <li>If change is appropriate: issue report for the revised engagement; do not refer to original audit procedures.</li>
+        <li>If inappropriate to change: consider withdrawing and communicating to TCWG; do not issue a review/compilation report.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>After year‑end, lender drops covenant requirement for audited FS. Client requests a review instead. If no misrepresentation risk exists and scope is sufficient for a review, a change may be acceptable.</p></details>
+    </div>
+
+    <h2>6) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>List one precondition that must be present before accepting an audit: <strong>Management acknowledges responsibility for the FS and access to information.</strong></li>
+        <li>What section of the engagement letter sets expectation about auditor’s level of assurance? <strong>Objective & scope / form of report.</strong></li>
+        <li>When is it acceptable to change from an audit to a review? <strong>When justified by changed circumstances or misunderstanding, not to mislead users.</strong></li>
+        <li>One reason to decline an engagement at acceptance: <strong>Independence is impaired.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Misstatements and Internal Control Deficiencies (Area III.F, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area III.F — Misstatements and internal control deficiencies, aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Misstatements and Internal Control Deficiencies</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Classify <strong>misstatements</strong> (factual, projected, and judgmental), accumulate them, and evaluate their <strong>materiality</strong> individually and in aggregate.</li>
+          <li>Apply qualitative factors (e.g., fraud indicators, covenant effects, trends, compliance) when evaluating whether misstatements are material.</li>
+          <li>Distinguish <strong>control deficiency</strong>, <strong>significant deficiency</strong>, and <strong>material weakness</strong>; determine severity using <strong>likelihood</strong> and <strong>magnitude</strong>.</li>
+          <li>Communicate misstatements and control deficiencies to management and <strong>those charged with governance (TCWG)</strong> appropriately and on time.</li>
+          <li>Document conclusions and the effect on the auditor’s report; decide whether additional procedures are needed based on the <strong>risk of material misstatement (RMM)</strong>.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Item</th><th>What it is</th><th>How to evaluate</th><th>Who to tell</th></tr>
+          <tr><td>Factual misstatement</td><td>Exact error with no judgment involved</td><td>Correct amount known; request adjustment</td><td>Management; aggregate if uncorrected</td></tr>
+          <tr><td>Projected misstatement</td><td>Projection from a sample to the population</td><td>Projection + sampling risk allowance</td><td>Management; include in aggregate</td></tr>
+          <tr><td>Judgmental misstatement</td><td>Differences in estimates/policies or application of accounting principles</td><td>Assess reasonableness, bias, and disclosure</td><td>Management; discuss with TCWG if significant</td></tr>
+          <tr><td>Control deficiency</td><td>Design or operation does not allow timely prevention/detection/correction of misstatements</td><td>Consider likelihood and magnitude</td><td>Communicate to management</td></tr>
+          <tr><td>Significant deficiency</td><td>Less severe than material weakness yet important for TCWG oversight</td><td>Likelihood × magnitude judgment</td><td>Written communication to TCWG</td></tr>
+          <tr><td>Material weakness</td><td>Reasonable possibility of a material misstatement not being prevented/detected/corrected</td><td>Indicators include restatements, auditor‑found material misstatements, ineffective oversight</td><td>Written communication to TCWG (and public report if reporting on internal control over financial reporting)</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Types of Misstatements & Accumulation</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Factual:</strong> Clear error (e.g., mis‑posting, math error).</li>
+        <li><strong>Projected:</strong> From sampling results; project to the population and add an allowance for sampling risk.</li>
+        <li><strong>Judgmental:</strong> Differences arising from estimates or policies (e.g., allowance method, useful lives) including indications of <strong>management bias</strong>.</li>
+        <li><strong>Accumulate</strong> all misstatements identified (except clearly trivial per your posting threshold) and track <strong>corrected</strong> vs <strong>uncorrected</strong> throughout the audit.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Keep a running <em>summary of uncorrected misstatements</em> with columns for type, account, assertion, amount (current and prior‑period effects), and qualitative notes.</div>
+    </div>
+
+    <h2>2) Evaluating Materiality — Quantitative & Qualitative</h2>
+    <div class="card">
+      <ul>
+        <li>Compare the <strong>aggregate of uncorrected misstatements</strong> to overall materiality and performance materiality.</li>
+        <li>Consider <strong>qualitative factors</strong>: changes earnings trends, compliance with covenants/regulation, fraud indicators, management compensation targets, and the nature of the misstatement (e.g., concealment).</li>
+        <li>Consider <strong>pervasiveness</strong> (multiple elements or the financial statements as a whole) and whether disclosures are adequate.</li>
+        <li>Year‑end vs rollover effects: evaluate both the period‑end effect and the effect on current‑period performance (often called “iron curtain” and “rollover” approaches).</li>
+      </ul>
+      <div class="callout danger"><strong>Do not ignore:</strong> Small intentional misstatements or bias patterns can be material qualitatively.</div>
+    </div>
+
+    <h2>3) Dealing with Misstatements</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Corrections</h3>
+        <ul>
+          <li>Request <strong>timely adjustments</strong> for all material misstatements and for immaterial misstatements that may become material when aggregated.</li>
+          <li>If management refuses to correct, evaluate the effect on the opinion and consider communications to TCWG.</li>
+          <li>Re‑perform analytics and other procedures if corrections change relationships or trends.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Uncorrected Misstatements</h3>
+        <ul>
+          <li>Assess whether uncorrected items are <strong>material individually or in aggregate</strong>.</li>
+          <li>Consider the effect on <strong>key ratios</strong>, compliance, and disclosures.</li>
+          <li>Obtain a <strong>management representation</strong> that uncorrected misstatements are immaterial, both individually and in aggregate.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>4) Internal Control Deficiencies — Definitions & Severity</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Control deficiency:</strong> A deficiency in design or operation such that a control cannot prevent or detect and correct misstatements on a timely basis.</li>
+        <li><strong>Significant deficiency:</strong> Less severe than a material weakness yet important enough to merit attention by those charged with governance (TCWG).</li>
+        <li><strong>Material weakness:</strong> A deficiency, or combination of deficiencies, such that there is a <strong>reasonable possibility</strong> that a <strong>material misstatement</strong> of the financial statements will not be prevented, or detected and corrected, on a timely basis.</li>
+        <li><strong>Severity assessment:</strong> Evaluate <strong>likelihood</strong> (remote, possible, probable) and <strong>magnitude</strong> (could the control failure result in a material misstatement?) including compensating controls.</li>
+      </ul>
+      <details><summary>Common indicators of a material weakness</summary>
+        <ul>
+          <li>Restatement of previously issued financial statements due to error.</li>
+          <li>Auditor detected a <em>material</em> misstatement that existed and was not prevented/detected by internal controls.</li>
+          <li>Ineffective oversight by TCWG (e.g., audit committee).</li>
+        </ul>
+      </details>
+    </div>
+
+    <h2>5) Communication Requirements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Control deficiencies:</strong> Communicate in writing to management and those charged with governance (TCWG) <strong>by the report date</strong>; earlier if appropriate.</li>
+        <li><strong>Material weaknesses:</strong> Communicate in writing and describe the deficiency, its effect, and the fact that the auditor’s purpose was not to express an opinion on internal control.</li>
+        <li><strong>Misstatements:</strong> Communicate corrected and uncorrected misstatements and their potential effect; ask management to correct where appropriate.</li>
+        <li>Maintain professional skepticism—follow up when management asserts remediation late in the audit.</li>
+      </ul>
+      <div class="callout check"><strong>Practice:</strong> Include criteria, condition, cause, and effect in deficiency communications, with recommended remediation (responsible party and timeline).</div>
+    </div>
+
+    <h2>6) Remediation & Follow‑up</h2>
+    <div class="card">
+      <ul>
+        <li>When management remediates a deficiency before year‑end, test the <strong>design and operating effectiveness</strong> of the new/modified control for a sufficient period.</li>
+        <li>If remediation occurs after the balance‑sheet date but before the report date, it may not change the severity assessment for the current audit period.</li>
+        <li>Consider the implications for <strong>risk assessment</strong> and planned procedures in the current and next audit.</li>
+      </ul>
+    </div>
+
+    <h2>7) Effects on the Auditor’s Report</h2>
+    <div class="card">
+      <ul>
+        <li>If <strong>uncorrected misstatements</strong> are material but not pervasive → qualified opinion (except for) for the financial statements.</li>
+        <li>If <strong>pervasive</strong> → adverse opinion.</li>
+        <li>A <strong>material weakness</strong> in internal control does not, by itself, require a modified opinion on the financial statements (unless it leads to a material misstatement) but would be a basis for an adverse opinion in a separate internal control report if engaged to report on internal control.</li>
+        <li>Consider emphasis‑of‑matter or other‑matter paragraphs when relevant (e.g., restatement, significant uncertainty).</li>
+      </ul>
+    </div>
+
+    <h2>8) Documentation</h2>
+    <div class="card">
+      <ul>
+        <li>All misstatements identified (corrected and uncorrected), the basis for materiality judgments, and the conclusions reached.</li>
+        <li>Deficiency descriptions, severity evaluation, basis for likelihood/magnitude, and communications sent (with dates and recipients).</li>
+        <li>Impact on planned procedures, additional work performed, and final overall conclusion.</li>
+      </ul>
+    </div>
+
+    <h2>9) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Three misstatement categories? <strong>Factual, projected, judgmental.</strong></li>
+        <li>Key determinants of deficiency severity? <strong>Likelihood and magnitude.</strong></li>
+        <li>Indicator that often signals a material weakness? <strong>A restatement due to error or an auditor‑detected material misstatement.</strong></li>
+        <li>Does a material weakness always require a modified opinion on the financial statements? <strong>No—only if it results in a material misstatement that is not corrected.</strong></li>
+        <li>Who must receive written communication of significant deficiencies and material weaknesses? <strong>Those charged with governance.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

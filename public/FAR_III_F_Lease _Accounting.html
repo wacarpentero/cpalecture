@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — FAR: Lease Accounting</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  .muted{color:var(--muted)}
+  .pill{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:3px 8px;border-radius:999px;margin-right:6px}
+  /* Journal entries */
+  .je{list-style:none;margin:6px 0 4px;padding:0}
+  .je li{display:grid;grid-template-columns:32px 1fr 1fr;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.95}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:center;white-space:nowrap;justify-self:center}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:840px){.grid-2{grid-template-columns:1fr}}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+
+  /* Remarks styling for journal entries (pair-level) */
+  .je .remark{grid-column:2 / -1; color: var(--muted); font-size:.9rem; margin-top:-2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Lease Accounting</h1>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li>Identify the <strong>classification</strong> criteria (finance vs. operating) for a lease under ASC 842.</li>
+<li>Recall what goes into the <strong>lease payments</strong> used to measure the liability (fixed payments, index‑/rate‑based variable amounts at commencement, residual value guarantees expected to be owed, options reasonably certain to be exercised, termination penalties, and certain fees; <em>exclude</em> usage‑ or sales‑based variable payments).</li>
+<li>Calculate the initial carrying amount of the <strong>lease liability</strong> and <strong>ROU asset</strong> and prepare the commencement entry.</li>
+<li>Compute and record subsequent <strong>lease costs</strong>:
+        finance lease → interest + amortization; operating lease → single straight‑line lease expense.</li>
+<li>Explain the treatment of <strong>residual value guarantees</strong>, <strong>purchase options</strong>, and <strong>variable lease payments</strong> for a lessee.</li>
+</ul>
+</section>
+<!-- At a Glance -->
+<section class="card">
+<h2>At a Glance</h2>
+<table class="tbl small">
+<colgroup><col style="width:26%"/><col style="width:44%"/><col style="width:30%"/></colgroup>
+<tr><th>Area</th><th>Rule of thumb</th><th>Action</th></tr>
+<tr>
+<td>Classification</td>
+<td>Any one of: transfer of ownership; <em>reasonably certain</em> purchase option; lease term is major part of economic life; PV of payments ≈ substantially all of fair value; asset is specialized with no alternative use.</td>
+<td>Yes → <strong>Finance lease</strong>; otherwise <strong>Operating lease</strong>.</td>
+</tr>
+<tr>
+<td>Discount rate</td>
+<td>Use implicit rate if known; else lessee’s incremental borrowing rate (private companies may elect risk‑free).</td>
+<td>Present value the lease payments.</td>
+</tr>
+<tr>
+<td>Lease payments</td>
+<td>Include fixed; index/rate at commencement; RVG expected to be owed; options reasonably certain; termination penalties; fees <span class="muted">(less incentives)</span>.</td>
+<td>Measure <strong>lease liability</strong>; ROU asset = liability + initial direct costs + prepaids − incentives.</td>
+</tr>
+<tr>
+<td>Subsequent cost</td>
+<td>Finance: separate interest &amp; amortization (front‑loaded). Operating: straight‑line single lease expense.</td>
+<td>Record entries each period; update for remeasurements when required.</td>
+</tr>
+</table>
+</section>
+<!-- Example 1: Classification -->
+<section class="card">
+<h2>1) Classification Decision</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Conclusion</th></tr>
+<tr>
+<td>5‑year non‑cancelable lease of equipment with economic life 6 years. PV of lease payments equals 92% of fair value. No transfer of title, no purchase option. Asset not specialized.</td>
+<td>Lease term is a <strong>major part</strong> of economic life (5/6 ≈ 83%), and PV ≈ <strong>substantially all</strong> of fair value (92%). → <strong>Finance lease</strong>.</td>
+</tr>
+</table>
+<div class="callout small"><strong>Exam tip:</strong> No bright‑line thresholds in ASC 842, but 75% of life and 90% of fair value are still commonly used indicators.</div>
+</section>
+<!-- Example 2: Initial measurement -->
+<section class="card">
+<h2>2) Initial Measurement and Commencement Entry</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>3‑year lease; payments of <strong>$40,000</strong> at year‑end; lessee’s IBR = <strong>6%</strong>. A purchase option is <em>not</em> reasonably certain. Lessee expects to owe <strong>$5,000</strong> under an RVG. No initial direct costs; no incentives.</td>
+<td>PV of payments = 40,000 × (PVOA, 6%, 3) = 40,000 × 2.6730 = <strong>$106,920</strong>.<br/>
+            Include expected RVG of $5,000 (PV at 6% for 3 yrs ≈ 5,000/1.1910) = <strong>$4,198</strong>.<br/>
+            Lease liability ≈ <strong>$111,118</strong>.<br/>
+            ROU asset = liability (no adjustments) = <strong>$111,118</strong>.</td>
+</tr>
+</table>
+<h4>Commencement entry</h4>
+<ul class="je">
+<li><span class="label">Dr</span><span class="acct">Right‑of‑use asset — equipment</span><span class="amt">$111,118</span></li>
+<li><span class="label">Cr</span><span class="acct">Lease liability</span><span class="amt">($111,118)</span></li>
+</ul>
+</section>
+<!-- Example 3: Subsequent accounting — Finance lease -->
+<section class="card">
+<h2>3) Subsequent — Finance Lease (Year 1)</h2>
+<div class="grid-2">
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Schedule (first 3 years)</th><th class="num">Amounts</th></tr>
+<tr><td>Beg. liability</td><td class="num">$111,118</td></tr>
+<tr><td>Interest (6%) — Y1</td><td class="num">$6,667</td></tr>
+<tr><td>Payment — Y1</td><td class="num">($40,000)</td></tr>
+<tr><td>End liability — Y1</td><td class="num">$77,785</td></tr>
+<tr><td>Interest (6%) — Y2</td><td class="num">$4,667</td></tr>
+<tr><td>Payment — Y2</td><td class="num">($40,000)</td></tr>
+<tr><td>End liability — Y2</td><td class="num">$42,452</td></tr>
+<tr><td>Interest (6%) — Y3</td><td class="num">$2,547</td></tr>
+<tr><td>Payment — Y3</td><td class="num">($40,000)</td></tr>
+<tr><td>End liability — Y3</td><td class="num">—</td></tr>
+</table>
+<table class="tbl small">
+<colgroup><col style="width:62%"/><col style="width:38%"/></colgroup>
+<tr><th>ROU Amortization (straight‑line over 3 yrs)</th><th class="num">Amount</th></tr>
+<tr><td>Annual amortization</td><td class="num">$37,039</td></tr>
+<tr><td>Carrying amount end of Y1</td><td class="num">$74,079</td></tr>
+</table>
+</div>
+<h4>Year 1 entries</h4>
+<ul class="je">
+<li><span class="label">Dr</span><span class="acct">Interest expense</span><span class="amt">$6,667</span></li>
+<li><span class="label">Cr</span><span class="acct">Lease liability</span><span class="amt">($6,667)</span><span class="remark">To record interest accretion on the lease liability (effective interest method).</span></li>
+<li><span class="label">Dr</span><span class="acct">Lease liability</span><span class="amt">$40,000</span></li>
+<li><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($40,000)</span><span class="remark">To record the periodic cash lease payment and reduce the lease liability.</span></li>
+<li><span class="label">Dr</span><span class="acct">Amortization expense — ROU asset</span><span class="amt">$37,039</span></li>
+<li><span class="label">Cr</span><span class="acct">Accumulated amortization — ROU</span><span class="amt">($37,039)</span><span class="remark">To record straight‑line amortization of the ROU asset for the period.</span></li>
+</ul>
+</section>
+<!-- Example 4: Subsequent accounting — Operating lease -->
+<section class="card">
+<h2>4) Subsequent — Operating Lease (Straight‑line)</h2>
+<table class="tbl small">
+<colgroup><col style="width:60%"/><col style="width:40%"/></colgroup>
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Same payment pattern: $40,000 yearly for 3 years. Suppose classification was operating.</td>
+<td>Total fixed payments = $120,000. Straight‑line expense = 120,000 ÷ 3 = <strong>$40,000 per year</strong>. Interest‑type and amortization are booked internally to arrive at a single lease expense of $40,000 each year.</td>
+</tr>
+</table>
+<h4>Year 1 entry (presentation as single lease expense)</h4>
+<ul class="je">
+<li><span class="label">Dr</span><span class="acct">Lease expense</span><span class="amt">$40,000</span></li>
+<li><span class="label">Cr</span><span class="acct">Cash / Lease liability</span><span class="amt">($40,000)</span><span class="remark">To record the single straight‑line lease expense and the corresponding cash/payment impact.</span></li>
+</ul>
+<div class="callout small"><strong>Note:</strong> Under operating leases, the Statement of Cash Flows shows payments in <em>operating</em> activities (finance lease principal goes to financing).</div>
+</section>
+<!-- Example 5: Variable payments and options -->
+<section class="card">
+<h2>5) Residual Value Guarantees, Purchase Options &amp; Variable Payments</h2>
+<table class="tbl small">
+<colgroup><col style="width:36%"/><col style="width:64%"/></colgroup>
+<tr><th>Feature</th><th>Lessee treatment</th></tr>
+<tr>
+<td>Residual value guarantee (RVG)</td>
+<td>Include in lease payments to the extent the lessee expects to owe. Reassess when expectations change.</td>
+</tr>
+<tr>
+<td>Purchase option</td>
+<td>If <strong>reasonably certain</strong> to exercise → include exercise price in payments and extend lease term accordingly; impacts classification.</td>
+</tr>
+<tr>
+<td>Variable payments (index/rate)</td>
+<td>Initially measure using index/rate at commencement (e.g., CPI at that date). Later changes → generally recognized in P&amp;L as incurred unless remeasurement is required.</td>
+</tr>
+<tr>
+<td>Variable payments (usage/sales‑based)</td>
+<td><strong>Exclude</strong> from initial measurement. Recognize in P&amp;L when the usage/sales occur.</td>
+</tr>
+</table>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<colgroup><col style="width:34%"/><col style="width:66%"/></colgroup>
+<tr><th>Topic</th><th>Core points</th></tr>
+<tr>
+<td>Classification</td>
+<td>Test the five criteria; any one → finance lease. Otherwise operating.</td>
+</tr>
+<tr>
+<td>Initial measurement</td>
+<td>Lease liability = PV of payments using appropriate discount rate; ROU asset adjusts for IDC, prepaids, incentives.</td>
+</tr>
+<tr>
+<td>Subsequent cost</td>
+<td>Finance = interest + amortization (front‑loaded). Operating = single straight‑line expense; cash flow classification differs.</td>
+</tr>
+<tr>
+<td>Variable payments &amp; RVGs</td>
+<td>Include index‑/rate‑based amounts at commencement and expected RVG; exclude usage‑based amounts from measurement.</td>
+</tr>
+</table>
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Limited Liability Companies (LLCs) — REG V.E Reviewer</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.code{font-family:inherit;background:rgba(255,255,255,.06);padding:10px;border-radius:8px;overflow:auto}
+.warn{border-left:4px solid var(--warn);padding:10px;background:rgba(255,209,102,.08);border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Limited Liability Companies (LLCs)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall <strong>federal tax classification options</strong> for an LLC and the <strong>default classifications</strong>.</li>
+          <li>Identify the <strong>forms and timing</strong> to elect a different classification and when an <strong>S election</strong> is allowed.</li>
+          <li>Recognize the <strong>tax consequences</strong> of common classification changes (deemed transactions).</li>
+          <li>Understand employment‑tax basics for owners under each classification.</li>
+        </ul>
+      </section>
+
+      <section id="basics" class="section">
+        <h2>Check‑the‑Box Basics</h2>
+        <div class="kv">
+          <div>
+            <h3>Default classification</h3>
+            <ul>
+              <li><strong>Single‑member LLC (SMLLC):</strong> <em>Disregarded entity</em> by default (taxed as sole proprietorship if owned by an individual; a division/branch if owned by a corporation).</li>
+              <li><strong>Multi‑member LLC:</strong> <em>Partnership</em> by default.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Electing another classification</h3>
+            <ul>
+              <li>LLC may elect to be taxed as a <strong>corporation</strong> by filing <strong>Form 8832</strong>.</li>
+              <li>If eligible, it may further elect <strong>S corporation</strong> status by filing <strong>Form 2553</strong> (S shareholder & single‑class of stock rules apply).</li>
+              <li>Effective date rules: election can be effective up to <strong>75 days before</strong> filing and up to <strong>12 months after</strong> filing (relief rules may apply).</li>
+              <li>Once changed, generally must keep the classification for <strong>60 months</strong> before changing again (limited exceptions).</li>
+            </ul>
+          </div>
+        </div>
+        <p class="warn"><strong>Watch‑out:</strong> State law “LLC” status does <em>not</em> determine federal tax treatment. Classification is purely a federal tax election/ default.</p>
+      </section>
+
+      <section id="ops" class="section">
+        <h2>How LLCs Are Taxed by Classification</h2>
+        <div class="kv">
+          <div>
+            <h3>Disregarded entity (SMLLC)</h3>
+            <ul>
+              <li>Owner reports activity on the owner’s return (e.g., <strong>Schedule C/E/F</strong> for individuals).</li>
+              <li>Payments to owner for services are <strong>not</strong> wages; profits subject to <strong>SE tax</strong> (for individual owners).</li>
+              <li>Distributions to owner are generally <strong>non‑taxable</strong> (just transfers) because entity is ignored for income tax.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Partnership (multi‑member default)</h3>
+            <ul>
+              <li>Files <strong>Form 1065</strong>; items pass through to members on K‑1.</li>
+              <li>Members’ <strong>outside basis</strong> includes share of liabilities (Sec. 752); guaranteed payments are ordinary income to the recipient.</li>
+              <li>Members active in the business generally owe <strong>SE tax</strong> on distributive shares (exam convention).</li>
+            </ul>
+          </div>
+        </div>
+        <ul>
+          <li><strong>Corporate (by election):</strong> Entity taxed as C corp unless a valid S election is also in place. S corp requires eligible shareholders and single class of stock; shareholder‑employees must take <strong>reasonable wages</strong>.</li>
+        </ul>
+      </section>
+
+      <section id="changes" class="section">
+        <h2>Classification Changes — Deemed Transactions</h2>
+        <ul>
+          <li><strong>SMLLC → Corporation:</strong> Deemed owner contributes assets & liabilities to a new corporation in exchange for stock.</li>
+          <li><strong>Partnership → Corporation:</strong> Deemed partnership contributes assets & liabilities to a new corporation then liquidates; may trigger corporate‑level issues after election.</li>
+          <li><strong>Corporation → Partnership/SMLLC:</strong> If an <em>eligible entity</em> previously elected corporate status and changes to partnership or disregarded, the deemed corporate <strong>liquidation</strong> occurs (potential gain recognition).</li>
+          <li><strong>SMLLC → Partnership:</strong> Admission of a second member is a deemed contribution/formation of a partnership.</li>
+        </ul>
+        <details><summary>Illustration — Adding a member to SMLLC</summary>
+          <div class="code">
+SMLLC has assets with AB $80 and liabilities $20. New investor contributes $40 for 50%.
+Deemed formation of a partnership: prior owner contributes assets ($80) net of liabilities ($20); new member contributes $40 cash.
+Each partner gets basis including share of liabilities per partnership rules.
+          </div>
+        </details>
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick Reference</h2>
+        <div class="kv">
+          <div>
+            <h3>Defaults</h3>
+            <ul>
+              <li>1 member → <strong>Disregarded</strong></li>
+              <li>2+ members → <strong>Partnership</strong></li>
+            </ul>
+          </div>
+          <div>
+            <h3>To elect corporate/S status</h3>
+            <ul>
+              <li>File <strong>Form 8832</strong> (to be a corporation)</li>
+              <li>Then file <strong>Form 2553</strong> for <strong>S</strong> (if eligible)</li>
+              <li>Mind the <strong>75‑day retro/12‑month forward</strong> window & the <strong>60‑month</strong> limitation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Default classification</summary>
+          <p>J forms an LLC and is the only owner. No elections are filed. For federal tax, the LLC is treated as:</p>
+          <ol type="A">
+            <li>A C corporation</li>
+            <li>A disregarded entity</li>
+            <li>An S corporation</li>
+            <li>A partnership</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Single‑member LLCs are disregarded by default.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Electing S status</summary>
+          <p>An LLC with two eligible individual members wants to be taxed as an S corporation. What must be filed?</p>
+          <ol type="A">
+            <li>Only Form 2553</li>
+            <li>Form 8832 <em>and</em> Form 2553</li>
+            <li>Only Form 8832</li>
+            <li>No filing required — defaults to S</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> First elect corporate status (Form 8832), then file Form 2553 for S election.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Effective date window</summary>
+          <p>Form 8832 is filed today. The earliest permissible effective date is generally how many days before today?</p>
+          <ol type="A">
+            <li>30</li>
+            <li>60</li>
+            <li>75</li>
+            <li>90</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Up to <strong>75 days retroactively</strong> (and up to 12 months prospectively).</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Adding a member</summary>
+          <p>A disregarded SMLLC admits a new 50% member for cash. For tax, this is treated as:</p>
+          <ol type="A">
+            <li>A sale of corporate stock</li>
+            <li>A deemed formation of a partnership</li>
+            <li>A reorganization</li>
+            <li>Still disregarded; no change</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> The entity becomes a partnership by default.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Changing back within 60 months</summary>
+          <p>An LLC elected corporate status last year on Form 8832. It now wants to revert to partnership status. Which is true?</p>
+          <ol type="A">
+            <li>Allowed anytime with a new Form 8832</li>
+            <li>Generally prohibited within <strong>60 months</strong> of the last election (limited exceptions)</li>
+            <li>Requires only Form 2553</li>
+            <li>Not permitted because LLCs cannot be partnerships</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> The 60‑month limitation normally prevents frequent classification toggling.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>6.</strong> Employment tax</summary>
+          <p>In a default multi‑member LLC taxed as a partnership, members actively working in the business generally:</p>
+          <ol type="A">
+            <li>Receive W‑2 wages for services</li>
+            <li>Owe SE tax on distributive shares and guaranteed payments</li>
+            <li>Are exempt from payroll and SE taxes</li>
+            <li>Pay SE tax only on guaranteed payments, never on distributive shares</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Exam convention treats active LLC members like general partners for SE tax.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

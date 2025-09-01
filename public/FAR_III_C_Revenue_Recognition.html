@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR III.C: Revenue Recognition</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+      linear-gradient(180deg,var(--bg1), #040b18 70%);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  .muted{color:var(--muted)}
+  .pill{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:3px 8px;border-radius:999px;margin-right:6px}
+  /* Journal entries */
+  .je{list-style:none;margin:6px 0 4px;padding:0}
+  .je li{display:grid;grid-template-columns:32px 1fr 1fr;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.95}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:center;white-space:nowrap;justify-self:center}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:840px){.grid-2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Revenue Recognition</h1>
+
+  <section class="card">
+    <h2>Learning Objectives</h2>
+    <ul class="small">
+      <li>Recall the core concepts of revenue using the <strong>five‑step model</strong> and identify the contract, performance obligations, transaction price, allocation, and recognition.</li>
+      <li>Apply rules for <strong>variable consideration</strong>, <strong>significant financing components</strong>, noncash consideration, and consideration payable.</li>
+      <li>Distinguish <strong>principal vs. agent</strong> presentation (gross vs. net).</li>
+      <li>Account for contract <strong>modifications</strong> and <strong>contract costs</strong> (incremental costs to obtain/fulfill).</li>
+      <li>For not‑for‑profit entities: determine timing/amount of revenue for <strong>contributed services</strong> and <strong>contributions of assets</strong>; identify when transfers are to an <strong>agent/intermediary</strong> rather than a contribution.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>At a Glance</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:23%"><col style="width:47%"><col style="width:30%"></colgroup>
+      <tr><th>Topic</th><th>Rule of thumb</th><th>Action</th></tr>
+      <tr>
+        <td>Variable consideration</td>
+        <td>Estimate (expected value or most likely amount) and include only amounts for which a <strong>significant reversal</strong> is not probable.</td>
+        <td>Record refund liability or contra‑revenue.</td>
+      </tr>
+      <tr>
+        <td>Significant financing</td>
+        <td>Cash paid/received far in advance or in arrears relative to transfer of goods/services.</td>
+        <td>Recognize <strong>interest</strong> to reflect the time value of money.</td>
+      </tr>
+      <tr>
+        <td>Principal vs. agent</td>
+        <td>Principal controls the good/service before transfer; agent arranges.</td>
+        <td>Principal → gross revenue; agent → <strong>fee/net</strong>.</td>
+      </tr>
+      <tr>
+        <td>Contract costs</td>
+        <td>Capitalize incremental costs (e.g., commission) if recoverable; amortize as revenue is recognized.</td>
+        <td>Expense if not incremental/recoverable.</td>
+      </tr>
+      <tr>
+        <td>NFP — contributed services</td>
+        <td>Recognize if they create/enhance a nonfinancial asset, or require <strong>specialized skills</strong> and would be purchased.</td>
+        <td>Record expense and contribution revenue.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Example 1 -->
+  <section class="card">
+    <h2>1) Five‑Step Model — Variable Consideration (Rebate)</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Customer buys goods for list price <strong>$100,000</strong>. A <strong>3%</strong> rebate is expected and a significant reversal is not probable.</td>
+        <td>Expected rebate = $100,000 × 3% = <strong>$3,000</strong>. Transaction price = <strong>$97,000</strong>.</td>
+      </tr>
+    </table>
+    <h4>Entry on delivery</h4>
+    <p class="muted small" style="margin:6px 0 8px">Recognize receivable for list price, revenue at the transaction price (net of expected rebate), and set up a refund liability for the expected rebate.</p>
+    
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Accounts receivable</span><span class="amt">$100,000</span></li>
+      <li><span class="label">Cr</span><span class="acct">Sales revenue</span><span class="amt">($97,000)</span></li>
+      <li><span class="label">Cr</span><span class="acct">Refund liability (rebates)</span><span class="amt">($3,000)</span></li>
+    </ul>
+  </section>
+
+  <!-- Example 2 -->
+  <section class="card">
+    <h2>2) Significant Financing Component — Prepayment by Customer</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Customer prepays <strong>$200,000</strong> at contract inception for goods delivered in two years. Market annual rate 5%.</td>
+        <td>Recognize interest expense to unwind the financing: Year 1 = <strong>$10,000</strong>; Year 2 ≈ <strong>$10,500</strong>. Increase contract liability each year, then recognize revenue at transfer.</td>
+      </tr>
+    </table>
+    <h4>Entries</h4>
+    <p class="muted small" style="margin:6px 0 8px">Customer prepays and a financing component exists: first record the prepayment as a contract liability; each year unwind the liability by recognizing interest expense; at delivery, reclassify the remaining liability to sales revenue.</p>
+    
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash (prepayment)</span><span class="amt">$200,000</span></li>
+      <li><span class="label">Cr</span><span class="acct">Contract liability (deferred revenue)</span><span class="amt">($200,000)</span></li>
+      <li><span class="label">Dr</span><span class="acct">Interest expense — accretion Year&nbsp;1</span><span class="amt">$10,000</span></li>
+      <li><span class="label">Cr</span><span class="acct">Contract liability</span><span class="amt">($10,000)</span></li>
+      <li><span class="label">Dr</span><span class="acct">Interest expense — accretion Year&nbsp;2</span><span class="amt">$10,500</span></li>
+      <li><span class="label">Cr</span><span class="acct">Contract liability</span><span class="amt">($10,500)</span></li>
+      <li><span class="label">Dr</span><span class="acct">Contract liability (upon delivery)</span><span class="amt">$220,500</span></li>
+      <li><span class="label">Cr</span><span class="acct">Sales revenue</span><span class="amt">($220,500)</span></li>
+    </ul>
+  </section>
+
+  <!-- Example 3 -->
+  <section class="card">
+    <h2>3) Principal vs. Agent — Presentation</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:28%"><col style="width:42%"><col style="width:30%"></colgroup>
+      <tr><th>Indicator</th><th>Suggests</th><th>Result</th></tr>
+      <tr>
+        <td>Controls good/service before transfer</td>
+        <td>Principal</td>
+        <td>Record <strong>gross</strong> revenue and related costs.</td>
+      </tr>
+      <tr>
+        <td>Arranges for another party to provide service</td>
+        <td>Agent</td>
+        <td>Record <strong>net</strong> fee/commission as revenue.</td>
+      </tr>
+      <tr>
+        <td>Inventory risk / discretion in pricing</td>
+        <td>Principal</td>
+        <td>Gross presentation.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Example 4 -->
+  <section class="card">
+    <h2>4) Contract Costs — Capitalize Incremental Costs to Obtain</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Sales commission of <strong>$12,000</strong> incurred to win a three‑year contract; costs are recoverable.</td>
+        <td>Capitalize <strong>$12,000</strong>; amortize on a systematic basis as revenue is recognized (e.g., straight‑line over 3 years).</td>
+      </tr>
+    </table>
+    <h4>Entries</h4>
+    <p class="muted small" style="margin:6px 0 8px">Capitalize incremental costs to obtain the contract and amortize them systematically as the related revenue is recognized.</p>
+    
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Contract cost asset — commission</span><span class="amt">$12,000</span></li>
+      <li><span class="label">Cr</span><span class="acct">Cash / Accounts payable</span><span class="amt">($12,000)</span></li>
+      <li><span class="label">Dr</span><span class="acct">Amortization expense — commission</span><span class="amt">$4,000</span></li>
+      <li><span class="label">Cr</span><span class="acct">Accumulated amortization — commission</span><span class="amt">($4,000)</span></li>
+    </ul>
+  </section>
+
+  <!-- Example 5 -->
+  <section class="card">
+    <h2>5) Not‑for‑Profit: Contributed Services (Specialized Skills)</h2>
+    <div class="grid-2">
+      <table class="tbl small">
+        <colgroup><col style="width:58%"><col style="width:42%"></colgroup>
+        <tr><th>Service</th><th>Amount</th></tr>
+        <tr><td>Attorney provides 20 hours of legal drafting at $300/hour (would otherwise be purchased).</td><td class="num">$6,000</td></tr>
+        <tr><td>General volunteer support (non‑specialized).</td><td class="num">—</td></tr>
+      </table>
+      <table class="tbl small">
+        <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+        <tr><th>Recognize?</th><th>Journal entry</th></tr>
+        <tr>
+          <td><strong>Yes</strong> — specialized skills and would be purchased.</td>
+          <td class="num">Dr Legal expense $6,000<br>Cr Contribution revenue ($6,000)</td>
+        </tr>
+        <tr>
+          <td><strong>No</strong> — not specialized.</td>
+          <td class="num">No entry (may disclose).</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Quick Recap -->
+  <section class="card">
+    <h2>Quick Recap</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:38%"><col style="width:62%"></colgroup>
+      <tr><th>Topic</th><th>Core points</th></tr>
+      <tr>
+        <td>Estimate constraint</td>
+        <td>Include only amounts not likely to reverse; carry a refund liability for expected rebates/returns.</td>
+      </tr>
+      <tr>
+        <td>Financing component</td>
+        <td>Recognize interest to reflect time value of money when consideration timing and transfer differ significantly.</td>
+      </tr>
+      <tr>
+        <td>Presentation</td>
+        <td>Use principal vs. agent indicators to determine gross vs. net revenue.</td>
+      </tr>
+      <tr>
+        <td>Contract costs</td>
+        <td>Capitalize incremental, recoverable costs and amortize as revenue is recognized.</td>
+      </tr>
+      <tr>
+        <td>NFP specifics</td>
+        <td>Recognize specialized contributed services and contributions of assets; evaluate conditional pledges separately.</td>
+      </tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Management</title>
+<style>
+:root{--bg:#0b1020;--card:#111a33;--ink:#eaf0ff;--muted:#a7b4cf;--accent:#7aa2ff;--accent2:#4dd4b0;--danger:#ff6b6b;--font:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.title{font-size:28px;font-weight:800;margin:6px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px dashed rgba(255,255,255,.12);padding:8px;text-align:left;font-size:14px;vertical-align:top}
+.table th{font-weight:600}
+ul.tight>li{margin:2px 0}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.tip{border-left:4px solid var(--accent2);background:rgba(77,212,176,.08);padding:10px;border-radius:8px}
+.warn{border-left:4px solid var(--danger);background:rgba(255,107,107,.08);padding:10px;border-radius:8px}
+code,kbd{background:rgba(255,255,255,.08);padding:0 6px;border-radius:6px}
+details>summary{cursor:pointer;padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+.answer>summary{cursor:pointer;padding:6px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;margin-top:6px}
+.answer>summary::-webkit-details-marker{display:none}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:2px 10px;margin:2px 6px 8px 0}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Data Management</div>
+
+    <section class="section">
+      <h2>Learning Objectives </h2>
+      <div class="grid">
+        <ul class="tight">
+          <li>Identify and compare <strong>data extraction</strong> methods: ETL/ELT, file-based, API, and change data capture (CDC).</li>
+          <li>Define types of storage: <strong>data warehouse, data mart, data lake</strong>; and schemas: <strong>star vs snowflake</strong>.</li>
+          <li>Summarize the <strong>data lifecycle</strong>: creation → active use → storage → retention → archival/disposal.</li>
+          <li>Examine a relational database for <strong>integrity rules</strong> (entity, referential, domain), and use of a <strong>data dictionary</strong>.</li>
+        </ul>
+        <ul class="tight">
+          <li>Evaluate SQL queries (SELECT/JOIN/WHERE/GROUP BY/HAVING/ORDER BY; aggregates and string functions) for <em>relevance & completeness</em>.</li>
+          <li>Integrate data from different sources; design <strong>keys</strong>, <strong>joins</strong>, and handle <strong>slowly changing dimensions</strong>.</li>
+          <li>Use <strong>flowcharts/DFDs/BPMN</strong> to analyze processes and identify improvements.</li>
+          <li>Apply <strong>data quality</strong> checks: completeness, accuracy, validity, uniqueness, consistency, timeliness.</li>
+        </ul>
+      </div>
+      <div class="tip"><strong>Exam tip:</strong> When a prompt asks for a <em>warehouse</em> schema, assume <strong>star</strong> unless normalization need (shared dimensions) forces <strong>snowflake</strong>.</div>
+    </section>
+
+    <section class="section">
+      <h2>Storage & Schema Design</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Warehouses vs Lakes vs Marts</h3>
+          <table class="table">
+            <tr><th>Store</th><th>Typical data</th><th>Use</th><th>Governance</th></tr>
+            <tr><td><strong>Warehouse</strong></td><td>Modeled, structured</td><td>Analytics, finance, reporting</td><td>High (curated)</td></tr>
+            <tr><td><strong>Mart</strong></td><td>Subset of warehouse</td><td>Departmental reporting</td><td>High (scoped)</td></tr>
+            <tr><td><strong>Lake</strong></td><td>Raw/semi‑structured</td><td>Data science, ELT landing</td><td>Medium (catalog critical)</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Star vs Snowflake</h3>
+          <table class="table">
+            <tr><th>Schema</th><th>Facts</th><th>Dimensions</th><th>Pros</th><th>Cons</th></tr>
+            <tr><td><strong>Star</strong></td><td>Single fact table</td><td>Denormalized dims</td><td>Fast queries; simple joins</td><td>Duplication in dims</td></tr>
+            <tr><td><strong>Snowflake</strong></td><td>Same</td><td>Normalized dims (sub‑dims)</td><td>Less duplication; shared hierarchies</td><td>More joins; complex SQL</td></tr>
+          </table>
+          <div class="warn"><strong>Tricky:</strong> Reporting tools that auto‑generate SQL can struggle with deep snowflakes—expect performance costs.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Data Lifecycle & Extraction</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Lifecycle (high‑level)</h3>
+          <ul class="tight">
+            <li><strong>Create/Capture</strong> — source systems, forms, sensors.</li>
+            <li><strong>Use</strong> — transactions, analytics; apply access controls.</li>
+            <li><strong>Store</strong> — operational DBs, warehouse/lake; encrypt at rest.</li>
+            <li><strong>Retain</strong> — policy‑based retention; legal holds.</li>
+            <li><strong>Archive/Dispose</strong> — immutable archives; secure deletion.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Extraction methods</h3>
+          <ul class="tight">
+            <li><strong>ETL</strong> — transform before load; consistent, curated data.</li>
+            <li><strong>ELT</strong> — load then transform; leverages warehouse engines.</li>
+            <li><strong>CDC</strong> — capture inserts/updates/deletes from logs.</li>
+            <li><strong>APIs/Files</strong> — scheduled pulls; validate format & totals.</li>
+          </ul>
+          <div class="tip"><strong>Control:</strong> Always reconcile record counts & dollar totals between source and target after loads.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Relational Integrity, Normalization & Data Dictionary</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Integrity rules</h3>
+          <ul class="tight">
+            <li><strong>Entity integrity</strong>: primary keys are unique & not null.</li>
+            <li><strong>Referential integrity</strong>: foreign keys must match a valid parent (or be null per design).</li>
+            <li><strong>Domain integrity</strong>: valid types/ranges; check constraints.</li>
+          </ul>
+          <h3>Normalization quick guide</h3>
+          <ul class="tight">
+            <li><strong>1NF</strong>: no repeating groups; atomic values.</li>
+            <li><strong>2NF</strong>: 1NF + no partial dependency on a composite key.</li>
+            <li><strong>3NF</strong>: 2NF + no transitive dependencies.</li>
+          </ul>
+          <div class="tip">Use a <strong>data dictionary</strong> to define table/field names, descriptions, valid values, and PII tags.</div>
+        </div>
+        <div class="card">
+          <h3>Integration patterns</h3>
+          <ul class="tight">
+            <li>Join on <strong>business keys</strong> or surrogate keys; beware of type mismatches and trimming.</li>
+            <li>Handle <strong>SCD</strong>: Type 1 (overwrite), Type 2 (new row with date ranges).</li>
+            <li>Late‑arriving facts: upsert after dimension insert; default to “unknown” member key.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>SQL Essentials (with mini‑examples)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Query anatomy</h3>
+          <pre><code>SELECT c.CustomerID, SUM(o.Amount) AS Sales
+FROM Orders o
+JOIN Customers c ON c.CustomerID = o.CustomerID
+WHERE o.OrderDate &gt;= '2025-01-01'
+GROUP BY c.CustomerID
+HAVING SUM(o.Amount) &gt;= 1000
+ORDER BY Sales DESC;</code></pre>
+          <div class="warn"><strong>Pitfall:</strong> Columns in <code>SELECT</code> must be in <code>GROUP BY</code> or aggregated.</div>
+        </div>
+        <div class="card">
+          <h3>String & date helpers</h3>
+          <table class="table">
+            <tr><th>Function</th><th>Use</th></tr>
+            <tr><td><code>UPPER(), LOWER()</code></td><td>Normalize text for matching.</td></tr>
+            <tr><td><code>TRIM()</code></td><td>Remove leading/trailing spaces before joins.</td></tr>
+            <tr><td><code>COALESCE(a,b)</code></td><td>Replace nulls (choose right default!).</td></tr>
+            <tr><td><code>DATE_TRUNC('month', dt)</code></td><td>Monthly groupings.</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Process Modeling — Spotting Improvements</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Choose the diagram</h3>
+          <table class="table">
+            <tr><th>Tool</th><th>Best for</th></tr>
+            <tr><td>Flowchart</td><td>Step sequence and decisions</td></tr>
+            <tr><td>DFD</td><td>Data stores and data flow between processes</td></tr>
+            <tr><td>BPMN</td><td>End‑to‑end processes with events, swimlanes, and gateways</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Typical findings</h3>
+          <ul class="tight">
+            <li>Unnecessary manual rekey → implement system integration/API.</li>
+            <li>Missing approval step → add workflow control.</li>
+            <li>Bottleneck at manual reconciliation → auto‑match with thresholds.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practice Questions</h2>
+
+      <details>
+        <summary><strong>1.</strong> Storage choice & schema</summary>
+        <p>You need fast finance reporting on curated data with minimal joins. Choose a store and schema.</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Warehouse + Star.</strong> Curated, structured data with denormalized dimensions improves reporting performance.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>2.</strong> SQL completeness</summary>
+        <p>Which clause ensures aggregated results only include customers over <strong>$1,000</strong> total sales?</p>
+        <ol type="A">
+          <li>WHERE SUM(Amount) &gt;= 1000</li>
+          <li>HAVING SUM(Amount) &gt;= 1000</li>
+          <li>GROUP BY SUM(Amount) &gt;= 1000</li>
+          <li>QUALIFY SUM(Amount) &gt;= 1000</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B.</strong> <code>HAVING</code> filters after aggregation; <code>WHERE</code> cannot reference aggregates.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>3.</strong> Data integrity</summary>
+        <p>Orders contain a <code>CustomerID</code> that sometimes doesn’t exist in <code>Customers</code>. Which constraint resolves this?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>Referential integrity / foreign key</strong> constraint from <code>Orders.CustomerID</code> to <code>Customers.CustomerID</code>.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>4.</strong> Calculation — storage sizing</summary>
+        <p>A monthly snapshot fact table stores <strong>24</strong> columns averaging <strong>6 bytes</strong> each plus <strong>24</strong> bytes of overhead per row. At <strong>5,000,000</strong> rows/month, how much space for a year (12 months)?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">
+            Per‑row ≈ 24×6 + 24 = <strong>168 bytes</strong>. Monthly size ≈ 5,000,000 × 168 = <strong>840,000,000 bytes</strong> (~0.84 GB). Year ≈ 0.84 × 12 = <strong>~10.08 GB</strong> (ignoring indexes/compression).
+          </div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>5.</strong> CDC control</summary>
+        <p>A CDC job misses updates during a 30‑minute outage. Which reconciliation detects the gap first?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card">Compare <strong>source change counts</strong> (by commit timestamp) to <strong>target applied counts</strong> over the same window; investigate variances.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>6.</strong> Normalization</summary>
+        <p>In a table with key (ProductID, Region), attribute <em>RegionName</em> depends only on <em>Region</em>. Which normal form is violated?</p>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>2NF.</strong> Partial dependency on part of the composite key violates 2NF.</div>
+        </details>
+      </details>
+
+    </section>
+
+  </div>
+</body>
+</html>

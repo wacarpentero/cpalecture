@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISC III.A — SOC Engagements: Planning & Performance (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  code, pre{background: var(--code); border:1px solid var(--border); border-radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  code{padding:3px 6px}
+  pre{padding:14px 16px; overflow:auto}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:700}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  .hr{height:1px;background:var(--border);margin:16px 0}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">SOC Engagements — Planning & Performance</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="objectives" class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Explain the purpose and structure of the <strong>Trust Services Criteria (TSC)</strong> and its link to COSO.</li>
+        <li>Recall subject matters and report types: <strong>SOC 1, SOC 2, SOC 3, SOC for Cybersecurity</strong>; intended users; Type 1 vs Type 2.</li>
+        <li>Identify <strong>management assertions</strong> for SOC categories and types.</li>
+        <li>Summarize <strong>independence</strong> considerations for the service auditor, service organization, and subservice organizations.</li>
+        <li>Explain how <strong>materiality</strong> is determined/used in SOC 1 and SOC 2.</li>
+        <li>Identify <strong>risk assessment</strong> requirements for service organizations and the service auditor.</li>
+        <li>Define and evaluate a <strong>subservice organization</strong>; decide between the <strong>inclusive</strong> and <strong>carve‑out</strong> methods and the use of <strong>CSOCs</strong>.</li>
+        <li>Explain <strong>CUECs</strong> (user‑entity controls) and how they appear in the system description.</li>
+        <li>Explain the purpose and common sections of a <strong>system description</strong> and how to set/verify <strong>system boundaries</strong>.</li>
+        <li>Recall requirements for <strong>management’s written representations</strong>.</li>
+        <li>Design procedures to understand how users and personnel <strong>report failures/incidents/complaints</strong> for a SOC 2 system.</li>
+        <li>Prepare comparisons of the system description to <strong>suitable criteria</strong> (SOC 1) or to the <strong>description criteria</strong> (SOC 2).</li>
+        <li>Determine the effect of <strong>subsequent events</strong> and the impact of <strong>subsequently discovered facts</strong> on SOC 1/SOC 2 engagements.</li>
+      </ul>
+    </section>
+
+    <section id="landscape" class="card">
+      <h2>SOC Landscape—What report, for whom?</h2>
+      <div class="diagram">SOC 1 → ICFR (controls over financial reporting) • Intended users: management, user entities, user auditors • Criteria: SSAE (AT‑C 320)
+SOC 2 → Controls relevant to Security/Availability/Processing Integrity/Confidentiality/Privacy (TSC) • Intended users: management & specified users • Type 1 vs Type 2
+SOC 3 → General use seal/report over TSC • Highly summarized; no detailed controls
+SOC for Cybersecurity → Entity‑wide cybersecurity risk management program (not just a service system)</div>
+      <ul>
+        <li><strong>Type 1</strong>: Design of controls at a point in time; <strong>Type 2</strong>: Design & operating effectiveness over a period.</li>
+        <li><strong>Subject matter</strong>: the service organization’s system & controls (SOC 1/2/3) or entity‑wide program (SOC for Cybersecurity).</li>
+      </ul>
+      <span class="pill">Intended users matter</span> <span class="pill">Type 1 ≠ Type 2</span> <span class="pill">TSC vs ICFR</span>
+    </section>
+
+    <section id="tsc" class="card">
+      <h2>Trust Services Criteria (TSC) in plain English</h2>
+      <ul>
+        <li>TSC aligns to <strong>COSO</strong> and is organized into <em>Common Criteria</em> (CC) and additional criteria for <em>Availability</em>, <em>Processing Integrity</em>, <em>Confidentiality</em>, and <em>Privacy</em>.</li>
+        <li><strong>Service commitments & system requirements</strong>: what the organization promises to users and the internal requirements set to meet those promises. System description should map controls to these and to TSC.</li>
+        <li><strong>Materiality</strong> in SOC 2: judged against the needs of intended users and service commitments (not GAAP financial statement materiality).</li>
+      </ul>
+    </section>
+
+    <section id="description" class="card">
+      <h2>System description, boundaries, and assertions</h2>
+      <h3>Purpose & common sections</h3>
+      <ul>
+        <li>Overview of the service, principal service commitments/system requirements, components (infrastructure, software, people, procedures, data).</li>
+        <li>Control environment and controls relevant to the TSC categories in scope.</li>
+        <li>Subservice organizations and the chosen presentation: <strong>inclusive</strong> vs <strong>carve‑out</strong>, plus any <strong>CSOCs</strong>.</li>
+        <li><strong>CUECs</strong> that user entities must implement for controls to operate effectively.</li>
+      </ul>
+      <h3>Boundaries & understanding the system</h3>
+      <ul>
+        <li>Identify what is inside/outside the system (products, regions, data centers, vendors) and how data flows between them.</li>
+        <li>Design procedures to see how personnel and users <strong>report failures/incidents/complaints</strong> (e.g., ticketing portals, SLAs, escalation paths).</li>
+      </ul>
+      <h3>Management assertions</h3>
+      <ul>
+        <li>Type 1: description fairly presents the system; controls suitably designed.</li>
+        <li>Type 2: Type‑1 assertions plus controls operated effectively over the period.</li>
+      </ul>
+    </section>
+
+    <section id="subservice" class="card">
+      <h2>Subservice organizations, CSOCs, and method selection</h2>
+      <ul>
+        <li><strong>Subservice organization</strong>: a vendor that performs a function likely to be relevant to the service organization’s controls.</li>
+        <li><strong>Inclusive method</strong>: include subservice’s controls in the description/testing; requires access and cooperation.</li>
+        <li><strong>Carve‑out method</strong>: describe the nature of services performed by the subservice but <em>exclude</em> its controls from testing; disclose <strong>CSOCs</strong> the service org implements to address risks related to the subservice.</li>
+        <li>Decision factors: significance of the subservice to objectives, accessibility of evidence, and user needs.</li>
+      </ul>
+      <span class="pill">CUECs = user responsibilities</span> <span class="pill">CSOCs = service org controls over subservice</span>
+    </section>
+
+    <section id="independence" class="card">
+      <h2>Independence, materiality, risk assessment & representations</h2>
+      <ul>
+        <li><strong>Independence</strong>: the service auditor must be independent of the service organization and any subservice organization whose controls are included.</li>
+        <li><strong>Materiality</strong>: SOC 1—material misstatement risk of user F/S; SOC 2—needs of intended users and service commitments (TSC).</li>
+        <li><strong>Risk assessment</strong>: service auditor assesses risks of material misstatement of management’s description/assertions; service organization assesses risks to achieving service commitments/system requirements.</li>
+        <li><strong>Written representations</strong>: obtain management’s reps on description, assertions, completeness of information, disclosure of subsequent events, and responsibility for controls.</li>
+      </ul>
+    </section>
+
+    <section id="subsequent" class="card">
+      <h2>Subsequent events vs. subsequently discovered facts</h2>
+      <ul>
+        <li><strong>Subsequent events</strong>: occur after the report period end but before the report date—evaluate for disclosure or effect on the report.</li>
+        <li><strong>Subsequently discovered facts</strong>: become known after the report release—evaluate whether the report should be revised or users notified.</li>
+      </ul>
+    </section>
+
+    <section id="practice" class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Which report is designed for <em>ICFR</em> at user entities?</p>
+        <ol type="A">
+          <li>SOC 2</li>
+          <li>SOC 1</li>
+          <li>SOC 3</li>
+          <li>SOC for Cybersecurity</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — SOC 1 addresses controls at a service organization relevant to user entities’ financial reporting.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> In a <em>Type 2</em> SOC 2 report, management’s assertion includes that controls were:</p>
+        <ol type="A">
+          <li>Suitably designed at a point in time only</li>
+          <li>Suitably designed and operated effectively over a period</li>
+          <li>Operated effectively on the report date only</li>
+          <li>Not relevant to TSC</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Type 2 covers both design and operating effectiveness over a stated period.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Which statement best describes <em>CUECs</em>?</p>
+        <ol type="A">
+          <li>Controls at subservice organizations that are always included in testing</li>
+          <li>User‑entity controls necessary for the service org’s controls to achieve objectives</li>
+          <li>Controls the service org implements over subservice orgs</li>
+          <li>Criteria used by the auditor to form the opinion</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — CUECs are responsibilities of user entities; without them, controls may not achieve the TSC objectives.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Choosing the <em>inclusive method</em> implies the report will:</p>
+        <ol type="A">
+          <li>Exclude subservice controls but describe their services</li>
+          <li>Include subservice controls within scope of description/testing</li>
+          <li>Always require a bridge letter</li>
+          <li>Be converted to SOC 3</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Inclusive presents and tests controls at the subservice org inside the report scope.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> In SOC 2, <em>materiality</em> is evaluated primarily against:</p>
+        <ol type="A">
+          <li>GAAP thresholds for net income</li>
+          <li>Service commitments and needs of intended users (TSC context)</li>
+          <li>Tax materiality thresholds</li>
+          <li>Management’s budget</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Materiality is tied to service commitments and intended users, not GAAP earnings.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> Which is a <em>subsequent event</em> vs. a subsequently discovered fact?</p>
+        <ol type="A">
+          <li>Breached control discovered after report release that existed during the period</li>
+          <li>Security incident occurring after the period end but before the report date</li>
+          <li>Editorial typo in the final PDF</li>
+          <li>Change in management after the report date</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — It occurs after the period end but before report date; A is a subsequently discovered fact.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Which is most accurate about <em>independence</em> in SOC?</p>
+        <ol type="A">
+          <li>Service auditor independence is not required for SOC 3</li>
+          <li>The service auditor must be independent of the service organization (and subservice org if inclusive)</li>
+          <li>Only the engagement quality reviewer must be independent</li>
+          <li>Independence applies only to Type 2</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Independence is required; inclusive method may extend independence to subservice orgs included in scope.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> <em>CSOCs</em> are best described as:</p>
+        <ol type="A">
+          <li>User‑entity controls for processing integrity</li>
+          <li>Complementary subservice organization controls the service org implements to address risks from the subservice relationship</li>
+          <li>Controls at a cloud provider that are always tested by default</li>
+          <li>Criteria for privacy</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — CSOCs are controls the service org uses to manage risk arising from outsourced subservice activities.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> Which procedure most directly addresses the objective to understand <em>reporting failures/complaints</em>?</p>
+        <ol type="A">
+          <li>Inspect SOC 1 bridge letters</li>
+          <li>Observe the incident portal workflow and inspect a sample of tickets for timeliness and escalation</li>
+          <li>Recalculate revenue recognition</li>
+          <li>Send AP confirmations</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Walk through the ticketing/incident process and test timeliness against stated SLAs.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> In a SOC 2 <em>carve‑out</em> presentation, the report should:</p>
+        <ol type="A">
+          <li>Exclude subservice controls and omit any mention of them</li>
+          <li>Describe the nature of services performed by the subservice and disclose related CSOCs</li>
+          <li>Include the subservice controls and test them</li>
+          <li>Replace CUECs with CSOCs</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Carve‑out discloses the subservice and related CSOCs but excludes the subservice’s controls from testing.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>11)</strong> Which pair is correctly matched?</p>
+        <ol type="A">
+          <li>SOC 3 — detailed control testing for specified users</li>
+          <li>SOC 2 — TSC criteria; restricted use to intended users</li>
+          <li>SOC 1 — TSC criteria; general use</li>
+          <li>SOC for Cybersecurity — ICFR focus</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — SOC 2 uses the TSC and is generally restricted to specified users; SOC 3 is general‑use, summarized.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>12)</strong> The best evidence of <em>system boundaries</em> is:</p>
+        <ol type="A">
+          <li>A marketing brochure</li>
+          <li>An architecture diagram showing components, data flows, regions, and vendors aligned to the description</li>
+          <li>Prior year report</li>
+          <li>A verbal explanation by an engineer</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Diagrams + data flow narratives help verify what is inside/outside the system boundary.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

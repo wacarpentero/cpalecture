@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.G — Consolidated Financial Statements</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Consolidated Financial Statements</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall basic consolidation concepts & terms: <strong>controlling interest</strong>, <strong>noncontrolling interest</strong> (NCI), <strong>primary beneficiary</strong>, and <strong>variable interest entity</strong> (VIE).</li>
+          <li>Recall functional currency concepts and indicators to determine a subsidiary’s <strong>functional currency</strong>.</li>
+          <li>Calculate foreign currency <strong>translation</strong> (functional → reporting) and/or <strong>remeasurement</strong> (local → functional) adjustments.</li>
+          <li>Determine proper presentation of <strong>CTA</strong> (cumulative translation adjustment) in <strong>OCI</strong> and NCI presentation in equity.</li>
+        </ul>
+      </section>
+
+      <section id="core" class="section">
+        <h2>Core Concepts</h2>
+        <div class="kv">
+          <div>
+            <h3>Who consolidates?</h3>
+            <ul class="tight">
+              <li><strong>Voting interest model</strong>: consolidate when >50% voting control (unless control is temporary or legal restrictions apply).</li>
+              <li><strong>VIE model</strong>: consolidate the VIE’s <strong>primary beneficiary</strong> (power to direct significant activities + exposure to significant economics).</li>
+            </ul>
+            <h3>Noncontrolling interest (NCI)</h3>
+            <ul class="tight">
+              <li>Presented in <strong>equity</strong> of consolidated balance sheet.</li>
+              <li>Share of <strong>net income</strong> attributable to NCI presented on the consolidated income statement.</li>
+            </ul>
+            <h3>Basic worksheet eliminations</h3>
+            <ul class="tight">
+              <li>Eliminate parent’s investment vs. sub equity; recognize FV step‑ups and <strong>goodwill</strong>.</li>
+              <li>Eliminate intercompany transactions (sales, receivables/payables, profits in inventory, dividends).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Currency: translate vs. remeasure</h3>
+            <table class="table">
+              <thead><tr><th>Case</th><th>Method</th><th>Rates</th><th>Where the plug goes</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Functional currency = foreign</td>
+                  <td><strong>Translation</strong> (current‑rate method)</td>
+                  <td>Assets/Liab @ <em>closing</em>; Equity @ <em>historical</em>; Rev/Exp @ <em>average</em></td>
+                  <td><strong>CTA to OCI</strong></td>
+                </tr>
+                <tr>
+                  <td>Functional currency = reporting (or highly inflationary)</td>
+                  <td><strong>Remeasurement</strong> (temporal method)</td>
+                  <td>Monetary @ <em>closing</em>; Non‑monetary @ <em>historical</em>; Rev/COGS tied to rate of related items</td>
+                  <td><strong>Gain/loss to earnings</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations</h2>
+
+        <details><summary>1) NCI & consolidated net income (simple)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Parent ownership</th><td><strong>80%</strong></td></tr>
+          <tr><th>Sub net income (Y1)</th><td><strong>$250,000</strong></td></tr>
+          <tr><th>Parent separate NI (excl. sub)</th><td><strong>$600,000</strong></td></tr>
+          <tr><th>Dividends from Sub</th><td><strong>$40,000</strong> (eliminated against investment)</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>NCI share of Sub NI (20%)</th><td>$250,000 × 20% = <strong>$50,000</strong></td></tr>
+          <tr><th>Parent share of Sub NI</th><td>$250,000 × 80% = <strong>$200,000</strong></td></tr>
+          <tr><th>Consolidated NI</th><td>$600,000 + $250,000 = <strong>$850,000</strong></td></tr>
+        </table>
+        <div class="result">Present consolidated NI of <strong>$850,000</strong>, with <strong>$50,000</strong> attributed to NCI.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) Intercompany inventory profit elimination (downstream)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Parent sells to Sub</th><td>Goods at <strong>$120,000</strong> with <strong>25%</strong> markup on cost</td></tr>
+          <tr><th>Ending inventory at Sub</th><td><strong>$36,000</strong> (transfer price)</td></tr>
+          <tr><th>Ownership</th><td>Parent <strong>80%</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute & Eliminate</h4>
+        <table class="table-min">
+          <tr><th>Gross profit rate on sales</th><td>25% on cost ⇒ on sales = 25/125 = <strong>20%</strong></td></tr>
+          <tr><th>Unrealized profit in EI</th><td>$36,000 × 20% = <strong>$7,200</strong></td></tr>
+          <tr><th>Entry</th><td>Dr Sales <strong>$120,000</strong>; Cr COGS <strong>$120,000</strong> (to remove interco). <br>Dr <strong>COGS $7,200</strong>; Cr <strong>Inventory $7,200</strong> (remove unrealized profit).</td></tr>
+        </table>
+        <div class="result">Downstream profit elimination affects <strong>Parent’s</strong> income; NCI is unaffected.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>3) Translation (current‑rate method) & CTA</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup — Sub in FCU</h4>
+        <table class="table-min">
+          <tr><th>Assets (FCU)</th><td>Cash <strong>60</strong>; AR <strong>140</strong>; Inventory <strong>200</strong>; PPE <strong>500</strong></td></tr>
+          <tr><th>Liabilities (FCU)</th><td>AP <strong>180</strong>; LT debt <strong>300</strong></td></tr>
+          <tr><th>Equity (FCU)</th><td>CS <strong>200</strong> (hist); RE <strong>220</strong></td></tr>
+          <tr><th>Rates</th><td>Closing <strong>$1.10</strong>/FCU; Average <strong>$1.00</strong>/FCU; Historical for CS <strong>$0.90</strong>/FCU</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Translate</h4>
+        <table class="table-min">
+          <tr><th>Assets @ closing</th><td>(60+140+200+500) × $1.10 = <strong>$990</strong></td></tr>
+          <tr><th>Liabilities @ closing</th><td>(180+300) × $1.10 = <strong>$528</strong></td></tr>
+          <tr><th>Equity — CS @ hist</th><td>200 × $0.90 = <strong>$180</strong></td></tr>
+          <tr><th>Net income translated</th><td>ΔRE this period (assume) <strong>$82</strong> using avg rate</td></tr>
+          <tr><th>Plug to OCI (CTA)</th><td>Assets − Liab − CS − RE = 990 − 528 − 180 − 82 = <strong>$200</strong> (credit OCI)</td></tr>
+        </table>
+        <div class="result">Record <strong>CTA $200</strong> to accumulated OCI; present separately from NCI.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Who consolidates?</summary>
+          <p>Company P owns 48% of S and has unilateral power to direct S’s key activities via a contractual arrangement. P also receives majority of expected losses/returns. Under U.S. GAAP, P should:</p>
+          <ol type="A">
+            <li>Not consolidate because it lacks majority voting interests</li>
+            <li>Consolidate S as a VIE’s primary beneficiary</li>
+            <li>Equity method only</li>
+            <li>Fair value through earnings</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Power + economics ⇒ primary beneficiary.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> NCI share</summary>
+          <p>Sub NI is <strong>$300,000</strong> and Parent owns <strong>75%</strong>. NCI share is:</p>
+          <ol type="A">
+            <li>$60,000</li>
+            <li>$75,000</li>
+            <li>$90,000</li>
+            <li>$225,000</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> 25% × $300,000 = $90,000.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Translation vs remeasurement</summary>
+          <p>If the subsidiary’s functional currency equals the parent’s reporting currency, foreign currency adjustment goes to:</p>
+          <ol type="A">
+            <li>OCI (CTA)</li>
+            <li>Equity (APIC)</li>
+            <li>Earnings (remeasurement gain/loss)</li>
+            <li>No adjustment</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Use remeasurement (temporal method); gains/losses to earnings.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Intercompany profit</summary>
+          <p>Upstream sale results in ending inventory containing unrealized profit of <strong>$10,000</strong>. Parent owns <strong>80%</strong>. Effect on NCI?</p>
+          <ol type="A">
+            <li>No effect</li>
+            <li>Decrease NCI’s share of NI by $2,000</li>
+            <li>Decrease NCI’s share of NI by $10,000</li>
+            <li>Increase Parent’s share only</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Upstream affects the subsidiary’s income; NCI absorbs its share (20% × $10,000).</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Functional currency indicators</summary>
+          <p>Which is <em>least</em> persuasive when determining functional currency?</p>
+          <ol type="A">
+            <li>Currency that mainly influences sales prices and labor costs</li>
+            <li>Currency in which financing is denominated</li>
+            <li>Management’s preference</li>
+            <li>Autonomy of foreign operation</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Manager preference is less persuasive than economic indicators.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

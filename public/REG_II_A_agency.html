@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — Agency (REG II.A)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  .answer{color:#b5ffb1}
+  .hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+
+  /* Answer reveal controls */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Agency</h1>
+<!-- Learning Objectives -->
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Recall</strong> the types of agent authority (actual express/implied, apparent, ratification) and how authority is created/terminated.</li>
+<li><strong>Identify</strong> whether an agency relationship exists in a fact pattern (consent, capacity, control; consideration not required).</li>
+<li><strong>Explain</strong> the duties and liabilities of agents and principals (contract &amp; tort, disclosed status, scope of employment).</li>
+<li><strong>Determine</strong> who is liable (agent, principal, both) given a scenario.</li>
+</ul>
+</section>
+<!-- At a Glance -->
+<section class="card">
+<h2>At a Glance</h2>
+<div class="grid-2 small">
+<div>
+<h4>Formation &amp; Authority</h4>
+<table class="tbl small"><colgroup><col style="width:40%"/><col style="width:60%"/></colgroup>
+<tr><th>Concept</th><th>Key points</th></tr>
+<tr><td>Formation</td><td>Mutual <strong>consent</strong> + agent acts on principal’s behalf subject to <strong>control</strong>. Capacity: principal must have capacity; agent needs minimal capacity. No consideration required.</td></tr>
+<tr><td>Actual authority</td><td><strong>Express</strong> (written/oral) or <strong>implied</strong> (incidental/necessary to carry out express authority).</td></tr>
+<tr><td>Apparent authority</td><td>Principal’s manifestations cause third party to reasonably believe agent is authorized. Survives secret limits; ends when third parties receive <strong>notice</strong>.</td></tr>
+<tr><td>Ratification</td><td>Principal affirms unauthorized act with knowledge of material facts, accepts entire transaction, and has capacity at time of act and ratification.</td></tr>
+<tr><td>Equal dignities</td><td>If the contract must be in writing (e.g., Statute of Frauds), authority generally must be in <strong>writing</strong>.</td></tr>
+<tr><td>Termination</td><td>By act (revocation/renunciation), by law (death/incapacity, destruction of subject, bankruptcy in some cases). <strong>Apparent authority</strong> continues until notice.</td></tr>
+</table>
+</div>
+<div>
+<h4>Who is liable on the contract?</h4>
+<table class="tbl small">
+<tr><th>Principal status</th><th>Liability to third party</th><th>Agent’s liability</th></tr>
+<tr><td>Disclosed</td><td>Principal liable</td><td><strong>Agent not liable</strong> (absent agreement)</td></tr>
+<tr><td>Partially disclosed</td><td>Principal liable</td><td>Agent <strong>also liable</strong></td></tr>
+<tr><td>Undisclosed</td><td>Principal liable (if actual authority)</td><td>Agent <strong>also liable</strong></td></tr>
+</table>
+<div class="callout small"><strong>Exam tip:</strong> If the principal is <em>undisclosed or partially disclosed</em>, the <strong>agent is liable</strong> on the contract.</div>
+</div>
+</div>
+</section><section class="card"><h2>Illustration — Who’s liable on the contract?</h2><div class="figure">
+<svg aria-label="Contract liability decision flow (improved)" height="260" role="img" viewbox="0 0 1050 300" width="100%">
+<defs>
+<marker id="arrow" markerheight="8" markerunits="strokeWidth" markerwidth="10" orient="auto" refx="9" refy="4">
+<path d="M0,0 L10,4 L0,8 z" fill="rgba(255,255,255,.7)"></path>
+</marker>
+<style>
+      .node{fill:rgba(96,165,250,.22);stroke:rgba(255,255,255,.38)}
+      .box{fill:rgba(134,183,255,.28);stroke:rgba(255,255,255,.35)}
+      .text{fill:#fff;font-size:14px;font-weight:700}
+      .wire{stroke:rgba(255,255,255,.6);stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .lbl{fill:#fff;font-size:12px}
+      .note{fill:#fff;font-size:11px;opacity:.85}
+    </style>
+</defs>
+<!-- Start question -->
+<rect class="node" height="60" rx="12" ry="12" width="300" x="40" y="30"></rect>
+<text class="text" text-anchor="middle" x="190" y="58">Authority or ratification?</text>
+<!-- Arrow to status decision -->
+<line class="wire" x1="340" x2="420" y1="60" y2="60"></line>
+<text class="lbl" x="360" y="48">Yes</text>
+<!-- Status decision -->
+<rect class="node" height="60" rx="12" ry="12" width="360" x="420" y="30"></rect>
+<text class="text" text-anchor="middle" x="600" y="56">Disclosure status to 3rd party?</text>
+<!-- Down to Disclosed outcome -->
+<line class="wire" x1="600" x2="600" y1="90" y2="130"></line>
+<text class="lbl" x="610" y="115">Disclosed</text>
+<rect class="box" height="66" rx="10" ry="10" width="240" x="480" y="130"></rect>
+<text class="text" text-anchor="middle" x="600" y="157">
+<tspan dy="0" x="600">Principal liable</tspan>
+<tspan dy="18" x="600">Agent not liable*</tspan>
+</text>
+<text class="note" x="482" y="203">* absent agreement</text>
+<!-- Right to Partially/Undisclosed outcome -->
+
+<text class="lbl" x="830" y="98">Partially/Undisclosed</text>
+<path class="wire" d="M780 60 L780 110 L820 110"></path><rect class="box" height="60" rx="10" ry="10" width="200" x="820" y="80"></rect>
+<text class="text" text-anchor="middle" x="920" y="115">Agent also liable</text>
+<text class="note" x="820" y="148">Undisclosed principal bound only by <tspan font-weight="700">actual</tspan> authority.</text>
+<!-- No authority branch -->
+<line class="wire" x1="190" x2="190" y1="90" y2="135"></line>
+<text class="lbl" x="200" y="112">No</text>
+<rect class="box" height="56" rx="10" ry="10" width="180" x="100" y="135"></rect>
+<text class="text" text-anchor="middle" x="190" y="165">Principal not bound</text>
+<line class="wire" x1="190" x2="190" y1="191" y2="232"></line>
+<rect class="box" height="56" rx="10" ry="10" width="220" x="80" y="232"></rect>
+<text class="text" text-anchor="middle" x="190" y="258">
+<tspan dy="0" x="190">Agent liable</tspan>
+<tspan dy="18" x="190">(warranty of authority)</tspan>
+</text>
+</svg>
+</div><p class="muted small">Flow: Check authority/ratification first. Then use disclosure status to determine whether the agent shares liability.</p></section>
+<!-- Tort liability -->
+<section class="card">
+<h2>Tort Liability — Respondeat Superior</h2>
+<table class="tbl small">
+<tr><th>Issue</th><th>Key points</th></tr>
+<tr><td>Employee vs. Independent Contractor</td><td>Look to <strong>control</strong> factors: right to control manner/means, tools, location, duration, payment method. Generally, no vicarious liability for independent contractors (exceptions: inherently dangerous activities, negligent hiring).</td></tr>
+<tr><td>Scope of employment</td><td>Employer liable for employee’s torts within scope (a <em>detour</em> may be in scope; a <em>frolic</em> is not). Intentional torts usually outside scope unless force is authorized/foreseeable (e.g., bouncer).</td></tr>
+<tr><td>Agent’s own tort</td><td>Agent always liable for own torts. Principal may be <strong>directly</strong> liable for negligent supervision/retention.</td></tr>
+</table>
+</section>
+<!-- Examples -->
+<section class="card">
+<h2>Examples — Apply to scenarios</h2>
+<table class="tbl small">
+<tr><th>Scenario</th><th>Answer</th></tr>
+<tr>
+<td>A store manager is told to buy “what’s needed” for opening day and signs a purchase order for shelves and price guns.</td>
+<td>Implied actual authority to buy usual and necessary items. Principal bound.</td>
+</tr>
+<tr>
+<td>After firing a salesperson, the company forgets to notify regular customers. The salesperson places orders with them.</td>
+<td>Customers reasonably believe authority continues → <strong>apparent authority</strong>. Principal bound until notice to third parties.</td>
+</tr>
+<tr>
+<td>An agent without authority signs a contract. The principal later accepts the benefits with full knowledge.</td>
+<td><strong>Ratification</strong> binds the principal if the entire transaction is accepted and no material change occurred.</td>
+</tr>
+<tr>
+<td>Delivery driver deviates three blocks for coffee and hits a pedestrian.</td>
+<td>Likely a <em>detour</em> within scope → employer liable.</td>
+</tr>
+<tr>
+<td>Principal is undisclosed. Third party sues the agent on the contract.</td>
+<td>Agent liable; once principal revealed, the third party can elect to sue either (but not both to judgment).</td>
+</tr>
+</table>
+</section>
+<!-- Tricky Areas -->
+<section class="card">
+<h2>Tricky Areas (Exam Tips)</h2>
+<ul class="small">
+<li><span class="tag">Notice ends apparent authority</span> Give <strong>actual notice</strong> to prior customers and <strong>constructive notice</strong> to the public when terminating an agent.</li>
+<li><span class="tag">Equal dignities</span> If a contract must be in writing, the agent’s authority normally must be written, too.</li>
+<li><span class="tag">Power vs. right</span> Parties usually have the <em>power</em> to end the agency at will, but may breach the <em>right</em> (contract) by doing so.</li>
+<li><span class="tag">Unauthorized contract</span> Agent is liable on implied warranty of authority unless the principal ratifies.</li>
+<li><span class="tag">Independent contractor</span> No vicarious liability—watch for exceptions and for <strong>apparent agency</strong> fact patterns.</li>
+</ul>
+<div class="callout small"><strong>Memory hook:</strong> <em>A‑P‑R‑T</em> → Actual, apparent, Ratification, Tort scope. Check authority first, then who’s liable.</div>
+</section>
+<!-- Quick Recap -->
+<section class="card">
+<h2>Quick Recap</h2>
+<table class="tbl small">
+<tr><th>Topic</th><th>Key point</th></tr>
+<tr><td>Authority</td><td>Actual (express/implied), apparent from principal’s manifestations, or ratification after the fact.</td></tr>
+<tr><td>Disclosure status</td><td>Agent liable when principal is partially disclosed/undisclosed.</td></tr>
+<tr><td>Termination</td><td>Ends by act or law; apparent authority persists until notice.</td></tr>
+<tr><td>Torts</td><td>Employer liable for employee’s torts in scope (detour yes, frolic no); usually not for independent contractors.</td></tr>
+</table>
+</section>
+<!-- Quick Practice -->
+<section class="card">
+<h2>Quick Practice — 3 Multiple‑Choice Questions (MCQs)</h2>
+<ol class="small">
+<li><strong>Which statement about apparent authority is correct?</strong><br/>
+          A. It arises from the agent’s secret beliefs   B. It ends automatically when the principal revokes authority   C. It is created by the principal’s manifestations to third parties   D. It cannot bind the principal<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Answer: C — Apparent authority comes from the principal’s words/conduct causing reasonable belief in third parties and continues until notice.</div></details></li>
+<div class="hr"></div>
+<li><strong>Who is liable on a contract made by an agent of an <em>undisclosed</em> principal with actual authority?</strong><br/>
+          A. Principal only   B. Agent only   C. Both principal and agent   D. Neither<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Answer: C — Principal and agent are both liable to the third party.</div></details></li>
+<div class="hr"></div>
+<li><strong>Which is <em>most</em> likely within the scope of employment?</strong><br/>
+          A. A driver detours for lunch and rear‑ends a car on the way back   B. A driver borrows the truck on Sunday for a move   C. A salesperson embezzles from a client’s safe   D. A programmer moonlights for a competitor at home<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Answer: A — A brief detour tied to work is generally in scope; the others are outside scope.</div></details></li>
+</ol>
+</section>
+</div>
+</body>
+</html>

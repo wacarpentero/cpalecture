@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formation & Liquidation of Business Entities — TCP III.A (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --border:rgba(255,255,255,.12);
+    --shadow:0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%), radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%), var(--bg);
+       color:var(--text);line-height:1.55;}
+  .header-inner{max-width:1050px;margin:0 auto;padding:28px 18px 4px}
+  .title{font-weight:800;letter-spacing:.3px;font-size:clamp(26px,3.1vw,40px);margin:0}
+  .container{max-width:1050px;margin:0 auto;padding:8px 18px 60px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:16px 0;box-shadow:var(--shadow)}
+  h2{margin:0 0 10px;font-size:clamp(20px,2.1vw,28px)}
+  h3{margin:18px 0 8px;font-size:clamp(17px,1.7vw,22px)}
+  p{margin:8px 0 10px}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));padding:14px 16px;border-radius:12px;border:1px dashed var(--border);}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  .answer{color:var(--ok);font-weight:400}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Formation & Liquidation of Business Entities</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Apply <strong>§351</strong> corporate formation rules (control ≥80%, property for stock only), compute <strong>recognized gain</strong> (boot/§357(c)), and determine <strong>shareholder stock basis</strong> and <strong>corporation’s basis</strong>.</li>
+        <li>Apply <strong>§721</strong> partnership/LLC formation nonrecognition and compute <strong>outside basis</strong> including <strong>§752 liabilities</strong>.</li>
+        <li>Determine tax effects of <strong>corporate liquidation</strong> to outside shareholders (§331/§336) vs <strong>parent–subsidiary liquidation</strong> (§332/§337).</li>
+        <li>Evaluate <strong>partnership liquidating distributions</strong> (cash/property basis rules; gain triggers; §736 payments to retiring partners).</li>
+        <li>Recognize special considerations for <strong>S corporation</strong> formations/distributions when relevant (e.g., AAA vs AEP on liquidation).</li>
+      </ul>
+    </section>
+
+    
+    <section class="card">
+      <h2>Fast map</h2>
+      <style>
+        .grid {display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top:8px}
+        @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+        .rule {border:1px solid var(--border); border-radius:14px; padding:14px; background:rgba(255,255,255,.02)}
+        .rule h4{margin:0 0 6px; font-size:16px}
+        .rule ul{margin:6px 0 0 18px}
+        .rule li{margin:4px 0}
+        .badge{display:inline-block; border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; margin:4px 6px 0 0}
+        .iftable{width:100%; border-collapse:collapse; margin-top:14px}
+        .iftable th,.iftable td{border:1px solid var(--border); padding:10px 12px; vertical-align:top}
+        .iftable th{background:rgba(255,255,255,.04); text-align:left}
+        .em{font-weight:600; color:var(--text)}
+      </style>
+
+      <div class="grid">
+        <div class="rule">
+          <h4>🏗️ §351 Corporate formation</h4>
+          <ul>
+            <li><span class="em">Control ≥80%</span>, property for stock only → no gain/loss.</li>
+            <li>Recognize gain = lesser of <span class="em">boot</span> or realized (unless §357(c)).</li>
+            <li>Stock basis = old basis + gain − boot − liabilities assumed.</li>
+          </ul>
+          <span class="badge">Services ≠ property</span>
+          <span class="badge">§357(c) debt&gt;basis</span>
+        </div>
+
+        <div class="rule">
+          <h4>🤝 §721 Partnership formation</h4>
+          <ul>
+            <li>No gain/loss on property contributions.</li>
+            <li>Outside basis = basis − debt relief + §752 share of partnership debt.</li>
+            <li>Inside basis carryover; track recourse vs nonrecourse.</li>
+          </ul>
+          <span class="badge">§752 debt sharing</span>
+        </div>
+
+        <div class="rule">
+          <h4>🏦 Corporate liquidation to outside SH</h4>
+          <ul>
+            <li>Shareholder: sale treatment under <span class="em">§331</span> (FMV − stock basis).</li>
+            <li>Corporation: recognizes gain/loss on distributions (<span class="em">§336</span>).</li>
+          </ul>
+          <span class="badge">Two‑level tax</span>
+        </div>
+
+        <div class="rule">
+          <h4>🏢 Parent–sub liquidation</h4>
+          <ul>
+            <li><span class="em">§332/§337:</span> ≥80% parent → generally no gain to parent or sub.</li>
+            <li>Parent takes <span class="em">carryover</span> asset bases.</li>
+          </ul>
+          <span class="badge">≥80% vote & value</span>
+        </div>
+
+        <div class="rule">
+          <h4>📦 Partnership liquidating distributions</h4>
+          <ul>
+            <li>Gain only if <span class="em">cash &gt; outside basis</span> (§731).</li>
+            <li>Substitute remaining basis into property received (§732(b)).</li>
+          </ul>
+          <span class="badge">Cash test</span>
+        </div>
+
+        <div class="rule">
+          <h4>👋 Retiring partner payments</h4>
+          <ul>
+            <li><span class="em">§736(b)</span> capital interest → distribution/capital.</li>
+            <li><span class="em">§736(a)</span> (unrealized receivables/goodwill in service firms) → ordinary income.</li>
+          </ul>
+          <span class="badge">Character matters</span>
+        </div>
+      </div>
+
+      <table class="iftable">
+        <thead><tr><th>If you see…</th><th>Then remember…</th></tr></thead>
+        <tbody>
+          <tr><td>Boot in §351</td><td>Recognize gain up to boot; character follows asset.</td></tr>
+          <tr><td>Liabilities &gt; basis at §351</td><td>§357(c) gain = excess liabilities.</td></tr>
+          <tr><td>Cash distribution from partnership</td><td>Gain only if cash exceeds outside basis; property rarely triggers gain.</td></tr>
+          <tr><td>Parent owns ≥80% of sub</td><td>§332 nonrecognition; parent gets carryover basis.</td></tr>
+          <tr><td>Service partnership retirement payout</td><td>Portion for unrealized receivables/goodwill is §736(a) ordinary.</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:10px">
+        <span class="badge">80% control (351)</span>
+        <span class="badge">Cash &gt; basis ⇒ gain</span>
+        <span class="badge">Two‑level vs §332</span>
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>Services ≠ property:</strong> Shares for services are taxable compensation and do not count toward §351 control.</li>
+        <li><strong>Built‑in loss assets:</strong> Special rules can limit duplication of losses when multiple properties are transferred; exam may cue “FMV below basis.”</li>
+        <li><strong>Boot ordering:</strong> Recognized gain is the lesser of realized gain and boot (cash + FMV non‑stock); character follows the asset.</li>
+        <li><strong>Liabilities:</strong> §357(a) generally not boot; <strong>§357(c)</strong> triggers gain if liabilities assumed exceed aggregate basis; anti‑abuse under §357(b) if tax‑avoidance purpose.</li>
+        <li><strong>Partnership debt:</strong> Recourse debt to partners who bear economic risk; nonrecourse shared by profit ratios (unless minimum gain rules).</li>
+        <li><strong>§332 vs §331:</strong> The parent‑sub exception is common—watch for ≥80% vote & value and complete cancellation of the subsidiary stock.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+
+      <h3>1) §351 formation with boot & liabilities</h3>
+      <div class="diagram">Transfer property (basis $120,000, FMV $200,000); receive stock and cash $30,000; corp assumes liabilities $20,000.
+Realized gain = FMV stock + boot − basis = $110,000. 
+Recognized gain = lesser of realized gain and boot = <strong>$30,000</strong>.
+Shareholder stock basis = $120,000 + $30,000 − $30,000 − $20,000 = <strong>$100,000</strong>.
+Corporation’s basis in property = carryover + recognized gain = <strong>$150,000</strong>.</div>
+
+      <h3>2) §721 partnership contribution with recourse debt</h3>
+      <div class="diagram">Contribute property basis $60,000 (FMV $100,000) with debt $30,000; 50/50 partners.
+Deemed cash distribution = liability relief $30,000 − partner’s share $15,000 = $15,000.
+Initial outside basis = $60,000 − $30,000 + $15,000 = <strong>$45,000</strong>. No gain since deemed cash ≤ basis.</div>
+
+      <h3>3) Corporate liquidation to outside shareholder</h3>
+      <div class="diagram">Corp distributes property FMV $260,000 (basis $140,000); shareholder stock basis $80,000.
+Corp recognizes gain under §336 = $120,000; shareholder capital gain under §331 = FMV − stock basis = <strong>$180,000</strong>.</div>
+
+      <h3>4) §332 parent–subsidiary liquidation (≥80%)</h3>
+      <div class="diagram">Parent owns 90% of Sub. Sub distributes all assets (FMV $500,000; basis $300,000).
+No gain to parent or sub if requirements met; Parent takes carryover bases totaling <strong>$300,000</strong>.</div>
+
+      <h3>5) Partnership liquidating distribution — basis allocation</h3>
+      <div class="diagram">Outside basis $70,000; distribution of cash $50,000 and inventory (inside basis $30,000).
+Gain on cash? max(0, cash − outside) = <strong>$0</strong>. 
+Remaining outside basis = $20,000 → basis in inventory received = <strong>$20,000</strong>; ending outside basis = $0.</div>
+
+      <h3>6) §736 payments to retiring partner</h3>
+      <div class="diagram">Total payments $120,000; capital account $70,000; unrealized receivables (“hot assets”) share $20,000.
+§736(b) (capital interest) treated as distribution = <strong>$70,000</strong>. 
+§736(a) remainder ordinary income (often for hot assets/goodwill in service partnerships) = <strong>$50,000</strong>.</div>
+    </section>
+
+    <section class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> §351 control test: Transferors receive only stock but own 72% immediately after. Result?</p>
+        <ol type="A">
+          <li>§351 applies — no gain or loss</li>
+          <li>§351 fails — exchange is taxable</li>
+          <li>§351 applies only if no liabilities are assumed</li>
+          <li>§351 applies only if property FMV exceeds basis</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Control must be ≥80% (vote and value). At 72%, §351 doesn’t apply.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> §357(c): A transferor contributes property with basis $40,000 subject to liabilities $70,000. Recognized gain?</p>
+        <ol type="A">
+          <li>$30,000</li>
+          <li>$0</li>
+          <li>$70,000</li>
+          <li>$60,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — If liabilities assumed exceed aggregate basis, the excess ($30,000) is recognized as gain under §357(c).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> §351 with boot: Using Example 1 facts, shareholder’s <em>recognized gain</em> equals:</p>
+        <ol type="A">
+          <li>$30,000</li>
+          <li>$110,000</li>
+          <li>$0</li>
+          <li>$50,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Recognized gain limited to boot received (cash and FMV non‑stock) absent §357(c) issues.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Stock basis after a §351 exchange (Example 1) equals:</p>
+        <ol type="A">
+          <li>$100,000</li>
+          <li>$200,000</li>
+          <li>$120,000</li>
+          <li>$90,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Basis = old basis + gain recognized − boot − liabilities assumed.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Partnership formation (§721) with debt: Contribution of basis $60,000 subject to debt $30,000 to a 50/50 partnership. Initial outside basis?</p>
+        <ol type="A">
+          <li>$45,000</li>
+          <li>$30,000</li>
+          <li>$60,000</li>
+          <li>$55,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Outside basis = basis − debt relief + share of partnership debt.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> Corporate liquidation to an outside shareholder: Property FMV $260,000; shareholder stock basis $80,000. Shareholder’s recognized gain?</p>
+        <ol type="A">
+          <li>$180,000</li>
+          <li>$120,000</li>
+          <li>$0</li>
+          <li>$80,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Under §331, liquidation is treated as a sale of stock; gain = FMV received − stock basis.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> In a qualifying §332 liquidation, the parent’s basis in assets received is generally:</p>
+        <ol type="A">
+          <li>Carryover basis from the subsidiary</li>
+          <li>FMV on the distribution date</li>
+          <li>Zero</li>
+          <li>Original cost of the parent’s subsidiary stock</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — §334(b)(1) carryover basis applies in §332 liquidations.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> Partnership liquidating distribution: Outside basis $25,000; cash distribution $40,000; no other property. Recognized gain?</p>
+        <ol type="A">
+          <li>$15,000</li>
+          <li>$0</li>
+          <li>$40,000</li>
+          <li>$-15,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Gain recognized only when cash (and deemed cash) exceeds outside basis.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> §736 payments characterization for a service partnership most likely results in:</p>
+        <ol type="A">
+          <li>All payments as §736(b) capital distributions</li>
+          <li>Portion as §736(a) ordinary income for unrealized receivables/goodwill</li>
+          <li>No income to the retiring partner</li>
+          <li>All payments as capital loss to the partnership</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — In service partnerships, goodwill is typically §736(a) unless the agreement says otherwise; unrealized receivables are ordinary.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Which item <em>does not</em> count toward §351 “property”?</p>
+        <ol type="A">
+          <li>Accounts receivable contributed by a cash‑method taxpayer</li>
+          <li>Inventory</li>
+          <li>Services</li>
+          <li>Machinery</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Services are not property; stock for services is taxable compensation and doesn’t help satisfy the 80% control test.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

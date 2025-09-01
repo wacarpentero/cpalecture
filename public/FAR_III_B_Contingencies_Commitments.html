@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR III.B: Contingencies & Commitments</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden;margin-bottom:18px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  .muted{color:var(--muted)}
+  /* Journal entries */
+  .je{list-style:none;margin:6px 0 4px;padding:0}
+  .je li{display:grid;grid-template-columns:28px 1fr 160px 1fr;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.95}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:center;white-space:nowrap}
+  .pill{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:3px 8px;border-radius:999px;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Contingencies &amp; Commitments</h1>
+
+  <section class="card">
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li>Recall the <strong>recognition</strong> and <strong>disclosure</strong> criteria used to identify commitments and contingencies.</li>
+      <li>Calculate amounts of contingencies (e.g., warranties, premiums, purchase commitments) and prepare <strong>journal entries</strong>.</li>
+      <li>Review fact patterns to determine whether an item requires recognition and/or disclosure in the financial statements.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>At a Glance</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:22%"><col style="width:48%"><col style="width:30%"></colgroup>
+      <tr><th>Type</th><th>Rule of thumb</th><th>Action</th></tr>
+      <tr>
+        <td>Loss contingency</td>
+        <td><strong>Probable</strong> and amount reasonably estimable → accrue. If only a <strong>range</strong> and no best estimate, accrue the <strong>minimum</strong> and disclose the range.</td>
+        <td>Record liability &amp; expense and disclose.</td>
+      </tr>
+      <tr>
+        <td>Reasonably possible</td>
+        <td>More than remote but less than probable.</td>
+        <td>Disclose only (no accrual).</td>
+      </tr>
+      <tr>
+        <td>Remote</td>
+        <td>Generally ignore.</td>
+        <td>No disclosure (exceptions exist for guarantees/commitments).</td>
+      </tr>
+      <tr>
+        <td>Gain contingency</td>
+        <td>Do not record until realized.</td>
+        <td>Optional disclosure if probable and will not mislead.</td>
+      </tr>
+      <tr>
+        <td>Commitments</td>
+        <td>Firm purchase commitments: recognize a <strong>loss</strong> if contract price &gt; market at period‑end.</td>
+        <td>Record loss &amp; liability; disclose terms.</td>
+      </tr>
+    </table>
+    <div class="small"><span class="pill">Tip</span> Disclosures describe the nature, estimate (or range) of possible loss, and uncertainties affecting the amount or timing.</div>
+  </section>
+
+  <!-- SECTION 1: Lawsuit -->
+  <section class="card">
+    <h2>1) Lawsuit Loss Contingency</h2>
+    <h3>Example 1 — Range estimate with no single best point</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Legal counsel deems loss <strong>probable</strong> with an estimated range of <strong>$180,000–$220,000</strong>; no amount within the range is a better estimate.</td>
+        <td>Accrue the <strong>minimum</strong> of the range: <strong>$180,000</strong>. Disclose the range of possible loss.</td>
+      </tr>
+    </table>
+    <h4>Entry at year‑end</h4>
+    <div class="small muted">Purpose: accrue a probable and reasonably estimable loss at the end of the reporting period.</div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Loss — litigation</span><span class="amt">$180,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Litigation liability</span><span class="amt">($180,000)</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 2: Warranty -->
+  <section class="card">
+    <h2>2) Warranty Obligations (accrue at sale)</h2>
+    <h3>Example 2 — Expected cost method</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Data</th><th>Computation</th></tr>
+      <tr>
+        <td>Current‑period sales subject to warranty <strong>$1,200,000</strong>; experience failure rate <strong>2%</strong>; average repair cost per unit approximated in the rate.</td>
+        <td>Expected warranty cost = 2% × $1,200,000 = <strong>$24,000</strong>.</td>
+      </tr>
+    </table>
+    <h4>Entries</h4>
+    <div class="small muted">Two parts: (1) accrue expected warranty cost at sale; (2) record actual repair/settlement costs by relieving the liability.</div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Warranty expense</span><span class="amt">$24,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Warranty liability</span><span class="amt">($24,000)</span></li>
+      <li><span class="label">Dr</span><span class="acct">Warranty liability</span><span class="amt">$24,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Cash / Inventory / Payroll</span><span class="amt">($24,000)</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 3: Premiums -->
+  <section class="card">
+    <h2>3) Premium Offers &amp; Coupons</h2>
+    <h3>Example 3 — Expected redemptions</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Data</th><th>Computation</th></tr>
+      <tr>
+        <td>Company mails 50,000 coupons. Expected redemption rate 40%. Each coupon requires paying <strong>$1</strong> shipping; premium item costs <strong>$3</strong> each.</td>
+        <td>Expected redemptions = 50,000 × 40% = 20,000. Liability = (Cost $3 − Customer $1) × 20,000 = <strong>$40,000</strong>.</td>
+      </tr>
+    </table>
+    <h4>Entry at issuance</h4>
+    <div class="small muted">Purpose: accrue expected premium/coupon redemptions when the offer is made; relieve the liability as redemptions occur.</div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Premium expense</span><span class="amt">$40,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Premium liability</span><span class="amt">($40,000)</span></li>
+    </ul>
+    <div class="small muted">As redemptions occur: <em>Dr</em> Premium liability; <em>Cr</em> Inventory/Cash.</div>
+  </section>
+
+  <!-- SECTION 4: Environmental / Asset retirement related contingency -->
+  <section class="card">
+    <h2>4) Environmental Remediation Obligation</h2>
+    <h3>Example 4 — Probable and estimable cleanup</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>New law enacted makes the entity responsible for remediation of contamination caused to date. Consultants estimate cleanup cost of <strong>$900,000</strong> with a likely range of $850,000–$950,000.</td>
+        <td>Accrue best estimate: <strong>$900,000</strong>. If no best estimate, accrue minimum and disclose range.</td>
+      </tr>
+    </table>
+    <h4>Entry</h4>
+    <div class="small muted">Purpose: accrue the present obligation for environmental remediation when it is probable and reasonably estimable.</div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Environmental remediation expense</span><span class="amt">$900,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Remediation liability</span><span class="amt">($900,000)</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 5: Purchase commitments -->
+  <section class="card">
+    <h2>5) Firm Purchase Commitments</h2>
+    <h3>Example 5 — Loss recognized when contract is unfavorable</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Terms</th><th>Computation</th></tr>
+      <tr>
+        <td>Non‑cancelable contract to buy 10,000 units at <strong>$12</strong> each. At year‑end, market price falls to <strong>$10</strong>.</td>
+        <td>Loss = (Contract $12 − Market $10) × 10,000 = <strong>$20,000</strong>.</td>
+      </tr>
+    </table>
+    <h4>Year‑end entry</h4>
+    <div class="small muted">Purpose: recognize loss and a liability for an unfavorable purchase commitment at period‑end; relieve when goods are received.</div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Loss on purchase commitment</span><span class="amt">$20,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Estimated liability on purchase commitment</span><span class="amt">($20,000)</span></li>
+    </ul>
+    <div class="small muted">When the goods are received, include the loss in inventory cost or relieve the liability accordingly.</div>
+  </section>
+
+  <!-- SECTION 6: Gain contingency -->
+  <section class="card">
+    <h2>6) Gain Contingency</h2>
+    <p class="small">A claim for $500,000 is on appeal and success is probable. <strong>Do not record</strong> a receivable or gain. Provide a cautious disclosure only.</p>
+  </section>
+
+  <!-- Quick Recap -->
+  <section class="card">
+    <h2>Quick Recap</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:38%"><col style="width:62%"></colgroup>
+      <tr><th>Topic</th><th>Core points</th></tr>
+      <tr>
+        <td>Thresholds</td>
+        <td><strong>Probable &amp; estimable</strong> → accrue; <strong>reasonably possible</strong> → disclose; <strong>remote</strong> → generally ignore (watch for guarantees/commitments).</td>
+      </tr>
+      <tr>
+        <td>Ranges</td>
+        <td>Use the <strong>best estimate</strong> within the range; if none, accrue the <strong>minimum</strong> and disclose the range.</td>
+      </tr>
+      <tr>
+        <td>Warranties</td>
+        <td>Accrue at sale for expected costs; relieve liability when costs are incurred.</td>
+      </tr>
+      <tr>
+        <td>Premiums &amp; coupons</td>
+        <td>Accrue for expected redemptions based on experience; adjust as actuals occur.</td>
+      </tr>
+      <tr>
+        <td>Purchase commitments</td>
+        <td>Recognize loss when contract price exceeds market at period‑end; carry a liability until settlement/receipt.</td>
+      </tr>
+      <tr>
+        <td>Gains</td>
+        <td>Never recognize until realized; consider footnote only.</td>
+      </tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

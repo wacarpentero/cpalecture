@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.I: Equity</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --gold:#f5c542;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .spacer{height:16px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  /* Journal entries */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 320px 140px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Equity</h1>
+
+  <section class="card">
+    <h3>Learning Objectives</h3>
+    <ul>
+      <li>Prepare journal entries to recognize <strong>equity transactions</strong> in the financial statements: equity issuance, stock dividends, stock splits, treasury stock, and capital accounts in pass‑through entities.</li>
+      <li>Calculate and present changes in <strong>paid‑in capital</strong> and <strong>retained earnings</strong>, including appropriations and dividends.</li>
+      <li>Account for <strong>treasury stock</strong> (cost method) and subsequent reissuance.</li>
+      <li>Record and analyze <strong>stock dividends</strong> (small vs. large) and <strong>stock splits</strong>, including stock split effected in the form of a dividend.</li>
+      <li>Record changes in <strong>partnership/LLC capital</strong> (admission, withdrawal, profit allocations) using the bonus method.</li>
+    </ul>
+  </section>
+
+  <div class="spacer"></div>
+
+  <section class="card">
+    <h3>At a Glance</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:26%"><col style="width:48%"><col style="width:26%"></colgroup>
+      <tr><th>Topic</th><th>Core points</th><th>Notes</th></tr>
+      <tr><td>Share issuance</td><td>Record <em>par</em> to common or preferred stock; excess to additional paid‑in capital. Direct issuance costs reduce paid‑in capital.</td><td>Noncash consideration at fair value received or fair value of equity issued.</td></tr>
+      <tr><td>Treasury stock</td><td>Cost method: record at cost; no gain or loss on reissuance—differences go to APIC‑TS then retained earnings.</td><td>Shown as a deduction in equity.</td></tr>
+      <tr><td>Stock dividends</td><td>Small (&lt;= 20–25%): capitalize at <em>fair value</em> from retained earnings to paid‑in capital. Large: transfer at <em>par</em>.</td><td>Stock split: no entry (only par and shares adjust).</td></tr>
+      <tr><td>Partnership capital</td><td>Use bonus method unless otherwise specified; adjust partners’ capital for admission/withdrawal.</td><td>Close profits per agreed ratios.</td></tr>
+    </table>
+  </section>
+
+  <div class="spacer"></div>
+
+  <section class="card">
+    <h3>Key Definitions</h3>
+    <ul class="small">
+      <li><strong>Par (stated) value:</strong> Legal capital recorded in the stock account.</li>
+      <li><strong>Additional paid‑in capital (APIC):</strong> Amount received over par on issuance (also includes APIC‑TS from treasury stock transactions).</li>
+      <li><strong>Treasury stock (cost method):</strong> Company’s own shares repurchased and held; recorded at cost as a contra‑equity.</li>
+      <li><strong>Retained earnings:</strong> Accumulated net income not distributed; reduced by dividends and some equity adjustments.</li>
+      <li><strong>Stock dividend vs. stock split:</strong> Dividend capitalizes retained earnings; split changes share count and par but no entry.</li>
+      <li><strong>Bonus method (partnership):</strong> Partner admissions/withdrawals allocate any difference between consideration and carrying amounts to partners’ capital.</li>
+    </ul>
+  </section>
+
+  <h2>1) Share Issuance</h2>
+  <section class="card">
+    <h3>Example 1 — Issue common stock above par with issuance costs</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:38%"><col style="width:22%"><col style="width:40%"></colgroup>
+      <tr><th>Data</th><th class="num">Amount</th><th>Notes</th></tr>
+      <tr><td>Shares issued</td><td class="num">10,000</td><td></td></tr>
+      <tr><td>Par value per share</td><td class="num">$1</td><td></td></tr>
+      <tr><td>Issue price per share</td><td class="num">$12</td><td></td></tr>
+      <tr><td>Direct issuance costs</td><td class="num">$5,000</td><td>Reduce paid‑in capital (not an expense).</td></tr>
+    </table>
+    <h4>Entry at issuance</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$115,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Common stock (10,000 × $1 par)</span><span class="amt">($10,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Additional paid‑in capital — common</span><span class="amt">($105,000)</span></li>
+    </ul>
+    <h4>Record issuance costs</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Additional paid‑in capital — common</span><span class="amt">$5,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($5,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>2) Treasury Stock — Cost Method</h2>
+  <section class="card">
+    <h3>Example 2 — Repurchase and reissue</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Event</th><th class="num">Amount</th></tr>
+      <tr><td>Repurchase 2,000 shares at $9</td><td class="num">$18,000</td></tr>
+      <tr><td>Reissue 1,200 shares at $11</td><td class="num">$13,200</td></tr>
+      <tr><td>Reissue remaining 800 shares at $8</td><td class="num">$6,400</td></tr>
+    </table>
+    <h4>Journal entries</h4>
+    <div class="small"><em>Repurchase</em></div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Treasury stock (2,000 × $9)</span><span class="amt">$18,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($18,000)</span></li>
+    </ul>
+    <div class="small"><em>Reissue above cost (1,200 at $11; cost $9)</em></div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$13,200</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Treasury stock (1,200 × $9)</span><span class="amt">($10,800)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Additional paid‑in capital — treasury stock</span><span class="amt">($2,400)</span></li>
+    </ul>
+    <div class="small"><em>Reissue below cost (800 at $8; cost $9)</em></div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$6,400</span></li>
+      <li><span class="label">Dr</span><span class="acct">Additional paid‑in capital — treasury stock</span><span class="amt">$1,600</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Treasury stock (800 × $9)</span><span class="amt">($7,200)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Retained earnings (plug if APIC‑TS insufficient)</span><span class="amt">($800)</span></li>
+    </ul>
+  </section>
+
+  <h2>3) Stock Dividends and Stock Splits</h2>
+  <section class="card">
+    <h3>Example 3 — Small stock dividend (10%)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+      <tr><th>Given</th><th>Computation</th></tr>
+      <tr><td>Shares outstanding</td><td class="num">50,000</td></tr>
+      <tr><td>Dividend rate</td><td class="num">10%</td></tr>
+      <tr><td>Market price per share</td><td class="num">$20</td></tr>
+      <tr><td>Par value per share</td><td class="num">$1</td></tr>
+      <tr><td><strong>Shares to issue</strong> = 50,000 × 10%</td><td class="num"><strong>5,000</strong></td></tr>
+      <tr><td><strong>Amount capitalized</strong> = 5,000 × $20</td><td class="num"><strong>$100,000</strong></td></tr>
+    </table>
+    <h4>Entry at declaration</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Retained earnings</span><span class="amt">$100,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Common stock distributable (5,000 × $1 par)</span><span class="amt">($5,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Additional paid‑in capital — common</span><span class="amt">($95,000)</span></li>
+    </ul>
+    <h4>Entry at distribution</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Common stock distributable</span><span class="amt">$5,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Common stock</span><span class="amt">($5,000)</span></li>
+    </ul>
+
+    <h3>Example 4 — Large stock dividend (30%)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+      <tr><th>Given</th><th>Computation</th></tr>
+      <tr><td>Shares outstanding</td><td class="num">50,000</td></tr>
+      <tr><td>Dividend rate</td><td class="num">30%</td></tr>
+      <tr><td>Par value per share</td><td class="num">$1</td></tr>
+      <tr><td><strong>Shares to issue</strong> = 50,000 × 30%</td><td class="num"><strong>15,000</strong></td></tr>
+      <tr><td><strong>Amount capitalized</strong> = 15,000 × $1 (par)</td><td class="num"><strong>$15,000</strong></td></tr>
+    </table>
+    <h4>Entry at declaration (large stock dividend)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Retained earnings</span><span class="amt">$15,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Common stock distributable</span><span class="amt">($15,000)</span></li>
+    </ul>
+    <h4>Entry at distribution</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Common stock distributable</span><span class="amt">$15,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Common stock</span><span class="amt">($15,000)</span></li>
+    </ul>
+
+    <h3>Example 5 — Stock split (2 for 1)</h3>
+    <div class="small">No journal entry. Double shares outstanding and halve par value; update disclosures.</div>
+  </section>
+
+  <h2>4) Preferred Stock Dividends</h2>
+  <section class="card">
+    <h3>Example 6 — Cumulative preferred with arrears</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Given</th><th>Amount</th></tr>
+      <tr><td>5,000 shares, $100 par, 6% cumulative preferred</td><td class="num">$30,000 per year</td></tr>
+      <tr><td>Dividends unpaid for prior 2 years (disclose, not a liability until declared)</td><td class="num">$60,000</td></tr>
+      <tr><td>Current year dividend declared</td><td class="num">$30,000</td></tr>
+    </table>
+    <h4>Current year declaration</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Retained earnings</span><span class="amt">$30,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Dividends payable — preferred</span><span class="amt">($30,000)</span></li>
+    </ul>
+    <div class="small">Disclose $60,000 dividends in arrears in notes until declared.</div>
+  </section>
+
+  <h2>5) Pass‑Through Entities (Partnership / LLC)</h2>
+  <section class="card">
+    <h3>Example 7 — Admit new partner — bonus method</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:58%"><col style="width:42%"></colgroup>
+      <tr><th>Given</th><th>Amount</th></tr>
+      <tr><td>Existing capital — Partner A</td><td class="num">$120,000</td></tr>
+      <tr><td>Existing capital — Partner B</td><td class="num">$80,000</td></tr>
+      <tr><td>New partner C invests cash for 25% interest</td><td class="num">$100,000</td></tr>
+    </table>
+    <div class="small">Total pre‑admission capital = $200,000. Post‑admission total = $300,000. A 25% interest implies capital of $75,000 for C. Because C contributes $100,000, the $25,000 excess is a <em>bonus</em> to A and B per their profit ratio (assume 60:40).</div>
+    <h4>Entry at admission (bonus to old partners)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash (from C)</span><span class="amt">$100,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Partner C, capital</span><span class="amt">($75,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Partner A, capital (bonus 60%)</span><span class="amt">($15,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Partner B, capital (bonus 40%)</span><span class="amt">($10,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>Quick Recap</h2>
+  <section class="card small">
+    <table class="tbl small">
+      <colgroup><col style="width:40%"><col style="width:60%"></colgroup>
+      <tr><th>Rule</th><th>How to use it fast</th></tr>
+      <tr>
+        <td>Issuance</td>
+        <td>Par to stock; excess to APIC; reduce APIC for direct issuance costs.</td>
+      </tr>
+      <tr>
+        <td>Treasury stock (cost)</td>
+        <td>No gains/losses; above cost → APIC‑TS; below cost → use APIC‑TS then retained earnings.</td>
+      </tr>
+      <tr>
+        <td>Small vs. large stock dividend</td>
+        <td>Small: capitalize market value. Large: transfer par only. Split: no entry.</td>
+      </tr>
+      <tr>
+        <td>Preferred arrears</td>
+        <td>Disclose until declared; current declaration creates dividends payable.</td>
+      </tr>
+      <tr>
+        <td>Bonus method (partnership)</td>
+        <td>Compute implied capital from post‑admission sharing; difference is a bonus to old or new partners per agreement.</td>
+      </tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,305 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Confidentiality & Privacy — CPA Reviewer (ISC II.C)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --card:#0b1224;
+      --muted:#a5b4fc;
+      --text:#e5e7eb;
+      --accent:#60a5fa;
+      --chip:#1f2937;
+      --ok:#34d399;
+      --warn:#fbbf24;
+      --bad:#f87171;
+      --code:#111827;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif; line-height:1.45}
+    a{color:var(--accent);}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 64px}
+    h1{font-size:32px;margin:0 0 10px;font-weight:800}
+    h2{font-size:22px;margin:28px 0 10px;font-weight:800}
+    h3{font-size:17px;margin:8px 0 6px;font-weight:700}
+    p{margin:8px 0}
+    .lead{opacity:.9}
+    .grid{display:grid;grid-template-columns: repeat(auto-fit,minmax(280px,1fr));gap:12px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:14px;border-radius:12px}
+    ul.tight{padding-left:18px;margin:8px 0}
+    ul.tight li{margin:6px 0}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--chip);border:1px solid rgba(255,255,255,.08);margin:3px 6px 3px 0;font-size:12px}
+    .table{width:100%;border-collapse:collapse;margin:6px 0 4px}
+    .table th,.table td{border:1px solid rgba(255,255,255,.07);padding:10px 10px;vertical-align:top}
+    .table th{background:#0b1224;text-align:left}
+    code{background:var(--code);padding:1px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.08)}
+    .tip{border-left:4px solid var(--accent);padding:10px 12px;background:rgba(96,165,250,.08);border-radius:10px;margin:10px 0}
+    details{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;margin:8px 0}
+    details>summary{cursor:pointer;padding:12px 14px;font-weight:700;list-style:none}
+    details>div{padding:0 14px 12px}
+    .q h3{margin:0}
+    .kdb{background:#1f2937;border:1px solid rgba(255,255,255,.08);padding:10px;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Confidentiality &amp; Privacy</h1>
+    <section>
+      <h2>Learning objectives</h2>
+      <div class="card p-16"><ul class="tight">
+        <li>Explain encryption fundamentals, techniques, and applications.</li>
+        <li>Recall the differences between confidentiality and privacy.</li>
+        <li>Identify methods to protect confidential data during design, development, testing, and implementation (e.g., obfuscation, tokenization).</li>
+        <li>Explain Data Loss Prevention (DLP) concepts and controls.</li>
+        <li>Identify financial and operational implications of a data breach.</li>
+        <li>Determine controls and data management practices to securely collect, process, store, transmit, and delete data in line with privacy regulations.</li>
+        <li>Detect design and operating deficiencies related to SOC 2® confidentiality and privacy commitments.</li>
+        <li>Perform walkthroughs and compare observed procedures with documented requirements.</li>
+      </ul></div>
+    </section>
+
+
+    
+
+    <section class="section">
+      <h2>Confidentiality vs Privacy</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Confidentiality</h3>
+          <ul class="tight">
+            <li>Information is accessible only to authorized parties.</li>
+            <li>Achieved with <em>technical</em> controls (encryption, access controls) and <em>administrative</em> controls (policies, NDAs).</li>
+            <li>Focus: protect sensitive business data (trade secrets, financials).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Privacy</h3>
+          <ul class="tight">
+            <li>Lawful and fair processing of <strong>personal data</strong>.</li>
+            <li>Principles: notice, choice, purpose limitation, data minimization, accuracy, storage limitation/retention, integrity & security, accountability.</li>
+            <li>Backed by regulations and commitments in the privacy notice.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tip"><strong>Exam tip:</strong> If the scenario mentions “data subject rights, consent, retention or deletion,” you’re in **privacy** territory. If it’s “preventing unauthorized access,” that’s **confidentiality**.</div>
+    </section>
+
+    <section class="section">
+      <h2>Encryption 101</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Key concepts</h3>
+          <ul class="tight">
+            <li><strong>At rest</strong> (disk/database), <strong>in transit</strong> (TLS), <strong>in use</strong> (app memory; harder—use enclaves/TT) .</li>
+            <li><strong>Symmetric</strong> (AES‑256) vs <strong>asymmetric</strong> (RSA, ECC) + <em>hybrid TLS</em>.</li>
+            <li>Key mgmt: generation, rotation, storage (HSM/KMS), separation of duties.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Applications</h3>
+          <ul class="tight">
+            <li>Database/volume encryption; field‑level (e.g., SSN, PAN) with format‑preserving options.</li>
+            <li>Digital signatures for integrity & non‑repudiation.</li>
+            <li>Hashing & salting for passwords.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Related techniques</h3>
+          <ul class="tight">
+            <li><strong>Tokenization</strong>: replace sensitive value with a non‑sensitive token; original stored in secure vault.</li>
+            <li><strong>Obfuscation/masking</strong>: hide part of the value for lower environments (e.g., show last 4 digits only).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Data protection in the SDLC</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Design</h3>
+          <ul class="tight">
+            <li>Privacy by design: minimize attributes, purpose bind, define retention/deletion early.</li>
+            <li>Classify data & assign owners; threat model data flows.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Development & testing</h3>
+          <ul class="tight">
+            <li>Use <strong>masked</strong> or <strong>synthesized</strong> data in non‑prod; never raw PII/PHI.</li>
+            <li>Apply static analysis/secret scanning; avoid hard‑coded keys.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Implementation & run</h3>
+          <ul class="tight">
+            <li>Encrypt at rest & in transit; protect keys in HSM/KMS; rotate keys regularly.</li>
+            <li>Log access to sensitive fields; alert on anomalies; restrict admin access (break‑glass).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>DLP essentials</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Channels</h3>
+          <ul class="tight">
+            <li>Endpoint (clipboard, print, USB), email, web uploads, cloud storage, SaaS.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Methods</h3>
+          <ul class="tight">
+            <li>Pattern matching (SSN), exact data match, fingerprinting, ML/heuristics.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Actions</h3>
+          <ul class="tight">
+            <li>Block, quarantine, encrypt, justify & log, coach user.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Breach impacts</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Financial</h3>
+          <ul class="tight">
+            <li>Incident response, forensics, legal, customer notification, credit monitoring.</li>
+            <li>Regulatory penalties, civil damages, lost revenue/discounting.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Operational</h3>
+          <ul class="tight">
+            <li>Downtime, systems isolation, data restoration, customer support surge.</li>
+            <li>Remediation projects (re‑architecture, uplift, audits).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tip"><strong>Quick calc example:</strong> If the estimated cost per compromised record is <strong>$165</strong> and <strong>20,000</strong> records are affected, the direct cost estimate ≈ <strong>$3,300,000</strong> (excludes fines/lost business).</div>
+    </section>
+
+    <section class="section">
+      <h2>Secure data lifecycle (collect → delete)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Collect & process</h3>
+          <ul class="tight">
+            <li>Lawful basis/consent; limit to minimum necessary.</li>
+            <li>Encrypt in transit; validate input; segregate duties.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Store & transmit</h3>
+          <ul class="tight">
+            <li>Classify & encrypt; key mgmt via KMS/HSM; role‑based access; logs & alerts.</li>
+            <li>Third‑party transfers: contracts, DPAs, secure channels, least privilege.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Delete & fulfill rights</h3>
+          <ul class="tight">
+            <li>Retention schedules; secure deletion; backups & search strategy.</li>
+            <li>Subject rights: access, correction, deletion, portability; track SLAs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>SOC 2®: confidentiality & privacy</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Confidentiality (TSC)</h3>
+          <ul class="tight">
+            <li>Protect confidential information per commitments.</li>
+            <li>Design defects: missing encryption/DLP; no key rotation; broad admin rights.</li>
+            <li>Operating defects: control performed inconsistently; no evidence retained.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Privacy (TSC)</h3>
+          <ul class="tight">
+            <li>Notice & choice; collection; use/retention/disposal; access; disclosure to third parties; quality; monitoring & enforcement.</li>
+            <li>Defects: no consent tracking; retention not enforced; incomplete response to deletion requests.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Walkthroughs & testing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>How to walkthrough</h3>
+          <ul class="tight">
+            <li>Select a control (e.g., new‑hire access provisioning) and trace end‑to‑end.</li>
+            <li>Compare observed steps and artifacts to the written policy/standard.</li>
+            <li>Document exceptions & potential impact.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Evidence</h3>
+          <ul class="tight">
+            <li>Approvals/tickets, logs, screenshots, DLP events, KMS audit trails.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practice questions</h2>
+
+      <details class="q">
+        <summary>1) Which option best protects PII in a non‑production test database?</summary>
+        <div>
+          <ol>
+            <li>Encrypt the database volume only.</li>
+            <li>Use production data with access strictly limited to QA staff.</li>
+            <li><strong>Tokenize or synthesize PII and mask any residual sensitive fields.</strong></li>
+            <li>Rely on application‑level access controls only.</li>
+          </ol>
+          <div class="kdb"><strong>Answer:</strong> 3. Encryption at volume level doesn’t prevent over‑privileged reads; privacy‑by‑design favors <em>not using real PII</em> in non‑prod.</div>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>2) A firm suffered a breach of 25,000 records. Estimated cost per record is $155. Estimate direct costs and name two operational impacts.</summary>
+        <div>
+          <div class="kdb"><strong>Answer:</strong> Direct cost ≈ <strong>$3,875,000</strong>. Operational impacts may include: extended outage/isolation, surge in support volume, restoration & validation efforts, and remediation projects.</div>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>3) During a SOC 2® review, you find MFA is disabled for admins “temporarily,” with no approvals retained. Classify the deficiency.</summary>
+        <div>
+          <div class="kdb"><strong>Answer:</strong> <em>Operating effectiveness</em> deficiency (control exists but was not performed/evidenced). If the control were absent, it would be a design deficiency.</div>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>4) Which DLP rule most effectively prevents accidental posting of customer PANs to public repos?</summary>
+        <div>
+          <ol>
+            <li>Keyword “credit card.”</li>
+            <li><strong>Exact data match or pattern + Luhn validation on code pushes, blocking with justification required.</strong></li>
+            <li>Weekly scan of laptops.</li>
+            <li>Email banner for external messages.</li>
+          </ol>
+          <div class="kdb"><strong>Answer:</strong> 2. Real‑time control on the risky channel with strong match method is most effective.</div>
+        </div>
+      </details>
+    </section>
+  </div>
+</body>
+</html>

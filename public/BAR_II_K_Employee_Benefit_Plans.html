@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR II.K — Financial Statements of Employee Benefit Plans</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Financial Statements of Employee Benefit Plans — Defined Benefit (ASC 960) & Defined Contribution (ASC 962)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Identify the <strong>required financial statements</strong> for a defined benefit (DB) and a defined contribution (DC) pension plan.</li>
+          <li>Recall key <strong>note disclosures</strong> for DB and DC plans (investments, risks, contributions, benefit obligations, related parties).</li>
+          <li>Prepare a <strong>Statement of Net Assets Available for Benefits</strong> and a <strong>Statement of Changes in Net Assets Available for Benefits</strong> for DB and DC plans.</li>
+        </ul>
+      </section>
+
+      <section id="requirements" class="section">
+        <h2>What statements are required?</h2>
+        <div class="kv">
+          <div>
+            <h3>Defined Contribution plan (ASC 962)</h3>
+            <ul class="tight">
+              <li><strong>Statement of Net Assets Available for Benefits</strong> (as of period end).</li>
+              <li><strong>Statement of Changes in Net Assets Available for Benefits</strong> (for the period).</li>
+              <li>Supplemental information often required for ERISA filings (e.g., <em>Schedule of assets (held at end of year)</em>).</li>
+            </ul>
+            <h3>Measurement/Presentation highlights</h3>
+            <ul class="tight">
+              <li>Investments at <strong>fair value</strong> (NAV practical expedient allowed). Fully benefit‑responsive investment contracts presented at <strong>contract value</strong> in the statement (with FV disclosure).</li>
+              <li>Participant‑directed: activity presented in aggregate (no individual statements for each participant).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Defined Benefit plan (ASC 960)</h3>
+            <ul class="tight">
+              <li>Same two primary statements as DC plans.</li>
+              <li>Focus on <strong>benefit obligations</strong>, <strong>plan assets</strong>, and changes therein (add schedules to support).</li>
+            </ul>
+            <h3>Common notes</h3>
+            <ul class="tight">
+              <li>Plan description, eligibility, and benefit formulas.</li>
+              <li>Contributions (employer/employee), benefit payments, administrative expenses.</li>
+              <li>Investment policies, <strong>fair value hierarchy</strong>, and significant concentrations/risks.</li>
+              <li>Tax status and <strong>party‑in‑interest/related‑party</strong> transactions.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="formats" class="section">
+        <h2>Presentation formats (templates)</h2>
+        <div class="kv">
+          <div>
+            <h3>Statement of Net Assets Available for Benefits</h3>
+            <table class="table-min">
+              <tr><th>Investments, at fair value</th><td><strong>$X</strong></td></tr>
+              <tr><th>Investments, at contract value (FBRICs)</th><td><strong>$Y</strong></td></tr>
+              <tr><th>Receivables (contributions, interest/dividends)</th><td><strong>$Z</strong></td></tr>
+              <tr><th>Less: Payables (benefits payable, admin fees)</th><td><strong>$(A)</strong></td></tr>
+              <tr><th><strong>Net assets available for benefits</strong></th><td><strong>$Total</strong></td></tr>
+            </table>
+          </div>
+          <div>
+            <h3>Statement of Changes in Net Assets Available for Benefits</h3>
+            <table class="table-min">
+              <tr><th>Additions</th><td>Employer contributions <strong>$</strong> • Employee contributions <strong>$</strong> • Net investment income (<em>interest/dividends + net appreciation</em>) <strong>$</strong></td></tr>
+              <tr><th>Deductions</th><td>Benefits paid <strong>$</strong> • Administrative expenses <strong>$</strong> • Other <strong>$</strong></td></tr>
+              <tr><th>Increase (decrease) in net assets</th><td><strong>$</strong></td></tr>
+              <tr><th>Net assets available for benefits — beginning</th><td><strong>$</strong></td></tr>
+              <tr><th><strong>Net assets available for benefits — ending</strong></th><td><strong>$</strong></td></tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations</h2>
+
+        <details><summary>1) DC plan — Prepare both statements from a trial balance</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Given (year‑end)</h4>
+        <table class="table-min">
+          <tr><th>Investments at fair value</th><td><strong>$3,200,000</strong></td></tr>
+          <tr><th>Stable value fund (contract value)</th><td><strong>$400,000</strong></td></tr>
+          <tr><th>Receivables — employer/employee contributions</th><td><strong>$60,000</strong></td></tr>
+          <tr><th>Benefits payable / accrued fees</th><td><strong>$45,000</strong></td></tr>
+          <tr><th>Employer contributions (current year)</th><td><strong>$220,000</strong></td></tr>
+          <tr><th>Employee contributions (current year)</th><td><strong>$260,000</strong></td></tr>
+          <tr><th>Interest & dividends</th><td><strong>$95,000</strong></td></tr>
+          <tr><th>Net appreciation (depreciation) in FV</th><td><strong>$110,000</strong></td></tr>
+          <tr><th>Benefits paid</th><td><strong>$380,000</strong></td></tr>
+          <tr><th>Administrative expenses</th><td><strong>$28,000</strong></td></tr>
+          <tr><th>Beginning net assets</th><td><strong>$3,050,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Statements</h4>
+        <table class="table-min">
+          <tr><th colspan="2">Statement of Net Assets Available for Benefits</th></tr>
+          <tr><th>Investments at FV</th><td><strong>$3,200,000</strong></td></tr>
+          <tr><th>Investments at contract value</th><td><strong>$400,000</strong></td></tr>
+          <tr><th>Receivables</th><td><strong>$60,000</strong></td></tr>
+          <tr><th>Less: Payables</th><td><strong>$(45,000)</strong></td></tr>
+          <tr><th><strong>Net assets (ending)</strong></th><td><strong>$3,615,000</strong></td></tr>
+          <tr><td colspan="2">&nbsp;</td></tr>
+          <tr><th colspan="2">Statement of Changes in Net Assets Available for Benefits</th></tr>
+          <tr><th>Additions — contributions</th><td>$220,000 + $260,000 = <strong>$480,000</strong></td></tr>
+          <tr><th>Additions — investment income</th><td>$95,000 + $110,000 = <strong>$205,000</strong></td></tr>
+          <tr><th>Total additions</th><td><strong>$685,000</strong></td></tr>
+          <tr><th>Deductions</th><td>$380,000 + $28,000 = <strong>$408,000</strong></td></tr>
+          <tr><th>Increase in net assets</th><td>$685,000 − $408,000 = <strong>$277,000</strong></td></tr>
+          <tr><th>Beginning net assets</th><td><strong>$3,050,000</strong></td></tr>
+          <tr><th><strong>Ending net assets</strong></th><td>$3,050,000 + $277,000 = <strong>$3,327,000</strong></td></tr>
+        </table>
+        <div class="result">Note: Ending net assets from the changes statement (<strong>$3,327,000</strong>) should reconcile to the statement of net assets (<strong>$3,615,000</strong>) <em>after</em> year‑end receivables/payables are considered. If not, revisit timing and what belongs in changes vs. net assets at period end.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) DB plan — Changes in plan assets & obligations (supporting schedule)</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Given</h4>
+        <table class="table-min">
+          <tr><th>Fair value of plan assets — beginning</th><td><strong>$8,500,000</strong></td></tr>
+          <tr><th>Employer contributions</th><td><strong>$450,000</strong></td></tr>
+          <tr><th>Actual return on assets</th><td><strong>$390,000</strong></td></tr>
+          <tr><th>Benefits paid</th><td><strong>$520,000</strong></td></tr>
+          <tr><th>Fair value of plan assets — ending</th><td><strong>$8,820,000</strong></td></tr>
+          <tr><th>PBO — beginning</th><td><strong>$9,100,000</strong></td></tr>
+          <tr><th>Service cost</th><td><strong>$300,000</strong></td></tr>
+          <tr><th>Interest cost</th><td><strong>$455,000</strong></td></tr>
+          <tr><th>Actuarial loss (gain)</th><td><strong>$(85,000)</strong></td></tr>
+          <tr><th>Benefits paid</th><td><strong>$(520,000)</strong></td></tr>
+          <tr><th>PBO — ending</th><td><strong>$9,250,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Support schedules</h4>
+        <table class="table-min">
+          <tr><th>Change in plan assets</th><td>$8,500,000 + $450,000 + $390,000 − $520,000 = <strong>$8,820,000</strong></td></tr>
+          <tr><th>Change in PBO</th><td>$9,100,000 + $300,000 + $455,000 − $85,000 − $520,000 = <strong>$9,250,000</strong></td></tr>
+          <tr><th>Funded status (for disclosure)</th><td>Assets $8,820,000 − PBO $9,250,000 = <strong>$(430,000)</strong> underfunded</td></tr>
+        </table>
+        <div class="result">These schedules support the DB plan statements and notes (but the plan FS focus on <strong>net assets available for benefits</strong>).</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Required statements</summary>
+          <p>Which financial statements are generally required for both DB and DC plans?</p>
+          <ol type="A">
+            <li>Statement of Net Assets Available for Benefits and Statement of Changes in Net Assets Available for Benefits</li>
+            <li>Balance Sheet and Income Statement</li>
+            <li>Statement of Cash Flows only</li>
+            <li>Statement of Accumulated Plan Benefits only</li>
+          </ol>
+          <details><summary>Answer</summary>
+            <p><strong>Answer: A.</strong></p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Measurement</summary>
+          <p>In a DC plan, fully benefit‑responsive investment contracts are presented at:</p>
+          <ol type="A">
+            <li>Historical cost</li>
+            <li>Contract value in the statement (with FV disclosure)</li>
+            <li>Fair value with no disclosure</li>
+            <li>Lower of cost or market</li>
+          </ol>
+          <details><summary>Answer</summary>
+            <p><strong>Answer: B.</strong></p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Components of additions</summary>
+          <p>Which item is typically included in <em>additions</em> on the Statement of Changes in Net Assets Available for Benefits?</p>
+          <ol type="A">
+            <li>Benefit payments</li>
+            <li>Administrative expenses</li>
+            <li>Net appreciation (depreciation) in fair value of investments</li>
+            <li>Beginning net assets</li>
+          </ol>
+          <details><summary>Answer</summary>
+            <p><strong>Answer: C.</strong> (A and B are deductions.)</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Quick numeric</summary>
+          <p>If additions are <strong>$520,000</strong> and deductions are <strong>$415,000</strong>, with beginning net assets of <strong>$2,900,000</strong>, what are ending net assets?</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <p>Increase = $520,000 − $415,000 = <strong>$105,000</strong> → Ending = $2,900,000 + $105,000 = <strong>$3,005,000</strong>.</p>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Disclosure check</summary>
+          <p>Which disclosure is <em>most</em> associated with DC plans that hold investment contracts?</p>
+          <ol type="A">
+            <li>Schedule of projected benefit obligation by participant</li>
+            <li>Policy on crediting interest rates and liquidity restrictions of the stable value fund</li>
+            <li>Expected return on assets used to compute pension expense</li>
+            <li>Vesting schedule for DB benefits</li>
+          </ol>
+          <details><summary>Answer</summary>
+            <p><strong>Answer: B.</strong></p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

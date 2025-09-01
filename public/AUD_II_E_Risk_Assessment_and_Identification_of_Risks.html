@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Risk Assessment & Identification of Risks of Material Misstatement (2025 AICPA Blueprints)</title>
+<meta name="description" content="Chapter‑style CPA reviewer for AUD Area II.C (Risk assessment and identification of risks of material misstatement), aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b;
+    --bg2:#0b1e3a;
+    --card:#0e2247;
+    --card2:#123064;
+    --ink:#eaf2ff;
+    --muted:#b9c7e6;
+    --accent:#3b82f6;
+    --accent2:#60a5fa;
+    --gold:#f5c542;
+    --ok:#10b981;
+    --warn:#f59e0b;
+    --bad:#ef4444;
+    --radius:16px;
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%) , linear-gradient(180deg,var(--bg1), #040b18 70%);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  ul{padding-left:18px}
+  li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Risk Assessment & Identification of Risks of Material Misstatement</h1>
+
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify and assess <strong>risks of material misstatement (RMM)</strong> at the financial statement and assertion levels.</li>
+          <li>Determine <strong>relevant assertions</strong> for significant classes of transactions, account balances, and disclosures.</li>
+          <li>Evaluate <strong>inherent risk factors</strong> (complexity, subjectivity, change, uncertainty, susceptibility to fraud) and <strong>control risk</strong> based on design & implementation.</li>
+          <li>Identify <strong>significant risks</strong> (including <strong>fraud risks</strong>) and document the linkage to further audit procedures.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Term</th><th>Meaning (plain English)</th></tr>
+          <tr><td>Inherent risk</td><td>How likely an assertion could be misstated <em>before</em> considering controls.</td></tr>
+          <tr><td>Control risk</td><td>Risk that a misstatement won’t be prevented/detected/corrected by controls.</td></tr>
+          <tr><td>RMM</td><td>Inherent × Control risk, assessed at FS and assertion levels.</td></tr>
+          <tr><td>Relevant assertion</td><td>An assertion with a meaningful chance of material misstatement (existence, completeness, rights/obligations, accuracy/valuation, presentation & disclosure).</td></tr>
+          <tr><td>Significant risk</td><td>A risk that requires special audit consideration (often fraud, complex estimates, or unusual transactions).</td></tr>
+          <tr><td>ITGC vs App controls</td><td>IT general controls support the system overall (access, change mgmt, ops); application controls operate at the process/transaction level.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Risk Assessment Overview</h2>
+    <div class="card">
+      <ul>
+        <li>Perform <strong>risk assessment procedures</strong>: inquiries, analytical procedures, observation/inspection, and <strong>walkthroughs</strong>.</li>
+        <li>Assess risks at the <strong>FS level</strong> (e.g., going concern, management integrity, pervasive IT deficiencies) and at the <strong>assertion level</strong>.</li>
+        <li>Consider <strong>inherent risk factors</strong>: complexity, subjectivity, change, uncertainty, susceptibility to fraud, and estimation uncertainty.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Document <em>why</em> each risk matters and which assertions it affects—this drives procedures in II.D.</div>
+    </div>
+
+    <h2>2) Determining Relevant Assertions</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>By Account/Disclosure</h3>
+        <ul>
+          <li><strong>Revenue:</strong> occurrence, cutoff, accuracy, presentation.</li>
+          <li><strong>Receivables:</strong> existence, valuation, rights, presentation.</li>
+          <li><strong>Inventory:</strong> existence, completeness, valuation, rights/obligations.</li>
+          <li><strong>Disclosures:</strong> completeness and accuracy of required detail.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Simple Mapping Method</h3>
+        <ul>
+          <li>Identify what could go wrong (WCGW) for each class of transactions/balance.</li>
+          <li>Map WCGWs to assertions; mark realistic material risks as <em>relevant assertions</em>.</li>
+          <li>Link each relevant assertion to planned procedures (controls/substantive).</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>3) Understanding Internal Control & IT</h2>
+    <div class="card">
+      <ul>
+        <li>Evaluate <strong>design</strong> and confirm <strong>implementation</strong> of controls relevant to the audit.</li>
+        <li><strong>ITGCs:</strong> access security, change management, and computer operations.</li>
+        <li><strong>Application controls:</strong> input/processing/output controls in processes.</li>
+        <li>Identify <strong>IT risks</strong>: unmanaged changes, weak access, reliance on untested reports, EUC spreadsheets.</li>
+      </ul>
+      <div class="callout check"><strong>Walkthrough note:</strong> Trace a transaction through the system (including IT) to confirm controls exist and are implemented.</div>
+    </div>
+
+    <h2>4) Identifying Significant Risks (incl. Fraud)</h2>
+    <div class="card">
+      <ul>
+        <li>Presume a risk of <strong>fraud in revenue recognition</strong> unless rebutted.</li>
+        <li>Consider <strong>management override</strong>: journal entries, estimates, unusual transactions.</li>
+        <li>Flag significant risks with high likelihood/magnitude or complexity (e.g., Level 3 fair value, related parties, one‑off transactions near period‑end).</li>
+        <li>Plan <strong>more persuasive evidence</strong> and consider specialists where appropriate.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>A restructuring triggers impairment testing and one‑time gains: mark valuation assertions as significant; plan independent expectation, specialist involvement, and targeted journal entry testing.</p></details>
+    </div>
+
+    <h2>5) Assessing RMM & Setting the Foundation for Responses</h2>
+    <div class="card">
+      <ul>
+        <li>Assess RMM at assertion level; decide on <strong>tests of controls</strong> vs <strong>substantive procedures</strong>.</li>
+        <li>For <strong>significant risks</strong>, design focused procedures and increase unpredictability.</li>
+        <li>Consider FS‑level responses when pervasive risks exist (e.g., more experienced staff, added supervision, added consultation).</li>
+      </ul>
+      <div class="callout danger"><strong>Common pitfall:</strong> Listing risks without clear link to assertions and procedures. Build a simple <em>Risk → Assertion → Procedure</em> table.</div>
+    </div>
+
+    <h2>6) Documentation</h2>
+    <div class="card">
+      <ul>
+        <li>Identified risks and the <strong>basis</strong> (analytics, inquiries, walkthroughs).</li>
+        <li>Relevant assertions and WCGWs by account/disclosure.</li>
+        <li>Design & implementation of key controls, IT considerations, and significant risk designations.</li>
+        <li>Explicit linkage to planned procedures (to be covered in II.D).</li>
+      </ul>
+    </div>
+
+    <h2>7) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>What is a relevant assertion? <strong>An assertion with a realistic chance of material misstatement.</strong></li>
+        <li>Does identifying a control make it effective? <strong>No—assess design and confirm implementation.</strong></li>
+        <li>Presumed fraud risk? <strong>Revenue recognition and management override.</strong></li>
+        <li>Where do ITGCs fit? <strong>They support automated controls and system‑generated evidence.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

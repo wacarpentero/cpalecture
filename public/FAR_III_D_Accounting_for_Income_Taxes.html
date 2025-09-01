@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Accounting for Income Taxes</title>
+<style>
+  :root{
+    --bg:#0b2140;
+    --card:#0f2b53;
+    --ink:#e6f0ff;
+    --muted:#a8c1ff;
+    --accent:#7fb3ff;
+    --good:#10b981;
+    --bad:#f87171;
+    --line: rgba(255,255,255,0.08);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color:var(--ink);
+    background:linear-gradient(180deg, #081c34, #081c34 240px, var(--bg) 240px, var(--bg));
+  }
+  .wrap{max-width:1120px;margin:32px auto 72px;padding:0 20px;}
+  h1{font-size:28px;margin:0 0 8px 0;letter-spacing:.2px}
+  .subtitle{color:var(--muted);margin:0 0 24px 0}
+  .grid{display:grid;grid-template-columns:1fr;gap:28px}
+  .card{
+    background:var(--card);
+    margin-bottom:24px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    box-shadow:0 6px 18px rgba(3,8,20,.25);
+  }
+  .card h2{
+    font-size:18px; margin:0; padding:16px 20px; border-bottom:1px solid var(--line);
+  }
+  .section{padding:16px 20px;border-top:1px solid var(--line)}
+  .pill{display:inline-block;margin-right:8px;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);font-size:12px}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;text-align:left}
+  .tight th,.tight td{padding:8px 10px}
+  .amount{white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+  .ok{color:var(--good)}
+  .bad{color:var(--bad)}
+  /* Journal entry table centered so amounts sit nearer to the accounts (per your style request) */
+  .entry-table{width:72%; margin: 4px auto 10px auto; background:rgba(255,255,255,.02); border-radius:10px}
+  .entry-table td:first-child{width:60%}
+  .hint{color:var(--muted);font-size:14px}
+  ul{margin:8px 0 0 20px}
+  li{margin:6px 0}
+  .mono{font-variant-numeric: tabular-nums}
+  .two-col{display:grid;grid-template-columns: 1.2fr .8fr;}
+  .two-col > div{border-right:1px solid var(--line)}
+  .two-col > div:last-child{border-right:none}
+  .glance th:nth-child(1){width:34%}
+  .glance th:nth-child(2){width:66%}
+  .callout{padding:12px 16px;margin-top:8px;border-left:3px solid var(--accent);background:rgba(127,179,255,.06);border-radius:8px}
+
+  /* === Patch: remove lines between journal entry rows across the doc === */
+  .entry-table th, .entry-table td { border-bottom: none !important; }
+  .entry-table tr { border-bottom: none !important; }
+  /* Slightly larger spacing between cards for air */
+  .card { margin-bottom: 28px; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Accounting for Income Taxes</h1>
+<p class="subtitle"></p><div class="card"><h2>Learning Objectives</h2><div class="section"><ul><li>Apply ASC 740’s recognition and measurement model: identify the tax position, assess the ‘more‑likely‑than‑not’ threshold, measure the benefit, and determine presentation/disclosure.</li><li>Evaluate positive and negative evidence of realizability, compute the required valuation allowance, and record increases/decreases with the proper journal entry.</li><li>Derive taxable income from GAAP income, compute current tax, and prepare the current provision entry.</li><li>Classify differences as future taxable (DTL) or future deductible (DTA), compute amounts at enacted rates, and determine the period’s deferred tax expense/benefit.</li><li>Assemble the full provision: current and deferred components, valuation allowance adjustments, uncertain tax positions, and intraperiod/OCI effects when applicable.</li></ul></div></div>
+<!-- Quick Recap -->
+<!-- Learning objectives -->
+<!-- Example 1 -->
+<div class="card">
+<h2>1) Current &amp; Deferred Tax — Mixed Differences</h2>
+<div class="section two-col">
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Facts</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">
+                Pretax GAAP income <b>$500,000</b>.<br/>
+                Permanent items: tax-exempt interest <b>$20,000</b> (reduce tax); nondeductible fines <b>$10,000</b> (increase tax).<br/>
+                Temporary differences: tax depreciation exceeds book by <b>$60,000</b> (future taxable); warranty expense accrued <b>$50,000</b> (future deductible).<br/>
+                Enacted rate: <b>21%</b>.
+              </td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Computation</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">
+                Taxable income = 500,000 − 20,000 + 10,000 − 50,000 + 60,000 = <b>$500,000</b>.<br/>
+                Current tax payable = 500,000 × 21% = <b>$105,000</b>.<br/>
+                DTL (depr.) = 60,000 × 21% = <b>$12,600</b>.<br/>
+                DTA (warranty) = 50,000 × 21% = <b>$10,500</b>.<br/>
+                Net deferred tax expense = 12,600 − 10,500 = <b>$2,100</b>.<br/>
+                Total tax expense = current 105,000 + deferred 2,100 = <b>$107,100</b>.
+              </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="hint">Record current tax provision and payable.</div><table class="entry-table">
+<tbody>
+<tr><td>Dr  Income tax expense — current</td><td class="amount">$105,000</td></tr>
+<tr><td>Cr  Income taxes payable</td><td class="amount">($105,000)</td></tr>
+</tbody>
+</table>
+<div class="hint">Record deferred tax provision and recognize the deferred balances.</div><table class="entry-table">
+<tbody>
+<tr><td>Dr  Income tax expense — deferred</td><td class="amount">$2,100</td></tr>
+<tr><td>Cr  Deferred tax liability (from depreciation)</td><td class="amount">($12,600)</td></tr>
+<tr><td>Dr  Deferred tax asset — warranty</td><td class="amount">$10,500</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Example 2: Valuation allowance -->
+<div class="card">
+<h2>2) Valuation Allowance on a Deferred Tax Asset</h2>
+<div class="section two-col">
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Facts</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">At X1, company has a DTA from NOL carryforward of <b>$80,000</b>. Based on evidence, only <b>60%</b> is more‑likely‑than‑not realizable.</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Computation</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">Required valuation allowance = 40% × 80,000 = <b>$32,000</b>.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<table class="entry-table">
+<tbody>
+<tr><td>Dr  Income tax expense</td><td class="amount">$32,000</td></tr>
+<tr><td>Cr  Valuation allowance on DTA</td><td class="amount">($32,000)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Example 3: Uncertain tax position -->
+<div class="card">
+<h2>3) Uncertain Tax Position — Recognition &amp; Measurement</h2>
+<div class="section two-col">
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Facts</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">
+                Tax deduction of <b>$100,000</b> claimed. Probability table for sustained deduction on exam: 100,000 (25%), 80,000 (40%), 60,000 (20%), 0 (15%). Rate 21%.
+              </td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Computation</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">
+                Largest amount with cumulative probability &gt; 50% = <b>$80,000</b> (25%+40%=65%).<br/>
+                Tax benefit allowed = 80,000 × 21% = <b>$16,800</b>.<br/>
+                Unrecognized benefit = (100,000 − 80,000) × 21% = <b>$4,200</b> liability.
+              </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<table class="entry-table">
+<tbody>
+<tr><td>Dr  Income tax expense</td><td class="amount">$4,200</td></tr>
+<tr><td>Cr  Unrecognized tax benefit (UTP) liability</td><td class="amount">($4,200)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Example 4: OCI item (intraperiod) -->
+<div class="card">
+<h2>4) Intraperiod Tax Allocation — Unrealized Gain in OCI</h2>
+<div class="section two-col">
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Facts</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">Debt investment fair value increase <b>$30,000</b> (OCI), rate <b>21%</b>.</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="tight">
+<thead><tr><th style="border-bottom:none;">Computation</th></tr></thead>
+<tbody>
+<tr><td style="border-bottom:none;">OCI tax = 30,000 × 21% = <b>$6,300</b>; OCI net-of-tax = 30,000 − 6,300 = <b>$23,700</b>.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<table class="entry-table">
+<tbody>
+<tr><td>Dr  Other comprehensive income (net of tax)</td><td class="amount">$23,700</td></tr>
+<tr><td>Cr  Deferred tax liability — OCI</td><td class="amount">($6,300)</td></tr>
+<tr><td>Cr  Unrealized holding gain — OCI</td><td class="amount">($30,000)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="card">
+<h2>Quick Recap</h2>
+<div class="section">
+<ul>
+<li><b>Current tax</b>: taxable income × enacted rate → <span class="mono">income taxes payable</span>.</li>
+<li><b>Temporary differences</b> create deferred taxes: future taxable → <b>DTL</b>; future deductible → <b>DTA</b>.</li>
+<li><b>Deferred expense</b> each period = beginning carrying amount × <i>effective</i> tax rate for that jurisdiction.</li>
+<li><b>Valuation allowance</b> needed to reduce DTAs to the amount that is <i>more-likely-than-not</i> realizable.</li>
+<li><b>Uncertain tax positions</b>: recognize the largest amount with cumulative probability &gt; 50% (recognition &amp; measurement).</li>
+<li><b>Intraperiod</b>: tax effects follow where the related item is reported (e.g., OCI vs. P&amp;L).</li>
+</ul>
+</div>
+</div></div>
+</body>
+</html>

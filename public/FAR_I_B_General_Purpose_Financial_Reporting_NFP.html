@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR I.B: General‑Purpose Financial Reporting (Not‑for‑Profit Entities)</title>
+<meta name="description" content="CPA reviewer chapter for FAR I.B — General‑Purpose Financial Reporting for nongovernmental not‑for‑profit entities (ASC 958), aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(380px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;word-break:normal;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+  .exa{border-left:4px solid var(--ok);background:rgba(16,185,129,.09);padding:12px 14px;border-radius:12px}
+  .sol{border-left:4px solid var(--accent);background:rgba(59,130,246,.09);padding:10px 12px;border-radius:10px;margin-top:8px}
+
+  .nowrap{white-space:nowrap}
+  .center{text-align:center}
+  .num{text-align:right}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>General‑Purpose Financial Reporting: Nongovernmental Not‑for‑Profit Entities</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card" style="width:100%;">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Explain the reporting model in <strong>Accounting Standards Codification (ASC) Topic 958</strong> for not‑for‑profit (NFP) entities.</li>
+          <li>Distinguish <strong>net assets without donor restrictions</strong> and <strong>net assets with donor restrictions</strong>, including presentation and releases.</li>
+          <li>Apply rules for <strong>contributions and pledges</strong> (conditional vs. unconditional), <strong>donated services and gifts‑in‑kind</strong>, and <strong>agency transactions</strong>.</li>
+          <li>Account for <strong>endowments</strong> (including <strong>underwater endowments</strong>) and <strong>split‑interest agreements</strong>.</li>
+          <li>Prepare and interpret the required statements, <strong>functional expenses</strong>, and <strong>liquidity disclosures</strong>.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card" style="width:100%;">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Statement</th><th>Key features</th></tr>
+          <tr><td>Statement of financial position</td><td>Presents assets, liabilities, and <strong>net assets</strong> in two classes: <em>with donor restrictions</em> and <em>without donor restrictions</em>. Liquidity disclosure highlights availability of resources.</td></tr>
+          <tr><td>Statement of activities</td><td>Reports <strong>revenues, expenses, gains, losses</strong>, and <strong>releases of restrictions</strong>. Expenses reported by <strong>nature</strong> (salaries, depreciation) and by <strong>function</strong> (program, management and general, fundraising).</td></tr>
+          <tr><td>Statement of cash flows</td><td>Direct or indirect method allowed (no reconciliation required with direct method). Cash <strong>gifts restricted for long‑lived assets</strong> are <strong>financing</strong>; payments to acquire long‑lived assets are <strong>investing</strong>.</td></tr>
+          <tr><td>Notes</td><td>Liquidity and availability; endowment policies; methods for allocation of expenses by function; composition of net assets with donor restrictions.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Net Asset Classes & Releases</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Without donor restrictions:</strong> Resources free of donor‑imposed restrictions; may be <em>board‑designated</em> for specific purposes (disclosed, not a separate class).</li>
+        <li><strong>With donor restrictions:</strong> Purpose, time, or perpetual restrictions (e.g., endowments). Recognize <strong>releases</strong> when the restriction is satisfied (purpose achieved, time passes, or appropriation made).</li>
+        <li>Present <strong>underwater endowments</strong> (fair value &lt; gift amount or required level) in <em>net assets with donor restrictions</em> with expanded disclosures.</li>
+      </ul>
+    </div>
+
+    <h2>2) Contributions & Pledges</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Contribution:</strong> Non‑reciprocal transfer; recognize revenue when <strong>unconditional control</strong> of the asset is obtained.</li>
+        <li><strong>Unconditional pledges (promises to give):</strong> Recognize as contribution receivable at <strong>present value</strong> if due in more than one year; classify by donor restriction (often <em>with donor restrictions</em> for time restrictions).</li>
+        <li><strong>Conditional contributions:</strong> Recognize revenue <strong>only when conditions are substantially met</strong> (barriers overcome) or unlikely to be exercised.</li>
+        <li><strong>Refundable advances:</strong> If conditional cash is received in advance, record a <strong>refundable advance liability</strong> until the condition is met.</li>
+        <li><strong>Exchange transactions:</strong> Reciprocal transfers follow revenue guidance (ASC 606) instead of contribution accounting.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Indicators of a <em>barrier</em> include measurable performance‑related conditions, limited discretion, and a right of return or release.</div>
+    </div>
+
+    <h2>3) Donated Services and Gifts‑in‑Kind</h2>
+    <div class="card">
+      <ul>
+        <li>Recognize <strong>donated services</strong> if they (a) create or enhance nonfinancial assets, or (b) require specialized skills, are provided by those possessing such skills, and would typically need to be purchased.</li>
+        <li>Measure <strong>gifts‑in‑kind</strong> (donated materials/equipment) at <strong>fair value</strong> on the date of contribution.</li>
+        <li>Present program vs. supporting services expense classification consistently; disclose the policy and significant donated goods/services.</li>
+      </ul>
+    </div>
+
+    <h2>4) Endowments</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Endowment funds</strong> are donor‑restricted, often subject to state law such as the <strong>Uniform Prudent Management of Institutional Funds Act (UPMIFA)</strong>.</li>
+        <li>Disclose policies for spending and appropriation; present <strong>underwater amounts</strong> within net assets with donor restrictions and disclose the original gift amount, fair value, and deficiency.</li>
+        <li>Board‑designated quasi‑endowments are <em>without donor restrictions</em> (disclose designation and purposes).</li>
+      </ul>
+    </div>
+
+    <h2>5) Split‑Interest Agreements & Agency Transactions</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Split‑interest arrangements</strong> (e.g., charitable remainder trusts, gift annuities): Recognize assets received, related liabilities to beneficiaries, and contribution revenue for the residual interest (measure using present‑value techniques).</li>
+        <li><strong>Agency transactions:</strong> If an NFP accepts assets for, and has little or no discretion over, distribution to a specified beneficiary, recognize an <strong>agency liability</strong> rather than contribution revenue.</li>
+      </ul>
+    </div>
+
+    <h2>6) Functional Expenses & Liquidity</h2>
+    <div class="card">
+      <ul>
+        <li>Report expenses by <strong>function</strong> and by <strong>nature</strong>; include a separate <strong>statement of functional expenses</strong> or present in the notes.</li>
+        <li>Allocate management and general costs (e.g., information technology, occupancy) on a <strong>rational and systematic basis</strong> and disclose the methods used.</li>
+        <li><strong>Liquidity and availability:</strong> Qualitative and quantitative disclosures about how the NFP manages liquid resources to meet <strong>one year</strong> of general expenditures.</li>
+      </ul>
+    </div>
+
+    <h2>7) Statement of Cash Flows Highlights</h2>
+    <div class="card">
+      <ul>
+        <li>Direct or indirect method; if direct, a reconciliation is <strong>not required</strong>.</li>
+        <li>Cash <strong>gifts restricted for long‑lived assets</strong> are presented as <strong>financing activities</strong>; cash paid to acquire or construct long‑lived assets is <strong>investing</strong>.</li>
+        <li>Insurance claim proceeds and contributions of long‑lived assets are <strong>noncash</strong> investing/financing disclosures.</li>
+      </ul>
+    </div>
+
+    
+<h2>Illustrative Examples (selected)</h2>
+<section class="grid one">
+  <article class="card" style="width:100%;">
+    <h3>Example 1 — Unconditional Pledge and Release (Present Value)</h3>
+    <table class="tbl">
+      <tr><th>Payment date</th><th>Cash flow</th><th>Discount factor (4%)</th><th>Present value</th></tr>
+      <tr><td>12/31/X2</td><td>$50,000</td><td>0.9615</td><td>$48,077</td></tr>
+      <tr><td>12/31/X3</td><td>$50,000</td><td>0.9246</td><td>$46,228</td></tr>
+      <tr><th colspan="3">Total present value (12/31/X1)</th><th>$94,305</th></tr>
+    </table>
+    <ul>
+      <li>Recognize contribution receivable and contribution revenue <em>with donor restrictions (time)</em> for <strong>$94,305</strong>; recognize a discount of <strong>$5,695</strong> (accreted as contribution revenue over time).</li>
+      <li>When the first $50,000 is collected in X2, reclassify (release) $50,000 from <em>with donor restrictions</em> to <em>without donor restrictions</em>.</li>
+    </ul>
+  </article>
+
+  <article class="card" style="width:100%;">
+    <h3>Example 2 — Conditional Gift vs. Unconditional (Decision Table)</h3>
+    <table class="tbl">
+      <tr><th>Scenario</th><th>Decision (barrier / right of return)</th><th>Accounting at receipt</th><th>Revenue recognition</th></tr>
+      <tr>
+        <td>Donor promises $300,000 if the not‑for‑profit entity raises a matching $300,000</td>
+        <td>Barrier present (measurable match) and right of return &rarr; <strong>Conditional contribution</strong></td>
+        <td>Record cash (if received) and a <strong>refundable advance liability</strong></td>
+        <td>Recognize contribution revenue when the matching condition is substantially met</td>
+      </tr>
+      <tr>
+        <td>Donor promises $300,000 with a purpose restriction only (no barrier)</td>
+        <td>No barrier / right of return &rarr; <strong>Unconditional contribution</strong></td>
+        <td>Recognize <strong>contribution revenue with donor restrictions</strong></td>
+        <td>Release to <em>without donor restrictions</em> when the purpose is fulfilled</td>
+      </tr>
+    </table>
+  </article>
+
+  <article class="card" style="width:100%;">
+    <h3>Example 3 — Donated Services (Specialized Skills)</h3>
+    <table class="tbl">
+      <colgroup>
+        <col style="width:28%">
+        <col style="width:8%">
+        <col style="width:14%">
+        <col style="width:12%">
+        <col style="width:18%">
+        <col style="width:20%">
+      </colgroup>
+    
+      <tr><th>Service</th><th class="nowrap center">Hours</th><th class="nowrap center">Rate</th><th class="nowrap center">Amount</th><th class="nowrap center">Recognize?</th><th class="nowrap">Journal entry</th></tr>
+      <tr><td>Attorney legal drafting</td><td class="center">20</td><td><span class=\"nowrap\">$300/hour</span></td><td>$6,000</td><td><strong>Yes</strong> — specialized and would be purchased</td><td>Dr Legal expense $6,000; Cr Contribution revenue $6,000</td></tr>
+      <tr><td>General volunteer support</td><td class="center">20</td><td class="center">—</td><td class="center">—</td><td><strong>No</strong> — not specialized</td><td>No entry (may disclose)</td></tr>
+    </table>
+  </article>
+
+  <article class="card" style="width:100%;">
+    <h3>Example 4 — Underwater Endowment</h3>
+    <table class="tbl">
+      <tr><th>Measure</th><th>Amount</th></tr>
+      <tr><td>Original gift amount (required to be maintained)</td><td>$500,000</td></tr>
+      <tr><td>Fair value at year‑end</td><td>$470,000</td></tr>
+      <tr><th>Deficiency (underwater)</th><th>$30,000</th></tr>
+    </table>
+    <ul>
+      <li>Classify the endowment (including deficiency) in <strong>net assets with donor restrictions</strong>.</li>
+      <li>Disclose original gift, fair value, deficiency, spending policy, and appropriation approach for underwater funds.</li>
+    </ul>
+  </article>
+</section>
+
+
+    <h2>8) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Where are underwater endowments classified? <strong>Net assets with donor restrictions.</strong></li>
+        <li>Do you recognize revenue for conditional promises? <strong>No</strong>—until conditions are met.</li>
+        <li>Two criteria to recognize donated services? <strong>Create/enhance nonfinancial assets</strong> or <strong>specialized skills provided that would need to be purchased.</strong></li>
+        <li>How are cash gifts restricted for long‑lived assets presented in the statement of cash flows? <strong>Financing activities.</strong></li>
+        <li>How are expenses presented? <strong>By nature and function</strong> with allocation disclosures.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

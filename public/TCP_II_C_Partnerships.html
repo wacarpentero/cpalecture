@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partnerships — TCP II.C (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:700}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Partnerships</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Explain <strong>formation</strong> rules (§721 nonrecognition; partner §722 outside basis; partnership §723 inside basis; capital vs profits interests).</li>
+        <li>Compute partner <strong>outside basis</strong> including <strong>§752 liabilities</strong> (recourse vs nonrecourse) and apply <strong>loss limits</strong> (basis → at‑risk → passive).</li>
+        <li>Analyze <strong>distributions</strong> (current vs liquidating; cash and property; marketable securities; <strong>§731</strong>, <strong>§732</strong> basis, and gain triggers).</li>
+        <li>Allocate income with <strong>§704(c)</strong> when built‑in gain/loss exists; understand <strong>hot assets</strong> (§751) recharacterization.</li>
+        <li>Identify effects of <strong>guaranteed payments</strong>, <strong>§707</strong> transactions, and sale of a partnership interest (incl. liabilities in amount realized).</li>
+        <li>Recognize when a <strong>§754 election</strong> allows inside basis step‑up under §§743(b)/734(b).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>One‑page map</h2>
+      <div class="diagram">Formation → §721 no gain/loss; Basis: Partner outside = basis of property + cash − liability relief + share of partnership liabilities (§752); Partnership inside (carryover) = §723
+Liabilities → Recourse to those who bear economic risk of loss; Nonrecourse shared by profit ratios (unless minimum gain rules)
+Loss limits → Basis → At‑Risk → Passive
+Distributions → Cash gain trigger if cash & marketable securities > outside basis; Property basis to partner = carryover (limited to outside); No partnership gain (exceptions exist)
+Sales of interest → Amount realized includes cash <em>and</em> debt relief; Hot assets create ordinary income
+Election → §754 permits buyer‑specific step‑up (§743(b)) on purchase or transferee death
+K‑1 items → Guaranteed payments are deductible by partnership, ordinary income to recipient, and <em>do not</em> increase basis for the recipient</div>
+      <span class="pill">Order: Basis → At‑Risk → Passive</span> <span class="pill">§752 debt matters</span> <span class="pill">Hot assets = ordinary</span>
+    </section>
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>Debt relief</strong> upon contribution is a <em>deemed cash distribution</em> to the partner; add back the partner’s share of partnership debt to compute net relief.</li>
+        <li>Outside basis includes <em>both</em> recourse and nonrecourse shares; <strong>at‑risk</strong> generally excludes nonrecourse (except qualified nonrecourse real estate).</li>
+        <li>Cash distributions trigger gain only when they exceed outside basis; <strong>property distributions</strong> generally do not cause gain (watch hot assets/marketable securities).</li>
+        <li><strong>§704(c)</strong>: first allocate built‑in gain/loss to the contributing partner; then split residual per agreement.</li>
+        <li>Sale of an interest: include <strong>debt relief</strong> in amount realized and carve out <strong>hot assets</strong> as ordinary income.</li>
+        <li>With a <strong>§754 election</strong>, only the transferee gets a special basis adjustment; it doesn’t change common inside basis.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+
+      <h3>1) Formation with liability relief — computing initial outside basis</h3>
+      <div class="diagram">Contribute property basis $60,000 (FMV $100,000) with $30,000 recourse debt; 50/50 partners.
+Deemed cash distribution (debt relief) = $30,000 − $15,000 (partner’s share added back) = $15,000.
+Initial outside basis = $60,000 − $30,000 + $15,000 = <strong>$45,000</strong> (no gain since deemed cash ≤ basis).</div>
+
+      <h3>2) Basis rollforward during the year</h3>
+      <div class="diagram">Begin $45,000
++ Ordinary income $40,000
+− §1231 loss $10,000
+− Cash distribution $20,000
++ Increase in liabilities $5,000
+(Guaranteed payment received $12,000 — <em>does not</em> increase basis)
+= Ending outside basis <strong>$60,000</strong>.</div>
+
+      <h3>3) Cash distribution exceeding basis</h3>
+      <div class="diagram">Outside basis $60,000; cash distribution $70,000 ⇒ Gain under §731 = $70,000 − $60,000 = <strong>$10,000</strong>; new basis = $0.</div>
+
+      <h3>4) Property distribution (no gain)</h3>
+      <div class="diagram">Outside basis $50,000; partnership distributes land (inside basis $30,000; FMV $80,000).
+Partner’s basis in land = carryover (limited by outside) = <strong>$30,000</strong>.
+New outside basis = $50,000 − $30,000 = <strong>$20,000</strong>.</div>
+
+      <h3>5) §704(c) built‑in gain on sale</h3>
+      <div class="diagram">Contributed asset basis $40,000 (FMV $100,000) sold for $120,000.
+Total gain = $120,000 − $40,000 = $80,000.
+Built‑in gain at contribution = $60,000 → allocate to contributor.
+Residual $20,000 split 50/50 = <strong>$10,000</strong> each to both partners.</div>
+
+      <h3>6) Guaranteed payment impact</h3>
+      <div class="diagram">Ordinary income before GP $100,000; GP to Partner A $30,000; two equal partners.
+Ordinary income after GP = $70,000 → A’s distributive share = <strong>$35,000</strong>.
+A reports GP $30,000 separately; A’s basis increases by <strong>$35,000</strong> (not by the GP).</div>
+
+      <h3>7) Sale of partnership interest with liabilities and hot assets</h3>
+      <div class="diagram">Outside basis $60,000 (incl. $15,000 liabilities). Sells for cash $100,000; relieved of $15,000 debt.
+Amount realized = $100,000 + $15,000 = $115,000 → Total gain = $115,000 − $60,000 = <strong>$55,000</strong>.
+Of this, §751 hot assets = <strong>$20,000 ordinary</strong>; remainder <strong>$35,000 capital</strong>.</div>
+
+      <h3>8) §754 / §743(b) step‑up</h3>
+      <div class="diagram">Buyer pays $150,000 for interest when buyer’s share of inside basis is $100,000.
+Special step‑up with §754 = $150,000 − $100,000 = <strong>$50,000</strong> allocated to underlying assets.</div>
+
+      <h3>9) Disguised sale two‑year presumption</h3>
+      <div class="diagram">Partner contributes property with basis $80,000; receives $190,000 within two years.
+Treated as sale proceeds $190,000 with gain = <strong>$110,000</strong>.</div>
+
+      <h3>10) §199A QBI from a partnership</h3>
+      <div class="diagram">Ordinary business income before GP $200,000; GP to this partner $30,000; partner owns 50%.
+QBI uses OBI <em>after</em> GP and excludes the GP received.
+OBI after GP = $170,000 → QBI share = 50% × $170,000 = <strong>$85,000</strong>.</div>
+    </section>
+
+    <section class="card"><h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Formation: Partner A contributes property (basis $60,000, FMV $100,000) with a recourse liability of $30,000 assumed by the partnership (two equal partners). A’s <em>recognized gain</em> and <em>initial outside basis</em>?</p>
+        <ol type="A">
+          <li>Gain $0; Basis $45,000</li>
+          <li>Gain $15,000; Basis $45,000</li>
+          <li>Gain $0; Basis $60,000</li>
+          <li>Gain $30,000; Basis $30,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — §721 nonrecognition. Deemed cash distribution from debt relief = $30,000 − A’s share $15,000 = $15,000. Basis = $60,000 − $30,000 + $15,000 = $45,000. No gain because deemed cash ($15,000) ≤ basis.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> Basis rollforward: Begin $45,000; K‑1 ordinary income $40,000; §1231 loss $10,000; guaranteed payment received $12,000; cash distribution $20,000; increase in share of liabilities $5,000. Ending outside basis?</p>
+        <ol type="A">
+          <li>$60,000</li>
+          <li>$56,000</li>
+          <li>$48,000</li>
+          <li>$72,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Basis increases for distributive income and liability increases, decreases for losses and distributions; guaranteed payments do <em>not</em> increase basis for the recipient. Ending basis = $60,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Loss limitation (basis only): Stock basis $30,000, recourse $10,000, nonrecourse $20,000, current loss $70,000. Allowed and carryforward?</p>
+        <ol type="A">
+          <li>Allowed $60,000; Carry $10,000</li>
+          <li>Allowed $30,000; Carry $40,000</li>
+          <li>Allowed $50,000; Carry $20,000</li>
+          <li>Allowed $70,000; Carry $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Basis available = $60,000; allowed up to basis; excess $10,000 carries forward (then apply at‑risk/passive limits).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Current distribution: Outside basis $60,000; cash distribution $70,000. Recognized gain and ending basis?</p>
+        <ol type="A">
+          <li>Gain $10,000; End basis $0</li>
+          <li>Gain $0; End basis $10,000</li>
+          <li>Gain $5,000; End basis $0</li>
+          <li>Gain $10,000; End basis $10,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Cash exceeding outside basis triggers gain under §731: $70,000 − $60,000 = $10,000; basis cannot go below zero.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Property distribution: Outside basis $50,000; partnership distributes land (inside basis $30,000, FMV $80,000). Partner’s basis in the land and new outside basis?</p>
+        <ol type="A">
+          <li>Land basis $30,000; Outside basis $20,000</li>
+          <li>Land basis $80,000; Outside basis $0</li>
+          <li>Land basis $20,000; Outside basis $30,000</li>
+          <li>Land basis $50,000; Outside basis $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — §732(a): carryover basis limited by outside basis → land $30,000 and outside basis reduced to $20,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> §704(c) sale: Contributed asset (basis $40,000, FMV $100,000) later sold for $120,000. How is the $80,000 gain allocated between the contributing partner and the other 50% partner (traditional method)?</p>
+        <ol type="A">
+          <li>Contrib $60,000; Other $10,000</li>
+          <li>Contrib $10,000; Other $60,000</li>
+          <li>Contrib $40,000; Other $40,000</li>
+          <li>Contrib $70,000; Other $10,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Built‑in gain ($60,000) first to contributor; residual $20,000 split $10,000 each.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Guaranteed payment: Partnership has $100,000 ordinary income before a $30,000 payment to A. Two equal partners. A’s K‑1 shows ordinary business income of ___ and GP of ___; A’s basis increases by ___?</p>
+        <ol type="A">
+          <li>$35,000; $30,000; $35,000</li>
+          <li>$35,000; $30,000; $65,000</li>
+          <li>$50,000; $30,000; $50,000</li>
+          <li>$0; $30,000; $30,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — GP reduces partnership ordinary income; A’s distributive share = $35,000. GP is ordinary income to A but <em>does not</em> increase basis, so basis rises only by $35,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> Sale of interest with hot assets: Outside basis $60,000 (incl. $15,000 liabilities). Sells for cash $100,000; relieved of liabilities $15,000. Total gain? Ordinary vs capital?</p>
+        <ol type="A">
+          <li>Total $55,000; Ordinary $20,000; Capital $35,000</li>
+          <li>Total $55,000; Ordinary $0; Capital $55,000</li>
+          <li>Total $40,000; Ordinary $20,000; Capital $20,000</li>
+          <li>Total $75,000; Ordinary $30,000; Capital $45,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Amount realized includes debt relief → $115,000 − basis $60,000 = $55,000. §751 hot assets recharacterize $20,000 as ordinary; remainder capital.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> §754 election: Buyer pays $150,000 for a partnership interest; buyer’s share of inside basis is $100,000. Special §743(b) adjustment?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$50,000 step‑up to be allocated to assets</li>
+          <li>$25,000 step‑down</li>
+          <li>Only affects other partners</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — With §754, the transferee gets a $50,000 special basis step‑up (purchase price − share of inside basis).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Disguised sale: Partner contributes property (basis $80,000) and receives cash $190,000 within two years. Presumed disguised sale proceeds and gain?</p>
+        <ol type="A">
+          <li>Proceeds $190,000; Gain $110,000</li>
+          <li>Proceeds $0; Gain $0</li>
+          <li>Proceeds $110,000; Gain $30,000</li>
+          <li>Proceeds $190,000; Gain $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Two‑year presumption treats it as a sale: proceeds $190,000, gain $110,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>11)</strong> Which triggers ordinary income under <strong>§751</strong> (“hot assets”)?</p>
+        <ol type="A">
+          <li>Unrealized receivables and inventory</li>
+          <li>Land held more than one year</li>
+          <li>Cash distributions</li>
+          <li>Goodwill for a service partnership only</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Hot assets include unrealized receivables and substantially appreciated inventory.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>12)</strong> §707(a) transaction most likely occurs when:</p>
+        <ol type="A">
+          <li>A partner provides legal services to the partnership for a fixed fee outside their capacity as a partner</li>
+          <li>A partner receives a proportionate profits interest for a capital contribution</li>
+          <li>A partner receives their distributive share of income</li>
+          <li>A guaranteed payment is made</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Transactions with a partner not acting in a partner capacity are treated as occurring between the partnership and a non‑partner.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>13)</strong> Which amounts are generally subject to <strong>self‑employment</strong> tax for an individual partner?</p>
+        <ol type="A">
+          <li>Guaranteed payments for services and the distributive share of a general partner’s trade/business income</li>
+          <li>Distributive share of a limited partner’s trade/business income</li>
+          <li>All long‑term capital gains reported on Schedule K‑1</li>
+          <li>Tax‑exempt income</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — GP for services and a general partner’s distributive share are generally SE income; limited partners’ distributive shares are typically excluded (facts can vary for LLCs).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>14)</strong> §199A QBI: Partnership ordinary income <em>before</em> guaranteed payments is $200,000; GP to this partner = $30,000; this partner owns 50%. What is this partner’s <em>QBI</em> (ignore thresholds/limits)?</p>
+        <ol type="A">
+          <li>$85,000</li>
+          <li>$100,000</li>
+          <li>$115,000</li>
+          <li>$95,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — QBI is based on ordinary business income <em>after</em> guaranteed payments and excludes the GP received. OBI after GP = $170,000; 50% share = $85,000.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

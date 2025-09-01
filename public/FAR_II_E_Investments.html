@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.E: Investments</title>
+<meta name="description" content="CPA reviewer chapter for FAR II.E — Investments (debt securities, equity securities, equity method, fair value option, credit loss models), aligned to 2025 AICPA Blueprints under U.S. GAAP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .small{font-size:0.95rem}
+  /* Journal entry styling */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 260px 96px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{overflow:visible;white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Investments</h1>
+
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Classify and measure <strong>debt securities</strong> and apply credit loss models for <strong>held‑to‑maturity</strong> and <strong>available‑for‑sale</strong>.</li>
+          <li>Account for <strong>equity securities</strong> at fair value through net income or under the <strong>measurement alternative</strong> when fair value is not readily determinable.</li>
+          <li>Apply the <strong>equity method</strong> (significant influence), including basis differences and dividends.</li>
+          <li>Understand the optional <strong>fair value option</strong> and related presentation and disclosures.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:24%"><col style="width:40%"><col style="width:36%"></colgroup>
+          <tr><th>Category</th><th>Measurement</th><th>Unrealized gains/losses</th></tr>
+          <tr><td>Debt — trading</td><td>Fair value each period</td><td>In earnings</td></tr>
+          <tr><td>Debt — available‑for‑sale (AFS)</td><td>Fair value; amortized cost used for interest</td><td>In other comprehensive income; credit loss (allowance) in earnings</td></tr>
+          <tr><td>Debt — held‑to‑maturity (HTM)</td><td>Amortized cost with <strong>current expected credit losses</strong> allowance</td><td>No fair value changes in performance; allowance changes in earnings</td></tr>
+          <tr><td>Equity securities</td><td>Fair value with changes in earnings; or measurement alternative (cost ± observable price changes − impairment)</td><td>In earnings</td></tr>
+          <tr><td>Equity method</td><td>Cost + share of investee income − dividends ± basis difference amortization</td><td>Share of investee other comprehensive income in investor’s OCI</td></tr>
+          <tr><td>Fair value option</td><td>Irrevocable election; measure at fair value</td><td>All changes in earnings</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Debt Securities</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Trading:</strong> fair value through earnings; interest revenue via effective interest method.</li>
+        <li><strong>AFS:</strong> fair value on the balance sheet; unrealized non‑credit changes in other comprehensive income; credit risk through an allowance in earnings.</li>
+        <li><strong>HTM:</strong> amortized cost plus an allowance using the current expected credit losses model.</li>
+      </ul>
+    </div>
+
+    <h2>2) Equity Securities</h2>
+    <div class="card">
+      <ul>
+        <li>Measure at <strong>fair value through net income</strong>. Dividends are income when declared.</li>
+        <li><strong>Measurement alternative:</strong> carry at cost and adjust for <strong>observable price changes</strong> for the same or similar investment; assess qualitatively for impairment.</li>
+      </ul>
+    </div>
+
+    <h2>3) Equity Method (Significant Influence)</h2>
+    <div class="card">
+      <ul>
+        <li>Presumed with 20%–50% ownership or other indicators (board seat, policy participation, material transactions).</li>
+        <li>Increase for share of <strong>net income</strong>; decrease for <strong>dividends</strong> received; amortize identifiable basis differences.</li>
+      </ul>
+    </div>
+
+    <h2>4) Fair Value Option</h2>
+    <div class="card">
+      <ul>
+        <li>Election made on initial recognition; <strong>irrevocable</strong>. Subsequent changes in fair value recognized in earnings.</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Debt AFS: Premium Amortization and Year‑End Fair Value</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:46%"><col style="width:27%"><col style="width:27%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Notes</th></tr>
+          <tr><td>Purchase 5‑year bond, face $100,000 at 102 (premium); stated rate 5%; market rate 4%</td><td class="num">$102,000</td><td>Use effective interest method</td></tr>
+          <tr><td>Year‑end fair value</td><td class="num">$101,100</td><td>Unrealized change to other comprehensive income (non‑credit)</td></tr>
+        </table>
+        <h4>Year 1 interest (effective method)</h4>
+        <table class="tbl small">
+          <tr><td>Interest revenue (4% × $102,000)</td><td class="num">$4,080</td></tr>
+          <tr><td>Cash received (5% × $100,000)</td><td class="num">$5,000</td></tr>
+          <tr><th>Amortization of premium</th><th class="num">$920</th></tr>
+        </table>
+        <h4>Entries</h4>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$5,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Interest revenue</span><span class="amt">($4,080)</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Debt investment (premium amortization)</span><span class="amt">($920)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Debt AFS: Credit Loss vs. Non‑credit Loss at Year‑End</h3>
+        <p>Carrying amount at amortized cost before allowance is $101,080. Present value of expected cash flows is $100,300. Fair value is $99,900.</p>
+        <table class="tbl small">
+          <tr><th>Compute credit loss allowance</th><th class="num">$780</th></tr>
+          <tr><td>Non‑credit portion (to other comprehensive income): $101,080 − $780 − $99,900</td><td class="num">$400</td></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Credit loss expense</span><span class="amt">$780</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Allowance for credit losses — AFS debt</span><span class="amt">($780)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — Debt HTM: Initial Allowance (Current Expected Credit Losses)</h3>
+        <p>Purchase held‑to‑maturity bond at par $200,000. Expected lifetime loss is $1,600.</p>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Debt investment — held‑to‑maturity</span><span class="amt">$200,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($200,000)</span></li>
+        </ul>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Credit loss expense</span><span class="amt">$1,600</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Allowance for credit losses — HTM</span><span class="amt">($1,600)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Equity Securities at Fair Value through Net Income</h3>
+        <table class="tbl">
+          <colgroup><col style="width:44%"><col style="width:28%"><col style="width:28%"></colgroup>
+          <tr><th>Event</th><th class="center">Amount</th><th>Entry</th></tr>
+          <tr>
+            <td>Buy shares for cash</td><td class="num">$50,000</td>
+            <td>
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Equity securities</span><span class="amt">$50,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($50,000)</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Dividend received</td><td class="num">$1,200</td>
+            <td>
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$1,200</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Dividend income</span><span class="amt">($1,200)</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Year‑end fair value increase</td><td class="num">$3,400</td>
+            <td>
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Equity securities</span><span class="amt">$3,400</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Unrealized gain — income</span><span class="amt">($3,400)</span></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Equity Securities under the Measurement Alternative</h3>
+        <p>Private investee with no readily determinable fair value; cost is $80,000. During the year, an observable transaction for the same or similar shares occurs at a price 10% higher.</p>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Equity securities (measurement alternative)</span><span class="amt">$8,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Unrealized gain — income</span><span class="amt">($8,000)</span></li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 6 — Equity Method Basics (30% Ownership)</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:42%"><col style="width:20%"><col style="width:38%"></colgroup>
+          <tr><th>Event</th><th class="center">Amount</th><th>Entry</th></tr>
+          <tr>
+            <td>Acquire 30% interest for cash</td><td class="num">$240,000</td>
+            <td>
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Investment in Associate</span><span class="amt">$240,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($240,000)</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Investee reports net income of $100,000; pays dividends of $20,000</td>
+<td>
+  <div style="display:flex;justify-content:space-between;gap:8px;"><span>Income share (30%)</span><span class="num">$30,000</span></div>
+  <div style="display:flex;justify-content:space-between;gap:8px;"><span>Dividends received (30%)</span><span class="num">$6,000</span></div>
+</td>
+            <td>
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Investment in Associate</span><span class="amt">$30,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Equity in earnings of investee</span><span class="amt">($30,000)</span></li>
+              </ul>
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$6,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Investment in Associate</span><span class="amt">($6,000)</span></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 7 — Fair Value Option on Equity‑Method‑Eligible Investment</h3>
+        <p>Investor elects the fair value option on day one for a 25% holding otherwise eligible for the equity method. Fair value at year‑end exceeds cost by $9,500.</p>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Investment at fair value (fair value option)</span><span class="amt">$9,500</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Unrealized gain — income</span><span class="amt">($9,500)</span></li>
+        </ul>
+      </article>
+
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Unrealized AFS debt changes? <strong>Other comprehensive income</strong> (non‑credit); <strong>credit losses</strong> via allowance in earnings.</li>
+        <li>Equity securities? <strong>Fair value through net income</strong> (or measurement alternative if no readily determinable fair value).</li>
+        <li>Dividends under equity method? Reduce the <strong>investment</strong> carrying amount.</li>
+        <li>Fair value option? Irrevocable election; changes flow through <strong>earnings</strong>.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOC Engagement Reporting — Considerations (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  code, pre{background: var(--code); border:1px solid var(--border); border-radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  code{padding:3px 6px}
+  pre{padding:14px 16px; overflow:auto}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:700}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  .hr{height:1px;background:var(--border);margin:16px 0}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">SOC Engagement Reporting — Considerations</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="objectives" class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Explain the effect of <strong>CUECs</strong> on the SOC 1 and SOC 2 report.</li>
+        <li>Summarize <strong>carve‑out vs inclusive</strong> methods for reporting on <strong>CSOCs</strong>.</li>
+        <li>Explain <strong>types of opinions</strong> and <strong>report modifications</strong> when deficiencies are identified.</li>
+        <li>Prepare <strong>results of tests of controls</strong> for a SOC 2 Type 2 report, including treatment of <strong>exceptions</strong>.</li>
+        <li>Determine the appropriate <strong>form and content</strong> of SOC 1 / SOC 2 reports.</li>
+      </ul>
+    </section>
+
+    <section id="cuecs" class="card">
+      <h2>CUECs — How they affect the report</h2>
+      <ul>
+        <li><strong>Definition:</strong> Complementary user‑entity controls that user entities must implement for the service org’s controls to achieve objectives.</li>
+        <li><strong>Placement:</strong> Included in the description and referenced in control objectives/criteria as dependencies.</li>
+        <li><strong>Effect on opinion:</strong> If CUECs are necessary and not implemented by user entities, user auditors must consider the impact on their audit; the service auditor’s SOC opinion is not modified solely for user entities’ failure to implement CUECs—but CUECs should be clearly presented.</li>
+        <li><strong>Clarity tip:</strong> Write CUECs as explicit, testable actions for user entities (e.g., “restrict access to application via SSO and MFA”).</li>
+      </ul>
+      <span class="pill">CUECs = user responsibility</span> <span class="pill">Not testing by service auditor</span>
+    </section>
+
+    <section id="csocs" class="card">
+      <h2>CSOCs — Carve‑out vs Inclusive</h2>
+      <ul>
+        <li><strong>CSOCs:</strong> Controls the service organization implements to address risks from subservice organizations.</li>
+        <li><strong>Carve‑out:</strong> Subservice controls excluded from testing; describe services provided and disclose relevant CSOCs in the description; may reference bridge letters.</li>
+        <li><strong>Inclusive:</strong> Subservice controls included within the scope of description and testing; independence may extend to subservice org; evidence access required.</li>
+        <li><strong>Reporting:</strong> The chosen method is disclosed in the description; implications flow into the testing/results section (SOC 2 Type 2).</li>
+      </ul>
+      <div class="diagram">Decision snapshot:
+  If access to subservice evidence & independence → Inclusive
+  If not feasible but risks managed by CSOCs → Carve‑out + disclose CSOCs</div>
+    </section>
+
+    <section id="opinions" class="card">
+      <h2>Opinions & Report Modifications</h2>
+      <h3>Types of opinions</h3>
+      <ul>
+        <li><strong>Unmodified</strong> — description fairly presents; controls suitably designed (and operated effectively for Type 2).</li>
+        <li><strong>Qualified</strong> — except for the effects of described matters (e.g., certain control objectives/criteria not met, scope limitation).</li>
+        <li><strong>Adverse</strong> — material and pervasive misstatements or ineffective controls.</li>
+        <li><strong>Disclaimer</strong> — auditor unable to obtain sufficient appropriate evidence.</li>
+      </ul>
+      <h3>When deficiencies are identified</h3>
+      <ul>
+        <li>Describe the nature of the deficiency/exception, affected objectives/criteria, and implications for achieving service commitments or ICFR.</li>
+        <li>Evaluate pervasiveness to decide between <em>qualified</em> vs <em>adverse</em>.</li>
+        <li>Reference the related results‑of‑tests table (for SOC 2 Type 2).</li>
+      </ul>
+    </section>
+
+    <section id="tests" class="card">
+      <h2>SOC 2 Type 2 — Results of Tests of Controls</h2>
+      <p>For each control tested, present a concise, decision‑useful row:</p>
+      <ul>
+        <li><strong>Control</strong> tested and the related TSC criteria/objective.</li>
+        <li><strong>Test procedure</strong> (inquiry, inspection, observation, reperformance) and <strong>period</strong> covered.</li>
+        <li><strong>Sample size & selection</strong> (where relevant) and <strong>population</strong> definition.</li>
+        <li><strong>Results</strong> — state <em>no exceptions noted</em> or detail the <strong>exceptions</strong> with frequency, cause, and impact.</li>
+        <li><strong>Qualitative context</strong> — whether exceptions were <em>isolated</em>, <em>systemic</em>, or had <em>compensating controls</em>.</li>
+      </ul>
+      <h3>Handling exceptions</h3>
+      <ul>
+        <li>Explain the nature (e.g., 2 of 30 samples missing timely approval), the likely cause, and whether it prevents meeting the criterion/objective.</li>
+        <li>Assess whether exceptions are <em>deviations</em> vs. <em>anomalies</em>; consider projected deviation rate and precision.</li>
+        <li>Link to opinion: multiple or pervasive exceptions can lead to a <em>qualified</em> or <em>adverse</em> opinion.</li>
+      </ul>
+    </section>
+
+    <section id="form" class="card">
+      <h2>Form & Content — SOC 1 / SOC 2</h2>
+      <h3>Core components of the report</h3>
+      <ul>
+        <li><strong>Independent Service Auditor’s Report</strong> (opinion, basis, responsibilities, inherent limitations, restricted use).</li>
+        <li><strong>Management’s Assertion</strong> (Type 1 design; Type 2 design & operating effectiveness).</li>
+        <li><strong>System Description</strong> (and, for SOC 1, control objectives & related controls; for SOC 2, criteria in scope).</li>
+        <li><strong>Results of Tests of Controls</strong> (SOC 2 Type 2) with exceptions described.</li>
+        <li><strong>CUECs</strong>, <strong>subservice method</strong> (inclusive/carve‑out), and <strong>CSOCs</strong> disclosures.</li>
+        <li><strong>Other information</strong> (if presented) clearly separated from the auditor’s report.</li>
+        <li><strong>Period/point‑in‑time</strong> covered, report date, practitioner’s signature and location.</li>
+      </ul>
+    </section>
+
+    <section id="practice" class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Which statement best describes the impact of <em>CUECs</em> on a SOC report?</p>
+        <ol type="A">
+          <li>CUECs must be tested by the service auditor and failures modify the SOC opinion</li>
+          <li>CUECs are user responsibilities; they are disclosed, but failure to implement them by a user entity does not by itself modify the service auditor’s SOC opinion</li>
+          <li>CUECs are the same as CSOCs</li>
+          <li>CUECs apply only to SOC 3</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — CUECs are responsibilities of user entities. The service auditor discloses them; user auditors consider their effect on user F/S or controls testing.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> Under the <em>carve‑out</em> method, the SOC report should:</p>
+        <ol type="A">
+          <li>Include the subservice controls and test them</li>
+          <li>Exclude subservice controls from testing but describe the services and disclose CSOCs</li>
+          <li>Omit any mention of the subservice organization</li>
+          <li>Present CUECs as CSOCs</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Carve‑out excludes subservice controls from testing while describing the subservice and the CSOCs used to manage related risks.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> A SOC 2 Type 2 “results of tests” line that reads “2 of 30 approvals untimely; deviation rate 6.7%” most likely requires the auditor to:</p>
+        <ol type="A">
+          <li>Automatically issue an adverse opinion</li>
+          <li>Evaluate frequency/cause/impact and consider whether the deviation is isolated, systemic, or offset by compensating controls</li>
+          <li>Ignore the exception because it is less than 10%</li>
+          <li>Reclassify it as a CUEC</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Exceptions are evaluated qualitatively and quantitatively; pervasiveness determines any opinion modification.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Which opinion is most appropriate when the auditor cannot obtain sufficient appropriate evidence?</p>
+        <ol type="A">
+          <li>Unmodified</li>
+          <li>Qualified</li>
+          <li>Disclaimer</li>
+          <li>Adverse</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Lack of evidence leads to a disclaimer of opinion.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Which item belongs in the <em>form and content</em> of a SOC 2 Type 2 report?</p>
+        <ol type="A">
+          <li>Only management’s assertion and system description</li>
+          <li>Detailed revenue testing for user entities</li>
+          <li>Independent Service Auditor’s Report, management’s assertion, system description, and results of tests of controls</li>
+          <li>Only the Trust Services Criteria listing</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Those are the core components; the SOC 2 Type 2 includes results of tests.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> In an inclusive presentation, independence considerations may extend to:</p>
+        <ol type="A">
+          <li>The subservice organization included in scope</li>
+          <li>Only user entities</li>
+          <li>The cloud provider when carve‑out is used</li>
+          <li>Only the engagement quality reviewer</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Inclusive method brings the subservice org within scope; independence and evidence access apply.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Which phrase best belongs in a well‑written “results of tests” cell for an exception?</p>
+        <ol type="A">
+          <li>“Found issues”</li>
+          <li>“2/30 approvals were completed 3–5 days late; caused by staff turnover; compensating detective review mitigated risk to low”</li>
+          <li>“Exception noted, N/A”</li>
+          <li>“See management letter”</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Decision‑useful detail: frequency, timing, cause, and the effect/mitigation.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> When deficiencies are material and pervasive to the objectives/criteria, the likely opinion is:</p>
+        <ol type="A">
+          <li>Unmodified</li>
+          <li>Qualified</li>
+          <li>Adverse</li>
+          <li>Disclaimer</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Pervasive deficiencies call for an adverse opinion.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

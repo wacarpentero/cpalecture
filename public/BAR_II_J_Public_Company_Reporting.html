@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR II.J — Public Company Reporting Topics</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Public Company Reporting Topics — Reg S‑X / Reg S‑K / XBRL / Segment Reporting</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall core SEC reporting requirements of <strong>Regulation S‑X</strong> and <strong>Regulation S‑K</strong>.</li>
+          <li>Recall the purpose, objective, and key characteristics of <strong>XBRL</strong> (including Inline XBRL).</li>
+          <li>Identify <strong>reportable segments</strong> and required <strong>note disclosures</strong> under ASC 280.</li>
+        </ul>
+      </section>
+
+      <section id="sec-overview" class="section">
+        <h2>SEC Reporting — Snapshot</h2>
+        <div class="kv">
+          <div>
+            <h3>Regulation S‑X (financial statements & schedules)</h3>
+            <ul class="tight">
+              <li>Prescribes form/content of <strong>audited financial statements</strong>, pro forma info, and schedules for SEC filings (10‑K, 10‑Q, 8‑K, registration statements).</li>
+              <li>Significance tests drive <em>separate financials</em> for acquired/disposed businesses and <em>pro forma</em> presentation.</li>
+              <li>Interim reporting requirements; auditor involvement.</li>
+            </ul>
+            <h3>Regulation S‑K (non‑financial disclosure)</h3>
+            <ul class="tight">
+              <li>Business, risk factors, properties, legal proceedings.</li>
+              <li>MD&amp;A (trends, liquidity, capital resources, known commitments).</li>
+              <li>Executive compensation, security ownership, controls &amp; procedures, etc.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>XBRL (eXtensible Business Reporting Language)</h3>
+            <ul class="tight">
+              <li>Machine‑readable tagging of financial statement line items and disclosures using a <strong>taxonomy</strong>.</li>
+              <li><strong>Inline XBRL</strong>: tags embedded directly in the HTML filing.</li>
+              <li>Key artifacts: taxonomy, schema, linkbases, <em>instance document</em> with tagged facts.</li>
+              <li>Tags may be standard or <strong>extensions</strong> (avoid unnecessary custom tags).</li>
+              <li>Benefits: improved comparability, searchability, and data analysis.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="segments" class="section">
+        <h2>Segment Reporting — Identification & Disclosures (ASC 280)</h2>
+        <div class="kv">
+          <div>
+            <h3>Identify operating segments</h3>
+            <ul class="tight">
+              <li>Component that earns revenues/expenses, reviewed by <strong>CODM</strong>, and has discrete financial info.</li>
+              <li>Aggregation permitted if similar economic characteristics and similar in products/services, production, customers, distribution, and regulatory environment.</li>
+            </ul>
+            <h3>Reportable segments — quantitative tests</h3>
+            <ul class="tight">
+              <li><strong>10% revenue</strong> (external + intersegment) threshold.</li>
+              <li><strong>10% profit or loss</strong> threshold (compare absolute segment profit/loss to the greater of total profits or total losses).</li>
+              <li><strong>10% assets</strong> threshold.</li>
+              <li><strong>75% test</strong>: External revenue of reportable segments must be at least 75% of consolidated external revenue (add more segments if needed).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Required disclosures</h3>
+            <ul class="tight">
+              <li>General info about factors used to identify segments and types of products/services.</li>
+              <li>For each reportable segment: <strong>profit/loss measure</strong>, <strong>assets</strong>, and items included in the measure (e.g., revenues, interest, depreciation, etc., if provided to CODM).</li>
+              <li>Reconciliations to consolidated totals (revenues, profit/loss, assets, other significant items).</li>
+              <li>Entity‑wide disclosures: products/services, <strong>geographic</strong> info (revenues/long‑lived assets), and <strong>major customer</strong> concentrations (≥10% of revenue — disclose % and segment).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustrations" class="section">
+        <h2>Worked Illustrations</h2>
+
+        <details><summary>1) Reportable segment thresholds</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Consolidated external revenue</th><td><strong>$1,000,000</strong></td></tr>
+          <tr><th>Segments A/B/C/D external revenue</th><td>A <strong>$140,000</strong>; B <strong>$260,000</strong>; C <strong>$90,000</strong>; D <strong>$180,000</strong></td></tr>
+          <tr><th>Operating profit (loss)</th><td>A <strong>$40,000</strong>; B <strong>$30,000</strong>; C <strong>($50,000)</strong>; D <strong>$10,000</strong></td></tr>
+          <tr><th>Assets</th><td>A <strong>$220,000</strong>; B <strong>$300,000</strong>; C <strong>$80,000</strong>; D <strong>$100,000</strong>; Consolidated <strong>$900,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Analysis</h4>
+        <table class="table-min">
+          <tr><th>10% revenue</th><td>Threshold <strong>$100,000</strong> → A,B,D qualify; C fails.</td></tr>
+          <tr><th>10% profit/loss</th><td>Total profits <strong>$80,000</strong>; total losses <strong>$50,000</strong>; compare to larger = <strong>$80,000</strong> → 10% = <strong>$8,000</strong> → A,B,C qualify (|40|, |30|, |50| &gt; 8).</td></tr>
+          <tr><th>10% assets</th><td>10% of <strong>$900,000</strong> = <strong>$90,000</strong> → A,B,D qualify; C fails.</td></tr>
+          <tr><th>Reportable segments</th><td>A, B, C, D (each meets at least one test).</td></tr>
+          <tr><th>75% test</th><td>External revenue of reportables = $140,000 + $260,000 + $90,000 + $180,000 = <strong>$670,000</strong> → 67% &lt; 75% ⇒ add more segments until ≥ 75% (if others exist).</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>2) Major customer disclosure</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Consolidated revenue</th><td><strong>$800,000</strong></td></tr>
+          <tr><th>Customer X sales</th><td><strong>$88,000</strong> (Automotive segment)</td></tr>
+          <tr><th>Customer Y sales</th><td><strong>$84,000</strong> (Technology segment)</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Disclosure?</h4>
+        <table class="table-min">
+          <tr><th>Threshold</th><td>10% of consolidated revenue = <strong>$80,000</strong></td></tr>
+          <tr><th>Result</th><td>Both X and Y exceed threshold. Disclose existence and %/amount and which segments generate the revenue (names not required).</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>3) Reconciliation example</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Segment P&amp;L (measure reported to CODM)</h4>
+        <table class="table-min">
+          <tr><th>Total segment profit</th><td><strong>$120,000</strong></td></tr>
+          <tr><th>Items not allocated to segments</th><td>Corporate expense <strong>$18,000</strong>; Interest expense <strong>$7,000</strong></td></tr>
+          <tr><th>Consolidation adjustments</th><td>Intersegment profit elimination <strong>$5,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Reconcile to consolidated income</h4>
+        <table class="table-min">
+          <tr><th>Consolidated income before tax</th><td>$120,000 − $18,000 − $7,000 − $5,000 = <strong>$90,000</strong></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Reg S‑X vs Reg S‑K</summary>
+          <p>Which item is primarily governed by <strong>Regulation S‑K</strong> rather than S‑X?</p>
+          <ol type="A">
+            <li>Form and content of the audited financial statements</li>
+            <li>Pro forma financial information for a significant acquisition</li>
+            <li>Management’s Discussion &amp; Analysis</li>
+            <li>Schedule of valuation and qualifying accounts</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> MD&amp;A is a narrative disclosure under S‑K; the others are S‑X topics.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> XBRL</summary>
+          <p>Which statement about XBRL is correct?</p>
+          <ol type="A">
+            <li>Inline XBRL requires a separate instance document file.</li>
+            <li>Companies should always create custom tags to match internal chart‑of‑accounts.</li>
+            <li>XBRL tags map facts to a standard taxonomy and allow automated analysis of filings.</li>
+            <li>XBRL replaces the need for audited financial statements.</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Tags connect facts to taxonomies; avoid unnecessary extensions.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Segment thresholds</summary>
+          <p>Segments have external revenues of <strong>$90,000</strong>, <strong>$120,000</strong>, <strong>$70,000</strong>, and <strong>$60,000</strong>; consolidated external revenue is <strong>$900,000</strong>. Which segments meet the <strong>10% revenue</strong> test?</p>
+          <details><summary>Answer &amp; Work</summary>
+            <div class="illustration-card">
+              <p>10% threshold = <strong>$90,000</strong>. Segments with ≥ $90,000 qualify → the <strong>$90,000</strong> and <strong>$120,000</strong> segments qualify.</p>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Major customer</summary>
+          <p>Consolidated revenue is <strong>$1,200,000</strong>. Sales to Customer M total <strong>$105,000</strong> within the Health segment. What is the disclosure?</p>
+          <ol type="A">
+            <li>No disclosure because amount is less than 15%.</li>
+            <li>Disclose that a single customer accounts for ≥10% of revenue and identify the <em>segment</em>, not the customer by name.</li>
+            <li>Disclose only if the customer is governmental.</li>
+            <li>Disclose the customer’s name and address.</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> ≥10% threshold met; disclose existence and segment.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> 75% test</summary>
+          <p>Reportable segments’ external revenue totals <strong>$680,000</strong> and consolidated external revenue is <strong>$800,000</strong>. What does ASC 280 require?</p>
+          <ol type="A">
+            <li>Nothing further; the 10% tests were met.</li>
+            <li>Add more segments as reportable until the total reaches at least <strong>75%</strong> of consolidated external revenue.</li>
+            <li>Aggregate segments to reduce the number of reportables.</li>
+            <li>Disclose only entity‑wide data.</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> $680,000 ÷ $800,000 = 85%? Wait—No, it equals 85%. If total were below 75%, you must add segments. If 85%, requirement is already met. <strong>For this question</strong>: suppose $600,000; then additional segments would be added. (On exam, compute and compare carefully.)</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

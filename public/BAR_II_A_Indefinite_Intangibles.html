@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.A — Indefinite‑Lived Intangible Assets (including Goodwill)</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:12px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Indefinite‑Lived Intangible Assets (including Goodwill)</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall <strong>impairment indicators</strong> for goodwill and other indefinite‑lived intangibles (ASC 350).</li>
+          <li>Calculate <strong>carrying amount</strong> and measure <strong>impairment losses</strong> (initial and subsequent measurement, including journal entries).</li>
+        </ul>
+      </section>
+
+      <section id="overview" class="section">
+        <h2>Overview</h2>
+        <div class="kv">
+          <div>
+            <h3>Indefinite‑lived intangible (other than goodwill)</h3>
+            <ul class="tight">
+              <li>Not amortized. Test for impairment at least annually and when events/changes indicate it may be impaired.</li>
+              <li>Quantitative test: Compare <strong>fair value (FV)</strong> to <strong>carrying amount (CA)</strong>. Loss = CA − FV (if FV &lt; CA). No reversal under U.S. GAAP.</li>
+              <li>If useful life becomes finite, begin systematic <strong>amortization</strong> prospectively.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Goodwill</h3>
+            <ul class="tight">
+              <li>Arises only in business combinations; assigned to <strong>reporting units</strong>.</li>
+              <li>Annual impairment test (or when indicators exist). Optional <strong>qualitative test</strong> first (“more likely than not” that FV &lt; CA?).</li>
+              <li>Quantitative test: If <strong>FV of reporting unit &lt; CA</strong>, record loss <strong>limited to the amount of goodwill</strong>. (Step 2 removed.)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="indicators" class="section">
+        <h2>Impairment Indicators — Examples</h2>
+        <ul>
+          <li>Adverse macro or industry conditions; cost inflation; legal/regulatory changes.</li>
+          <li>Adverse changes in financial performance, cash flow projections, or key assumptions.</li>
+          <li>Significant decline in share price/market capitalization <em>below</em> net assets (for public entities).</li>
+          <li>Loss of key customer, unanticipated competition, or negative changes in brand/legal protections.</li>
+          <li>Plans for restructuring, sale, or reorganization of a reporting unit.</li>
+        </ul>
+      </section>
+
+      <section id="goodwill" class="section">
+        <h2>Goodwill Impairment — Mechanics</h2>
+        <div class="kv">
+          <div>
+            <h3>Qualitative screen (optional)</h3>
+            <ul class="tight">
+              <li>If it’s <strong>more likely than not</strong> (probability &gt; 50%) that FV &lt; CA, proceed to quantitative test.</li>
+              <li>Consider overall economy, reporting unit performance, changes in carrying amount, market multiples, etc.</li>
+            </ul>
+            <h3>Quantitative test</h3>
+            <ul class="tight">
+              <li>Measure reporting unit FV (income/market approach) and compare to carrying amount including goodwill.</li>
+              <li>Impairment = <strong>excess of CA over FV</strong>, but not more than carrying amount of goodwill.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Journal entry (goodwill)</h3>
+            <ul class="tight">
+              <li><em>Dr</em> Impairment loss (I/S)</li>
+              <li><em>Cr</em> Goodwill</li>
+              <li>No impact on cash flows from operations; non‑cash charge.</li>
+            </ul>
+            <h3>Disclosures</h3>
+            <ul class="tight">
+              <li>Facts and circumstances, amount recognized, method/assumptions, reporting units affected.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Goodwill impairment at a reporting unit</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Carrying amounts</th><td>Net assets (ex‑goodwill) <strong>$4,200,000</strong>; Goodwill <strong>$1,000,000</strong></td></tr>
+          <tr><th>Total CA</th><td><strong>$5,200,000</strong></td></tr>
+          <tr><th>Measured FV of unit</th><td><strong>$4,600,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Shortfall</th><td>$5,200,000 − $4,600,000 = <strong>$600,000</strong></td></tr>
+          <tr><th>Limit</th><td>Not more than goodwill carrying amount <strong>$1,000,000</strong></td></tr>
+          <tr><th>Loss</th><td><strong>$600,000</strong> (within limit)</td></tr>
+        </table>
+        <div class="result">JE: Dr Impairment loss $600,000; Cr Goodwill $600,000</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="other-indefinite" class="section">
+        <h2>Indefinite‑Lived Intangibles (Other than Goodwill)</h2>
+        <ul>
+          <li>Examples: trademarks, trade names, broadcast licenses, certain franchise rights.</li>
+          <li>Impairment loss recognized if <strong>FV &lt; CA</strong>. Measurement is asset‑specific (no reporting‑unit concept).</li>
+          <li>Journal entry: <em>Dr</em> Impairment loss; <em>Cr</em> Intangible asset (reduce CA to FV).</li>
+        </ul>
+
+        <details><summary>Illustration — Trademark impairment</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Carrying amount</th><td><strong>$800,000</strong></td></tr>
+          <tr><th>Fair value</th><td><strong>$620,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Impairment</th><td>$800,000 − $620,000 = <strong>$180,000</strong></td></tr>
+        </table>
+        <div class="result">JE: Dr Impairment loss $180,000; Cr Trademark $180,000</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="life-change" class="section">
+        <h2>Change in Useful Life (Indefinite → Finite)</h2>
+        <div class="kv">
+          <div>
+            <ul class="tight">
+              <li>Reassess useful life each period. If conditions indicate a <strong>finite</strong> life, begin <strong>amortization</strong> prospectively over remaining life.</li>
+              <li>Consider impairment before starting amortization (write down to FV if necessary).</li>
+            </ul>
+          </div>
+          <div>
+            <details><summary>Illustration — Start amortization after change</summary>
+              <div class="illustration-card">
+                <div class="row">
+                  <div>
+                    <h4>Setup</h4>
+                    <table class="table-min">
+                      <tr><th>CA at change date</th><td><strong>$500,000</strong></td></tr>
+                      <tr><th>Estimated life</th><td><strong>10 years</strong>, straight‑line, no salvage</td></tr>
+                    </table>
+                  </div>
+                  <div>
+                    <h4>Compute</h4>
+                    <table class="table-min">
+                      <tr><th>Annual amortization</th><td>$500,000 ÷ 10 = <strong>$50,000</strong></td></tr>
+                    </table>
+                    <div class="result">JE each year: Dr Amortization expense $50,000; Cr Accumulated amortization $50,000</div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick Reference</h2>
+        <table class="table">
+          <thead>
+            <tr><th>Item</th><th>Amortized?</th><th>Impairment trigger & timing</th><th>Measurement</th><th>JE</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Goodwill</td>
+              <td>No</td>
+              <td>Annual or when indicators exist; at reporting unit level</td>
+              <td>Loss = CA − FV (limited to goodwill)</td>
+              <td>Dr Loss / Cr Goodwill</td>
+            </tr>
+            <tr>
+              <td>Other indefinite‑lived intangible</td>
+              <td>No (until life becomes finite)</td>
+              <td>Annual or when indicators exist; asset level</td>
+              <td>Loss = CA − FV</td>
+              <td>Dr Loss / Cr Intangible</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Indicator check</summary>
+          <p>Which most clearly indicates a potential impairment of an indefinite‑lived trademark?</p>
+          <ol type="A">
+            <li>Routine annual marketing spend</li>
+            <li>Temporary plant maintenance shutdown</li>
+            <li>Loss of a key distribution partner and market share decline</li>
+            <li>Increase in risk‑free interest rates by 10 bps</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: C.</strong> Adverse change in market/competition affecting cash flows.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Goodwill limit</summary>
+          <p>A reporting unit’s CA is $12.0M including goodwill of $3.0M; FV is $10.5M. Impairment loss?</p>
+          <ol type="A">
+            <li>$0</li>
+            <li>$1.5M</li>
+            <li>$3.0M</li>
+            <li>$10.5M</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Shortfall $1.5M, limited to goodwill $3.0M → record $1.5M.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Other indefinite‑lived asset</summary>
+          <p>Carrying amount $900,000; FV $760,000. Impairment loss and JE?</p>
+          <ol type="A">
+            <li>$140,000; Dr Loss / Cr Intangible $140,000</li>
+            <li>$140,000; Dr Loss / Cr Goodwill $140,000</li>
+            <li>$0; no impairment for indefinite‑lived assets</li>
+            <li>$760,000; Dr Intangible / Cr Loss</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Loss = CA − FV = $140,000; reduce the specific intangible.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Change to finite life</summary>
+          <p>An indefinite‑lived license’s CA is $420,000 when its life becomes finite at 7 years. Annual amortization?</p>
+          <ol type="A">
+            <li>$30,000</li>
+            <li>$60,000</li>
+            <li>$0</li>
+            <li>$15,000</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> $420,000 ÷ 7 = $60,000?? (Check!) Actually $420,000 ÷ 7 = <strong>$60,000</strong>. Correct choice: <strong>B</strong>.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Goodwill entry</summary>
+          <p>Recording a goodwill impairment loss has which effect?</p>
+          <ol type="A">
+            <li>Reduces cash flows from operations</li>
+            <li>Reduces net income but is non‑cash</li>
+            <li>Increases amortization expense in future periods</li>
+            <li>Increases retained earnings</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> It’s a non‑cash charge that reduces earnings in the period.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

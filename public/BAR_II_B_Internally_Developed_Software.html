@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAR III.B — Internally Developed Software</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+ul.tight>li{margin:2px 0}
+/* Illustration cards */
+.illustration-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin-top:10px}
+.illustration-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.illustration-card h4{margin:6px 0 6px;font-size:15px}
+.result{font-weight:700;padding:6px 10px;border-radius:10px;background:rgba(77,212,176,.12);border:1px solid rgba(77,212,176,.35);display:inline-block}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary{padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.table-min{width:100%;border-collapse:collapse}
+.table-min th,.table-min td{border-bottom:1px dashed rgba(255,255,255,.12);padding:6px;text-align:left;font-size:14px}
+.table-min th{font-weight:600}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Internally Developed Software</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Recall criteria to <strong>capitalize</strong> software costs for <strong>internal‑use</strong> (ASC 350‑40) and for <strong>software to be sold/leased/marketed</strong> (ASC 985‑20 concepts).</li>
+          <li>Compute <strong>capitalized amounts</strong>, subsequent <strong>amortization</strong>, and <strong>journal entries</strong>.</li>
+        </ul>
+      </section>
+
+      <section id="internal-use" class="section">
+        <h2>Internal‑Use Software (ASC 350‑40)</h2>
+        <div class="kv">
+          <div>
+            <h3>Stages & accounting</h3>
+            <table class="table">
+              <thead><tr><th>Stage</th><th>Examples</th><th>Accounting</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Preliminary project</td>
+                  <td>Conceptual formulation, alternatives, vendor selection</td>
+                  <td><strong>Expense</strong></td>
+                </tr>
+                <tr>
+                  <td>Application development</td>
+                  <td>Coding, configuration, installation, testing</td>
+                  <td><strong>Capitalize</strong> direct costs (payroll, external fees) and eligible interest</td>
+                </tr>
+                <tr>
+                  <td>Post‑implementation/operations</td>
+                  <td>Training, maintenance, minor bug fixes</td>
+                  <td><strong>Expense</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="tight">
+              <li>Start capitalizing when <strong>management authorizes funding</strong> and it’s <strong>probable</strong> the project will be completed for intended use.</li>
+              <li>Amortize capitalized costs on a systematic basis over the shorter of <strong>useful life</strong> or <strong>obsolescence period</strong> (often straight‑line).</li>
+              <li>Impairment: test as a long‑lived asset group (ASC 360) when indicators exist.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Hosting (Cloud) arrangements</h3>
+            <ul class="tight">
+              <li>If the customer has a <strong>license</strong> to the software that it can control (possess), capitalize the license (intangible) and apply 350‑40 to implementation costs.</li>
+              <li>If it’s a <strong>service contract</strong> (no license), expense fees as incurred; capitalize certain implementation costs and amortize over the <strong>term of the hosting arrangement</strong>.</li>
+            </ul>
+            <h3>Typical JE</h3>
+            <ul class="tight">
+              <li><em>Dr</em> Software in progress / <em>Cr</em> Cash or AP</li>
+              <li>Upon ready for use: <em>Reclass</em> to Software (intangible) and begin amortization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Capitalize internal‑use costs & amortize</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Application‑dev payroll</th><td><strong>$180,000</strong></td></tr>
+          <tr><th>External coding</th><td><strong>$70,000</strong></td></tr>
+          <tr><th>Training costs</th><td><strong>$24,000</strong> (post‑implementation)</td></tr>
+          <tr><th>Useful life</th><td>4 years, straight‑line; ready for use on 7/1/Y1</td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Capitalize</th><td>$180,000 + $70,000 = <strong>$250,000</strong></td></tr>
+          <tr><th>Expense</th><td>Training <strong>$24,000</strong></td></tr>
+          <tr><th>Annual amortization</th><td>$250,000 ÷ 4 = <strong>$62,500</strong></td></tr>
+          <tr><th>Y1 amortization (half‑year)</th><td>$62,500 × 6/12 = <strong>$31,250</strong></td></tr>
+        </table>
+        <div class="result">JE Y1: Dr Amortization exp $31,250; Cr Accum amortization $31,250</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="software-to-be-sold" class="section">
+        <h2>Software to be Sold/Leased/Marketed (ASC 985‑20 concepts)</h2>
+        <div class="kv">
+          <div>
+            <h3>Key points</h3>
+            <ul class="tight">
+              <li><strong>Expense</strong> costs <em>until technological feasibility (TF)</em>.</li>
+              <li>After TF and before product release, <strong>capitalize</strong> coding, testing, and product masters.</li>
+              <li>Amortize the capitalized balance by the greater of:
+                <ul class="tight">
+                  <li><strong>SL</strong> over estimated economic life, or</li>
+                  <li><strong>Revenue ratio</strong>: current revenue ÷ (current + expected future revenue)</li>
+                </ul>
+              </li>
+              <li>Impairment/NRV: write down to the <strong>lower of unamortized cost or net realizable value</strong>.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Technological feasibility (examples)</h3>
+            <ul class="tight">
+              <li>Completion of a detailed program design, or</li>
+              <li>Working model that proves the design will meet specs.</li>
+            </ul>
+            <h3>Typical JE</h3>
+            <ul class="tight">
+              <li><em>Dr</em> Capitalized software costs / <em>Cr</em> Cash (post‑TF)</li>
+              <li><em>Dr</em> Amortization expense / <em>Cr</em> Accumulated amortization (periodic)</li>
+            </ul>
+          </div>
+        </div>
+
+        <details><summary>Illustration — Revenue‑ratio amortization</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Capitalized cost at release</th><td><strong>$300,000</strong></td></tr>
+          <tr><th>Current‑year revenue</th><td><strong>$240,000</strong></td></tr>
+          <tr><th>Expected future revenue</th><td><strong>$560,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Revenue ratio</th><td>$240,000 ÷ ($240,000 + $560,000) = <strong>30%</strong></td></tr>
+          <tr><th>Amortization</th><td>30% × $300,000 = <strong>$90,000</strong></td></tr>
+          <tr><th>Carrying amount end of year</th><td>$300,000 − $90,000 = <strong>$210,000</strong></td></tr>
+        </table>
+        <div class="result">JE: Dr Amortization exp $90,000; Cr Accum amortization $90,000</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+        <details><summary>Illustration — NRV test</summary>
+  <div class="illustration-card">
+    <div class="row">
+      <div>
+        <h4>Setup</h4>
+        <table class="table-min">
+          <tr><th>Unamortized cost</th><td><strong>$210,000</strong></td></tr>
+          <tr><th>NRV (future revenue − costs)</th><td><strong>$190,000</strong></td></tr>
+        </table>
+      </div>
+      <div>
+        <h4>Compute</h4>
+        <table class="table-min">
+          <tr><th>Write‑down</th><td>$210,000 − $190,000 = <strong>$20,000</strong></td></tr>
+        </table>
+        <div class="result">JE: Dr Loss $20,000; Cr Capitalized software $20,000</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick Reference</h2>
+        <table class="table">
+          <thead>
+            <tr><th>Topic</th><th>Capitalize?</th><th>When</th><th>Amortization</th><th>Impairment</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Internal‑use (350‑40)</td>
+              <td>Yes — application development</td>
+              <td>After authorization & probable completion</td>
+              <td>Straight‑line over useful life</td>
+              <td>ASC 360 (asset group)</td>
+            </tr>
+            <tr>
+              <td>Sold/marketed (985‑20)</td>
+              <td>Yes — after TF until release</td>
+              <td>Post‑TF, pre‑release</td>
+              <td>Greater of SL or revenue ratio</td>
+              <td>Lower of cost or NRV</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Stage classification</summary>
+          <p>Training costs for a new internal system should be:</p>
+          <ol type="A">
+            <li>Capitalized during application development</li>
+            <li>Expensed (post‑implementation)</li>
+            <li>Capitalized and amortized over hosting term</li>
+            <li>Capitalized only if material</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Training is post‑implementation and expensed.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Capitalization start</summary>
+          <p>Capitalization of internal‑use software begins when:</p>
+          <ol type="A">
+            <li>Preliminary project stage starts</li>
+            <li>Management authorizes funding and completion is probable</li>
+            <li>User training commences</li>
+            <li>License agreement is signed, regardless of probability</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> That’s the 350‑40 trigger.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Revenue‑ratio</summary>
+          <p>Capitalized software to be sold is $500,000. Year 1 revenue is $250,000; future expected revenue is $750,000. Amortization for Year 1?</p>
+          <ol type="A">
+            <li>$100,000</li>
+            <li>$125,000</li>
+            <li>$250,000</li>
+            <li>$375,000</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Ratio = 250/(250+750)=25% → 25%×$500,000=$125,000.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Cloud hosting</summary>
+          <p>A hosting arrangement without a software license is a service contract. Certain implementation costs are:</p>
+          <ol type="A">
+            <li>Capitalized and amortized over the hosting term</li>
+            <li>Expensed as incurred without exception</li>
+            <li>Capitalized until technological feasibility</li>
+            <li>Capitalized and amortized only if SL exceeds revenue ratio</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Capitalize qualifying implementation costs; amortize over the term.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> NRV test</summary>
+          <p>Unamortized capitalized cost is $140,000; NRV is $135,000. Required action:</p>
+          <ol type="A">
+            <li>No entry</li>
+            <li>Write down $5,000</li>
+            <li>Write down $135,000</li>
+            <li>Increase amortization to $140,000</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Lower of cost or NRV.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

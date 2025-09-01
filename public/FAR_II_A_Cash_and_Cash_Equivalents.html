@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.A: Cash and Cash Equivalents</title>
+<meta name="description" content="CPA reviewer chapter for FAR II.A — Cash and Cash Equivalents, aligned to 2025 AICPA Blueprints (U.S. GAAP).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+  .small{font-size:0.95rem}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Cash and Cash Equivalents</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Define <strong>cash</strong>, <strong>cash equivalents</strong>, and <strong>restricted cash</strong> under <strong>U.S. Generally Accepted Accounting Principles (U.S. GAAP)</strong>, and identify common inclusions and exclusions.</li>
+          <li>Apply classification and presentation rules, including <strong>compensating balances</strong>, <strong>bank overdrafts</strong>, and the <strong>statement of cash flows</strong> reconciliation of cash, cash equivalents, and restricted cash.</li>
+          <li>Prepare a <strong>bank reconciliation</strong> and record resulting adjustments.</li>
+          <li>Account for <strong>petty cash</strong> establishment and replenishment; design key <strong>internal controls</strong> over cash.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:28%"><col style="width:37%"><col style="width:35%"></colgroup>
+          <tr><th>Category</th><th>Includes</th><th>Excludes / notes</th></tr>
+          <tr>
+            <td>Cash</td>
+            <td>Currency, coins, demand deposits, and checks received (that are not postdated)</td>
+            <td>Postdated checks, IOUs, time deposits with withdrawal restrictions; classify as receivables or investments</td>
+          </tr>
+          <tr>
+            <td>Cash equivalents</td>
+            <td>Short‑term, highly liquid investments readily convertible to known amounts of cash with <strong>original maturity of three months or less</strong> (e.g., Treasury bills, commercial paper, money market funds without significant restrictions)</td>
+            <td>Equity securities; assets with original maturity &gt; three months when purchased; instruments with significant credit or interest‑rate risk</td>
+          </tr>
+          <tr>
+            <td>Restricted cash</td>
+            <td>Cash legally or contractually restricted for a specific purpose (e.g., debt service, customer deposits, collateral)</td>
+            <td>Present separately as current or noncurrent based on expected use; <strong>included in period‑end total</strong> of cash, cash equivalents, and restricted cash on the statement of cash flows reconciliation</td>
+          </tr>
+          <tr>
+            <td>Compensating balances</td>
+            <td>Amounts required to be maintained with a bank</td>
+            <td>If legally restricted, present separately (current or noncurrent); disclose terms</td>
+          </tr>
+          <tr>
+            <td>Bank overdrafts</td>
+            <td>Checks written in excess of available balance</td>
+            <td>Report as a <strong>current liability</strong> (do not offset cash) unless right of setoff within the same bank; changes usually appear in <strong>financing</strong> cash flows</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Classification & Presentation (U.S. GAAP)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Original maturity</strong> is assessed at the <em>date of purchase</em> to determine cash‑equivalent status.</li>
+        <li><strong>Restricted cash</strong> is presented separately on the balance sheet but is included in the <strong>reconciliation of beginning and ending cash, cash equivalents, and restricted cash</strong> on the statement of cash flows.</li>
+        <li><strong>Bank overdrafts</strong> are generally <em>current liabilities</em>; do not net against positive cash balances unless a legal right of setoff exists with the same bank.</li>
+        <li><strong>Foreign currency cash</strong> is translated at the period‑end spot rate; remeasurement or translation effects are recognized per the applicable foreign currency guidance.</li>
+      </ul>
+      <div class="callout tip"><strong>Exam cue:</strong> A three‑month time deposit purchased one month before year‑end (original maturity three months) <strong>is a cash equivalent</strong>; a six‑month certificate of deposit purchased one month before year‑end <strong>is not</strong>.</div>
+    </div>
+
+    <h2>2) Bank Reconciliation — Mechanics</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Bank to book:</strong> Adjust bank statement balance for deposits in transit and outstanding checks; adjust company book balance for bank charges, interest, collections, errors, electronic transfers.</li>
+        <li>Record <strong>journal entries</strong> for book‑side items only (e.g., service charges, non‑sufficient funds checks, note collections).</li>
+      </ul>
+    </div>
+
+    <h2>3) Petty Cash & Internal Controls</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Establish fund:</strong> Debit Petty cash / Credit Cash.</li>
+        <li><strong>Replenish:</strong> Debit expense accounts and Cash short (or Cash over) as needed / Credit Cash; Petty cash account changes only when the fund amount is increased or decreased.</li>
+        <li><strong>Controls:</strong> Segregation of duties, pre‑numbered checks, dual authorization for transfers, timely reconciliations, lockbox or electronic collections, positive pay with the bank.</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Cash or Not? (classification)</h3>
+        <table class="tbl">
+          <colgroup>
+            <col style="width:40%">
+            <col style="width:15%">
+            <col style="width:25%">
+            <col style="width:20%">
+          </colgroup>
+    
+          <tr><th>Item</th><th class="nowrap center">Amount</th><th>Classification</th><th>Notes</th></tr>
+          <tr><td>Undeposited checks received on 12/31 (not postdated)</td><td class="num">$25,000</td><td>Cash</td><td>Demand deposits or cash on hand</td></tr>
+          <tr><td>Money market fund (no withdrawal restrictions)</td><td class="num">$180,000</td><td>Cash equivalent</td><td>Short‑term, highly liquid</td></tr>
+          <tr><td>Three‑month Treasury bill purchased on 12/15</td><td class="num">$100,000</td><td>Cash equivalent</td><td>Original maturity ≤ three months</td></tr>
+          <tr><td>Six‑month certificate of deposit purchased on 12/15</td><td class="num">$150,000</td><td>Short‑term investment</td><td>Original maturity &gt; three months</td></tr>
+          <tr><td>Postdated customer check dated 1/10</td><td class="num">$7,500</td><td>Accounts receivable</td><td>Not cash until date</td></tr>
+          <tr><td>Restricted cash for debt service due in 18 months</td><td class="num">$90,000</td><td>Restricted cash — noncurrent</td><td>Classify by expected use</td></tr>
+          <tr><td>Bank overdraft (separate bank)</td><td class="num">$(12,000)</td><td>Current liability</td><td>Do not offset against positive cash</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Bank Reconciliation with Entries</h3>
+        <table class="tbl">
+          <colgroup><col style="width:38%"><col style="width:31%"><col style="width:31%"></colgroup>
+          <tr><th></th><th class="center">Bank</th><th class="center">Books</th></tr>
+          <tr><td>Ending balance, 12/31</td><td class="num">$210,400</td><td class="num">$206,250</td></tr>
+          <tr><td>Add: Deposits in transit</td><td class="num">$8,900</td><td></td></tr>
+          <tr><td>Less: Outstanding checks</td><td class="num">$(13,750)</td><td></td></tr>
+          <tr><td>Bank service charges (not yet recorded)</td><td></td><td class="num">$(75)</td></tr>
+          <tr><td>Non‑sufficient funds check returned</td><td></td><td class="num">$(1,225)</td></tr>
+          <tr><td>Note collected by bank (plus interest)</td><td></td><td class="num">$3,400</td></tr>
+          <tr><th>Adjusted balance</th><th class="num">$205,550</th><th class="num">$205,550</th></tr>
+        </table>
+        <ul>
+          <li><strong>Entries:</strong></li>
+          <li>Dr Bank service charges expense $75; Cr Cash $75</li>
+          <li>Dr Accounts receivable $1,225; Cr Cash $1,225</li>
+          <li>Dr Cash $3,400; Cr Notes receivable $3,200; Cr Interest revenue $200</li>
+        </ul>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — Petty Cash Replenishment</h3>
+        <table class="tbl">
+          <colgroup>
+            <col style="width:55%">
+            <col style="width:15%">
+            <col style="width:30%">
+          </colgroup>
+    
+          <tr><th>Scenario</th><th class="nowrap center">Amount</th><th>Entry</th></tr>
+          <tr><td>Fund established at $500</td><td class="num">$500</td><td>Dr Petty cash $500; Cr Cash $500</td></tr>
+          <tr><td>At month‑end, receipts: postage $140; supplies $120; taxi $60; on hand cash $175</td><td class="num">$325</td><td>Dr Postage expense $140; Dr Supplies expense $120; Dr Travel expense $60; Dr Cash short and over $5; Cr Cash $325</td></tr>
+          <tr><td>Increase fund to $700</td><td class="num">$200</td><td>Dr Petty cash $200; Cr Cash $200</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Statement of Cash Flows Reconciliation</h3>
+        <table class="tbl">
+          <tr><th>Balance sheet caption</th><th class="center">12/31/X1</th><th class="center">12/31/X2</th></tr>
+          <tr><td>Cash and cash equivalents</td><td class="num">$320,000</td><td class="num">$415,000</td></tr>
+          <tr><td>Restricted cash (current)</td><td class="num">$15,000</td><td class="num">$18,000</td></tr>
+          <tr><td>Restricted cash (noncurrent)</td><td class="num">$60,000</td><td class="num">$52,000</td></tr>
+          <tr><th>Total cash, cash equivalents, and restricted cash (for cash flows)</th><th class="num">$395,000</th><th class="num">$485,000</th></tr>
+        </table>
+        <div class="callout check">The statement of cash flows reconciles beginning <strong>$395,000</strong> to ending <strong>$485,000</strong>, even though restricted cash is presented separately on the balance sheet.</div>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Bank Overdraft Classification</h3>
+        <table class="tbl">
+          <tr><th>Situation</th><th>Balance sheet</th><th>Cash flows</th></tr>
+          <tr><td>Overdraft at Bank A, positive cash at Bank B (no right of setoff)</td><td>Show overdraft as a <strong>current liability</strong>; do not net</td><td>Changes typically shown in <strong>financing activities</strong></td></tr>
+          <tr><td>Sweep account with legal right of setoff within the same bank group</td><td>Net presentation may be acceptable</td><td>Classify cash flows by nature of the underlying transactions</td></tr>
+        </table>
+      </article>
+
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>What defines a cash equivalent? <strong>Original maturity of three months or less at purchase</strong>, highly liquid, minimal risk.</li>
+        <li>Where do bank overdrafts go under U.S. GAAP? <strong>Current liabilities</strong> (no netting unless setoff right).</li>
+        <li>Do you present restricted cash within cash equivalents on the balance sheet? <strong>No</strong>—present separately, but include in the cash‑flows reconciliation total.</li>
+        <li>Which side of the bank reconciliation requires entries? <strong>Book side</strong> (service charges, non‑sufficient funds checks, collections, errors).</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

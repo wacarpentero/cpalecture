@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Specific Areas of Engagement Risk (2025 AICPA Blueprints)</title>
+<meta name="description" content="Chapter‑style CPA reviewer for AUD Area II.G (Specific areas of engagement risk), aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b;    /* deep blue background */
+    --bg2:#0b1e3a;
+    --card:#0e2247;
+    --card2:#123064;
+    --ink:#eaf2ff;
+    --muted:#b9c7e6;
+    --accent:#3b82f6;
+    --accent2:#60a5fa;
+    --gold:#f5c542;
+    --ok:#10b981;
+    --warn:#f59e0b;
+    --bad:#ef4444;
+    --radius:16px;
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%) , linear-gradient(180deg,var(--bg1), #040b18 70%);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:7px;padding:2px 6px}
+  ul{padding-left:18px}
+  li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Specific Areas of Engagement Risk</h1>
+
+    <!-- Stacked sections with spacing -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Recognize <strong>common high‑risk areas</strong> in audits and the assertions they affect.</li>
+          <li>Design <strong>responsive procedures</strong> (tests of controls and substantive procedures) tailored to each risk.</li>
+          <li>Apply <strong>professional skepticism</strong> to significant estimates, unusual transactions, and fraud risks.</li>
+          <li>Document risk‑to‑procedure linkage and conclusions with sufficient clarity for review.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Area</th><th>Why risky</th><th>Focus assertions</th><th>Typical responses</th></tr>
+          <tr><td>Revenue recognition</td><td>Fraud incentives, cut‑off, complex contracts.</td><td>Occurrence, Cutoff, Accuracy, Presentation.</td><td>Contract review, cut‑off tests, confirmations, analytics; target JEs.</td></tr>
+          <tr><td>Estimates & fair value</td><td>Subjectivity, complex models.</td><td>Valuation, Presentation.</td><td>Independent expectation, specialist involvement, sensitivity testing.</td></tr>
+          <tr><td>Related parties</td><td>Non‑arm’s‑length terms, concealment.</td><td>Presentation, Completeness, Accuracy.</td><td>Search for RP, minutes/legal, confirmations; evaluate disclosures.</td></tr>
+          <tr><td>Going concern</td><td>Liquidity stress, covenant pressure.</td><td>Presentation, Disclosure.</td><td>Cash‑flow analysis, management plans, subsequent events, report effects.</td></tr>
+          <tr><td>Inventory</td><td>Existence, obsolescence, costing.</td><td>Existence, Completeness, Valuation.</td><td>Observe counts, price tests, roll‑forward/roll‑back, obsolescence analytics.</td></tr>
+          <tr><td>Leases</td><td>Completeness of contracts, discount rates.</td><td>Completeness, Valuation, Presentation.</td><td>Lease population search, recompute ROU/lease liability, disclosures.</td></tr>
+          <tr><td>Income taxes</td><td>Complexity, uncertain positions.</td><td>Valuation, Presentation.</td><td>Deferred tax proof, valuation allowance, UTP analysis, legal letters.</td></tr>
+          <tr><td>Financial instruments</td><td>Derivatives, classification/measurement.</td><td>Valuation, Presentation.</td><td>Third‑party pricing, model testing, hedge documentation.</td></tr>
+          <tr><td>Subsequent events & contingencies</td><td>Late‑breaking information.</td><td>Completeness, Presentation.</td><td>Subsequent receipts, legal inquiry, minutes/news scan, rep letter.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Revenue Recognition (ASC 606)</h2>
+    <div class="card">
+      <ul>
+        <li>Identify <strong>significant classes</strong> of revenue and contract types (variable consideration, multi‑element, bill‑and‑hold, consignment).</li>
+        <li>Evaluate controls: contract approval, price/term changes, cut‑off, returns/allowances.</li>
+        <li><strong>Procedures:</strong> read contracts; test cut‑off around period‑end; confirm terms with customers; test variable consideration and rights of return; analytics on margins and returns.</li>
+        <li><strong>Fraud focus:</strong> target journal entries, unusual manual credits/shipments, and channel stuffing indicators.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>Quarter‑end spike in shipments with extended payment terms → expand cut‑off and confirmations; assess whether control over goods transferred.</p></details>
+    </div>
+
+    <h2>2) Accounting Estimates & Fair Value (AU‑C 540)</h2>
+    <div class="card">
+      <ul>
+        <li>Identify estimates with high <strong>estimation uncertainty</strong> (impairments, CECL/credit losses, contingent liabilities, stock comp, level 3 fair values).</li>
+        <li>Evaluate methods, data, and assumptions; consider <strong>management bias</strong> (optimism, changes without justification).</li>
+        <li><strong>Procedures:</strong> develop independent expectations, test subsequent events, involve specialists, perform sensitivity analysis.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> Corroborate management’s significant assumptions with external data when available.</div>
+    </div>
+
+    <h2>3) Related Parties & Significant Unusual Transactions (AU‑C 550/240)</h2>
+    <div class="card">
+      <ul>
+        <li>Perform a <strong>broad search</strong> for related parties: org charts, ownership records, minutes, key contracts, confirmations, and inquiries beyond finance.</li>
+        <li>Evaluate terms for arm’s‑length; inspect supporting documents; scrutinize <strong>significant unusual transactions</strong>.</li>
+        <li>Ensure <strong>complete & accurate disclosure</strong> of relationships and transactions.</li>
+      </ul>
+    </div>
+
+    <h2>4) Going Concern (AU‑C 570)</h2>
+    <div class="card">
+      <ul>
+        <li>Identify events/conditions that raise substantial doubt (recurring losses, negative cash flows, overdue payables, covenant breaches).</li>
+        <li>Evaluate management’s plans (financing, cost reductions, asset sales) and their feasibility.</li>
+        <li>Consider period of evaluation and subsequent events; determine report effects (GC section/emphasis or modification if inadequate disclosure).</li>
+      </ul>
+    </div>
+
+    <h2>5) Inventory: Existence & Valuation</h2>
+    <div class="card">
+      <ul>
+        <li>Observe physical counts; test tags; perform <strong>roll‑forward/roll‑back</strong> if not at year‑end; consider cycle counts.</li>
+        <li>Price testing to vendor docs/BOM; test standard cost updates; evaluate overhead rates and variances.</li>
+        <li>Assess <strong>obsolescence</strong> (aging, slow‑moving, NRV tests) and consignment/rights.</li>
+      </ul>
+    </div>
+
+    <h2>6) Financial Instruments & Cash</h2>
+    <div class="card">
+      <ul>
+        <li>Confirm banks and investments; <strong>bank recs</strong> testing; cutoff for cash receipts/disbursements.</li>
+        <li>For derivatives: obtain trade confirms, pricing sources, hedge documentation and effectiveness assessments.</li>
+        <li>Classification and measurement (held‑to‑maturity, FVOCI/FVTPL), impairment/expected credit losses.</li>
+      </ul>
+    </div>
+
+    <h2>7) Leases (ASC 842)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Completeness:</strong> search for embedded leases (service contracts, outsourcing); compare to fixed asset registry and rent expense analytics.</li>
+        <li>Recompute ROU assets and lease liabilities; evaluate discount rate and lease term (renewal options).</li>
+        <li>Evaluate classification, modifications, and required disclosures.</li>
+      </ul>
+    </div>
+
+    <h2>8) Income Taxes (ASC 740)</h2>
+    <div class="card">
+      <ul>
+        <li>Reconcile tax provision to trial balance; test current and deferred tax computations.</li>
+        <li>Evaluate <strong>valuation allowance</strong> and uncertain tax positions; review returns and correspondence with authorities.</li>
+        <li>Check presentation/disclosure (rate reconciliation, NOLs, UTP roll‑forward).</li>
+      </ul>
+    </div>
+
+    <h2>9) Subsequent Events & Contingencies (AU‑C 560/450)</h2>
+    <div class="card">
+      <ul>
+        <li>Read minutes through the report date; inquire of legal counsel; scan general ledger post‑year‑end; inspect subsequent receipts on AR and cash disbursements for liabilities.</li>
+        <li>Evaluate whether events require <strong>adjustment</strong> or <strong>disclosure</strong>; obtain updated management representations.</li>
+      </ul>
+    </div>
+
+    <h2>10) Service Organizations (SOC 1®)</h2>
+    <div class="card">
+      <ul>
+        <li>Identify processes outsourced (payroll, revenue platforms); obtain SOC 1® report.</li>
+        <li>Check coverage period and <strong>complementary user‑entity controls</strong>; design procedures to test those controls at the user entity.</li>
+        <li>Consider bridge letters for gaps; evaluate deviations reported by the service auditor.</li>
+      </ul>
+    </div>
+
+    <h2>11) Reliance on IT & System‑Generated Information</h2>
+    <div class="card">
+      <ul>
+        <li>Identify <strong>key reports</strong> used as evidence; test report logic or rely on tested app controls/ITGCs.</li>
+        <li>Assess end‑user computing (spreadsheets) risks and perform validation of formulas/data integrity.</li>
+      </ul>
+    </div>
+
+    <h2>12) Opening Balances & Initial Audits (AU‑C 510)</h2>
+    <div class="card">
+      <ul>
+        <li>Obtain evidence that opening balances contain no material misstatements affecting the current period.</li>
+        <li>Evaluate consistency of accounting policies; review predecessor auditor communications when available.</li>
+      </ul>
+    </div>
+
+    <h2>13) Risk → Procedure Mapping (Quick Matrix)</h2>
+    <div class="card">
+      <table class="tbl">
+        <tr><th>Risk</th><th>Assertion(s)</th><th>Examples of responses</th></tr>
+        <tr><td>Revenue cut‑off at year‑end</td><td>Occurrence, Cutoff</td><td>Expanded shipping docs testing ±10 days; customer confirms; reverse sales analysis.</td></tr>
+        <tr><td>Level 3 fair value model bias</td><td>Valuation</td><td>Independent expectation, challenge key assumptions, sensitivity analysis, specialist.</td></tr>
+        <tr><td>Lease completeness (embedded)</td><td>Completeness</td><td>Search service contracts, analytics on rent vs recognized leases, legal expense scan.</td></tr>
+        <tr><td>Inventory obsolescence</td><td>Valuation</td><td>Aging analytics, lower of cost/NRV testing, subsequent sales review.</td></tr>
+        <tr><td>Unrecorded liabilities</td><td>Completeness</td><td>Subsequent cash disbursement testing, vendor confirmations, unmatched receiving reports.</td></tr>
+      </table>
+    </div>
+
+    <h2>14) Documentation</h2>
+    <div class="card">
+      <ul>
+        <li>Risk rationale, affected assertions, and chosen procedures (with N/T/E and sampling basis).</li>
+        <li>Results, evaluation versus materiality/performance materiality, and required communications.</li>
+        <li>Conclusions, including implications for the report and subsequent period planning.</li>
+      </ul>
+    </div>
+
+    <h2>15) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Presumed fraud risk area? <strong>Revenue recognition (and management override).</strong></li>
+        <li>Best procedure for unrecorded liabilities? <strong>Subsequent disbursement testing.</strong></li>
+        <li>What validates a key report used as evidence? <strong>Test of report logic or reliance on effective app controls/ITGCs.</strong></li>
+        <li>When do you reference component auditors/specialists in the report? <strong>Only when required/permitted by standards or law.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

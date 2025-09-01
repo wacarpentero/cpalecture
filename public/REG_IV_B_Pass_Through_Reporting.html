@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG IV.B Reporting of Items from Pass‑Through Entities</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+/* hidden answers */
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:#b5ffb1}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+.badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+       border:1px solid rgba(255,255,255,.12);margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Reporting Items from Pass‑Through Entities</h1>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Use</strong> information from a Schedule K‑1 (K‑1) to report an owner’s share of <em>ordinary business income (loss)</em> and <em>separately stated items</em> from partnerships (Form 1065) and S corporations (Form 1120‑S).</li>
+<li><strong>Identify</strong> the correct Form 1040 schedules for common items and note key differences between partnerships and S corporations.</li>
+<li><strong>Report</strong> a Single‑Member Limited Liability Company (SMLLC) treated as a <em>disregarded entity</em> on the appropriate schedule (Schedule C/E/F) and compute net income.</li>
+<li><strong>Spot</strong> when basis, at‑risk (AR) and passive activity loss (PAL) limits may prevent losses or deductions from flowing to Form 1040.</li>
+<li><strong>Apply</strong> the Qualified Business Income (QBI) deduction under Internal Revenue Code §199A (IRC §199A) at a high level (ownership pass‑through to Form 8995/8995‑A).</li>
+</ul>
+</section>
+<section class="card">
+<h2>Quick Reference — What goes where?</h2>
+<div class="grid-2 small">
+<div>
+<h4>Partnership K‑1 (Form 1065)</h4>
+<table class="tbl mini">
+<tr><th>Common K‑1 item</th><th>Where on Form 1040?</th></tr>
+<tr><td>Box 1 Ordinary business income (loss)</td><td>Schedule E (Part II), passive vs. nonpassive; subject to self‑employment (SE) for general partners.</td></tr>
+<tr><td>Box 4 Guaranteed payments</td><td>Schedule E; included in SE income.</td></tr>
+<tr><td>Box 2/3 Rental real estate/other rental</td><td>Schedule E (Part II); generally passive unless real estate professional rules met.</td></tr>
+<tr><td>Interest, ordinary dividends</td><td>Schedule B.</td></tr>
+<tr><td>Capital gains/losses, collectibles</td><td>Schedule D with K‑1 statements.</td></tr>
+<tr><td>§1231 gains/losses</td><td>Form 4797, then to Schedule D/1.</td></tr>
+<tr><td>§179 deduction</td><td>Form 4562; subject to owner‑level taxable‑income limit.</td></tr>
+<tr><td>Foreign taxes/credits</td><td>Form 1116, if applicable.</td></tr>
+</table>
+<div class="callout mini"><strong>SE reminder:</strong> Ordinary income and guaranteed payments are SE income for general partners; limited partners generally exclude ordinary income from SE (except guaranteed payments).</div>
+</div>
+<div>
+<h4>S Corporation K‑1 (Form 1120‑S)</h4>
+<table class="tbl mini">
+<tr><th>Common K‑1 item</th><th>Where on Form 1040?</th></tr>
+<tr><td>Box 1 Ordinary business income (loss)</td><td>Schedule E (Part II); <strong>not</strong> SE income. Reasonable compensation is reported on Form W‑2.</td></tr>
+<tr><td>Rental income</td><td>Schedule E (Part II); generally passive unless exceptions.</td></tr>
+<tr><td>Interest, dividends, capital gains</td><td>Schedules B/D as reported on K‑1 statements.</td></tr>
+<tr><td>§179 deduction</td><td>Form 4562; owner‑level limit applies.</td></tr>
+<tr><td>Credits, foreign items</td><td>Form 3800/1116 as applicable.</td></tr>
+</table>
+<div class="callout mini"><strong>Basis difference:</strong> Partner basis includes share of partnership liabilities; S corporation shareholder basis generally <em>does not</em> include corporate debt (only direct loans by the shareholder).</div>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>Representative Tasks → Worked Examples</h2>
+<h3>1) K‑1 to 1040 mapping</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Partner’s K‑1 shows: Box 1 ordinary income <strong>$24,000</strong> (nonpassive), guaranteed payments <strong>$6,000</strong>, interest income <strong>$400</strong>, §179 <strong>$2,000</strong>.</td>
+<td>Schedule E reports <strong>$24,000</strong> + <strong>$6,000</strong> = <strong>$30,000</strong> nonpassive; both amounts are SE income. Schedule B includes <strong>$400</strong> interest. Form 4562 reflects §179 of <strong>$2,000</strong> (subject to owner taxable‑income limit).</td>
+</tr>
+</table>
+<h3>2) S corporation vs. partnership — SE exposure</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>S corporation shareholder has K‑1 Box 1 income of <strong>$90,000</strong> and receives Form W‑2 wages of <strong>$70,000</strong>. Partner in a separate partnership has K‑1 Box 1 income of <strong>$40,000</strong> (general partner).</td>
+<td>S corporation K‑1 Box 1 <strong>$90,000</strong> is <em>not</em> SE income; payroll wages <strong>$70,000</strong> already subject to FICA. Partnership income <strong>$40,000</strong> is SE income for the general partner.</td>
+</tr>
+</table>
+<h3>3) §179 passed through</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Partnership elects §179 of <strong>$50,000</strong> and allocates <strong>$20,000</strong> to Partner A. A’s business taxable income from all sources is <strong>$15,000</strong>.</td>
+<td>Partner A deducts §179 of <strong>$15,000</strong> this year and <strong>$5,000</strong> carries forward (owner‑level limit). Apply bonus/MACRS to remaining asset basis at the entity as appropriate.</td>
+</tr>
+</table>
+<h3>4) Disregarded entity (SMLLC)</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Single‑member LLC operates a consulting business; receipts <strong>$120,000</strong>, expenses <strong>$34,000</strong>.</td>
+<td>Report on Schedule C: net profit = 120,000 − 34,000 = <strong>$86,000</strong>; subject to SE tax. No K‑1 is issued when treated as disregarded.</td>
+</tr>
+</table>
+<h3>5) Basis/at‑risk (high‑level)</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Partner allocated loss <strong>($18,000)</strong>; outside basis before loss <strong>$12,000</strong> and at‑risk amount <strong>$10,000</strong>.</td>
+<td>Deductible loss limited to the lesser of basis and at‑risk → <strong>$10,000</strong> deductible; <strong>$8,000</strong> suspended and carried over until basis/AR restored and PAL rules satisfied.</td>
+</tr>
+</table>
+<h3>6) QBI snapshot</h3>
+<div class="callout small">
+<strong>Qualified Business Income (QBI) under IRC §199A:</strong> Flow‑through QBI amounts from K‑1 feed Form 8995/8995‑A to compute up to a <strong>20%</strong> deduction, subject to thresholds, W‑2 wage and basis in qualified property limits, and specified service trade or business (SSTB) phase‑outs. On the exam, know that <em>QBI is computed after entity‑level §179/bonus/MACRS</em> and before the individual standard/itemized deduction.
+    </div>
+</section>
+<section class="card">
+<h2>Diagnostics — What to Check</h2>
+<ul class="small">
+<li><span class="tag">Passive vs. nonpassive</span> Confirm material participation (MP) status for Schedule E treatment and PAL limitations.</li>
+<li><span class="tag">Basis/AR</span> Ensure losses/deductions do not exceed owner basis and at‑risk amounts; track S corporation shareholder loans separately.</li>
+<li><span class="tag">SE exposure</span> General partners &amp; guaranteed payments are SE; S corporation ordinary income is not.</li>
+<li><span class="tag">Separately stated</span> Items like interest, dividends, capital gains, charitable contributions, §179, foreign taxes must retain character on the Form 1040.</li>
+<li><span class="tag">QBI</span> Verify correct qualified business loss/income flow and QBID computation on Form 8995/8995‑A.</li>
+</ul>
+</section>
+<!-- MCQs MUST BE LAST -->
+<section class="card">
+<h2>Quick Practice</h2>
+<ol class="small">
+<li><strong>SE tax:</strong> Partner (general) has K‑1 Box 1 income of <strong>$32,000</strong>. SE treatment?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Subject to SE tax — ordinary income of a general partner is SE income.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>S corp ordinary income:</strong> Shareholder’s K‑1 shows Box 1 income of <strong>$60,000</strong> and W‑2 wages of <strong>$50,000</strong>. Which is SE income?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Only the <strong>$50,000</strong> W‑2 wages are subject to FICA/SE. The <strong>$60,000</strong> K‑1 income is not SE income.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>§179 owner limit:</strong> K‑1 allocates §179 of <strong>$12,000</strong>; owner has business taxable income of <strong>$9,000</strong> from all sources. Current‑year §179 deduction?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>$9,000</strong> allowed; <strong>$3,000</strong> carries forward.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Disregarded entity reporting:</strong> SMLLC with revenue <strong>$80,000</strong> and expenses <strong>$22,000</strong> files where?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Schedule C with net profit <strong>$58,000</strong>; no K‑1 is issued.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Basis vs. at‑risk:</strong> Partner has basis <strong>$14,000</strong>, at‑risk <strong>$11,000</strong>, loss <strong>($16,000)</strong>. Deductible loss?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block"><strong>$11,000</strong> — limited by the smaller at‑risk amount; remainder suspended.</div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Separately stated item:</strong> Partnership K‑1 shows charitable contributions of <strong>$2,400</strong>. Where is it reported?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">Schedule A (if itemizing) — it retains character and does not flow through Schedule E as ordinary income.</div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

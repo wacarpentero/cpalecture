@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR I.E: Special Purpose Frameworks</title>
+<meta name="description" content="CPA reviewer chapter for FAR I.E — Special Purpose Frameworks (cash, modified cash, income tax, regulatory, contractual), aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Special Purpose Frameworks</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify common <strong>special purpose frameworks (SPFs)</strong> also known as <strong>other comprehensive bases of accounting (OCBOA)</strong>: <strong>cash basis</strong>, <strong>modified cash basis</strong>, <strong>income tax basis</strong>, <strong>regulatory basis</strong>, and <strong>contractual basis</strong>.</li>
+          <li>Recognize typical <strong>statement titles</strong>, <strong>recognition principles</strong>, and <strong>disclosures</strong> for each framework.</li>
+          <li>Apply conversions and disclosures when moving between <strong>U.S. Generally Accepted Accounting Principles (U.S. GAAP)</strong> and an SPF.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <colgroup><col style="width:18%"><col style="width:22%"><col style="width:38%"><col style="width:22%"></colgroup>
+          <tr><th>Framework</th><th>Typical statement titles</th><th>Core recognition ideas</th><th>Key disclosures / notes</th></tr>
+          <tr>
+            <td>Cash basis</td>
+            <td>
+              Statement of Cash Receipts and Disbursements;<br>
+              Statement of Assets and Liabilities—<em>cash basis</em> (optional)
+            </td>
+            <td>Recognize revenues when <strong>received</strong> in cash and expenses when <strong>paid</strong>. No accruals.</td>
+            <td>Accounting policies; limitations of cash basis; significant noncash events disclosed.</td>
+          </tr>
+          <tr>
+            <td>Modified cash basis</td>
+            <td>Cash receipts/disbursements with specified <em>modifications</em> (e.g., capitalize long‑lived assets, accrue taxes payable).</td>
+            <td>Cash basis plus clearly stated, <strong>consistent modifications</strong>.</td>
+            <td>Describe each modification and measurement method.</td>
+          </tr>
+          <tr>
+            <td>Income tax basis</td>
+            <td>Statement of Assets, Liabilities, and Equity—<em>income tax basis</em>;<br>
+                Statement of Revenues and Expenses—<em>income tax basis</em></td>
+            <td>Follow the entity’s tax accounting: depreciation methods/lives, recognition of revenue and expense per the tax return; no deferred taxes.</td>
+            <td>Policy for significant tax departures from U.S. GAAP; reconciliation of retained earnings to tax return if helpful.</td>
+          </tr>
+          <tr>
+            <td>Regulatory basis</td>
+            <td>Statements prescribed by a regulator (e.g., insurance statutory statements, utility commission reports).</td>
+            <td>Recognition/presentation per regulator; may diverge from U.S. GAAP.</td>
+            <td>Identify the regulatory body and departures from U.S. GAAP; limitations on use if required.</td>
+          </tr>
+          <tr>
+            <td>Contractual basis</td>
+            <td>Statements required by a contract or agreement (e.g., lender covenant schedules).</td>
+            <td>Recognition as stipulated by the agreement.</td>
+            <td>Describe the contractual basis and intended users; restriction on use may apply.</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Presentation & Titles</h2>
+    <div class="card">
+      <ul>
+        <li>Each statement’s title should identify the <strong>basis of accounting</strong> (e.g., “Statement of Revenues and Expenses — <em>Income Tax Basis</em>”).</li>
+        <li>Notes must describe the framework and any <strong>modifications</strong> (for modified cash).</li>
+        <li>Comparative statements are allowed; ensure consistency of the basis across periods.</li>
+      </ul>
+    </div>
+
+    <h2>2) Recognition Highlights</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Cash basis:</strong> No receivables/payables, no inventory capitalization, no depreciation; disclose significant commitments and noncash activities.</li>
+        <li><strong>Modified cash:</strong> Choose common modifications (capitalize and depreciate property, plant, and equipment; accrue payroll taxes payable; carry debt with amortization). Disclose each modification.</li>
+        <li><strong>Income tax basis:</strong> Use tax depreciation/amortization; recognize revenues/expenses per tax laws (for example, completed contract vs. percentage‑of‑completion for eligible contractors). No deferred tax assets/liabilities.</li>
+        <li><strong>Regulatory/contractual:</strong> Follow the required rules; disclose departures from U.S. GAAP and any restricted‑use intent.</li>
+      </ul>
+    </div>
+
+    <h2>3) Disclosures Common to SPFs</h2>
+    <div class="card">
+      <ul>
+        <li>Summary of significant accounting policies, including basis of accounting and modifications (if any).</li>
+        <li>Narrative of significant estimates and risks, related‑party transactions, and subsequent events.</li>
+        <li>Explanation of how the basis affects comparability to U.S. GAAP statements.</li>
+      </ul>
+      <div class="callout tip"><strong>Exam cue:</strong> An <em>Emphasis‑of‑Matter</em> paragraph is required in the auditor’s report to describe the special purpose framework; some bases (contractual, certain regulatory) may include <strong>restricted use</strong> wording.</div>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Converting Accrual U.S. GAAP to Cash Basis (mini‑reconciliation)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:54%"><col style="width:23%"><col style="width:23%"></colgroup>
+          <tr><th>Adjustment</th><th class="center">Effect on cash‑basis income</th><th class="center">Effect on cash‑basis assets/liabilities</th></tr>
+          <tr><td>Remove change in Accounts receivable (ending $90,000; beginning $70,000)</td><td class="num">$(20,000)</td><td class="num">Remove A/R $90,000</td></tr>
+          <tr><td>Remove change in Accounts payable (ending $55,000; beginning $40,000)</td><td class="num">$15,000</td><td class="num">Remove A/P $55,000</td></tr>
+          <tr><td>Remove noncash depreciation expense</td><td class="num">$30,000</td><td class="num">No depreciation on cash basis</td></tr>
+          <tr><td>Record cash capital expenditures made this period</td><td class="num">$(85,000)</td><td class="num">No capitalization on pure cash basis</td></tr>
+          <tr><th>Net effect on income</th><th class="num">$(60,000)</th><th></th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — Modified Cash: Specified Modifications</h3>
+        <table class="tbl">
+          <tr><th>Chosen modification</th><th>Why used</th><th>Disclosure language (sample)</th></tr>
+          <tr><td>Capitalize and depreciate property, plant, and equipment</td><td>Better matches cost of long‑lived assets</td><td>“The entity follows a modified cash basis of accounting that capitalizes property, plant, and equipment and recognizes depreciation on a straight‑line basis over estimated useful lives.”</td></tr>
+          <tr><td>Accrue payroll taxes payable</td><td>Obligations arise before cash payment</td><td>“Payroll tax liabilities are accrued when payroll is incurred.”</td></tr>
+          <tr><td>Carry long‑term debt with amortization</td><td>Reflects outstanding obligations</td><td>“Debt is recognized and amortized using the effective interest method.”</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — Income Tax Basis vs. U.S. GAAP (selected differences)</h3>
+        <table class="tbl">
+          <tr><th>Area</th><th>Income tax basis</th><th>U.S. GAAP (for comparison)</th></tr>
+          <tr><td>Depreciation</td><td>Tax methods/lives (e.g., Modified Accelerated Cost Recovery System)</td><td>Systematic allocation over useful life (straight‑line/unit‑of‑production, etc.)</td></tr>
+          <tr><td>Revenue recognition</td><td>Per tax rules (e.g., completed contract may be permitted)</td><td>Control‑based recognition per Accounting Standards Codification Topic 606</td></tr>
+          <tr><td>Deferred taxes</td><td>None</td><td>Recognize deferred tax assets/liabilities for temporary differences (Accounting Standards Codification Topic 740)</td></tr>
+          <tr><td>Uncertain tax positions</td><td>Disclose if significant</td><td>Recognize and measure per Accounting Standards Codification Interpretation (ASC 740‑10)</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Picking Proper Titles</h3>
+        <table class="tbl">
+          <tr><th>Scenario</th><th>Correct statement title</th></tr>
+          <tr><td>Privately held retailer on income tax basis</td><td><strong>Statement of Assets, Liabilities, and Equity — Income Tax Basis</strong></td></tr>
+          <tr><td>Community club on pure cash basis</td><td><strong>Statement of Cash Receipts and Disbursements</strong></td></tr>
+          <tr><td>Contractually required basis for lender covenants</td><td><strong>Statement of Revenues and Expenses — Contractual Basis</strong></td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Does income tax basis present deferred taxes? <strong>No.</strong></li>
+        <li>What must a modified cash basis report include? <strong>Clear description of each modification and the measurement method.</strong></li>
+        <li>Must SPF statement titles name the basis? <strong>Yes</strong> — always identify the basis in the title.</li>
+        <li>Cash basis effect on capital assets? <strong>No capitalization</strong> (disclose significant noncash events instead).</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

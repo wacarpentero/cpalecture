@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG IV.D Loss Limitations</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa; --ok:#b5ffb1;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+/* hidden answers */
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:var(--ok)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Loss Limitations</h1>
+<p class="mini muted"><strong>Acronyms:</strong> outside basis <strong>(basis)</strong>; <strong>AR</strong> = at‑risk; <strong>PAL</strong> = passive activity loss; <strong>MP</strong> = material participation; <strong>EBL</strong> = excess business loss (non‑corporate); <strong>NOL</strong> = net operating loss; <strong>CLCO</strong> = capital loss carryover.</p>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Calculate</strong> the net tax loss allowed on the sale of capital property including netting, the <em>capital loss limitation</em>, and carryforwards.</li>
+<li><strong>Determine</strong> the amount of ordinary business loss allowed for a partner/shareholder after applying the ordering rules: <em>basis → AR → PAL → EBL</em>.</li>
+<li><strong>Identify</strong> losses disallowed for tax (hobby, wash sale, personal‑use asset) and compute deferrals/adjustments where applicable.</li>
+<li><strong>Review</strong> Form 1040 impacts and common diagnostics that cause losses to be suspended or reclassified.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Loss‑Limitation Framework (Order Matters)</h2>
+<table class="tbl small">
+<tr><th>Step</th><th>What it limits</th><th>Key points</th></tr>
+<tr>
+<td>1) Basis</td>
+<td>Pass‑through losses/deductions</td>
+<td>Partnership basis includes share of liabilities; S corporation shareholder basis generally excludes corporate debt (direct shareholder loans only).</td>
+</tr>
+<tr>
+<td>2) At‑Risk (AR)</td>
+<td>Economic risk borne by taxpayer</td>
+<td>Disallows losses beyond amounts actually at risk (recourse + certain qualified nonrecourse real estate debt).</td>
+</tr>
+<tr>
+<td>3) PAL</td>
+<td>Losses from passive activities</td>
+<td>Passive loss can only offset passive income unless an exception (e.g., real estate professional) applies. Suspended at activity level.</td>
+</tr>
+<tr>
+<td>4) EBL</td>
+<td>Aggregate business losses of non‑corporate taxpayers</td>
+<td>Any remaining “excess” over the statutory threshold is disallowed and carried forward as part of NOL.</td>
+</tr>
+<tr>
+<td>5) NOL</td>
+<td>Overall negative taxable income from business sources</td>
+<td>Carry rules apply per current law; NOL is computed after the above limitations.</td>
+</tr>
+</table>
+<div class="callout mini"><strong>Exam tip:</strong> Work the ordering in sequence. If a loss fails at an earlier step, you do <em>not</em> test later limitations for that disallowed portion.</div>
+</section>
+<section class="card">
+<h2>Representative Tasks → Worked Examples</h2>
+<h3>1) Capital loss netting &amp; limitation</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>STCL (short‑term capital loss) <strong>($5,600)</strong>; LTCG (long‑term capital gain) <strong>$2,200</strong>; no other gains/losses.</td>
+<td>Net capital result = ($5,600) + $2,200 = <strong>($3,400)</strong> net capital loss.<br/>
+            Deduct up to the annual capital loss limit (e.g., <strong>$3,000</strong> for individuals) against ordinary income; carry forward remainder <strong>$400</strong> as CLCO.</td>
+</tr>
+</table>
+<h3>2) Basis → AR → PAL ordering (partnership)</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Partner’s loss allocation <strong>($18,000)</strong>. Outside basis before loss <strong>$14,000</strong>; at‑risk amount <strong>$12,000</strong>. Activity is passive; passive income this year <strong>$4,000</strong>.</td>
+<td>
+          Basis limit → deductible up to <strong>$14,000</strong>; disallow <strong>$4,000</strong> for lack of basis.<br/>
+          AR limit → of the allowed <strong>$14,000</strong>, only <strong>$12,000</strong> is at‑risk ⇒ disallow additional <strong>$2,000</strong> (AR suspended).<br/>
+          PAL limit → allowed this year = min(remaining <strong>$12,000</strong>, passive income <strong>$4,000</strong>) = <strong>$4,000</strong>. Suspend <strong>$8,000</strong> as PAL.
+        </td>
+</tr>
+</table>
+<h3>3) S corporation basis vs. loans</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Shareholder owns 100% of S corp. K‑1 loss <strong>($20,000)</strong>. Shareholder stock basis <strong>$6,000</strong>. Corp bank debt (no personal guarantee) <strong>$50,000</strong>. Shareholder direct loan to S corp <strong>$5,000</strong>.</td>
+<td>Basis available = stock basis <strong>$6,000</strong> + direct shareholder loan <strong>$5,000</strong> = <strong>$11,000</strong>.<br/>
+            Corporate debt not personally lent/guaranteed does <em>not</em> increase shareholder basis. Deductible this year = <strong>$11,000</strong>; suspend <strong>$9,000</strong> for lack of basis.</td>
+</tr>
+</table>
+<h3>4) Wash sale (defers, not deducts)</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Sell 100 shares for <strong>$7,200</strong>; basis <strong>$8,000</strong>. Repurchase substantially identical stock within 30 days for <strong>$7,500</strong>.</td>
+<td>Immediate loss <strong>($800)</strong> is disallowed by wash sale rules. Add <strong>$800</strong> to new basis: <strong>$7,500</strong> + <strong>$800</strong> = <strong>$8,300</strong> new basis; holding period tacks.</td>
+</tr>
+</table>
+<h3>5) Hobby vs. business</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>“Hobby” activity shows income <strong>$900</strong>, expenses <strong>$2,200</strong>.</td>
+<td>Hobby expenses are not deductible against other income. Report hobby income <strong>$900</strong> as other income; <strong>$2,200</strong> expenses are nondeductible personal expenses.</td>
+</tr>
+</table>
+<h3>6) Personal‑use asset sale</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Computation</th></tr>
+<tr>
+<td>Taxpayer sells personal‑use furniture for <strong>$300</strong>; basis <strong>$900</strong>.</td>
+<td>Loss <strong>($600)</strong> on personal‑use asset is not deductible. Gains on personal‑use assets are taxable; losses are disallowed.</td>
+</tr>
+</table>
+</section>
+<section class="card">
+<table class="tbl small"><tr><th>Facts</th><th>Computation</th></tr><tr><td>Taxpayer materially participates in an LLC (non‑passive). Business loss ($180,000). Outside basis $250,000; at‑risk amount $250,000. Aggregate business income from all other sources ($40,000). Assume an illustrative EBL threshold of $300,000 for married filing jointly (MFJ).</td><td>PAL does not apply because activity is non‑passive. Basis and at‑risk do not limit. Aggregate business loss = $180,000 − $40,000 = $140,000. Compare to EBL threshold ($300,000): not exceeded ⇒ ordinary loss allowed this year = $140,000. If the aggregate loss exceeded the threshold, the excess becomes part of the NOL carryforward.</td></tr></table><h3>2A) Material participation (non‑passive) &amp; EBL snapshot</h3><h2>Diagnostics — What to Check</h2>
+<ul class="small">
+<li><span class="tag">Ordering</span> Apply basis → AR → PAL → EBL before computing NOL.</li>
+<li><span class="tag">Entity differences</span> Partnership debt may increase partner basis; S corporation debt generally does not (only direct shareholder loans).</li>
+<li><span class="tag">Capital loss cap</span> Remember the individual limit against ordinary income and CLCO forward.</li>
+<li><span class="tag">Wash sale</span> Denied loss increases replacement basis; dates and “substantially identical” matter.</li>
+<li><span class="tag">Hobby/personal</span> Losses are not deductible; classify the activity correctly.</li>
+</ul>
+</section>
+<!-- Practice Questions MUST be the last section -->
+<section class="card">
+<h2>Practice Questions</h2>
+<ol class="small">
+<li><strong>Capital loss limit:</strong> Net capital loss for the year is <strong>($4,700)</strong>. How much reduces ordinary income this year and what carries forward?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Deduct <strong>$3,000</strong> against ordinary income; carry forward <strong>$1,700</strong> as CLCO.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Basis vs. AR:</strong> S corp K‑1 loss <strong>($12,000)</strong>; stock basis <strong>$8,000</strong>; direct shareholder loan <strong>$1,000</strong>. Deductible?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Basis available <strong>$9,000</strong> ⇒ deduct <strong>$9,000</strong>; suspend <strong>$3,000</strong> for lack of basis.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>PAL test:</strong> Partner has passive income <strong>$2,600</strong> and passive loss (after basis/AR) <strong>$7,000</strong>. Allowed this year?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Limited to passive income ⇒ allow <strong>$2,600</strong>; suspend <strong>$4,400</strong> PAL.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Wash sale basis:</strong> Sell for <strong>$5,000</strong> with basis <strong>$6,200</strong>; buy within 30 days for <strong>$5,400</strong>. New basis?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Disallowed loss <strong>$1,200</strong> added to new basis ⇒ <strong>$6,600</strong>.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Hobby loss:</strong> Income <strong>$1,100</strong>, expenses <strong>$2,800</strong>. Deductible?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Report <strong>$1,100</strong> income; the <strong>$2,800</strong> expenses are nondeductible (no loss allowed).
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Ordering trap:</strong> Partner has loss <strong>($9,000)</strong>; basis <strong>$7,000</strong>; at‑risk <strong>$6,000</strong>; passive income <strong>$0</strong>. Deductible this year?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          Basis caps at <strong>$7,000</strong>; AR further caps to <strong>$6,000</strong>; PAL caps to <strong>$0</strong>. All <strong>$6,000</strong> is suspended (PAL) and <strong>$2,000</strong> is suspended for lack of basis.
+        </div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

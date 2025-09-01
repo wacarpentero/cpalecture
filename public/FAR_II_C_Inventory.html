@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.C: Inventory</title>
+<meta name="description" content="CPA reviewer chapter for FAR II.C — Inventory (costing, measurement, LCNRV/LCM, retail & gross profit methods, consignment, presentation), aligned to 2025 AICPA Blueprints under U.S. GAAP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .nowrap{white-space:nowrap}
+  .small{font-size:0.95rem}
+  /* Journal entry styling */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 260px 96px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{overflow:visible;white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+  .je .cr{padding-left:0}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Inventory</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Identify inventory <strong>cost components</strong> and distinguish <strong>product costs</strong> (capitalized) from <strong>period costs</strong> (expensed).</li>
+          <li>Apply cost flow assumptions: <strong>First‑in, first‑out (FIFO)</strong>, <strong>Last‑in, first‑out (LIFO)</strong>, and <strong>weighted‑average</strong> under <strong>perpetual</strong> or <strong>periodic</strong> systems.</li>
+          <li>Measure inventory at <strong>lower of cost or net realizable value (LCNRV)</strong>; for LIFO/retail, apply <strong>lower of cost or market (LCM)</strong> using <em>ceiling</em> and <em>floor</em> constraints.</li>
+          <li>Estimate ending inventory with the <strong>gross profit method</strong> and the <strong>retail inventory method</strong> (average cost and conventional).</li>
+          <li>Account for <strong>purchase discounts</strong>, freight, consignment, and inventory write‑downs; evaluate the impact of <strong>errors</strong> on the financial statements.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:22%"><col style="width:48%"><col style="width:30%"></colgroup>
+          <tr><th>Topic</th><th>Core points</th><th>Exam flags</th></tr>
+          <tr><td>Cost components</td><td>Include purchase price (net of <em>trade</em> discounts), nonrefundable taxes, freight‑in, and conversion costs; exclude abnormal waste, freight‑out (selling), storage for finished goods.</td><td>Freight‑in capitalized; freight‑out is selling expense.</td></tr>
+          <tr><td>Cost flows</td><td>FIFO approximates current cost on the balance sheet; LIFO approximates current cost in cost of goods sold; weighted‑average smooths price volatility.</td><td>LIFO conformity (tax rule) and layer liquidation effects on income.</td></tr>
+          <tr><td>LCNRV / LCM</td><td>LCNRV applied by item or category; LCM for LIFO/retail uses <em>market</em>=replacement cost bounded by <em>ceiling</em>=NRV and <em>floor</em>=NRV−normal profit.</td><td>U.S. GAAP does <strong>not</strong> allow reversal of write‑downs.</td></tr>
+          <tr><td>Retail / gross profit methods</td><td>Retail converts ending retail prices to cost using a <em>cost‑to‑retail</em> ratio; conventional method excludes markdowns from the ratio (approximates LCNRV).</td><td>Common quick‑compute estimation topics.</td></tr>
+          <tr><td>Consignment</td><td>Inventory remains property of the <strong>consignor</strong> until sold; consignee records a payable for proceeds less commission.</td><td>Watch shipping terms; goods out on consignment stay in consignor’s ending inventory.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Costing & Classification</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Product costs (capitalized):</strong> purchase price (net of trade discount), freight‑in, import duties, handling, and conversion costs (direct labor and manufacturing overhead). Abnormal spoilage/waste is expensed.</li>
+        <li><strong>Period costs (expensed):</strong> selling costs (including freight‑out), most general and administrative costs, and storage costs for finished goods.</li>
+        <li><strong>Purchase discounts:</strong> <em>gross method</em> records the full invoice and reduces cost when discounts are taken; <em>net method</em> records net of discount and treats missed discounts as interest‑like expense.</li>
+      </ul>
+    </div>
+
+    <h2>2) Measurement at LCNRV or LCM</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Net realizable value (NRV)</strong> = expected selling price − costs of completion − selling costs.</li>
+        <li>Apply <strong>LCNRV</strong> to items or categories; write down to NRV when NRV &lt; cost. Under U.S. GAAP, do <strong>not</strong> reverse write‑downs in later periods.</li>
+        <li>For <strong>LIFO</strong> or the <strong>retail inventory method</strong>, use <strong>LCM</strong> where <em>market</em> is current replacement cost but not above the <em>ceiling</em> (NRV) nor below the <em>floor</em> (NRV − normal profit).</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+
+      <article class="card" style="width:100%">
+        <h3>Example 1 — Capitalize vs. Expense</h3>
+        <table class="tbl">
+          <colgroup><col style="width:48%"><col style="width:26%"><col style="width:26%"></colgroup>
+          <tr><th>Item</th><th class="center">Capitalize to inventory?</th><th>Notes</th></tr>
+          <tr><td>Freight‑in on raw materials</td><td class="center">Yes</td><td>Part of acquisition cost</td></tr>
+          <tr><td>Freight‑out to customers</td><td class="center">No</td><td>Selling expense</td></tr>
+          <tr><td>Abnormal spoilage in production</td><td class="center">No</td><td>Expense in current period</td></tr>
+          <tr><td>Normal manufacturing overhead</td><td class="center">Yes</td><td>Allocate systematically</td></tr>
+          <tr><td>Warehouse rent for finished goods</td><td class="center">No</td><td>Period cost (unless necessary to get inventory ready for sale)</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 2 — LCNRV by Item (with Entry)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:36%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:16%"></colgroup>
+          <tr><th>Item</th><th class="center">Cost</th><th class="center">Selling price</th><th class="center">Costs to complete/sell</th><th class="center">NRV</th></tr>
+          <tr><td>Widget A</td><td class="num">$52</td><td class="num">$60</td><td class="num">$6</td><td class="num">$54</td></tr>
+          <tr><td>Widget B</td><td class="num">$45</td><td class="num">$43</td><td class="num">$2</td><td class="num">$41</td></tr>
+          <tr><td>Widget C</td><td class="num">$30</td><td class="num">$32</td><td class="num">$3</td><td class="num">$29</td></tr>
+          <tr><th>Write‑down</th><th class="num">$—</th><th></th><th></th><th class="num">$5 (B: $4; C: $1)</th></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Loss on inventory write‑down</span><span class="amt">$5</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Inventory valuation allowance</span><span class="amt">($5)</span></li>
+        </ul>
+        <div class="callout tip">Apply LCNRV by <em>item</em> unless policy is by category; do not reverse write‑downs under U.S. GAAP.</div>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 3 — LCM for LIFO (Ceiling / Market / Floor)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:28%"><col style="width:18%"><col style="width:18%"><col style="width:18%"><col style="width:18%"></colgroup>
+          <tr><th>Item</th><th class="center">NRV (ceiling)</th><th class="center">Replacement cost (market)</th><th class="center">NRV − normal profit (floor)</th><th class="center">Designated market (pick middle)</th></tr>
+          <tr><td>Part X</td><td class="num">$105</td><td class="num">$96</td><td class="num">$90</td><td class="num">$96</td></tr>
+          <tr><td>Part Y</td><td class="num">$62</td><td class="num">$68</td><td class="num">$50</td><td class="num">$62</td></tr>
+          <tr><td>Part Z</td><td class="num">$40</td><td class="num">$28</td><td class="num">$33</td><td class="num">$33</td></tr>
+          <tr><th>Write‑down to LCM</th><th class="num" colspan="4">Compare cost to the designated market by item and record loss if cost &gt; designated market.</th></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 4 — Retail Inventory Method (Average vs. Conventional)</h3>
+        <p>Data (one department):</p>
+        <table class="tbl small">
+          <colgroup><col style="width:40%"><col style="width:20%"><col style="width:20%"><col style="width:20%"></colgroup>
+          <tr><th></th><th class="center">Cost</th><th class="center">Retail</th><th class="center">Notes</th></tr>
+          <tr><td>Beginning inventory</td><td class="num">$120,000</td><td class="num">$200,000</td><td></td></tr>
+          <tr><td>Purchases</td><td class="num">$480,000</td><td class="num">$800,000</td><td></td></tr>
+          <tr><td>Add: Freight‑in (cost only)</td><td class="num">$20,000</td><td class="num">—</td><td>Included in cost</td></tr>
+          <tr><td>Net markups</td><td class="num">—</td><td class="num">$40,000</td><td>Retail only</td></tr>
+          <tr><td>Net markdowns</td><td class="num">—</td><td class="num">($30,000)</td><td>Retail only</td></tr>
+          <tr><td>Sales (at retail)</td><td class="num">—</td><td class="num">($850,000)</td><td></td></tr>
+          <tr><td>Sales returns (retail)</td><td class="num">—</td><td class="num">$10,000</td><td></td></tr>
+        </table>
+        <div class="grid two">
+          <div class="card">
+            <h4>Average cost (includes markdowns in ratio)</h4>
+            <table class="tbl small">
+              <tr><td>Goods available — <em>cost</em></td><td class="num">$620,000</td></tr>
+              <tr><td>Goods available — <em>retail</em></td><td class="num">$1,$020,000</td></tr>
+              <tr><td>Cost‑to‑retail ratio</td><td class="num">$620,000 ÷ $1,020,000 = <strong>60.78%</strong></td></tr>
+              <tr><td>Ending inventory at retail</td><td class="num">$190,000</td></tr>
+              <tr><td>Ending inventory at cost</td><td class="num">$190,000 × 60.78% = <strong>$115,482</strong></td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h4>Conventional (excludes markdowns in ratio)</h4>
+            <table class="tbl small">
+              <tr><td>Goods available — <em>retail</em> for ratio (exclude markdowns)</td><td class="num">$1,$050,000</td></tr>
+              <tr><td>Cost‑to‑retail ratio</td><td class="num">$620,000 ÷ $1,050,000 = <strong>59.05%</strong></td></tr>
+              <tr><td>Ending inventory at retail</td><td class="num">$190,000</td></tr>
+              <tr><td>Ending inventory at cost (approx. LCNRV)</td><td class="num">$190,000 × 59.05% = <strong>$112,195</strong></td></tr>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 5 — Gross Profit Method (Fire Loss Estimate)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:46%"><col style="width:27%"><col style="width:27%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Computation</th></tr>
+          <tr><td>Beginning inventory</td><td class="num">$150,000</td><td></td></tr>
+          <tr><td>Purchases (net)</td><td class="num">$400,000</td><td></td></tr>
+          <tr><td>Goods available for sale</td><td class="num">$550,000</td><td></td></tr>
+          <tr><td>Sales</td><td class="num">$700,000</td><td></td></tr>
+          <tr><td>Historic gross margin rate</td><td class="num">30%</td><td>Gross margin = 30% × sales = $210,000</td></tr>
+          <tr><td>Estimated cost of goods sold</td><td class="num">$490,000</td><td>$700,000 − $210,000</td></tr>
+          <tr><td>Estimated ending inventory</td><td class="num">$60,000</td><td>$550,000 − $490,000</td></tr>
+        </table>
+        <div class="callout check">The gross profit method is an <strong>estimate</strong> (not acceptable for annual financial statements when physical counts are required) but is often used for interim periods or casualty loss estimates.</div>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 6 — Inventory Error Effects (Two‑Period)</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:48%"><col style="width:26%"><col style="width:26%"></colgroup>
+          <tr><th>Error at end of Year 1</th><th class="center">Year 1 effect</th><th class="center">Year 2 effect</th></tr>
+          <tr><td>Ending inventory <strong>overstated</strong></td><td class="center">Cost of goods sold understated; income overstated</td><td class="center">Beginning inventory overstated → cost of goods sold overstated; income understated</td></tr>
+          <tr><td>Ending inventory <strong>understated</strong></td><td class="center">Cost of goods sold overstated; income understated</td><td class="center">Beginning inventory understated → cost of goods sold understated; income overstated</td></tr>
+        </table>
+      </article>
+
+      <article class="card" style="width:100%">
+        <h3>Example 7 — Consignment Basics</h3>
+        <table class="tbl">
+          <tr><th>Role</th><th>Accounting</th></tr>
+          <tr><td>Consignor (owner)</td><td>Keep goods in inventory until the consignee sells to third parties; record cost of goods sold when sold; record <em>receivable from consignee</em> for proceeds less commission and costs.</td></tr>
+          <tr><td>Consignee (agent)</td><td>No inventory recognized; on sale, record <em>payable to consignor</em> for proceeds less commission; commission is revenue to the consignee.</td></tr>
+        </table>
+      </article>
+
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>When is <strong>LCM</strong> used instead of LCNRV? <strong>LIFO</strong> and the <strong>retail inventory method</strong>.</li>
+        <li>Do U.S. GAAP permit reversal of inventory write‑downs? <strong>No.</strong></li>
+        <li>Which costs are capitalized to inventory? <strong>Product costs</strong> (purchase price net of trade discount, freight‑in, conversion costs); selling costs are expensed.</li>
+        <li>Who owns goods on consignment? The <strong>consignor</strong> until sale to third parties.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

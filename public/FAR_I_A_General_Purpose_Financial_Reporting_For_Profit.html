@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR I.A: General‑Purpose Financial Reporting (For‑Profit Business Entities)</title>
+<meta name="description" content="CPA reviewer chapter for FAR I.A — General‑Purpose Financial Reporting for for‑profit business entities, aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+  .exa{border-left:4px solid var(--ok);background:rgba(16,185,129,.09);padding:12px 14px;border-radius:12px}
+  .sol{border-left:4px solid var(--accent);background:rgba(59,130,246,.09);padding:10px 12px;border-radius:10px;margin-top:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>General‑Purpose Financial Reporting: For‑Profit Business Entities</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Explain the <strong>objective</strong> of general‑purpose financial reporting under <strong>U.S. Generally Accepted Accounting Principles (U.S. GAAP)</strong> set by the <strong>Financial Accounting Standards Board (FASB)</strong>.</li>
+          <li>Identify the <strong>elements</strong> of financial statements (assets, liabilities, equity, revenues, expenses, gains, losses, comprehensive income) and the <strong>primary statements</strong>.</li>
+          <li>Apply the <strong>qualitative characteristics</strong> of decision‑useful information (relevance and faithful representation; enhancing characteristics).</li>
+          <li>Distinguish <strong>measurement bases</strong> and the <strong>fair value hierarchy</strong>, and understand presentation of <strong>comprehensive income</strong> and <strong>earnings per share (EPS)</strong> for public entities.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Topic</th><th>Key points</th></tr>
+          <tr><td>Objective of GPFR</td><td>Provide information useful to present and potential investors, lenders, and other creditors in making decisions about providing resources.</td></tr>
+          <tr><td>Primary statements</td><td>Statement of financial position (balance sheet); statement of earnings (income statement); statement of comprehensive income; statement of changes in equity; statement of cash flows; notes.</td></tr>
+          <tr><td>Elements</td><td>Assets, liabilities, equity; investments by owners, distributions to owners; comprehensive income (net income + other comprehensive income).</td></tr>
+          <tr><td>Qualitative characteristics</td><td><strong>Relevance</strong> (predictive value, confirmatory value, materiality) and <strong>faithful representation</strong> (completeness, neutrality, freedom from error) with enhancing characteristics: comparability, verifiability, timeliness, understandability. Constraint: cost‑benefit.</td></tr>
+          <tr><td>Measurement bases</td><td>Historical cost, amortized cost, fair value, net realizable value, present value, current replacement cost.</td></tr>
+          <tr><td>Fair value hierarchy</td><td>Level 1 (quoted prices in active markets), Level 2 (observable inputs), Level 3 (unobservable inputs/valuation models).</td></tr>
+          <tr><td>Comprehensive income</td><td>Net income plus <strong>other comprehensive income (OCI)</strong>: e.g., certain debt security unrealized gains/losses, foreign currency translation adjustments, effective portion of cash flow hedges, and certain pension adjustments; accumulated in <strong>accumulated other comprehensive income (AOCI)</strong>.</td></tr>
+          <tr><td>Going concern</td><td>Assume continuation unless liquidation is imminent; if substantial doubt exists, provide appropriate disclosure.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Reporting Entity & Financial Statement Presentation</h2>
+    <div class="card">
+      <ul>
+        <li>A <strong>reporting entity</strong> is an organization that issues general‑purpose financial statements for external users; present consolidated statements when control exists.</li>
+        <li><strong>Balance sheet classification:</strong> Segregate <strong>current</strong> and <strong>noncurrent</strong> assets and liabilities; <em>working capital</em> = current assets − current liabilities.</li>
+        <li><strong>Income statement formats:</strong> single‑step (all revenues/expenses) or multi‑step (gross profit, income from operations, etc.). No “extraordinary items” under U.S. GAAP.</li>
+        <li><strong>Comprehensive income:</strong> one continuous statement or two separate statements (statement of earnings + statement of comprehensive income).</li>
+        <li><strong>Public entities:</strong> present <strong>basic EPS</strong> (and diluted when applicable) on the face of the income statement for income from continuing operations and for net income.</li>
+      </ul>
+    </div>
+
+    <h2>2) Qualitative Characteristics & Materiality</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Relevance:</strong> Predictive value, confirmatory value, and materiality (would it influence user decisions?).</li>
+        <li><strong>Faithful representation:</strong> Complete, neutral, and free from error (to the extent practicable).</li>
+        <li>Enhancing: comparability (including consistency), verifiability, timeliness, understandability. Cost constraint applies.</li>
+      </ul>
+      <div class="callout tip"><strong>Exam cue:</strong> When relevance and faithful representation conflict, consider the purpose of the information and whether disclosure can remedy limitations.</div>
+    </div>
+
+    <h2>3) Measurement Bases & Fair Value</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Historical cost / amortized cost:</strong> Original transaction price adjusted for allocations (e.g., depreciation, amortization, impairment).</li>
+        <li><strong>Fair value:</strong> Exit price from an orderly transaction between market participants at the measurement date. Hierarchy levels 1–3 based on input observability.</li>
+        <li><strong>Present value / expected cash flows:</strong> Discounted cash‑flow techniques often used for long‑term receivables/liabilities and impairment testing.</li>
+        <li><strong>Net realizable value:</strong> Estimated selling price in the ordinary course of business less costs of completion/disposal (e.g., accounts receivable, inventory LCM for some methods).</li>
+      </ul>
+    </div>
+
+    <h2>4) Other Comprehensive Income (OCI)</h2>
+    <div class="card">
+      <ul>
+        <li>OCI items bypass net income and accumulate in <strong>AOCI</strong> within equity until reclassified or settled.</li>
+        <li>Common OCI items for for‑profit entities include: unrealized gains/losses on certain debt securities classified as available‑for‑sale, foreign currency translation adjustments, effective portion of cash flow hedges, and certain pension plan adjustments.</li>
+        <li>Present tax effects for each component or in aggregate; disclose reclassification adjustments from AOCI to net income.</li>
+      </ul>
+    </div>
+
+    <h2>5) Earnings per Share (EPS) — Basics</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Basic EPS</strong> = (Net income − preferred dividends) ÷ weighted‑average common shares outstanding.</li>
+        <li><strong>Diluted EPS</strong> reflects the potential dilution from convertible securities, options, warrants, and contingently issuable shares (if they are dilutive).</li>
+        <li>Only <strong>public entities</strong> present EPS; nonpublic entities generally do not.</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples (selected)</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Example 1 — Working Capital & Current Ratio</h3>
+        <div class="exa">
+          <p><strong>Data:</strong> Current assets $420,000 (including inventory $160,000). Current liabilities $280,000. Long‑term debt $500,000.</p>
+          <div class="sol">
+            <p><strong>Working capital</strong> = 420,000 − 280,000 = <strong>$140,000</strong>.</p>
+            <p><strong>Current ratio</strong> = 420,000 ÷ 280,000 = <strong>1.50</strong>.</p>
+            <p>Long‑term debt does not affect current ratio unless current portion exists.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Example 2 — Comprehensive Income</h3>
+        <div class="exa">
+          <p><strong>Data:</strong> Net income $250,000. Unrealized gain on available‑for‑sale debt securities $30,000. Cash flow hedge effective gain $12,000. Foreign currency translation loss $5,000. Ignore income taxes.</p>
+          <div class="sol">
+            <p><strong>OCI</strong> = 30,000 + 12,000 − 5,000 = <strong>$37,000</strong>.</p>
+            <p><strong>Comprehensive income</strong> = Net income 250,000 + OCI 37,000 = <strong>$287,000</strong>.</p>
+            <p><em>Presentation:</em> Either in one continuous statement or a separate statement following the income statement.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Example 3 — Basic EPS</h3>
+        <div class="exa">
+          <p><strong>Data:</strong> Net income $120,000. No preferred stock. 100,000 common shares outstanding on 1/1. On 4/1, the company issued 20,000 new shares for cash. No other changes.</p>
+          <div class="sol">
+            <p>Weighted‑average shares = 100,000 × (3/12) + 120,000 × (9/12) = 25,000 + 90,000 = <strong>115,000</strong>.</p>
+            <p><strong>Basic EPS</strong> = 120,000 ÷ 115,000 = <strong>$1.04</strong> per share (rounded).</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Example 4 — Fair Value Hierarchy</h3>
+        <div class="exa">
+          <p><strong>Scenario:</strong> A bond investment is valued using a price quoted by a pricing service based on observable market yields for similar bonds.</p>
+          <div class="sol">
+            <p>Inputs are observable but not quoted for the identical instrument → <strong>Level 2</strong> fair value measurement (not Level 1).</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <h2>6) Disclosure Highlights</h2>
+    <div class="card">
+      <ul>
+        <li>Significant accounting policies (basis of consolidation, revenue recognition methods, inventory cost methods, depreciation, etc.).</li>
+        <li>Fair value measurements by level for recurring and nonrecurring items; valuation techniques and inputs used.</li>
+        <li>Composition of OCI and changes in AOCI by component.</li>
+        <li>Related‑party transactions, contingencies, and subsequent events.</li>
+      </ul>
+    </div>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Which qualitative characteristic includes comparability and timeliness? <strong>Enhancing characteristics</strong>.</li>
+        <li>Is a quoted price on an active exchange Level 1 or Level 2? <strong>Level 1</strong>.</li>
+        <li>Does comprehensive income include owner transactions? <strong>No</strong>—owner investments and distributions are excluded.</li>
+        <li>When is EPS required? <strong>For public entities</strong>, presented on the face of the income statement.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

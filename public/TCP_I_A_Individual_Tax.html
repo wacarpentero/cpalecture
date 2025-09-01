@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Individual Tax — Gross Income, AGI, Taxable Income & Estimated Taxes (TCP I.A)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  code, pre{background: var(--code); border:1px solid var(--border); border-radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  code{padding:3px 6px}
+  pre{padding:14px 16px; overflow:auto}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:700}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  .hr{height:1px;background:var(--border);margin:16px 0}
+  .je{
+    background:var(--code);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    margin:10px 0;
+    overflow:auto;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Individual Tax — Gross Income, AGI, Taxable Income & Estimated Taxes</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="objectives" class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Recall the impact of <strong>equity compensation</strong> awards on taxable income (NSOs, ISOs, RSUs) and possible <strong>AMT</strong> effects.</li>
+        <li>Recall items included in the determination and computation of <strong>Alternative Minimum Taxable Income (AMTI)</strong> and AMT.</li>
+        <li>Consider effects on taxable income for certain items of gross income, including <strong>imputed interest</strong> on below‑market loans and <strong>compensation earned outside the U.S.</strong></li>
+        <li>Calculate the tax on a <strong>child’s investment (kiddie tax)</strong> and other unearned income.</li>
+        <li>Consider the effect of changing <strong>tax rates</strong> and legislation on the timing of income/expense items for planning purposes.</li>
+        <li>Identify projected tax savings via <strong>FSAs</strong> and <strong>HSAs</strong> for planning purposes.</li>
+        <li>Evaluate using either <strong>itemized deductions</strong> or the <strong>standard deduction</strong> for a given scenario (e.g., bunching).</li>
+        <li>Calculate <strong>estimated tax payments</strong> to avoid underpayment penalties under safe‑harbor rules.</li>
+        <li>Calculate potential tax savings and limits when donating <strong>noncash property</strong> to a charity (holding period, AGI limits, FMV vs basis).</li>
+        <li>Review a client’s projected income/expenses and propose actions to minimize tax for year‑end planning.</li>
+      </ul>
+    </section>
+
+    <section id="framework" class="card">
+      <h2>Fast framework: From Gross Income → Tax</h2>
+      <div class="diagram">Gross Income
+  – Above‑the‑line adjustments (educator expenses, HSA, IRA, SE tax, alimony paid pre‑2019, etc.)
+= Adjusted Gross Income (AGI)
+  – Greater of Standard Deduction or Itemized Deductions
+= Taxable Income
+  × Rates (ordinary, qualified dividends/LTCG, NIIT where applicable)
+= Gross Tax
+  – Credits (CTC, education, foreign tax, etc.)
++ Other taxes (SE tax, NIIT, AMT)
+= Total Tax → Compare to withholdings & estimated payments</div>
+      <span class="pill">Know the flow</span> <span class="pill">Separate ordinary vs capital income</span>
+    </section>
+
+    <section id="equity" class="card">
+      <h2>Equity compensation — taxable touchpoints</h2>
+      <ul>
+        <li><strong>NSO/Nonqual options:</strong> Ordinary income at exercise = (FMV − strike) × shares; W‑2 wages; basis = FMV at exercise.</li>
+        <li><strong>ISO/Incentive options:</strong> No regular‑tax income at exercise; <em>AMT preference</em> adds the bargain element to AMTI; basis for AMT purposes differs until disposition.</li>
+        <li><strong>RSU:</strong> W‑2 income at vest (FMV × shares).</li>
+        <li><strong>Planning:</strong> Consider disqualifying ISO sale in same year as exercise to avoid AMT; manage holding periods for LTCG.</li>
+      </ul>
+    </section>
+
+    <section id="amt" class="card">
+      <h2>AMT essentials</h2>
+      <ul>
+        <li>Start with taxable income and adjust to <strong>AMTI</strong> (e.g., ISO bargain element; certain itemized deductions limited/disallowed).</li>
+        <li>Subtract AMT exemption (phase‑outs apply) → apply AMT rates → compare to regular tax; pay the excess as AMT.</li>
+        <li><strong>Credit:</strong> Minimum tax credit may recover some AMT in future years.</li>
+      </ul>
+    </section>
+
+    <section id="gi" class="card">
+      <h2>Gross income hotspots</h2>
+      <h3>Below‑market loans — imputed interest (§7872)</h3>
+      <ul>
+        <li>Interest is <em>imputed</em> at the AFR when stated rate is too low; lender may have deemed interest income and borrower deemed interest expense/compensation or gift.</li>
+        <li>Planning: Watch thresholds/exceptions for de minimis loans and gift loans with limited investment income.</li>
+      </ul>
+      <h3>Foreign earned income</h3>
+      <ul>
+        <li>Qualify via bona fide residence or physical presence tests; eligible wages may be excluded up to the annual FEIE limit (indexed); housing exclusion may apply.</li>
+        <li>Planning: Exclusion reduces AGI; coordinate with foreign tax credit vs exclusion choice.</li>
+      </ul>
+      <h3>Kiddie tax — child’s unearned income</h3>
+      <ul>
+        <li>Applies to certain children’s unearned income above thresholds; taxed at the parent’s marginal rate.</li>
+        <li>Planning: Use 529 plans, timing of capital gains, and family employment strategies.</li>
+      </ul>
+    </section>
+
+    <section id="timing" class="card">
+      <h2>Timing strategies & rate changes</h2>
+      <ul>
+        <li>Accelerate or defer income/deductions based on expected future rates (e.g., bunch state taxes into years where deductibility or AMT impact is favorable).</li>
+        <li>Harvest capital gains/losses to manage brackets (0%/15%/20% for LTCG where applicable).</li>
+      </ul>
+    </section>
+
+    <section id="health" class="card">
+      <h2>FSAs & HSAs — quick wins</h2>
+      <ul>
+        <li><strong>FSA:</strong> Pre‑tax payroll reductions; use‑it‑or‑lose‑it with limited carry/extension options; great for predictable expenses.</li>
+        <li><strong>HSA:</strong> Available with HDHP; triple tax advantage (deductible/pretax in, tax‑free growth, tax‑free qualified withdrawals); portable.</li>
+      </ul>
+    </section>
+
+    <section id="deductions" class="card">
+      <h2>Itemized vs standard deduction</h2>
+      <ul>
+        <li>Itemize if total exceeds standard deduction. Consider “<strong>bunching</strong>” charitable gifts/medical expenses/SALT (subject to caps) into one year.</li>
+        <li>Qualified charitable distributions (QCDs) from IRAs can satisfy RMDs (age and limits apply) and reduce AGI.</li>
+      </ul>
+    </section>
+
+    <section id="estimated" class="card">
+      <h2>Estimated tax — safe harbors</h2>
+      <ul>
+        <li>Avoid penalties by paying the lesser of: <em>90% of current‑year tax</em> or <em>100% of prior‑year tax</em> (often <em>110%</em> if high AGI). Make four equal quarterly payments unless annualized.</li>
+        <li>Due dates typically mid‑April, mid‑June, mid‑September, and mid‑January of the following year.</li>
+      </ul>
+    </section>
+
+    <section id="charity" class="card">
+      <h2>Charitable gifts — noncash property</h2>
+      <ul>
+        <li><strong>LTCG property to public charity:</strong> Deduct <em>FMV</em> up to generally 30% of AGI; excess carries forward up to five years.</li>
+        <li><strong>Ordinary‑income property/short‑term:</strong> Deduct <em>basis</em> (not FMV); higher AGI limits may apply for cash.</li>
+        <li>Substantiation: qualified appraisal >$5,000 (exceptions apply); identify specific shares donated.</li>
+      </ul>
+    </section>
+
+    <section id="tips" class="card">
+      <h2>Tricky‑area tips (exam‑focused)</h2>
+      <ul>
+        <li><strong>NSO vs ISO:</strong> NSO income at exercise; ISO → watch AMT preference.</li>
+        <li><strong>Kiddie tax:</strong> Parent’s rate applies to unearned income above thresholds; earned income still taxed at child’s brackets.</li>
+        <li><strong>Imputed interest:</strong> §7872 can create wage/gift interest — track both sides.</li>
+        <li><strong>AGI leverage:</strong> Lower AGI can unlock credits/deductions and reduce NIIT/phase‑outs.</li>
+        <li><strong>Safe harbor:</strong> 100% (or 110%) prior‑year is a penalty shield even if current‑year tax spikes.</li>
+      </ul>
+    </section>
+
+    <section id="practice" class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> NSO exercise: 1,000 options at $10 strike when FMV = $22. What is ordinary income this year?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$12,000</li>
+          <li>$22,000</li>
+          <li>$10,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — (22 − 10) × 1,000 = $12,000 W‑2 income; basis equals FMV at exercise.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> ISO exercise: 500 shares at $8 strike; FMV at exercise $25; no sale this year. Regular‑tax income?</p>
+        <ol type="A">
+          <li>$0 regular‑tax income; AMTI increases by $8,500</li>
+          <li>$8,500 regular‑tax income and AMTI unchanged</li>
+          <li>$0 regular‑tax income; AMTI decreases by $8,500</li>
+          <li>$25 regular‑tax income</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — ISOs create no regular‑tax income at exercise; AMT preference adds bargain element (25 − 8) × 500 = $8,500.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Below‑market compensation loan at 0% interest; AFR 4%; annual principal $50,000. Imputed annual interest income to employer?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$1,000</li>
+          <li>$2,000</li>
+          <li>$4,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Imputed interest ≈ AFR × principal = 4% × 50,000 = $2,000; treated as compensation to employee and interest income to employer.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Kiddie tax: A child (age 16) has $2,400 of unearned interest income and no earned income. Taxed how?</p>
+        <ol type="A">
+          <li>All at child’s rate</li>
+          <li>All at parent’s rate</li>
+          <li>Portion sheltered by thresholds; excess at parent’s marginal rate</li>
+          <li>Not taxable</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Threshold amounts shelter a slice; unearned income above the threshold is taxed at the parent’s rate.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> HSA: Which statement is most accurate?</p>
+        <ol type="A">
+          <li>Contributions are after‑tax only</li>
+          <li>Tax‑deductible (or pretax via payroll), grow tax‑free, and tax‑free if used for qualified medical expenses</li>
+          <li>Use‑it‑or‑lose‑it at year‑end</li>
+          <li>Available regardless of health plan type</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — HSAs have triple tax benefits and require HDHP coverage.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> Itemize vs standard: Taxpayer has $9,000 mortgage interest, $2,000 charitable gifts (cash), and $7,500 medical (AGI $100k, 7.5% floor). Best option?</p>
+        <ol type="A">
+          <li>Itemize $18,500</li>
+          <li>Itemize $11,000</li>
+          <li>Standard deduction likely larger unless bunching is used next year</li>
+          <li>Medical fully deductible</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Medical above 7.5% AGI threshold only: 7,500 − 7,500 = 0; itemized total $11,000 may be below the standard deduction, so claim standard now and bunch next year.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Estimated tax safe harbor: Prior‑year total tax $24,000; current‑year projected $30,000; AGI below high‑income threshold. What avoids penalty?</p>
+        <ol type="A">
+          <li>$27,000 over four payments</li>
+          <li>$24,000 over four payments</li>
+          <li>$30,000 over four payments</li>
+          <li>$12,000 by April 15</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Paying 100% of prior‑year tax ($24k) meets safe harbor (assuming AGI below the higher threshold).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> Charitable appreciated stock held &gt; 1 year: FMV $40,000; basis $10,000; AGI $100,000. Max current‑year deduction to a public charity (ignoring other gifts)?</p>
+        <ol type="A">
+          <li>$10,000</li>
+          <li>$30,000</li>
+          <li>$40,000</li>
+          <li>$60,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — FMV is deductible but limited to 30% of AGI → 30% × 100,000 = $30,000 (excess can carry forward).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> Foreign earned income: Assume the FEIE limit is $120,000 for the year. Taxpayer qualifies and earns $150,000 of foreign wages, no housing exclusion. Taxable wages after exclusion?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$30,000</li>
+          <li>$120,000</li>
+          <li>$150,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — $150,000 − $120,000 = $30,000 remains taxable (simplified assumption for exam math).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> AMT: Which item most commonly increases AMTI for individuals in equity comp scenarios?</p>
+        <ol type="A">
+          <li>NSO bargain element at exercise</li>
+          <li>ISO bargain element at exercise</li>
+          <li>RSU vesting</li>
+          <li>Charitable cash gifts</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — ISO exercise adds the bargain element to AMTI, potentially triggering AMT.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

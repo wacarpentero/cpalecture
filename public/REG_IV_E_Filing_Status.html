@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CPA Reviewer — REG IV.E Filing Status</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+  --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa; --ok:#b5ffb1;
+  --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+     background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                linear-gradient(180deg,var(--bg1), #040b18 70%);}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+h2{font-size:22px;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+  padding:18px;border-radius:var(--radius);
+  overflow:hidden;margin-bottom:18px
+}
+.tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+.tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.tbl th{background:rgba(255,255,255,.03)}
+.small{font-size:.96rem}
+.mini{font-size:.9rem}
+.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+         padding:12px 14px;border-radius:10px;margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;
+     border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+.hr{height:1px;background:rgba(255,255,255,.12);margin:10px 0}
+/* hidden answers */
+.reveal{margin-top:6px}
+.reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::marker{content:""}
+.reveal[open]>summary{opacity:.85}
+.answer-block{margin-top:8px;color:var(--ok)}
+/* simple flow boxes */
+.flow{display:flex;flex-direction:column;gap:14px}
+.flow .row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.box{padding:10px 14px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.06);font-weight:700}
+.arrow{font-weight:800;opacity:.8}
+
+/* widen first column of the At-a-Glance table */
+.tbl.statuswide th:first-child,
+.tbl.statuswide td:first-child{
+  width: 160px;
+  min-width: 160px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Filing Status</h1>
+<p class="mini muted"><strong>Acronyms:</strong> <strong>MFJ</strong> = married filing jointly; <strong>MFS</strong> = married filing separately; <strong>HOH</strong> = head of household; <strong>QSS</strong> (also “QW”) = qualifying surviving spouse; <strong>QC</strong> = qualifying child; <strong>QR</strong> = qualifying relative; <strong>AGI</strong> = adjusted gross income.</p>
+<section class="card">
+<h2>Learning Objectives</h2>
+<ul class="small">
+<li><strong>Recall</strong> the filing status options and who qualifies for each.</li>
+<li><strong>Recall</strong> dependent relationship rules that affect filing status (QC/QR and “qualifying person” for <strong>HOH</strong>).</li>
+<li><strong>Identify</strong> the correct status in a given scenario (including “considered unmarried,” <strong>QSS</strong>, and tie‑breakers).</li>
+</ul>
+</section>
+<section class="card">
+<h2>At‑a‑Glance — Filing Statuses</h2>
+<table class="tbl small statuswide">
+<tr><th>Status</th><th>Who qualifies</th><th>Key points / traps</th></tr>
+<tr>
+<td>Single</td>
+<td>Unmarried (or legally separated) on last day of year and not eligible for HOH or QSS.</td>
+<td>Status is determined on <em>December 31</em>. If spouse dies during the year and you don’t remarry, you are still considered married for that year (usually MFJ/MFS).</td>
+</tr>
+<tr>
+<td>MFJ</td>
+<td>Married on last day of year and elect to file jointly.</td>
+<td>Joint/several liability. If spouse dies during the year, surviving spouse may still file MFJ for that year.</td>
+</tr>
+<tr>
+<td>MFS</td>
+<td>Married but choose to file separately.</td>
+<td>Often ineligible for certain credits/deductions. Consider “considered unmarried” test for HOH if living apart last 6 months and paying &gt; ½ cost of home for child.</td>
+</tr>
+<tr>
+<td>HOH</td>
+<td>Unmarried (or considered unmarried) and pay &gt; ½ cost of keeping up a home for a <strong>qualifying person</strong>.</td>
+<td>Qualifying person includes QC; can include a dependent <em>parent</em> even if parent does not live with the taxpayer (taxpayer pays &gt; ½ cost of parent’s principal home).</td>
+</tr>
+<tr>
+<td>QSS</td>
+<td>Spouse died in prior 2 years; taxpayer has a dependent child and maintains the home.</td>
+<td>Available for up to 2 tax years following the year of death, if not remarried and maintaining household for a dependent child.</td>
+</tr>
+</table>
+<div class="callout mini"><strong>Exam tip:</strong> Filing status follows a quick order: <em>MFJ/MFS</em> if married at year‑end → else test <em>QSS</em> → else test <em>HOH</em> → else <em>Single</em>.</div>
+</section>
+<section class="card">
+<h2>Dependents Refresher (Why it matters)</h2>
+<div class="grid-2">
+<div>
+<h3>Qualifying Child (QC)</h3>
+<ul class="small">
+<li>Relationship: child/stepchild/foster/sibling/descendant.</li>
+<li>Age: under age threshold, or student, or disabled (exam provides exact thresholds).</li>
+<li>Residency: lives with taxpayer &gt; ½ year (exceptions for school, illness, etc.).</li>
+<li>Support: child did <em>not</em> provide &gt; ½ of own support.</li>
+<li>Tie‑breaker rules apply if multiple taxpayers can claim the same child (see below).</li>
+</ul>
+</div>
+<div>
+<h3>Qualifying Relative (QR)</h3>
+<ul class="small">
+<li>Not a QC of any taxpayer.</li>
+<li>Relationship test (or lives with the taxpayer all year).</li>
+<li>Gross income test (exam will provide the threshold).</li>
+<li>Taxpayer provides &gt; ½ of the person’s support (multiple support agreements possible).</li>
+</ul>
+</div>
+</div>
+<div class="callout mini"><strong>HOH qualifying person:</strong> QC (even if not a dependent due only to a multiple support agreement exception) or a dependent <em>parent</em> who does <strong>not</strong> need to live with the taxpayer.</div>
+</section>
+<section class="card">
+<h2>Illustration — Quick Decision Flow</h2>
+<div class="flow small">
+<div class="row"><div class="box">Married on Dec 31?</div><div class="arrow">→</div><div class="box">Yes → MFJ or MFS</div></div>
+<div class="row"><div class="box">No → Spouse died within last 2 years and dependent child?</div><div class="arrow">→</div><div class="box">Yes → QSS</div></div>
+<div class="row"><div class="box">Else: Pay &gt; ½ cost of home for a qualifying person?</div><div class="arrow">→</div><div class="box">Yes → HOH</div></div>
+<div class="row"><div class="box">Otherwise → Single</div></div>
+</div>
+</section>
+<section class="card">
+<h2>Representative Tasks → Worked Examples</h2>
+<h3>1) Determine HOH when supporting a parent</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Analysis</th></tr>
+<tr>
+<td>Taxpayer is unmarried and pays <strong>$12,000</strong> of a parent’s <strong>$20,000</strong> annual living costs at a nursing home. Parent is a dependent.</td>
+<td>Parent is a qualifying person for HOH even if not living with the taxpayer. Since taxpayer pays &gt; ½ of the cost (<strong>$12,000</strong> &gt; <strong>$10,000</strong>), status = <strong>HOH</strong>.</td>
+</tr>
+</table>
+<h3>2) “Considered unmarried” (abandoned spouse) → HOH</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Analysis</th></tr>
+<tr>
+<td>Married but lived apart from spouse the last 6 months. Pays <strong>$14,400</strong> of home costs out of <strong>$24,000</strong> total; child lived with taxpayer all year.</td>
+<td>Meets “considered unmarried” test (lived apart last 6 months and maintains the home for the child with &gt; ½ costs). Status = <strong>HOH</strong>, not MFS.</td>
+</tr>
+</table>
+<h3>3) QSS vs MFJ</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Analysis</th></tr>
+<tr>
+<td>Spouse died this year; survivor did not remarry and has a dependent child.</td>
+<td>For the year of death, survivor may file <strong>MFJ</strong>. For each of the next 2 years, if still maintaining a household for the dependent child, status = <strong>QSS</strong>.</td>
+</tr>
+</table>
+<h3>4) Tie‑breaker — two parents claim the same QC</h3>
+<table class="tbl small">
+<tr><th>Facts</th><th>Result</th></tr>
+<tr>
+<td>Child lived with both divorced parents exactly 6 months each. Parent A AGI <strong>$60,000</strong>; Parent B AGI <strong>$58,000</strong>.</td>
+<td>Residency is the same → parent with higher <strong>AGI</strong> wins tie‑breaker. Parent A claims QC; filing status consequences follow (e.g., HOH eligibility).</td>
+</tr>
+</table>
+</section>
+<section class="card">
+<h2>Diagnostics — What to Check</h2>
+<ul class="small">
+<li><span class="tag">Year‑end status</span> Marital status is tested on December 31.</li>
+<li><span class="tag">Qualifying person</span> Parent can qualify you for HOH without living with you; others generally must live with you.</li>
+<li><span class="tag">Considered unmarried</span> Lived apart last 6 months + &gt; ½ cost of home for child.</li>
+<li><span class="tag">QSS window</span> Two tax years after year of death if maintaining a household for a dependent child.</li>
+<li><span class="tag">Tie‑breakers</span> Parent over non‑parent; longer residency; higher AGI as the final tie‑breaker.</li>
+</ul>
+</section>
+<!-- Practice Questions MUST be the last section -->
+<section class="card">
+<h2>Practice Questions</h2>
+<ol class="small">
+<li><strong>Parent in nursing home:</strong> Kim (unmarried) pays <strong>$15,000</strong> of her mother’s <strong>$27,000</strong> nursing‑home costs. Mother is Kim’s dependent. Filing status?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+<strong>HOH.</strong> Parent is a qualifying person for HOH even if not living with the taxpayer; Kim pays &gt; ½ of the cost (<strong>$15,000</strong> of <strong>$27,000</strong>).
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Considered unmarried:</strong> Alex (married) lived apart from spouse July–December and paid <strong>$18,600</strong> of <strong>$30,000</strong> home costs for a child who lived with Alex all year. Filing status?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+<strong>HOH.</strong> Lived apart last 6 months and paid &gt; ½ the cost ⇒ considered unmarried for HOH.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Year of death:</strong> Jamie’s spouse died in March; Jamie did not remarry and has a dependent child. Best filing status for the current year?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+<strong>MFJ</strong> is available for the year of death (or MFS). QSS applies to each of the next 2 years if conditions are met.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>AGI tie‑breaker:</strong> Child lived with Pat and Sam equally; Pat AGI <strong>$72,000</strong>, Sam AGI <strong>$75,000</strong>. Who claims the child?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+          The parent with higher <strong>AGI</strong>, Sam (<strong>$75,000</strong>), claims the child. That may enable HOH for Sam.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>Multiple support:</strong> Three siblings support their grandmother: Ann <strong>$8,000</strong>, Ben <strong>$7,000</strong>, Cara <strong>$6,000</strong> of total support <strong>$18,000</strong>. A multiple‑support agreement gives Ann the dependency claim. Filing status for Ann?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+<strong>HOH</strong> is allowed only if the dependent is a <em>qualifying person</em>. A dependent <em>parent</em> is a qualifying person even if not living with the taxpayer, so Ann qualifies.
+        </div></details>
+</li>
+<div class="hr"></div>
+<li><strong>MFS restriction:</strong> Taylor files MFS and lived with spouse all year; Taylor has a child who lived with them all year and paid <strong>$14,000</strong> of <strong>$26,000</strong> home costs. Filing status?<br/>
+<details class="reveal"><summary>Show answer</summary><div class="answer-block">
+<strong>MFS.</strong> Taylor is not “considered unmarried” (lived with spouse), so cannot claim HOH.
+        </div></details>
+</li>
+</ol>
+</section>
+</div>
+</body>
+</html>

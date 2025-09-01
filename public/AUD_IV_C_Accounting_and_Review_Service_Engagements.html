@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Accounting and Review Service Engagements (Area IV.C, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area IV.C — Accounting and review service engagements (SSARS: preparation, compilation, review) aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Accounting and Review Service Engagements</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Differentiate engagements under the <strong>Statements on Standards for Accounting and Review Services (SSARS)</strong>: <strong>preparation</strong>, <strong>compilation</strong>, and <strong>review</strong>.</li>
+          <li>Identify <strong>preconditions</strong>, <strong>documentation</strong>, and <strong>reporting</strong> requirements for each engagement type.</li>
+          <li>Apply <strong>independence</strong> rules and required <strong>disclosures</strong> when independence is impaired.</li>
+          <li>Handle common situations: <strong>omission of substantially all disclosures</strong>, <strong>special purpose frameworks</strong>, and <strong>going concern</strong> matters.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Engagement</th><th>Assurance</th><th>Independence</th><th>Report issued?</th><th>Key markings/disclosures</th><th>Typical use</th></tr>
+          <tr><td><strong>Preparation</strong></td><td>None</td><td>Not required</td><td>No</td><td>Each page states “no assurance is provided”; disclose if substantially all disclosures are omitted</td><td>Management‑use financial statements</td></tr>
+          <tr><td><strong>Compilation</strong></td><td>None</td><td>Not required, but <em>lack of independence must be disclosed</em></td><td>Yes — compilation report</td><td>Read for obvious material misstatements; disclose departure from framework if not corrected</td><td>Third‑party submission without assurance</td></tr>
+          <tr><td><strong>Review</strong></td><td>Limited (negative assurance)</td><td>Required</td><td>Yes — review report</td><td>Primarily inquiry and analytical procedures; obtain written representations</td><td>Bank/lender requirements for nonissuer interim or annual statements</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Common Ground — All SSARS Engagements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Engagement letter:</strong> required; defines objective, responsibilities, framework, and limitations.</li>
+        <li><strong>Applicable financial reporting framework:</strong> generally accepted accounting principles (GAAP), cash basis, tax basis, regulatory basis, or other special purpose frameworks; disclose the framework used.</li>
+        <li><strong>Management’s responsibilities:</strong> selection of framework; design/implementation of internal control; prevention and detection of fraud; accuracy and completeness of information; providing access to information.</li>
+        <li><strong>Documentation:</strong> work performed, significant judgments, and the final version of the financial statements (or the legend for preparation engagements).</li>
+      </ul>
+    </div>
+
+    <h2>2) Preparation of Financial Statements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Nature:</strong> Accountant prepares financial statements based on information provided by management; <em>no assurance</em> and <em>no report</em>.</li>
+        <li><strong>Page legend:</strong> On each page include a statement such as “No assurance is provided on these financial statements.” If management will not allow this legend, issue a <strong>compilation</strong> report or withdraw.</li>
+        <li><strong>Omission of disclosures:</strong> Permitted if clearly disclosed (for example, “Substantially all disclosures required by [framework] are not included”). The financial statements should not be misleading.</li>
+        <li><strong>Independence:</strong> Not required to perform the engagement.</li>
+        <li><strong>Special purpose frameworks:</strong> Identify the framework on the face of the financial statements or in a note.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> If management needs to submit the statements to a third party, consider whether a compilation is more appropriate.</div>
+    </div>
+
+    <h2>3) Compilation Engagements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Nature:</strong> Present in the form of financial statements information that is the representation of management; <em>no assurance</em>.</li>
+        <li><strong>Procedures:</strong> Read the financial statements to consider whether they appear free from <strong>obvious material misstatement</strong>. If aware of a material misstatement (including inadequate disclosure), request correction.</li>
+        <li><strong>Report:</strong> Issue a <strong>compilation report</strong> on firm letterhead with required elements (title including “Independent” if the firm is independent, addressee, statement that the service is a compilation, identification of framework, that no assurance is provided, and signature/date).</li>
+        <li><strong>Independence:</strong> Not required; if not independent, include a separate paragraph stating “We are not independent with respect to [entity].” Reasons for impairment may be optionally disclosed.</li>
+        <li><strong>Departures from framework:</strong> If management refuses to correct, disclose the departure and, if known, its effects; if disclosure is not adequate to avoid misleading users, <strong>withdraw</strong>.</li>
+        <li><strong>Omission of substantially all disclosures:</strong> Allowed with a disclosure that the omission is intended; the statements should not be misleading.</li>
+      </ul>
+    </div>
+
+    <h2>4) Review Engagements</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Objective:</strong> Obtain <strong>limited assurance</strong> that no material modifications should be made for the statements to be in conformity with the framework.</li>
+        <li><strong>Procedures:</strong> Primarily <strong>inquiry and analytical procedures</strong>, plus reading the financial statements; obtain an understanding of the industry and the entity, including accounting principles and significant practices.</li>
+        <li><strong>Written representations:</strong> Required from management, dated as of the review report date.</li>
+        <li><strong>Independence:</strong> Required.</li>
+        <li><strong>Report:</strong> Includes title (Independent), addressee, introduction, management’s and accountant’s responsibilities, scope (inquiry and analytics), conclusion with <strong>negative assurance</strong>, and signature/date.</li>
+        <li><strong>Modifications:</strong> For departures from the framework, modify the conclusion (“except for”); if a <strong>scope limitation</strong> prevents performing required procedures and cannot be overcome, <strong>withdraw</strong> (no qualified review report for scope limitations).</li>
+        <li><strong>Going concern:</strong> If substantial doubt is adequately disclosed, add an <strong>emphasis‑of‑matter</strong> paragraph; if disclosure is inadequate, modify the conclusion.</li>
+      </ul>
+    </div>
+
+    <h2>5) Special Purpose Frameworks & Other Topics</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Special Purpose Frameworks</h3>
+        <ul>
+          <li>Clearly identify the framework (cash basis, tax basis, regulatory basis) on the face of the financial statements or in a note.</li>
+          <li>In compilation and review reports, reference the framework and, where applicable, include a paragraph describing the basis of accounting.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Other Common Issues</h3>
+        <ul>
+          <li><strong>Interim information for nonissuers:</strong> May be reviewed under SSARS or under review standards specific to interim reporting if applicable; clarify the governing standard in the report.</li>
+          <li><strong>Subsequent events:</strong> Read minutes and inquire; date the report no earlier than the date procedures are complete and representations are obtained (for reviews).</li>
+          <li><strong>Supplementary information:</strong> In a review, read SI for consistency; in a compilation, consider whether SI appears appropriate; label clearly.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>6) Documentation Essentials</h2>
+    <div class="card">
+      <ul>
+        <li>Engagement letter and understanding of the applicable financial reporting framework.</li>
+        <li>For preparation: copy of financial statements with the “no assurance” legend and any disclosure notes.</li>
+        <li>For compilation: compilation report, financial statements read, and notes about any known departures and how addressed.</li>
+        <li>For review: inquiries performed, analytics (expectations and results), understanding obtained, management representations, and the review report.</li>
+      </ul>
+    </div>
+
+    <h2>7) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Is independence required for a compilation? <strong>No</strong>—but lack of independence must be <strong>disclosed</strong> in the report.</li>
+        <li>What if management refuses the “no assurance” legend in a preparation? <strong>Issue a compilation report or withdraw.</strong></li>
+        <li>Scope limitation in a review—can you issue a qualified conclusion? <strong>No</strong>—perform alternative procedures or <strong>withdraw</strong>.</li>
+        <li>Can substantially all disclosures be omitted in a compilation? <strong>Yes</strong>—with an appropriate disclosure and only if not misleading.</li>
+        <li>Primary procedures in a review? <strong>Inquiry and analytical procedures</strong> plus reading the financial statements.</strong></li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

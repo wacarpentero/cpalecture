@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Planning for & Using the Work of Others (2025 AICPA Blueprints)</title>
+<meta name="description" content="Chapter‑style CPA reviewer for AUD Area II.F (Planning for and Using the Work of Others), aligned to the 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b;    /* deep blue background */
+    --bg2:#0b1e3a;
+    --card:#0e2247;
+    --card2:#123064;
+    --ink:#eaf2ff;
+    --muted:#b9c7e6;
+    --accent:#3b82f6;
+    --accent2:#60a5fa;
+    --gold:#f5c542;
+    --ok:#10b981;
+    --warn:#f59e0b;
+    --bad:#ef4444;
+    --radius:16px;
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%) , linear-gradient(180deg,var(--bg1), #040b18 70%);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:7px;padding:2px 6px}
+  ul{padding-left:18px}
+  li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Planning for & Using the Work of Others</h1>
+
+    <!-- Stacked sections with spacing -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Plan whether and how to <strong>use the work of internal auditors</strong>, <strong>specialists</strong>, and <strong>component auditors</strong>.</li>
+          <li>Evaluate the <strong>competence, capabilities, and objectivity</strong> of others whose work may be used.</li>
+          <li>Set clear <strong>instructions</strong>, <strong>communication</strong>, and <strong>review</strong> procedures; determine limits on <em>direct assistance</em> by internal auditors.</li>
+          <li>Document responsibilities and conclusions; understand <strong>if/when to reference others</strong> in the auditor’s report.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Area</th><th>Key points to remember</th></tr>
+          <tr><td>Internal auditors (AU‑C 610)</td><td>May use their work after evaluating competence, objectivity, and a systematic approach; <em>direct assistance</em> by IA is restricted and not allowed in some jurisdictions. Auditor directs, supervises, and reviews any such work.</td></tr>
+          <tr><td>Auditor’s specialist (AU‑C 620)</td><td>Engage when expertise beyond accounting/auditing is needed. Agree on scope and responsibilities; evaluate the adequacy of the specialist’s work as audit evidence.</td></tr>
+          <tr><td>Management’s specialist</td><td>Evaluate competence/objectivity and the methods, assumptions, and data used; consider engaging your own specialist when needed.</td></tr>
+          <tr><td>Component auditors (AU‑C 600)</td><td>Assess competence/independence; issue clear instructions (materiality, risks, required work); review component work and determine sufficiency for the group opinion.</td></tr>
+          <tr><td>Reporting</td><td>Ordinarily do not refer to specialists or component auditors unless required by law/regulation or to explain a division of responsibility in group audits.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Planning: Deciding to Use the Work of Others</h2>
+    <div class="card">
+      <ul>
+        <li>Consider <strong>engagement risks</strong>, complexity (e.g., valuation, actuarial, IT), geography (components), and <strong>resources/timing</strong>.</li>
+        <li>Perform preliminary evaluations of others’ <strong>competence, capabilities, and objectivity</strong>.</li>
+        <li>Define roles early in the <strong>overall strategy</strong> and reflect in the <strong>audit plan</strong> (see II.A).</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> For high‑risk estimates (e.g., Level 3 fair value), plan for an <em>auditor’s specialist</em> at the outset to avoid late surprises.</div>
+    </div>
+
+    <h2>2) Using Internal Auditors (AU‑C 610)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Evaluate IA function:</strong> competence (qualifications, QA), objectivity (organizational status/policies), and systematic & disciplined approach (methodology, documentation).</li>
+        <li><strong>Using IA work:</strong> align with audit objectives; test IA work for adequacy; perform additional procedures in higher‑risk areas.</li>
+        <li><strong>Direct assistance:</strong> If permitted, the external auditor directs, supervises, and reviews IA work and <em>does not</em> use IA for areas with significant judgment/high RMM.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>IA tested three‑way match controls in AP. The external auditor re‑performs a sample of IA’s tests, finds them reliable, and reduces control testing extent — but still performs substantive procedures due to completeness risk.</p></details>
+    </div>
+
+    <h2>3) Using Specialists (AU‑C 620)</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Auditor’s Specialist</h3>
+        <ul>
+          <li>Engage for areas like valuation (Level 3), actuarial liabilities, environmental obligations, complex IT.</li>
+          <li>Agree on nature, scope, objectives, confidentiality, and reporting format.</li>
+          <li>Evaluate the specialist’s work and address inconsistencies with other evidence.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Management’s Specialist</h3>
+        <ul>
+          <li>Evaluate competence/objectivity of the specialist used by management.</li>
+          <li>Test methods, significant assumptions, and source data; consider your own specialist if needed.</li>
+          <li>If results conflict with evidence, investigate and resolve; adjust risk assessment/procedures.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>4) Group Audits & Component Auditors (AU‑C 600)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Group strategy:</strong> understand the group structure, significant components, and consolidation process.</li>
+        <li><strong>Instructions:</strong> communicate materiality by component, identified risks, required procedures, reporting package templates, and timelines.</li>
+        <li><strong>Review:</strong> evaluate summaries and selected working papers; consider different frameworks/languages/time zones.</li>
+        <li><strong>Reporting:</strong> reference component auditors only if required/permitted and when dividing responsibility per standards.</li>
+      </ul>
+      <div class="callout check"><strong>Checklist:</strong> Component scoping, materiality allocation, risk alignment, sufficiency of evidence, and consolidation procedures reviewed.</div>
+    </div>
+
+    <h2>5) Documentation & Communications</h2>
+    <div class="card">
+      <ul>
+        <li>Basis for using IA work or direct assistance; tests of IA work performed.</li>
+        <li>Engagement terms/evaluation of specialists; review of their work and conclusions reached.</li>
+        <li>Group instructions, component materiality, review of component work, and sufficiency of evidence for the group opinion.</li>
+        <li>Key communications with management and TCWG about reliance on others.</li>
+      </ul>
+    </div>
+
+    <h2>6) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>When is direct assistance by internal auditors acceptable? <strong>Only where permitted and not for high‑judgment/high‑risk areas; auditor must direct, supervise, and review.</strong></li>
+        <li>What’s the difference between an auditor’s specialist and a management’s specialist? <strong>One is engaged by the auditor; the other provides evidence used by management — both must be evaluated.</strong></li>
+        <li>Who is responsible for the group opinion? <strong>The group engagement partner/team, even when component auditors perform work.</strong></li>
+        <li>Should specialists be named in the auditor’s report? <strong>Generally no, unless required by law/regulation or to explain division of responsibility.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

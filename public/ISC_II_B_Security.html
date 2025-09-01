@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Security</title>
+<style>
+:root{--bg:#0b1020;--card:#111a33;--ink:#eaf0ff;--muted:#a7b4cf;--accent:#7aa2ff;--accent2:#4dd4b0;--danger:#ff6b6b;--warn:#ffb84d;--font:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.title{font-size:28px;font-weight:800;margin:6px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px dashed rgba(255,255,255,.12);padding:8px;text-align:left;font-size:14px;vertical-align:top}
+.table th{font-weight:600}
+ul.tight>li{margin:4px 0}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.tip{border-left:4px solid var(--accent2);background:rgba(77,212,176,.08);padding:10px;border-radius:8px}
+.warn{border-left:4px solid var(--warn);background:rgba(255,184,77,.08);padding:10px;border-radius:8px}
+.bad{border-left:4px solid var(--danger);background:rgba(255,107,107,.08);padding:10px;border-radius:8px}
+code,kbd{background:rgba(255,255,255,.08);padding:0 6px;border-radius:6px}
+details>summary{cursor:pointer;padding:8px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+.answer>summary{cursor:pointer;padding:6px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;margin-top:6px}
+.answer>summary::-webkit-details-marker{display:none}
+.small{font-size:13px;color:var(--muted)}
+.hl{background:rgba(122,162,255,.12);padding:2px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Security</div>
+
+    <section class="section">
+      <h2>Learning Objectives</h2>
+      <div class="grid">
+        <ul class="tight">
+          <li>Classify types of <strong>threat agents</strong> (internal/external, nation‑state/non‑state, adversary/attacker).</li>
+          <li>Identify <strong>attack types</strong> (physical, DDoS, malware/ransomware, social engineering, web & mobile app attacks).</li>
+          <li>Identify <strong>techniques</strong> used in cyber‑attacks (buffer overflow, mobile code, XSS, SQL injection, race conditions, covert channels, replay, return‑oriented attacks) at a high level.</li>
+          <li>Explain <strong>attack stages</strong>: reconnaissance → gaining access → privilege escalation → maintaining access → exploitation/exfiltration → covering tracks.</li>
+        </ul>
+        <ul class="tight">
+          <li>Identify cybersecurity risks in <strong>cloud platforms/services</strong> (misconfiguration, shared responsibility, exposed keys).</li>
+          <li>Identify risks for the <strong>Internet of Things (IoT)</strong> (default creds, weak update paths, insecure telemetry).</li>
+          <li>Identify risks for <strong>mobile technologies</strong> (device loss, rooting/jailbreak, unvetted apps, weak MDM).</li>
+          <li>Determine threats in connections with <strong>customers, vendors & partners</strong> and across <strong>on‑prem & cloud apps, networks, and connected devices</strong>.</li>
+        </ul>
+      </div>
+      <div class="tip"><strong>Exam tip:</strong> In scenario questions, anchor on <span class="hl">actor</span> → <span class="hl">asset</span> → <span class="hl">vector</span> → <span class="hl">impact</span>. Then pick the control that reduces probability or limits impact—without giving operational “how‑to” steps.</div>
+    </section>
+
+    <section class="section">
+      <h2>Threats & Attacks — quick map</h2>
+      <table class="table">
+        <tr><th>Category</th><th>Examples (recognize‑level)</th><th>Typical mitigations (conceptual)</th></tr>
+        <tr>
+          <td><strong>Threat agents</strong></td>
+          <td>Insider (malicious/negligent), cybercriminals, hacktivists, nation‑state/APT, partners.</td>
+          <td>Least privilege; backgrounding & training; segmentation; vendor due diligence; monitoring.</td>
+        </tr>
+        <tr>
+          <td><strong>Attack types</strong></td>
+          <td>Phishing/social engineering; ransomware; DDoS; web/mobile app abuse; physical theft.</td>
+          <td>Awareness; MFA; backups/restore drills; WAF/rate‑limits; endpoint protection; physical security.</td>
+        </tr>
+        <tr>
+          <td><strong>Techniques</strong></td>
+          <td>XSS, SQL injection, buffer overflow, race conditions, replay, covert channels (concept only).</td>
+          <td>Input validation; parameterized queries; memory‑safe languages; secure session mgmt; logging.</td>
+        </tr>
+        <tr>
+          <td><strong>Cloud risks</strong></td>
+          <td>Public bucket exposure; weak IAM; over‑permissive security groups; key leakage.</td>
+          <td>Shared‑responsibility matrix; least‑privilege IAM; encryption; config baselines & drift alerts.</td>
+        </tr>
+        <tr>
+          <td><strong>IoT risks</strong></td>
+          <td>Default credentials; outdated firmware; flat networks; weak telemetry protection.</td>
+          <td>Network isolation; change defaults; managed patching; signed updates; inventory.</td>
+        </tr>
+        <tr>
+          <td><strong>Mobile risks</strong></td>
+          <td>Lost/stolen device; sideloaded or risky apps; insecure Wi‑Fi; BYOD data mingling.</td>
+          <td>MDM/MAM; device encryption; app allow‑lists; per‑app VPN; remote wipe.</td>
+        </tr>
+        <tr>
+          <td><strong>Partner connections</strong></td>
+          <td>Third‑party portal compromise; vendor API token leakage; supply chain attack.</td>
+          <td>Vendor risk management; least‑privilege tokens; network segmentation; monitoring.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Illustration — Attack lifecycle (recognize the stage)</h2>
+      <div class="grid-3">
+        <div class="card"><strong>1. Recon</strong><br><span class="small">Open‑source info, scanning.</span></div>
+        <div class="card"><strong>2. Initial access</strong><br><span class="small">Phish, exploit vulnerable service, stolen creds.</span></div>
+        <div class="card"><strong>3. Privilege escalation</strong><br><span class="small">Abuse misconfig, local exploit.</span></div>
+        <div class="card"><strong>4. Lateral movement</strong><br><span class="small">Pivot to servers; spread.</span></div>
+        <div class="card"><strong>5. Actions on objectives</strong><br><span class="small">Exfiltrate data, encrypt files, disrupt ops.</span></div>
+        <div class="card"><strong>6. Cover tracks</strong><br><span class="small">Clear logs, disable defenses.</span></div>
+      </div>
+      <div class="warn"><strong>Exam cue:</strong> If the scenario says “public S3 bucket with customer CSVs found by researcher,” the likely control is <em>configuration hardening & monitoring</em> (not incident response first).</div>
+    
+    <section class="section">
+      <h2>Threat modeling &amp; landscape</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>How to model a threat (exam‑level)</h3>
+          <ul class="tight">
+            <li><strong>Scope the asset</strong> (data/process/system) and <strong>entry points</strong>.</li>
+            <li>Trace <em>actor → vector → asset → impact</em>; sketch a simple data‑flow.</li>
+            <li>Apply <strong>STRIDE</strong> mnemonics: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege.</li>
+            <li>Pick <strong>controls</strong> that reduce likelihood (prevent/detect) or impact (limit/restore).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Current threat landscape (recognize)</h3>
+          <ul class="tight">
+            <li><strong>Ransomware</strong> &amp; data extortion via initial access brokers.</li>
+            <li><strong>Business email compromise</strong> &amp; OAuth/token abuse.</li>
+            <li><strong>Supply‑chain</strong> compromises (third‑party software or access).</li>
+            <li>Cloud <strong>misconfiguration</strong> (public storage, over‑privileged roles).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="section">
+      <h2>Cloud, IoT, Mobile — focus points</h2>
+      <div class="grid">
+
+        <div class="card">
+          <h3>On‑prem apps & networks</h3>
+          <ul class="tight">
+            <li>Unpatched services / legacy protocols (e.g., SMBv1, NTLM relay).</li>
+            <li>Flat network with shared local admin credentials.</li>
+            <li>Weak segmentation around crown‑jewel systems (ERP/financials).</li>
+            <li>Insufficient monitoring &amp; logging for lateral movement.</li>
+          </ul>
+        </div>
+    
+        <div class="card">
+          <h3>Cloud checklist</h3>
+          <ul class="tight">
+            <li>Confirm <strong>shared responsibility</strong> for IaaS/PaaS/SaaS.</li>
+            <li>Harden identity: <strong>MFA</strong>, least privilege, scoped tokens, key rotation.</li>
+            <li>Encrypt data at rest & in transit; prevent public storage unless intended.</li>
+            <li>Baseline configurations; detect drift & public exposure.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>IoT checklist</h3>
+          <ul class="tight">
+            <li>Inventory devices; change default passwords and disable unused services.</li>
+            <li>Isolate IoT on separate VLANs; restrict outbound traffic.</li>
+            <li>Enable signed updates; maintain patch cadence.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mobile checklist</h3>
+          <ul class="tight">
+            <li>Deploy <strong>MDM/MAM</strong>; enforce encryption & screen lock.</li>
+            <li>App allow‑list; block sideloading for corporate devices.</li>
+            <li>Remote‑wipe & selective‑wipe for BYOD.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+  <h2>Testing &amp; Reporting</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Security awareness &amp; communication</h3>
+      <ul class="tight">
+        <li>Obtain an understanding of how security is communicated (policies, LMS, phishing drills).</li>
+        <li>Assess effectiveness: participation, comprehension checks, incident trends.</li>
+        <li>Model expected behaviors (reporting, clean‑desk, secure transfer, password hygiene).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Assessment input</h3>
+      <ul class="tight">
+        <li>Document <strong>issues, evidence, impact, and recommendations</strong>.</li>
+        <li>Rate likelihood/impact; propose preventive/detective/corrective actions and owners.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Walkthroughs</h3>
+      <ul class="tight">
+        <li>Trace a transaction/control step‑by‑step; compare the <em>observed</em> procedure to the <em>documented</em> policy/standard.</li>
+        <li>Capture artifacts: screenshots/logs, tickets, approvals; note exceptions.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>SOC 2® — Trust Services Criteria</h3>
+      <ul class="tight">
+        <li>Identify <strong>design</strong> deficiencies (control missing/insufficient) and <strong>operating</strong> deficiencies (not performed or ineffective).</li>
+        <li>Map findings to TSC categories (Security, Availability, Confidentiality, Processing Integrity, Privacy) and system commitments/requirements.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+  <h2>Mitigation &amp; Controls</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Using COSO to assess cyber risk</h3>
+      <ul class="tight">
+        <li>Map risks to <strong>COSO ERM/IC components</strong>: Control Environment, Risk Assessment, Control Activities, Information &amp; Communication, Monitoring.</li>
+        <li>Evaluate <em>design</em> (is a control in place?) and <em>operation</em> (is it performed &amp; evidenced?).</li>
+        <li>Document assertions, control owners, frequency, evidence, and deficiency severity.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Control types</h3>
+      <ul class="tight">
+        <li><strong>Preventive</strong>: hardening/baselines, least‑privilege IAM, network segmentation, MFA, allow‑listing.</li>
+        <li><strong>Detective</strong>: logging/alerting, IDS/EDR, integrity monitoring, anomaly detection.</li>
+        <li><strong>Corrective</strong>: patching, isolation/quarantine, restore from backups, key rotation.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Identification &amp; Authentication</h3>
+      <ul class="tight">
+        <li>Password policy &amp; vaulting, <strong>single sign‑on</strong>, <strong>MFA</strong> (something you know/have/are).</li>
+        <li><strong>PINs</strong>, <strong>digital signatures</strong>/<strong>certificates</strong>, <strong>smart cards</strong>, <strong>biometrics</strong> (consider privacy/false‑accept). </li>
+        <li>Scenario fit: privilege profiles, risk‑based step‑up, device trust, and session timeouts.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Authorization models</h3>
+      <ul class="tight">
+        <li><strong>DAC</strong> (discretionary): owner grants rights; enforced by <em>ACLs</em>.</li>
+        <li><strong>RBAC</strong> (role‑based): roles aggregate permissions; apply <em>account restrictions</em>, SoD.</li>
+        <li><strong>MAC</strong> (mandatory): labels/clearances; enforced by policy &amp; <em>physical barriers</em> where needed.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+      <h2>Practice Questions</h2>
+
+      <details>
+        <summary><strong>1.</strong> Threat agent vs technique</summary>
+        <p>An attacker sends convincing emails to payroll staff to capture credentials and then steals files from cloud storage. Which pair best describes the <em>technique</em> and the <em>attack stage</em>?</p>
+        <ol type="A">
+          <li>SQL injection; exploitation</li>
+          <li>Phishing; initial access</li>
+          <li>Replay; reconnaissance</li>
+          <li>DDoS; covering tracks</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B.</strong> Phishing is a social‑engineering technique commonly used for <em>initial access</em>.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>2.</strong> Cloud risk identification</summary>
+        <p>A team grants <code>Administrator</code> to a CI server so builds can publish artifacts to cloud storage. What risk is most acute?</p>
+        <ol type="A">
+          <li>Public bucket exposure only</li>
+          <li>Excessive privilege enabling broad compromise if CI is breached</li>
+          <li>Lack of encryption at rest</li>
+          <li>Physical theft of media</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B.</strong> Over‑privileged roles are a common cloud misconfiguration; compromise of CI would grant wide access.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>3.</strong> IoT segmentation</summary>
+        <p>Smart cameras were added to the corporate network and now a database server reports unusual outbound traffic. Best first control?</p>
+        <ol type="A">
+          <li>Disable backups</li>
+          <li>Place cameras on isolated network segments and restrict egress</li>
+          <li>Turn off server logging</li>
+          <li>Allow third‑party remote access</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B.</strong> IoT should be isolated with minimal egress; this reduces lateral movement and data exfiltration risk.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>4.</strong> Mobile control</summary>
+        <p>Which control most directly reduces risk of data loss if a sales rep’s phone is lost?</p>
+        <ol type="A">
+          <li>Weekly password rotation</li>
+          <li>MDM with device encryption and remote wipe</li>
+          <li>Open guest Wi‑Fi access</li>
+          <li>Disable screen lock</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B.</strong> MDM enforcing encryption + remote wipe addresses the asset loss scenario.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>5.</strong> Partner connection threat</summary>
+        <p>A vendor’s API token for your environment is found in a public repo. Which immediate action reduces blast radius?</p>
+        <ol type="A">
+          <li>Increase log retention</li>
+          <li>Rotate & scope the token to least privilege; then monitor</li>
+          <li>Disable backups</li>
+          <li>Whitelist all vendor IPs</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>B.</strong> Rotate/limit privileges and monitor for misuse; principle of least privilege.</div>
+        </details>
+      </details>
+
+      <details>
+        <summary><strong>6.</strong> Technique classification</summary>
+        <p>Untrusted input rendered in a web page executes in a user’s browser session. Which technique?</p>
+        <ol type="A">
+          <li>Cross‑site scripting</li>
+          <li>SQL injection</li>
+          <li>Replay attack</li>
+          <li>Buffer overflow</li>
+        </ol>
+        <details class="answer"><summary>Show answer &amp; explanation</summary>
+          <div class="card"><strong>A. XSS.</strong> Code runs in the victim’s browser when output encoding/input validation is missing.</div>
+        </details>
+      </details>
+
+    </section>
+
+  </div>
+</body>
+</html>

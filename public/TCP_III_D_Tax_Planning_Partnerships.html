@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tax Planning for Partnerships — TCP III.D (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0a1f44; --card:#0f2a5c; --text:#e6efff; --muted:#bcd1ff; --accent:#7fb3ff;
+         --ok:#66e0a3; --border:rgba(255,255,255,.12); --shadow:0 10px 25px rgba(0,0,0,.25); --radius:18px; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%), radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%), var(--bg);
+       color:var(--text);line-height:1.55;}
+  .header-inner{max-width:1100px;margin:0 auto;padding:28px 18px 4px}
+  .title{font-weight:800;letter-spacing:.3px;font-size:clamp(26px,3.1vw,40px);margin:0;text-align:left}
+  .container{max-width:1100px;margin:0 auto;padding:8px 18px 60px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:16px 0;box-shadow:var(--shadow)}
+  h2{margin:0 0 10px;font-size:clamp(20px,2.1vw,28px)}
+  h3{margin:18px 0 8px;font-size:clamp(17px,1.7vw,22px)}
+  p{margin:8px 0 10px}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));padding:14px 16px;border-radius:12px;border:1px dashed var(--border);}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  .answer{color:var(--ok);font-weight:400}
+  .tgrid { width:100%; border-collapse:collapse; margin-top:4px; }
+  .tgrid th, .tgrid td { border:1px solid var(--border); padding:10px 12px; vertical-align:top; }
+  .tgrid th { text-align:left; background:rgba(255,255,255,.04); }
+  .tgrid tr:nth-child(even) td { background:rgba(255,255,255,.02); }
+  .mini { margin:0; padding:0 0 0 18px; }
+  .mini li { margin:4px 0; }
+  .eq { white-space:pre-wrap; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Tax Planning for Partnerships</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Compute partner <strong>outside basis</strong> and partnership <strong>inside basis</strong> at formation (<strong>§721</strong>) including <strong>§752 liabilities</strong> (recourse vs nonrecourse).</li>
+        <li>Apply <strong>§704(d)</strong> basis limits (then <strong>§465 at‑risk</strong>, then <strong>§469 passive</strong>) and pro‑rata allocation when basis is insufficient.</li>
+        <li>Plan for <strong>current vs liquidating distributions</strong> (cash > basis gain rule; basis to property under <strong>§732</strong>).</li>
+        <li>Analyze <strong>sale vs distribution</strong> of interests and <strong>§751 hot assets</strong> ordinary income recharacterization.</li>
+        <li>Use <strong>§704(c)</strong> to track built‑in gain/loss on contributed property and plan after contribution sales.</li>
+        <li>Evaluate when a <strong>§754 election</strong> yields benefits; compute <strong>§743(b)</strong> step‑up amount conceptually.</li>
+        <li>Spot <strong>§707 disguised sales</strong>, and understand partner <strong>self‑employment tax</strong> basics at a high level.</li>
+      </ul>
+    </section>
+
+    
+    <section class="card">
+      <h2>Fast map</h2>
+      <style>
+        .grid {display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top:8px}
+        @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+        .rule {border:1px solid var(--border); border-radius:14px; padding:14px; background:rgba(255,255,255,.02)}
+        .rule h4{margin:0 0 6px; font-size:16px}
+        .rule p{margin:6px 0; color:var(--muted)}
+        .badge{display:inline-block; border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; margin:4px 6px 0 0}
+        .iftable{width:100%; border-collapse:collapse; margin-top:14px}
+        .iftable th,.iftable td{border:1px solid var(--border); padding:10px 12px; vertical-align:top}
+        .iftable th{background:rgba(255,255,255,.04); text-align:left}
+        .em{font-weight:600; color:var(--text)}
+      </style>
+
+      <div class="grid">
+        <div class="rule">
+          <h4>🧱 Formation ( §721 )</h4>
+          <ul>
+            <li>No gain/loss on <span class="em">property</span> contributions; services are taxable.</li>
+            <li>Initial <span class="em">outside basis</span> = basis − debt relief + partner’s §752 share.</li>
+            <li>Track <span class="em">inside</span> vs <span class="em">outside</span> basis.</li>
+          </ul>
+          <span class="badge">Services ≠ property</span>
+          <span class="badge">Debt counts via §752</span>
+        </div>
+
+        <div class="rule">
+          <h4>🏦 Liabilities ( §752 )</h4>
+          <ul>
+            <li><span class="em">Recourse</span> → by economic risk of loss (often loss‑sharing).</li>
+            <li><span class="em">Nonrecourse</span> → generally by profit sharing (subject to regs/minimum gain).</li>
+            <li>Debt share ↑ ⇒ outside basis ↑; relief ↓ basis.</li>
+          </ul>
+          <span class="badge">Affects gain/loss limits</span>
+        </div>
+
+        <div class="rule">
+          <h4>📉 Loss limits order</h4>
+          <ul>
+            <li><span class="em">Basis</span> (§704(d)) → <span class="em">At‑risk</span> (§465) → <span class="em">Passive</span> (§469).</li>
+            <li>If basis is short across items, allow <span class="em">pro‑rata</span>.</li>
+            <li>Suspensions carry until basis/at‑risk/passive free up.</li>
+          </ul>
+          <span class="badge">Pro‑rata rule</span>
+        </div>
+
+        <div class="rule">
+          <h4>📦 Distributions ( §731 / §732 )</h4>
+          <ul>
+            <li>Recognize gain only if <span class="em">cash &gt; outside basis</span>.</li>
+            <li>Current: property basis = carryover, limited to remaining outside basis.</li>
+            <li>Liquidating: substitute remaining outside basis into property received.</li>
+          </ul>
+          <span class="badge">Cash test</span>
+        </div>
+
+        <div class="rule">
+          <h4>🔄 Sale vs distribution</h4>
+          <ul>
+            <li>Sale: Amount realized <span class="em">includes debt relief</span>.</li>
+            <li><span class="em">§751 hot assets</span> (UR + inventory) → ordinary income portion.</li>
+            <li>Remainder is capital gain/loss.</li>
+          </ul>
+          <span class="badge">Character split</span>
+        </div>
+
+        <div class="rule">
+          <h4>🧭 §704(c) after contribution</h4>
+          <ul>
+            <li>Contributor picks up pre‑contribution <span class="em">built‑in gain/loss</span> first.</li>
+            <li>Residual allocated by partner ratios.</li>
+            <li>Method matters (traditional/ceiling vs remedial).</li>
+          </ul>
+          <span class="badge">BIG first</span>
+        </div>
+
+        <div class="rule">
+          <h4>📈 §754 / §743(b)</h4>
+          <ul>
+            <li>Buyer step‑up = price − share of inside basis.</li>
+            <li>Affects only the <span class="em">transferee</span> for future depreciation/gain.</li>
+          </ul>
+          <span class="badge">Inside–outside gap</span>
+        </div>
+
+        <div class="rule">
+          <h4>💸 Disguised sales ( §707 )</h4>
+          <ul>
+            <li>Cash within <span class="em">2 years</span> of contribution ⇒ presumptive sale.</li>
+            <li>Exceptions: qualified liabilities, operating distributions, etc.</li>
+          </ul>
+          <span class="badge">2‑year presumption</span>
+        </div>
+      </div>
+
+      <table class="iftable">
+        <thead><tr><th>If you see…</th><th>Then remember…</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Cash distribution exceeds outside basis</td>
+            <td>Recognize gain under §731; property distributions rarely trigger gain.</td>
+          </tr>
+          <tr>
+            <td>Partner sells interest; debt on the books</td>
+            <td>Amount realized includes partner’s share of debt relief; check §751 for ordinary piece.</td>
+          </tr>
+          <tr>
+            <td>Multiple losses with limited basis</td>
+            <td>Apply §704(d) <em>pro‑rata</em> across all loss/deduction items.</td>
+          </tr>
+          <tr>
+            <td>Contributed asset later sold</td>
+            <td>Allocate pre‑contribution BIG to contributor under §704(c) before splitting residual.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:10px">
+        <span class="badge">Cash &gt; basis ⇒ gain</span>
+        <span class="badge">Debt relief ↑ amount realized (sale)</span>
+        <span class="badge">Recourse ↔ loss share</span>
+        <span class="badge">Nonrecourse ↔ profit share</span>
+        <span class="badge">2‑year disguised sale presumption</span>
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>Debt relief math:</strong> Outside basis decreases by liabilities relieved and increases by the partner’s share of partnership liabilities.</li>
+        <li><strong>Ordering inside §705:</strong> Increase basis for income <em>before</em> reducing for distributions, then losses—prevents phantom gain.</li>
+        <li><strong>Hot assets</strong> = unrealized receivables + inventory (including substantially appreciated inventory). Ordinary character overrides capital on sale/distribution.</li>
+        <li><strong>§704(c) methods:</strong> Traditional/ceiling can defer some built‑in gain; remedial can fully cure—exam may ask conceptually.</li>
+        <li><strong>Liquidations</strong> substitute remaining basis into property received; no gain unless cash exceeds basis.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+      <table class="tgrid">
+        <thead>
+          <tr>
+            <th style="width:22%">Topic</th>
+            <th style="width:38%">Inputs</th>
+            <th style="width:20%">Key computation</th>
+            <th style="width:20%">Result(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1) Formation basis with §752 debt</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Contrib basis: $60,000</li>
+                <li>FMV: $120,000</li>
+                <li>Debt assumed by partnership: $20,000</li>
+                <li>Ownership: 50/50</li>
+              </ul>
+            </td>
+            <td class="eq">Outside basis = $60,000 − $20,000 + partner share of debt $10,000</td>
+            <td><strong>$50,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>2) §704(d) pro‑rata limit</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Basis available: $45,000</li>
+                <li>Ordinary loss: $70,000</li>
+                <li>Charitable: $6,000</li>
+                <li>§179: $10,000</li>
+              </ul>
+            </td>
+            <td class="eq">Allowed ≈ 45000/86000 × each item</td>
+            <td>Allowed ≈ Ord $36,628, Char $3,140, §179 $5,232; Suspended total $41,000</td>
+          </tr>
+          <tr>
+            <td><strong>3) Current distribution</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Outside basis: $50,000</li>
+                <li>Cash: $30,000</li>
+                <li>Inventory basis: $25,000</li>
+                <li>Land basis/FM V: $15,000 / $50,000</li>
+              </ul>
+            </td>
+            <td class="eq">Gain if cash &gt; basis → $0<br/>Remaining basis after cash = <strong>$20,000</strong><br/>Allocate to property up to inside bases</td>
+            <td>Basis received — Inv: <strong>$20,000</strong>; Land: <strong>$0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>4) Liquidating distribution</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Outside basis: $40,000</li>
+                <li>Cash: $10,000</li>
+                <li>Land basis/FM V: $20,000 / $70,000</li>
+              </ul>
+            </td>
+            <td class="eq">Remaining basis after cash = $30,000 → substituted basis in land</td>
+            <td>Land basis (to partner): <strong>$30,000</strong>; Gain recognized: <strong>$0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5) Sale with §751 hot assets</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Outside basis: $55,000</li>
+                <li>Amount realized: $100,000</li>
+                <li>Hot assets ordinary portion: $15,000</li>
+              </ul>
+            </td>
+            <td class="eq">Total gain = $100,000 − $55,000 = <strong>$45,000</strong></td>
+            <td>Ordinary: <strong>$15,000</strong>; Capital: <strong>$30,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>6) §704(c) sale after contribution</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Contrib basis/FM V: $40,000 / $70,000 (BIG $30,000)</li>
+                <li>Sale price: $90,000</li>
+              </ul>
+            </td>
+            <td class="eq">Total gain = $50,000; allocate $30,000 to contributor (704(c)); residual $20,000 by ratios</td>
+            <td>Contributor picks up: <strong>$30,000</strong> 704(c) gain</td>
+          </tr>
+          <tr>
+            <td><strong>7) §754 / §743(b) step‑up</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Purchase price: $200,000</li>
+                <li>Buyer’s share of inside basis: $120,000</li>
+              </ul>
+            </td>
+            <td class="eq">§743(b) adjustment = purchase − inside share</td>
+            <td><strong>$80,000</strong> step‑up for buyer</td>
+          </tr>
+          <tr>
+            <td><strong>8) §752 liability allocations</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Recourse debt: $100,000 @ 60% to A</li>
+                <li>Nonrecourse: $150,000 @ 50% to A</li>
+              </ul>
+            </td>
+            <td class="eq">A’s §752 share = $60,000 + $75,000</td>
+            <td><strong>$135,000</strong> increases outside basis</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> Formation: Contribute property basis $80,000 with liability $30,000 to a 3‑partner equal partnership. Your initial outside basis?</p>
+        <ol type="A">
+          <li>$60,000</li>
+          <li>$80,000</li>
+          <li>$50,000</li>
+          <li>$70,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Outside basis = basis − debt relief + your share of partnership debt ($10,000). = $60,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> §752 allocations: Recourse $120,000, nonrecourse $180,000. Partner A shares 40% of losses and 30% of profits. A’s total §752 share?</p>
+        <ol type="A">
+          <li>$102,000</li>
+          <li>$48,000</li>
+          <li>$54,000</li>
+          <li>$0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Recourse by loss‑sharing: $48,000; Nonrecourse by profit share: $54,000; total $102,000 increases basis.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> §704(d): Basis available $25,000; ordinary loss $30,000; charitable $5,000; §179 $15,000. Allowed totals (rounded)?</p>
+        <ol type="A">
+          <li>Ord $15,000; Char $2,500; §179 $7,500</li>
+          <li>Ord $25,000; Char $0; §179 $0</li>
+          <li>Ord $0; Char $0; §179 $25,000</li>
+          <li>Ord $20,000; Char $5,000; §179 $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Allowed proportionally: ratio = 25000/50000 = 50%; remainder $25,000 suspends (then test at‑risk/passive).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Current distribution: Outside basis $35,000; cash received $42,000. Gain recognized?</p>
+        <ol type="A">
+          <li>$7,000</li>
+          <li>$0</li>
+          <li>$42,000</li>
+          <li>$-7,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Gain under §731 only when cash &gt; basis. Here, $42,000 − $35,000 = $7,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Basis of property received (current): Outside basis $40,000; cash $10,000; inventory (inside basis $18,000); equipment (inside basis $25,000). Bases received?</p>
+        <ol type="A">
+          <li>Inv $18,000; Equip $12,000</li>
+          <li>Inv $18,000; Equip $0</li>
+          <li>Inv $0; Equip $25,000</li>
+          <li>Inv $15,000; Equip $15,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Remaining basis after cash = $30,000; allocate to property up to inside bases — Inventory $18,000 then Equipment $12,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> Sale of interest: Outside basis $70,000; amount realized $110,000; hot assets portion $20,000. Character of gain?</p>
+        <ol type="A">
+          <li>Ordinary $20,000; Capital $20,000</li>
+          <li>All capital $40,000</li>
+          <li>All ordinary $40,000</li>
+          <li>No gain</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Total gain $40,000; §751 hot assets portion $20,000 is ordinary; remainder $20,000 is capital.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> §704(c): Contributed basis $90,000; FMV $150,000; later sale $180,000. 704(c) gain to the contributor?</p>
+        <ol type="A">
+          <li>$60,000</li>
+          <li>$90,000</li>
+          <li>$30,000</li>
+          <li>$0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">704(c) assigns the pre‑contribution BIG first: $60,000. Since total gain is $90,000, contributor picks up $60,000; residual $30,000 allocable by ratios.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> §754: Buyer pays $500,000 for a partnership interest where the buyer’s share of inside basis is $360,000. §743(b) adjustment?</p>
+        <ol type="A">
+          <li>$140,000</li>
+          <li>$500,000</li>
+          <li>$360,000</li>
+          <li>$0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">§743(b) = purchase price − buyer’s share of inside basis = $140,000 (step‑up for the transferee only).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> Disguised sale: Partner receives cash $200,000 within 1 year of contributing property. Presumptive disguised sale amount?</p>
+        <ol type="A">
+          <li>$200,000</li>
+          <li>$0</li>
+          <li>$100,000</li>
+          <li>$50,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Transfers of cash within 2 years are presumed sales absent exceptions. Amount treated as sale proceeds ≈ $200,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Liquidating distribution: Outside basis $55,000; cash $15,000; land (inside basis $25,000, FMV $120,000). Basis of land to partner?</p>
+        <ol type="A">
+          <li>$40,000</li>
+          <li>$25,000</li>
+          <li>$120,000</li>
+          <li>$0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Liquidation substitutes remaining outside basis into property under §732(b); here, $40,000 becomes the land basis.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

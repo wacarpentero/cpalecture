@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nontaxable Dispositions of Assets — TCP IV.A (CPA Reviewer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0a1f44; --card:#0f2a5c; --text:#e6efff; --muted:#bcd1ff; --accent:#7fb3ff;
+         --ok:#66e0a3; --border:rgba(255,255,255,.12); --shadow:0 10px 25px rgba(0,0,0,.25); --radius:18px; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%), radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%), var(--bg);
+       color:var(--text);line-height:1.55;}
+  .header-inner{max-width:1100px;margin:0 auto;padding:28px 18px 4px}
+  .title{font-weight:800;letter-spacing:.3px;font-size:clamp(26px,3.1vw,40px);margin:0;text-align:left}
+  .container{max-width:1100px;margin:0 auto;padding:8px 18px 60px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:16px 0;box-shadow:var(--shadow)}
+  h2{margin:0 0 10px;font-size:clamp(20px,2.1vw,28px)}
+  h3{margin:18px 0 8px;font-size:clamp(17px,1.7vw,22px)}
+  p{margin:8px 0 10px}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));padding:14px 16px;border-radius:12px;border:1px dashed var(--border);}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  .answer{color:var(--ok);font-weight:400}
+  .tgrid { width:100%; border-collapse:collapse; margin-top:4px; }
+  .tgrid th, .tgrid td { border:1px solid var(--border); padding:10px 12px; vertical-align:top; }
+  .tgrid th { text-align:left; background:rgba(255,255,255,.04); }
+  .tgrid tr:nth-child(even) td { background:rgba(255,255,255,.02); }
+  .mini { margin:0; padding:0 0 0 18px; }
+  .mini li { margin:4px 0; }
+  .eq { white-space:pre-wrap; }
+  .grid {display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top:8px}
+  @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+  .rule {border:1px solid var(--border); border-radius:14px; padding:14px; background:rgba(255,255,255,.02)}
+  .rule h4{margin:0 0 6px; font-size:16px}
+  .rule ul{margin:6px 0 0 18px}
+  .rule li{margin:4px 0}
+  .iftable{width:100%; border-collapse:collapse; margin-top:14px}
+  .iftable th,.iftable td{border:1px solid var(--border); padding:10px 12px; vertical-align:top}
+  .iftable th{background:rgba(255,255,255,.04); text-align:left}
+  .em{font-weight:600; color:var(--text)}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Nontaxable Dispositions of Assets</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Identify nonrecognition provisions and compute <strong>realized vs recognized gain/loss</strong> and <strong>basis</strong> of property received.</li>
+        <li>Apply <strong>§1031 like‑kind exchange (real property)</strong>: boot (incl. net debt relief), recognized gain, and basis of replacement property.</li>
+        <li>Apply <strong>§1033 involuntary conversion</strong>: recognition deferral when timely reinvested; basis = cost − deferred gain.</li>
+        <li>Use <strong>§121 principal residence exclusion</strong> (ownership/use tests) and compute taxable remainder when gain exceeds exclusion.</li>
+        <li>Recognize <strong>§1041 spouse/divorce transfers</strong> (carryover basis, no recognition) and <strong>§1091 wash sale</strong> (disallowed loss → basis adjustment).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Fast map</h2>
+      <div class="grid">
+        <div class="rule">
+          <h4>🏢 §1031 Like‑kind (real property)</h4>
+          <ul>
+            <li>Nonrecognition for real property held for business/investment exchanged for like real property.</li>
+            <li>Recognized gain = <span class="em">lesser of</span> realized gain or <span class="em">boot</span> (cash + <em>net</em> debt relief).</li>
+            <li>Basis of new = old basis + gain recognized + cash paid + liabilities assumed − boot received − liabilities relieved.</li>
+          </ul>
+          <span class="pill">ID ≤45d / Close ≤180d</span>
+        </div>
+        <div class="rule">
+          <h4>🔥 Boot checklist</h4>
+          <ul>
+            <li>Cash received.</li>
+            <li>Net debt relief (old debt relieved &gt; new debt assumed).</li>
+            <li>Non‑qualifying property received.</li>
+          </ul>
+          <span class="pill">Boot triggers gain</span>
+        </div>
+        <div class="rule">
+          <h4>🌀 §1033 Involuntary conversion</h4>
+          <ul>
+            <li>Recognize gain only if <span class="em">proceeds &gt; replacement cost</span>.</li>
+            <li>Basis of replacement = <span class="em">cost − deferred gain</span>.</li>
+            <li>Timing: generally 2 years (3 for residences; longer for disasters).</li>
+          </ul>
+          <span class="pill">Like‑kind/use rules</span>
+        </div>
+        <div class="rule">
+          <h4>🏠 §121 Residence exclusion</h4>
+          <ul>
+            <li>Ownership &amp; use ≥2 of last 5 years.</li>
+            <li>Exclude up to <span class="em">$250k/$500k</span> (single/married).</li>
+            <li>Remainder is capital gain (recapture rules may apply if ever depreciated).</li>
+          </ul>
+          <span class="pill">Pro‑rata limits in rare cases</span>
+        </div>
+        <div class="rule">
+          <h4>❤️ §1041 Spousal transfers</h4>
+          <ul>
+            <li>No gain/loss; <span class="em">carryover basis</span> &amp; holding period.</li>
+            <li>Includes transfers incident to divorce (subject to timing rules).</li>
+          </ul>
+          <span class="pill">No step‑up</span>
+        </div>
+        <div class="rule">
+          <h4>🔁 §1091 Wash sales</h4>
+          <ul>
+            <li>Loss disallowed if substantially identical stock/bond repurchased ±30 days.</li>
+            <li>Disallowed loss increases basis of new shares.</li>
+          </ul>
+          <span class="pill">Track lots</span>
+        </div>
+      </div>
+
+      <table class="iftable" style="margin-top:12px">
+        <thead><tr><th>If you see…</th><th>Then remember…</th></tr></thead>
+        <tbody>
+          <tr><td>Debt differs across exchange</td><td>Net debt relief counts as <strong>boot</strong> → may recognize gain.</td></tr>
+          <tr><td>Insurance proceeds after casualty</td><td>Buy replacement ≥ proceeds to fully defer; else recognize excess.</td></tr>
+          <tr><td>Residence sold with large gain</td><td>Apply §121; cap remainder is taxable; watch prior depreciation.</td></tr>
+          <tr><td>Spousal property split</td><td>§1041 → no recognition; basis carries to recipient spouse.</td></tr>
+          <tr><td>Repurchase same stock in 30 days</td><td>Loss deferred and added to basis of replacement shares.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Tricky‑area tips</h2>
+      <ul>
+        <li><strong>§1031</strong>: Only real property qualifies; personal property generally excluded. Dealer property and personal‑use property are out.</li>
+        <li><strong>Debt netting</strong>: Relief of old debt vs assumption of new—use <em>net</em> to decide boot from debt.</li>
+        <li><strong>Exchange structure</strong>: Most are deferred exchanges with an intermediary—observe 45‑day ID and 180‑day close.</li>
+        <li><strong>§1033</strong>: “Similar or related in service or use” (taxpayer use test for owners; functional use for business property) often tested conceptually.</li>
+        <li><strong>§121</strong>: Failing the 2‑of‑5 test may allow a <em>reduced</em> exclusion in certain unforeseen circumstances (exam may reference).</li>
+        <li><strong>§1091</strong>: Wash sale rules apply security‑by‑security and can overlap across accounts if controlled by the taxpayer.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Illustrative Examples (computations)</h2>
+      <table class="tgrid">
+        <thead>
+          <tr>
+            <th style="width:22%">Topic</th>
+            <th style="width:38%">Inputs</th>
+            <th style="width:20%">Key computation</th>
+            <th style="width:20%">Result(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1) §1031 with boot (debt relief)</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Old basis: $400,000; Old debt: $150,000</li>
+                <li>New FMV: $800,000; New debt: $100,000</li>
+                <li>Cash paid: $50,000</li>
+              </ul>
+            </td>
+            <td class="eq">Boot = net debt relief = $150,000 − $100,000 = <strong>$50,000</strong>
+Realized gain = (FMV received + boot) − old basis = ($800,000 + $50,000) − $400,000 = <strong>$450,000</strong>
+Recognized gain = lesser of realized or boot = <strong>$50,000</strong>
+Basis (new) = $400,000 + $50,000 + $50,000 + $100,000 − $150,000 = <strong>$450,000</strong></td>
+            <td>Recognized: <strong>$50,000</strong><br/>Basis (new): <strong>$450,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>2) §1033 involuntary conversion</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Adj. basis: $300,000; Proceeds: $520,000</li>
+                <li>Replacement cost: $500,000</li>
+              </ul>
+            </td>
+            <td class="eq">Realized gain = $520,000 − $300,000 = <strong>$220,000</strong>
+Recognized = max(0, proceeds − cost) = <strong>$20,000</strong>
+Deferred = <strong>$200,000</strong>
+Basis (replacement) = cost − deferred = $500,000 − $200,000 = <strong>$300,000</strong></td>
+            <td>Recognized: <strong>$20,000</strong><br/>Basis: <strong>$300,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>3) §121 residence exclusion</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Sale: $780,000; Costs: $30,000</li>
+                <li>Basis: $450,000; Filing: Married</li>
+              </ul>
+            </td>
+            <td class="eq">Gain = sale − costs − basis = <strong>$300,000</strong>
+Exclusion limit = <strong>$500,000</strong>
+Recognized = max(0, gain − limit) = <strong>$0</strong></td>
+            <td>Excluded: <strong>$300,000</strong><br/>Recognized: <strong>$0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>4) §1041 spouse transfer</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Basis: $200,000; FMV: $320,000</li>
+              </ul>
+            </td>
+            <td class="eq">No recognition to either spouse.
+Recipient basis = <strong>carryover</strong> = $200,000</td>
+            <td>Recognized: <strong>$0</strong><br/>Recipient basis: <strong>$200,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5) §1091 wash sale</strong></td>
+            <td>
+              <ul class="mini">
+                <li>Sold: basis $50,000 for $38,000 (loss $12,000)</li>
+                <li>Repurchase within 30 days: $40,000</li>
+              </ul>
+            </td>
+            <td class="eq">Loss disallowed = <strong>$12,000</strong>
+New basis = repurchase + disallowed loss = $40,000 + $12,000 = <strong>$52,000</strong></td>
+            <td>Recognized loss: <strong>$0</strong><br/>New basis: <strong>$52,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> §1031: Old basis $500,000; old debt $200,000; new debt $120,000; new FMV $750,000; cash received $0. Recognized gain and new basis?</p>
+        <ol type="A">
+          <li>Gain $80,000; Basis $500,000</li>
+          <li>Gain $0; Basis $500,000</li>
+          <li>Gain $330,000; Basis $500,000</li>
+          <li>Gain $80,000; Basis $580,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Boot = net debt relief $80,000 ⇒ recognize up to boot; new basis = old basis + recognized + liabilities assumed − liabilities relieved.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> §1033: AB $260,000; proceeds $420,000; replacement cost $390,000. Recognized gain, deferred gain, and basis?</p>
+        <ol type="A">
+          <li>Recog $30,000; Deferred $130,000; Basis $260,000</li>
+          <li>Recog $0; Deferred $160,000; Basis $230,000</li>
+          <li>Recog $160,000; Deferred $0; Basis $390,000</li>
+          <li>Recog $30,000; Deferred $0; Basis $390,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Recognize only proceeds &gt; replacement cost: $30,000. Deferred = realized − recognized = $130,000. Basis = cost − deferred = $260,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> §121 (single): Sale $620,000; costs $20,000; basis $370,000. Recognized and excluded gain?</p>
+        <ol type="A">
+          <li>Recognized $0; Excluded $230,000</li>
+          <li>Recognized $230,000; Excluded $0</li>
+          <li>Recognized $0; Excluded $250,000</li>
+          <li>Recognized $0; Excluded $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Gain = $230,000; with §121 limit $250,000, fully excluded here.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> §1041: Transfer basis $180,000; FMV $250,000. Recognition and recipient’s basis?</p>
+        <ol type="A">
+          <li>Recognized $0; Basis $180,000</li>
+          <li>Recognized $70,000; Basis $250,000</li>
+          <li>Recognized $0; Basis $250,000</li>
+          <li>Recognized $0; Basis $0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">§1041 → no gain/loss; basis carries over to recipient spouse: $180,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Wash sale: Sold at $65,000 with basis $80,000 and repurchased within 30 days for $70,000. New basis?</p>
+        <ol type="A">
+          <li>$85,000</li>
+          <li>$70,000</li>
+          <li>$80,000</li>
+          <li>$55,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Disallowed loss $15,000 is added to basis of replacement shares: $70,000 + $15,000 = $85,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> §1031 (cash paid, no debt change): Old basis $300,000; new FMV $360,000; cash paid $30,000. Recognized gain and new basis?</p>
+        <ol type="A">
+          <li>Gain $0; Basis $330,000</li>
+          <li>Gain $60,000; Basis $300,000</li>
+          <li>Gain $0; Basis $300,000</li>
+          <li>Gain $0; Basis $330,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">No boot received (cash was paid), so no recognition. Basis increases by cash paid: $330,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> §1033: AB $400,000; proceeds $480,000; replacement $420,000. Recognized, deferred, basis?</p>
+        <ol type="A">
+          <li>Recog $60,000; Deferred $20,000; Basis $400,000</li>
+          <li>Recog $0; Deferred $80,000; Basis $340,000</li>
+          <li>Recog $20,000; Deferred $60,000; Basis $420,000</li>
+          <li>Recog $60,000; Deferred $0; Basis $420,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Recognize the excess of proceeds over replacement cost: $60,000. Deferred gain $20,000; basis $400,000.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> §121 (MFJ): Sale $1,200,000; costs $40,000; basis $600,000. Recognized and excluded?</p>
+        <ol type="A">
+          <li>Recognized $60,000; Excluded $500,000</li>
+          <li>Recognized $0; Excluded $500,000</li>
+          <li>Recognized $560,000; Excluded $0</li>
+          <li>Recognized $60,000; Excluded $500,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">Gain $560,000; MFJ exclusion cap $500,000 → recognized remainder $60,000; excluded $500,000.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

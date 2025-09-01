@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — REG III.B Cost Recovery (Depreciation & Amortization)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+                  linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+    padding:18px;border-radius:var(--radius);
+    overflow:hidden;margin-bottom:18px
+  }
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .small{font-size:.96rem}
+  .muted{color:var(--muted)}
+  .callout{border-left:4px solid var(--accent);background:rgba(96,165,250,.08);
+           padding:12px 14px;border-radius:10px;margin-top:8px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;
+       border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-right:6px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);
+         border:1px solid rgba(255,255,255,.12);margin-right:6px}
+  /* Hidden answers control */
+  .reveal{margin-top:6px}
+  .reveal>summary{cursor:pointer;list-style:none;display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.18);
+                  border-radius:10px;background:rgba(255,255,255,.06);font-weight:600}
+  .reveal>summary::-webkit-details-marker{display:none}
+  .reveal>summary::marker{content:""}
+  .reveal[open]>summary{opacity:.85}
+  .answer-block{margin-top:8px;color:#b5ffb1}
+  .mini{font-size:.9rem}
+  /* Inline SVG flow common styles */
+  .canvas{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:8px}
+  svg{width:100%;height:auto;display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Cost Recovery (Depreciation & Amortization)</h1>
+
+  <section class="card">
+    <h2>Learning Objectives</h2>
+    <ul class="small">
+      <li><strong>Calculate</strong> MACRS depreciation for tangible business property, including determining the <em>recovery period</em>, <em>method</em>, and <em>convention</em> (half‑year, mid‑quarter, mid‑month).</li>
+      <li><strong>Determine</strong> property eligible for a <strong>§179 election</strong> and apply the ordering rules with bonus and regular MACRS.</li>
+      <li><strong>Calculate</strong> amortization for <strong>§197 intangibles</strong> and other amortizable costs.</li>
+      <li><strong>Review</strong> a depreciation/amortization schedule for completeness and <strong>resolve discrepancies</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Quick Framework</h2>
+    <div class="grid-2 small">
+      <div>
+        <h4>Ordering rule (tax)</h4>
+        <ol>
+          <li><span class="badge">1</span> Apply <strong>§179</strong> expense (limited; taxable‑income ceiling for business).</li>
+          <li><span class="badge">2</span> Apply <strong>bonus depreciation</strong> (current‑year rate per law/exam fact pattern).</li>
+          <li><span class="badge">3</span> Compute remaining basis under <strong>MACRS</strong> using the proper method and convention.</li>
+        </ol>
+        <div class="callout mini"><strong>Exam tip:</strong> If mid‑quarter might apply, calculate the <em>40% test</em> using <u>original cost</u> of personal property placed in service in the last quarter. Real property uses mid‑month by default.</div>
+      </div>
+      <div>
+        <h4>At‑a‑glance</h4>
+        <table class="tbl mini">
+          <tr><th>Class life</th><th>Common assets</th><th>Default MACRS</th></tr>
+          <tr><td>5‑year</td><td>Computers, vehicles (non‑luxury), office equipment</td><td>200% DB → SL; half‑year unless mid‑quarter</td></tr>
+          <tr><td>7‑year</td><td>Office furniture, fixtures</td><td>200% DB → SL</td></tr>
+          <tr><td>15/27.5/39‑year</td><td>Land improvements / Residential / Nonresidential real</td><td>150% DB (15) or SL (27.5/39); mid‑month</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="card canvas">
+    <h2>Illustration — Which bucket? (§179, Bonus, MACRS)</h2>
+    <svg viewBox="0 0 1200 360" role="img" aria-label="Flow for applying 179, bonus, and regular MACRS">
+      <defs>
+        <marker id="arrow" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L12,5 L0,10 z" fill="rgba(255,255,255,.65)"></path>
+        </marker>
+        <style>
+          .node{fill:rgba(96,165,250,.18);stroke:rgba(255,255,255,.35)}
+          .box{fill:rgba(134,183,255,.22);stroke:rgba(255,255,255,.35)}
+          .text{fill:#fff;font-size:16px;font-weight:800}
+          .wire{stroke:rgba(255,255,255,.7);stroke-width:3;fill:none;marker-end:url(#arrow)}
+          .lbl{fill:#fff;font-size:13px;font-weight:700}
+        </style>
+      </defs>
+      <!-- row 1 -->
+      <rect class="node" x="30" y="36" rx="12" ry="12" width="420" height="60"></rect>
+      <text class="text" x="240" y="72" text-anchor="middle">Qualified personal/real property placed in service?</text>
+      <line class="wire" x1="450" y1="66" x2="650" y2="66"></line>
+      <text class="lbl" x="470" y="54">Yes</text>
+      <rect class="box" x="650" y="36" rx="12" ry="12" width="240" height="60"></rect>
+      <text class="text" x="770" y="72" text-anchor="middle">§179 election first</text>
+
+      <!-- row 2 -->
+      <line class="wire" x1="770" y1="96" x2="770" y2="150"></line>
+      <rect class="box" x="610" y="150" rx="12" ry="12" width="320" height="60"></rect>
+      <text class="text" x="770" y="186" text-anchor="middle">Then apply bonus depreciation</text>
+
+      <!-- row 3 -->
+      <line class="wire" x1="770" y1="210" x2="770" y2="260"></line>
+      <rect class="box" x="540" y="260" rx="12" ry="12" width="460" height="60"></rect>
+      <text class="text" x="770" y="296" text-anchor="middle">Remaining basis → MACRS (method & convention)</text>
+
+      <!-- 'No' branch -->
+      <line class="wire" x1="240" y1="96" x2="240" y2="150"></line>
+      <text class="lbl" x="250" y="118">No</text>
+      <rect class="box" x="80" y="150" rx="12" ry="12" width="320" height="60"></rect>
+      <text class="text" x="240" y="186" text-anchor="middle">No cost recovery (land / non‑qualifying)</text>
+    </svg>
+    <div class="callout mini"><strong>Ordering is testable.</strong> If the fact pattern gives a current‑year bonus rate, apply it <em>after</em> any §179 election and <em>before</em> regular MACRS.</div>
+  </section>
+
+  <section class="card">
+    <h2>Worked Examples (Representative Tasks)</h2>
+
+    <h3>1) MACRS — 5‑year, 200% DB, half‑year convention</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Equipment cost <strong>$50,000</strong>; placed in service in May; no §179 or bonus.</td>
+        <td>
+          Use 200% DB half‑year table for 5‑year property: <strong>20%, 32%, 19.2%, 11.52%, 11.52%, 5.76%</strong>.<br>
+          Yr 1: $50,000 × 20% = <strong>$10,000</strong> &nbsp;|&nbsp; Yr 2: $50,000 × 32% = <strong>$16,000</strong><br>
+          Yr 3: $50,000 × 19.2% = <strong>$9,600</strong> &nbsp;|&nbsp; Yr 4: $50,000 × 11.52% = <strong>$5,760</strong><br>
+          Yr 5: $50,000 × 11.52% = <strong>$5,760</strong> &nbsp;|&nbsp; Yr 6: $50,000 × 5.76% = <strong>$2,880</strong>
+        </td>
+      </tr>
+    </table>
+
+    <h3>2) Mid‑quarter convention test</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Test & Result</th></tr>
+      <tr>
+        <td>Placed in service (personal property): Q1 <strong>$30,000</strong>, Q2 <strong>$20,000</strong>, Q3 <strong>$10,000</strong>, Q4 <strong>$70,000</strong>.</td>
+        <td>
+          Last‑quarter % = $70,000 ÷ ($30,000 + $20,000 + $10,000 + $70,000) = <strong>50%</strong> → <strong>mid‑quarter applies</strong>.<br>
+          Use the IRS MQ tables for first‑year percentages by quarter and class life.
+        </td>
+      </tr>
+    </table>
+
+    <h3>3) §179 + Bonus + MACRS (ordering)</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>5‑year equipment cost <strong>$300,000</strong>. Elect §179 of <strong>$100,000</strong>. Assume current‑year bonus rate (per exam facts) of <strong>60%</strong>. Half‑year convention.</td>
+        <td>
+          <ol>
+            <li>§179 = <strong>$100,000</strong> → remaining basis <strong>$200,000</strong>.</li>
+            <li>Bonus (60% of $200,000) = <strong>$120,000</strong> → remaining basis <strong>$80,000</strong>.</li>
+            <li>MACRS Yr 1 (20% of $80,000) = <strong>$16,000</strong>.</li>
+          </ol>
+          <em>Total Yr 1 deduction</em> = $100,000 + $120,000 + $16,000 = <strong>$236,000</strong>.
+        </td>
+      </tr>
+    </table>
+
+    <h3>4) §197 intangibles — goodwill</h3>
+    <table class="tbl small">
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Acquired business with goodwill of <strong>$120,000</strong>, placed in service July 1.</td>
+        <td>
+          §197 amortization: 180 months straight‑line with monthly convention.<br>
+          Monthly = $120,000 ÷ 180 = <strong>$666.67</strong>. Year 1 months = 6 → amortization <strong>$4,000</strong>.
+        </td>
+      </tr>
+    </table>
+
+    <h3>5) Review & resolve discrepancies</h3>
+    <div class="callout small">
+      <strong>Checklist:</strong>
+      <ul>
+        <li>Verify <strong>class life</strong> & method (e.g., 5‑yr 200% DB vs. 7‑yr).</li>
+        <li>Confirm correct <strong>convention</strong> (half‑year, mid‑quarter, mid‑month).</li>
+        <li>Check <strong>§179 ceiling</strong> and business taxable‑income limit; carryforward excess.</li>
+        <li>Apply <strong>bonus</strong> rate to the post‑§179 basis only.</li>
+        <li>Reconcile <strong>prior‑year accumulated</strong> to the opening basis.</li>
+        <li>For disposals/retirements, stop depreciation and compute G/L using adjusted basis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Common Pitfalls (Exam Tips)</h2>
+    <ul class="small">
+      <li><span class="tag">Order matters</span> §179 → Bonus → MACRS.</li>
+      <li><span class="tag">40% test</span> Uses <em>original cost</em> placed in service in Q4, not depreciable basis after elections.</li>
+      <li><span class="tag">Luxury auto limits</span> Can cap MACRS; bonus interacts with caps (follow the provided table in the fact pattern).</li>
+      <li><span class="tag">Real property</span> Always mid‑month; no §179 for most buildings (but interior qualified improvement property may qualify—follow facts).</li>
+      <li><span class="tag">§197</span> Always 15 years; partial‑year via monthly convention.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Quick Recap</h2>
+    <table class="tbl small">
+      <tr><th>If you see…</th><th>Remember…</th></tr>
+      <tr><td>Multiple assets placed in Q4</td><td>Run the 40% test → may trigger mid‑quarter.</td></tr>
+      <tr><td>Large immediate deduction desired</td><td>Use §179 (subject to limits) then bonus; any remainder under MACRS.</td></tr>
+      <tr><td>Purchased business</td><td>Intangibles (goodwill, customer lists) are §197 over 180 months.</td></tr>
+      <tr><td>Building</td><td>SL and mid‑month (27.5 or 39 years).</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Quick Practice — 6 MCQs</h2>
+    <ol class="small">
+      <li><strong>Half‑year MACRS:</strong> 5‑year property, cost <strong>$25,000</strong>, no elections. Year‑1 depreciation?<br>
+          A. <strong>$5,000</strong>  B. <strong>$8,000</strong>  C. <strong>$4,800</strong>  D. <strong>$10,000</strong><br>
+          <details class="reveal"><summary>Show answer</summary><div class="answer-block">D — 5‑year 200% DB half‑year Year‑1 rate is 20% → $25,000 × 20% = <strong>$5,000</strong>. (Correct option: A)</div></details>
+      </li>
+      <div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+
+      <li><strong>Mid‑quarter test:</strong> Q4 placements total <strong>$90,000</strong>; total for year <strong>$180,000</strong>. Convention?<br>
+          A. Half‑year  B. Mid‑month  C. Mid‑quarter  D. Optional<br>
+          <details class="reveal"><summary>Show answer</summary><div class="answer-block">C — $90,000 ÷ $180,000 = <strong>50%</strong> in last quarter → mid‑quarter applies.</div></details>
+      </li>
+      <div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+
+      <li><strong>Ordering:</strong> Cost <strong>$300,000</strong>; §179 elected <strong>$50,000</strong>; bonus rate 60%. Remaining basis for MACRS?<br>
+          A. <strong>$120,000</strong>  B. <strong>$80,000</strong>  C. <strong>$100,000</strong>  D. <strong>$200,000</strong><br>
+          <details class="reveal"><summary>Show answer</summary><div class="answer-block">B — $300,000 − $50,000 = <strong>$250,000</strong>; bonus 60% = <strong>$150,000</strong>; remainder = <strong>$100,000</strong>. (Correct option: C)</div></details>
+      </li>
+      <div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+
+      <li><strong>§197 monthly convention:</strong> §197 asset basis <strong>$90,000</strong> acquired October 1. Year‑1 amortization?<br>
+          A. <strong>$3,000</strong>  B. <strong>$1,500</strong>  C. <strong>$5,000</strong>  D. <strong>$6,000</strong><br>
+          <details class="reveal"><summary>Show answer</summary><div class="answer-block">B — $90,000 ÷ 180 = <strong>$500</strong>/mo × 3 months = <strong>$1,500</strong>.</div></details>
+      </li>
+      <div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+
+      <li><strong>Real property:</strong> Nonresidential building placed in service March 15, cost <strong>$780,000</strong>. Which is correct?<br>
+          A. 200% DB, half‑year  B. SL, mid‑month  C. 150% DB, mid‑quarter  D. SL, half‑year<br>
+          <details class="reveal"><summary>Show answer</summary><div class="answer-block">B — 39‑year nonresidential real property uses straight‑line and the mid‑month convention.</div></details>
+      </li>
+      <div class="hr" style="height:1px;background:rgba(255,255,255,.12);margin:10px 0"></div>
+
+      <li><strong>Disposal check:</strong> Asset cost <strong>$40,000</strong>; accumulated <strong>$28,000</strong>; sold for <strong>$9,000</strong>. Gain/Loss?<br>
+          A. <strong>$3,000</strong> loss  B. <strong>$3,000</strong> gain  C. <strong>$-</strong>  D. Depends on class life<br>
+          <details class="reveal"><summary>Show answer</summary><div class="answer-block">A — Adjusted basis $40,000 − $28,000 = <strong>$12,000</strong>; amount realized <strong>$9,000</strong> → <strong>$3,000</strong> loss.</div></details>
+      </li>
+    </ol>
+  </section>
+
+</div>
+</body>
+</html>

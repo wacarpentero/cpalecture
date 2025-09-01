@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passive Activity & At‑Risk Loss Limitations (TCP I.B) — CPA Reviewer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1f44;
+    --card:#0f2a5c;
+    --text:#e6efff;
+    --muted:#bcd1ff;
+    --accent:#7fb3ff;
+    --ok:#66e0a3;
+    --code:#0b2047;
+    --border:rgba(255,255,255,.12);
+    --shadow: 0 10px 25px rgba(0,0,0,.25);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #12356e 0%, var(--bg) 45%),
+                radial-gradient(900px 500px at 100% 0%, #07183a 0%, var(--bg) 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  header{ text-align:left; }
+  .header-inner{max-width:1050px;margin:0 auto;padding: 28px 18px 4px;}
+  .title{font-weight:800;letter-spacing:.3px;font-size: clamp(26px, 3.1vw, 40px);margin:0;hyphens:none;}
+  .container{max-width:1050px;margin:0 auto;padding: 8px 18px 60px;}
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    margin:16px 0;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px;font-size: clamp(20px,2.1vw,28px);letter-spacing:.2px;hyphens:none;}
+  h3{margin:18px 0 8px;font-size: clamp(17px,1.7vw,22px);hyphens:none;}
+  p{margin:8px 0 10px;}
+  ul,ol{margin:6px 0 10px 22px}
+  li{margin:6px 0}
+  .diagram{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    padding:14px 16px;border-radius:12px;border:1px dashed var(--border);white-space:pre-wrap;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  code, pre{background: var(--code); border:1px solid var(--border); border-radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  code{padding:3px 6px}
+  pre{padding:14px 16px; overflow:auto}
+  details{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02);margin:10px 0}
+  details[open]{background:rgba(255,255,255,.04)}
+  summary{cursor:pointer;font-weight:600;color:var(--text)}
+  .answer{color:var(--ok);font-weight:700}
+  .pill{color:var(--text); border:1px solid var(--border); padding:6px 10px; border-radius:999px; display:inline-block; margin:4px 6px 0 0; font-size:13px}
+  .hr{height:1px;background:var(--border);margin:16px 0}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="title">Passive Activity & At‑Risk Loss Limitations</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="objectives" class="card">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Calculate the <strong>at‑risk loss limitation</strong> for an activity in which an individual <em>materially participates</em>, including losses from pass‑through entities and losses from real‑estate rental activities with <em>active participation</em>.</li>
+        <li>Calculate the <strong>passive activity loss (PAL)</strong> limitations for a given scenario, including <strong>netting</strong> of passive gains and losses and special rules for rental real estate.</li>
+        <li>Calculate <strong>utilization of suspended losses</strong> upon <strong>disposition</strong> of a passive activity.</li>
+        <li>Review an owner’s <strong>basis schedules</strong> and documentation to correctly allocate a loss among amounts <em>suspended for at‑risk</em>, <em>suspended for passive</em>, and <em>allowed for tax</em>.</li>
+      </ul>
+    </section>
+
+    <section id="bigpicture" class="card">
+      <h2>Big‑picture order of loss limits (individuals)</h2>
+      <div class="diagram">1) <strong>Tax Basis</strong> → cannot deduct beyond basis
+2) <strong>At‑Risk</strong> (§465) → deduct only to amount at risk (cash, basis of contributed property, <em>recourse debt</em>, and <em>qualified nonrecourse real‑estate debt</em>)
+3) <strong>Passive Activity</strong> (§469) → passive losses limited to passive income (unless $25k allowance or full disposition)
+4) (<em>Also consider Excess Business Loss limits</em> under §461(l) when applicable)</div>
+      <span class="pill">Basis → At‑risk → Passive</span> <span class="pill">$25k rental allowance</span> <span class="pill">Release on full disposition</span>
+    </section>
+
+    <section id="definitions" class="card">
+      <h2>Key definitions</h2>
+      <ul>
+        <li><strong>Passive activity</strong>: trade/business in which the taxpayer does <em>not</em> materially participate; most rental activities are passive by default.</li>
+        <li><strong>Material participation</strong>: any of 7 tests (e.g., &gt;500 hours; substantially all participation; &gt;100 hours and not less than any other individual, etc.).</li>
+        <li><strong>Active participation (rental)</strong>: lighter standard (10% ownership + management decisions) enabling up to <strong>$25,000</strong> allowance for rental real‑estate losses, phased out $1 for $2 of AGI from $100k to $150k.</li>
+        <li><strong>Qualified nonrecourse financing</strong> (real estate): treated as at‑risk.</li>
+      </ul>
+    </section>
+
+    <section id="atrisk" class="card">
+      <h2>At‑risk rules (what counts / what doesn’t)</h2>
+      <ul>
+        <li><strong>Increases</strong>: cash/property contributed (basis), amounts borrowed for which taxpayer is <strong>personally liable</strong> (recourse), and <strong>qualified nonrecourse real‑estate</strong> debt.</li>
+        <li><strong>Decreases</strong>: losses deducted, withdrawals/distributions, and debt reductions.</li>
+        <li><strong>Nonrecourse (non‑qualified) debt</strong> generally <em>does not</em> increase at‑risk.</li>
+      </ul>
+      <h3>Mini‑example</h3>
+      <div class="diagram">You invest $40k cash in an LLC and personally guarantee a $60k bank loan used in the activity.
+At‑risk = 40k + 60k = <strong>100k</strong>. If the LLC reports a $120k loss, only <strong>100k</strong> is allowed (before passive limits); 20k becomes <em>at‑risk suspended</em>.</div>
+    </section>
+
+    <section id="pal" class="card">
+      <h2>Passive activity loss (PAL) rules</h2>
+      <ul>
+        <li>Aggregate income/loss by activity category; <strong>net passive income</strong> can absorb passive losses.</li>
+        <li><strong>Rental real estate $25k allowance</strong> with <em>active participation</em>, phase‑out $100k–$150k AGI.</li>
+        <li>Real estate professional rules may reclassify rentals as non‑passive (beyond scope for quick review).</li>
+      </ul>
+      <h3>Netting flow</h3>
+      <div class="diagram">Passive Activity A: loss (20k)
+Passive Activity B: income 12k
+Passive Activity C: loss (9k)
+Net passive = 12k − 29k = <strong>(17k)</strong> → suspended unless $25k rental allowance applies.</div>
+    </section>
+
+    <section id="disposition" class="card">
+      <h2>Suspended losses on disposition</h2>
+      <ul>
+        <li>On a <strong>fully taxable</strong> disposition to an unrelated party, all <strong>suspended passive losses</strong> for that activity are freed: first offset any remaining passive income, then any amount in excess becomes <strong>non‑passive</strong> and can offset other income.</li>
+        <li>Partial sales, like selling a portion of the interest or an installment sale, generally do <em>not</em> trigger full release.</li>
+      </ul>
+    </section>
+
+    <section id="basisreview" class="card">
+      <h2>Basis schedule review — what to scan</h2>
+      <ul>
+        <li>Beginning basis and at‑risk rollforwards; identify <strong>recourse vs nonrecourse</strong> debt.</li>
+        <li>Map current‑year loss across <strong>allowed</strong>, <strong>suspended for at‑risk</strong>, and <strong>suspended for passive</strong>.</li>
+        <li>Check <strong>distributions</strong> vs basis to avoid creating negative basis.</li>
+      </ul>
+    </section>
+
+    <section id="tips" class="card">
+      <h2>Tricky‑area tips (exam‑focused)</h2>
+      <ul>
+        <li><strong>Order matters:</strong> apply Basis → At‑Risk → Passive, in that sequence.</li>
+        <li><strong>Debt labels:</strong> Only <em>recourse</em> and <em>qualified nonrecourse real‑estate</em> debt boost at‑risk.</li>
+        <li><strong>$25k rental allowance:</strong> compute the phase‑out carefully: Allowance × max(0, 1 − (AGI − 100k)/50k).</li>
+        <li><strong>Full release only on fully taxable disposition</strong> to an unrelated party; watch for partial sales.</li>
+        <li><strong>Grouping elections</strong> change material participation and netting; exam questions may keep activities separate unless stated.</li>
+      </ul>
+    </section>
+
+    <section id="practice" class="card">
+      <h2>Practice Questions</h2>
+
+      <div class="qa">
+        <p><strong>1)</strong> At‑risk amount: Taxpayer invests $30k cash and is personally liable for $50k; also has $40k vendor nonrecourse. What is the at‑risk amount?</p>
+        <ol type="A">
+          <li>$30,000</li>
+          <li>$80,000</li>
+          <li>$120,000</li>
+          <li>$70,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — 30k cash + 50k recourse = 80k; nonrecourse vendor debt does not increase at‑risk.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>2)</strong> Allowed loss this year? Basis = $90k; At‑risk = $70k; Passive income from other activities = $15k; Current‑year loss = $100k.</p>
+        <ol type="A">
+          <li>$15,000</li>
+          <li>$70,000</li>
+          <li>$85,000</li>
+          <li>$90,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Basis limits to 90k, then at‑risk to 70k, then passive limit to 15k (available income). But you cannot exceed at‑risk: <strong>Allowed = min(70k, 15k)</strong> = 15k? Re‑evaluate: Order is Basis (→100k loss limited to 90k), At‑Risk (→ limited to 70k), Passive (→ can deduct up to passive income 15k). Final allowed = <strong>15k</strong>; remainder suspended (55k passive + 30k at‑risk within total 85k suspended).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>3)</strong> Rental real‑estate with active participation: Loss $20k; AGI $120k (before the loss). How much of the $25k allowance remains?</p>
+        <ol type="A">
+          <li>$25,000</li>
+          <li>$15,000</li>
+          <li>$5,000</li>
+          <li>$0</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Phase‑out = (AGI − 100k) = 20k → 20k/50k = 40% → allowance = 25k × (1 − .40) = 15k. Loss is 20k; allowed up to 15k; remainder 5k suspended → the “allowance remaining” after phase‑out is 15k, leaving 5k suspended.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>4)</strong> Netting: Passive income Activity B = $12k; Passive losses A = $9k, C = $7k. Allowed loss this year?</p>
+        <ol type="A">
+          <li>$7,000</li>
+          <li>$9,000</li>
+          <li>$16,000</li>
+          <li>$12,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">D — Losses can offset only up to passive income: 12k allowed; remaining 4k suspended.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>5)</strong> Disposition: Suspended passive losses $30k; year also has $6k passive income elsewhere. Taxpayer sells the entire activity in a fully taxable sale to an unrelated party. How much offsets non‑passive income?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$6,000</li>
+          <li>$24,000</li>
+          <li>$30,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — First offset passive income (6k), remainder (24k) becomes non‑passive and offsets other income.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>6)</strong> Qualified nonrecourse financing on real estate of $200k is obtained. Does it increase at‑risk?</p>
+        <ol type="A">
+          <li>No</li>
+          <li>Yes, fully</li>
+          <li>Yes, but only 50%</li>
+          <li>Only if personally guaranteed</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — Qualified nonrecourse real‑estate financing is treated as at‑risk even without personal liability.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>7)</strong> Material participation test most commonly met by individuals:</p>
+        <ol type="A">
+          <li>More than 500 hours</li>
+          <li>Participated in 5 of last 10 years</li>
+          <li>Significant participation activities totaling &gt;500 hours</li>
+          <li>None; rental is always non‑passive</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — &gt;500 hours is the most straightforward test; rentals are generally passive unless exceptions apply.</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>8)</strong> Investor’s basis 60k; at‑risk 45k; passive income from other activities 0; current loss 50k. How much is allowed?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$15,000</li>
+          <li>$45,000</li>
+          <li>$50,000</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">A — Basis allows up to 50k (since basis 60k), at‑risk limits to 45k, but passive limit is 0 → current allowed = 0; 45k passive‑suspended (and at‑risk‑suspended counted within basis/at‑risk tracking).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>9)</strong> Active participation rental real estate: Loss $18k; AGI $98k. Allowed under the $25k allowance?</p>
+        <ol type="A">
+          <li>$0</li>
+          <li>$18,000</li>
+          <li>$25,000</li>
+          <li>$12,500</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">B — No phase‑out below $100k AGI; the $25k allowance fully covers the $18k loss (subject to basis/at‑risk).</p></details>
+      </div>
+
+      <div class="qa">
+        <p><strong>10)</strong> Which order correctly applies the loss limitations?</p>
+        <ol type="A">
+          <li>Passive → Basis → At‑risk</li>
+          <li>At‑risk → Basis → Passive</li>
+          <li>Basis → At‑risk → Passive</li>
+          <li>Basis → Passive → At‑risk</li>
+        </ol>
+        <details><summary>Answer &amp; Explanation</summary><p class="answer">C — Basis first, then At‑Risk, then Passive.</p></details>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.F: Intangible Assets</title>
+<meta name="description" content="CPA reviewer chapter for FAR II.F — Intangible Assets (recognition, measurement, amortization, impairment, software costs, cloud arrangements), aligned to 2025 AICPA Blueprints under U.S. GAAP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .one{grid-template-columns:1fr}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .center{text-align:center}
+  .small{font-size:0.95rem}
+  /* Journal entries: tight grid to keep amounts close to accounts; credits in parentheses */
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 260px 96px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{overflow:visible;white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+
+  /* Keep labels from breaking vertically in the Amortization (Year 1) table */
+  .tbl.amort td:first-child, .tbl.amort th:first-child{overflow-wrap:normal;word-break:normal;white-space:normal}
+
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Intangible Assets</h1>
+
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Differentiate <strong>finite‑lived</strong> and <strong>indefinite‑lived</strong> intangibles and identify <strong>capitalizable costs</strong> at acquisition.</li>
+          <li>Compute <strong>amortization</strong> and account for <strong>impairment</strong> of both finite‑lived and indefinite‑lived intangibles under U.S. GAAP.</li>
+          <li>Apply guidance for <strong>research and development (R&amp;D)</strong>, <strong>software</strong> (internal‑use and external‑use), and <strong>cloud computing arrangements</strong>.</li>
+          <li>Prepare and interpret typical <strong>journal entries</strong> for recognition, amortization, impairment, and software capitalization.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:26%"><col style="width:48%"><col style="width:26%"></colgroup>
+          <tr><th>Topic</th><th>Core points</th><th>Exam flags</th></tr>
+          <tr><td>Recognition</td><td>Acquire at <strong>cost</strong> including legal and registration fees. Internally developed: most <strong>R&amp;D expensed</strong> as incurred (exceptions for certain materials, software stages, and legal fees).</td><td>Legal defense of patents is capitalized if successful.</td></tr>
+          <tr><td>Finite life</td><td>Amortize over <strong>useful life</strong> (straight‑line unless another pattern better reflects benefit). Test impairment as long‑lived assets held for use.</td><td>No residual value unless there is evidence of a salvage value.</td></tr>
+          <tr><td>Indefinite life</td><td><strong>Do not amortize.</strong> Test annually (or upon trigger) for impairment: write down to <strong>fair value</strong> if carrying amount exceeds fair value.</td><td>Can change to finite if circumstances change, then start amortization.</td></tr>
+          <tr><td>Software — external sale</td><td>Capitalize costs after <strong>technological feasibility</strong> and before release; then amortize by <em>greater of</em> (straight‑line) or (current revenues ÷ current+future revenues).</td><td>Pre‑feasibility costs are R&amp;D expense.</td></tr>
+          <tr><td>Software — internal‑use</td><td>Expense <em>preliminary project</em> stage; <strong>capitalize application development</strong>; expense <em>post‑implementation</em> (training, maintenance). Amortize over useful life.</td><td>Hosting arrangements without a license are a service, not an intangible.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Recognition & Measurement</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Initial measurement:</strong> cost includes purchase price, nonrefundable taxes, legal and registration fees, and costs necessary to get the asset ready for its intended use.</li>
+        <li><strong>Internally developed intangibles:</strong> expense most research and development; capitalize patent registration and successful legal defense, and capitalize software costs depending on development stage (see below).</li>
+      </ul>
+    </div>
+
+    <h2>2) Amortization</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Finite‑lived</strong> intangibles are amortized over the expected pattern of economic benefit, often straight‑line.</li>
+        <li><strong>Indefinite‑lived</strong> intangibles are not amortized. Reassess life each period.</li>
+      </ul>
+    </div>
+
+    <h2>3) Impairment</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Finite‑lived (held for use):</strong> first apply the <em>recoverability test</em> using undiscounted cash flows. If not recoverable, impair to fair value (or present value of expected cash flows).</li>
+        <li><strong>Indefinite‑lived:</strong> compare carrying amount to fair value; record loss for excess if carrying amount exceeds fair value.</li>
+      </ul>
+    </div>
+
+    <h2>Illustrative Examples</h2>
+    <section class="grid one">
+
+      <article class="card">
+        <h3>Example 1 — Identify Finite vs. Indefinite & Amortization Approach</h3>
+        <table class="tbl">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <tr><th>Intangible</th><th>Useful life</th><th>Amortize?</th><th>Notes</th></tr>
+          <tr><td>Patent (legal life 20 years)</td><td class="center">15 years (economic)</td><td class="center">Yes</td><td>Straight‑line over <em>shorter</em> of legal or economic life</td></tr>
+          <tr><td>Trademark with ongoing renewals</td><td class="center">Indefinite</td><td class="center">No</td><td>Test annually for impairment</td></tr>
+          <tr><td>Customer list</td><td class="center">5 years</td><td class="center">Yes</td><td>Amortize; reassess for impairment indicators</td></tr>
+        </table>
+      </article>
+
+      <article class="card">
+        <h3>Example 2 — Straight‑Line Amortization with Entry</h3>
+        <table class="tbl">
+          <colgroup><col style="width:48%"><col style="width:26%"><col style="width:26%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Computation</th></tr>
+          <tr><td>Acquire a customer list for cash</td><td class="num">$120,000</td><td></td></tr>
+          <tr><td>Useful life</td><td class="center">5 years</td><td></td></tr>
+          <tr><th>Annual amortization</th><th class="num">$24,000</th><th>$120,000 ÷ 5</th></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Amortization expense — customer list</span><span class="amt">$24,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated amortization — customer list</span><span class="amt">($24,000)</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Example 3 — Finite‑Lived Impairment (Recoverability then Measurement)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:44%"><col style="width:22%"><col style="width:34%"></colgroup>
+          <tr><th>Data</th><th class="center">Amount</th><th>Computation & Entry</th></tr>
+          <tr>
+            <td>Carrying amount of technology license (remaining 6 years)</td><td class="num">$300,000</td>
+            <td rowspan="3">
+              Recoverability test (undiscounted cash flows) = $260,000 → <strong>not recoverable</strong>.<br>
+              Fair value = $240,000 → Impairment loss = $300,000 − $240,000 = <strong>$60,000</strong>.
+              <ul class="je">
+                <li><span class="label">Dr</span><span class="acct">Impairment loss — intangible</span><span class="amt">$60,000</span></li>
+                <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated impairment — intangible</span><span class="amt">($60,000)</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td>Undiscounted expected cash flows</td><td class="num">$260,000</td></tr>
+          <tr><td>Fair value</td><td class="num">$240,000</td></tr>
+        </table>
+      </article>
+
+      <article class="card">
+        <h3>Example 4 — Indefinite‑Lived Impairment</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:48%"><col style="width:26%"><col style="width:26%"></colgroup>
+          <tr><th>Intangible</th><th class="center">Carrying amount</th><th class="center">Fair value</th></tr>
+          <tr><td>Trademark (indefinite life)</td><td class="num">$500,000</td><td class="num">$440,000</td></tr>
+          <tr><th>Loss to record</th><th class="num">$60,000</th><th></th></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Impairment loss — trademark</span><span class="amt">$60,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated impairment — trademark</span><span class="amt">($60,000)</span></li>
+        </ul>
+        <div class="callout tip">Under U.S. GAAP, impairment losses for indefinite‑lived intangibles are <strong>not reversed</strong> in later periods.</div>
+      </article>
+
+      <article class="card">
+        <h3>Example 5 — External‑Use Software (Technological Feasibility to Release)</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:40%"><col style="width:20%"><col style="width:40%"></colgroup>
+          <tr><th>Stage</th><th class="center">Amount</th><th>Accounting</th></tr>
+          <tr><td>Coding and testing <em>after technological feasibility</em></td><td class="num">$180,000</td><td>Capitalize</td></tr>
+          <tr><td>Bug fixing and packaging before release</td><td class="num">$40,000</td><td>Capitalize</td></tr>
+          <tr><td>Marketing costs</td><td class="num">$30,000</td><td>Expense</td></tr>
+        </table>
+        <div class="grid one">
+          <div class="card">
+            <h4>Amortization (Year 1)</h4>
+            <table class="tbl small amort">
+              <colgroup><col style="width:68%"><col style="width:32%"></colgroup>
+              <tr><td>Carrying amount at release</td><td class="num">$220,000</td></tr>
+              <tr><td>Expected total revenue: current $300,000; future $900,000</td><td class="num"></td></tr>
+              <tr><td>Revenue method</td><td class="num">Current ÷ (Current + Future) = 300,000 ÷ 1,200,000 = 25% → <strong>$55,000</strong></td></tr>
+              <tr><td>Straight‑line over 4 years</td><td class="num">$55,000</td></tr>
+              <tr><th>Expense (greater of the two)</th><th class="num">$55,000</th></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h4>Entries at capitalization and Year 1 amortization</h4>
+            <ul class="je">
+              <li><span class="label">Dr</span><span class="acct">Software — costs to be sold</span><span class="amt">$220,000</span></li>
+              <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($220,000)</span></li>
+            </ul>
+            <ul class="je">
+              <li><span class="label">Dr</span><span class="acct">Amortization expense — software</span><span class="amt">$55,000</span></li>
+              <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated amortization — software</span><span class="amt">($55,000)</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Example 6 — Internal‑Use Software (Project Stages)</h3>
+        <table class="tbl">
+          <colgroup><col style="width:40%"><col style="width:20%"><col style="width:40%"></colgroup>
+          <tr><th>Activity</th><th class="center">Amount</th><th>Accounting</th></tr>
+          <tr><td>Preliminary project (feasibility studies)</td><td class="num">$70,000</td><td>Expense</td></tr>
+          <tr><td>Application development (coding, configuration)</td><td class="num">$250,000</td><td>Capitalize</td></tr>
+          <tr><td>Training and maintenance after implementation</td><td class="num">$35,000</td><td>Expense</td></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Software — internal‑use (capitalized)</span><span class="amt">$250,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($250,000)</span></li>
+        </ul>
+        <div class="callout">Amortize internal‑use software over its useful life beginning when the software is <strong>ready for its intended use</strong>.</div>
+      </article>
+
+      <article class="card">
+        <h3>Example 7 — Cloud Computing Arrangement (Hosting)</h3>
+        <table class="tbl small">
+          <colgroup><col style="width:44%"><col style="width:28%"><col style="width:28%"></colgroup>
+          <tr><th>Terms</th><th class="center">Amount</th><th>Accounting</th></tr>
+          <tr><td>Three‑year hosting contract, no software license, up‑front setup fee</td><td class="num">$24,000</td><td>Record as a <strong>prepaid service asset</strong> and expense straight‑line over the term</td></tr>
+          <tr><td>Annual service fees</td><td class="num">$18,000</td><td>Expense over the service period</td></tr>
+        </table>
+        <ul class="je">
+          <li><span class="label">Dr</span><span class="acct">Prepaid cloud service</span><span class="amt">$24,000</span></li>
+          <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($24,000)</span></li>
+        </ul>
+      </article>
+
+    </section>
+
+    <h2>Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>Amortize indefinite‑lived intangibles? <strong>No</strong> — but test for impairment at least annually.</li>
+        <li>When to capitalize external‑use software? After <strong>technological feasibility</strong> and before general release.</li>
+        <li>Internal‑use software stages: <em>preliminary</em> (expense), <em>application development</em> (capitalize), <em>post‑implementation</em> (expense).</li>
+        <li>Finite‑lived impairment: first apply the <strong>undiscounted recoverability test</strong>, then measure loss to fair value.</li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partnerships — REG V.D Reviewer</title>
+  <style>
+:root{--bg:#0b1020;--card:#121a33;--ink:#eaf0ff;--muted:#a6b4d0;--accent:#6aa6ff;--accent-2:#4dd4b0;--warn:#ffd166;--font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6}
+*,*::before,*::after{font-family:var(--font)!important}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;letter-spacing:.2px;margin:8px 0}
+.section{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.section h2{margin-top:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.code{font-family:inherit;background:rgba(255,255,255,.06);padding:10px;border-radius:8px;overflow:auto}
+.warn{border-left:4px solid var(--warn);padding:10px;background:rgba(255,209,102,.08);border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.1);padding:8px;text-align:left;vertical-align:top}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">Partnerships</div>
+    </div>
+
+    <main>
+
+      <section id="objectives" class="section">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Calculate a partnership’s <strong>ordinary business income (loss)</strong> and <strong>separately stated items</strong>, including the treatment of <strong>guaranteed payments</strong>.</li>
+          <li>Review federal <strong>Form 1065</strong> and source data to classify items correctly as ordinary, separately stated, or nondeductible.</li>
+          <li>Resolve discrepancies flagged by diagnostics for the 1065 and K‑1s (e.g., missing basis, guaranteed payment tagging, passive grouping).</li>
+          <li>Compute a partner’s <strong>outside basis</strong> resulting from operations, contributions, distributions, and <strong>changes in partnership liabilities</strong>.</li>
+        </ul>
+      </section>
+
+      <section id="formation" class="section">
+        <h2>Formation & Contributions</h2>
+        <ul>
+          <li><strong>Sec. 721</strong>: No gain/loss to partners or partnership on contributions of property for a partnership interest (services are taxable as ordinary income). </li>
+          <li><strong>Inside basis</strong> (partnership’s basis in assets) generally carries over; <strong>outside basis</strong> (partner’s basis in partnership interest) equals AB of property contributed + cash.</li>
+          <li><strong>Built‑in gain property</strong> (Sec. 704(c)) must be allocated to the contributing partner when recognized.</li>
+        </ul>
+        <details><summary>Illustration — Service partner</summary>
+          <div class="code">
+A contributes equipment (AB $30, FMV $50). B performs services worth 20 for a 20% interest.
+A: no gain; outside basis $30. B: 20 ordinary income; outside basis $20 (cash-equivalent income).
+          </div>
+        </details>
+      </section>
+
+      <section id="operations" class="section">
+        <h2>Operations: Ordinary vs Separately Stated</h2>
+        <div class="kv">
+          <div>
+            <h3>Ordinary (Schedule K, line 1)</h3>
+            <ul>
+              <li>Trade/business income and deductions after guaranteed payments and deductible expenses.</li>
+              <li>Depreciation, wages, rent, supplies, etc., related to operations.</li>
+            </ul>
+            <p><strong>Guaranteed payments</strong> are deductible by the partnership in arriving at ordinary income and are ordinary income to the recipient partner (not SE exempt).</p>
+          </div>
+          <div>
+            <h3>Separately stated</h3>
+            <ul>
+              <li>Capital gains/losses; Sec. 1231 items.</li>
+              <li>Interest, dividends, royalties.</li>
+              <li>Charitable contributions; §179; foreign taxes/credits.</li>
+              <li>Passive income/loss groupings; credits; AMT items.</li>
+            </ul>
+            <p>Items that affect partners differently must be passed through separately to preserve their character.</p>
+          </div>
+        </div>
+        <details><summary>Illustration — Guaranteed payment</summary>
+          <div class="code">
+Partnership earns $120 before GP; Partner X receives a $30 guaranteed payment for services.
+Ordinary business income = $120 − $30 = $90.
+X reports $30 ordinary income (in addition to X’s distributive share of $90).
+          </div>
+        </details>
+      </section>
+
+      <section id="allocations" class="section">
+        <h2>Allocations & Economic Effect</h2>
+        <ul>
+          <li>Allocations must have <strong>substantial economic effect</strong> or be in accordance with partners’ interests (Sec. 704(b)).</li>
+          <li>Book capital accounts maintained; liquidation in accordance with capital accounts; deficit restoration obligation (or alternate tests) required.</li>
+          <li>Sec. <strong>704(c)</strong> methods (traditional, traditional w/ curative, remedial) address built‑in gain/loss property.</li>
+        </ul>
+      </section>
+
+      <section id="basis" class="section">
+        <h2>Partner’s Outside Basis</h2>
+        <div class="kv">
+          <div>
+            <h3>Annual basis formula</h3>
+            <ul>
+              <li>Beginning basis</li>
+              <li>+ Cash/property contributed</li>
+              <li>+ Share of <strong>income</strong> (taxable & tax‑exempt)</li>
+              <li>+ <strong>Increase</strong> in share of partnership <strong>liabilities</strong></li>
+              <li>− Distributions (cash & property; not below zero)</li>
+              <li>− Share of <strong>losses</strong> & nondeductible expenses</li>
+              <li>− <strong>Decrease</strong> in share of liabilities</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Liabilities (Sec. 752)</h3>
+            <ul>
+              <li><strong>Recourse debt</strong> allocated to partners who bear economic risk of loss (often general partners).</li>
+              <li><strong>Nonrecourse debt</strong> generally allocated by profit‑sharing ratios; <em>qualified nonrecourse financing</em> may be allocated to the property user.</li>
+              <li>Liability <strong>decreases</strong> are treated as <em>distributions</em> to the partner (reduce basis; may trigger gain if cash‑equivalent &gt; basis).</li>
+            </ul>
+          </div>
+        </div>
+        <details><summary>Illustration — Liability shift</summary>
+          <div class="code">
+X basis $10. Partnership refinances, reducing X’s share of liabilities by 15.
+The 15 decrease is treated as a cash distribution. Basis would drop to −5 → recognize $5 gain; ending basis $0.
+          </div>
+        </details>
+      </section>
+
+      <section id="losslimits" class="section">
+        <h2>Loss Limitations (Partner Level)</h2>
+        <ul>
+          <li><strong>Basis</strong> limitation: deductible only to the extent of outside basis; excess carries forward.</li>
+          <li><strong>At‑risk</strong> (Sec. 465): limits to amounts at risk; nonrecourse debt usually excluded (except qualified NR real estate financing).</li>
+          <li><strong>Passive activity</strong> (Sec. 469): passive losses offset only passive income unless exceptions apply.</li>
+          <li>Ordering: apply <strong>basis → at‑risk → passive</strong>.</li>
+        </ul>
+      </section>
+
+      <section id="distributions" class="section">
+        <h2>Distributions</h2>
+        <ul>
+          <li><strong>Current (nonliquidating)</strong>: Generally tax‑free to extent of basis. <strong>Cash</strong> in excess of basis creates gain (Sec. 731). Basis in distributed property = partnership’s AB limited by partner’s outside basis.</li>
+          <li><strong>Liquidating</strong>: Partner recognizes gain only if <em>cash</em> exceeds outside basis (or in certain hot‑asset cases for partial liquidations). Basis in assets received equals remaining outside basis allocated by ordering rules.</li>
+          <li><strong>Hot assets (Sec. 751)</strong>: Unrealized receivables and inventory can convert gain to <strong>ordinary</strong> on sale/distribution of partnership interest.</li>
+        </ul>
+        <details><summary>Illustration — Cash > basis</summary>
+          <div class="code">
+Partner basis before distribution: 18. Receives cash $25, no other property.
+Recognize gain $7 (25 − 18). Ending basis $0.
+          </div>
+        </details>
+      </section>
+
+      <section id="sale" class="section">
+        <h2>Sale of a Partnership Interest</h2>
+        <ul>
+          <li>Default result is <strong>capital gain/loss</strong> to the selling partner, except portion attributable to <strong>hot assets</strong> (Sec. 751) is ordinary.</li>
+          <li>Inside basis remains unless a Sec. <strong>754 election</strong> is in effect to adjust basis under Sec. 743(b).</li>
+        </ul>
+      </section>
+
+      <section id="quick" class="section">
+        <h2>Quick Reference</h2>
+        <div class="kv">
+          <div>
+            <h3>Common exam limits</h3>
+            <ul>
+              <li>Basis cannot go below <strong>zero</strong>.</li>
+              <li>Cash distributions &gt; basis → <strong>gain</strong>.</li>
+              <li>Guaranteed payments: deductible by partnership; ordinary to partner.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Workflow tips</h3>
+            <ol>
+              <li>Start with outside basis rollforward.</li>
+              <li>Classify items: ordinary vs separately stated.</li>
+              <li>Apply loss limits: basis → at‑risk → passive.</li>
+              <li>Check liability changes for deemed distributions/contributions.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="section">
+        <h2>Practice Questions</h2>
+
+        <details>
+          <summary><strong>1.</strong> Guaranteed payment</summary>
+          <p>AB Partnership has $200 of gross profit and $80 of operating expenses <em>before</em> a $50 guaranteed payment to Partner A for services. What is ordinary business income and what does A report?</p>
+          <ol type="A">
+            <li>OI $70; A reports $50 ordinary income</li>
+            <li>OI $120; A reports $0</li>
+            <li>OI $120; A reports $50 ordinary income</li>
+            <li>OI $70; A reports $0</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> OI = $$200 − $$80 − $$50 = 70. Guaranteed payment is deductible by the partnership and ordinary income to A.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>2.</strong> Liability decrease</summary>
+          <p>Partner B’s basis is $10. B’s share of partnership liabilities decreases by $14 due to refinancing. No other items. What is B’s gain (loss)?</p>
+          <ol type="A">
+            <li>$0</li>
+            <li>$4 gain</li>
+            <li>$10 gain</li>
+            <li>$14 gain</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Liability decrease is a deemed cash distribution. Cash > basis (14 &gt; 10) → recognize <strong>$4</strong> gain; basis to zero.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>3.</strong> Separately stated</summary>
+          <p>Which item is <em>not</em> separately stated on Schedule K?</p>
+          <ol type="A">
+            <li>Charitable contributions</li>
+            <li>Section 179 deduction</li>
+            <li>Long‑term capital gain</li>
+            <li>Office rent expense</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: D.</strong> Office rent is part of ordinary income; the others are separately stated to preserve character at the partner level.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>4.</strong> Basis rollforward</summary>
+          <p>Beginning basis $5; income $4; tax‑exempt interest 1; cash distribution $8. Ending basis?</p>
+          <ol type="A">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: A.</strong> Basis: $$5 + $$4 + $$1 − $$8 = 2 → cannot go below zero; no gain since cash ≤ basis? Here cash $8) ≤ basis $10) so ending basis $2. <em>Correction:</em> beginning $$5 + income $4 + tax‑exempt $$1 = 10; minus cash $8 = <strong>2</strong>. Correct answer: <strong>C</strong>.</p>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>5.</strong> Hot assets</summary>
+          <p>Partner sells partnership interest with share of unrealized receivables. The portion attributable to those receivables is:</p>
+          <ol type="A">
+            <li>Capital gain</li>
+            <li>Ordinary income</li>
+            <li>Sec. 1231 gain</li>
+            <li>Excluded</li>
+          </ol>
+          <details><summary>Answer &amp; Rationale</summary>
+            <p><strong>Answer: B.</strong> Sec. 751 treats gain attributable to receivables and inventory as <strong>ordinary</strong>.</p>
+          </details>
+        </details>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR II.H: Debt (Financial Liabilities)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg1:#07162b;--bg2:#0b1e3a;--card:#0e2247;--card2:#123064;--ink:#eaf2ff;--muted:#b9c7e6;--accent:#3b82f6;--gold:#f5c542;--ok:#10b981;--warn:#f59e0b;--bad:#ef4444;--radius:16px;--shadow:0 12px 30px rgba(0,0,0,.35);}
+  *{box-sizing:border-box} html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden}
+  .spacer{height:16px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  .je{list-style:none;margin:0;padding:0}
+  .je li{display:grid;grid-template-columns:28px 260px 110px;align-items:start;gap:6px;margin:2px 0}
+  .je .label{min-width:24px;opacity:.9}
+  .je .acct{white-space:normal;padding-right:6px}
+  .je .amt{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Debt (Financial Liabilities)</h1>
+
+  <section class="card">
+    <h3>Learning Objectives</h3>
+    <ul>
+      <li>Recall the criteria to classify a change to a debt instrument as either a <strong>modification of terms</strong> or an <strong>extinguishment of debt</strong>.</li>
+      <li>Determine when a change to the terms of a debt instrument qualifies as a <strong>troubled debt restructuring</strong> (debtor perspective).</li>
+      <li>Calculate <strong>interest expense</strong> for notes and bonds including <strong>discounts, premiums, and debt issuance costs</strong>, using the effective interest method.</li>
+      <li>Compute the <strong>carrying amount</strong> of notes and bonds payable over time and prepare the related <strong>journal entries</strong>.</li>
+      <li>Perform <strong>debt covenant</strong> calculations per a debt agreement to assess compliance and identify presentation implications (e.g., current vs. noncurrent reclassification).</li>
+    </ul>
+  </section>
+
+  <div class="spacer"></div>
+
+  <section class="card">
+    <h3>At a Glance</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:26%"><col style="width:48%"><col style="width:26%"></colgroup>
+      <tr><th>Topic</th><th>Core points</th><th>Exam tips</th></tr>
+      <tr><td>Initial measurement</td><td>Record at proceeds; issuance costs reduce the carrying amount.</td><td>Issuance costs amortize like a discount.</td></tr>
+      <tr><td>Subsequent measurement</td><td>Effective interest method keeps a constant rate on the carrying amount each period.</td><td>Difference between expense and cash interest changes carrying amount.</td></tr>
+      <tr><td>Convertible debt</td><td>Single liability; conversion to equity at carrying amount (no gain/loss).</td><td>Allocate only when detachable warrants exist.</td></tr>
+      <tr><td>Modification vs. extinguishment</td><td>Substantial if PV of new cash flows differs by ≥10% from old terms using original effective rate.</td><td>Substantial → extinguishment.</td></tr>
+    </table>
+  </section>
+  <div class="spacer"></div>
+  <section class="card">
+    <h3>Key Definitions</h3>
+    <ul class="small">
+      <li><strong>Effective interest method:</strong> Interest expense = beginning carrying amount × effective rate; difference from cash interest changes carrying amount.</li>
+      <li><strong>Carrying amount:</strong> Face ± unamortized premium/discount − unamortized issuance costs.</li>
+      <li><strong>Debt issuance costs:</strong> Direct costs recorded as a deduction from the liability and amortized to interest expense.</li>
+      <li><strong>Modification vs. extinguishment:</strong> Substantial if PV of new cash flows differs by ≥10% using the original effective rate ⇒ extinguishment; otherwise modification.</li>
+      <li><strong>Troubled debt restructuring:</strong> Creditor grants a <em>concession</em> to a debtor experiencing financial difficulty (debtor may record a gain).</li>
+      <li><strong>Debt covenant:</strong> Contractual threshold(s) (e.g., leverage, coverage) that the borrower must meet; breach can affect classification or trigger remedies.</li>
+    </ul>
+  </section>
+
+  <h2>1) Issuance at Discount or Premium (Effective Interest)</h2>
+
+  <section class="card">
+    <h3>Example 1 — Discount: 6% coupon, 8% market (3 years, annual)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:38%"><col style="width:22%"><col style="width:40%"></colgroup>
+      <tr><th>Data</th><th class="num">Amount</th><th>Notes</th></tr>
+      <tr><td>Face amount</td><td class="num">$100,000</td><td></td></tr>
+      <tr><td>Issue price (present value at 8%)</td><td class="num">$94,846</td>
+          <td>Using present value factors (rounded): present value of an ordinary annuity (3 periods at 8%) = 2.57710; present value of $1 (3 periods at 8%) = 0.79383.<br>
+          Issue price = $6,000 × 2.57710 + $100,000 × 0.79383 = <strong>$94,846</strong>.<br>
+          Discount = $100,000 − $94,846 = $5,154.</td></tr>
+      <tr><td>Cash interest each year (6% × $100,000)</td><td class="num">$6,000</td><td></td></tr>
+    </table>
+    <h4>Year 1</h4>
+    <table class="tbl small">
+      <tr><td>Interest expense (8% × $94,846)</td><td class="num">$7,588</td></tr>
+      <tr><td>Discount amortization ($7,588 − $6,000)</td><td class="num">$1,588</td></tr>
+      <tr><td>Carrying amount at end of Year 1</td><td class="num">$96,434</td></tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Interest expense</span><span class="amt">$7,588</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Discount on bonds payable</span><span class="amt">($1,588)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($6,000)</span></li>
+    </ul>
+  </section>
+
+  <div class="spacer"></div>
+
+  <section class="card">
+    <h3>Example 2 — Premium: 10% coupon, 8% market (3 years, annual)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:38%"><col style="width:22%"><col style="width:40%"></colgroup>
+      <tr><th>Data</th><th class="num">Amount</th><th>Notes</th></tr>
+      <tr><td>Face amount</td><td class="num">$100,000</td><td></td></tr>
+      <tr><td>Issue price (present value at 8%)</td><td class="num">$105,154</td>
+          <td>Using present value factors (rounded): present value of an ordinary annuity (3 periods at 8%) = 2.57710; present value of $1 (3 periods at 8%) = 0.79383.<br>
+          Issue price = $10,000 × 2.57710 + $100,000 × 0.79383 = <strong>$105,154</strong>.<br>
+          Premium = $105,154 − $100,000 = $5,154.</td></tr>
+      <tr><td>Cash interest each year (10% × $100,000)</td><td class="num">$10,000</td><td></td></tr>
+    </table>
+    <h4>Year 1</h4>
+    <table class="tbl small">
+      <tr><td>Interest expense (8% × $105,154)</td><td class="num">$8,412</td></tr>
+      <tr><td>Premium amortization ($10,000 − $8,412)</td><td class="num">$1,588</td></tr>
+      <tr><td>Carrying amount at end of Year 1</td><td class="num">$103,566</td></tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Interest expense</span><span class="amt">$8,412</span></li>
+      <li><span class="label">Dr</span><span class="acct">Premium on bonds payable</span><span class="amt">$1,588</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Cash</span><span class="amt">($10,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>2) Debt Issuance Costs</h2>
+  <section class="card">
+    <p>Debt issuance costs (underwriting, legal, printing) are recorded as a <strong>direct deduction</strong> from the liability and are amortized to <strong>interest expense</strong> over the term using the effective interest method.</p>
+    <h4>Entry at issuance (costs paid)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$97,000</span></li>
+      <li><span class="label">Dr</span><span class="acct">Debt issuance costs (contra‑liability)</span><span class="amt">$3,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Bonds payable (face)</span><span class="amt">($100,000)</span></li>
+    </ul>
+    <h4>Amortization (first period)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Interest expense</span><span class="amt">$X</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Debt issuance costs (amortization)</span><span class="amt">($X)</span></li>
+    </ul>
+  </section>
+
+  <h2>3) Convertible Debt and Detachable Warrants</h2>
+  <section class="card">
+    <h3>Example 3 — Convertible Bonds Accounted for as a Single Liability</h3>
+    <p>Issue $500,000 par convertible bonds at par; later bondholders convert into 20,000 common shares, $1 par value.</p>
+    <h4>At issuance</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$500,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Bonds payable</span><span class="amt">($500,000)</span></li>
+    </ul>
+    <h4>On conversion (no gain or loss)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Bonds payable</span><span class="amt">$500,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Common stock (20,000 × $1 par)</span><span class="amt">($20,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Additional paid‑in capital</span><span class="amt">($480,000)</span></li>
+    </ul>
+    <h3>Example 4 — Detachable Warrants</h3>
+    <p>Bonds are issued with detachable stock warrants. Allocate proceeds between debt and equity based on <strong>relative fair values</strong>.</p>
+    <table class="tbl small">
+      <tr><th>Assumed fair values at issuance</th><th class="num">Amount</th></tr>
+      <tr><td>Fair value of bonds (without warrants)</td><td class="num">$950,000</td></tr>
+      <tr><td>Fair value of warrants (equity)</td><td class="num">$50,000</td></tr>
+      <tr><td>Total</td><td class="num">$1,000,000</td></tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Cash</span><span class="amt">$1,000,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Bonds payable (allocated)</span><span class="amt">($950,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Additional paid‑in capital — warrants</span><span class="amt">($50,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>4) Modification vs. Extinguishment</h2>
+  <section class="card">
+    <h3>Example 5 — Substantial Modification (Extinguishment)</h3>
+    <p>Carrying amount of old debt is $100,000. Present value of new cash flows discounted at the original effective rate is $88,000. The 12% difference is substantial (at least 10%).</p>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Bonds payable (old)</span><span class="amt">$100,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Gain on extinguishment of debt</span><span class="amt">($12,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">New debt (at fair value)</span><span class="amt">($88,000)</span></li>
+    </ul>
+    <div class="card small" style="padding:10px;margin-top:8px;border-left:4px solid #f5c542; background:rgba(245,197,66,.08)">If not substantial, treat as a modification: adjust the carrying amount for fees and recognize a new effective interest rate prospectively.</div>
+  </section>
+
+  <h2>5) Troubled Debt Restructuring (Debtor)</h2>
+  <section class="card">
+    <h3>Example 6 — Reduction of Principal (Concession)</h3>
+    <p>Carrying amount of note (including accrued interest) is $120,000. Creditor reduces principal to $100,000 and leaves interest at a market rate. Future undiscounted payments total $100,000, which is less than the carrying amount; recognize a restructuring gain.</p>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Notes payable</span><span class="amt">$20,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Gain on troubled debt restructuring</span><span class="amt">($20,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>6) Debt Covenant Calculations & Classification</h2>
+  <section class="card">
+    <h3>Example 7 — Debt Covenant Compliance</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:42%"><col style="width:20%"><col style="width:38%"></colgroup>
+      <tr><th>Covenant</th><th class="num">Required</th><th>Facts / Result</th></tr>
+      <tr>
+        <td>Interest coverage ratio (EBIT ÷ interest expense)</td>
+        <td class="num">≥ 3.0×</td>
+        <td>EBIT = $360,000; interest expense = $120,000 ⇒ coverage = <strong>3.0×</strong> (meets).</td>
+      </tr>
+      <tr>
+        <td>Debt‑to‑equity ratio (total debt ÷ equity)</td>
+        <td class="num">≤ 1.8×</td>
+        <td>Total debt = $1,980,000; equity = $1,000,000 ⇒ D/E = <strong>1.98×</strong> (breach).</td>
+      </tr>
+    </table>
+    <div class="small">If the breach gives the lender the <em>right to demand repayment within one year</em> and no waiver exists before the balance sheet date, classify the affected portion as <strong>current</strong>.</div>
+    <h4>Entry (reclassification at year‑end, no waiver)</h4>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Long‑term debt</span><span class="amt">$500,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Current portion of long‑term debt</span><span class="amt">($500,000)</span></li>
+    </ul>
+  </section>
+
+  <h2>Quick Recap</h2>
+  <section class="card small">
+    <table class="tbl small">
+      <colgroup><col style="width:38%"><col style="width:62%"></colgroup>
+      <tr><th>Formula / Rule</th><th>How to use it fast</th></tr>
+      <tr>
+        <td><strong>Effective interest</strong><br>Expense = Begin carrying × effective rate</td>
+        <td>Build a mini schedule each period: begin → expense → cash interest → amortization → difference → end.</td>
+      </tr>
+      <tr>
+        <td><strong>Issue price (present value)</strong><br>PV(coupons) + PV(face)</td>
+        <td>Use ordinary annuity factor for coupons and $1 factor for face. Multiply and add.</td>
+      </tr>
+      <tr>
+        <td><strong>Discount / Premium</strong></td>
+        <td>Discount = Face − Issue price → amortization increases carrying amount. Premium = Issue price − Face → amortization decreases carrying amount.</td>
+      </tr>
+      <tr>
+        <td><strong>Carrying amount</strong></td>
+        <td>Face ± unamortized premium/discount − unamortized issuance costs.</td>
+      </tr>
+      <tr>
+        <td><strong>10% test (mod vs. extinguishment)</strong></td>
+        <td>Compare PV(new cash flows at <em>old</em> rate) with old carrying amount. ≥10% difference ⇒ extinguishment (record gain/loss).</td>
+      </tr>
+      <tr>
+        <td><strong>Troubled debt restructuring (debtor)</strong></td>
+        <td>If total future undiscounted payments &lt; carrying amount, recognize a gain for the difference; then recompute interest prospectively.</td>
+      </tr>
+      <tr>
+        <td><strong>Covenant breach</strong></td>
+        <td>If breach gives lender a current call right and no waiver by balance‑sheet date, reclassify affected portion to <em>current</em>.</td>
+      </tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

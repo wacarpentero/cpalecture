@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — FAR III.A: Accounting Changes & Error Corrections</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#143268;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#60a5fa;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 18px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:0 0 14px;font-weight:800}
+  h3{font-size:18px;margin:18px 0 8px;font-weight:700}
+  h4{font-size:16px;margin:10px 0 6px;font-weight:700}
+  p{margin:8px 0}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius);overflow:hidden;margin-bottom:18px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 8px;table-layout:auto}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  .tbl th{background:rgba(255,255,255,.03)}
+  .num{white-space:nowrap;text-align:right}
+  .small{font-size:.95rem}
+  .muted{color:var(--muted)}
+  /* Journal entries */
+  .je{list-style:none;margin:6px 0 4px;padding:0}
+  .je li{display:grid;grid-template-columns:28px 1fr 160px 1fr;align-items:start;gap:6px;margin:4px 0}
+  .je .label{min-width:24px;opacity:.95}
+  .je .acct{white-space:normal;padding-right:12px}
+  /* Center the amount horizontally in the card */
+  .je .amt{text-align:center;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Accounting Changes &amp; Error Corrections</h1>
+
+  <section class="card">
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li>Calculate the required adjustment to the financial statements for an <strong>accounting change</strong> (change in accounting principle or change in accounting estimate) or an <strong>error correction</strong>, and determine whether it requires <strong>prospective</strong> or <strong>retrospective</strong> application.</li>
+      <li>Derive the impact to the financial statements and related <strong>note disclosures</strong> of an identified accounting change or an error correction.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>At a Glance</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:18%"><col style="width:42%"><col style="width:40%"></colgroup>
+      <tr><th>Type</th><th>What it is</th><th>How to account</th></tr>
+      <tr>
+        <td>Change in accounting <strong>principle</strong></td>
+        <td>Switching from one acceptable principle to another (e.g., FIFO to weighted‑average).</td>
+        <td><strong>Retrospective</strong>: restate prior periods and adjust beginning retained earnings for earliest presented period. <em>Exception</em>: change to LIFO is <strong>prospective</strong> due to impracticability.</td>
+      </tr>
+      <tr>
+        <td>Change in <strong>estimate</strong></td>
+        <td>New information changes amounts (e.g., useful life, salvage value, expected credit losses).</td>
+        <td><strong>Prospective</strong>: affect current and future periods only. A depreciation <em>method</em> change is treated as a change in estimate made with a change in principle → <strong>prospective</strong>.</td>
+      </tr>
+      <tr>
+        <td>Change in reporting <strong>entity</strong></td>
+        <td>Changing the group of entities reported (e.g., consolidated vs. separate).</td>
+        <td><strong>Retrospective</strong> restatement to present all periods as if the new entity existed.</td>
+      </tr>
+      <tr>
+        <td><strong>Error</strong> correction</td>
+        <td>Mathematical mistakes, misapplication of principles, or oversight of facts.</td>
+        <td><strong>Prior‑period adjustment</strong>: restate prior periods and adjust <strong>beginning retained earnings</strong> net of tax.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section class="card">
+    <h2>1) Change in Accounting Principle — Retrospective</h2>
+    <h3>Example 1 — FIFO to Weighted‑Average for Inventory</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:66%"><col style="width:34%"></colgroup>
+      <tr><th>Data</th><th class="num">Amount</th></tr>
+      <tr><td>Ending inventory at 12/31/X2 under FIFO</td><td class="num">$260,000</td></tr>
+      <tr><td>Ending inventory at 12/31/X2 under weighted‑average</td><td class="num">$245,000</td></tr>
+      <tr><td>Income tax rate</td><td class="num">25%</td></tr>
+    </table>
+    <p class="small">Cumulative effect at 1/1/X3 (beginning of year of change) reduces inventory by $15,000 and retained earnings net of tax.</p>
+    <h4>Opening adjustment at 1/1/X3</h4>
+    <div class="small muted">Purpose: record the cumulative‑effect adjustment for a change in accounting principle at the beginning of the period of change (comparatives restated).</div>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Retained earnings</span><span class="amt">$11,250</span></li>
+      <li><span class="label">Dr</span><span class="acct">Deferred tax asset</span><span class="amt">$3,750</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Inventory</span><span class="amt">($15,000)</span></li>
+    </ul>
+    <div class="small">Present comparative financial statements as if weighted‑average had always been used. Disclose the nature and quantitative effects.</div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="card">
+    <h2>2) Prospective Changes in Estimate</h2>
+    <h3>Example 2 — Useful life revision for Equipment</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Equipment cost $200,000; straight‑line over 10 years, no salvage. After 3 full years, remaining life is revised to 5 more years.</td>
+        <td>Accumulated depreciation after 3 years = $60,000 ⇒ carrying amount at 1/1/X4 = $140,000 ⇒ new depreciation = $140,000 ÷ 5 = <strong>$28,000</strong> per year from X4 forward.</td>
+      </tr>
+    </table>
+
+    <h3>Example 3 — Change in Depreciation Method (Straight‑line to Double‑declining)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Cost $120,000; straight‑line 10 years, no salvage. After 3 years, switch to double‑declining balance at start of Year 4.</td>
+        <td>SL depreciation = $12,000 per year ⇒ accumulated after 3 years = $36,000 ⇒ carrying at 1/1/Y4 = $84,000. DDB rate = 2 ÷ 10 = 20% ⇒ Year‑4 depreciation = 20% × $84,000 = <strong>$16,800</strong>.</td>
+      </tr>
+    </table>
+    <h4>Record current‑year depreciation (prospective)</h4>
+<ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Depreciation expense</span><span class="amt">$16,800</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated depreciation</span><span class="amt">($16,800)</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="card">
+    <h2>3) Error Corrections — Prior‑Period Adjustment</h2>
+    <h3>Example 4 — Expense that should have been Capitalized (Prior Year)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>In X2, $50,000 for equipment installation was expensed. It should have been capitalized and depreciated over 10 years straight‑line, no salvage. Correction is made in X4 financial statements (tax rate 25%).</td>
+        <td>Correct SL depreciation for X2–X3 = $50,000 × 2/10 = <strong>$10,000</strong>.<br>Net book value at 1/1/X4 should be <strong>$40,000</strong>.</td>
+      </tr>
+    </table>
+    <h4>Opening adjustment at 1/1/X4</h4>
+<ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Equipment</span><span class="amt">$50,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Accumulated depreciation</span><span class="amt">($10,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Retained earnings (net of tax)</span><span class="amt">($30,000)</span></li>
+      <li><span class="label">Dr</span><span class="acct">Deferred tax asset</span><span class="amt">$10,000</span></li>
+    </ul>
+
+    <h3>Example 5 — Revenue cut‑off error (accrued revenue omitted prior year)</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:100%"></colgroup>
+      <tr><th>Facts</th></tr>
+      <tr>
+        <td>Services of $40,000 were performed on 12/30/X2 but billed in X3. No revenue or receivable was recorded in X2. Tax rate 25%.</td>
+      </tr>
+    </table>
+    <h4>Opening correction at 1/1/X3</h4>
+<ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Accounts receivable</span><span class="amt">$40,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Retained earnings (net of tax)</span><span class="amt">($30,000)</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Deferred tax liability</span><span class="amt">($10,000)</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="card">
+    <h2>4) Change in Reporting Entity — Retrospective</h2>
+    <h3>Example 6 — Presenting Consolidated Statements</h3>
+    <p class="small">Beginning in X3, the company presents consolidated financial statements including a previously unconsolidated subsidiary. Restate prior periods to present all periods on a consistent basis.</p>
+    <div class="small">No direct retained earnings entry is typically required apart from normal consolidation adjustments; the comparative financial statements are restated. Include a disclosure describing the change and that prior periods were revised.</div>
+  </section>
+
+  <!-- Additional Scenarios -->
+  <section class="card">
+    <h2>Additional Scenarios (common twists)</h2>
+    <h3>Example 7 — Change in principle to LIFO (impracticability) — Prospective</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>What to do</th><th>Notes</th></tr>
+      <tr>
+        <td>Start a new LIFO layer structure as of 1/1/X3; compute cost of goods sold under LIFO for X3 forward.</td>
+        <td>Disclose the nature of the change and that prior periods were not restated due to impracticability.</td>
+      </tr>
+    </table>
+
+    <h3>Example 8 — Change in estimate: Bad‑debt rate revision</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Facts</th><th>Computation</th></tr>
+      <tr>
+        <td>Allowance method. Prior policy estimated 2% of ending receivables. New information at 12/31/X3 supports 3%. Ending receivables $900,000. Allowance balance (credit) before adjustment $12,000.</td>
+        <td>Required allowance = $900,000 × 3% = <strong>$27,000</strong> ⇒ adjustment needed = $27,000 − $12,000 = <strong>$15,000</strong> bad‑debt expense in X3.</td>
+      </tr>
+    </table>
+    <ul class="je">
+      <li><span class="label">Dr</span><span class="acct">Bad‑debt expense</span><span class="amt">$15,000</span></li>
+      <li class="cr"><span class="label">Cr</span><span class="acct">Allowance for credit losses</span><span class="amt">($15,000)</span></li>
+    </ul>
+
+    <h3>Example 9 — Inventory overstatement in prior year and EPS impact</h3>
+    <table class="tbl small">
+      <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+      <tr><th>Given</th><th>Computation</th></tr>
+      <tr>
+        <td>At 12/31/X2, ending inventory was overstated by $25,000. Tax rate 25%. Weighted‑average shares for X2 were 50,000. Reported X2 net income was $200,000; reported basic EPS was $4.00.</td>
+        <td>After correction, cost of goods sold increases $25,000; net income decreases by $18,750 ⇒ revised X2 net income = <strong>$181,250</strong>. Revised basic EPS = $181,250 ÷ 50,000 = <strong>$3.63</strong>.</td>
+      </tr>
+    </table>
+
+    <h3>Example 10 — Classification error (statement of cash flows)</h3>
+    <p class="small">In X2, $2,000,000 of principal payments on a note were classified as operating activities instead of financing. No effect on net income or retained earnings — restate the X2 statement of cash flows only and disclose the change in classification.</p>
+  </section>
+
+  <section class="card">
+    <h2>Quick Recap</h2>
+    <table class="tbl small">
+      <colgroup><col style="width:40%"><col style="width:60%"></colgroup>
+      <tr><th>Rule</th><th>Use it fast</th></tr>
+      <tr>
+        <td>Principle vs. Estimate</td>
+        <td>Principle → <strong>retrospective</strong> (adjust beginning retained earnings) except change to LIFO → <strong>prospective</strong>. Estimate → <strong>prospective</strong>.</td>
+      </tr>
+      <tr>
+        <td>Method change</td>
+        <td>Depreciation method change is a change in estimate made with a change in principle → <strong>prospective</strong>.</td>
+      </tr>
+      <tr>
+        <td>Error</td>
+        <td>Restate prior periods and adjust beginning retained earnings <strong>net of tax</strong>.</td>
+      </tr>
+      <tr>
+        <td>Disclosures</td>
+        <td>Nature and reason; method (prospective/retrospective); line‑item and per‑share effects; amount of beginning retained earnings adjustment.</td>
+      </tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

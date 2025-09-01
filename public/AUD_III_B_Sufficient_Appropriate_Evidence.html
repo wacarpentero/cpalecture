@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Reviewer — Sufficient Appropriate Evidence (Area III.B, 2025 AICPA Blueprints)</title>
+<meta name="description" content="CPA reviewer chapter for AUD Area III.B — Sufficient Appropriate Evidence (Performing Further Procedures & Obtaining Evidence), aligned to 2025 AICPA Blueprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#07162b; --bg2:#0b1e3a; --card:#0e2247; --card2:#123064;
+    --ink:#eaf2ff; --muted:#b9c7e6; --accent:#3b82f6; --accent2:#60a5fa;
+    --gold:#f5c542; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+    --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+       background:radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%), linear-gradient(180deg,var(--bg1), #040b18 70%);}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px 72px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 4px;font-weight:800;letter-spacing:.2px}
+  h2{font-size:22px;margin:32px 0 10px;font-weight:800}
+  h3{font-size:18px;margin:22px 0 8px;font-weight:700}
+  p{line-height:1.6;margin:10px 0}
+  .grid{display:grid;gap:18px}
+  .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:18px;border-radius:var(--radius)}
+  .callout{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(59,130,246,.07);border-radius:10px}
+  .tip{border-left:4px solid var(--gold);background:rgba(245,197,66,.08)}
+  .danger{border-left:4px solid var(--bad);background:rgba(239,68,68,.08)}
+  .check{border-left:4px solid var(--ok);background:rgba(16,185,129,.08)}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0 6px}
+  .tbl th,.tbl td{border:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
+  .tbl th{background:rgba(255,255,255,.06)}
+  ul{padding-left:18px} li{margin:6px 0}
+  details{border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.03)}
+  details>summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sufficient Appropriate Evidence</h1>
+    
+    <!-- Learning Objectives -->
+    <section class="grid" style="margin-bottom:24px;">
+      <article class="card">
+        <h3>Learning Objectives</h3>
+        <ul>
+          <li>Differentiate <strong>sufficiency</strong> (quantity) and <strong>appropriateness</strong> (quality: relevance & reliability) of audit evidence.</li>
+          <li>Select <strong>procedures</strong> (tests of controls, substantive analytical procedures, tests of details) that yield persuasive evidence for each <strong>assertion</strong>.</li>
+          <li>Evaluate <strong>reliability</strong> by source and nature (external vs internal, auditor‑direct vs management‑provided, electronic vs paper).</li>
+          <li>Apply requirements for <strong>substantive analytical procedures</strong>, <strong>external confirmations</strong>, and <strong>recalculation/reperformance</strong>.</li>
+          <li>Document whether evidence obtained is <strong>sufficient and appropriate</strong> to support conclusions and the opinion.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="grid" style="margin-bottom:6px;">
+      <article class="card">
+        <h3>At a Glance</h3>
+        <table class="tbl">
+          <tr><th>Concept</th><th>Key points</th></tr>
+          <tr><td>Sufficiency</td><td>Quantity of evidence; influenced by risk of misstatement, materiality, and quality of evidence obtained.</td></tr>
+          <tr><td>Appropriateness</td><td>Quality of evidence: <em>relevance</em> (addresses the assertion) and <em>reliability</em> (source, nature, controls).</td></tr>
+          <tr><td>Reliability hierarchy</td><td>Auditor’s direct knowledge &gt; external direct &gt; external indirect &gt; internal (strong controls) &gt; internal (weak controls) &gt; inquiry alone.</td></tr>
+          <tr><td>Procedure families</td><td>Tests of controls; Substantive analytical procedures; Tests of details (transactions, balances, disclosures).</td></tr>
+          <tr><td>Assertions</td><td>Existence/occurrence, completeness, rights & obligations, accuracy/valuation/allocation, cutoff, classification, presentation & disclosure.</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <h2>1) Relevance & Reliability</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Relevance:</strong> The evidence must address the <em>specific assertion</em> and the WCGW. Example: confirming AR is strong for <em>existence</em>, weak for <em>valuation</em>.</li>
+        <li><strong>Reliability factors:</strong> source (external vs internal), auditor’s direct knowledge, effectiveness of controls over the information, original docs vs copies, and timeliness.</li>
+        <li><strong>Triangulation:</strong> combine evidence from different sources/natures to reach a persuasive conclusion.</li>
+      </ul>
+      <div class="callout tip"><strong>Tip:</strong> If evidence quality is high, you may need less quantity; if quality is low, increase the quantity or seek better quality evidence.</div>
+    </div>
+
+    <h2>2) Procedure Selection by Assertion</h2>
+    <section class="grid two">
+      <article class="card">
+        <h3>Existence/Occurrence</h3>
+        <ul>
+          <li>Confirmations, inspection of assets, vouching from ledger to source documents.</li>
+          <li>Observation of inventory count; inspection of subsequent receipts (AR existence).</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Completeness</h3>
+        <ul>
+          <li>Tracing from source documents to ledger; search for unrecorded liabilities; cutoff tests.</li>
+          <li>Lease completeness search (embedded leases, service contracts).</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Rights & Obligations</h3>
+        <ul>
+          <li>Inspect titles, contracts, debt covenants, consignment agreements; legal inquiry.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Accuracy/Valuation</h3>
+        <ul>
+          <li>Recalculation, reperformance, independent estimates, subsequent events review, third‑party pricing.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Presentation & Disclosure</h3>
+        <ul>
+          <li>Checklist‑based disclosure testing; tie‑out to trial balance; evaluate classification and wording.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2>3) Tests of Controls vs Substantive Procedures</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Tests of controls</strong> evaluate operating effectiveness to support a lower CR and reduce substantive testing; appropriate when relying on automated controls or when substantive procedures alone cannot provide sufficient evidence (e.g., highly automated transactions).</li>
+        <li><strong>Substantive procedures</strong> are always required (for each material class of transactions, account balance, and disclosure).</li>
+        <li>For <strong>significant risks</strong>, perform substantive procedures responsive to the risk; tests of controls <em>alone</em> are not sufficient.</li>
+      </ul>
+    </div>
+
+    <h2>4) Substantive Analytical Procedures (SAPs)</h2>
+    <div class="card">
+      <ul>
+        <li>Develop an <strong>independent expectation</strong> (model) and define an <strong>acceptable difference</strong>.</li>
+        <li><strong>Precision:</strong> depends on predictability of the relationship, data reliability, and disaggregation level.</li>
+        <li>Investigate differences beyond the threshold with <strong>corroborating evidence</strong>.</li>
+        <li>Document: expectation, factors considered, threshold, results, and follow‑up.</li>
+      </ul>
+      <details><summary>Mini‑example</summary><p>Estimate payroll expense using headcount × average comp × months. Expectation differs by 3.5% vs 1.5% threshold → obtain corroborating evidence for bonus accrual changes.</p></details>
+    </div>
+
+    <h2>5) External Confirmations</h2>
+    <div class="card">
+      <ul>
+        <li>Design <strong>positive</strong> or <strong>negative</strong> confirms based on risk; control the process (selection, addressing, mailing, and receipt).</li>
+        <li>Address <strong>nonresponses</strong> with alternative procedures (e.g., subsequent cash receipts for AR).</li>
+        <li>Beware of <strong>management interception</strong> risk; maintain auditor control and consider electronic secure platforms.</li>
+      </ul>
+    </div>
+
+    <h2>6) Inspection, Observation, Inquiry, Recalculation, Reperformance</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Inspection:</strong> examine records/assets for existence, rights, and accuracy.</li>
+        <li><strong>Observation:</strong> watch a process or control being performed (e.g., inventory counts).</li>
+        <li><strong>Inquiry:</strong> obtain information through questions; <em>insufficient alone</em> without corroboration.</li>
+        <li><strong>Recalculation/Reperformance:</strong> auditor‑generated evidence; highly reliable for accuracy.</li>
+      </ul>
+    </div>
+
+    <h2>7) Using Information Produced by the Entity (IPE)</h2>
+    <div class="card">
+      <ul>
+        <li>Identify the IPE (report/spreadsheet) and <strong>test completeness & accuracy</strong> (parameters, logic, source tie‑outs).</li>
+        <li>Alternatively, rely on tested <strong>application controls</strong> and effective <strong>ITGCs</strong> that produce the IPE.</li>
+        <li>Retain copies or re‑perform queries to evidence reliability.</li>
+      </ul>
+      <div class="callout check"><strong>IPE checklist:</strong> Who produced it? From what system? What parameters? How did you validate?</div>
+    </div>
+
+    <h2>8) Sampling & Evidence Sufficiency (overview)</h2>
+    <div class="card">
+      <ul>
+        <li>Sampling helps obtain sufficient evidence efficiently when full‑population testing is impractical.</li>
+        <li>Sample size increases with higher RMM, lower tolerable misstatement/deviation, and lower expected misstatement/deviation.</li>
+        <li>Project misstatements to the population and consider <strong>sampling risk</strong> in your evaluation.</li>
+      </ul>
+    </div>
+
+    <h2>9) Documentation & Conclusions</h2>
+    <div class="card">
+      <ul>
+        <li>For each significant area: procedures performed, evidence obtained, results, and conclusions tied to assertions and materiality.</li>
+        <li>Document how evidence was <strong>sufficient & appropriate</strong>; if not, expand procedures or obtain additional evidence.</li>
+        <li>Capture unresolved differences, proposed adjustments, and communications with management/TCWG.</li>
+      </ul>
+    </div>
+
+    <h2>10) Quick Checks</h2>
+    <div class="card">
+      <ol>
+        <li>What’s the difference between sufficiency and appropriateness? <strong>Quantity vs quality (relevance & reliability).</strong></li>
+        <li>When can you rely on SAPs alone? <strong>When precision and data reliability are high and risks are appropriately addressed.</strong></li>
+        <li>Are tests of controls ever sufficient by themselves for significant risks? <strong>No — must perform substantive procedures.</strong></li>
+        <li>What makes evidence most reliable? <strong>Auditor’s direct knowledge and external sources obtained directly by the auditor.</strong></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
